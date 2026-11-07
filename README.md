@@ -1,6 +1,6 @@
 # GrimList
 
-A minimal, local Windows army builder with a dark interface. C# / .NET 10, WPF, and SQLite. No account, cloud storage, telemetry, artwork, or private GW APIs.
+An offline army manager for Warhammer 40,000 on Windows and Android, with a dark interface. C# / .NET 10, WPF, .NET MAUI, and SQLite. No account, cloud storage, telemetry, artwork, or private GW APIs.
 
 ## Documentation
 
