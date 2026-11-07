@@ -1,0 +1,432 @@
+{
+  "Version": 1,
+  "Purpose": "Immutable promoted fixtures; OriginalPath is historical provenance only",
+  "Files": [
+    {
+      "Path": "wahapedia/snapshots/index.json",
+      "SHA256": "a89238df2d9d87363ac688cdcb86d4b01f6110a8509da7addd72a459c629420d",
+      "Bytes": 13377,
+      "OriginalPath": ".local/reference-sources-real/index.json"
+    },
+    {
+      "Path": "wahapedia/snapshots/http-policy/11e/4cce48820f2b7f1361d7e06dae79dc3053cba19927dbb0d462b5de7d8822ec38/c6d3c8a2f7ebc2b2cadcdd9218d117dd41fc4dbe19e3f18b339b7b57f633625e-803c0a4fbdb654fd/metadata.json",
+      "SHA256": "5b58ac6b0f2355f25fa5b716fb6a1600d3a292b2ff16f0593756aeeffac85c17",
+      "Bytes": 435,
+      "OriginalPath": ".local/reference-sources-real/http-policy/11e/4cce48820f2b7f1361d7e06dae79dc3053cba19927dbb0d462b5de7d8822ec38/c6d3c8a2f7ebc2b2cadcdd9218d117dd41fc4dbe19e3f18b339b7b57f633625e-803c0a4fbdb654fd/metadata.json"
+    },
+    {
+      "Path": "wahapedia/snapshots/http-policy/11e/4cce48820f2b7f1361d7e06dae79dc3053cba19927dbb0d462b5de7d8822ec38/c6d3c8a2f7ebc2b2cadcdd9218d117dd41fc4dbe19e3f18b339b7b57f633625e-803c0a4fbdb654fd/raw",
+      "SHA256": "c6d3c8a2f7ebc2b2cadcdd9218d117dd41fc4dbe19e3f18b339b7b57f633625e",
+      "Bytes": 1572,
+      "OriginalPath": ".local/reference-sources-real/http-policy/11e/4cce48820f2b7f1361d7e06dae79dc3053cba19927dbb0d462b5de7d8822ec38/c6d3c8a2f7ebc2b2cadcdd9218d117dd41fc4dbe19e3f18b339b7b57f633625e-803c0a4fbdb654fd/raw"
+    },
+    {
+      "Path": "wahapedia/snapshots/wahapedia/11e/1b35f130df1b5b35989aa9b26e18df93690049a448199b645bd27da531c05598/21c9cdb5a9f89aa51c21bd6bc96840be760cf3baf2d1d9e17822035ccaee67f8-ab723a12c02580be/metadata.json",
+      "SHA256": "bfab153ef6d12caccb3e9a18134b4123224a69f762b0604b0923866ba19c4b0e",
+      "Bytes": 493,
+      "OriginalPath": ".local/reference-sources-real/wahapedia/11e/1b35f130df1b5b35989aa9b26e18df93690049a448199b645bd27da531c05598/21c9cdb5a9f89aa51c21bd6bc96840be760cf3baf2d1d9e17822035ccaee67f8-ab723a12c02580be/metadata.json"
+    },
+    {
+      "Path": "wahapedia/snapshots/wahapedia/11e/1b35f130df1b5b35989aa9b26e18df93690049a448199b645bd27da531c05598/21c9cdb5a9f89aa51c21bd6bc96840be760cf3baf2d1d9e17822035ccaee67f8-ab723a12c02580be/raw",
+      "SHA256": "21c9cdb5a9f89aa51c21bd6bc96840be760cf3baf2d1d9e17822035ccaee67f8",
+      "Bytes": 702885,
+      "OriginalPath": ".local/reference-sources-real/wahapedia/11e/1b35f130df1b5b35989aa9b26e18df93690049a448199b645bd27da531c05598/21c9cdb5a9f89aa51c21bd6bc96840be760cf3baf2d1d9e17822035ccaee67f8-ab723a12c02580be/raw"
+    },
+    {
+      "Path": "wahapedia/snapshots/wahapedia/11e/1d105fff25521f97e3a076615131e75befaa278315a699e129d602a9bfdbe831/21e9e55e7477ac2dc3243654a5090abfec0967fc70a05d67a9a740ea530d51bd-4ac3a65ba433bf88/metadata.json",
+      "SHA256": "2d938496f2fbc4a773b6c9e84d1ada1da75c84eafedf6f86a83e4d88d40223f7",
+      "Bytes": 473,
+      "OriginalPath": ".local/reference-sources-real/wahapedia/11e/1d105fff25521f97e3a076615131e75befaa278315a699e129d602a9bfdbe831/21e9e55e7477ac2dc3243654a5090abfec0967fc70a05d67a9a740ea530d51bd-4ac3a65ba433bf88/metadata.json"
+    },
+    {
+      "Path": "wahapedia/snapshots/wahapedia/11e/1d105fff25521f97e3a076615131e75befaa278315a699e129d602a9bfdbe831/21e9e55e7477ac2dc3243654a5090abfec0967fc70a05d67a9a740ea530d51bd-4ac3a65ba433bf88/raw",
+      "SHA256": "21e9e55e7477ac2dc3243654a5090abfec0967fc70a05d67a9a740ea530d51bd",
+      "Bytes": 764196,
+      "OriginalPath": ".local/reference-sources-real/wahapedia/11e/1d105fff25521f97e3a076615131e75befaa278315a699e129d602a9bfdbe831/21e9e55e7477ac2dc3243654a5090abfec0967fc70a05d67a9a740ea530d51bd-4ac3a65ba433bf88/raw"
+    },
+    {
+      "Path": "wahapedia/snapshots/wahapedia/11e/20ff5efa10130e686e6a0a67fbabc586ea650d8c00a059aeb01a649ead389387/42af53e7b3527af72812d627bfb29dcd267ff2fc820b6c3ca373c44263e15eb8-b305384f3b516fde/metadata.json",
+      "SHA256": "6224f3d880f01a9dc491aeefd21a0ba74408b5615e5639e3c0f0d2d38f421a37",
+      "Bytes": 491,
+      "OriginalPath": ".local/reference-sources-real/wahapedia/11e/20ff5efa10130e686e6a0a67fbabc586ea650d8c00a059aeb01a649ead389387/42af53e7b3527af72812d627bfb29dcd267ff2fc820b6c3ca373c44263e15eb8-b305384f3b516fde/metadata.json"
+    },
+    {
+      "Path": "wahapedia/snapshots/wahapedia/11e/20ff5efa10130e686e6a0a67fbabc586ea650d8c00a059aeb01a649ead389387/42af53e7b3527af72812d627bfb29dcd267ff2fc820b6c3ca373c44263e15eb8-b305384f3b516fde/raw",
+      "SHA256": "42af53e7b3527af72812d627bfb29dcd267ff2fc820b6c3ca373c44263e15eb8",
+      "Bytes": 1064854,
+      "OriginalPath": ".local/reference-sources-real/wahapedia/11e/20ff5efa10130e686e6a0a67fbabc586ea650d8c00a059aeb01a649ead389387/42af53e7b3527af72812d627bfb29dcd267ff2fc820b6c3ca373c44263e15eb8-b305384f3b516fde/raw"
+    },
+    {
+      "Path": "wahapedia/snapshots/wahapedia/11e/2f7c25826e24471f0b6c54dda954e20af543ba9e00f73be987a8584db8b6027e/d47a4cb0060433cb835e7962ba8b7ae2db5bb3373f652fe8325aaf991a0b3cd7-505d2e2be367ae75/metadata.json",
+      "SHA256": "d5d901465d012f1620a0c7d453d778ab2fafd4ffc5328c135ab316bf00acab77",
+      "Bytes": 465,
+      "OriginalPath": ".local/reference-sources-real/wahapedia/11e/2f7c25826e24471f0b6c54dda954e20af543ba9e00f73be987a8584db8b6027e/d47a4cb0060433cb835e7962ba8b7ae2db5bb3373f652fe8325aaf991a0b3cd7-505d2e2be367ae75/metadata.json"
+    },
+    {
+      "Path": "wahapedia/snapshots/wahapedia/11e/2f7c25826e24471f0b6c54dda954e20af543ba9e00f73be987a8584db8b6027e/d47a4cb0060433cb835e7962ba8b7ae2db5bb3373f652fe8325aaf991a0b3cd7-505d2e2be367ae75/raw",
+      "SHA256": "d47a4cb0060433cb835e7962ba8b7ae2db5bb3373f652fe8325aaf991a0b3cd7",
+      "Bytes": 542461,
+      "OriginalPath": ".local/reference-sources-real/wahapedia/11e/2f7c25826e24471f0b6c54dda954e20af543ba9e00f73be987a8584db8b6027e/d47a4cb0060433cb835e7962ba8b7ae2db5bb3373f652fe8325aaf991a0b3cd7-505d2e2be367ae75/raw"
+    },
+    {
+      "Path": "wahapedia/snapshots/wahapedia/11e/32edca0f7a2f7597c9c90baf51ca8646f68fad46e9a2a551b5ae4d55d9e8f1c4/cffdc770a11d84a759b6fc5cc6e592c0a760df334a6d0644c819a84a83c16516-3971322d33820d02/metadata.json",
+      "SHA256": "ea2a08d3db47ef86252e75b311738315268dac4f3c6ab74abb65fb620b1fe304",
+      "Bytes": 483,
+      "OriginalPath": ".local/reference-sources-real/wahapedia/11e/32edca0f7a2f7597c9c90baf51ca8646f68fad46e9a2a551b5ae4d55d9e8f1c4/cffdc770a11d84a759b6fc5cc6e592c0a760df334a6d0644c819a84a83c16516-3971322d33820d02/metadata.json"
+    },
+    {
+      "Path": "wahapedia/snapshots/wahapedia/11e/32edca0f7a2f7597c9c90baf51ca8646f68fad46e9a2a551b5ae4d55d9e8f1c4/cffdc770a11d84a759b6fc5cc6e592c0a760df334a6d0644c819a84a83c16516-3971322d33820d02/raw",
+      "SHA256": "cffdc770a11d84a759b6fc5cc6e592c0a760df334a6d0644c819a84a83c16516",
+      "Bytes": 1028955,
+      "OriginalPath": ".local/reference-sources-real/wahapedia/11e/32edca0f7a2f7597c9c90baf51ca8646f68fad46e9a2a551b5ae4d55d9e8f1c4/cffdc770a11d84a759b6fc5cc6e592c0a760df334a6d0644c819a84a83c16516-3971322d33820d02/raw"
+    },
+    {
+      "Path": "wahapedia/snapshots/wahapedia/11e/4974f9fe67812e3af26d0441c632196f8848eae325cd784e5df22516a742b4e7/7d94a4258724d92ff120b8bc1c63b643b25ad6f504e5239063d06ab18d3e7f74-7c6b13a397607e6c/metadata.json",
+      "SHA256": "f80aead398fc7b201482516548cdedb9b1b4979d307bbb14a83565ec62e4d08d",
+      "Bytes": 471,
+      "OriginalPath": ".local/reference-sources-real/wahapedia/11e/4974f9fe67812e3af26d0441c632196f8848eae325cd784e5df22516a742b4e7/7d94a4258724d92ff120b8bc1c63b643b25ad6f504e5239063d06ab18d3e7f74-7c6b13a397607e6c/metadata.json"
+    },
+    {
+      "Path": "wahapedia/snapshots/wahapedia/11e/4974f9fe67812e3af26d0441c632196f8848eae325cd784e5df22516a742b4e7/7d94a4258724d92ff120b8bc1c63b643b25ad6f504e5239063d06ab18d3e7f74-7c6b13a397607e6c/raw",
+      "SHA256": "7d94a4258724d92ff120b8bc1c63b643b25ad6f504e5239063d06ab18d3e7f74",
+      "Bytes": 1068086,
+      "OriginalPath": ".local/reference-sources-real/wahapedia/11e/4974f9fe67812e3af26d0441c632196f8848eae325cd784e5df22516a742b4e7/7d94a4258724d92ff120b8bc1c63b643b25ad6f504e5239063d06ab18d3e7f74-7c6b13a397607e6c/raw"
+    },
+    {
+      "Path": "wahapedia/snapshots/wahapedia/11e/4fd634635775f9b0e5cb15598f82aa8a6e724dc4eb2daa3a9c6d1afdc4034209/f735658541757c6660ff16d318ded41f69b9b1b11c561c330bcce1f3f34fa777-4c66440f16778a24/metadata.json",
+      "SHA256": "2c1325b8a327820849e9a06ad6c00f44b5802bf04c90d9c7a721e39ac21e5874",
+      "Bytes": 481,
+      "OriginalPath": ".local/reference-sources-real/wahapedia/11e/4fd634635775f9b0e5cb15598f82aa8a6e724dc4eb2daa3a9c6d1afdc4034209/f735658541757c6660ff16d318ded41f69b9b1b11c561c330bcce1f3f34fa777-4c66440f16778a24/metadata.json"
+    },
+    {
+      "Path": "wahapedia/snapshots/wahapedia/11e/4fd634635775f9b0e5cb15598f82aa8a6e724dc4eb2daa3a9c6d1afdc4034209/f735658541757c6660ff16d318ded41f69b9b1b11c561c330bcce1f3f34fa777-4c66440f16778a24/raw",
+      "SHA256": "f735658541757c6660ff16d318ded41f69b9b1b11c561c330bcce1f3f34fa777",
+      "Bytes": 628966,
+      "OriginalPath": ".local/reference-sources-real/wahapedia/11e/4fd634635775f9b0e5cb15598f82aa8a6e724dc4eb2daa3a9c6d1afdc4034209/f735658541757c6660ff16d318ded41f69b9b1b11c561c330bcce1f3f34fa777-4c66440f16778a24/raw"
+    },
+    {
+      "Path": "wahapedia/snapshots/wahapedia/11e/5e95f9e7cd328fb338098b0a47efc31bd982e52336e504aff4255894d0fad0e2/7a33dada28098029417fdb3a9c2ab72ef62973ac482439098d6e67e1d76b57df-dec617d8e80bb2fa/metadata.json",
+      "SHA256": "98613eac9d6d74c0d2c35a1bf4193ef8de226da0a2684e9efc4c26932a704d44",
+      "Bytes": 479,
+      "OriginalPath": ".local/reference-sources-real/wahapedia/11e/5e95f9e7cd328fb338098b0a47efc31bd982e52336e504aff4255894d0fad0e2/7a33dada28098029417fdb3a9c2ab72ef62973ac482439098d6e67e1d76b57df-dec617d8e80bb2fa/metadata.json"
+    },
+    {
+      "Path": "wahapedia/snapshots/wahapedia/11e/5e95f9e7cd328fb338098b0a47efc31bd982e52336e504aff4255894d0fad0e2/7a33dada28098029417fdb3a9c2ab72ef62973ac482439098d6e67e1d76b57df-dec617d8e80bb2fa/raw",
+      "SHA256": "7a33dada28098029417fdb3a9c2ab72ef62973ac482439098d6e67e1d76b57df",
+      "Bytes": 730718,
+      "OriginalPath": ".local/reference-sources-real/wahapedia/11e/5e95f9e7cd328fb338098b0a47efc31bd982e52336e504aff4255894d0fad0e2/7a33dada28098029417fdb3a9c2ab72ef62973ac482439098d6e67e1d76b57df-dec617d8e80bb2fa/raw"
+    },
+    {
+      "Path": "wahapedia/snapshots/wahapedia/11e/5f73039f0aa67062beb6b37937d0034c9542e92ce2f9930e7c218b1ae0c2f030/085c97b6bb42d7d23c2b904674052f894b55199f24a2e4990ece574a5a0a7213-5bf501cb39c29e30/metadata.json",
+      "SHA256": "b3172e5852aee4e5d2f2153c653e9dec1bb17833776876b369a59a36fc2cb2a9",
+      "Bytes": 491,
+      "OriginalPath": ".local/reference-sources-real/wahapedia/11e/5f73039f0aa67062beb6b37937d0034c9542e92ce2f9930e7c218b1ae0c2f030/085c97b6bb42d7d23c2b904674052f894b55199f24a2e4990ece574a5a0a7213-5bf501cb39c29e30/metadata.json"
+    },
+    {
+      "Path": "wahapedia/snapshots/wahapedia/11e/5f73039f0aa67062beb6b37937d0034c9542e92ce2f9930e7c218b1ae0c2f030/085c97b6bb42d7d23c2b904674052f894b55199f24a2e4990ece574a5a0a7213-5bf501cb39c29e30/raw",
+      "SHA256": "085c97b6bb42d7d23c2b904674052f894b55199f24a2e4990ece574a5a0a7213",
+      "Bytes": 590986,
+      "OriginalPath": ".local/reference-sources-real/wahapedia/11e/5f73039f0aa67062beb6b37937d0034c9542e92ce2f9930e7c218b1ae0c2f030/085c97b6bb42d7d23c2b904674052f894b55199f24a2e4990ece574a5a0a7213-5bf501cb39c29e30/raw"
+    },
+    {
+      "Path": "wahapedia/snapshots/wahapedia/11e/70d4695513f40adc0c61c458fb64672fce6258548c6a92e1848ba34912821c6e/70d3d093ce123cca67c71b96883023575e01b2dff7a2d9a988571ac87bffa6e6-f7958746b0e0be24/metadata.json",
+      "SHA256": "f88c798667ed91c77313b44760d8ad6365409637b8dbcb146e9d01e80ca27a60",
+      "Bytes": 473,
+      "OriginalPath": ".local/reference-sources-real/wahapedia/11e/70d4695513f40adc0c61c458fb64672fce6258548c6a92e1848ba34912821c6e/70d3d093ce123cca67c71b96883023575e01b2dff7a2d9a988571ac87bffa6e6-f7958746b0e0be24/metadata.json"
+    },
+    {
+      "Path": "wahapedia/snapshots/wahapedia/11e/70d4695513f40adc0c61c458fb64672fce6258548c6a92e1848ba34912821c6e/70d3d093ce123cca67c71b96883023575e01b2dff7a2d9a988571ac87bffa6e6-f7958746b0e0be24/raw",
+      "SHA256": "70d3d093ce123cca67c71b96883023575e01b2dff7a2d9a988571ac87bffa6e6",
+      "Bytes": 810482,
+      "OriginalPath": ".local/reference-sources-real/wahapedia/11e/70d4695513f40adc0c61c458fb64672fce6258548c6a92e1848ba34912821c6e/70d3d093ce123cca67c71b96883023575e01b2dff7a2d9a988571ac87bffa6e6-f7958746b0e0be24/raw"
+    },
+    {
+      "Path": "wahapedia/snapshots/wahapedia/11e/71adb2497baea773a27cc22ee103635714ae38643a6aeeac9c9968694cf2cd0b/7aaa3e988f3ef81c26d462d21daae8b56c6998adfc49ece9dede51192c76a03e-e9722d3646867c1d/metadata.json",
+      "SHA256": "ac6f5aaeca558a1981fb16be3df6ac458936bff62da71ef7c648a7b5b063ffbf",
+      "Bytes": 489,
+      "OriginalPath": ".local/reference-sources-real/wahapedia/11e/71adb2497baea773a27cc22ee103635714ae38643a6aeeac9c9968694cf2cd0b/7aaa3e988f3ef81c26d462d21daae8b56c6998adfc49ece9dede51192c76a03e-e9722d3646867c1d/metadata.json"
+    },
+    {
+      "Path": "wahapedia/snapshots/wahapedia/11e/71adb2497baea773a27cc22ee103635714ae38643a6aeeac9c9968694cf2cd0b/7aaa3e988f3ef81c26d462d21daae8b56c6998adfc49ece9dede51192c76a03e-e9722d3646867c1d/raw",
+      "SHA256": "7aaa3e988f3ef81c26d462d21daae8b56c6998adfc49ece9dede51192c76a03e",
+      "Bytes": 610616,
+      "OriginalPath": ".local/reference-sources-real/wahapedia/11e/71adb2497baea773a27cc22ee103635714ae38643a6aeeac9c9968694cf2cd0b/7aaa3e988f3ef81c26d462d21daae8b56c6998adfc49ece9dede51192c76a03e-e9722d3646867c1d/raw"
+    },
+    {
+      "Path": "wahapedia/snapshots/wahapedia/11e/7d30dddcf4728e278ee45de5173a24147c524070be12be4ef9af8bdf0a411fcb/74e197f49066b3bcdf753d959dfa781a2814b72beac0f80db16e8dd8f58c7ea8-a951925984463019/metadata.json",
+      "SHA256": "dd882fe7ce9ec4a2464a6f8d3014571f64d73a1547a8b27d4e0da087bcd2ca0d",
+      "Bytes": 487,
+      "OriginalPath": ".local/reference-sources-real/wahapedia/11e/7d30dddcf4728e278ee45de5173a24147c524070be12be4ef9af8bdf0a411fcb/74e197f49066b3bcdf753d959dfa781a2814b72beac0f80db16e8dd8f58c7ea8-a951925984463019/metadata.json"
+    },
+    {
+      "Path": "wahapedia/snapshots/wahapedia/11e/7d30dddcf4728e278ee45de5173a24147c524070be12be4ef9af8bdf0a411fcb/74e197f49066b3bcdf753d959dfa781a2814b72beac0f80db16e8dd8f58c7ea8-a951925984463019/raw",
+      "SHA256": "74e197f49066b3bcdf753d959dfa781a2814b72beac0f80db16e8dd8f58c7ea8",
+      "Bytes": 1018531,
+      "OriginalPath": ".local/reference-sources-real/wahapedia/11e/7d30dddcf4728e278ee45de5173a24147c524070be12be4ef9af8bdf0a411fcb/74e197f49066b3bcdf753d959dfa781a2814b72beac0f80db16e8dd8f58c7ea8-a951925984463019/raw"
+    },
+    {
+      "Path": "wahapedia/snapshots/wahapedia/11e/7f08f57853d4ced0dd8ee6c26372788c2e433750768cfd559ab3289ad339375e/090cd362f277be201dfd0216e616b058d56b09ba452859be512a34e9dd9250e3-da491c640e759c0c/metadata.json",
+      "SHA256": "e0cae765974ed58ace1967e8f42427180b913cd74eaebe91a5e938cce165b729",
+      "Bytes": 487,
+      "OriginalPath": ".local/reference-sources-real/wahapedia/11e/7f08f57853d4ced0dd8ee6c26372788c2e433750768cfd559ab3289ad339375e/090cd362f277be201dfd0216e616b058d56b09ba452859be512a34e9dd9250e3-da491c640e759c0c/metadata.json"
+    },
+    {
+      "Path": "wahapedia/snapshots/wahapedia/11e/7f08f57853d4ced0dd8ee6c26372788c2e433750768cfd559ab3289ad339375e/090cd362f277be201dfd0216e616b058d56b09ba452859be512a34e9dd9250e3-da491c640e759c0c/raw",
+      "SHA256": "090cd362f277be201dfd0216e616b058d56b09ba452859be512a34e9dd9250e3",
+      "Bytes": 697673,
+      "OriginalPath": ".local/reference-sources-real/wahapedia/11e/7f08f57853d4ced0dd8ee6c26372788c2e433750768cfd559ab3289ad339375e/090cd362f277be201dfd0216e616b058d56b09ba452859be512a34e9dd9250e3-da491c640e759c0c/raw"
+    },
+    {
+      "Path": "wahapedia/snapshots/wahapedia/11e/884a7c1fd859d1fc676d0206ac088b3b64bfdce65d17d85993b86ef205d38f0b/53b461aecb4bf69dd25cb65b2d396d985e4456ef9f4d25e84a2737cadef3cc64-dfa0d1be6ea6f3af/metadata.json",
+      "SHA256": "01470e791a274f072b503e6be4a33592f046105dd28622a3a1a8195fc57fffa5",
+      "Bytes": 495,
+      "OriginalPath": ".local/reference-sources-real/wahapedia/11e/884a7c1fd859d1fc676d0206ac088b3b64bfdce65d17d85993b86ef205d38f0b/53b461aecb4bf69dd25cb65b2d396d985e4456ef9f4d25e84a2737cadef3cc64-dfa0d1be6ea6f3af/metadata.json"
+    },
+    {
+      "Path": "wahapedia/snapshots/wahapedia/11e/884a7c1fd859d1fc676d0206ac088b3b64bfdce65d17d85993b86ef205d38f0b/53b461aecb4bf69dd25cb65b2d396d985e4456ef9f4d25e84a2737cadef3cc64-dfa0d1be6ea6f3af/raw",
+      "SHA256": "53b461aecb4bf69dd25cb65b2d396d985e4456ef9f4d25e84a2737cadef3cc64",
+      "Bytes": 1189184,
+      "OriginalPath": ".local/reference-sources-real/wahapedia/11e/884a7c1fd859d1fc676d0206ac088b3b64bfdce65d17d85993b86ef205d38f0b/53b461aecb4bf69dd25cb65b2d396d985e4456ef9f4d25e84a2737cadef3cc64-dfa0d1be6ea6f3af/raw"
+    },
+    {
+      "Path": "wahapedia/snapshots/wahapedia/11e/8bbcb96670417d69647048ae82a04aae682ca736ebf9288ea6adfa33fe35011b/20224f1ab27121e1f213995791868211d83e377fa0d9dfbb13f6b7e82f8d9d4e-0c800ce084ee5d2a/metadata.json",
+      "SHA256": "4dc7cbd88af0329447ce571b80940d0e472dc089f8fd230aa09d6406072ddfb7",
+      "Bytes": 481,
+      "OriginalPath": ".local/reference-sources-real/wahapedia/11e/8bbcb96670417d69647048ae82a04aae682ca736ebf9288ea6adfa33fe35011b/20224f1ab27121e1f213995791868211d83e377fa0d9dfbb13f6b7e82f8d9d4e-0c800ce084ee5d2a/metadata.json"
+    },
+    {
+      "Path": "wahapedia/snapshots/wahapedia/11e/8bbcb96670417d69647048ae82a04aae682ca736ebf9288ea6adfa33fe35011b/20224f1ab27121e1f213995791868211d83e377fa0d9dfbb13f6b7e82f8d9d4e-0c800ce084ee5d2a/raw",
+      "SHA256": "20224f1ab27121e1f213995791868211d83e377fa0d9dfbb13f6b7e82f8d9d4e",
+      "Bytes": 760320,
+      "OriginalPath": ".local/reference-sources-real/wahapedia/11e/8bbcb96670417d69647048ae82a04aae682ca736ebf9288ea6adfa33fe35011b/20224f1ab27121e1f213995791868211d83e377fa0d9dfbb13f6b7e82f8d9d4e-0c800ce084ee5d2a/raw"
+    },
+    {
+      "Path": "wahapedia/snapshots/wahapedia/11e/9cffa2b3fb3f667124467914f6be67b158ef8c3c9af4866cd2cca817bc2af464/29693c96f71ceec982dfe96d5db3d8381840fd9ab4c5b33013562c5d153383fb-ce7ef68c23da7f04/metadata.json",
+      "SHA256": "4b67484c03a7c186f82bd0f595011cc2678909910c5024089ebe557ff3f065db",
+      "Bytes": 483,
+      "OriginalPath": ".local/reference-sources-real/wahapedia/11e/9cffa2b3fb3f667124467914f6be67b158ef8c3c9af4866cd2cca817bc2af464/29693c96f71ceec982dfe96d5db3d8381840fd9ab4c5b33013562c5d153383fb-ce7ef68c23da7f04/metadata.json"
+    },
+    {
+      "Path": "wahapedia/snapshots/wahapedia/11e/9cffa2b3fb3f667124467914f6be67b158ef8c3c9af4866cd2cca817bc2af464/29693c96f71ceec982dfe96d5db3d8381840fd9ab4c5b33013562c5d153383fb-ce7ef68c23da7f04/raw",
+      "SHA256": "29693c96f71ceec982dfe96d5db3d8381840fd9ab4c5b33013562c5d153383fb",
+      "Bytes": 856463,
+      "OriginalPath": ".local/reference-sources-real/wahapedia/11e/9cffa2b3fb3f667124467914f6be67b158ef8c3c9af4866cd2cca817bc2af464/29693c96f71ceec982dfe96d5db3d8381840fd9ab4c5b33013562c5d153383fb-ce7ef68c23da7f04/raw"
+    },
+    {
+      "Path": "wahapedia/snapshots/wahapedia/11e/9f2c5373ed518cab20468d91969b569ad97f0957831ea45d313bda3f013f9be7/0834235fc198639542659e0f49003d7d076e0aca52be131412cd3da33c750adb-6111e6e4a2a6d48a/metadata.json",
+      "SHA256": "3672ebb6c5d85b627ebdb343d106015679a5e83d9c6d30247362184ffd566460",
+      "Bytes": 495,
+      "OriginalPath": ".local/reference-sources-real/wahapedia/11e/9f2c5373ed518cab20468d91969b569ad97f0957831ea45d313bda3f013f9be7/0834235fc198639542659e0f49003d7d076e0aca52be131412cd3da33c750adb-6111e6e4a2a6d48a/metadata.json"
+    },
+    {
+      "Path": "wahapedia/snapshots/wahapedia/11e/9f2c5373ed518cab20468d91969b569ad97f0957831ea45d313bda3f013f9be7/0834235fc198639542659e0f49003d7d076e0aca52be131412cd3da33c750adb-6111e6e4a2a6d48a/raw",
+      "SHA256": "0834235fc198639542659e0f49003d7d076e0aca52be131412cd3da33c750adb",
+      "Bytes": 730955,
+      "OriginalPath": ".local/reference-sources-real/wahapedia/11e/9f2c5373ed518cab20468d91969b569ad97f0957831ea45d313bda3f013f9be7/0834235fc198639542659e0f49003d7d076e0aca52be131412cd3da33c750adb-6111e6e4a2a6d48a/raw"
+    },
+    {
+      "Path": "wahapedia/snapshots/wahapedia/11e/c16c7c0d7daa5631f594564691b9c9f051635a423edf99f8b02a5b37455fe667/122200e551efca78aaf4bba1c3cd5decac394656d067d42fbdf55ff0c3c9c363-1cc60d576eeeb3a6/metadata.json",
+      "SHA256": "ab85a413f9c74519e176ebe5243f49b3dd95e6728b3a2aec5b132d68d3ee0a7b",
+      "Bytes": 489,
+      "OriginalPath": ".local/reference-sources-real/wahapedia/11e/c16c7c0d7daa5631f594564691b9c9f051635a423edf99f8b02a5b37455fe667/122200e551efca78aaf4bba1c3cd5decac394656d067d42fbdf55ff0c3c9c363-1cc60d576eeeb3a6/metadata.json"
+    },
+    {
+      "Path": "wahapedia/snapshots/wahapedia/11e/c16c7c0d7daa5631f594564691b9c9f051635a423edf99f8b02a5b37455fe667/122200e551efca78aaf4bba1c3cd5decac394656d067d42fbdf55ff0c3c9c363-1cc60d576eeeb3a6/raw",
+      "SHA256": "122200e551efca78aaf4bba1c3cd5decac394656d067d42fbdf55ff0c3c9c363",
+      "Bytes": 607301,
+      "OriginalPath": ".local/reference-sources-real/wahapedia/11e/c16c7c0d7daa5631f594564691b9c9f051635a423edf99f8b02a5b37455fe667/122200e551efca78aaf4bba1c3cd5decac394656d067d42fbdf55ff0c3c9c363-1cc60d576eeeb3a6/raw"
+    },
+    {
+      "Path": "wahapedia/snapshots/wahapedia/11e/c81df21f1fbd254005f2e8bbd0e05e8c8602c08d99f8cf36f1821fd11165653d/8bcebb00863800b892695477edeb981680209f065dcc18f0f1b774c71878fd08-78538c0e4e381852/metadata.json",
+      "SHA256": "a35177ab0e7856199fcf55daa4d15bf136fa8f719f69acc7d5ec56ac2d132175",
+      "Bytes": 483,
+      "OriginalPath": ".local/reference-sources-real/wahapedia/11e/c81df21f1fbd254005f2e8bbd0e05e8c8602c08d99f8cf36f1821fd11165653d/8bcebb00863800b892695477edeb981680209f065dcc18f0f1b774c71878fd08-78538c0e4e381852/metadata.json"
+    },
+    {
+      "Path": "wahapedia/snapshots/wahapedia/11e/c81df21f1fbd254005f2e8bbd0e05e8c8602c08d99f8cf36f1821fd11165653d/8bcebb00863800b892695477edeb981680209f065dcc18f0f1b774c71878fd08-78538c0e4e381852/raw",
+      "SHA256": "8bcebb00863800b892695477edeb981680209f065dcc18f0f1b774c71878fd08",
+      "Bytes": 572473,
+      "OriginalPath": ".local/reference-sources-real/wahapedia/11e/c81df21f1fbd254005f2e8bbd0e05e8c8602c08d99f8cf36f1821fd11165653d/8bcebb00863800b892695477edeb981680209f065dcc18f0f1b774c71878fd08-78538c0e4e381852/raw"
+    },
+    {
+      "Path": "wahapedia/snapshots/wahapedia/11e/cdff8a8248a97e07c60f9bc7d52379da411d2d6c6acfd7f80413831f0df4467a/0f393ea32291e5b701c5764e9136d48715285e485f510c193708629527811984-573adaaa974bf807/metadata.json",
+      "SHA256": "7ce04d9d0f9e2853dd88610429c045fc865b567bacb0facdc4e69c8214505a5b",
+      "Bytes": 481,
+      "OriginalPath": ".local/reference-sources-real/wahapedia/11e/cdff8a8248a97e07c60f9bc7d52379da411d2d6c6acfd7f80413831f0df4467a/0f393ea32291e5b701c5764e9136d48715285e485f510c193708629527811984-573adaaa974bf807/metadata.json"
+    },
+    {
+      "Path": "wahapedia/snapshots/wahapedia/11e/cdff8a8248a97e07c60f9bc7d52379da411d2d6c6acfd7f80413831f0df4467a/0f393ea32291e5b701c5764e9136d48715285e485f510c193708629527811984-573adaaa974bf807/raw",
+      "SHA256": "0f393ea32291e5b701c5764e9136d48715285e485f510c193708629527811984",
+      "Bytes": 674072,
+      "OriginalPath": ".local/reference-sources-real/wahapedia/11e/cdff8a8248a97e07c60f9bc7d52379da411d2d6c6acfd7f80413831f0df4467a/0f393ea32291e5b701c5764e9136d48715285e485f510c193708629527811984-573adaaa974bf807/raw"
+    },
+    {
+      "Path": "wahapedia/snapshots/wahapedia/11e/dfe1efdbd0d3c34836fe5aac4c9f8a7215319e35aa94b8c9627c960e7901fd47/c36e2d23f21eff90cef8356a11f40777e7a01903740f5f09b6601b4512afbd4e-7f7d1f1c46eb05a4/metadata.json",
+      "SHA256": "022f2a6d70e1f28b2a446f32c3486a143698fbb145f82b287238ee4f86ecce29",
+      "Bytes": 471,
+      "OriginalPath": ".local/reference-sources-real/wahapedia/11e/dfe1efdbd0d3c34836fe5aac4c9f8a7215319e35aa94b8c9627c960e7901fd47/c36e2d23f21eff90cef8356a11f40777e7a01903740f5f09b6601b4512afbd4e-7f7d1f1c46eb05a4/metadata.json"
+    },
+    {
+      "Path": "wahapedia/snapshots/wahapedia/11e/dfe1efdbd0d3c34836fe5aac4c9f8a7215319e35aa94b8c9627c960e7901fd47/c36e2d23f21eff90cef8356a11f40777e7a01903740f5f09b6601b4512afbd4e-7f7d1f1c46eb05a4/raw",
+      "SHA256": "c36e2d23f21eff90cef8356a11f40777e7a01903740f5f09b6601b4512afbd4e",
+      "Bytes": 783912,
+      "OriginalPath": ".local/reference-sources-real/wahapedia/11e/dfe1efdbd0d3c34836fe5aac4c9f8a7215319e35aa94b8c9627c960e7901fd47/c36e2d23f21eff90cef8356a11f40777e7a01903740f5f09b6601b4512afbd4e-7f7d1f1c46eb05a4/raw"
+    },
+    {
+      "Path": "wahapedia/snapshots/wahapedia/11e/f26003260bef715c84f561480de7ddb6013a0c3405869a53fcd2439ab4737ff5/0e66e99eb1fd3607bd412b62f193a4f2338eb935481912200c622b7d3ee443b4-f098e7165affe1d5/metadata.json",
+      "SHA256": "9ca4dab0b1e77f49b72abb7ed48ce75fc2371e414e3979d6404efd49d9a67916",
+      "Bytes": 483,
+      "OriginalPath": ".local/reference-sources-real/wahapedia/11e/f26003260bef715c84f561480de7ddb6013a0c3405869a53fcd2439ab4737ff5/0e66e99eb1fd3607bd412b62f193a4f2338eb935481912200c622b7d3ee443b4-f098e7165affe1d5/metadata.json"
+    },
+    {
+      "Path": "wahapedia/snapshots/wahapedia/11e/f26003260bef715c84f561480de7ddb6013a0c3405869a53fcd2439ab4737ff5/0e66e99eb1fd3607bd412b62f193a4f2338eb935481912200c622b7d3ee443b4-f098e7165affe1d5/raw",
+      "SHA256": "0e66e99eb1fd3607bd412b62f193a4f2338eb935481912200c622b7d3ee443b4",
+      "Bytes": 3018306,
+      "OriginalPath": ".local/reference-sources-real/wahapedia/11e/f26003260bef715c84f561480de7ddb6013a0c3405869a53fcd2439ab4737ff5/0e66e99eb1fd3607bd412b62f193a4f2338eb935481912200c622b7d3ee443b4-f098e7165affe1d5/raw"
+    },
+    {
+      "Path": "wahapedia/snapshots/wahapedia/11e/f507dd3ee87afe05da1d746ef542905ae96e3b268122e532fa12b2e61bd2b5ae/56cc6266a4fa214f896bb1aec90cd12a6748b74058a78fc166ceea2f0b49fc1e-7b6ef1047c174935/metadata.json",
+      "SHA256": "56d9e0f7ef0903682d2454afcc7b57662594e5ed3955b119901ed94c3b8e2512",
+      "Bytes": 489,
+      "OriginalPath": ".local/reference-sources-real/wahapedia/11e/f507dd3ee87afe05da1d746ef542905ae96e3b268122e532fa12b2e61bd2b5ae/56cc6266a4fa214f896bb1aec90cd12a6748b74058a78fc166ceea2f0b49fc1e-7b6ef1047c174935/metadata.json"
+    },
+    {
+      "Path": "wahapedia/snapshots/wahapedia/11e/f507dd3ee87afe05da1d746ef542905ae96e3b268122e532fa12b2e61bd2b5ae/56cc6266a4fa214f896bb1aec90cd12a6748b74058a78fc166ceea2f0b49fc1e-7b6ef1047c174935/raw",
+      "SHA256": "56cc6266a4fa214f896bb1aec90cd12a6748b74058a78fc166ceea2f0b49fc1e",
+      "Bytes": 560630,
+      "OriginalPath": ".local/reference-sources-real/wahapedia/11e/f507dd3ee87afe05da1d746ef542905ae96e3b268122e532fa12b2e61bd2b5ae/56cc6266a4fa214f896bb1aec90cd12a6748b74058a78fc166ceea2f0b49fc1e-7b6ef1047c174935/raw"
+    },
+    {
+      "Path": "bsdata/11e/da7248777da54218034f09b6271ad89ff6b68a77/reimported.json",
+      "SHA256": "b15ef5fb3bf49f296769ee729df9039e8ab495401e543f98dff7f663dbd04492",
+      "Bytes": 59474611,
+      "OriginalPath": ".local/coverage-audit/reimported.json"
+    },
+    {
+      "Path": "bsdata/11e/da7248777da54218034f09b6271ad89ff6b68a77/catalogues.json",
+      "SHA256": "60931120e45c2442a42ff2a08ff1476950dc21aeb9be96b1e1f595f018e81099",
+      "Bytes": 12441,
+      "OriginalPath": ".local/coverage-audit/catalogues.json"
+    },
+    {
+      "Path": "references/11e/detachment-universe.json",
+      "SHA256": "1d336bc039693ca0adad969f5f14da1b1a39bf02d0d2a8bb6980653aafa18947",
+      "Bytes": 3469131,
+      "OriginalPath": "artifacts/detachment-universe.json"
+    },
+    {
+      "Path": "references/11e/reference-faction-source-manifest.json",
+      "SHA256": "96a9e5f267362d5d351f9a8ae488a5432751143baf5f446a3051ff4b9d2d1a75",
+      "Bytes": 28199,
+      "OriginalPath": "artifacts/references-real/reference-faction-source-manifest.json"
+    },
+    {
+      "Path": "bsdata/11e/cc1830fbfead059f8059ed6c7f8e73cd4c390908/death-guard/raw-catalogue.json",
+      "SHA256": "2955524a0b6f2806ee696131d33d1c5748dcc905838a7a4e76054f8237dbc366",
+      "Bytes": 1707983,
+      "OriginalPath": ".local/attachment-diagnostic/raw-catalogue.json"
+    },
+    {
+      "Path": "bsdata/11e/cc1830fbfead059f8059ed6c7f8e73cd4c390908/death-guard/source-trace.json",
+      "SHA256": "f8aacf0fbcf8348a26d698a6e29408000f02e01ab66428313b284034b6926b73",
+      "Bytes": 3634,
+      "OriginalPath": ".local/attachment-diagnostic/source-trace.json"
+    },
+    {
+      "Path": "libraries/android-equipment-catalogue.json",
+      "SHA256": "05ebccbcdd988fcc8f83f5fd75adccfad949f4169c473fbad59ffa65f23d233c",
+      "Bytes": 4036062,
+      "OriginalPath": ".local/android-equipment-catalogue.json"
+    },
+    {
+      "Path": "libraries/reference-import-before-library.json",
+      "SHA256": "fb532388d49b0d75befc00bb8118a983bd9d9acc2dd5f623b89ad6b0b01698f6",
+      "Bytes": 52836770,
+      "OriginalPath": ".local/reference-import-before-library.json"
+    },
+    {
+      "Path": "libraries/all-factions-attachment-source.json",
+      "SHA256": "4806373560b8779045277f44a8d950d45190c036ce9897c0922ee088c1303e9d",
+      "Bytes": 30459803,
+      "OriginalPath": ".local/all-factions-attachment-source.json"
+    },
+    {
+      "Path": "libraries/sororitas-attachment-source.json",
+      "SHA256": "117fd9439cecf76596dc4940b208455a99cb349089fcb95a8e2a288387cff50c",
+      "Bytes": 3542077,
+      "OriginalPath": ".local/sororitas-attachment-source.json"
+    },
+    {
+      "Path": "libraries/installed-attachment-source.json",
+      "SHA256": "efcae7e5cbab2a7885bbb19bd7e53fdd1c03c095cec1a62db4f8086e6420faa9",
+      "Bytes": 3557528,
+      "OriginalPath": ".local/installed-attachment-source.json"
+    },
+    {
+      "Path": "libraries/GrimList-Library.json",
+      "SHA256": "fafc749f56f19dbf09e3117772c39384b3674df1ec0cde3a932a1da414ad6439",
+      "Bytes": 54863318,
+      "OriginalPath": "artifacts/android/GrimList-Library.json"
+    },
+    {
+      "Path": "references/GrimList-DeathGuard-Stratagems.json",
+      "SHA256": "a2178f2790d0315dffceb74b55e70b42af160ab58dae47f1ddf5d5d263825dc8",
+      "Bytes": 43873,
+      "OriginalPath": "artifacts/android/GrimList-DeathGuard-Stratagems.json"
+    },
+    {
+      "Path": "references/death-guard-reference-text.txt",
+      "SHA256": "bbc55fab1d665194bc2a161f36f792d37d55c7809b95358251000746b1cdde4a",
+      "Bytes": 51351,
+      "OriginalPath": ".local/sources/death-guard-reference-text.txt"
+    },
+    {
+      "Path": "references/death-guard-rules-11.json",
+      "SHA256": "c26092db3ae834d7cc597818c7806bc1855c8d194f8104b2327044675eeffd9c",
+      "Bytes": 83433,
+      "OriginalPath": ".local/sources/death-guard-rules-11.json"
+    },
+    {
+      "Path": "bsdata/11e/cc1830fbfead059f8059ed6c7f8e73cd4c390908/repository.zip",
+      "SHA256": "747db24bf29456f0606a937f794a7e7f33154e76116eff1506e9b0750ab5c045",
+      "Bytes": 4869775,
+      "OriginalPath": ".local/sources/bsdata-11-cc1830fbfead059f8059ed6c7f8e73cd4c390908/repository.zip"
+    },
+    {
+      "Path": "bsdata/11e/cc1830fbfead059f8059ed6c7f8e73cd4c390908/source.json",
+      "SHA256": "f9decedaf46f57fb0546c39876b0c5f1550c88bedcf0062861db60c65c5a07b5",
+      "Bytes": 347,
+      "OriginalPath": ".local/sources/bsdata-11-cc1830fbfead059f8059ed6c7f8e73cd4c390908/source.json"
+    },
+    {
+      "Path": "upstream/yellowscribe/roszParser.js",
+      "SHA256": "6c100d14913849d142d853add6fe9b432fc8018174aa0871d29f6048c993cb22",
+      "Bytes": 9813,
+      "OriginalPath": ".local/export-research/yellowscribe/roszParser.js"
+    },
+    {
+      "Path": "upstream/yellowscribe/10e11eDataModel.js",
+      "SHA256": "7266435033c9890c6ecc18daa04aae58dbaf3eb881fd5b1d93fb6a0a3cc36cf8",
+      "Bytes": 18920,
+      "OriginalPath": ".local/export-research/yellowscribe/10e11eDataModel.js"
+    },
+    {
+      "Path": "eleventh-gaps/houndpack.json",
+      "SHA256": "4c994be620bbbb472746902218c2ee786914ed532d2e1a6e64985703d8a738a8",
+      "Bytes": 9603,
+      "OriginalPath": "projection: BSData/wh40k-11e@da7248777da54218034f09b6271ad89ff6b68a77"
+    },
+    {
+      "Path": "eleventh-gaps/subterranean.json",
+      "SHA256": "1f7c663bde152cf249ca076e2fdbe59f4ee1e0827661575e92f1fc863dfd95d2",
+      "Bytes": 5078,
+      "OriginalPath": "projection: BSData/wh40k-11e@da7248777da54218034f09b6271ad89ff6b68a77"
+    },
+    {
+      "Path": "eleventh-gaps/upgrades.json",
+      "SHA256": "ed91f93f4a1fb19af67f3be97cee07ee9d30df62ab21d725aa501cb849b9e791",
+      "Bytes": 13957,
+      "OriginalPath": "projection: BSData/wh40k-11e@da7248777da54218034f09b6271ad89ff6b68a77"
+    }
+  ]
+}

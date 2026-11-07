@@ -1,0 +1,82 @@
+{
+  "Database": "D:\\Konstantinos\\GrimList\\.local\\grimlist.db",
+  "ActiveSourceId": "f388f689-c0d0-4eba-a815-7b70dfad8cca",
+  "RuntimeSource": {
+    "Name": "BSData · All armies",
+    "Version": "cc1830fbfead059f8059ed6c7f8e73cd4c390908",
+    "Date": "2026-10-02",
+    "Url": "https://github.com/BSData/wh40k-11e/tree/cc1830fbfead059f8059ed6c7f8e73cd4c390908",
+    "ImportedAt": "2026-10-02T23:17:48.3369530+00:00",
+    "Edition": "11",
+    "ContentHash": "747db24bf29456f0606a937f794a7e7f33154e76116eff1506e9b0750ab5c045"
+  },
+  "ProfileSource": {
+    "Name": "BSData · All armies",
+    "Version": "cc1830fbfead059f8059ed6c7f8e73cd4c390908",
+    "Date": "2026-10-02",
+    "Url": "https://github.com/BSData/wh40k-11e/tree/cc1830fbfead059f8059ed6c7f8e73cd4c390908",
+    "ImportedAt": "2026-10-02T22:26:55.5488293+00:00",
+    "Edition": "11",
+    "ContentHash": "747db24bf29456f0606a937f794a7e7f33154e76116eff1506e9b0750ab5c045"
+  },
+  "Archive": "D:\\Konstantinos\\GrimList\\.local\\sources\\bsdata-11-cc1830fbfead059f8059ed6c7f8e73cd4c390908\\repository.zip",
+  "ArchiveSha256": "747db24bf29456f0606a937f794a7e7f33154e76116eff1506e9b0750ab5c045",
+  "SourceMetadata": "D:\\Konstantinos\\GrimList\\.local\\sources\\bsdata-11-cc1830fbfead059f8059ed6c7f8e73cd4c390908\\source.json",
+  "CachedDataset": "D:\\Konstantinos\\GrimList\\.local\\sources\\bsdata-11-cc1830fbfead059f8059ed6c7f8e73cd4c390908\\dataset.json",
+  "CatalogueFile": "wh40k-11e-cc1830fbfead059f8059ed6c7f8e73cd4c390908/Chaos - Death Guard.json",
+  "CatalogueId": "5108-f98-63c2-53cb",
+  "CatalogueRevision": 17,
+  "GameSystemRevision": 1,
+  "EntryId": "690b-a189-5935-f32e",
+  "EntryPath": "/sharedSelectionEntries/32",
+  "RuntimeUnitId": "unit-0f0ec1d8be616f7cce98fd7f",
+  "RootEntryLinks": [
+    {
+      "name": "Biologus Putrifier",
+      "id": "ad06-9aca-1787-d1c9",
+      "hidden": false,
+      "import": true,
+      "targetId": "690b-a189-5935-f32e",
+      "type": "selectionEntry"
+    }
+  ],
+  "RawHasLeaderReference": true,
+  "RawHasExtraLeaderPhrase": false,
+  "ResolvedGraphHasExtraLeaderPhrase": false,
+  "EntireCatalogueHasExtraLeaderPhrase": false,
+  "ReachableDefinitions": 76,
+  "ReferenceEdges": 134,
+  "UnresolvedReferences": [],
+  "DuplicateRegistryIds": [],
+  "IncludedFiles": [
+    "wh40k-11e-cc1830fbfead059f8059ed6c7f8e73cd4c390908/Chaos - Death Guard.json",
+    "wh40k-11e-cc1830fbfead059f8059ed6c7f8e73cd4c390908/Unaligned Forces.json",
+    "wh40k-11e-cc1830fbfead059f8059ed6c7f8e73cd4c390908/Library - Titans.json",
+    "wh40k-11e-cc1830fbfead059f8059ed6c7f8e73cd4c390908/Chaos - Chaos Knights Library.json",
+    "wh40k-11e-cc1830fbfead059f8059ed6c7f8e73cd4c390908/Library - Astartes Heresy Legends.json",
+    "wh40k-11e-cc1830fbfead059f8059ed6c7f8e73cd4c390908/Chaos - Chaos Daemons Library.json",
+    "wh40k-11e-cc1830fbfead059f8059ed6c7f8e73cd4c390908/Warhammer 40,000.json"
+  ],
+  "CataloguePhraseMatches": {
+    "one other Leader": 0,
+    "another Leader": 0,
+    "Leader unit": 0,
+    "attached": 19,
+    "Plague Marines": 24
+  },
+  "BodyguardEntryId": "8467-b3a2-2597-de0d",
+  "RawBodyguardAssociationConstraints": [
+    {
+      "id": "7d52-af78-d77f-b4f3",
+      "childId": "1556-9b56-fba6-4370",
+      "childName": "Leader",
+      "field": "associations",
+      "includeChildSelections": false,
+      "scope": "self",
+      "shared": true,
+      "type": "max",
+      "value": 1
+    }
+  ],
+  "TextScanLimitation": "Absence of an extra-Leader phrase does not imply absence of permission. Inspect bodyguard association constraints and their modifiers."
+}

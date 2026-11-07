@@ -1,0 +1,46 @@
+Death Guard stratagem transfer test
+
+This file restores the same edition-11 Death Guard stratagem cards already in
+the Windows library. It adds no new rules text and contains no units, prices,
+enhancements or detachment definitions. Other factions are not covered.
+
+1. Before importing, use Export dataset in the phone's menu and keep the JSON.
+   That export lets us establish why this phone was missing the cards. The
+   phone's current database has not yet been inspected from this computer.
+2. Install GrimList-Android-Test.apk over the existing app. Do not uninstall
+   or clear storage: saved armies live locally on the phone.
+3. Copy GrimList-DeathGuard-Stratagems.json to the phone's Downloads folder.
+4. Open Manage data. Choose BSData community as the provider (to avoid the
+   Official MFM provider's Points-only mode). Select edition 11 and
+   Datasheets only. Leave Complete faction points OFF.
+5. Choose local source and select GrimList-DeathGuard-Stratagems.json.
+6. Review the preview. It must report 45 matching-edition source stratagem
+   cards included for merge. Expand Detachment stratagem coverage after import:
+   Death Guard / Virulent Vectorium must show 6 stratagem cards.
+   Expected price changes: 0. Expected affected armies: 0.
+   If an edition mismatch is reported, stop and keep your current library.
+7. Tap Apply update. Open your Death Guard army with Virulent Vectorium selected.
+8. Open Army rules. Confirm these six detachment cards are present:
+   PUTRID DETONATION
+   DISGUSTINGLY RESILIENT
+   PLAGUESURGE
+   LEECHSPORE ERUPTION
+   OVERWHELMING GENEROSITY
+   CREEPING BLIGHT
+9. Confirm the missing-text message has gone, CP/text is visible, and cards from
+   unselected detachments do not appear. Core stratagems remain separate.
+10. Confirm units, equipment, attachments, enhancements and points are unchanged.
+11. Force-stop GrimList without clearing data, reopen it, and verify the cards
+    and army again. Make an ordinary edit and reopen the army to confirm saving.
+
+An alternative is importing GrimList-Library.json with Points + datasheets,
+but that applies the full supplied library. The small file above is sufficient
+for restoring these references while retaining your current unit data.
+
+Reference source metadata retained from Windows:
+Edition 11, Death Guard faction reference, Faction Pack 1.2, dated 2026-08-26.
+This transfer does not independently establish that the source is the latest
+published rules. It reproduces the existing Windows content exactly.
+
+Reference pack SHA-256:
+A2178F2790D0315DFFCEB74B55E70B42AF160AB58DAE47F1DDF5D5D263825DC8

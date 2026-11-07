@@ -1,0 +1,74 @@
+Generic army-rule discovery and recovery (2026-10-16)
+
+Discovery
+BsDataArmyRules.cs discovers rules separately from native roster inclusion.
+It follows linked catalogue definitions, accepts owned catalogue rules and
+explicit faction/root references, and retains the primary catalogue ID and
+source rule ID. A library link does not make its units native to the faction.
+Detachment-linked rules remain outside faction-wide discovery. Hidden rules
+and rules scoped to other catalogues are recorded as exclusions; unsupported
+visibility remains unresolved. Unit profiles are not promoted into army rules.
+
+Catalogue conditions are resolved against the source catalogue context.
+Supported detachment-dependent visibility is retained as ReferenceCard's
+optional Applicability condition and evaluated by the shared ReferenceIndex.
+That field participates in reference conflict hashing and JSON persistence.
+Per-model exceptions do not hide the faction-wide reference itself. Unknown
+mixed/roster conditions are not treated as permission to display a rule.
+
+Faction matching now combines explicit FactionContexts with detachment faction
+identities. Conflicting identities remain ambiguous. A faction needs no
+detachment definitions to display its own army rules.
+
+Existing-library recovery
+Application embeds army-rule-recovery.json.gz: complete source decisions for
+36 factions in each of five cached, pinned BSData revisions. Each scope records
+source hash/edition, faction, catalogue ID, positive rule cards, explicit
+exclusions, unresolved IDs, and source faction keywords. All archive bytes are
+SHA256-checked before generating evidence. Uncovered revisions can use a matching
+local source archive; there is no network acquisition during recovery.
+
+Recovery requires consistent unit-profile provenance and an unambiguous source
+scope. It restores missing faction contexts when the pinned source establishes
+one unique identity. It fills missing rule identity/applicability metadata,
+restores missing cards, and rechecks formerly unresolved references. Existing
+descriptive text is retained. Explicit negative source evidence retires wrongly
+attributed source cards. Legacy cards without source IDs require a unique source
+name for that exclusion and no positive rule with the same name.
+
+Manual references, different source revisions, removed/obsolete cards and
+rules-pack ownership are preserved. Conflicting evidence or identities are not
+resolved by taking the first record. Recovery runs through the normal repository
+import path, preserving saved armies and historical source snapshots. Import
+preview also applies bundled recovery to old portable libraries.
+
+The existing Space Marine compatibility supplement is retained; no new faction
+special case was introduced. Its established source-precedence behavior is
+included in display validation for old revisions.
+
+Build gate and reproducibility
+The existing --validate-bundled command now validates both Enhancements and
+army rules. Both platform publish scripts already invoke that command through
+scripts/Test-BundledEnhancements.ps1. Candidate failure retains previous packages.
+Validation requires pinned evidence for each BSData faction, detects missing
+rules even in nonempty collections, rejects conflicting identities/applicability
+and known wrong attribution, and exercises the shared ArmyReferences display
+path. Synthetic tests independently check discovery and negative cases; an
+additional regression re-reads the pinned archive and validates the bundle.
+
+To rebuild evidence without downloading new rules:
+dotnet run --project tools/GrimList.Bootstrap -- --build-army-rule-evidence <source-cache-directory> src/GrimList.Application/Resources/army-rule-recovery.json.gz
+Repeat for the pinned tests/fixtures/bsdata/11e archive directory when needed.
+Each archive requires its adjacent source.json. Existing other revisions remain.
+Rebuild the tool to embed the new evidence, then:
+dotnet run --project tools/GrimList.Bootstrap -- --regenerate-bundled src/GrimList.Application/Resources/bootstrap <new-data-release-id>
+dotnet run --project tools/GrimList.Bootstrap -- --validate-bundled
+
+Focused regressions: --army-rule-coverage-only --lf-json in GrimList.Tests.
+Windows native smoke: --smoke-test <output-prefix> --army-rule-coverage-only,
+using an isolated --data-dir and a build with SmokeChecks enabled.
+
+Bootstrap data release: grimlist-11e-2026.10.16.2, retaining the original pinned
+cc1830fbfead059f8059ed6c7f8e73cd4c390908 unit/rules source. This is not a live
+rules update or a new community binary release. See distribution validation
+notes for exact evidence and platform limits.

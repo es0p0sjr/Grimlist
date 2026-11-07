@@ -1,0 +1,13 @@
+{
+  "ReleaseId": "grimlist-11e-2026.10.16.2",
+  "FormatVersion": 1,
+  "DatasetSchemaVersion": 1,
+  "DatabaseSchemaVersion": 2,
+  "Sha256": "22B56CF021D15BEF1816FB276BB328ED41B745FB68A0F89FBC6C9882AD17D027",
+  "ContentBytes": 37989657,
+  "Units": 2194,
+  "Factions": 36,
+  "Detachments": 823,
+  "ReferenceCards": 3879,
+  "InputSha256": "2B918F7A784C65E96872904C9214AAAF26019F552CDE505EA3E2AF890E4106B1"
+}

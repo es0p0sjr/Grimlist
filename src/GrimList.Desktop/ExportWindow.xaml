@@ -1,0 +1,30 @@
+<Window x:Class="GrimList.Desktop.ExportWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Title="Export army" Width="920" Height="740" MinWidth="700" MinHeight="550" WindowStartupLocation="CenterOwner" Background="{StaticResource Background}" Foreground="{StaticResource Ink}">
+ <Grid Margin="20"><Grid.RowDefinitions><RowDefinition Height="Auto"/><RowDefinition Height="*"/><RowDefinition Height="Auto"/></Grid.RowDefinitions>
+  <StackPanel Margin="0,0,0,16"><TextBlock Text="Export army" FontSize="25" FontWeight="SemiBold"/><TextBlock x:Name="ArmyTitle" Foreground="{StaticResource Muted}" TextWrapping="Wrap" Margin="0,6,0,0"/><TextBlock x:Name="ValidationStatus" TextWrapping="Wrap" FontWeight="SemiBold" Margin="0,8,0,0"/></StackPanel>
+  <TabControl Grid.Row="1" Background="{StaticResource Background}" BorderBrush="{StaticResource Surface}">
+   <TabItem Header="  Text list  "><Grid Margin="14"><Grid.RowDefinitions><RowDefinition Height="Auto"/><RowDefinition Height="*"/><RowDefinition Height="Auto"/></Grid.RowDefinitions>
+    <TextBlock Text="Units grouped by category, with attached Leaders and Support beneath their bodyguard. Includes selected equipment, enhancements, Warlord and points." TextWrapping="Wrap" Margin="0,0,0,12"/>
+    <TextBox Grid.Row="1" x:Name="TextPreview" IsReadOnly="True" AcceptsReturn="True" FontFamily="Consolas" FontSize="12" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" AutomationProperties.Name="Army text preview"/>
+    <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,12,0,0"><Button x:Name="CopyTextButton" Content="Copy text" Click="CopyText"/><Button x:Name="SaveTextButton" Content="Save .txt" Click="SaveText" Margin="10,0,0,0"/></StackPanel>
+   </Grid></TabItem>
+   <TabItem Header="  PDF + datasheets  "><StackPanel Margin="20">
+    <TextBlock Text="A printable roster and datasheet pack" FontSize="20" FontWeight="SemiBold" Margin="0,0,0,12"/>
+    <TextBlock Text="Starts with your list and attachment groups, followed by each selected unit’s datasheet. Repeated units keep their own equipment and attached characters. Long rules continue onto additional pages." TextWrapping="Wrap" Margin="0,0,0,18"/>
+    <CheckBox x:Name="IncludeRules" Content="Include imported army and selected detachment rules / stratagems" IsChecked="True" Margin="0,0,0,14"/>
+    <CheckBox x:Name="AllWeapons" Content="Show all available weapon profiles (otherwise only equipped weapons)" Margin="0,0,0,18"/>
+    <TextBlock Text="Profiles show imported base values. Attached abilities and their conditions are included alongside them. Missing datasheets are identified in the PDF." Foreground="{StaticResource Muted}" TextWrapping="Wrap" Margin="0,0,0,20"/>
+    <Button x:Name="SavePdfButton" Content="Save PDF" Click="SavePdf" HorizontalAlignment="Left" Padding="24,10"/>
+   </StackPanel></TabItem>
+   <TabItem Header="  Yellowscribe / TTS  "><StackPanel Margin="20">
+    <TextBlock Text="Take this army into Tabletop Simulator" FontSize="20" FontWeight="SemiBold" Margin="0,0,0,12"/>
+    <TextBlock Text="Save a Yellowscribe-compatible roster file, or send this roster to yellowscribe.link to receive a code for its TTS mod. The file includes model profiles, selected equipment and attachment notes." TextWrapping="Wrap" Margin="0,0,0,14"/>
+    <TextBlock Text="Leaders remain separate units with attachment notes; group their models on the table. Units need imported datasheets and model equipment assignments. Notes and attachment effects do not automatically change TTS stats." Foreground="{StaticResource Muted}" TextWrapping="Wrap" Margin="0,0,0,14"/>
+    <TextBlock x:Name="YellowscribeProblem" Foreground="#F4D58D" TextWrapping="Wrap" Margin="0,0,0,14"/>
+    <StackPanel Orientation="Horizontal"><Button x:Name="SaveYellowscribeButton" Content="Save .ros file" Click="SaveYellowscribe"/><Button x:Name="SendYellowscribeButton" Content="Send to Yellowscribe — get code" Click="SendYellowscribe" Margin="10,0,0,0"/></StackPanel>
+    <TextBlock Text="Army code" Margin="0,24,0,8"/><TextBox x:Name="ArmyCode" IsReadOnly="True" FontSize="24" FontFamily="Consolas" AutomationProperties.Name="Yellowscribe army code"/>
+    <TextBlock Text="Codes expire. Import the code into the Yellowscribe TTS mod soon after generating it." Foreground="{StaticResource Muted}" TextWrapping="Wrap" Margin="0,10,0,0"/>
+   </StackPanel></TabItem>
+  </TabControl>
+  <DockPanel Grid.Row="2" Margin="0,14,0,0"><Button Content="Close" Click="CloseWindow" DockPanel.Dock="Right" Margin="12,0,0,0"/><TextBlock x:Name="ExportStatus" TextWrapping="Wrap" VerticalAlignment="Center" Foreground="{StaticResource Muted}"/></DockPanel>
+ </Grid>
+</Window>

@@ -1,0 +1,88 @@
+GrimList 0.2.29 - local Windows and Android delivery, 2026-10-28
+
+Easy-access delivery: repository-root 0.2.29
+Windows: GrimList-0.2.29-win-x64.msi, 100,888,576 bytes
+SHA-256 cfa4686712166affc97147320c9bea891c0c579d3feff2fe9a9867f06050c685
+Android: GrimList-Android-0.2.29.apk, 109,860,997 bytes
+SHA-256 c36af698eab877fe423c2e597fe84ca489ebbef35acfa84871498226c776ec09
+
+The folder includes installation/update instructions, release notes, individual
+hash files, SHA256SUMS.txt, MSI inventory and storage-retention notes.
+No upload, external publication or tester messaging occurred.
+
+Changes
+- Ships the shared weapon metadata recovery, static rule caches, lazy Android
+  enhancement preparation, faction/recovery dependency revisions, shared
+  catalogue pages, bounded import buffers and conservative incremental rules
+  evaluation developed after Android 0.2.28. See docs/weapon-metadata-recovery.txt
+  and the 2026-10-28 performance notes for detailed behavior and evidence.
+- Windows also receives the reference recovery/refresh and editing improvements
+  previously shipped in Android 0.2.28. Includes prior enhancement Movement/OC,
+  nested-detachment, pricing and export fixes.
+- Normal production identities are used. Performance diagnostic bypass controls
+  are excluded. Component allocation/caching benefits do not establish a uniform
+  latency improvement; attachment/detachment delays remain areas for improvement.
+- No source/rules refresh occurred during packaging. Bootstrap remains
+  grimlist-11e-2026.10.16.2. Existing history and saved army selections remain.
+  Use the application's explicit Update BSData preview/apply flow for newer data.
+
+Identity
+- Shared/Android version 0.2.29; Android code 30. These were already staged when
+  this packaging continuation began; no prior 0.2.29 installers were present.
+- Android com.grimlist.mobile, ARM64/x64, Android 11 or newer. Existing development
+  certificate SHA-256:
+  9be9c191c53dc33ee955dcaedad94868fe4a4e6817a1fb30187ac0baf7f28f25
+- MSI ProductCode {10414066-5E49-5177-B89F-B026A5453E16}.
+  Stable UpgradeCode {5F1E3A2A-2390-5993-A9F9-4AF11C89E68A}.
+  Unsigned Windows x64 MSI includes private Windows Desktop runtime 10.0.10.
+
+Verification
+- The already-running release regression completed with 561 PASS, zero FAIL and
+  'All checks passed.' Its wrapper removed its own synthetic test data.
+- Standard Android and Windows publishers ran sequentially from the existing
+  source tree. Both passed bundled candidate gates: 2,695 enhancement cards,
+  36 army-rule factions and equipment price/unresolved-reason coverage.
+  102 unsupported source conditions remain explicit.
+- Android publishing succeeded with known stale-symbol warnings; no cleanup
+  workaround was used. Production identity/version, certificate continuity,
+  ZIP CRC, no-PDB, ARM64/x64 and both native startup bindings passed.
+- Exact delivered MSI passed all 19 package checks, including embedded cabinet,
+  inventory hashes, upgrade metadata and 490 files (226,704,935 payload bytes).
+  Its extracted production app passed 13 native acceptance checks: offline
+  bootstrap, factions/detachments/references, 375-point army creation, validation,
+  save/reopen and private runtime loading. Temporary acceptance data was removed.
+- Installer welcome/per-user destination and cancel/finish passed, exit 1602.
+  No production Windows installation or full install/repair/upgrade/uninstall
+  lifecycle was performed; these checks do not prove that lifecycle.
+- All 16 build-retention checks passed. Publishers removed superseded canonical
+  Android 0.2.28, Windows 0.2.27 and Windows-installer 0.2.27 output. Earlier root
+  deliveries and previously blocked cleanup paths were not retried.
+
+Physical Android update and limitation
+- Connected Redmi 22101316UG, serial kjuoaevc95hagaz9, updated in place using
+  the exact delivered APK and adb install --no-streaming -r.
+- Version advanced from 0.2.28/code 29 to 0.2.29/code 30. appId 10345 and original
+  firstInstallTime 2026-10-13 23:15:00 were retained. No uninstall, clear-data or
+  synthetic roster operation occurred against the production app.
+- Installed APK SHA-256 matched the delivered file. Launcher resolution and
+  cold launch passed (Status: ok, LaunchState: COLD, TotalTime 1,624 ms,
+  WaitTime 1,627 ms). These timings are not time-to-usable library measurements.
+- The final interactive-screen check timed out because the phone remained
+  screen-off/keyguard-locked. Android denied the wake-input command for missing
+  INJECT_EVENTS permission. No permission/security workaround was attempted.
+  A subsequent read-only check confirmed the app process remained running.
+- Therefore the complete phone verifier exited 1 at its UI check despite the
+  successful installation/hash/cold-launch checks. Do not describe the entire
+  phone acceptance as passed. Visible UI and roster interaction remain for
+  manual verification after unlocking.
+
+Evidence: artifacts/distribution-evidence/release-0.2.29-*
+  regression.log / regression-wrapper.log
+  android-publish.log / windows-publish.log / msi-build.log
+  apk-validation.log / apk/results.json / apk/phone-screen-limit.json
+  msi-validation.log / msi/results.json / msi/app/results.json
+  msi-ui.log / msi-ui/ui-results.json / retention.log
+
+Community limitations: unsigned MSI, development-signed APK; no claim that all
+bugs or all upstream source/rule gaps are fixed. README.txt describes test
+priorities and user-controlled bug reporting.

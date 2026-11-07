@@ -1,0 +1,45 @@
+{
+  "Source": {
+    "Name": "Historical Death Guard sample — NOT current points",
+    "Version": "MFM 2.4 / March 2025",
+    "Date": "",
+    "Url": "https://assets.warhammer-community.com/eng_warhammer40000_munitorum_field_manual_march_2025-cims9ya3sg-s8j9m2haae.pdf#page=18",
+    "Edition": "10"
+  },
+  "Units": [
+    {
+      "Faction": "Death Guard",
+      "Name": "Typhus",
+      "Options": [
+        {
+          "Models": 1,
+          "Points": 80
+        }
+      ]
+    },
+    {
+      "Faction": "Death Guard",
+      "Name": "Poxwalkers",
+      "Options": [
+        {
+          "Models": 10,
+          "Points": 50
+        },
+        {
+          "Models": 20,
+          "Points": 100
+        }
+      ]
+    },
+    {
+      "Faction": "Death Guard",
+      "Name": "Death Guard Rhino",
+      "Options": [
+        {
+          "Models": 1,
+          "Points": 75
+        }
+      ]
+    }
+  ]
+}

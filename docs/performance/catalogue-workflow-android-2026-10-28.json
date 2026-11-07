@@ -1,0 +1,11 @@
+{
+  "Checks": [
+    "First open uses the prepared projection",
+    "Another connection sees only the committed revision",
+    "Rejected projection rolls back source content and revision",
+    "Active old reader survives multiple imports and collection",
+    "Retention keeps two recent manifests plus the active old reader",
+    "New reader sees current content",
+    "Imports preserve saved entry IDs and editor context"
+  ]
+}

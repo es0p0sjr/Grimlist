@@ -1,0 +1,24 @@
+{
+  "source": "wahapedia",
+  "edition": "11",
+  "detachmentAliases": {
+    "b00-cd86-4b4c-97ba": {
+      "alienhunters": "aabf-4988-4054-bed2",
+      "purgationforce": "cfc6-5531-53cb-1964",
+      "daemonhunters": "bd6f-97c7-6ac4-8320"
+    },
+    "d265-877b-e03d-30ca": {
+      "demonicincursion": "a7cf-90fa-4093-6047"
+    }
+  },
+  "sourceScopeAliases": {
+    "imperialagents": {
+      "alienhunters": "Ordo Xenos Alien Hunters",
+      "purgationforce": "Ordo Hereticus Purgation Force",
+      "daemonhunters": "Ordo Malleus Daemon Hunters"
+    },
+    "chaosdaemons": {
+      "demonicincursion": "Daemonic Incursion"
+    }
+  }
+}

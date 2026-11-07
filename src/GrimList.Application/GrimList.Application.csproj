@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup><TargetFramework>net10.0</TargetFramework></PropertyGroup>
+  <ItemGroup><InternalsVisibleTo Include="GrimList.Tests" /></ItemGroup>
+  <ItemGroup><ProjectReference Include="../GrimList.Platform/GrimList.Platform.csproj" /></ItemGroup>
+  <ItemGroup><EmbeddedResource Include="../../data/missions/11e/*-missions-2026-27.json" LogicalName="GrimList.Missions.%(Filename).json" /></ItemGroup>
+  <ItemGroup><ProjectReference Include="../GrimList.Persistence/GrimList.Persistence.csproj" /></ItemGroup>
+  <ItemGroup><EmbeddedResource Include="Resources/bootstrap/*" /></ItemGroup>
+  <ItemGroup><EmbeddedResource Include="../../tools/qr_reference/LICENSE.txt" LogicalName="GrimList.QrLicense.txt" /></ItemGroup>
+  <ItemGroup><EmbeddedResource Include="Resources/enhancement-recovery.json.gz" /></ItemGroup>
+  <ItemGroup><EmbeddedResource Include="Resources/equipment-prices.json.gz" Condition="Exists('Resources/equipment-prices.json.gz')" /></ItemGroup>
+  <ItemGroup><EmbeddedResource Include="Resources/army-rule-recovery.json.gz" Condition="Exists('Resources/army-rule-recovery.json.gz')" /></ItemGroup>
+  <ItemGroup><EmbeddedResource Include="Resources/references-11.json.gz" /></ItemGroup>
+  <ItemGroup><EmbeddedResource Include="Resources/reference-baselines-11.json.gz" /></ItemGroup>
+  <ItemGroup><EmbeddedResource Include="Resources/effective-recovery/*" LogicalName="GrimList.Application.Resources.effective-recovery.%(Filename)%(Extension)" /></ItemGroup>
+  <ItemGroup><EmbeddedResource Include="Resources/weapon-metadata.zip" /></ItemGroup>
+  <ItemGroup><EmbeddedResource Include="Resources/detachment-metadata.json.gz" Condition="Exists('Resources/detachment-metadata.json.gz')" /></ItemGroup>
+</Project>

@@ -1,0 +1,1962 @@
+{
+  "Source": {
+    "Name": "Wahapedia - Space Marines",
+    "Version": "2026-10-14.1",
+    "Date": "2026-10-14",
+    "Url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/",
+    "Edition": "11",
+    "ContentHash": "c86c856dc8b5ede2a7fbd92a6828288f1dcd698cef10b9cd08d8e41ed88962ae"
+  },
+  "PageRevision": "App 11th edition 2.7.1, October 2026",
+  "Notes": "Dated reference snapshot. Complete for the listed standard detachments on this page; not an official rules certification. Boarding Actions excluded. Deathwatch Support references do not implement its army-building rules.",
+  "Contexts": [
+    {
+      "Faction": "Black Templars",
+      "CatalogueId": "36d3-36bc-68dd-40ac",
+      "Keywords": []
+    },
+    {
+      "Faction": "Blood Angels",
+      "CatalogueId": "4ef9-15ce-e3e6-36de",
+      "Keywords": []
+    },
+    {
+      "Faction": "Dark Angels",
+      "CatalogueId": "470a-6daa-9014-12df",
+      "Keywords": []
+    },
+    {
+      "Faction": "Deathwatch",
+      "CatalogueId": "f89b-84e0-6e3b-f1e2",
+      "Keywords": []
+    },
+    {
+      "Faction": "Imperial Fists",
+      "CatalogueId": "5d6e-fd3-330a-11dd",
+      "Keywords": []
+    },
+    {
+      "Faction": "Iron Hands",
+      "CatalogueId": "f27e-18c0-b73e-748e",
+      "Keywords": []
+    },
+    {
+      "Faction": "Raven Guard",
+      "CatalogueId": "6e59-e1ee-47ad-6ce5",
+      "Keywords": []
+    },
+    {
+      "Faction": "Salamanders",
+      "CatalogueId": "2261-79a5-19d9-1668",
+      "Keywords": []
+    },
+    {
+      "Faction": "Space Marines",
+      "CatalogueId": "e0af-67df-9d63-8fb7",
+      "Keywords": []
+    },
+    {
+      "Faction": "Space Wolves",
+      "CatalogueId": "94bb-3284-ee14-57a1",
+      "Keywords": []
+    },
+    {
+      "Faction": "Ultramarines",
+      "CatalogueId": "4029-9237-e8db-af55",
+      "Keywords": []
+    },
+    {
+      "Faction": "White Scars",
+      "CatalogueId": "67c1-fc13-f9a1-cbbf",
+      "Keywords": []
+    }
+  ],
+  "LegacySourceHashes": [
+    "0e66e99eb1fd3607bd412b62f193a4f2338eb935481912200c622b7d3ee443b4"
+  ],
+  "Counts": {
+    "Gladius Task Force": 6,
+    "Assault Brethren": 3,
+    "Tactical Brethren": 3,
+    "Devastator Brethren": 3,
+    "Terminator Storm Force": 3,
+    "Tacticus Attack Force": 3,
+    "Tacticus Firestorm Force": 3,
+    "Phobos Shadow Force": 3,
+    "Phobos Shock Force": 3,
+    "Gravis Linebreaker Force": 3,
+    "Gravis Siege Force": 3,
+    "Stormlance Task Force": 3,
+    "Ironclad Champions": 3,
+    "Gauntlet Task Force": 3,
+    "Ironstorm Spearhead": 3,
+    "Medusa's Wrath": 6,
+    "Ceramite Sentinels": 6,
+    "Blade of Ultramar": 6,
+    "Shadowmark Talon": 6,
+    "Forgefather's Seekers": 6,
+    "Spearpoint Task Force": 6,
+    "Fist of the God-Emperor": 3,
+    "Marshal's Household": 3,
+    "Vow-sworn Crusaders": 6,
+    "Angelic Inheritors": 6,
+    "Encarmine Speartip": 3,
+    "Wrath of the Doomed": 3,
+    "Darkflight Pursuit": 3,
+    "Inner Circle Task Force": 3,
+    "Wrath of the Rock": 6,
+    "Champions of Fenris": 3,
+    "Saga of the Beastslayer": 3,
+    "Saga of the Great Wolf": 6,
+    "Black Spear Task Force": 6,
+    "Deathwatch Support": 4
+  },
+  "Cards": [
+    {
+      "Name": "ARMOUR OF CONTEMPT",
+      "Detachment": "Gladius Task Force",
+      "Cost": "1 CP",
+      "Timing": "Your opponent’s Shooting phase or the Fight phase, when an enemy unit targets a friendly ADEPTUS ASTARTES unit.",
+      "Target": "That ADEPTUS ASTARTES unit.",
+      "Effect": "Attacks that target your unit have -1 AP until that enemy unit has attacked.",
+      "Restrictions": "",
+      "SourceLines": [
+        773,
+        783
+      ]
+    },
+    {
+      "Name": "A WORTHY DEATH",
+      "Detachment": "Gladius Task Force",
+      "Cost": "1 CP",
+      "Timing": "Fight phase, when an enemy unit targets a friendly ADEPTUS ASTARTES unit.",
+      "Target": "That ADEPTUS ASTARTES unit.",
+      "Effect": "When a model in your unit is destroyed, if your unit has not been selected to fight this phase, roll one D6:\n* On a 4+, do not remove that model from the battlefield. When your unit has fought, or at the end of the phase (whichever comes first), that model is removed from the battlefield.",
+      "Restrictions": "",
+      "SourceLines": [
+        793,
+        805
+      ]
+    },
+    {
+      "Name": "MIGHT OF ANGELS",
+      "Detachment": "Gladius Task Force",
+      "Cost": "1 CP",
+      "Timing": "Fight phase, when a friendly ADEPTUS ASTARTES unit is selected to fight.",
+      "Target": "That ADEPTUS ASTARTES unit.",
+      "Effect": "Your unit’s melee attacks have [Lance].",
+      "Restrictions": "",
+      "SourceLines": [
+        806,
+        816
+      ]
+    },
+    {
+      "Name": "ADAPTIVE STRATEGY",
+      "Detachment": "Gladius Task Force",
+      "Cost": "1 CP",
+      "Timing": "Your Command phase.",
+      "Target": "One friendly ADEPTUS ASTARTES unit.",
+      "Effect": "Select one combat doctrine. That combat doctrine is active for your unit until the start of your next Command phase.",
+      "Restrictions": "",
+      "SourceLines": [
+        817,
+        827
+      ]
+    },
+    {
+      "Name": "STORM OF DEVASTATION",
+      "Detachment": "Gladius Task Force",
+      "Cost": "1 CP",
+      "Timing": "Your Shooting phase, when a friendly ADEPTUS ASTARTES unit is selected to shoot.",
+      "Target": "That ADEPTUS ASTARTES unit.",
+      "Effect": "Your unit’s ranged attacks have [IGNORES COVER].",
+      "Restrictions": "",
+      "SourceLines": [
+        828,
+        838
+      ]
+    },
+    {
+      "Name": "RESPONSIVE TACTICS",
+      "Detachment": "Gladius Task Force",
+      "Cost": "1 CP",
+      "Timing": "Your opponent’s Movement phase, when an enemy unit ends a move within 8\" of a friendly unengaged ADEPTUS ASTARTES INFANTRY/MOUNTED unit.",
+      "Target": "That ADEPTUS ASTARTES INFANTRY/MOUNTED unit.",
+      "Effect": "Your unit can make a normal move of up to D6\".",
+      "Restrictions": "",
+      "SourceLines": [
+        839,
+        849
+      ]
+    },
+    {
+      "Name": "ARMOUR OF CONTEMPT",
+      "Detachment": "Assault Brethren",
+      "Cost": "1 CP",
+      "Timing": "Your opponent’s Shooting phase or the Fight phase, when an enemy unit targets a friendly ADEPTUS ASTARTES unit.",
+      "Target": "That ADEPTUS ASTARTES unit.",
+      "Effect": "Attacks that target your unit have -1 AP until that enemy unit has attacked.",
+      "Restrictions": "",
+      "SourceLines": [
+        873,
+        884
+      ]
+    },
+    {
+      "Name": "GENE-WROUGHT MIGHT",
+      "Detachment": "Assault Brethren",
+      "Cost": "1 CP",
+      "Timing": "Fight phase, when a friendly ADEPTUS ASTARTES unit is selected to fight.",
+      "Target": "That ADEPTUS ASTARTES unit.",
+      "Effect": "Your unit’s melee attacks have:\n* [Lance].\n* Or: If the assault doctrine is active for your unit, [Lance] and +1 AP.",
+      "Restrictions": "",
+      "SourceLines": [
+        885,
+        898
+      ]
+    },
+    {
+      "Name": "DUTY IN DEATH",
+      "Detachment": "Assault Brethren",
+      "Cost": "1 CP",
+      "Timing": "Fight phase, when an enemy unit targets a friendly ADEPTUS ASTARTES unit.",
+      "Target": "That ADEPTUS ASTARTES unit.",
+      "Effect": "When a model in your unit is destroyed, if your unit has not been selected to fight this phase, roll one D6, with +1 to that roll if the assault doctrine is active for your unit:\n* On a 4+, do not remove that model from the battlefield. When your unit has fought, or at the end of the phase (whichever comes first), that model is removed from the battlefield.",
+      "Restrictions": "",
+      "SourceLines": [
+        899,
+        910
+      ]
+    },
+    {
+      "Name": "ARMOUR OF CONTEMPT",
+      "Detachment": "Tactical Brethren",
+      "Cost": "1 CP",
+      "Timing": "Your opponent’s Shooting phase or the Fight phase, when an enemy unit targets a friendly ADEPTUS ASTARTES unit.",
+      "Target": "That ADEPTUS ASTARTES unit.",
+      "Effect": "Attacks that target your unit have -1 AP until that enemy unit has attacked.",
+      "Restrictions": "",
+      "SourceLines": [
+        931,
+        942
+      ]
+    },
+    {
+      "Name": "DOMINATION FIRE",
+      "Detachment": "Tactical Brethren",
+      "Cost": "1 CP",
+      "Timing": "Your Shooting phase, when a friendly ADEPTUS ASTARTES unit has shot.",
+      "Target": "That ADEPTUS ASTARTES unit.",
+      "Effect": "Select one enemy unit hit by those attacks. That enemy unit is suppressed until the start of your next turn:\n* While a unit is suppressed, that unit’s attacks have -1 to hit rolls.",
+      "Restrictions": "",
+      "SourceLines": [
+        943,
+        955
+      ]
+    },
+    {
+      "Name": "MASTERFUL TACTICS",
+      "Detachment": "Tactical Brethren",
+      "Cost": "1 CP",
+      "Timing": "Your opponent’s Movement phase, when an enemy unit ends a move within 8\" of a friendly unengaged ADEPTUS ASTARTES INFANTRY/MOUNTED unit.",
+      "Target": "That ADEPTUS ASTARTES INFANTRY/MOUNTED unit.",
+      "Effect": "Your unit can make a normal move of:\n* Up to D6\".\n* Or: If the tactical doctrine is active for your unit, up to 6\".",
+      "Restrictions": "",
+      "SourceLines": [
+        956,
+        969
+      ]
+    },
+    {
+      "Name": "ARMOUR OF CONTEMPT",
+      "Detachment": "Devastator Brethren",
+      "Cost": "1 CP",
+      "Timing": "Your opponent’s Shooting phase or the Fight phase, when an enemy unit targets a friendly ADEPTUS ASTARTES unit.",
+      "Target": "That ADEPTUS ASTARTES unit.",
+      "Effect": "Attacks that target your unit have -1 AP until that enemy unit has attacked.",
+      "Restrictions": "",
+      "SourceLines": [
+        993,
+        1004
+      ]
+    },
+    {
+      "Name": "STORM OF FIRE",
+      "Detachment": "Devastator Brethren",
+      "Cost": "1 CP",
+      "Timing": "Your Shooting phase, when a friendly ADEPTUS ASTARTES unit is selected to shoot.",
+      "Target": "That ADEPTUS ASTARTES unit.",
+      "Effect": "Your unit’s ranged attacks have:\n* [Ignores Cover].\n* Or: If the devastator doctrine is active for your unit, [Ignores Cover] and +1 AP.",
+      "Restrictions": "",
+      "SourceLines": [
+        1005,
+        1018
+      ]
+    },
+    {
+      "Name": "HAIL OF VENGEANCE",
+      "Detachment": "Devastator Brethren",
+      "Cost": "2 CP",
+      "Timing": "Your opponent’s Shooting phase, when an enemy unit has shot, if those attacks destroyed a model in a friendly ADEPTUS ASTARTES unit.",
+      "Target": "That ADEPTUS ASTARTES unit.",
+      "Effect": "Your unit shoots using normal shooting, but while doing so your unit can only target that enemy unit.",
+      "Restrictions": "",
+      "SourceLines": [
+        1019,
+        1029
+      ]
+    },
+    {
+      "Name": "TACTICAL DREADNOUGHT FORTITUDE",
+      "Detachment": "Terminator Storm Force",
+      "Cost": "2 CP",
+      "Timing": "Your opponent’s Shooting phase or the Fight phase, when an enemy unit targets a friendly ADEPTUS ASTARTES TERMINATOR unit.",
+      "Target": "That ADEPTUS ASTARTES TERMINATOR unit.",
+      "Effect": "Attacks that target your unit have -1 D until that enemy unit has attacked.",
+      "Restrictions": "",
+      "SourceLines": [
+        1050,
+        1061
+      ]
+    },
+    {
+      "Name": "MERCILESS VETERANS",
+      "Detachment": "Terminator Storm Force",
+      "Cost": "1 CP",
+      "Timing": "Your Shooting phase, when a friendly ADEPTUS ASTARTES TERMINATOR unit is selected to shoot.",
+      "Target": "That ADEPTUS ASTARTES TERMINATOR unit.",
+      "Effect": "Your unit’s ranged attacks have:\n* [Lethal Hits].\n* [Sustained Hits 1].",
+      "Restrictions": "",
+      "SourceLines": [
+        1062,
+        1075
+      ]
+    },
+    {
+      "Name": "GUNSHIP EXTRACTION",
+      "Detachment": "Terminator Storm Force",
+      "Cost": "1 CP",
+      "Timing": "End of your opponent’s Fight phase.",
+      "Target": "One friendly unengaged ADEPTUS ASTARTES TERMINATOR unit.",
+      "Effect": "Place your unit in strategic reserves.",
+      "Restrictions": "",
+      "SourceLines": [
+        1076,
+        1086
+      ]
+    },
+    {
+      "Name": "RELENTLESS ASSAULT",
+      "Detachment": "Tacticus Attack Force",
+      "Cost": "1 CP",
+      "Timing": "Your Shooting phase or the Fight phase, when a friendly TACTICUS unit is selected to attack.",
+      "Target": "That TACTICUS unit.",
+      "Effect": "Your unit’s attacks have:\n* [Sustained Hits 1: non-Monster/Vehicle].\n* Or: [Lethal Hits: Monster/Vehicle].",
+      "Restrictions": "",
+      "SourceLines": [
+        1111,
+        1125
+      ]
+    },
+    {
+      "Name": "TRANSHUMAN SWIFTNESS",
+      "Detachment": "Tacticus Attack Force",
+      "Cost": "1 CP",
+      "Timing": "Fight phase, when an enemy unit has fought.",
+      "Target": "One friendly TACTICUS unit that is within range of an objective and is eligible to fight.",
+      "Effect": "Your unit has Fights First and must be the next unit you select to fight.",
+      "Restrictions": "",
+      "SourceLines": [
+        1126,
+        1136
+      ]
+    },
+    {
+      "Name": "TACTICAL FOCUS",
+      "Detachment": "Tacticus Attack Force",
+      "Cost": "1 CP",
+      "Timing": "Fight phase, when a friendly TACTICUS unit is selected to make a consolidation move.",
+      "Target": "That TACTICUS unit.",
+      "Effect": "When making that consolidation move, your unit can move up to D3+3\".",
+      "Restrictions": "",
+      "SourceLines": [
+        1137,
+        1147
+      ]
+    },
+    {
+      "Name": "FOR THE EMPEROR!",
+      "Detachment": "Tacticus Firestorm Force",
+      "Cost": "1 CP",
+      "Timing": "Command phase.",
+      "Target": "One friendly TACTICUS unit that is within range of an objective.",
+      "Effect": "Your unit has +1 OC until the end of the turn.",
+      "Restrictions": "",
+      "SourceLines": [
+        1168,
+        1179
+      ]
+    },
+    {
+      "Name": "RELENTLESS ASSAULT",
+      "Detachment": "Tacticus Firestorm Force",
+      "Cost": "1 CP",
+      "Timing": "Your Shooting phase or the Fight phase, when a friendly TACTICUS unit is selected to attack.",
+      "Target": "That TACTICUS unit.",
+      "Effect": "Your unit’s attacks have:\n* [Sustained Hits 1: non-Monster/Vehicle].\n* Or: [Lethal Hits: Monster/Vehicle].",
+      "Restrictions": "",
+      "SourceLines": [
+        1180,
+        1193
+      ]
+    },
+    {
+      "Name": "POINT-BLANK BRUTALITY",
+      "Detachment": "Tacticus Firestorm Force",
+      "Cost": "1 CP",
+      "Timing": "Your Shooting phase, when a friendly engaged TACTICUS unit is selected to shoot.",
+      "Target": "That TACTICUS unit.",
+      "Effect": "Your unit’s ranged attacks (excluding [Blast] attacks) have:\n* [Close-Quarters].\n* [Ignores Cover].",
+      "Restrictions": "",
+      "SourceLines": [
+        1194,
+        1207
+      ]
+    },
+    {
+      "Name": "STRIKE FROM THE SHADOWS",
+      "Detachment": "Phobos Shadow Force",
+      "Cost": "1 CP",
+      "Timing": "Your Shooting phase or the Fight phase, when a friendly hidden PHOBOS unit is selected to attack.",
+      "Target": "That PHOBOS unit.",
+      "Effect": "Your unit’s attacks have:\n* +1 S.\n* [Lethal Hits].",
+      "Restrictions": "",
+      "SourceLines": [
+        1233,
+        1247
+      ]
+    },
+    {
+      "Name": "MORTIS SNARES",
+      "Detachment": "Phobos Shadow Force",
+      "Cost": "1 CP",
+      "Timing": "End of your Movement phase.",
+      "Target": "One friendly unengaged PHOBOS/SCOUT SQUAD unit.",
+      "Effect": "If your unit is controlling an objective, that objective is snared. While an objective is snared, when an enemy unit ends a move within range of that objective, roll one D6:\n* On a 2+, that enemy unit suffers D6 mortal wounds.\n* That objective is no longer snared.",
+      "Restrictions": "",
+      "SourceLines": [
+        1248,
+        1260
+      ]
+    },
+    {
+      "Name": "TACTICAL WITHDRAWAL",
+      "Detachment": "Phobos Shadow Force",
+      "Cost": "1 CP",
+      "Timing": "End of your opponent’s Fight phase.",
+      "Target": "One friendly unengaged PHOBOS/SCOUT SQUAD unit.",
+      "Effect": "Place your unit in strategic reserves.",
+      "Restrictions": "",
+      "SourceLines": [
+        1261,
+        1272
+      ]
+    },
+    {
+      "Name": "STRIKE FROM THE SHADOWS",
+      "Detachment": "Phobos Shock Force",
+      "Cost": "1 CP",
+      "Timing": "Your Shooting phase or the Fight phase, when a friendly hidden PHOBOS unit is selected to attack.",
+      "Target": "That PHOBOS unit.",
+      "Effect": "Your unit’s attacks have:\n* +1 S.\n* [Lethal Hits].",
+      "Restrictions": "",
+      "SourceLines": [
+        1296,
+        1310
+      ]
+    },
+    {
+      "Name": "TRANSHUMAN REACTIONS",
+      "Detachment": "Phobos Shock Force",
+      "Cost": "1 CP",
+      "Timing": "Your opponent’s Movement phase, when an enemy unit ends a move within 8\" of a friendly unengaged PHOBOS unit.",
+      "Target": "That PHOBOS unit.",
+      "Effect": "Your unit can make a normal move of:\n* Up to D6\".\n* Or: If the tactical doctrine is active for your unit, up to 6\".",
+      "Restrictions": "",
+      "SourceLines": [
+        1311,
+        1324
+      ]
+    },
+    {
+      "Name": "UMBRAL EVASION",
+      "Detachment": "Phobos Shock Force",
+      "Cost": "1 CP",
+      "Timing": "Your opponent’s Shooting phase, when an enemy unit targets a friendly PHOBOS unit.",
+      "Target": "That PHOBOS unit.",
+      "Effect": "Ranged attacks that target your unit have -1 to hit rolls.",
+      "Restrictions": "",
+      "SourceLines": [
+        1325,
+        1335
+      ]
+    },
+    {
+      "Name": "ANNIHILATING FORCE",
+      "Detachment": "Gravis Linebreaker Force",
+      "Cost": "1 CP",
+      "Timing": "Your Shooting phase or the Fight phase, when a friendly GRAVIS unit is selected to attack.",
+      "Target": "That GRAVIS unit.",
+      "Effect": "Your unit’s attacks have [Lethal Hits].",
+      "Restrictions": "",
+      "SourceLines": [
+        1360,
+        1371
+      ]
+    },
+    {
+      "Name": "PURGATION PUSH",
+      "Detachment": "Gravis Linebreaker Force",
+      "Cost": "1 CP",
+      "Timing": "Your Shooting phase, when a friendly GRAVIS unit has shot.",
+      "Target": "That GRAVIS unit.",
+      "Effect": "\n* If your unit is unengaged, your unit can make a normal move of up to 5\", and must end that move within range of an objective.\n* Your unit is not eligible to declare a charge or embark within a TRANSPORT until the end of the turn.",
+      "Restrictions": "",
+      "SourceLines": [
+        1372,
+        1385
+      ]
+    },
+    {
+      "Name": "ARMOURED IMPACT",
+      "Detachment": "Gravis Linebreaker Force",
+      "Cost": "1 CP",
+      "Timing": "Your Charge phase, when a friendly GRAVIS unit ends a charge move.",
+      "Target": "That GRAVIS unit.",
+      "Effect": "When your unit ends a charge move, you can select one enemy unit engaged with your unit. If you do, roll one D6 for each model in your unit engaged with that enemy unit:\n* For each 3+, that enemy unit suffers 1 mortal wound.",
+      "Restrictions": "",
+      "SourceLines": [
+        1386,
+        1398
+      ]
+    },
+    {
+      "Name": "ANNIHILATING FORCE",
+      "Detachment": "Gravis Siege Force",
+      "Cost": "1 CP",
+      "Timing": "Your Shooting phase or the Fight phase, when a friendly GRAVIS unit is selected to attack.",
+      "Target": "That GRAVIS unit.",
+      "Effect": "Your unit’s attacks have [Lethal Hits].",
+      "Restrictions": "",
+      "SourceLines": [
+        1420,
+        1431
+      ]
+    },
+    {
+      "Name": "STAND UNYIELDING",
+      "Detachment": "Gravis Siege Force",
+      "Cost": "1 CP",
+      "Timing": "End of your Movement phase.",
+      "Target": "One friendly GRAVIS unit.",
+      "Effect": "Select one objective your unit is controlling. That objective is secured.",
+      "Restrictions": "",
+      "SourceLines": [
+        1432,
+        1442
+      ]
+    },
+    {
+      "Name": "SUPPRESSION VOLLEYS",
+      "Detachment": "Gravis Siege Force",
+      "Cost": "1 CP",
+      "Timing": "Your Shooting phase, when a friendly GRAVIS unit has shot.",
+      "Target": "That GRAVIS unit.",
+      "Effect": "Select one enemy unit hit by those attacks. That enemy unit makes a battle-shock roll, with -1 to that battle-shock roll.",
+      "Restrictions": "",
+      "SourceLines": [
+        1443,
+        1452
+      ]
+    },
+    {
+      "Name": "WIND-SWIFT EVASION",
+      "Detachment": "Stormlance Task Force",
+      "Cost": "1 CP",
+      "Timing": "End of the Fight phase.",
+      "Target": "One friendly ADEPTUS ASTARTES MOUNTED unit that was eligible to fight this phase.",
+      "Effect": "\n* If your unit is unengaged, your unit can make a normal move.\n* Or: If your unit is engaged, your unit can make a fall-back move.",
+      "Restrictions": "",
+      "SourceLines": [
+        1474,
+        1488
+      ]
+    },
+    {
+      "Name": "SUDDEN ONSLAUGHT",
+      "Detachment": "Stormlance Task Force",
+      "Cost": "1 CP",
+      "Timing": "Your Movement phase, when a friendly ADEPTUS ASTARTES MOUNTED/SPEEDER unit is selected to make an advance move.",
+      "Target": "That ADEPTUS ASTARTES MOUNTED/SPEEDER unit.",
+      "Effect": "Your unit can change its advance rolls to a 6.",
+      "Restrictions": "",
+      "SourceLines": [
+        1489,
+        1499
+      ]
+    },
+    {
+      "Name": "HURTLING TARGETS",
+      "Detachment": "Stormlance Task Force",
+      "Cost": "1 CP",
+      "Timing": "Your opponent’s Shooting phase, when an enemy unit targets a friendly ADEPTUS ASTARTES MOUNTED/SPEEDER unit.",
+      "Target": "That ADEPTUS ASTARTES MOUNTED/SPEEDER unit.",
+      "Effect": "Ranged attacks that target your unit have -1 to hit rolls.",
+      "Restrictions": "",
+      "SourceLines": [
+        1500,
+        1509
+      ]
+    },
+    {
+      "Name": "ADAMANTINE TERROR",
+      "Detachment": "Ironclad Champions",
+      "Cost": "1 CP",
+      "Timing": "Start of the Fight phase.",
+      "Target": "One friendly DREADNOUGHT unit.",
+      "Effect": "Each enemy unit engaged with your unit makes a battle-shock roll, with -1 to that battle-shock roll.",
+      "Restrictions": "",
+      "SourceLines": [
+        1529,
+        1540
+      ]
+    },
+    {
+      "Name": "MERCY IS WEAKNESS",
+      "Detachment": "Ironclad Champions",
+      "Cost": "1 CP",
+      "Timing": "Your Shooting phase or the Fight phase, when a friendly DREADNOUGHT unit is selected to attack.",
+      "Target": "That DREADNOUGHT unit.",
+      "Effect": "Your unit’s attacks have:\n* [lethal hits].\n* Or: [Sustained Hits 1].",
+      "Restrictions": "",
+      "SourceLines": [
+        1541,
+        1554
+      ]
+    },
+    {
+      "Name": "UPSTOPPABLE ADVANCE",
+      "Detachment": "Ironclad Champions",
+      "Cost": "1 CP",
+      "Timing": "Your Movement /Charge phase, when a friendly DREADNOUGHT unit is selected to move or declares a charge.",
+      "Target": "That DREADNOUGHT unit.",
+      "Effect": "Your unit has MOBILE.",
+      "Restrictions": "",
+      "SourceLines": [
+        1555,
+        1564
+      ]
+    },
+    {
+      "Name": "AGGRESSIVE DISEMBARKATION",
+      "Detachment": "Gauntlet Task Force",
+      "Cost": "1 CP",
+      "Timing": "Any phase, when a friendly ADEPTUS ASTARTES unit embarked within a TRANSPORT is selected to move.",
+      "Target": "That ADEPTUS ASTARTES unit.",
+      "Effect": "While making that move, each model in your unit can be set up within the set-up distance of that TRANSPORT.\nThis allows you to set up your unit within the set-up distance of your TRANSPORT, instead of wholly within that distance.",
+      "Restrictions": "",
+      "SourceLines": [
+        1588,
+        1599
+      ]
+    },
+    {
+      "Name": "DUTY IS NEVER DONE",
+      "Detachment": "Gauntlet Task Force",
+      "Cost": "1 CP",
+      "Timing": "End of the Fight phase.",
+      "Target": "One friendly unengaged ADEPTUS ASTARTES INFANTRY unit that was eligible to fight this phase, is wholly within 6\" of a friendly TRANSPORT unit, and is eligible to embark within that TRANSPORT unit.",
+      "Effect": "Your unit embarks within that TRANSPORT unit.",
+      "Restrictions": "",
+      "SourceLines": [
+        1600,
+        1610
+      ]
+    },
+    {
+      "Name": "STORM AND SECURE",
+      "Detachment": "Gauntlet Task Force",
+      "Cost": "1 CP",
+      "Timing": "End of your Movement phase.",
+      "Target": "One friendly ADEPTUS ASTARTES TRANSPORT unit that has an ADEPTUS ASTARTES BATTLELINE unit embarked within it.",
+      "Effect": "Select one objective your unit is controlling. That objective is secured.",
+      "Restrictions": "",
+      "SourceLines": [
+        1611,
+        1621
+      ]
+    },
+    {
+      "Name": "LAYERED CERAMITE",
+      "Detachment": "Ironstorm Spearhead",
+      "Cost": "1 CP",
+      "Timing": "Any phase, when a friendly ADEPTUS ASTARTES VEHICLE unit suffers a mortal wound.",
+      "Target": "That ADEPTUS ASTARTES VEHICLE unit.",
+      "Effect": "Your unit has Feel No Pain 5+ against mortal wounds.",
+      "Restrictions": "",
+      "SourceLines": [
+        1648,
+        1659
+      ]
+    },
+    {
+      "Name": "MIGHT OF THE MACHINE SPIRIT",
+      "Detachment": "Ironstorm Spearhead",
+      "Cost": "1 CP",
+      "Timing": "Your Command phase.",
+      "Target": "One friendly ADEPTUS ASTARTES VEHICLE unit (excluding DEDICATED TRANSPORT/FLY/WALKER units).",
+      "Effect": "Until the start of your next Command phase, your unit can ignore modifiers to your unit’s:\n* M.\n* BS.\n* Hit rolls and wound rolls.",
+      "Restrictions": "",
+      "SourceLines": [
+        1660,
+        1674
+      ]
+    },
+    {
+      "Name": "HEADHUNTER DOCTRINE",
+      "Detachment": "Ironstorm Spearhead",
+      "Cost": "1 CP",
+      "Timing": "Your Shooting phase, when a friendly ADEPTUS ASTARTES VEHICLE unit (excluding DEDICATED TRANSPORT/FLY/WALKER units) is selected to shoot.",
+      "Target": "That ADEPTUS ASTARTES VEHICLE unit.",
+      "Effect": "Your unit’s ranged attacks have [Lethal Hits: Monster/Vehicle].",
+      "Restrictions": "",
+      "SourceLines": [
+        1675,
+        1685
+      ]
+    },
+    {
+      "Name": "METHODICAL BRUTALITY",
+      "Detachment": "Medusa's Wrath",
+      "Cost": "1 CP",
+      "Timing": "Your Shooting phase or the Fight phase when a friendly ADEPTUS ASTARTES unit is selected to attack.",
+      "Target": "That ADEPTUS ASTARTES unit.",
+      "Effect": "Your unit’s attacks have [SUSTAINED HITS 1].\nSECONDARY EFFECT:\n* If your unit is a VEHICLE unit, have +1 to wound rolls.",
+      "Restrictions": "",
+      "SourceLines": [
+        1717,
+        1731
+      ]
+    },
+    {
+      "Name": "SPIRITS OF IRON",
+      "Detachment": "Medusa's Wrath",
+      "Cost": "1 CP",
+      "Timing": "Any phase, when a friendly ADEPTUS ASTARTES unit suffers a mortal wound.",
+      "Target": "That ADEPTUS ASTARTES unit.",
+      "Effect": "Your unit has Feel no pain 5+ against mortal wounds.",
+      "Restrictions": "",
+      "SourceLines": [
+        1732,
+        1742
+      ]
+    },
+    {
+      "Name": "VENGEFUL ANIMUS",
+      "Detachment": "Medusa's Wrath",
+      "Cost": "1 CP",
+      "Timing": "Any phase, when a friendly ADEPTUS ASTARTES VEHICLE unit is destroyed, before rolling for deadly demise.",
+      "Target": "That friendly ADEPTUS ASTARTES VEHICLE unit.",
+      "Effect": "Change any deadly demise rolls made for this unit to an unmodified 6.",
+      "Restrictions": "",
+      "SourceLines": [
+        1743,
+        1753
+      ]
+    },
+    {
+      "Name": "ANCIENT FURY",
+      "Detachment": "Medusa's Wrath",
+      "Cost": "1 CP",
+      "Timing": "Your Command phase.",
+      "Target": "One friendly ADEPTUS ASTARTES DREADNOUGHT unit.",
+      "Effect": "Until the start of your next Command phase, your unit has:\n* +1\" M.\n* +1 T.\n* +1 Ld.\n* +1 OC.\n* +1 to hit rolls.",
+      "Restrictions": "",
+      "SourceLines": [
+        1754,
+        1770
+      ]
+    },
+    {
+      "Name": "UNBOWED CONVICTION",
+      "Detachment": "Medusa's Wrath",
+      "Cost": "1 CP",
+      "Timing": "Your Command phase.",
+      "Target": "One friendly ADEPTUS ASTARTES unit that is below starting strength.",
+      "Effect": "Until the start of your next Command phase, your unit can ignore modifiers to your unit’s:\n* BS and WS.\n* Hit rolls and Wound rolls.",
+      "Restrictions": "",
+      "SourceLines": [
+        1771,
+        1784
+      ]
+    },
+    {
+      "Name": "POWER OF THE MACHINE SPIRIT",
+      "Detachment": "Medusa's Wrath",
+      "Cost": "1 CP",
+      "Timing": "Your opponent’s Shooting phase, when an enemy unit that targeted a friendly unengaged ADEPTUS ASTARTES VEHICLE unit has shot.",
+      "Target": "That ADEPTUS ASTARTES VEHICLE unit.",
+      "Effect": "Your unit shoots using:\n* Snap shooting.\n* Or: If your unit is at half-strength/below half-strength, normal shooting.\nWhile doing so your unit can only target that enemy unit.",
+      "Restrictions": "",
+      "SourceLines": [
+        1785,
+        1797
+      ]
+    },
+    {
+      "Name": "UNYIELDING MIGHT",
+      "Detachment": "Ceramite Sentinels",
+      "Cost": "1 CP",
+      "Timing": "Command phase.",
+      "Target": "One friendly ADEPTUS ASTARTES unit that is within range of an objective.",
+      "Effect": "Your unit has +1 OC until the end of the turn.",
+      "Restrictions": "",
+      "SourceLines": [
+        1829,
+        1840
+      ]
+    },
+    {
+      "Name": "STAND TO THE END",
+      "Detachment": "Ceramite Sentinels",
+      "Cost": "1 CP",
+      "Timing": "Your opponent’s Shooting phase or the Fight phase, when an enemy unit targets a friendly ADEPTUS ASTARTES unit (excluding MONSTER/VEHICLE units).",
+      "Target": "That ADEPTUS ASTARTES unit.",
+      "Effect": "\n* Attacks that target your unit with a S greater than your unit’s T have -1 to wound rolls.\n* Or: If your unit is entrenched, attacks that target your unit have -1 to wound rolls.",
+      "Restrictions": "",
+      "SourceLines": [
+        1841,
+        1853
+      ]
+    },
+    {
+      "Name": "AUGMENTED TARGETING",
+      "Detachment": "Ceramite Sentinels",
+      "Cost": "1 CP",
+      "Timing": "Your Shooting phase or the Fight phase, when a friendly ADEPTUS ASTARTES unit is selected to attack.",
+      "Target": "That ADEPTUS ASTARTES unit.",
+      "Effect": "Your unit’s attacks have:\n* [LETHAL HITS].\n* Or: [SUSTAINED HITS 1].\n* Or: If your unit is entrenched, [LETHAL HITS] and [SUSTAINED HITS 1].",
+      "Restrictions": "",
+      "SourceLines": [
+        1854,
+        1869
+      ]
+    },
+    {
+      "Name": "ESTABLISH SUPREMACY",
+      "Detachment": "Ceramite Sentinels",
+      "Cost": "1 CP",
+      "Timing": "Fight phase, when a friendly entrenched ADEPTUS ASTARTES INFANTRY unit is selected to make a consolidation move.",
+      "Target": "That ADEPTUS ASTARTES INFANTRY unit.",
+      "Effect": "You can select the objective consolidation mode for that consolidation move, regardless of that consolidation move’s Before Moving restrictions.\nDesigner’s Note: This means your unit can move out of engagement range with enemy units, provided it meets the conditions of the objective consolidation mode.",
+      "Restrictions": "",
+      "SourceLines": [
+        1870,
+        1880
+      ]
+    },
+    {
+      "Name": "PRIORITY STRIKE",
+      "Detachment": "Ceramite Sentinels",
+      "Cost": "1 CP",
+      "Timing": "Your Shooting phase or the Fight phase, when a friendly ADEPTUS ASTARTES INFANTRY/MOUNTED unit is selected to attack.",
+      "Target": "That ADEPTUS ASTARTES INFANTRY/MOUNTED unit.",
+      "Effect": "Your unit’s attacks that target a MONSTER/VEHICLE unit, have +1 to wound rolls.",
+      "Restrictions": "",
+      "SourceLines": [
+        1881,
+        1891
+      ]
+    },
+    {
+      "Name": "EVASIVE REPOSITIONING",
+      "Detachment": "Ceramite Sentinels",
+      "Cost": "1 CP",
+      "Timing": "Your opponent’s Shooting phase, when an enemy unit has shot.",
+      "Target": "One friendly unengaged ADEPTUS ASTARTES INFANTRY/MOUNTED unit that lost a wound as a result of those attacks.",
+      "Effect": "\n* Your unit can make a normal move of up to D6\".\n* Or: If your unit is entrenched, your unit can make a normal move of up to D3+3\".\nYour unit is not able to embark within a TRANSPORT until the end of the turn.",
+      "Restrictions": "",
+      "SourceLines": [
+        1892,
+        1904
+      ]
+    },
+    {
+      "Name": "ARMOUR OF CONTEMPT",
+      "Detachment": "Blade of Ultramar",
+      "Cost": "1 CP",
+      "Timing": "Your opponent’s Shooting phase or the Fight phase, when an enemy unit targets a friendly ADEPTUS ASTARTES unit.",
+      "Target": "That ADEPTUS ASTARTES unit.",
+      "Effect": "Attacks that target your unit have -1 AP until that enemy unit has attacked.",
+      "Restrictions": "",
+      "SourceLines": [
+        1933,
+        1944
+      ]
+    },
+    {
+      "Name": "EXEMPLARY VIGILANCE",
+      "Detachment": "Blade of Ultramar",
+      "Cost": "1 CP",
+      "Timing": "Your Shooting phase, when a friendly ADEPTUS ASTARTES unit is selected to shoot.",
+      "Target": "That ADEPTUS ASTARTES unit.",
+      "Effect": "Your unit’s ranged attacks have [IGNORES COVER].",
+      "Restrictions": "",
+      "SourceLines": [
+        1945,
+        1955
+      ]
+    },
+    {
+      "Name": "ULTRAMARIAN ADAPTIVITY",
+      "Detachment": "Blade of Ultramar",
+      "Cost": "1 CP",
+      "Timing": "Your Command phase.",
+      "Target": "One friendly ADEPTUS ASTARTES unit.",
+      "Effect": "Select one combat doctrine. That combat doctrine is active for your unit until the start of your next Command phase.",
+      "Restrictions": "",
+      "SourceLines": [
+        1956,
+        1966
+      ]
+    },
+    {
+      "Name": "COURAGE AND HONOUR!",
+      "Detachment": "Blade of Ultramar",
+      "Cost": "1 CP",
+      "Timing": "Fight phase, when a friendly ADEPTUS ASTARTES unit is selected to fight.",
+      "Target": "That ADEPTUS ASTARTES unit.",
+      "Effect": "Your unit’s melee attacks have [Lance].",
+      "Restrictions": "",
+      "SourceLines": [
+        1967,
+        1977
+      ]
+    },
+    {
+      "Name": "PRACTICAL TACTICS",
+      "Detachment": "Blade of Ultramar",
+      "Cost": "1 CP",
+      "Timing": "Your opponent’s Movement phase, when an enemy unit ends a move within 8\" of a friendly unengaged ADEPTUS ASTARTES INFANTRY/MOUNTED unit.",
+      "Target": "That ADEPTUS ASTARTES INFANTRY/MOUNTED unit.",
+      "Effect": "Your unit can make a normal move of up to D3+3\".",
+      "Restrictions": "",
+      "SourceLines": [
+        1978,
+        1988
+      ]
+    },
+    {
+      "Name": "TACTICAL FORESIGHT",
+      "Detachment": "Blade of Ultramar",
+      "Cost": "1 CP",
+      "Timing": "Your opponent’s Shooting phase or the Fight phase, when an enemy unit targets a friendly ADEPTUS ASTARTES unit.",
+      "Target": "That ADEPTUS ASTARTES unit.",
+      "Effect": "Attacks that target your unit with a S greater than this unit’s T have -1 to wound rolls.",
+      "Restrictions": "",
+      "SourceLines": [
+        1989,
+        1999
+      ]
+    },
+    {
+      "Name": "INTO DARKNESS",
+      "Detachment": "Shadowmark Talon",
+      "Cost": "1 CP",
+      "Timing": "End of your opponent’s Fight phase.",
+      "Target": "One unengaged ADEPTUS ASTARTES INFANTRY unit.",
+      "Effect": "Place your unit in strategic reserves.",
+      "Restrictions": "",
+      "SourceLines": [
+        2028,
+        2039
+      ]
+    },
+    {
+      "Name": "RAPTORIAL VIGILANCE",
+      "Detachment": "Shadowmark Talon",
+      "Cost": "1 CP",
+      "Timing": "Your opponent’s Movement phase, when an enemy unit ends a move within 8\" of a friendly unengaged ADEPTUS ASTARTES INFANTRY unit.",
+      "Target": "That ADEPTUS ASTARTES INFANTRY unit.",
+      "Effect": "Your unit can make a normal move of:\n* Up to D6\".\n* Or: If your unit is a PHOBOS/SCOUT SQUAD unit, up to 6\".",
+      "Restrictions": "",
+      "SourceLines": [
+        2040,
+        2052
+      ]
+    },
+    {
+      "Name": "MURDEROUS FUSILLADE",
+      "Detachment": "Shadowmark Talon",
+      "Cost": "1 CP",
+      "Timing": "Your Shooting phase, when a friendly ADEPTUS ASTARTES INFANTRY unit that made an ingress move this turn is selected to shoot.",
+      "Target": "That ADEPTUS ASTARTES INFANTRY unit.",
+      "Effect": "Your unit’s ranged attacks have:\n* +1 BS.\n* +1 AP.",
+      "Restrictions": "",
+      "SourceLines": [
+        2053,
+        2067
+      ]
+    },
+    {
+      "Name": "SUPPRESSED WEAPONS",
+      "Detachment": "Shadowmark Talon",
+      "Cost": "1 CP",
+      "Timing": "Your Shooting phase, when a friendly ADEPTUS ASTARTES INFANTRY unit has shot.",
+      "Target": "That ADEPTUS ASTARTES INFANTRY unit.",
+      "Effect": "Those attacks do not prevent your unit from being hidden.",
+      "Restrictions": "",
+      "SourceLines": [
+        2068,
+        2078
+      ]
+    },
+    {
+      "Name": "FEINT AND THRUST",
+      "Detachment": "Shadowmark Talon",
+      "Cost": "1 CP",
+      "Timing": "Your Command phase.",
+      "Target": "One friendly ADEPTUS ASTARTES INFANTRY unit.",
+      "Effect": "The tactical doctrine is active for your unit in addition to any other combat doctrine, until the start of your next Command phase.",
+      "Restrictions": "",
+      "SourceLines": [
+        2079,
+        2089
+      ]
+    },
+    {
+      "Name": "LAY LOW THE TYRANTS",
+      "Detachment": "Shadowmark Talon",
+      "Cost": "1 CP",
+      "Timing": "Fight phase, when a friendly ADEPTUS ASTARTES INFANTRY unit is selected to fight.",
+      "Target": "That ADEPTUS ASTARTES INFANTRY.",
+      "Effect": "Your unit’s melee attacks have [Precision].",
+      "Restrictions": "",
+      "SourceLines": [
+        2090,
+        2099
+      ]
+    },
+    {
+      "Name": "BLAZING EARTH",
+      "Detachment": "Forgefather's Seekers",
+      "Cost": "1 CP",
+      "Timing": "Start of your opponent’s Charge phase.",
+      "Target": "One friendly unengaged ADEPTUS ASTARTES unit equipped with one or more Torrent/Melta weapons.",
+      "Effect": "Select one visible enemy unit within 12\" of your unit. That enemy unit has -1 to charge rolls.",
+      "Restrictions": "",
+      "SourceLines": [
+        2131,
+        2142
+      ]
+    },
+    {
+      "Name": "WRATH AND RUIN",
+      "Detachment": "Forgefather's Seekers",
+      "Cost": "1 CP",
+      "Timing": "Your Command phase.",
+      "Target": "One friendly ADEPTUS ASTARTES INFANTRY unit.",
+      "Effect": "The assault doctrine or tactical doctrine is active for your unit, until the start of your next Command phase.",
+      "Restrictions": "",
+      "SourceLines": [
+        2143,
+        2153
+      ]
+    },
+    {
+      "Name": "FORGED IN FIRE",
+      "Detachment": "Forgefather's Seekers",
+      "Cost": "1 CP",
+      "Timing": "Your Shooting phase, when a friendly engaged ADEPTUS ASTARTES unit is selected to shoot.",
+      "Target": "That ADEPTUS ASTARTES unit.",
+      "Effect": "Your unit’s Torrent weapons:\n* Do not have [Blast].\n* Have [Close-Quarters].\n* Have +1 A.",
+      "Restrictions": "",
+      "SourceLines": [
+        2154,
+        2168
+      ]
+    },
+    {
+      "Name": "IMMOLATION PROTOCOLS",
+      "Detachment": "Forgefather's Seekers",
+      "Cost": "1 CP",
+      "Timing": "Your Shooting phase, when a friendly ADEPTUS ASTARTES INFANTRY unit is selected to attack.",
+      "Target": "That ADEPTUS ASTARTES INFANTRY.",
+      "Effect": "Your unit’s ranged [TORRENT] attacks have +1 AP.",
+      "Restrictions": "",
+      "SourceLines": [
+        2169,
+        2179
+      ]
+    },
+    {
+      "Name": "CRUCIBLE OF BATTLE",
+      "Detachment": "Forgefather's Seekers",
+      "Cost": "1 CP",
+      "Timing": "Your Shooting phase or the Fight phase, when a friendly ADEPTUS ASTARTES INFANTRY unit is selected to attack an enemy unit within 6\".",
+      "Target": "That ADEPTUS ASTARTES INFANTRY unit.",
+      "Effect": "Your unit’s attacks can:\n* Re-roll hit rolls of 1.\n* Re-roll wound rolls of 1.",
+      "Restrictions": "",
+      "SourceLines": [
+        2180,
+        2193
+      ]
+    },
+    {
+      "Name": "BURNING VENGEANCE",
+      "Detachment": "Forgefather's Seekers",
+      "Cost": "1 CP",
+      "Timing": "Your opponent’s Shooting phase, when an enemy unit has shot a friendly ADEPTUS ASTARTES TRANSPORT unit.",
+      "Target": "One friendly ADEPTUS ASTARTES unit embarked within that ADEPTUS ASTARTES TRANSPORT unit.",
+      "Effect": "Your ADEPTUS ASTARTES unit can:\n* Make a disembark move.\n* Shoot using normal shooting, but when doing so your unit can only target that enemy unit.",
+      "Restrictions": "",
+      "SourceLines": [
+        2194,
+        2206
+      ]
+    },
+    {
+      "Name": "EVASIVE MANOEUVERS",
+      "Detachment": "Spearpoint Task Force",
+      "Cost": "1 CP",
+      "Timing": "Your opponent’s Shooting phase, when an enemy unit targets a friendly ADEPTUS ASTARTES MOUNTED/SPEEDER unit.",
+      "Target": "That ADEPTUS ASTARTES MOUNTED/SPEEDER unit.",
+      "Effect": "Ranged attacks that target your unit have -1 to wound rolls.",
+      "Restrictions": "",
+      "SourceLines": [
+        2240,
+        2251
+      ]
+    },
+    {
+      "Name": "MOBILE LETHALITY",
+      "Detachment": "Spearpoint Task Force",
+      "Cost": "1 CP",
+      "Timing": "Your Movement phase, when a friendly ADEPTUS ASTARTES unit is selected to make an advance/fall-back move.",
+      "Target": "That ADEPTUS ASTARTES unit.",
+      "Effect": "\n* That fall-back move does not prevent your unit from being eligible to shoot.\n* Your unit’s ranged attacks have [ASSAULT].",
+      "Restrictions": "",
+      "SourceLines": [
+        2252,
+        2265
+      ]
+    },
+    {
+      "Name": "FLAWLESS RIDERS",
+      "Detachment": "Spearpoint Task Force",
+      "Cost": "1 CP",
+      "Timing": "Your Movement /Charge phase, when a friendly ADEPTUS ASTARTES MOUNTED unit is selected to move or declares a charge.",
+      "Target": "That ADEPTUS ASTARTES MOUNTED unit.",
+      "Effect": "Your unit has MOBILE.",
+      "Restrictions": "",
+      "SourceLines": [
+        2266,
+        2276
+      ]
+    },
+    {
+      "Name": "SPEAR THRUST AND SABRE SWING",
+      "Detachment": "Spearpoint Task Force",
+      "Cost": "1 CP",
+      "Timing": "Fight phase, when a friendly ADEPTUS ASTARTES unit is selected to fight.",
+      "Target": "That ADEPTUS ASTARTES unit.",
+      "Effect": "Your unit’s melee attacks:\n* Have [LETHAL HITS].\n* Or: Have [LANCE].\n* Or: If your unit has MOUNTED, have [LETHAL HITS] and [LANCE].",
+      "Restrictions": "",
+      "SourceLines": [
+        2277,
+        2291
+      ]
+    },
+    {
+      "Name": "WITHDRAW AND REGROUP",
+      "Detachment": "Spearpoint Task Force",
+      "Cost": "1 CP",
+      "Timing": "End of your opponent’s Fight phase.",
+      "Target": "One friendly unengaged ADEPTUS ASTARTES MOUNTED/SPEEDER unit.",
+      "Effect": "Place your unit in strategic reserves.",
+      "Restrictions": "",
+      "SourceLines": [
+        2292,
+        2302
+      ]
+    },
+    {
+      "Name": "HUNTER'S INSTINCTS",
+      "Detachment": "Spearpoint Task Force",
+      "Cost": "1 CP",
+      "Timing": "Your opponent’s Movement phase, when an enemy unit ends a move within 8\" of a friendly unengaged ADEPTUS ASTARTES INFANTRY/MOUNTED/SPEEDER unit.",
+      "Target": "That ADEPTUS ASTARTES INFANTRY/MOUNTED/SPEEDER unit.",
+      "Effect": "Your unit can make a normal move of up to D3+3\".",
+      "Restrictions": "",
+      "SourceLines": [
+        2303,
+        2312
+      ]
+    },
+    {
+      "Name": "DOCTRINAL FLEXIBILITY",
+      "Detachment": "Fist of the God-Emperor",
+      "Cost": "1 CP",
+      "Timing": "Your Command phase.",
+      "Target": "One friendly CRUSADER SQUAD unit.",
+      "Effect": "Select one combat doctrine. That combat doctrine is active for your unit until the start of your next Command phase.",
+      "Restrictions": "",
+      "SourceLines": [
+        2329,
+        2340
+      ]
+    },
+    {
+      "Name": "ANGELS DEFIANT",
+      "Detachment": "Fist of the God-Emperor",
+      "Cost": "1 CP",
+      "Timing": "Your opponent’s Shooting phase or the Fight phase, when an enemy unit targets a friendly CRUSADER SQUAD unit.",
+      "Target": "That CRUSADER SQUAD unit.",
+      "Effect": "Attacks that target your unit with a S greater than your unit’s T have -1 to wound rolls.",
+      "Restrictions": "",
+      "SourceLines": [
+        2341,
+        2351
+      ]
+    },
+    {
+      "Name": "AVOWED DESTRUCTION",
+      "Detachment": "Fist of the God-Emperor",
+      "Cost": "1 CP",
+      "Timing": "The Fight phase, when a friendly CRUSADER SQUAD unit is selected to fight.",
+      "Target": "That CRUSADER SQUAD unit.",
+      "Effect": "Your unit’s melee attacks:\n* Have [LETHAL HITS].\n* Or: Have [SUSTAINED HITS 1].",
+      "Restrictions": "",
+      "SourceLines": [
+        2352,
+        2364
+      ]
+    },
+    {
+      "Name": "SLAYERS OF ABOMINATIONS",
+      "Detachment": "Marshal's Household",
+      "Cost": "1 CP",
+      "Timing": "Fight phase, when a friendly SWORD BRETHREN SQUAD unit is selected to fight.",
+      "Target": "That SWORD BRETHREN SQUAD unit.",
+      "Effect": "Your unit’s melee attacks that target a MONSTER/VEHICLE unit have +2 S.",
+      "Restrictions": "",
+      "SourceLines": [
+        2384,
+        2395
+      ]
+    },
+    {
+      "Name": "UNSPARING EXECUTION",
+      "Detachment": "Marshal's Household",
+      "Cost": "1 CP",
+      "Timing": "Your opponent’s Movement phase, when a unit is selected to make a fall-back move, if that unit is engaged with a friendly SWORD BRETHREN SQUAD unit.",
+      "Target": "That SWORD BRETHREN SQUAD unit.",
+      "Effect": "When an enemy unit engaged with your unit is selected to make a fall-back move, that enemy unit must use the desperate escape mode, with -1 to those hazard rolls if that enemy unit is battle-shocked.",
+      "Restrictions": "",
+      "SourceLines": [
+        2396,
+        2405
+      ]
+    },
+    {
+      "Name": "BLADE OF DETESTATION",
+      "Detachment": "Marshal's Household",
+      "Cost": "1 CP",
+      "Timing": "Your Charge phase, when a friendly SWORD BRETHREN SQUAD unit ends a charge move.",
+      "Target": "That SWORD BRETHREN SQUAD.",
+      "Effect": "Select one enemy unit engaged with your unit. Roll one D6 for each model in your unit engaged with that enemy unit:\n* For each 4+, that enemy unit suffers 1 mortal wound (to a maximum of 6 mortal wounds).",
+      "Restrictions": "",
+      "SourceLines": [
+        2406,
+        2416
+      ]
+    },
+    {
+      "Name": "DREAD CRUSADERS",
+      "Detachment": "Vow-sworn Crusaders",
+      "Cost": "1 CP",
+      "Timing": "Your opponent’s Charge phase, when an enemy unit selects charge targets.",
+      "Target": "One ADEPTUS ASTARTES INFANTRY unit that was selected as a charge target by that enemy unit this phase.",
+      "Effect": "That enemy unit must make a battle-shock roll, with -1 to that battle-shock roll.",
+      "Restrictions": "",
+      "SourceLines": [
+        2447,
+        2458
+      ]
+    },
+    {
+      "Name": "FOR THE EMPEROR'S HONOUR!",
+      "Detachment": "Vow-sworn Crusaders",
+      "Cost": "1 CP",
+      "Timing": "The Fight phase, when a friendly ADEPTUS ASTARTES INFANTRY unit is selected to fight.",
+      "Target": "That ADEPTUS ASTARTES INFANTRY unit.",
+      "Effect": "Your unit’s melee attacks have [PRECISION].",
+      "Restrictions": "",
+      "SourceLines": [
+        2459,
+        2469
+      ]
+    },
+    {
+      "Name": "HERESY BEGETS RETRIBUTION",
+      "Detachment": "Vow-sworn Crusaders",
+      "Cost": "1 CP",
+      "Timing": "Your opponent’s Movement phase, when an enemy unit ends a move within 8\" of a friendly ADEPTUS ASTARTES INFANTRY unit.",
+      "Target": "That ADEPTUS ASTARTES INFANTRY unit.",
+      "Effect": "Your unit can make a surge move of up to D6\".",
+      "Restrictions": "",
+      "SourceLines": [
+        2470,
+        2480
+      ]
+    },
+    {
+      "Name": "SPOOR OF THE UNHOLY",
+      "Detachment": "Vow-sworn Crusaders",
+      "Cost": "1 CP",
+      "Timing": "Your Shooting phase or the Fight phase, when a friendly ADEPTUS ASTARTES unit is selected to attack.",
+      "Target": "That ADEPTUS ASTARTES unit.",
+      "Effect": "Your unit can ignore modifiers to your unit’s:\n* BS and WS.\n* Hit rolls.",
+      "Restrictions": "",
+      "SourceLines": [
+        2481,
+        2494
+      ]
+    },
+    {
+      "Name": "PIOUS ENMITY",
+      "Detachment": "Vow-sworn Crusaders",
+      "Cost": "1 CP",
+      "Timing": "Fight phase, when a friendly CHAPLAIN/JUDICIAR unit is selected to fight.",
+      "Target": "That CHAPLIN/JUDICIAR unit.",
+      "Effect": "\n* Your unit’s melee attacks can re-roll hit rolls of 1.\n* Or: Your unit’s melee attacks that target a MONSTER/VEHICLE unit can re-roll hit rolls of 1 and wound rolls of 1.",
+      "Restrictions": "",
+      "SourceLines": [
+        2495,
+        2508
+      ]
+    },
+    {
+      "Name": "DEVOUT PUSH",
+      "Detachment": "Vow-sworn Crusaders",
+      "Cost": "1 CP",
+      "Timing": "Fight phase, when a friendly ADEPTUS ASTARTES INFANTRY unit is selected to make a pile-in/consolidation move.",
+      "Target": "That ADEPTUS ASTARTES INFANTRY unit.",
+      "Effect": "When making that pile-in/consolidation move, your unit can move up to D3+3\".",
+      "Restrictions": "",
+      "SourceLines": [
+        2509,
+        2518
+      ]
+    },
+    {
+      "Name": "FOCUSED FURY",
+      "Detachment": "Angelic Inheritors",
+      "Cost": "1 CP",
+      "Timing": "Fight phase, when a friendly ADEPTUS ASTARTES unit is selected to fight.",
+      "Target": "That ADEPTUS ASTARTES unit.",
+      "Effect": "Your unit’s melee attacks:\n* Have [LETHAL HITS].\n* Or: If your unit is a CHARACTER unit, have [LETHAL HITS], [LANCE].",
+      "Restrictions": "",
+      "SourceLines": [
+        2548,
+        2562
+      ]
+    },
+    {
+      "Name": "STRIKE NOW FOR GLORY",
+      "Detachment": "Angelic Inheritors",
+      "Cost": "1 CP",
+      "Timing": "Your Shooting phase when a friendly ADEPTUS ASTARTES unit is selected to attack.",
+      "Target": "That ADEPTUS ASTARTES unit.",
+      "Effect": "Your unit’s ranged attacks have [SUSTAINED HITS 1].",
+      "Restrictions": "",
+      "SourceLines": [
+        2563,
+        2573
+      ]
+    },
+    {
+      "Name": "INSTANT OF GRACE",
+      "Detachment": "Angelic Inheritors",
+      "Cost": "1 CP",
+      "Timing": "Your Command phase.",
+      "Target": "One friendly ADEPTUS ASTARTES INFANTRY unit.",
+      "Effect": "Your unit has CHARACTER until the start of your next Command phase.",
+      "Restrictions": "",
+      "SourceLines": [
+        2574,
+        2584
+      ]
+    },
+    {
+      "Name": "MEASURED STRATEGIST",
+      "Detachment": "Angelic Inheritors",
+      "Cost": "1 CP",
+      "Timing": "Your Command phase.",
+      "Target": "One friendly ADEPTUS ASTARTES CHARACTER unit.",
+      "Effect": "Select one combat doctrine. That combat doctrine is active for your unit until the start of your next Command phase.",
+      "Restrictions": "",
+      "SourceLines": [
+        2585,
+        2595
+      ]
+    },
+    {
+      "Name": "UNTO THE BURNING SKIES",
+      "Detachment": "Angelic Inheritors",
+      "Cost": "1 CP",
+      "Timing": "End of your opponent’s Fight phase.",
+      "Target": "One friendly THE SANGUINOR /unengaged ADEPTUS ASTARTES JUMP PACK unit.",
+      "Effect": "Place your unit in strategic reserves.",
+      "Restrictions": "",
+      "SourceLines": [
+        2596,
+        2606
+      ]
+    },
+    {
+      "Name": "IN THE SHADOW OF GREAT WINGS",
+      "Detachment": "Angelic Inheritors",
+      "Cost": "1 CP",
+      "Timing": "Your opponent’s Shooting phase, when an enemy unit targets a friendly ADEPTUS ASTARTES CHARACTER unit.",
+      "Target": "That ADEPTUS ASTARTES CHARACTER unit.",
+      "Effect": "Your unit has:\n* Stealth.\n* -3\" detection range.",
+      "Restrictions": "",
+      "SourceLines": [
+        2607,
+        2619
+      ]
+    },
+    {
+      "Name": "JUDGEMENT OF THE GOLDEN HOST",
+      "Detachment": "Encarmine Speartip",
+      "Cost": "1 CP",
+      "Timing": "Your Charge phase, when a friendly SANGUINARY GUARD unit form your army ends a charge move.",
+      "Target": "That SANGUINARY GUARD unit.",
+      "Effect": "Select one enemy unit engaged with your unit. Roll one D6 for each model in your unit engaged with that enemy unit:\n* For each 3+, that enemy unit suffers 1 mortal wound.",
+      "Restrictions": "",
+      "SourceLines": [
+        2642,
+        2654
+      ]
+    },
+    {
+      "Name": "INEXORABLE VALOUR",
+      "Detachment": "Encarmine Speartip",
+      "Cost": "1 CP",
+      "Timing": "Your opponent’s Movement phase, when an enemy unit that was engaged with a friendly SANGUINARY GUARD unit ends a fall-back move, if that SANGUINARY GUARD unit is unengaged.",
+      "Target": "That SANGUINARY GUARD unit.",
+      "Effect": "Your unit can make a normal move of up to D3+3\".",
+      "Restrictions": "",
+      "SourceLines": [
+        2655,
+        2665
+      ]
+    },
+    {
+      "Name": "BLINDING BLURS OF VENGEANCE",
+      "Detachment": "Encarmine Speartip",
+      "Cost": "1 CP",
+      "Timing": "Your opponent’s Shooting phase, when an enemy unit targets a friendly SANGUINARY GUARD unit.",
+      "Target": "That SANGUINARY GUARD unit.",
+      "Effect": "Your unit has:\n* Stealth.\n* -3\" detection range.",
+      "Restrictions": "",
+      "SourceLines": [
+        2666,
+        2678
+      ]
+    },
+    {
+      "Name": "DEATH BEGETS VENGEANCE",
+      "Detachment": "Wrath of the Doomed",
+      "Cost": "1 CP",
+      "Timing": "Any phase, when a friendly DEATH COMPANY unit is destroyed by an enemy unit.",
+      "Target": "That enemy unit.",
+      "Effect": "That enemy unit is hated until the end of the battle:\n* While a unit is hated, friendly DEATH COMPANY units’ attacks that target that unit have +1 to wound rolls.",
+      "Restrictions": "",
+      "SourceLines": [
+        2701,
+        2713
+      ]
+    },
+    {
+      "Name": "NO BARRIER TO RETRIBUTION",
+      "Detachment": "Wrath of the Doomed",
+      "Cost": "1 CP",
+      "Timing": "Your Movement or your Charge phase, when a friendly DEATH COMPANY DREADNOUGHT unit is selected to make a normal/advance/charge move.",
+      "Target": "That DEATH COMPANY DREADNOUGHT unit.",
+      "Effect": "Your unit has MOBILE.",
+      "Restrictions": "",
+      "SourceLines": [
+        2714,
+        2724
+      ]
+    },
+    {
+      "Name": "RAGE-FUELLED RESPONSE",
+      "Detachment": "Wrath of the Doomed",
+      "Cost": "1 CP",
+      "Timing": "Your opponent’s Shooting phase, when an enemy unit that targeted a friendly unengaged DEATH COMPANY unit has shot.",
+      "Target": "That DEATH COMPANY unit.",
+      "Effect": "Your unit can make a surge move of up to D6\".",
+      "Restrictions": "",
+      "SourceLines": [
+        2725,
+        2734
+      ]
+    },
+    {
+      "Name": "SKYBORNE SURVEILLANCE",
+      "Detachment": "Darkflight Pursuit",
+      "Cost": "1 CP",
+      "Timing": "Your Shooting phase, when a friendly RAVENWING FLY unit has shot.",
+      "Target": "That RAVENWING FLY unit.",
+      "Effect": "Visible enemy units within 6\" of your unit have +3\" detection range.",
+      "Restrictions": "",
+      "SourceLines": [
+        2758,
+        2769
+      ]
+    },
+    {
+      "Name": "WE ARE VENGEANCE",
+      "Detachment": "Darkflight Pursuit",
+      "Cost": "1 CP",
+      "Timing": "Your opponent’s Shooting phase, when an enemy unit that targeted a friendly unengaged RAVENWING FLY unit has shot.",
+      "Target": "That RAVENWING FLY unit.",
+      "Effect": "Your unit can make a normal move of up to D3+3\".",
+      "Restrictions": "",
+      "SourceLines": [
+        2770,
+        2780
+      ]
+    },
+    {
+      "Name": "WINGS OF SHADOW",
+      "Detachment": "Darkflight Pursuit",
+      "Cost": "1 CP",
+      "Timing": "Your opponent’s Shooting phase, when an enemy unit targets a friendly RAVENWING FLY/MOUNTED unit.",
+      "Target": "That RAVENWING FLY/MOUNTED unit.",
+      "Effect": "Your unit has Stealth.",
+      "Restrictions": "",
+      "SourceLines": [
+        2781,
+        2790
+      ]
+    },
+    {
+      "Name": "DUTY UNTO DEATH",
+      "Detachment": "Inner Circle Task Force",
+      "Cost": "1 CP",
+      "Timing": "Fight phase, when an enemy unit targets a friendly DEATHWING unit.",
+      "Target": "That DEATHWING unit.",
+      "Effect": "When a model in your unit is destroyed, if your unit has not been selected to fight this phase, roll one D6, with +1 to that roll if your unit is engaged with an enemy unit within range of your vowed objective:\n* On a 4+, do not remove that model from the battlefield. When your unit has fought, or at the end of the phase (whichever comes first), that model is removed from the battlefield.",
+      "Restrictions": "",
+      "SourceLines": [
+        2809,
+        2821
+      ]
+    },
+    {
+      "Name": "RELIC TELEPORTARIUM",
+      "Detachment": "Inner Circle Task Force",
+      "Cost": "1 CP",
+      "Timing": "Your Movement phase, when a friendly DEATHWING unit with the Deep Strike ability is selected to make an ingress move.",
+      "Target": "That DEATHWING unit.",
+      "Effect": "\n* Your unit can be set up more than 6\" horizontally from all enemy units (instead of more than 8\").\n* Your unit is not eligible to declare a charge until the end of this turn.",
+      "Restrictions": "",
+      "SourceLines": [
+        2822,
+        2835
+      ]
+    },
+    {
+      "Name": "WRATH OF THE LION",
+      "Detachment": "Inner Circle Task Force",
+      "Cost": "1 CP",
+      "Timing": "Your Charge phase, when a friendly DEATHWING unit ends a charge move.",
+      "Target": "That DEATHWING unit.",
+      "Effect": "Select one enemy unit engaged with your unit. If you do, roll one D6 for each model in your unit engaged with that enemy unit:\n* For each 3+, that enemy unit suffers 1 mortal wound (to a maximum of 6 mortal wounds).",
+      "Restrictions": "",
+      "SourceLines": [
+        2836,
+        2847
+      ]
+    },
+    {
+      "Name": "IN SACRIFICE, VICTORY",
+      "Detachment": "Wrath of the Rock",
+      "Cost": "1 CP",
+      "Timing": "Any phase, when a friendly DEATHWING/RAVENWING unit within range of an objective is destroyed.",
+      "Target": "That DEATHWING/RAVENWING unit. You can target that unit with this stratagem even though it is destroyed.",
+      "Effect": "Select one objective:\n* That no enemy units (excluding AIRCRAFT units) are within range of.\n* That your unit was controlling at the end of the previous phase.\nThat objective is secured.",
+      "Restrictions": "",
+      "SourceLines": [
+        2872,
+        2886
+      ]
+    },
+    {
+      "Name": "LION'S WILL",
+      "Detachment": "Wrath of the Rock",
+      "Cost": "1 CP",
+      "Timing": "Command phase.",
+      "Target": "One friendly ADEPTUS ASTARTES unit that is within range of an objective.",
+      "Effect": "Your unit has +1 OC until the end of the turn.",
+      "Restrictions": "",
+      "SourceLines": [
+        2887,
+        2897
+      ]
+    },
+    {
+      "Name": "INESCAPABLE JUSTICE",
+      "Detachment": "Wrath of the Rock",
+      "Cost": "1 CP",
+      "Timing": "The Fight phase, when a friendly Adeptus Astartes unit is selected to fight.",
+      "Target": "That Adeptus Astartes unit.",
+      "Effect": "Your unit's melee attacks have [Precision].",
+      "Restrictions": "",
+      "SourceLines": [
+        2898,
+        2908
+      ]
+    },
+    {
+      "Name": "TACTICAL MASTERY",
+      "Detachment": "Wrath of the Rock",
+      "Cost": "1 CP",
+      "Timing": "Your Command phase.",
+      "Target": "One friendly DEATHWING/RAVENWING unit.",
+      "Effect": "Select one combat doctrine. That combat doctrine is active for your unit until the start of your next Command phase.",
+      "Restrictions": "",
+      "SourceLines": [
+        2909,
+        2919
+      ]
+    },
+    {
+      "Name": "KNIGHTS OF IRON",
+      "Detachment": "Wrath of the Rock",
+      "Cost": "1 CP",
+      "Timing": "Your Movement /Charge phase, when a friendly RAVENWING unit is selected to move or declares a charge.",
+      "Target": "That RAVENWING unit.",
+      "Effect": "Your unit has MOBILE.",
+      "Restrictions": "",
+      "SourceLines": [
+        2920,
+        2930
+      ]
+    },
+    {
+      "Name": "RELICS OF THE DARK AGE",
+      "Detachment": "Wrath of the Rock",
+      "Cost": "1 CP",
+      "Timing": "Your Shooting phase, when a friendly ADEPTUS ASTARTES INFANTRY/MOUNTED unit is selected to shoot.",
+      "Target": "That ADEPTUS ASTARTES INFANTRY/MOUNTED unit.",
+      "Effect": "Your unit’s ranged attacks have +2 S.",
+      "Restrictions": "",
+      "SourceLines": [
+        2931,
+        2941
+      ]
+    },
+    {
+      "Name": "CHAMPION'S GUIDANCE",
+      "Detachment": "Champions of Fenris",
+      "Cost": "1 CP",
+      "Timing": "Fight phase, when a friendly ADEPTUS ASTARTES CHARACTER unit is selected to fight.",
+      "Target": "That ADEPTUS ASTARTES CHARACTER unit.",
+      "Effect": "Your unit’s melee attacks can re-roll hit rolls of 1 and wound rolls of 1.",
+      "Restrictions": "",
+      "SourceLines": [
+        2967,
+        2978
+      ]
+    },
+    {
+      "Name": "HEROIC RESOLVE",
+      "Detachment": "Champions of Fenris",
+      "Cost": "2 CP",
+      "Timing": "Your opponent’s Shooting phase or the Fight phase, when an enemy unit targets a friendly ADEPTUS ASTARTES CHARACTER unit.",
+      "Target": "That ADEPTUS ASTARTES CHARACTER unit.",
+      "Effect": "Attacks that target your unit have -1 D until that enemy unit has attacked.",
+      "Restrictions": "",
+      "SourceLines": [
+        2979,
+        2989
+      ]
+    },
+    {
+      "Name": "BIRTH OF A SAGA",
+      "Detachment": "Champions of Fenris",
+      "Cost": "1 CP",
+      "Timing": "Your Command phase.",
+      "Target": "One friendly ADEPTUS ASTARTES unit (excluding MONSTER/VEHICLE units).",
+      "Effect": "Until the start of your next Command phase, your unit has CHARACTER.",
+      "Restrictions": "",
+      "SourceLines": [
+        2990,
+        2999
+      ]
+    },
+    {
+      "Name": "UNBRIDLED FEROICITY",
+      "Detachment": "Saga of the Beastslayer",
+      "Cost": "1 CP",
+      "Timing": "Fight phase, when a friendly BLOOD CLAWS /THUNDERWOLF CAVALRY /WULFEN unit is selected to fight.",
+      "Target": "That BLOOD CLAWS/THUNDERWOLF CAVALRY/WULFEN unit.",
+      "Effect": "Your unit’s melee attacks have [LANCE].",
+      "Restrictions": "",
+      "SourceLines": [
+        3019,
+        3030
+      ]
+    },
+    {
+      "Name": "CO-ORDINATED STRIKE",
+      "Detachment": "Saga of the Beastslayer",
+      "Cost": "1 CP",
+      "Timing": "End of your opponent’s Fight phase.",
+      "Target": "One unengaged BLOOD CLAWS /THUNDERWOLF CAVALRY /WULFEN unit that is within 9\" of one or more battlefield edges.",
+      "Effect": "Place your unit in strategic reserves.",
+      "Restrictions": "",
+      "SourceLines": [
+        3031,
+        3041
+      ]
+    },
+    {
+      "Name": "IMPETUOSITY",
+      "Detachment": "Saga of the Beastslayer",
+      "Cost": "1 CP",
+      "Timing": "Your opponent’s Shooting phase, when an enemy unit that targeted a friendly unengaged BLOOD CLAWS /THUNDERWOLF CAVALRY /WULFEN unit has shot.",
+      "Target": "That BLOOD CLAWS/THUNDERWOLF CAVALRY/WULFEN unit.",
+      "Effect": "Your unit can make a surge move of up to D6\".",
+      "Restrictions": "",
+      "SourceLines": [
+        3042,
+        3051
+      ]
+    },
+    {
+      "Name": "EYE OF THE PACK",
+      "Detachment": "Saga of the Great Wolf",
+      "Cost": "1 CP",
+      "Timing": "Your Shooting phase, or the Fight phase, when a friendly ADEPTUS ASTARTES INFANTRY unit is selected to attack.",
+      "Target": "That ADEPTUS ASTARTES INFANTRY unit.",
+      "Effect": "Your unit’s attacks can re-roll wound rolls of 1 and 2.",
+      "Restrictions": "",
+      "SourceLines": [
+        3086,
+        3097
+      ]
+    },
+    {
+      "Name": "WOLF TOTEMS",
+      "Detachment": "Saga of the Great Wolf",
+      "Cost": "1 CP",
+      "Timing": "Any phase, when a friendly ADEPTUS ASTARTES INFANTRY/MOUNTED unit suffers a mortal wound.",
+      "Target": "That ADEPTUS ASTARTES INFANTRY/MOUNTED unit.",
+      "Effect": "Your unit has Feel No Pain 5+ against mortal wounds.",
+      "Restrictions": "",
+      "SourceLines": [
+        3098,
+        3108
+      ]
+    },
+    {
+      "Name": "FANGS OF THE PACK",
+      "Detachment": "Saga of the Great Wolf",
+      "Cost": "1 CP",
+      "Timing": "Fight phase, when a friendly ADEPTUS ASTARTES INFANTRY/MOUNTED unit is selected to fight.",
+      "Target": "That ADEPTUS ASTARTES INFANTRY/MOUNTED unit.",
+      "Effect": "Your unit’s melee attacks have [Precision].",
+      "Restrictions": "",
+      "SourceLines": [
+        3109,
+        3119
+      ]
+    },
+    {
+      "Name": "FENRISIAN FEROCITY",
+      "Detachment": "Saga of the Great Wolf",
+      "Cost": "1 CP",
+      "Timing": "Your Movement /Charge phase, when a friendly ADEPTUS ASTARTES MOUNTED/WALKER unit is selected to move or declares a charge.",
+      "Target": "That ADEPTUS ASTARTES MOUNTED/WALKER unit.",
+      "Effect": "Your unit has MOBILE.",
+      "Restrictions": "",
+      "SourceLines": [
+        3120,
+        3130
+      ]
+    },
+    {
+      "Name": "GRIMNAR'S COMMAND",
+      "Detachment": "Saga of the Great Wolf",
+      "Cost": "1 CP",
+      "Timing": "Your Command phase.",
+      "Target": "One friendly ADEPTUS ASTARTES unit (excluding MONSTER/VEHICLE units).",
+      "Effect": "Select one combat doctrine. That combat doctrine is active for your unit until the start of your next Command phase.",
+      "Restrictions": "",
+      "SourceLines": [
+        3131,
+        3141
+      ]
+    },
+    {
+      "Name": "BATTLE INSTINCTS",
+      "Detachment": "Saga of the Great Wolf",
+      "Cost": "1 CP",
+      "Timing": "Your opponent’s Shooting phase, when an enemy unit that targeted a friendly unengaged ADEPTUS ASTARTES INFANTRY/MOUNTED unit has shot.",
+      "Target": "That ADEPTUS ASTARTES INFANTRY/MOUNTED unit.",
+      "Effect": "Your unit can make a normal move of up to D3+3\".",
+      "Restrictions": "",
+      "SourceLines": [
+        3142,
+        3151
+      ]
+    },
+    {
+      "Name": "ARMOUR OF CONTEMPT",
+      "Detachment": "Black Spear Task Force",
+      "Cost": "1 CP",
+      "Timing": "Your opponent’s Shooting phase or the Fight phase, when an enemy unit targets a friendly ADEPTUS ASTARTES unit.",
+      "Target": "That ADEPTUS ASTARTES unit.",
+      "Effect": "Attacks that target your unit have -1 AP until that enemy unit has attacked.",
+      "Restrictions": "",
+      "SourceLines": [
+        3185,
+        3196
+      ]
+    },
+    {
+      "Name": "KRAKEN ROUNDS",
+      "Detachment": "Black Spear Task Force",
+      "Cost": "1 CP",
+      "Timing": "Your Shooting phase when a KILL TEAM unit is selected to shoot.",
+      "Target": "That KILL TEAM unit.",
+      "Effect": "Your unit’s ranged attacks:\n* Have +6\" R.\n* Have +1 S.",
+      "Restrictions": "",
+      "SourceLines": [
+        3197,
+        3210
+      ]
+    },
+    {
+      "Name": "HELLFIRE ROUNDS",
+      "Detachment": "Black Spear Task Force",
+      "Cost": "1 CP",
+      "Timing": "Your Shooting phase when a KILL TEAM unit is selected to shoot.",
+      "Target": "That KILL TEAM unit.",
+      "Effect": "Your unit’s ranged attacks (excluding [DEVASTATING WOUNDS] attacks) have [ANTI-non-VEHICLE 4+].",
+      "Restrictions": "",
+      "SourceLines": [
+        3211,
+        3221
+      ]
+    },
+    {
+      "Name": "DRAGONFIRE ROUNDS",
+      "Detachment": "Black Spear Task Force",
+      "Cost": "1 CP",
+      "Timing": "Your Shooting phase when a KILL TEAM unit is selected to shoot.",
+      "Target": "That KILL TEAM unit.",
+      "Effect": "Your unit’s ranged attacks:\n* Can re-roll wound rolls of 1.\n* Have [IGNORES COVER].",
+      "Restrictions": "",
+      "SourceLines": [
+        3222,
+        3235
+      ]
+    },
+    {
+      "Name": "ADAPTIVE TACTICS",
+      "Detachment": "Black Spear Task Force",
+      "Cost": "1 CP",
+      "Timing": "Your Command phase.",
+      "Target": "One friendly ADEPTUS ASTARTES unit.",
+      "Effect": "Select one combat doctrine. That combat doctrine is active for your unit until the start of your next Command phase.",
+      "Restrictions": "",
+      "SourceLines": [
+        3236,
+        3246
+      ]
+    },
+    {
+      "Name": "SITE-TO-SITE TELEPORTATION",
+      "Detachment": "Black Spear Task Force",
+      "Cost": "1 CP",
+      "Timing": "End of your opponent’s Fight phase.",
+      "Target": "One friendly unengaged ADEPTUS ASTARTES INFANTRY unit.",
+      "Effect": "\n* Place your unit in strategic reserves.\n* If your unit has KILL TEAM, your unit has Deep Strike until the end of your next Movement phase.",
+      "Restrictions": "",
+      "SourceLines": [
+        3247,
+        3259
+      ]
+    },
+    {
+      "Name": "KRAKEN ROUNDS",
+      "Detachment": "Deathwatch Support",
+      "Cost": "1 CP",
+      "Timing": "Your Shooting phase when a KILL TEAM unit is selected to shoot.",
+      "Target": "That KILL TEAM unit.",
+      "Effect": "Your unit’s ranged attacks have:\n* Have +6\" R.\n* Have +1 S.",
+      "Restrictions": "",
+      "SourceLines": [
+        3292,
+        3306
+      ]
+    },
+    {
+      "Name": "DRAGONFIRE ROUNDS",
+      "Detachment": "Deathwatch Support",
+      "Cost": "1 CP",
+      "Timing": "Your Shooting phase when a KILL TEAM unit is selected to shoot.",
+      "Target": "That KILL TEAM unit.",
+      "Effect": "Your unit’s ranged attacks:\n* Can re-roll wound rolls of 1.\n* Have [IGNORES COVER].",
+      "Restrictions": "",
+      "SourceLines": [
+        3307,
+        3320
+      ]
+    },
+    {
+      "Name": "HELLFIRE ROUNDS",
+      "Detachment": "Deathwatch Support",
+      "Cost": "1 CP",
+      "Timing": "Your Shooting phase when a KILL TEAM unit is selected to shoot.",
+      "Target": "That KILL TEAM unit.",
+      "Effect": "Your unit’s ranged attacks (excluding [DEVASTATING WOUNDS] attacks) have [ANTI-non-VEHICLE 4+].",
+      "Restrictions": "",
+      "SourceLines": [
+        3321,
+        3331
+      ]
+    },
+    {
+      "Name": "BLACKSTAR EXTRACTION",
+      "Detachment": "Deathwatch Support",
+      "Cost": "1 CP",
+      "Timing": "End of your opponent’s Fight phase.",
+      "Target": "One friendly unengaged KILL TEAM unit.",
+      "Effect": "Place your unit in strategic reserves.",
+      "Restrictions": "",
+      "SourceLines": [
+        3332,
+        3341
+      ]
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+<Solution>
+  <Project Path="src/GrimList.Core/GrimList.Core.csproj" />
+  <Project Path="src/GrimList.Desktop/GrimList.Desktop.csproj" />
+  <Project Path="tests/GrimList.Tests/GrimList.Tests.csproj" />
+  <Project Path="src/GrimList.Platform/GrimList.Platform.csproj" />
+  <Project Path="src/GrimList.Persistence/GrimList.Persistence.csproj" />
+  <Project Path="src/GrimList.Platform.Windows/GrimList.Platform.Windows.csproj" />
+  <Project Path="src/GrimList.Application/GrimList.Application.csproj" />
+  <Project Path="tools/GrimList.Data/GrimList.Data.csproj" />
+</Solution>

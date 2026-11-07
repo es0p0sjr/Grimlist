@@ -1,0 +1,44 @@
+GrimList Android 0.2.18 - 15 October 2026
+
+APK: artifacts/builds/android/0.2.18/GrimList-Android-0.2.18.apk
+Package: com.grimlist.mobile
+Version code: 19
+Size: 102934661 bytes
+SHA-256: 974cb7f6cef48898ba46a6c16ef4ddcc845fa18fd6b521ce9da01a0d7758b0d4
+
+Compact version-3 battle exchanges share player name, faction and disposition
+plus matching identifiers. Rosters, equipment, points, detachments and secondary
+choices are not transmitted. Local secondary choices move to Start battle.
+New outward file buttons are replaced by QR display and copy/paste.
+
+The QR contains a grimlist://battle/ app link. Use the Android phone's camera or
+QR scanner and open the link. There is no embedded camera/scanner in GrimList.
+Scanners that only copy custom links can use Paste from clipboard instead.
+Another phone can scan the return QR; a PC without a scanner uses the copied
+response text. See docs/battle-exchange.txt for the complete sequence.
+
+PC test launcher: Start-GrimList-QR-Test.cmd
+PC build: .local/compact-battle-qr/pc/GrimList.exe
+Uses the normal .local library. Close an older PC app before opening this build.
+The Windows installer has not been rebuilt.
+
+Verification: all 47 focused battle checks pass, including actual wire-field
+inspection, Unicode QR round trips, legacy fingerprint compatibility, replay
+safety and QR matrix comparisons to 21 independent reference vectors.
+Windows native UI checks pass create/join/accept, QR visibility, separate
+first-player choice, local secondary selectors, start/resume and compact summaries.
+Clean Android Standalone publish, APK ZIP integrity, signature comparison and
+both ARM64/x64 MAUI native startup checks pass. Certificate matches 0.2.17.
+
+Installed on the reconnected Redmi kjuoaevc95hagaz9 using adb install -r: Success.
+Verified versionName 0.2.18 and versionCode 19; first installation timestamp
+remains 2026-10-13 23:15:00. No uninstall or storage clearing was performed.
+Physical cold launch passed. A version-3 QR app link delivered during library
+startup opened the review screen once loading finished, showing the Unicode
+opponent name, faction and disposition against the existing fnc Tyranids army.
+Join was not pressed and no test battle was created. The app was restarted to
+close the test review and leave it ready for the user's real QR scan.
+Optical scanning by the phone camera remains a manual acceptance check.
+
+Evidence: .local/compact-battle-qr/ and .local/phone-0.2.18/.
+Emulator fallback also blocked: Android emulator crash handler failed with CreateNamedPipe access denied. No emulator/device storage was cleared.

@@ -1,0 +1,21 @@
+Keyword search verification - 2026-10-16
+
+Windows and Android library search now use Application/UnitSearch.Matches for
+case-insensitive substring matching of unit names and imported unit keywords.
+Leading/trailing whitespace is ignored. Existing library eligibility, points,
+Legends and Crucible filters remain in effect. Search hints describe keywords.
+
+Verification:
+- Three focused regressions passed (--library-search-only --lf-json).
+  Includes bundled Chaos Space Marines Damned and Tyranid Harvester examples,
+  missing profile/keywords, partial/case/whitespace matching, eligibility,
+  library filters and availability cache reuse. Included in the full harness.
+- Windows Debug build passed: zero warnings/errors.
+- Android Debug test-identity build passed: zero errors, three existing nullable
+  warnings in MainPage.Performance.cs (lines 49, 73, 97).
+- No Android device connected; no physical-device interaction test performed.
+- This change did not rerun the full regression suite or create a community
+  release. The focused run's synthetic database directory was removed by the
+  standard Test-Regression.ps1 wrapper.
+
+Regression log: artifacts/distribution-evidence/library-search-regression.log

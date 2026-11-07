@@ -1,0 +1,98 @@
+GrimList 0.2.24 - local community delivery, 2026-10-23
+
+Delivered in the repository-root 0.2.24 folder:
+  GrimList-0.2.24-win-x64.msi   98,738,176 bytes
+  SHA-256 e831ebf004496ee2955aac0b1a262ab0b3e1278575e27005709d0370b111cc02
+  GrimList-Android-0.2.24.apk  105,560,197 bytes
+  SHA-256 e86022c52ce1f64453ea405e0b875d4758e0b5bfc9fb0f840c81a5d0830be17c
+README.txt explains updating, test priorities and reporting problems.
+CLEANUP.txt lists exact remaining disposable folders and stale symbol files.
+SHA256SUMS.txt, individual hashes and the MSI inventory are included.
+No upload, external publication or tester messaging was performed.
+
+Changes
+- Pantheon of Woe's source-confirmed mandatory C'tan bindings now satisfy
+  selection conditions and display as detachment abilities in Build, Play and
+  export. Existing source-matched libraries work without reimport. Optional
+  slots, totals, saved IDs and loadouts are preserved. See ../pantheon-of-woe.txt.
+- Roster ordering on both platforms/export keeps categories and attachments,
+  sorts by name, then puts larger same-name units first.
+- Android retains list anchors and partial-row offsets when rebuilding or
+  returning from another screen. Rules and unit tabs retain scroll offsets;
+  rule-card expansion survives rebuilds. No-change Rules actions avoid rebuilds.
+  Deferred native restores are invalidated on replacement/unload. State is local
+  to the current page session and bounded, without changing army persistence.
+  See ../scroll-retention-investigation.txt for implementation and limitations.
+- Windows' six investigated roster/library/ability-scroll cases retained their
+  offsets; no Windows scroll rewrite was made. Battle round navigation and the
+  fixed-heading-only Android swipe recognizers retain their existing behavior.
+
+Identity and provenance
+- Shared version 0.2.24; Android display version 0.2.24, version code 25,
+  package com.grimlist.mobile, minimum API 30, ARM64 and x64.
+- APK signature verification passed and retained the previous certificate:
+  SHA-256 9be9c191c53dc33ee955dcaedad94868fe4a4e6817a1fb30187ac0baf7f28f25
+  This remains the Android development/debug signing certificate.
+- MSI ProductCode {F7845A6E-6E32-542E-850B-B73997F83BC6}.
+  Stable UpgradeCode {5F1E3A2A-2390-5993-A9F9-4AF11C89E68A}.
+  MSI remains unsigned; private Windows Desktop runtime 10.0.10 included.
+- Built from the existing tree with the standard Android/Windows publishers
+  and Build-WindowsInstaller.py. No source/rules refresh accompanied packaging;
+  bootstrap remains grimlist-11e-2026.10.16.2.
+
+Verification
+- Full Test-Regression.ps1 run: 462 PASS, zero failures, exit 0. Includes the
+  Pantheon fresh/legacy recovery checks, sorting, three anchor-remapping checks,
+  16,755 eligible enhancement/bearer pairs and real pdftotext extraction.
+  The normal wrapper removed its synthetic test directory after success.
+- Before packaging, native WPF Pantheon checks passed: four bindings displayed
+  once in Build/Play, disappeared after removing the detachment, and 20-model
+  Warriors preceded 10-model Warriors. This was a Debug smoke build, not a claim
+  that production supports smoke flags. Evidence: pantheon-wpf.txt.
+- Android Release compilation passed with zero warnings/errors. Final standard
+  publish passed candidate coverage, identity/version, signature and both ABI
+  native onCreate binding gates. The delivered APK passed ZIP integrity and
+  certificate-continuity checks and contains no .pdb ZIP entries.
+- Publish emitted stale .pdb/assembly mismatch warnings and successfully retried
+  without debugging symbols. Automatic approval review rejected deletion of the
+  three exact stale symbols; they remain on the manual cleanup list. No cleanup
+  workaround was attempted.
+- Windows publish passed; bundled enhancement, army-rule and equipment candidate
+  gates passed on both publishers. Unsupported source conditions remain explicit.
+- Delivered MSI: all 19 package checks passed, including table validation,
+  upgrade identity, cabinet extraction and byte-for-byte inventory checks for
+  all 490 files (223,481,383 bytes). No user database or development scripts
+  were packaged.
+- Exact MSI-extracted app: 13 native checks passed, including fresh offline
+  bootstrap, validation, a 375-point army, save/reopen and private runtime use.
+  Temporary extraction and test data were removed by the standard checks.
+- Exact delivered MSI welcome/per-user destination and Cancel/Finish checks
+  passed, exiting 1602 without installing.
+- Build-retention regression: 14 checks passed. Standard publishers removed
+  superseded canonical 0.2.22 Android, Windows and MSI directories. The root
+  0.2.21 and 0.2.22 delivery folders remain for manual cleanup.
+
+Limits
+- adb devices -l listed no connected device. The installed API 35 emulator
+  could not start because required lock-file/named-pipe access was denied.
+  Its task-owned processes were stopped; repetitive startup output was reduced
+  to a concise diagnostic excerpt. No phone data was changed or cleared.
+- Native Android scroll/gesture behavior and an in-place update/cold launch of
+  the exact delivered APK remain unverified. Compile/anchor/package tests are
+  not substitutes for those checks.
+- Windows install/repair/upgrade/uninstall lifecycle was not performed. Extracted
+  app checks and welcome/cancel do not prove that lifecycle.
+- Scroll bookmarks do not persist across process restarts; shrinking content
+  clamps positions. The Windows investigation did not exercise every possible
+  source/layout/grouping/focus change.
+
+Evidence under artifacts/distribution-evidence:
+  release-0.2.24-regression.log
+  release-0.2.24-android-final.log
+  release-0.2.24-apk-signature.txt / release-0.2.24-apk-identity.txt
+  release-0.2.24-windows-publish.log / release-0.2.24-msi-build.log
+  release-0.2.24-msi-validation.log / release-0.2.24-msi/results.json
+  release-0.2.24-msi/app/results.json
+  release-0.2.24-msi-ui.log / release-0.2.24-msi-ui/ui-results.json
+  release-0.2.24-retention.log
+  scroll-emulator-startup.log / scroll-emulator-stderr.log

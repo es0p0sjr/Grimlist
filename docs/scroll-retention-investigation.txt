@@ -1,0 +1,88 @@
+Scroll/view reset investigation - 2026-10-23
+
+Initial investigation: both platforms. Findings below describe the behavior
+before the 0.2.24 fix, documented at the end of this file.
+
+Android findings (source inspection; not verified on a physical device)
+- MainPage.RefreshPresentation preserves editor controls for ordinary incremental
+  updates, but forces Render when the dataset changes or a mutation affects
+  Rules, Enhancement or Attachments. Maximum-points changes count as Rules.
+- Render calls ResetPresentation, clears both observable list collections and
+  removes the page controls. RenderEditor creates new library/roster CollectionViews.
+  Neither list records a visible item or scroll offset for restoration.
+- Opening a unit and returning to the editor also takes this full-render path.
+  Applying a library update returns from review to a newly built screen.
+- Rules has no incremental-refresh branch. Every Execute completion on that
+  screen creates a new ScrollView without restoring its position. This includes
+  returning from a primary-mission modal and cancelled/no-change actions.
+- Unit details has partial retention: one unit/tab/mode key and an old ScrollY,
+  restored once on Loaded. Capture currently happens after page removal; it is
+  not a per-view cache. Handler detach/layout timing could explain intermittent
+  failures here, but that requires native Android verification.
+
+Windows findings (native WPF diagnostic, existing production methods)
+Synthetic library: 65 unit definitions, 45 roster entries and long ability text.
+Measured roster/library/ability scroll positions after layout/dispatcher work:
+  plain Render:                   700/900/600 -> 700/900/600
+  army rename through Edit:       700/900/600 -> 700/900/600
+  unit add through Edit:          700/900/600 -> 700/900/600
+  unchanged-library reload:       700/900/600 -> 700/900/600
+  focused library + button:      700/1022.06/600 -> 700/1022.06/600
+  focused roster delete button:  700/900/600 -> 700/900/600
+Diagnostic exited 0. ItemsSource replacement alone did not reproduce a reset:
+the existing WPF scroll controls retained their offsets in these cases.
+This does not rule out source updates that change layout/extent, grouping,
+focus, or other screens. No actual download/update was performed.
+
+Battle trackers
+Ordinary VP/CP edits update existing controls. Rebuilding secondary cards requests
+scroll retention on both platforms. Round navigation explicitly requests a reset.
+No newly reproduced battle-scrolling defect; leave the fixed-heading-only Android
+swipe recognizers intact.
+
+Recommended fix
+Keep presentation state per army/view, separately for roster, library, rules and
+unit/tab. Capture before clearing/removing controls. Restore after the replacement
+view has usable layout. Lists should anchor to a stable visible entry/unit ID so
+sorting, insertion and removal do not jump to unrelated rows; use a surviving
+neighbor when the anchor was removed. Plain ScrollViews can restore a clamped
+offset. Avoid rebuilding for cancelled/no-change actions, especially on Rules.
+Guard deferred restores against intervening navigation or a new user scroll.
+Keep new-army/unit navigation and battle-round transitions intentional.
+
+Verification needed for implementation
+Android: add/remove, size change, limit/detachment/enhancement/attachment edits,
+undo/redo, unit-to-army return, library update return, modal close/cancel and long
+rules-page actions; verify both editor columns and list reorder/removal anchors.
+Windows: retain the six passing scenarios and test shrinking content/group changes.
+This is presentation state, with no required changes to army data or rule logic.
+
+Execution policy blocked recursive cleanup of the disposable native diagnostic:
+.local/tests/scroll-investigation-20261023-a63f. It remains in place.
+
+Implemented for 0.2.24
+- MainPage.Scroll.cs keeps up to 64 presentation bookmarks, keyed by army,
+  screen, build/play mode, unit/tab and scrolling panel. No database changes.
+- Capture happens before collection updates and before old controls are removed.
+  Android lists retain stable row IDs plus the partial-row pixel offset through
+  the native LinearLayoutManager. Deleted anchors use the next surviving row,
+  then a previous survivor. The roster header participates in native indexing.
+- Restoration waits for attached, measured native controls. Replaced controls
+  invalidate their queued callbacks and unsubscribe events. A dragging list
+  is not repositioned. Retried layout waits are bounded.
+- ScrollViews retain offsets per view; Android clamps them when content shrinks.
+  Rules reference expansion is retained for up to 16 recently visited views.
+  Returning from unchanged Rules actions no longer rebuilds the page.
+- The old single-unit Loaded-only offset restoration was removed. Returning
+  from a unit or library import now restores the editor's two separate panels.
+- Windows and battle tracker behavior was left intact based on the findings.
+
+Validation
+- Three regression checks cover reordered/inserted rows, removed anchors,
+  category removal, headers, empty lists and replacement search results.
+- Android Release compilation passed with no warnings/errors.
+- No Android device was connected. The installed API 35 emulator could not
+  start: access was denied for required emulator lock files and crash-handler
+  named pipes. Its task-owned process was stopped. Native Android gesture and
+  layout behavior remains unverified; no phone data was cleared or replaced.
+- Final package and full regression results: docs/distribution/release-0.2.24.txt.

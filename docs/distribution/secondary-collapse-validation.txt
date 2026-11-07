@@ -1,0 +1,30 @@
+Battle secondary collapse verification - 2026-10-16
+
+Both platforms now have an accessible Show/Hide button next to each player's
+secondary VP summary. Each player's controls collapse independently. The
+summary stays visible, and the collapsed state survives round renders for
+the current tracker visit. The controls remain instantiated, so toggling
+preserves a pending card picker selection. Nothing is written to battle data.
+The feature covers both Tactical and Fixed sections.
+
+Verification:
+- Windows Debug build passed with zero warnings/errors.
+- Native Windows battle tracker smoke passed, including new assertions for
+  independent collapse, reduced layout height, accessible restore control,
+  pending picker preservation, unchanged battle data/VP and round navigation.
+  Existing native scoring, discard/recovery, CP, scoreboard, save/reopen,
+  finish/delete and battle exchange scenarios also passed.
+- Collapsed Windows screenshot inspected; score summary and Show button are
+  visible. Retained at artifacts/distribution-evidence/secondaries-collapsed.png.
+- Android Debug test-identity build passed with zero errors and three existing
+  nullable warnings in MainPage.Performance.cs (49, 73, 97).
+- adb devices -l reported no connected devices. Android touch/accessibility
+  behavior still needs a device check. Fixed-mode layout uses the same wrapper
+  but was not separately exercised by the native Tactical smoke scenario.
+- No community release packaged; full shared regression suite not rerun for
+  this UI-only change.
+- Automatic approval review rejected cleanup as "blocked by policy". The
+  completed synthetic run remains at
+  .local/tests/a89fa75a-a583-4c37-924e-a040970069aa.
+  The Android test APK also remains in the existing Debug build output;
+  its cleanup was already rejected during the preceding keyword-search task.

@@ -1,0 +1,5 @@
+{
+  "artifacts/builds/windows/0.2.0/GrimList.Application.dll": "4BEA97751EED09A659E3E1A034EE522FD0A22527FCD6FD44F31160850B85D10D",
+  "src/GrimList.Mobile/obj/Release/net10.0-android/android/assets/arm64-v8a/GrimList.Application.dll": "4BEA97751EED09A659E3E1A034EE522FD0A22527FCD6FD44F31160850B85D10D",
+  "src/GrimList.Mobile/obj/Release/net10.0-android/android/assets/x86_64/GrimList.Application.dll": "4BEA97751EED09A659E3E1A034EE522FD0A22527FCD6FD44F31160850B85D10D"
+}

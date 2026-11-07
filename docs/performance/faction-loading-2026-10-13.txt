@@ -1,0 +1,96 @@
+On-demand faction loading on Windows and Android - 13 October 2026
+
+Implemented behavior
+Both native frontends opt into the shared FactionLibrary through ArmySession.
+Home opens a small library manifest and uses persisted, revision-checked army
+summaries. Opening an army loads its faction and supported allied dependencies.
+New-army setup lists every faction and loads the selected faction on demand.
+Two recent faction views are retained. Existing foreign/invalid roster entries
+bring in their source faction so validation cannot silently lose those units.
+
+The cache contains compressed, checksummed faction files and a manifest. It is
+derived from the fully normalized/recovered library, keyed by database revision,
+recovery/code version, and the Android reference-supplement version. First use,
+a changed library/build, or cache corruption requires a complete read/rebuild.
+The manifest is published after its shard files. Missing/damaged/unwritable cache
+data falls back to authoritative library data; it never edits or deletes rosters.
+Cached Home summaries additionally match each complete roster fingerprint.
+Returning to another faction does not invalidate every saved-army summary.
+
+Shared ability definitions preserve cross-faction weapon-keyword explanations.
+Detachment metadata and faction contexts remain available for setup/validation.
+Scoped datasets are marked in memory and rejected as import/replacement data.
+Explicit full-library exports load the complete dataset. Import previews and
+updates continue through the original complete-library workflow.
+
+Matched component measurements (milliseconds, median of five samples)
+Operation                         Windows full / faction   Android full / faction
+Session startup + Home summaries       1592 / 14                6568 / 98
+First army open                          67 / 116                100 / 325
+Switch to another faction                47 / 54                  93 / 238
+Return to cached faction                 20 / 48                 106 / 96
+
+These are session/library/Home preparation and command timings. They exclude
+window/activity creation and native layout/rendering; they are not whole-app
+startup times. The faster initial library read shifts some work to first opening
+of an army. No claim that every individual action becomes faster is made.
+
+The library contains 2,194 units. Cached Home loads zero unit profiles. The Death
+Guard fixture loads 69 units including dependencies; the Orks fixture loads 58.
+Median startup/Home managed allocations: Windows 388.19 to 5.57 MiB; Android
+437.53 to 4.36 MiB. These are allocations, not retained memory or process RAM.
+
+Method and limits
+The same FactionLoadingWorkload runs against an isolated SQLite database on each
+platform, selecting eager or scoped loading in the same implementation. Three
+saved five-unit rosters are used. Each of four cases has five recorded samples
+per mode plus one discarded warm-up; mode order alternates. First preparation,
+all-faction parity checks and fixture setup occur outside recorded samples.
+Windows recorded samples were repeated after builds/shared/UI checks finished;
+the initial concurrent-build run is retained separately and not used above.
+Android measurements ran in the isolated test package on the connected physical
+Redmi Note 12 Pro+ 5G (Android 14). Windows uses the existing Windows 11 machine.
+OS caches/background activity were not reset. Android allocation totals use the
+approximate counter to avoid the previously observed Mono exact-counter crash.
+
+Five additional Android fresh-process launches with an already-built faction
+cache reached MAUI render readiness in a median 3,043.2 ms. They restore the
+two-unit size-test roster and have no matched eager startup baseline. Readiness
+uses the existing two-frame callback proxy. The first fresh test-app installation
+took 58.8 seconds from MAUI entry to readiness, including bundled database setup
+and initial faction-cache creation; this is one observation, not a median.
+
+Validation
+347 distinct shared regression checks passed across the final full and focused
+runs: 342 existing checks and five faction-loading groups. The final full run
+contained one new-test expectation failure: it assumed an invalid foreign unit
+would reject a commit, although invalid armies may be saved. The fixture was
+corrected to use an empty name, which must be rejected; all five focused groups
+then passed. Production code was unchanged by that test correction.
+Failed saves and rejected edits restore the previous dataset alongside the
+unchanged army, results and history. The all-faction comparison passed 6,181
+checks on Windows and 6,310 on Android across all 36 factions: available units,
+detachment routes/options, references, profiles, roster results and shared weapon
+definitions. Android includes its reference supplement, so case counts differ.
+Focused checks also cover cache bounds, missing/corrupt files, external source
+revision changes, imports, persisted summary invalidation, custom factions,
+foreign roster entries, full export, resizing and undo/redo.
+17 native Windows faction-loading checks and the full existing Windows UI smoke
+suite passed. Android's 46 native unit-size checks passed with scoped loading.
+The 37 native attachment-choice assertions also passed, including cache reuse,
+invalidation after changes/undo/redo/imports, stale-result rejection and retry.
+The full Windows UI suite and Android attachment checks preceded the final
+failed-edit rollback guard. The focused shared checks, all-faction comparisons,
+17 Windows faction UI checks and 46 Android size checks verified the final code.
+Windows and Android Release builds completed without warnings/errors. Both
+Android architectures passed the native onCreate startup-binding guard.
+
+Artifacts
+.local/faction-loading-20261013/ contains the original source copy, fresh build
+copies, raw reports, build/test logs, native screenshots and installation record.
+docs/performance/faction-loading-2026-10-13.json contains structured medians.
+
+Windows already running in memory continues to use its old assemblies. Close it
+and launch Start-GrimList.cmd to build/use the changed production source. Android
+was updated in place as com.grimlist.mobile; version remains 0.2.6/code 8. This work
+does not publish an official release or change release/signing identity.

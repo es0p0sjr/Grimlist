@@ -1,0 +1,23 @@
+Concise text roster export — 2026-10-25
+
+RosterExport.Text previously inserted EffectiveDatasheets.Project(...).Summary
+into each unit block. This exposed modifier diagnostics such as Combi-bolter
+Range, Source and unresolved Conditional notes above the equipment list.
+The text roster now omits that summary. Detailed effective datasheets keep it.
+Both frontends use this shared exporter; PDF roster summaries also use it.
+
+Equipment quantities already sum selected equipment by name. A Chaos Rhino
+with standard and pintle Combi-bolters selected exports one 2 × Combi-bolter
+row. A Rhino with only the standard bolter selected still exports one gun.
+Modifier annotations do not represent additional equipped weapons. No saved
+loadouts, prices, validation rules or detailed weapon profiles were changed.
+
+Verification: scripts/Test-Regression.ps1 with --text-export-only passed all
+13 checks, covering the exact requested Rhino block, known/unknown modifiers,
+optional bolter/combi-weapon/empty selections, manual weapon counts, existing
+text/Yellowscribe exports and army validation. Successful synthetic test data
+was removed by the wrapper. Log:
+artifacts/distribution-evidence/concise-text-export-regression.log
+
+Shipped in 0.2.26 on both platforms. See distribution/release-0.2.26.txt for
+package hashes and release verification. Existing 0.2.25 packages are unchanged.

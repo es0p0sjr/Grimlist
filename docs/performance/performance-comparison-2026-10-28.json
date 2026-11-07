@@ -1,0 +1,5809 @@
+{
+  "date": "2026-10-28",
+  "android": {
+    "apkSha256": "2815d4cf1f095ea9c5ddd6d94b7d622b83781a66cc633aee59036bbc683d8c65",
+    "package": "com.grimlist.perftest",
+    "device": "Redmi 22101316UG (rubypro)",
+    "runs": [
+      {
+        "samples": [
+          {
+            "Operation": "add",
+            "Entries": 3,
+            "CommandMs": 79.4913,
+            "UsableMs": 121.8919,
+            "AllocatedBytes": 8286440,
+            "ManagedBytes": 35618448
+          },
+          {
+            "Operation": "add",
+            "Entries": 3,
+            "CommandMs": 77.4806,
+            "UsableMs": 128.5913,
+            "AllocatedBytes": 4141216,
+            "ManagedBytes": 36211328
+          },
+          {
+            "Operation": "add",
+            "Entries": 3,
+            "CommandMs": 79.2904,
+            "UsableMs": 131.3584,
+            "AllocatedBytes": 4148136,
+            "ManagedBytes": 35234888
+          },
+          {
+            "Operation": "add",
+            "Entries": 3,
+            "CommandMs": 85.2743,
+            "UsableMs": 133.0504,
+            "AllocatedBytes": 8280832,
+            "ManagedBytes": 35901184
+          },
+          {
+            "Operation": "add",
+            "Entries": 3,
+            "CommandMs": 77.0264,
+            "UsableMs": 126.7577,
+            "AllocatedBytes": 4151296,
+            "ManagedBytes": 36482104
+          },
+          {
+            "Operation": "add",
+            "Entries": 3,
+            "CommandMs": 82.8464,
+            "UsableMs": 134.9384,
+            "AllocatedBytes": 8267088,
+            "ManagedBytes": 37139504
+          },
+          {
+            "Operation": "add",
+            "Entries": 3,
+            "CommandMs": 75.1756,
+            "UsableMs": 151.9203,
+            "AllocatedBytes": 8308504,
+            "ManagedBytes": 38072120
+          },
+          {
+            "Operation": "add",
+            "Entries": 3,
+            "CommandMs": 104.8196,
+            "UsableMs": 150.1026,
+            "AllocatedBytes": 8268680,
+            "ManagedBytes": 38422088
+          },
+          {
+            "Operation": "add",
+            "Entries": 3,
+            "CommandMs": 125.5649,
+            "UsableMs": 169.6554,
+            "AllocatedBytes": 8325584,
+            "ManagedBytes": 39179696
+          },
+          {
+            "Operation": "add",
+            "Entries": 3,
+            "CommandMs": 82.1141,
+            "UsableMs": 136.2569,
+            "AllocatedBytes": 4193368,
+            "ManagedBytes": 39787576
+          },
+          {
+            "Operation": "equipment",
+            "Entries": 3,
+            "CommandMs": 99.6386,
+            "UsableMs": 148.3316,
+            "AllocatedBytes": 8260064,
+            "ManagedBytes": 45776648
+          },
+          {
+            "Operation": "equipment",
+            "Entries": 3,
+            "CommandMs": 100.6772,
+            "UsableMs": 119.6516,
+            "AllocatedBytes": 4604616,
+            "ManagedBytes": 48855096
+          },
+          {
+            "Operation": "equipment",
+            "Entries": 3,
+            "CommandMs": 121.6495,
+            "UsableMs": 180.8276,
+            "AllocatedBytes": 8276912,
+            "ManagedBytes": 51524264
+          },
+          {
+            "Operation": "equipment",
+            "Entries": 3,
+            "CommandMs": 200.1473,
+            "UsableMs": 221.9713,
+            "AllocatedBytes": 5520280,
+            "ManagedBytes": 50174856
+          },
+          {
+            "Operation": "equipment",
+            "Entries": 3,
+            "CommandMs": 104.7717,
+            "UsableMs": 127.7255,
+            "AllocatedBytes": 4122000,
+            "ManagedBytes": 52764392
+          },
+          {
+            "Operation": "equipment",
+            "Entries": 3,
+            "CommandMs": 105.1046,
+            "UsableMs": 122.3009,
+            "AllocatedBytes": 4109368,
+            "ManagedBytes": 55400752
+          },
+          {
+            "Operation": "equipment",
+            "Entries": 3,
+            "CommandMs": 126.9184,
+            "UsableMs": 182.4754,
+            "AllocatedBytes": 8257064,
+            "ManagedBytes": 58047096
+          },
+          {
+            "Operation": "equipment",
+            "Entries": 3,
+            "CommandMs": 108.838,
+            "UsableMs": 124.3495,
+            "AllocatedBytes": 4112392,
+            "ManagedBytes": 60634648
+          },
+          {
+            "Operation": "equipment",
+            "Entries": 3,
+            "CommandMs": 113.8013,
+            "UsableMs": 176.02,
+            "AllocatedBytes": 8301208,
+            "ManagedBytes": 63318264
+          },
+          {
+            "Operation": "equipment",
+            "Entries": 3,
+            "CommandMs": 119.3057,
+            "UsableMs": 141.6956,
+            "AllocatedBytes": 5147664,
+            "ManagedBytes": 66913072
+          },
+          {
+            "Operation": "enhancement",
+            "Entries": 3,
+            "CommandMs": 115.8495,
+            "UsableMs": 157.175,
+            "AllocatedBytes": 12389232,
+            "ManagedBytes": 66135560
+          },
+          {
+            "Operation": "enhancement",
+            "Entries": 3,
+            "CommandMs": 131.0522,
+            "UsableMs": 173.9175,
+            "AllocatedBytes": 8242368,
+            "ManagedBytes": 66699664
+          },
+          {
+            "Operation": "enhancement",
+            "Entries": 3,
+            "CommandMs": 116.1172,
+            "UsableMs": 155.6904,
+            "AllocatedBytes": 8251192,
+            "ManagedBytes": 67304720
+          },
+          {
+            "Operation": "enhancement",
+            "Entries": 3,
+            "CommandMs": 119.6301,
+            "UsableMs": 159.838,
+            "AllocatedBytes": 8253192,
+            "ManagedBytes": 67926112
+          },
+          {
+            "Operation": "enhancement",
+            "Entries": 3,
+            "CommandMs": 128.5876,
+            "UsableMs": 182.2357,
+            "AllocatedBytes": 8251672,
+            "ManagedBytes": 68544792
+          },
+          {
+            "Operation": "enhancement",
+            "Entries": 3,
+            "CommandMs": 123.1624,
+            "UsableMs": 204.7141,
+            "AllocatedBytes": 12366600,
+            "ManagedBytes": 69250864
+          },
+          {
+            "Operation": "enhancement",
+            "Entries": 3,
+            "CommandMs": 129.52,
+            "UsableMs": 171.9101,
+            "AllocatedBytes": 12411448,
+            "ManagedBytes": 69791816
+          },
+          {
+            "Operation": "enhancement",
+            "Entries": 3,
+            "CommandMs": 120.1317,
+            "UsableMs": 163.9425,
+            "AllocatedBytes": 8268832,
+            "ManagedBytes": 70379584
+          },
+          {
+            "Operation": "enhancement",
+            "Entries": 3,
+            "CommandMs": 148.0855,
+            "UsableMs": 192.6741,
+            "AllocatedBytes": 8305416,
+            "ManagedBytes": 71051152
+          },
+          {
+            "Operation": "enhancement",
+            "Entries": 3,
+            "CommandMs": 127.8978,
+            "UsableMs": 171.544,
+            "AllocatedBytes": 8252616,
+            "ManagedBytes": 71840888
+          },
+          {
+            "Operation": "attachment",
+            "Entries": 3,
+            "CommandMs": 183.6923,
+            "UsableMs": 388.8737,
+            "AllocatedBytes": 20929888,
+            "ManagedBytes": 78570680
+          },
+          {
+            "Operation": "attachment",
+            "Entries": 3,
+            "CommandMs": 188.0393,
+            "UsableMs": 449.607,
+            "AllocatedBytes": 20884328,
+            "ManagedBytes": 83508624
+          },
+          {
+            "Operation": "attachment",
+            "Entries": 3,
+            "CommandMs": 191.4094,
+            "UsableMs": 466.8686,
+            "AllocatedBytes": 25018224,
+            "ManagedBytes": 88818064
+          },
+          {
+            "Operation": "attachment",
+            "Entries": 3,
+            "CommandMs": 325.7368,
+            "UsableMs": 566.4654,
+            "AllocatedBytes": 20685928,
+            "ManagedBytes": 74785392
+          },
+          {
+            "Operation": "attachment",
+            "Entries": 3,
+            "CommandMs": 155.19,
+            "UsableMs": 402.5913,
+            "AllocatedBytes": 20967160,
+            "ManagedBytes": 80054928
+          },
+          {
+            "Operation": "attachment",
+            "Entries": 3,
+            "CommandMs": 173.0889,
+            "UsableMs": 418.0547,
+            "AllocatedBytes": 20924592,
+            "ManagedBytes": 83040592
+          },
+          {
+            "Operation": "attachment",
+            "Entries": 3,
+            "CommandMs": 174.3186,
+            "UsableMs": 428.587,
+            "AllocatedBytes": 20942472,
+            "ManagedBytes": 88349200
+          },
+          {
+            "Operation": "attachment",
+            "Entries": 3,
+            "CommandMs": 176.9202,
+            "UsableMs": 420.5466,
+            "AllocatedBytes": 20987736,
+            "ManagedBytes": 91427128
+          },
+          {
+            "Operation": "attachment",
+            "Entries": 3,
+            "CommandMs": 178.658,
+            "UsableMs": 436.0126,
+            "AllocatedBytes": 20907448,
+            "ManagedBytes": 96619512
+          },
+          {
+            "Operation": "attachment",
+            "Entries": 3,
+            "CommandMs": 187.8171,
+            "UsableMs": 448.4316,
+            "AllocatedBytes": 20900592,
+            "ManagedBytes": 99598880
+          },
+          {
+            "Operation": "detachment",
+            "Entries": 3,
+            "CommandMs": 92.9636,
+            "UsableMs": 328.5541,
+            "AllocatedBytes": 8289552,
+            "ManagedBytes": 105419160
+          },
+          {
+            "Operation": "detachment",
+            "Entries": 3,
+            "CommandMs": 27.9626,
+            "UsableMs": 248.4046,
+            "AllocatedBytes": 4164304,
+            "ManagedBytes": 106289592
+          },
+          {
+            "Operation": "detachment",
+            "Entries": 3,
+            "CommandMs": 98.7819,
+            "UsableMs": 338.1353,
+            "AllocatedBytes": 8447632,
+            "ManagedBytes": 109100312
+          },
+          {
+            "Operation": "detachment",
+            "Entries": 3,
+            "CommandMs": 28.9879,
+            "UsableMs": 243.7781,
+            "AllocatedBytes": 4165688,
+            "ManagedBytes": 109750016
+          },
+          {
+            "Operation": "detachment",
+            "Entries": 3,
+            "CommandMs": 98.9175,
+            "UsableMs": 331.5436,
+            "AllocatedBytes": 8287024,
+            "ManagedBytes": 112552288
+          },
+          {
+            "Operation": "detachment",
+            "Entries": 3,
+            "CommandMs": 116.3823,
+            "UsableMs": 487.8451,
+            "AllocatedBytes": 7764216,
+            "ManagedBytes": 90490216
+          },
+          {
+            "Operation": "detachment",
+            "Entries": 3,
+            "CommandMs": 75.4504,
+            "UsableMs": 294.9602,
+            "AllocatedBytes": 8449896,
+            "ManagedBytes": 93448352
+          },
+          {
+            "Operation": "detachment",
+            "Entries": 3,
+            "CommandMs": 91.3477,
+            "UsableMs": 307.3025,
+            "AllocatedBytes": 8307648,
+            "ManagedBytes": 94102048
+          },
+          {
+            "Operation": "detachment",
+            "Entries": 3,
+            "CommandMs": 77.436,
+            "UsableMs": 248.5744,
+            "AllocatedBytes": 4130968,
+            "ManagedBytes": 95308032
+          },
+          {
+            "Operation": "detachment",
+            "Entries": 3,
+            "CommandMs": 81.4144,
+            "UsableMs": 291.711,
+            "AllocatedBytes": 8493848,
+            "ManagedBytes": 97751424
+          },
+          {
+            "Operation": "home",
+            "Entries": 3,
+            "CommandMs": 6.6251,
+            "UsableMs": 214.6451,
+            "AllocatedBytes": 4309272,
+            "ManagedBytes": 136589808
+          },
+          {
+            "Operation": "home",
+            "Entries": 3,
+            "CommandMs": 5.507,
+            "UsableMs": 220.6479,
+            "AllocatedBytes": 4293840,
+            "ManagedBytes": 139343632
+          },
+          {
+            "Operation": "home",
+            "Entries": 3,
+            "CommandMs": 5.1663,
+            "UsableMs": 196.22,
+            "AllocatedBytes": 4321240,
+            "ManagedBytes": 104121904
+          },
+          {
+            "Operation": "home",
+            "Entries": 3,
+            "CommandMs": 5.1363,
+            "UsableMs": 123.1532,
+            "AllocatedBytes": 0,
+            "ManagedBytes": 105008608
+          },
+          {
+            "Operation": "home",
+            "Entries": 3,
+            "CommandMs": 5.7422,
+            "UsableMs": 129.8136,
+            "AllocatedBytes": 0,
+            "ManagedBytes": 107949920
+          },
+          {
+            "Operation": "home",
+            "Entries": 3,
+            "CommandMs": 6.2304,
+            "UsableMs": 132.0317,
+            "AllocatedBytes": 0,
+            "ManagedBytes": 110749496
+          },
+          {
+            "Operation": "home",
+            "Entries": 3,
+            "CommandMs": 4.9867,
+            "UsableMs": 253.8314,
+            "AllocatedBytes": 4311888,
+            "ManagedBytes": 113630208
+          },
+          {
+            "Operation": "home",
+            "Entries": 3,
+            "CommandMs": 8.5553,
+            "UsableMs": 237.7347,
+            "AllocatedBytes": 4311376,
+            "ManagedBytes": 116598312
+          },
+          {
+            "Operation": "home",
+            "Entries": 3,
+            "CommandMs": 5.6099,
+            "UsableMs": 236.7028,
+            "AllocatedBytes": 4315456,
+            "ManagedBytes": 119491960
+          },
+          {
+            "Operation": "home",
+            "Entries": 3,
+            "CommandMs": 5.1376,
+            "UsableMs": 250.4566,
+            "AllocatedBytes": 4212832,
+            "ManagedBytes": 122218888
+          },
+          {
+            "Operation": "add",
+            "Entries": 20,
+            "CommandMs": 368.3494,
+            "UsableMs": 390.3126,
+            "AllocatedBytes": 24756368,
+            "ManagedBytes": 127115096
+          },
+          {
+            "Operation": "add",
+            "Entries": 20,
+            "CommandMs": 342.7746,
+            "UsableMs": 368.6267,
+            "AllocatedBytes": 28927368,
+            "ManagedBytes": 128628640
+          },
+          {
+            "Operation": "add",
+            "Entries": 20,
+            "CommandMs": 335.763,
+            "UsableMs": 365.7785,
+            "AllocatedBytes": 24813472,
+            "ManagedBytes": 129858936
+          },
+          {
+            "Operation": "add",
+            "Entries": 20,
+            "CommandMs": 401.0209,
+            "UsableMs": 422.6778,
+            "AllocatedBytes": 24774552,
+            "ManagedBytes": 131105952
+          },
+          {
+            "Operation": "add",
+            "Entries": 20,
+            "CommandMs": 381.7806,
+            "UsableMs": 407.1664,
+            "AllocatedBytes": 25071096,
+            "ManagedBytes": 132717432
+          },
+          {
+            "Operation": "add",
+            "Entries": 20,
+            "CommandMs": 391.0859,
+            "UsableMs": 415.3831,
+            "AllocatedBytes": 24747000,
+            "ManagedBytes": 134071680
+          },
+          {
+            "Operation": "add",
+            "Entries": 20,
+            "CommandMs": 413.471,
+            "UsableMs": 441.8283,
+            "AllocatedBytes": 24796152,
+            "ManagedBytes": 135495272
+          },
+          {
+            "Operation": "add",
+            "Entries": 20,
+            "CommandMs": 414.1923,
+            "UsableMs": 440.0193,
+            "AllocatedBytes": 24866560,
+            "ManagedBytes": 136828504
+          },
+          {
+            "Operation": "add",
+            "Entries": 20,
+            "CommandMs": 343.879,
+            "UsableMs": 365.215,
+            "AllocatedBytes": 24755856,
+            "ManagedBytes": 138111136
+          },
+          {
+            "Operation": "add",
+            "Entries": 20,
+            "CommandMs": 382.1059,
+            "UsableMs": 407.5209,
+            "AllocatedBytes": 24754704,
+            "ManagedBytes": 139387728
+          },
+          {
+            "Operation": "equipment",
+            "Entries": 20,
+            "CommandMs": 351.2849,
+            "UsableMs": 502.7293,
+            "AllocatedBytes": 24746320,
+            "ManagedBytes": 146694736
+          },
+          {
+            "Operation": "equipment",
+            "Entries": 20,
+            "CommandMs": 365.4822,
+            "UsableMs": 394.6129,
+            "AllocatedBytes": 25111888,
+            "ManagedBytes": 150641688
+          },
+          {
+            "Operation": "equipment",
+            "Entries": 20,
+            "CommandMs": 459.8443,
+            "UsableMs": 615.5273,
+            "AllocatedBytes": 24759736,
+            "ManagedBytes": 154143968
+          },
+          {
+            "Operation": "equipment",
+            "Entries": 20,
+            "CommandMs": 386.7776,
+            "UsableMs": 409.7181,
+            "AllocatedBytes": 24768064,
+            "ManagedBytes": 157683464
+          },
+          {
+            "Operation": "equipment",
+            "Entries": 20,
+            "CommandMs": 400.4602,
+            "UsableMs": 430.2285,
+            "AllocatedBytes": 26864904,
+            "ManagedBytes": 163334408
+          },
+          {
+            "Operation": "equipment",
+            "Entries": 20,
+            "CommandMs": 561.2477,
+            "UsableMs": 583.6468,
+            "AllocatedBytes": 23392648,
+            "ManagedBytes": 123933984
+          },
+          {
+            "Operation": "equipment",
+            "Entries": 20,
+            "CommandMs": 285.2786,
+            "UsableMs": 309.0156,
+            "AllocatedBytes": 20612920,
+            "ManagedBytes": 127437448
+          },
+          {
+            "Operation": "equipment",
+            "Entries": 20,
+            "CommandMs": 293.8781,
+            "UsableMs": 315.0295,
+            "AllocatedBytes": 20626024,
+            "ManagedBytes": 130955072
+          },
+          {
+            "Operation": "equipment",
+            "Entries": 20,
+            "CommandMs": 287.9322,
+            "UsableMs": 309.8528,
+            "AllocatedBytes": 24725928,
+            "ManagedBytes": 134565904
+          },
+          {
+            "Operation": "equipment",
+            "Entries": 20,
+            "CommandMs": 301.8132,
+            "UsableMs": 408.3183,
+            "AllocatedBytes": 24758320,
+            "ManagedBytes": 138098104
+          },
+          {
+            "Operation": "enhancement",
+            "Entries": 20,
+            "CommandMs": 499.0067,
+            "UsableMs": 540.7058,
+            "AllocatedBytes": 37122944,
+            "ManagedBytes": 144673376
+          },
+          {
+            "Operation": "enhancement",
+            "Entries": 20,
+            "CommandMs": 462.4301,
+            "UsableMs": 504.5919,
+            "AllocatedBytes": 37113208,
+            "ManagedBytes": 146726320
+          },
+          {
+            "Operation": "enhancement",
+            "Entries": 20,
+            "CommandMs": 460.3956,
+            "UsableMs": 502.4479,
+            "AllocatedBytes": 37090864,
+            "ManagedBytes": 148810472
+          },
+          {
+            "Operation": "enhancement",
+            "Entries": 20,
+            "CommandMs": 492.8972,
+            "UsableMs": 538.0303,
+            "AllocatedBytes": 41198920,
+            "ManagedBytes": 150861080
+          },
+          {
+            "Operation": "enhancement",
+            "Entries": 20,
+            "CommandMs": 506.5651,
+            "UsableMs": 553.4538,
+            "AllocatedBytes": 41238248,
+            "ManagedBytes": 152881752
+          },
+          {
+            "Operation": "enhancement",
+            "Entries": 20,
+            "CommandMs": 496.4074,
+            "UsableMs": 544.395,
+            "AllocatedBytes": 41147840,
+            "ManagedBytes": 154879992
+          },
+          {
+            "Operation": "enhancement",
+            "Entries": 20,
+            "CommandMs": 496.264,
+            "UsableMs": 547.287,
+            "AllocatedBytes": 41585552,
+            "ManagedBytes": 157229808
+          },
+          {
+            "Operation": "enhancement",
+            "Entries": 20,
+            "CommandMs": 485.3788,
+            "UsableMs": 537.3253,
+            "AllocatedBytes": 41233184,
+            "ManagedBytes": 159223528
+          },
+          {
+            "Operation": "enhancement",
+            "Entries": 20,
+            "CommandMs": 518.6974,
+            "UsableMs": 577.352,
+            "AllocatedBytes": 41291896,
+            "ManagedBytes": 161259128
+          },
+          {
+            "Operation": "enhancement",
+            "Entries": 20,
+            "CommandMs": 509.2773,
+            "UsableMs": 651.7588,
+            "AllocatedBytes": 41238608,
+            "ManagedBytes": 163394840
+          },
+          {
+            "Operation": "attachment",
+            "Entries": 20,
+            "CommandMs": 628.1332,
+            "UsableMs": 983.4031,
+            "AllocatedBytes": 74778768,
+            "ManagedBytes": 173100136
+          },
+          {
+            "Operation": "attachment",
+            "Entries": 20,
+            "CommandMs": 726.3308,
+            "UsableMs": 1183.1653,
+            "AllocatedBytes": 74524696,
+            "ManagedBytes": 179975224
+          },
+          {
+            "Operation": "attachment",
+            "Entries": 20,
+            "CommandMs": 694.9943,
+            "UsableMs": 1166.3005,
+            "AllocatedBytes": 74363360,
+            "ManagedBytes": 186800968
+          },
+          {
+            "Operation": "attachment",
+            "Entries": 20,
+            "CommandMs": 725.1366,
+            "UsableMs": 1221.7119,
+            "AllocatedBytes": 78432584,
+            "ManagedBytes": 193659976
+          },
+          {
+            "Operation": "attachment",
+            "Entries": 20,
+            "CommandMs": 670.2091,
+            "UsableMs": 1160.7886,
+            "AllocatedBytes": 74343480,
+            "ManagedBytes": 198584768
+          },
+          {
+            "Operation": "attachment",
+            "Entries": 20,
+            "CommandMs": 620.8408,
+            "UsableMs": 1057.5292,
+            "AllocatedBytes": 74363408,
+            "ManagedBytes": 162853064
+          },
+          {
+            "Operation": "attachment",
+            "Entries": 20,
+            "CommandMs": 630.2077,
+            "UsableMs": 1068.9896,
+            "AllocatedBytes": 74385888,
+            "ManagedBytes": 169800240
+          },
+          {
+            "Operation": "attachment",
+            "Entries": 20,
+            "CommandMs": 627.1301,
+            "UsableMs": 1046.9049,
+            "AllocatedBytes": 74660368,
+            "ManagedBytes": 174688032
+          },
+          {
+            "Operation": "attachment",
+            "Entries": 20,
+            "CommandMs": 631.8713,
+            "UsableMs": 1078.7425,
+            "AllocatedBytes": 74312784,
+            "ManagedBytes": 181544064
+          },
+          {
+            "Operation": "attachment",
+            "Entries": 20,
+            "CommandMs": 647.9437,
+            "UsableMs": 1116.0231,
+            "AllocatedBytes": 74386680,
+            "ManagedBytes": 188445872
+          },
+          {
+            "Operation": "detachment",
+            "Entries": 20,
+            "CommandMs": 264.5037,
+            "UsableMs": 499.528,
+            "AllocatedBytes": 20669376,
+            "ManagedBytes": 194093376
+          },
+          {
+            "Operation": "detachment",
+            "Entries": 20,
+            "CommandMs": 306.7254,
+            "UsableMs": 564.95,
+            "AllocatedBytes": 20676136,
+            "ManagedBytes": 197312752
+          },
+          {
+            "Operation": "detachment",
+            "Entries": 20,
+            "CommandMs": 295.8222,
+            "UsableMs": 535.0347,
+            "AllocatedBytes": 20685656,
+            "ManagedBytes": 200202872
+          },
+          {
+            "Operation": "detachment",
+            "Entries": 20,
+            "CommandMs": 312.3768,
+            "UsableMs": 570.7866,
+            "AllocatedBytes": 20681992,
+            "ManagedBytes": 203159752
+          },
+          {
+            "Operation": "detachment",
+            "Entries": 20,
+            "CommandMs": 329.6812,
+            "UsableMs": 623.5618,
+            "AllocatedBytes": 20677368,
+            "ManagedBytes": 206066456
+          },
+          {
+            "Operation": "detachment",
+            "Entries": 20,
+            "CommandMs": 326.6823,
+            "UsableMs": 602.5903,
+            "AllocatedBytes": 20693832,
+            "ManagedBytes": 208990896
+          },
+          {
+            "Operation": "detachment",
+            "Entries": 20,
+            "CommandMs": 311.0107,
+            "UsableMs": 474.8412,
+            "AllocatedBytes": 16559104,
+            "ManagedBytes": 210248824
+          },
+          {
+            "Operation": "detachment",
+            "Entries": 20,
+            "CommandMs": 323.491,
+            "UsableMs": 492.1451,
+            "AllocatedBytes": 16556960,
+            "ManagedBytes": 212833240
+          },
+          {
+            "Operation": "detachment",
+            "Entries": 20,
+            "CommandMs": 316.0704,
+            "UsableMs": 486.3212,
+            "AllocatedBytes": 16537336,
+            "ManagedBytes": 215622808
+          },
+          {
+            "Operation": "detachment",
+            "Entries": 20,
+            "CommandMs": 303.7814,
+            "UsableMs": 576.8236,
+            "AllocatedBytes": 20998184,
+            "ManagedBytes": 218559248
+          },
+          {
+            "Operation": "home",
+            "Entries": 20,
+            "CommandMs": 7.1303,
+            "UsableMs": 139.4026,
+            "AllocatedBytes": 0,
+            "ManagedBytes": 225220392
+          },
+          {
+            "Operation": "home",
+            "Entries": 20,
+            "CommandMs": 8.0778,
+            "UsableMs": 287.2418,
+            "AllocatedBytes": 4291632,
+            "ManagedBytes": 228512664
+          },
+          {
+            "Operation": "home",
+            "Entries": 20,
+            "CommandMs": 6.187,
+            "UsableMs": 279.0577,
+            "AllocatedBytes": 4314480,
+            "ManagedBytes": 231839952
+          },
+          {
+            "Operation": "home",
+            "Entries": 20,
+            "CommandMs": 4.7003,
+            "UsableMs": 262.7369,
+            "AllocatedBytes": 4521248,
+            "ManagedBytes": 235019136
+          },
+          {
+            "Operation": "home",
+            "Entries": 20,
+            "CommandMs": 4.3117,
+            "UsableMs": 278.6123,
+            "AllocatedBytes": 4520632,
+            "ManagedBytes": 238281512
+          },
+          {
+            "Operation": "home",
+            "Entries": 20,
+            "CommandMs": 8.9766,
+            "UsableMs": 283.6347,
+            "AllocatedBytes": 4516824,
+            "ManagedBytes": 241560360
+          },
+          {
+            "Operation": "home",
+            "Entries": 20,
+            "CommandMs": 5.5871,
+            "UsableMs": 298.6455,
+            "AllocatedBytes": 4522160,
+            "ManagedBytes": 244854672
+          },
+          {
+            "Operation": "home",
+            "Entries": 20,
+            "CommandMs": 6.8702,
+            "UsableMs": 305.2133,
+            "AllocatedBytes": 4522080,
+            "ManagedBytes": 248146304
+          },
+          {
+            "Operation": "home",
+            "Entries": 20,
+            "CommandMs": 7.7308,
+            "UsableMs": 295.2569,
+            "AllocatedBytes": 4520088,
+            "ManagedBytes": 251450104
+          },
+          {
+            "Operation": "home",
+            "Entries": 20,
+            "CommandMs": 9.0359,
+            "UsableMs": 132.063,
+            "AllocatedBytes": 0,
+            "ManagedBytes": 178145984
+          }
+        ],
+        "startup": [
+          {
+            "LibraryReadyMs": 3195.9734,
+            "MauiEntryToUsableMs": 3682.7851,
+            "ManagedBytes": 31759448,
+            "AllocatedBytes": 48692784,
+            "NativeAllocatedBytes": 84424040,
+            "Stages": [
+              {
+                "Stage": "startup.database-open",
+                "Milliseconds": 149.9
+              },
+              {
+                "Stage": "cache.checksum",
+                "Milliseconds": 16.5569
+              },
+              {
+                "Stage": "cache.json-metadata",
+                "Milliseconds": 56.975
+              },
+              {
+                "Stage": "cache.deserialize",
+                "Milliseconds": 605.1288
+              },
+              {
+                "Stage": "factions.manifest-read",
+                "Milliseconds": 695.764
+              },
+              {
+                "Stage": "startup.session",
+                "Milliseconds": 1312.9529
+              },
+              {
+                "Stage": "cache.checksum",
+                "Milliseconds": 0.9483
+              },
+              {
+                "Stage": "cache.json-metadata",
+                "Milliseconds": 1.923
+              },
+              {
+                "Stage": "cache.deserialize",
+                "Milliseconds": 0.5846
+              },
+              {
+                "Stage": "cache.checksum",
+                "Milliseconds": 0.8722
+              },
+              {
+                "Stage": "cache.json-metadata",
+                "Milliseconds": 0.0104
+              },
+              {
+                "Stage": "cache.deserialize",
+                "Milliseconds": 46.4581
+              },
+              {
+                "Stage": "cache.checksum",
+                "Milliseconds": 2.5393
+              },
+              {
+                "Stage": "cache.json-metadata",
+                "Milliseconds": 0.0092
+              },
+              {
+                "Stage": "cache.deserialize",
+                "Milliseconds": 61.0533
+              },
+              {
+                "Stage": "factions.shards-read",
+                "Milliseconds": 119.1052
+              },
+              {
+                "Stage": "cache.checksum",
+                "Milliseconds": 2.2343
+              },
+              {
+                "Stage": "cache.json-metadata",
+                "Milliseconds": 0.8415
+              },
+              {
+                "Stage": "cache.deserialize",
+                "Milliseconds": 22.0501
+              },
+              {
+                "Stage": "factions.abilities-read",
+                "Milliseconds": 25.552
+              },
+              {
+                "Stage": "startup.restore",
+                "Milliseconds": 1200.6593
+              }
+            ],
+            "RecoveryContract": "recovery-2/references-1/normalization-1/40E72D1F64DFED69EA997944967813F66B662201D269F3311995B368C25F5270/enhancement-eligibility-1/normalization-1/FE26E2AE5494604463F448A1B7ACBF893B9DF8561406FE04F87C8B1EA0728278/effective-1/rule-compilation-1/A1C7A1F8CC505220A8ED0648D0F02B35B49BC74CC8AEF39D28649A47018630C5/catalogue-1/normalization-1/659C6F8C5995CA0039BAC4E2819C93D3DA3C459AADB6CE58CDD0F5943583BEA5",
+            "ApplicationModule": "23fc8be6-3511-43b5-9d14-ed1bb56cafc2",
+            "FullReads": 0,
+            "ShardReads": 3,
+            "DependencyCalculations": 0,
+            "DependencyReuses": 0,
+            "MigratedManifest": false,
+            "Context": {
+              "Id": "enhancement-choice-checks",
+              "Faction": "Death Guard",
+              "Entries": 2,
+              "Screen": "roster"
+            },
+            "ExternalReadyMs": 4437.999999965541,
+            "AmStart": "Starting: Intent { cmp=com.grimlist.perftest/crc64c040c7e13546c831.MainActivity (has extras) }\nStatus: ok\nLaunchState: COLD\nActivity: com.grimlist.perftest/crc64c040c7e13546c831.MainActivity\nTotalTime: 1531\nWaitTime: 1542\nComplete\n"
+          },
+          {
+            "LibraryReadyMs": 3056.4699,
+            "MauiEntryToUsableMs": 3531.4809,
+            "ManagedBytes": 31759936,
+            "AllocatedBytes": 48856792,
+            "NativeAllocatedBytes": 84300952,
+            "Stages": [
+              {
+                "Stage": "startup.database-open",
+                "Milliseconds": 146.114
+              },
+              {
+                "Stage": "cache.checksum",
+                "Milliseconds": 13.662
+              },
+              {
+                "Stage": "cache.json-metadata",
+                "Milliseconds": 70.126
+              },
+              {
+                "Stage": "cache.deserialize",
+                "Milliseconds": 583.4836
+              },
+              {
+                "Stage": "factions.manifest-read",
+                "Milliseconds": 679.7073
+              },
+              {
+                "Stage": "startup.session",
+                "Milliseconds": 1299.5774
+              },
+              {
+                "Stage": "cache.checksum",
+                "Milliseconds": 0.1049
+              },
+              {
+                "Stage": "cache.json-metadata",
+                "Milliseconds": 1.8289
+              },
+              {
+                "Stage": "cache.deserialize",
+                "Milliseconds": 0.4993
+              },
+              {
+                "Stage": "cache.checksum",
+                "Milliseconds": 0.3671
+              },
+              {
+                "Stage": "cache.json-metadata",
+                "Milliseconds": 0.0061
+              },
+              {
+                "Stage": "cache.deserialize",
+                "Milliseconds": 47.9593
+              },
+              {
+                "Stage": "cache.checksum",
+                "Milliseconds": 0.627
+              },
+              {
+                "Stage": "cache.json-metadata",
+                "Milliseconds": 0.008
+              },
+              {
+                "Stage": "cache.deserialize",
+                "Milliseconds": 61.6
+              },
+              {
+                "Stage": "factions.shards-read",
+                "Milliseconds": 117.9686
+              },
+              {
+                "Stage": "cache.checksum",
+                "Milliseconds": 0.5196
+              },
+              {
+                "Stage": "cache.json-metadata",
+                "Milliseconds": 0.7713
+              },
+              {
+                "Stage": "cache.deserialize",
+                "Milliseconds": 22.2174
+              },
+              {
+                "Stage": "factions.abilities-read",
+                "Milliseconds": 23.8686
+              },
+              {
+                "Stage": "startup.restore",
+                "Milliseconds": 1148.8334
+              }
+            ],
+            "RecoveryContract": "recovery-2/references-1/normalization-1/40E72D1F64DFED69EA997944967813F66B662201D269F3311995B368C25F5270/enhancement-eligibility-1/normalization-1/FE26E2AE5494604463F448A1B7ACBF893B9DF8561406FE04F87C8B1EA0728278/effective-1/rule-compilation-1/A1C7A1F8CC505220A8ED0648D0F02B35B49BC74CC8AEF39D28649A47018630C5/catalogue-1/normalization-1/659C6F8C5995CA0039BAC4E2819C93D3DA3C459AADB6CE58CDD0F5943583BEA5",
+            "ApplicationModule": "23fc8be6-3511-43b5-9d14-ed1bb56cafc2",
+            "FullReads": 0,
+            "ShardReads": 3,
+            "DependencyCalculations": 0,
+            "DependencyReuses": 0,
+            "MigratedManifest": false,
+            "Context": {
+              "Id": "enhancement-choice-checks",
+              "Faction": "Death Guard",
+              "Entries": 2,
+              "Screen": "roster"
+            },
+            "ExternalReadyMs": 4187.000000034459,
+            "AmStart": "Starting: Intent { cmp=com.grimlist.perftest/crc64c040c7e13546c831.MainActivity (has extras) }\nStatus: ok\nLaunchState: COLD\nActivity: com.grimlist.perftest/crc64c040c7e13546c831.MainActivity\nTotalTime: 1311\nWaitTime: 1317\nComplete\n"
+          },
+          {
+            "LibraryReadyMs": 3085.3954,
+            "MauiEntryToUsableMs": 3558.5754,
+            "ManagedBytes": 31800600,
+            "AllocatedBytes": 49269056,
+            "NativeAllocatedBytes": 84256184,
+            "Stages": [
+              {
+                "Stage": "startup.database-open",
+                "Milliseconds": 133.9369
+              },
+              {
+                "Stage": "cache.checksum",
+                "Milliseconds": 14.2163
+              },
+              {
+                "Stage": "cache.json-metadata",
+                "Milliseconds": 77.4243
+              },
+              {
+                "Stage": "cache.deserialize",
+                "Milliseconds": 582.9169
+              },
+              {
+                "Stage": "factions.manifest-read",
+                "Milliseconds": 684.9793
+              },
+              {
+                "Stage": "startup.session",
+                "Milliseconds": 1309.648
+              },
+              {
+                "Stage": "cache.checksum",
+                "Milliseconds": 0.1123
+              },
+              {
+                "Stage": "cache.json-metadata",
+                "Milliseconds": 2.056
+              },
+              {
+                "Stage": "cache.deserialize",
+                "Milliseconds": 0.5467
+              },
+              {
+                "Stage": "cache.checksum",
+                "Milliseconds": 0.3825
+              },
+              {
+                "Stage": "cache.json-metadata",
+                "Milliseconds": 0.0077
+              },
+              {
+                "Stage": "cache.deserialize",
+                "Milliseconds": 47.3406
+              },
+              {
+                "Stage": "cache.checksum",
+                "Milliseconds": 0.5809
+              },
+              {
+                "Stage": "cache.json-metadata",
+                "Milliseconds": 0.0073
+              },
+              {
+                "Stage": "cache.deserialize",
+                "Milliseconds": 60.425
+              },
+              {
+                "Stage": "factions.shards-read",
+                "Milliseconds": 116.0639
+              },
+              {
+                "Stage": "cache.checksum",
+                "Milliseconds": 0.5098
+              },
+              {
+                "Stage": "cache.json-metadata",
+                "Milliseconds": 0.892
+              },
+              {
+                "Stage": "cache.deserialize",
+                "Milliseconds": 21.6777
+              },
+              {
+                "Stage": "factions.abilities-read",
+                "Milliseconds": 23.4506
+              },
+              {
+                "Stage": "startup.restore",
+                "Milliseconds": 1183.5613
+              }
+            ],
+            "RecoveryContract": "recovery-2/references-1/normalization-1/40E72D1F64DFED69EA997944967813F66B662201D269F3311995B368C25F5270/enhancement-eligibility-1/normalization-1/FE26E2AE5494604463F448A1B7ACBF893B9DF8561406FE04F87C8B1EA0728278/effective-1/rule-compilation-1/A1C7A1F8CC505220A8ED0648D0F02B35B49BC74CC8AEF39D28649A47018630C5/catalogue-1/normalization-1/659C6F8C5995CA0039BAC4E2819C93D3DA3C459AADB6CE58CDD0F5943583BEA5",
+            "ApplicationModule": "23fc8be6-3511-43b5-9d14-ed1bb56cafc2",
+            "FullReads": 0,
+            "ShardReads": 3,
+            "DependencyCalculations": 0,
+            "DependencyReuses": 0,
+            "MigratedManifest": false,
+            "Context": {
+              "Id": "enhancement-choice-checks",
+              "Faction": "Death Guard",
+              "Entries": 2,
+              "Screen": "roster"
+            },
+            "ExternalReadyMs": 4108.999999938533,
+            "AmStart": "Starting: Intent { cmp=com.grimlist.perftest/crc64c040c7e13546c831.MainActivity (has extras) }\nStatus: ok\nLaunchState: COLD\nActivity: com.grimlist.perftest/crc64c040c7e13546c831.MainActivity\nTotalTime: 1301\nWaitTime: 1306\nComplete\n"
+          },
+          {
+            "LibraryReadyMs": 3204.0584,
+            "MauiEntryToUsableMs": 3672.0422,
+            "ManagedBytes": 31697568,
+            "AllocatedBytes": 48883080,
+            "NativeAllocatedBytes": 84395296,
+            "Stages": [
+              {
+                "Stage": "startup.database-open",
+                "Milliseconds": 148.1413
+              },
+              {
+                "Stage": "cache.checksum",
+                "Milliseconds": 12.1396
+              },
+              {
+                "Stage": "cache.json-metadata",
+                "Milliseconds": 66.8498
+              },
+              {
+                "Stage": "cache.deserialize",
+                "Milliseconds": 568.9483
+              },
+              {
+                "Stage": "factions.manifest-read",
+                "Milliseconds": 658.4593
+              },
+              {
+                "Stage": "startup.session",
+                "Milliseconds": 1263.3283
+              },
+              {
+                "Stage": "cache.checksum",
+                "Milliseconds": 0.1028
+              },
+              {
+                "Stage": "cache.json-metadata",
+                "Milliseconds": 1.9236
+              },
+              {
+                "Stage": "cache.deserialize",
+                "Milliseconds": 0.5021
+              },
+              {
+                "Stage": "cache.checksum",
+                "Milliseconds": 0.3294
+              },
+              {
+                "Stage": "cache.json-metadata",
+                "Milliseconds": 0.0067
+              },
+              {
+                "Stage": "cache.deserialize",
+                "Milliseconds": 45.8402
+              },
+              {
+                "Stage": "cache.checksum",
+                "Milliseconds": 0.5858
+              },
+              {
+                "Stage": "cache.json-metadata",
+                "Milliseconds": 0.0086
+              },
+              {
+                "Stage": "cache.deserialize",
+                "Milliseconds": 61.8249
+              },
+              {
+                "Stage": "factions.shards-read",
+                "Milliseconds": 115.6483
+              },
+              {
+                "Stage": "cache.checksum",
+                "Milliseconds": 0.533
+              },
+              {
+                "Stage": "cache.json-metadata",
+                "Milliseconds": 0.7651
+              },
+              {
+                "Stage": "cache.deserialize",
+                "Milliseconds": 21.5751
+              },
+              {
+                "Stage": "factions.abilities-read",
+                "Milliseconds": 23.2265
+              },
+              {
+                "Stage": "startup.restore",
+                "Milliseconds": 1150.5923
+              }
+            ],
+            "RecoveryContract": "recovery-2/references-1/normalization-1/40E72D1F64DFED69EA997944967813F66B662201D269F3311995B368C25F5270/enhancement-eligibility-1/normalization-1/FE26E2AE5494604463F448A1B7ACBF893B9DF8561406FE04F87C8B1EA0728278/effective-1/rule-compilation-1/A1C7A1F8CC505220A8ED0648D0F02B35B49BC74CC8AEF39D28649A47018630C5/catalogue-1/normalization-1/659C6F8C5995CA0039BAC4E2819C93D3DA3C459AADB6CE58CDD0F5943583BEA5",
+            "ApplicationModule": "23fc8be6-3511-43b5-9d14-ed1bb56cafc2",
+            "FullReads": 0,
+            "ShardReads": 3,
+            "DependencyCalculations": 0,
+            "DependencyReuses": 0,
+            "MigratedManifest": false,
+            "Context": {
+              "Id": "enhancement-choice-checks",
+              "Faction": "Death Guard",
+              "Entries": 2,
+              "Screen": "roster"
+            },
+            "ExternalReadyMs": 4515.999999945052,
+            "AmStart": "Starting: Intent { cmp=com.grimlist.perftest/crc64c040c7e13546c831.MainActivity (has extras) }\nStatus: ok\nLaunchState: COLD\nActivity: com.grimlist.perftest/crc64c040c7e13546c831.MainActivity\nTotalTime: 1614\nWaitTime: 1622\nComplete\n"
+          },
+          {
+            "LibraryReadyMs": 3071.4306,
+            "MauiEntryToUsableMs": 3537.2042,
+            "ManagedBytes": 31778272,
+            "AllocatedBytes": 48906496,
+            "NativeAllocatedBytes": 84180008,
+            "Stages": [
+              {
+                "Stage": "startup.database-open",
+                "Milliseconds": 148.843
+              },
+              {
+                "Stage": "cache.checksum",
+                "Milliseconds": 14.9436
+              },
+              {
+                "Stage": "cache.json-metadata",
+                "Milliseconds": 71.6028
+              },
+              {
+                "Stage": "cache.deserialize",
+                "Milliseconds": 579.5774
+              },
+              {
+                "Stage": "factions.manifest-read",
+                "Milliseconds": 675.4012
+              },
+              {
+                "Stage": "startup.session",
+                "Milliseconds": 1303.5227
+              },
+              {
+                "Stage": "cache.checksum",
+                "Milliseconds": 0.125
+              },
+              {
+                "Stage": "cache.json-metadata",
+                "Milliseconds": 1.94
+              },
+              {
+                "Stage": "cache.deserialize",
+                "Milliseconds": 0.4945
+              },
+              {
+                "Stage": "cache.checksum",
+                "Milliseconds": 0.4258
+              },
+              {
+                "Stage": "cache.json-metadata",
+                "Milliseconds": 0.0065
+              },
+              {
+                "Stage": "cache.deserialize",
+                "Milliseconds": 46.6988
+              },
+              {
+                "Stage": "cache.checksum",
+                "Milliseconds": 0.6073
+              },
+              {
+                "Stage": "cache.json-metadata",
+                "Milliseconds": 0.0089
+              },
+              {
+                "Stage": "cache.deserialize",
+                "Milliseconds": 61.365
+              },
+              {
+                "Stage": "factions.shards-read",
+                "Milliseconds": 116.1166
+              },
+              {
+                "Stage": "cache.checksum",
+                "Milliseconds": 0.5153
+              },
+              {
+                "Stage": "cache.json-metadata",
+                "Milliseconds": 0.7676
+              },
+              {
+                "Stage": "cache.deserialize",
+                "Milliseconds": 22.919
+              },
+              {
+                "Stage": "factions.abilities-read",
+                "Milliseconds": 24.5289
+              },
+              {
+                "Stage": "startup.restore",
+                "Milliseconds": 1153.7827
+              }
+            ],
+            "RecoveryContract": "recovery-2/references-1/normalization-1/40E72D1F64DFED69EA997944967813F66B662201D269F3311995B368C25F5270/enhancement-eligibility-1/normalization-1/FE26E2AE5494604463F448A1B7ACBF893B9DF8561406FE04F87C8B1EA0728278/effective-1/rule-compilation-1/A1C7A1F8CC505220A8ED0648D0F02B35B49BC74CC8AEF39D28649A47018630C5/catalogue-1/normalization-1/659C6F8C5995CA0039BAC4E2819C93D3DA3C459AADB6CE58CDD0F5943583BEA5",
+            "ApplicationModule": "23fc8be6-3511-43b5-9d14-ed1bb56cafc2",
+            "FullReads": 0,
+            "ShardReads": 3,
+            "DependencyCalculations": 0,
+            "DependencyReuses": 0,
+            "MigratedManifest": false,
+            "Context": {
+              "Id": "enhancement-choice-checks",
+              "Faction": "Death Guard",
+              "Entries": 2,
+              "Screen": "roster"
+            },
+            "ExternalReadyMs": 4282.000000006519,
+            "AmStart": "Starting: Intent { cmp=com.grimlist.perftest/crc64c040c7e13546c831.MainActivity (has extras) }\nStatus: ok\nLaunchState: COLD\nActivity: com.grimlist.perftest/crc64c040c7e13546c831.MainActivity\nTotalTime: 1327\nWaitTime: 1334\nComplete\n"
+          }
+        ]
+      },
+      {
+        "samples": [
+          {
+            "Operation": "add",
+            "Entries": 3,
+            "CommandMs": 75.6618,
+            "UsableMs": 118.5899,
+            "AllocatedBytes": 4146176,
+            "ManagedBytes": 36003728
+          },
+          {
+            "Operation": "add",
+            "Entries": 3,
+            "CommandMs": 117.4159,
+            "UsableMs": 166.3258,
+            "AllocatedBytes": 9171952,
+            "ManagedBytes": 34860272
+          },
+          {
+            "Operation": "add",
+            "Entries": 3,
+            "CommandMs": 76.634,
+            "UsableMs": 125.3649,
+            "AllocatedBytes": 4145248,
+            "ManagedBytes": 35461640
+          },
+          {
+            "Operation": "add",
+            "Entries": 3,
+            "CommandMs": 84.0103,
+            "UsableMs": 131.3866,
+            "AllocatedBytes": 8250088,
+            "ManagedBytes": 36123568
+          },
+          {
+            "Operation": "add",
+            "Entries": 3,
+            "CommandMs": 78.5756,
+            "UsableMs": 120.0316,
+            "AllocatedBytes": 8287720,
+            "ManagedBytes": 36870864
+          },
+          {
+            "Operation": "add",
+            "Entries": 3,
+            "CommandMs": 76.1643,
+            "UsableMs": 131.4256,
+            "AllocatedBytes": 4150832,
+            "ManagedBytes": 37407456
+          },
+          {
+            "Operation": "add",
+            "Entries": 3,
+            "CommandMs": 79.1436,
+            "UsableMs": 126.688,
+            "AllocatedBytes": 8274808,
+            "ManagedBytes": 38075416
+          },
+          {
+            "Operation": "add",
+            "Entries": 3,
+            "CommandMs": 80.2808,
+            "UsableMs": 121.2103,
+            "AllocatedBytes": 4153984,
+            "ManagedBytes": 38655464
+          },
+          {
+            "Operation": "add",
+            "Entries": 3,
+            "CommandMs": 80.1385,
+            "UsableMs": 125.7594,
+            "AllocatedBytes": 8289176,
+            "ManagedBytes": 39354256
+          },
+          {
+            "Operation": "add",
+            "Entries": 3,
+            "CommandMs": 79.8563,
+            "UsableMs": 163.5114,
+            "AllocatedBytes": 8267296,
+            "ManagedBytes": 40257704
+          },
+          {
+            "Operation": "equipment",
+            "Entries": 3,
+            "CommandMs": 109.0568,
+            "UsableMs": 158.5743,
+            "AllocatedBytes": 8271944,
+            "ManagedBytes": 46042816
+          },
+          {
+            "Operation": "equipment",
+            "Entries": 3,
+            "CommandMs": 104.2777,
+            "UsableMs": 125.9107,
+            "AllocatedBytes": 4116984,
+            "ManagedBytes": 48677168
+          },
+          {
+            "Operation": "equipment",
+            "Entries": 3,
+            "CommandMs": 97.506,
+            "UsableMs": 117.4119,
+            "AllocatedBytes": 4121960,
+            "ManagedBytes": 51781768
+          },
+          {
+            "Operation": "equipment",
+            "Entries": 3,
+            "CommandMs": 159.9282,
+            "UsableMs": 208.116,
+            "AllocatedBytes": 6537136,
+            "ManagedBytes": 50539736
+          },
+          {
+            "Operation": "equipment",
+            "Entries": 3,
+            "CommandMs": 106.188,
+            "UsableMs": 126.9503,
+            "AllocatedBytes": 4119600,
+            "ManagedBytes": 53113584
+          },
+          {
+            "Operation": "equipment",
+            "Entries": 3,
+            "CommandMs": 109.1139,
+            "UsableMs": 124.3099,
+            "AllocatedBytes": 4123912,
+            "ManagedBytes": 55752136
+          },
+          {
+            "Operation": "equipment",
+            "Entries": 3,
+            "CommandMs": 111.6206,
+            "UsableMs": 166.9135,
+            "AllocatedBytes": 8244576,
+            "ManagedBytes": 58394184
+          },
+          {
+            "Operation": "equipment",
+            "Entries": 3,
+            "CommandMs": 120.3877,
+            "UsableMs": 141.4246,
+            "AllocatedBytes": 4096880,
+            "ManagedBytes": 60984040
+          },
+          {
+            "Operation": "equipment",
+            "Entries": 3,
+            "CommandMs": 118.7914,
+            "UsableMs": 181.9794,
+            "AllocatedBytes": 8298568,
+            "ManagedBytes": 63662496
+          },
+          {
+            "Operation": "equipment",
+            "Entries": 3,
+            "CommandMs": 123.9415,
+            "UsableMs": 141.1091,
+            "AllocatedBytes": 5142544,
+            "ManagedBytes": 67261384
+          },
+          {
+            "Operation": "enhancement",
+            "Entries": 3,
+            "CommandMs": 118.384,
+            "UsableMs": 158.6662,
+            "AllocatedBytes": 8262736,
+            "ManagedBytes": 66702712
+          },
+          {
+            "Operation": "enhancement",
+            "Entries": 3,
+            "CommandMs": 115.9698,
+            "UsableMs": 156.5713,
+            "AllocatedBytes": 8255360,
+            "ManagedBytes": 67313648
+          },
+          {
+            "Operation": "enhancement",
+            "Entries": 3,
+            "CommandMs": 115.8806,
+            "UsableMs": 156.1354,
+            "AllocatedBytes": 8254832,
+            "ManagedBytes": 67933600
+          },
+          {
+            "Operation": "enhancement",
+            "Entries": 3,
+            "CommandMs": 119.1132,
+            "UsableMs": 159.9376,
+            "AllocatedBytes": 8254392,
+            "ManagedBytes": 68554056
+          },
+          {
+            "Operation": "enhancement",
+            "Entries": 3,
+            "CommandMs": 122.1803,
+            "UsableMs": 202.8414,
+            "AllocatedBytes": 12372288,
+            "ManagedBytes": 69259992
+          },
+          {
+            "Operation": "enhancement",
+            "Entries": 3,
+            "CommandMs": 140.5548,
+            "UsableMs": 179.9653,
+            "AllocatedBytes": 12398464,
+            "ManagedBytes": 69801448
+          },
+          {
+            "Operation": "enhancement",
+            "Entries": 3,
+            "CommandMs": 119.6951,
+            "UsableMs": 159.9231,
+            "AllocatedBytes": 8425440,
+            "ManagedBytes": 70551464
+          },
+          {
+            "Operation": "enhancement",
+            "Entries": 3,
+            "CommandMs": 119.184,
+            "UsableMs": 159.2034,
+            "AllocatedBytes": 8256936,
+            "ManagedBytes": 71165112
+          },
+          {
+            "Operation": "enhancement",
+            "Entries": 3,
+            "CommandMs": 153.421,
+            "UsableMs": 195.3406,
+            "AllocatedBytes": 8257400,
+            "ManagedBytes": 71788000
+          },
+          {
+            "Operation": "enhancement",
+            "Entries": 3,
+            "CommandMs": 118.7258,
+            "UsableMs": 208.0723,
+            "AllocatedBytes": 12394728,
+            "ManagedBytes": 72680496
+          },
+          {
+            "Operation": "attachment",
+            "Entries": 3,
+            "CommandMs": 164.1117,
+            "UsableMs": 425.251,
+            "AllocatedBytes": 20934288,
+            "ManagedBytes": 80762248
+          },
+          {
+            "Operation": "attachment",
+            "Entries": 3,
+            "CommandMs": 183.1217,
+            "UsableMs": 425.2104,
+            "AllocatedBytes": 21050640,
+            "ManagedBytes": 83857176
+          },
+          {
+            "Operation": "attachment",
+            "Entries": 3,
+            "CommandMs": 177.0375,
+            "UsableMs": 439.3532,
+            "AllocatedBytes": 20903384,
+            "ManagedBytes": 89101544
+          },
+          {
+            "Operation": "attachment",
+            "Entries": 3,
+            "CommandMs": 161.453,
+            "UsableMs": 403.673,
+            "AllocatedBytes": 20903096,
+            "ManagedBytes": 77972584
+          },
+          {
+            "Operation": "attachment",
+            "Entries": 3,
+            "CommandMs": 172.4926,
+            "UsableMs": 413.8803,
+            "AllocatedBytes": 25273680,
+            "ManagedBytes": 83508216
+          },
+          {
+            "Operation": "attachment",
+            "Entries": 3,
+            "CommandMs": 171.8239,
+            "UsableMs": 404.0723,
+            "AllocatedBytes": 20871248,
+            "ManagedBytes": 86525432
+          },
+          {
+            "Operation": "attachment",
+            "Entries": 3,
+            "CommandMs": 172.6507,
+            "UsableMs": 437.5013,
+            "AllocatedBytes": 21012000,
+            "ManagedBytes": 91845720
+          },
+          {
+            "Operation": "attachment",
+            "Entries": 3,
+            "CommandMs": 177.5341,
+            "UsableMs": 426.0099,
+            "AllocatedBytes": 20874616,
+            "ManagedBytes": 94780880
+          },
+          {
+            "Operation": "attachment",
+            "Entries": 3,
+            "CommandMs": 178.1574,
+            "UsableMs": 457.6621,
+            "AllocatedBytes": 21097304,
+            "ManagedBytes": 100204472
+          },
+          {
+            "Operation": "attachment",
+            "Entries": 3,
+            "CommandMs": 185.5827,
+            "UsableMs": 454.6689,
+            "AllocatedBytes": 20913912,
+            "ManagedBytes": 103216736
+          },
+          {
+            "Operation": "detachment",
+            "Entries": 3,
+            "CommandMs": 94.0627,
+            "UsableMs": 330.2806,
+            "AllocatedBytes": 8451216,
+            "ManagedBytes": 109001208
+          },
+          {
+            "Operation": "detachment",
+            "Entries": 3,
+            "CommandMs": 27.3234,
+            "UsableMs": 256.936,
+            "AllocatedBytes": 4168272,
+            "ManagedBytes": 109746304
+          },
+          {
+            "Operation": "detachment",
+            "Entries": 3,
+            "CommandMs": 96.33,
+            "UsableMs": 336.7636,
+            "AllocatedBytes": 8291136,
+            "ManagedBytes": 112528048
+          },
+          {
+            "Operation": "detachment",
+            "Entries": 3,
+            "CommandMs": 249.9421,
+            "UsableMs": 408.936,
+            "AllocatedBytes": 2823880,
+            "ManagedBytes": 86890088
+          },
+          {
+            "Operation": "detachment",
+            "Entries": 3,
+            "CommandMs": 72.0225,
+            "UsableMs": 274.8283,
+            "AllocatedBytes": 8279536,
+            "ManagedBytes": 89265776
+          },
+          {
+            "Operation": "detachment",
+            "Entries": 3,
+            "CommandMs": 30.6904,
+            "UsableMs": 236.6344,
+            "AllocatedBytes": 4163784,
+            "ManagedBytes": 90114632
+          },
+          {
+            "Operation": "detachment",
+            "Entries": 3,
+            "CommandMs": 72.9479,
+            "UsableMs": 286.8412,
+            "AllocatedBytes": 8446120,
+            "ManagedBytes": 92927232
+          },
+          {
+            "Operation": "detachment",
+            "Entries": 3,
+            "CommandMs": 27.5507,
+            "UsableMs": 233.0523,
+            "AllocatedBytes": 4166752,
+            "ManagedBytes": 93569392
+          },
+          {
+            "Operation": "detachment",
+            "Entries": 3,
+            "CommandMs": 80.1283,
+            "UsableMs": 301.2902,
+            "AllocatedBytes": 8280968,
+            "ManagedBytes": 96363168
+          },
+          {
+            "Operation": "detachment",
+            "Entries": 3,
+            "CommandMs": 97.6298,
+            "UsableMs": 315.343,
+            "AllocatedBytes": 8500984,
+            "ManagedBytes": 97203896
+          },
+          {
+            "Operation": "home",
+            "Entries": 3,
+            "CommandMs": 5.268,
+            "UsableMs": 209.548,
+            "AllocatedBytes": 4315784,
+            "ManagedBytes": 102972560
+          },
+          {
+            "Operation": "home",
+            "Entries": 3,
+            "CommandMs": 4.9144,
+            "UsableMs": 213.3488,
+            "AllocatedBytes": 4217520,
+            "ManagedBytes": 105671688
+          },
+          {
+            "Operation": "home",
+            "Entries": 3,
+            "CommandMs": 6.3771,
+            "UsableMs": 133.6655,
+            "AllocatedBytes": 0,
+            "ManagedBytes": 106684104
+          },
+          {
+            "Operation": "home",
+            "Entries": 3,
+            "CommandMs": 6.0033,
+            "UsableMs": 129.4739,
+            "AllocatedBytes": 0,
+            "ManagedBytes": 109531840
+          },
+          {
+            "Operation": "home",
+            "Entries": 3,
+            "CommandMs": 6.7978,
+            "UsableMs": 130.277,
+            "AllocatedBytes": 0,
+            "ManagedBytes": 112386968
+          },
+          {
+            "Operation": "home",
+            "Entries": 3,
+            "CommandMs": 6.4771,
+            "UsableMs": 215.0944,
+            "AllocatedBytes": 4310592,
+            "ManagedBytes": 115135328
+          },
+          {
+            "Operation": "home",
+            "Entries": 3,
+            "CommandMs": 7.0437,
+            "UsableMs": 219.9996,
+            "AllocatedBytes": 4302048,
+            "ManagedBytes": 118203736
+          },
+          {
+            "Operation": "home",
+            "Entries": 3,
+            "CommandMs": 5.0928,
+            "UsableMs": 231.1061,
+            "AllocatedBytes": 4315976,
+            "ManagedBytes": 121017800
+          },
+          {
+            "Operation": "home",
+            "Entries": 3,
+            "CommandMs": 7.5668,
+            "UsableMs": 253.6859,
+            "AllocatedBytes": 4206392,
+            "ManagedBytes": 125909792
+          },
+          {
+            "Operation": "home",
+            "Entries": 3,
+            "CommandMs": 5.0209,
+            "UsableMs": 121.015,
+            "AllocatedBytes": 0,
+            "ManagedBytes": 127117384
+          },
+          {
+            "Operation": "add",
+            "Entries": 20,
+            "CommandMs": 392.6393,
+            "UsableMs": 413.0263,
+            "AllocatedBytes": 25085088,
+            "ManagedBytes": 134130024
+          },
+          {
+            "Operation": "add",
+            "Entries": 20,
+            "CommandMs": 693.4836,
+            "UsableMs": 716.547,
+            "AllocatedBytes": 24146168,
+            "ManagedBytes": 108796672
+          },
+          {
+            "Operation": "add",
+            "Entries": 20,
+            "CommandMs": 304.3625,
+            "UsableMs": 322.9843,
+            "AllocatedBytes": 24908480,
+            "ManagedBytes": 110410184
+          },
+          {
+            "Operation": "add",
+            "Entries": 20,
+            "CommandMs": 309.774,
+            "UsableMs": 332.539,
+            "AllocatedBytes": 25068520,
+            "ManagedBytes": 112178072
+          },
+          {
+            "Operation": "add",
+            "Entries": 20,
+            "CommandMs": 328.1456,
+            "UsableMs": 357.7947,
+            "AllocatedBytes": 29068200,
+            "ManagedBytes": 113930000
+          },
+          {
+            "Operation": "add",
+            "Entries": 20,
+            "CommandMs": 279.7402,
+            "UsableMs": 307.8366,
+            "AllocatedBytes": 25131664,
+            "ManagedBytes": 115649088
+          },
+          {
+            "Operation": "add",
+            "Entries": 20,
+            "CommandMs": 319.3076,
+            "UsableMs": 339.177,
+            "AllocatedBytes": 25078824,
+            "ManagedBytes": 117396656
+          },
+          {
+            "Operation": "add",
+            "Entries": 20,
+            "CommandMs": 303.6663,
+            "UsableMs": 324.498,
+            "AllocatedBytes": 25075368,
+            "ManagedBytes": 119170408
+          },
+          {
+            "Operation": "add",
+            "Entries": 20,
+            "CommandMs": 305.01,
+            "UsableMs": 332.4568,
+            "AllocatedBytes": 29212536,
+            "ManagedBytes": 121082760
+          },
+          {
+            "Operation": "add",
+            "Entries": 20,
+            "CommandMs": 281.2806,
+            "UsableMs": 307.2037,
+            "AllocatedBytes": 25131952,
+            "ManagedBytes": 122815544
+          },
+          {
+            "Operation": "equipment",
+            "Entries": 20,
+            "CommandMs": 300.3104,
+            "UsableMs": 324.9683,
+            "AllocatedBytes": 25168864,
+            "ManagedBytes": 130998856
+          },
+          {
+            "Operation": "equipment",
+            "Entries": 20,
+            "CommandMs": 331.5692,
+            "UsableMs": 351.1064,
+            "AllocatedBytes": 24927520,
+            "ManagedBytes": 134930952
+          },
+          {
+            "Operation": "equipment",
+            "Entries": 20,
+            "CommandMs": 336.2824,
+            "UsableMs": 356.2068,
+            "AllocatedBytes": 25050888,
+            "ManagedBytes": 138946608
+          },
+          {
+            "Operation": "equipment",
+            "Entries": 20,
+            "CommandMs": 340.4812,
+            "UsableMs": 358.9659,
+            "AllocatedBytes": 25057152,
+            "ManagedBytes": 142954120
+          },
+          {
+            "Operation": "equipment",
+            "Entries": 20,
+            "CommandMs": 364.3086,
+            "UsableMs": 386.792,
+            "AllocatedBytes": 24900080,
+            "ManagedBytes": 146792240
+          },
+          {
+            "Operation": "equipment",
+            "Entries": 20,
+            "CommandMs": 363.6649,
+            "UsableMs": 384.6462,
+            "AllocatedBytes": 25039680,
+            "ManagedBytes": 150796552
+          },
+          {
+            "Operation": "equipment",
+            "Entries": 20,
+            "CommandMs": 310.596,
+            "UsableMs": 333.9508,
+            "AllocatedBytes": 20970104,
+            "ManagedBytes": 154793936
+          },
+          {
+            "Operation": "equipment",
+            "Entries": 20,
+            "CommandMs": 315.9738,
+            "UsableMs": 335.3701,
+            "AllocatedBytes": 20801496,
+            "ManagedBytes": 158631072
+          },
+          {
+            "Operation": "equipment",
+            "Entries": 20,
+            "CommandMs": 338.2855,
+            "UsableMs": 361.3618,
+            "AllocatedBytes": 20914848,
+            "ManagedBytes": 162650584
+          },
+          {
+            "Operation": "equipment",
+            "Entries": 20,
+            "CommandMs": 337.0744,
+            "UsableMs": 368.0751,
+            "AllocatedBytes": 25094224,
+            "ManagedBytes": 166758416
+          },
+          {
+            "Operation": "enhancement",
+            "Entries": 20,
+            "CommandMs": 473.4257,
+            "UsableMs": 514.7353,
+            "AllocatedBytes": 37439312,
+            "ManagedBytes": 131264560
+          },
+          {
+            "Operation": "enhancement",
+            "Entries": 20,
+            "CommandMs": 585.5499,
+            "UsableMs": 627.0908,
+            "AllocatedBytes": 37595720,
+            "ManagedBytes": 133970984
+          },
+          {
+            "Operation": "enhancement",
+            "Entries": 20,
+            "CommandMs": 466.368,
+            "UsableMs": 506.7492,
+            "AllocatedBytes": 41811016,
+            "ManagedBytes": 136770032
+          },
+          {
+            "Operation": "enhancement",
+            "Entries": 20,
+            "CommandMs": 478.1154,
+            "UsableMs": 526.0492,
+            "AllocatedBytes": 41720016,
+            "ManagedBytes": 139479840
+          },
+          {
+            "Operation": "enhancement",
+            "Entries": 20,
+            "CommandMs": 491.6585,
+            "UsableMs": 538.2736,
+            "AllocatedBytes": 41507416,
+            "ManagedBytes": 142129000
+          },
+          {
+            "Operation": "enhancement",
+            "Entries": 20,
+            "CommandMs": 484.4495,
+            "UsableMs": 533.495,
+            "AllocatedBytes": 41742648,
+            "ManagedBytes": 144636096
+          },
+          {
+            "Operation": "enhancement",
+            "Entries": 20,
+            "CommandMs": 460.9621,
+            "UsableMs": 512.2575,
+            "AllocatedBytes": 41759208,
+            "ManagedBytes": 147289024
+          },
+          {
+            "Operation": "enhancement",
+            "Entries": 20,
+            "CommandMs": 467.467,
+            "UsableMs": 517.1706,
+            "AllocatedBytes": 41788088,
+            "ManagedBytes": 149984176
+          },
+          {
+            "Operation": "enhancement",
+            "Entries": 20,
+            "CommandMs": 480.6131,
+            "UsableMs": 582.2094,
+            "AllocatedBytes": 41915184,
+            "ManagedBytes": 152926216
+          },
+          {
+            "Operation": "enhancement",
+            "Entries": 20,
+            "CommandMs": 448.7945,
+            "UsableMs": 495.0019,
+            "AllocatedBytes": 37628392,
+            "ManagedBytes": 155389472
+          },
+          {
+            "Operation": "attachment",
+            "Entries": 20,
+            "CommandMs": 626.8067,
+            "UsableMs": 1032.2871,
+            "AllocatedBytes": 75975272,
+            "ManagedBytes": 168597048
+          },
+          {
+            "Operation": "attachment",
+            "Entries": 20,
+            "CommandMs": 611.6225,
+            "UsableMs": 1044.2009,
+            "AllocatedBytes": 75802800,
+            "ManagedBytes": 177227192
+          },
+          {
+            "Operation": "attachment",
+            "Entries": 20,
+            "CommandMs": 630.7975,
+            "UsableMs": 1074.0748,
+            "AllocatedBytes": 75956768,
+            "ManagedBytes": 185879416
+          },
+          {
+            "Operation": "attachment",
+            "Entries": 20,
+            "CommandMs": 674.5562,
+            "UsableMs": 1125.199,
+            "AllocatedBytes": 75859888,
+            "ManagedBytes": 192304280
+          },
+          {
+            "Operation": "attachment",
+            "Entries": 20,
+            "CommandMs": 638.2375,
+            "UsableMs": 1084.1191,
+            "AllocatedBytes": 75827832,
+            "ManagedBytes": 200821728
+          },
+          {
+            "Operation": "attachment",
+            "Entries": 20,
+            "CommandMs": 871.0436,
+            "UsableMs": 1271.1737,
+            "AllocatedBytes": 73373960,
+            "ManagedBytes": 143076320
+          },
+          {
+            "Operation": "attachment",
+            "Entries": 20,
+            "CommandMs": 624.7323,
+            "UsableMs": 1039.3726,
+            "AllocatedBytes": 74985496,
+            "ManagedBytes": 150632560
+          },
+          {
+            "Operation": "attachment",
+            "Entries": 20,
+            "CommandMs": 622.3993,
+            "UsableMs": 1042.4372,
+            "AllocatedBytes": 75015200,
+            "ManagedBytes": 158475616
+          },
+          {
+            "Operation": "attachment",
+            "Entries": 20,
+            "CommandMs": 660.3012,
+            "UsableMs": 1044.1676,
+            "AllocatedBytes": 75157056,
+            "ManagedBytes": 164050096
+          },
+          {
+            "Operation": "attachment",
+            "Entries": 20,
+            "CommandMs": 633.4059,
+            "UsableMs": 1065.2951,
+            "AllocatedBytes": 74967064,
+            "ManagedBytes": 171784504
+          },
+          {
+            "Operation": "detachment",
+            "Entries": 20,
+            "CommandMs": 285.775,
+            "UsableMs": 505.3156,
+            "AllocatedBytes": 16884816,
+            "ManagedBytes": 179021016
+          },
+          {
+            "Operation": "detachment",
+            "Entries": 20,
+            "CommandMs": 248.3495,
+            "UsableMs": 413.0661,
+            "AllocatedBytes": 16733344,
+            "ManagedBytes": 181934080
+          },
+          {
+            "Operation": "detachment",
+            "Entries": 20,
+            "CommandMs": 269.875,
+            "UsableMs": 475.5626,
+            "AllocatedBytes": 20837520,
+            "ManagedBytes": 184872824
+          },
+          {
+            "Operation": "detachment",
+            "Entries": 20,
+            "CommandMs": 286.4689,
+            "UsableMs": 541.6984,
+            "AllocatedBytes": 21002736,
+            "ManagedBytes": 188133352
+          },
+          {
+            "Operation": "detachment",
+            "Entries": 20,
+            "CommandMs": 300.908,
+            "UsableMs": 557.4163,
+            "AllocatedBytes": 20989056,
+            "ManagedBytes": 191294448
+          },
+          {
+            "Operation": "detachment",
+            "Entries": 20,
+            "CommandMs": 299.4298,
+            "UsableMs": 564.2655,
+            "AllocatedBytes": 20849200,
+            "ManagedBytes": 194463096
+          },
+          {
+            "Operation": "detachment",
+            "Entries": 20,
+            "CommandMs": 302.3711,
+            "UsableMs": 577.6591,
+            "AllocatedBytes": 21015032,
+            "ManagedBytes": 197878736
+          },
+          {
+            "Operation": "detachment",
+            "Entries": 20,
+            "CommandMs": 316.189,
+            "UsableMs": 582.5889,
+            "AllocatedBytes": 20997528,
+            "ManagedBytes": 201123472
+          },
+          {
+            "Operation": "detachment",
+            "Entries": 20,
+            "CommandMs": 274.32,
+            "UsableMs": 534.7923,
+            "AllocatedBytes": 21027992,
+            "ManagedBytes": 204510352
+          },
+          {
+            "Operation": "detachment",
+            "Entries": 20,
+            "CommandMs": 306.7015,
+            "UsableMs": 473.7219,
+            "AllocatedBytes": 16891688,
+            "ManagedBytes": 206029376
+          },
+          {
+            "Operation": "home",
+            "Entries": 20,
+            "CommandMs": 5.1377,
+            "UsableMs": 135.2224,
+            "AllocatedBytes": 0,
+            "ManagedBytes": 212567392
+          },
+          {
+            "Operation": "home",
+            "Entries": 20,
+            "CommandMs": 8.8456,
+            "UsableMs": 141.44,
+            "AllocatedBytes": 0,
+            "ManagedBytes": 215950696
+          },
+          {
+            "Operation": "home",
+            "Entries": 20,
+            "CommandMs": 9.8027,
+            "UsableMs": 140.888,
+            "AllocatedBytes": 0,
+            "ManagedBytes": 219321560
+          },
+          {
+            "Operation": "home",
+            "Entries": 20,
+            "CommandMs": 5.5893,
+            "UsableMs": 125.0329,
+            "AllocatedBytes": 0,
+            "ManagedBytes": 222730632
+          },
+          {
+            "Operation": "home",
+            "Entries": 20,
+            "CommandMs": 5.3433,
+            "UsableMs": 127.661,
+            "AllocatedBytes": 0,
+            "ManagedBytes": 226310504
+          },
+          {
+            "Operation": "home",
+            "Entries": 20,
+            "CommandMs": 5.5388,
+            "UsableMs": 136.132,
+            "AllocatedBytes": 0,
+            "ManagedBytes": 229751792
+          },
+          {
+            "Operation": "home",
+            "Entries": 20,
+            "CommandMs": 6.3239,
+            "UsableMs": 129.5642,
+            "AllocatedBytes": 0,
+            "ManagedBytes": 233206096
+          },
+          {
+            "Operation": "home",
+            "Entries": 20,
+            "CommandMs": 11.6653,
+            "UsableMs": 138.4034,
+            "AllocatedBytes": 0,
+            "ManagedBytes": 236870152
+          },
+          {
+            "Operation": "home",
+            "Entries": 20,
+            "CommandMs": 6.2073,
+            "UsableMs": 133.1692,
+            "AllocatedBytes": 0,
+            "ManagedBytes": 240541368
+          },
+          {
+            "Operation": "home",
+            "Entries": 20,
+            "CommandMs": 68.179,
+            "UsableMs": 189.444,
+            "AllocatedBytes": 4317832,
+            "ManagedBytes": 171976728
+          }
+        ],
+        "startup": [
+          {
+            "LibraryReadyMs": 3312.8104,
+            "MauiEntryToUsableMs": 3825.8859,
+            "ManagedBytes": 33067400,
+            "AllocatedBytes": 65942960,
+            "NativeAllocatedBytes": 84875544,
+            "Stages": [
+              {
+                "Stage": "startup.database-open",
+                "Milliseconds": 157.6448
+              },
+              {
+                "Stage": "cache.checksum",
+                "Milliseconds": 14.7826
+              },
+              {
+                "Stage": "cache.json-metadata",
+                "Milliseconds": 75.1163
+              },
+              {
+                "Stage": "cache.deserialize",
+                "Milliseconds": 585.9787
+              },
+              {
+                "Stage": "factions.manifest-read",
+                "Milliseconds": 685.1063
+              },
+              {
+                "Stage": "startup.session",
+                "Milliseconds": 1294.576
+              },
+              {
+                "Stage": "cache.checksum",
+                "Milliseconds": 0.1052
+              },
+              {
+                "Stage": "cache.json-metadata",
+                "Milliseconds": 1.7772
+              },
+              {
+                "Stage": "cache.deserialize",
+                "Milliseconds": 0.4982
+              },
+              {
+                "Stage": "cache.checksum",
+                "Milliseconds": 0.3993
+              },
+              {
+                "Stage": "cache.json-metadata",
+                "Milliseconds": 0.0076
+              },
+              {
+                "Stage": "cache.deserialize",
+                "Milliseconds": 47.3227
+              },
+              {
+                "Stage": "cache.checksum",
+                "Milliseconds": 0.5864
+              },
+              {
+                "Stage": "cache.json-metadata",
+                "Milliseconds": 0.0089
+              },
+              {
+                "Stage": "cache.deserialize",
+                "Milliseconds": 61.5816
+              },
+              {
+                "Stage": "factions.shards-read",
+                "Milliseconds": 116.6005
+              },
+              {
+                "Stage": "cache.checksum",
+                "Milliseconds": 0.5393
+              },
+              {
+                "Stage": "cache.json-metadata",
+                "Milliseconds": 0.8369
+              },
+              {
+                "Stage": "cache.deserialize",
+                "Milliseconds": 23.0628
+              },
+              {
+                "Stage": "factions.abilities-read",
+                "Milliseconds": 24.783
+              },
+              {
+                "Stage": "startup.restore",
+                "Milliseconds": 1354.8741
+              }
+            ],
+            "RecoveryContract": "recovery-2/references-1/normalization-1/40E72D1F64DFED69EA997944967813F66B662201D269F3311995B368C25F5270/enhancement-eligibility-1/normalization-1/FE26E2AE5494604463F448A1B7ACBF893B9DF8561406FE04F87C8B1EA0728278/effective-1/rule-compilation-1/A1C7A1F8CC505220A8ED0648D0F02B35B49BC74CC8AEF39D28649A47018630C5/catalogue-1/normalization-1/659C6F8C5995CA0039BAC4E2819C93D3DA3C459AADB6CE58CDD0F5943583BEA5",
+            "ApplicationModule": "23fc8be6-3511-43b5-9d14-ed1bb56cafc2",
+            "FullReads": 0,
+            "ShardReads": 3,
+            "DependencyCalculations": 0,
+            "DependencyReuses": 0,
+            "MigratedManifest": false,
+            "Context": {
+              "Id": "performance-fixture",
+              "Faction": "Death Guard",
+              "Entries": 20,
+              "Screen": "roster"
+            },
+            "ExternalReadyMs": 4500.0,
+            "AmStart": "Starting: Intent { cmp=com.grimlist.perftest/crc64c040c7e13546c831.MainActivity (has extras) }\nStatus: ok\nLaunchState: COLD\nActivity: com.grimlist.perftest/crc64c040c7e13546c831.MainActivity\nTotalTime: 1413\nWaitTime: 1438\nComplete\n"
+          },
+          {
+            "LibraryReadyMs": 3264.663,
+            "MauiEntryToUsableMs": 3777.2153,
+            "ManagedBytes": 32884888,
+            "AllocatedBytes": 65464752,
+            "NativeAllocatedBytes": 86225920,
+            "Stages": [
+              {
+                "Stage": "startup.database-open",
+                "Milliseconds": 149.0809
+              },
+              {
+                "Stage": "cache.checksum",
+                "Milliseconds": 17.8892
+              },
+              {
+                "Stage": "cache.json-metadata",
+                "Milliseconds": 81.8674
+              },
+              {
+                "Stage": "cache.deserialize",
+                "Milliseconds": 575.6929
+              },
+              {
+                "Stage": "factions.manifest-read",
+                "Milliseconds": 684.903
+              },
+              {
+                "Stage": "startup.session",
+                "Milliseconds": 1316.4344
+              },
+              {
+                "Stage": "cache.checksum",
+                "Milliseconds": 0.1
+              },
+              {
+                "Stage": "cache.json-metadata",
+                "Milliseconds": 1.7825
+              },
+              {
+                "Stage": "cache.deserialize",
+                "Milliseconds": 0.6317
+              },
+              {
+                "Stage": "cache.checksum",
+                "Milliseconds": 0.3756
+              },
+              {
+                "Stage": "cache.json-metadata",
+                "Milliseconds": 0.0089
+              },
+              {
+                "Stage": "cache.deserialize",
+                "Milliseconds": 45.9627
+              },
+              {
+                "Stage": "cache.checksum",
+                "Milliseconds": 0.6
+              },
+              {
+                "Stage": "cache.json-metadata",
+                "Milliseconds": 0.008
+              },
+              {
+                "Stage": "cache.deserialize",
+                "Milliseconds": 62.512
+              },
+              {
+                "Stage": "factions.shards-read",
+                "Milliseconds": 116.1956
+              },
+              {
+                "Stage": "cache.checksum",
+                "Milliseconds": 0.5359
+              },
+              {
+                "Stage": "cache.json-metadata",
+                "Milliseconds": 0.7256
+              },
+              {
+                "Stage": "cache.deserialize",
+                "Milliseconds": 21.8067
+              },
+              {
+                "Stage": "factions.abilities-read",
+                "Milliseconds": 23.4123
+              },
+              {
+                "Stage": "startup.restore",
+                "Milliseconds": 1342.1579
+              }
+            ],
+            "RecoveryContract": "recovery-2/references-1/normalization-1/40E72D1F64DFED69EA997944967813F66B662201D269F3311995B368C25F5270/enhancement-eligibility-1/normalization-1/FE26E2AE5494604463F448A1B7ACBF893B9DF8561406FE04F87C8B1EA0728278/effective-1/rule-compilation-1/A1C7A1F8CC505220A8ED0648D0F02B35B49BC74CC8AEF39D28649A47018630C5/catalogue-1/normalization-1/659C6F8C5995CA0039BAC4E2819C93D3DA3C459AADB6CE58CDD0F5943583BEA5",
+            "ApplicationModule": "23fc8be6-3511-43b5-9d14-ed1bb56cafc2",
+            "FullReads": 0,
+            "ShardReads": 3,
+            "DependencyCalculations": 0,
+            "DependencyReuses": 0,
+            "MigratedManifest": false,
+            "Context": {
+              "Id": "performance-fixture",
+              "Faction": "Death Guard",
+              "Entries": 20,
+              "Screen": "roster"
+            },
+            "ExternalReadyMs": 4469.000000040978,
+            "AmStart": "Starting: Intent { cmp=com.grimlist.perftest/crc64c040c7e13546c831.MainActivity (has extras) }\nStatus: ok\nLaunchState: COLD\nActivity: com.grimlist.perftest/crc64c040c7e13546c831.MainActivity\nTotalTime: 1304\nWaitTime: 1308\nComplete\n"
+          },
+          {
+            "LibraryReadyMs": 3306.9178,
+            "MauiEntryToUsableMs": 3825.4051,
+            "ManagedBytes": 32938592,
+            "AllocatedBytes": 65539096,
+            "NativeAllocatedBytes": 85758520,
+            "Stages": [
+              {
+                "Stage": "startup.database-open",
+                "Milliseconds": 157.807
+              },
+              {
+                "Stage": "cache.checksum",
+                "Milliseconds": 23.0824
+              },
+              {
+                "Stage": "cache.json-metadata",
+                "Milliseconds": 62.3399
+              },
+              {
+                "Stage": "cache.deserialize",
+                "Milliseconds": 569.103
+              },
+              {
+                "Stage": "factions.manifest-read",
+                "Milliseconds": 666.2371
+              },
+              {
+                "Stage": "startup.session",
+                "Milliseconds": 1286.9627
+              },
+              {
+                "Stage": "cache.checksum",
+                "Milliseconds": 0.1156
+              },
+              {
+                "Stage": "cache.json-metadata",
+                "Milliseconds": 1.9008
+              },
+              {
+                "Stage": "cache.deserialize",
+                "Milliseconds": 0.4944
+              },
+              {
+                "Stage": "cache.checksum",
+                "Milliseconds": 0.4134
+              },
+              {
+                "Stage": "cache.json-metadata",
+                "Milliseconds": 0.0126
+              },
+              {
+                "Stage": "cache.deserialize",
+                "Milliseconds": 49.9993
+              },
+              {
+                "Stage": "cache.checksum",
+                "Milliseconds": 0.5532
+              },
+              {
+                "Stage": "cache.json-metadata",
+                "Milliseconds": 0.008
+              },
+              {
+                "Stage": "cache.deserialize",
+                "Milliseconds": 66.719
+              },
+              {
+                "Stage": "factions.shards-read",
+                "Milliseconds": 124.8495
+              },
+              {
+                "Stage": "cache.checksum",
+                "Milliseconds": 0.5174
+              },
+              {
+                "Stage": "cache.json-metadata",
+                "Milliseconds": 0.9418
+              },
+              {
+                "Stage": "cache.deserialize",
+                "Milliseconds": 21.7178
+              },
+              {
+                "Stage": "factions.abilities-read",
+                "Milliseconds": 23.5446
+              },
+              {
+                "Stage": "startup.restore",
+                "Milliseconds": 1370.1843
+              }
+            ],
+            "RecoveryContract": "recovery-2/references-1/normalization-1/40E72D1F64DFED69EA997944967813F66B662201D269F3311995B368C25F5270/enhancement-eligibility-1/normalization-1/FE26E2AE5494604463F448A1B7ACBF893B9DF8561406FE04F87C8B1EA0728278/effective-1/rule-compilation-1/A1C7A1F8CC505220A8ED0648D0F02B35B49BC74CC8AEF39D28649A47018630C5/catalogue-1/normalization-1/659C6F8C5995CA0039BAC4E2819C93D3DA3C459AADB6CE58CDD0F5943583BEA5",
+            "ApplicationModule": "23fc8be6-3511-43b5-9d14-ed1bb56cafc2",
+            "FullReads": 0,
+            "ShardReads": 3,
+            "DependencyCalculations": 0,
+            "DependencyReuses": 0,
+            "MigratedManifest": false,
+            "Context": {
+              "Id": "performance-fixture",
+              "Faction": "Death Guard",
+              "Entries": 20,
+              "Screen": "roster"
+            },
+            "ExternalReadyMs": 4452.999999979511,
+            "AmStart": "Starting: Intent { cmp=com.grimlist.perftest/crc64c040c7e13546c831.MainActivity (has extras) }\nStatus: ok\nLaunchState: COLD\nActivity: com.grimlist.perftest/crc64c040c7e13546c831.MainActivity\nTotalTime: 1331\nWaitTime: 1338\nComplete\n"
+          },
+          {
+            "LibraryReadyMs": 3276.0296,
+            "MauiEntryToUsableMs": 3805.1889,
+            "ManagedBytes": 32963552,
+            "AllocatedBytes": 65553144,
+            "NativeAllocatedBytes": 85714904,
+            "Stages": [
+              {
+                "Stage": "startup.database-open",
+                "Milliseconds": 139.7716
+              },
+              {
+                "Stage": "cache.checksum",
+                "Milliseconds": 19.4947
+              },
+              {
+                "Stage": "cache.json-metadata",
+                "Milliseconds": 58.036
+              },
+              {
+                "Stage": "cache.deserialize",
+                "Milliseconds": 576.3282
+              },
+              {
+                "Stage": "factions.manifest-read",
+                "Milliseconds": 667.1981
+              },
+              {
+                "Stage": "startup.session",
+                "Milliseconds": 1298.0578
+              },
+              {
+                "Stage": "cache.checksum",
+                "Milliseconds": 0.1095
+              },
+              {
+                "Stage": "cache.json-metadata",
+                "Milliseconds": 1.848
+              },
+              {
+                "Stage": "cache.deserialize",
+                "Milliseconds": 0.469
+              },
+              {
+                "Stage": "cache.checksum",
+                "Milliseconds": 0.364
+              },
+              {
+                "Stage": "cache.json-metadata",
+                "Milliseconds": 0.0059
+              },
+              {
+                "Stage": "cache.deserialize",
+                "Milliseconds": 47.1886
+              },
+              {
+                "Stage": "cache.checksum",
+                "Milliseconds": 0.5943
+              },
+              {
+                "Stage": "cache.json-metadata",
+                "Milliseconds": 0.008
+              },
+              {
+                "Stage": "cache.deserialize",
+                "Milliseconds": 60.9225
+              },
+              {
+                "Stage": "factions.shards-read",
+                "Milliseconds": 116.149
+              },
+              {
+                "Stage": "cache.checksum",
+                "Milliseconds": 0.5012
+              },
+              {
+                "Stage": "cache.json-metadata",
+                "Milliseconds": 0.719
+              },
+              {
+                "Stage": "cache.deserialize",
+                "Milliseconds": 22.1658
+              },
+              {
+                "Stage": "factions.abilities-read",
+                "Milliseconds": 23.7339
+              },
+              {
+                "Stage": "startup.restore",
+                "Milliseconds": 1367.046
+              }
+            ],
+            "RecoveryContract": "recovery-2/references-1/normalization-1/40E72D1F64DFED69EA997944967813F66B662201D269F3311995B368C25F5270/enhancement-eligibility-1/normalization-1/FE26E2AE5494604463F448A1B7ACBF893B9DF8561406FE04F87C8B1EA0728278/effective-1/rule-compilation-1/A1C7A1F8CC505220A8ED0648D0F02B35B49BC74CC8AEF39D28649A47018630C5/catalogue-1/normalization-1/659C6F8C5995CA0039BAC4E2819C93D3DA3C459AADB6CE58CDD0F5943583BEA5",
+            "ApplicationModule": "23fc8be6-3511-43b5-9d14-ed1bb56cafc2",
+            "FullReads": 0,
+            "ShardReads": 3,
+            "DependencyCalculations": 0,
+            "DependencyReuses": 0,
+            "MigratedManifest": false,
+            "Context": {
+              "Id": "performance-fixture",
+              "Faction": "Death Guard",
+              "Entries": 20,
+              "Screen": "roster"
+            },
+            "ExternalReadyMs": 5234.000000054948,
+            "AmStart": "Starting: Intent { cmp=com.grimlist.perftest/crc64c040c7e13546c831.MainActivity (has extras) }\nStatus: ok\nLaunchState: COLD\nActivity: com.grimlist.perftest/crc64c040c7e13546c831.MainActivity\nTotalTime: 1343\nWaitTime: 1348\nComplete\n"
+          },
+          {
+            "LibraryReadyMs": 3282.4628,
+            "MauiEntryToUsableMs": 3813.8905,
+            "ManagedBytes": 32858776,
+            "AllocatedBytes": 65560432,
+            "NativeAllocatedBytes": 85914848,
+            "Stages": [
+              {
+                "Stage": "startup.database-open",
+                "Milliseconds": 134.1179
+              },
+              {
+                "Stage": "cache.checksum",
+                "Milliseconds": 14.314
+              },
+              {
+                "Stage": "cache.json-metadata",
+                "Milliseconds": 82.4304
+              },
+              {
+                "Stage": "cache.deserialize",
+                "Milliseconds": 584.5572
+              },
+              {
+                "Stage": "factions.manifest-read",
+                "Milliseconds": 693.0648
+              },
+              {
+                "Stage": "startup.session",
+                "Milliseconds": 1328.0443
+              },
+              {
+                "Stage": "cache.checksum",
+                "Milliseconds": 0.1185
+              },
+              {
+                "Stage": "cache.json-metadata",
+                "Milliseconds": 1.9658
+              },
+              {
+                "Stage": "cache.deserialize",
+                "Milliseconds": 0.5268
+              },
+              {
+                "Stage": "cache.checksum",
+                "Milliseconds": 0.3854
+              },
+              {
+                "Stage": "cache.json-metadata",
+                "Milliseconds": 0.0065
+              },
+              {
+                "Stage": "cache.deserialize",
+                "Milliseconds": 47.5785
+              },
+              {
+                "Stage": "cache.checksum",
+                "Milliseconds": 0.5686
+              },
+              {
+                "Stage": "cache.json-metadata",
+                "Milliseconds": 0.0085
+              },
+              {
+                "Stage": "cache.deserialize",
+                "Milliseconds": 62.0578
+              },
+              {
+                "Stage": "factions.shards-read",
+                "Milliseconds": 118.1726
+              },
+              {
+                "Stage": "cache.checksum",
+                "Milliseconds": 0.5508
+              },
+              {
+                "Stage": "cache.json-metadata",
+                "Milliseconds": 0.8026
+              },
+              {
+                "Stage": "cache.deserialize",
+                "Milliseconds": 21.904
+              },
+              {
+                "Stage": "factions.abilities-read",
+                "Milliseconds": 23.7031
+              },
+              {
+                "Stage": "startup.restore",
+                "Milliseconds": 1352.3134
+              }
+            ],
+            "RecoveryContract": "recovery-2/references-1/normalization-1/40E72D1F64DFED69EA997944967813F66B662201D269F3311995B368C25F5270/enhancement-eligibility-1/normalization-1/FE26E2AE5494604463F448A1B7ACBF893B9DF8561406FE04F87C8B1EA0728278/effective-1/rule-compilation-1/A1C7A1F8CC505220A8ED0648D0F02B35B49BC74CC8AEF39D28649A47018630C5/catalogue-1/normalization-1/659C6F8C5995CA0039BAC4E2819C93D3DA3C459AADB6CE58CDD0F5943583BEA5",
+            "ApplicationModule": "23fc8be6-3511-43b5-9d14-ed1bb56cafc2",
+            "FullReads": 0,
+            "ShardReads": 3,
+            "DependencyCalculations": 0,
+            "DependencyReuses": 0,
+            "MigratedManifest": false,
+            "Context": {
+              "Id": "performance-fixture",
+              "Faction": "Death Guard",
+              "Entries": 20,
+              "Screen": "roster"
+            },
+            "ExternalReadyMs": 5000.0,
+            "AmStart": "Starting: Intent { cmp=com.grimlist.perftest/crc64c040c7e13546c831.MainActivity (has extras) }\nStatus: ok\nLaunchState: COLD\nActivity: com.grimlist.perftest/crc64c040c7e13546c831.MainActivity\nTotalTime: 1327\nWaitTime: 1335\nComplete\n"
+          }
+        ]
+      }
+    ],
+    "comparison": [
+      {
+        "entries": 3,
+        "operation": "add",
+        "previousMeanMs": 93.6126,
+        "nowMs": {
+          "n": 20,
+          "mean": 135.74084,
+          "median": 131.3725,
+          "p95": 166.3258,
+          "min": 118.5899,
+          "max": 169.6554
+        },
+        "changePercent": 45.00274535692843,
+        "commandMs": {
+          "n": 20,
+          "mean": 84.848235,
+          "median": 79.6738,
+          "p95": 117.4159,
+          "min": 75.1756,
+          "max": 125.5649
+        }
+      },
+      {
+        "entries": 3,
+        "operation": "attachment",
+        "previousMeanMs": 430.4117,
+        "nowMs": {
+          "n": 20,
+          "mean": 435.666045,
+          "median": 427.29845,
+          "p95": 466.8686,
+          "min": 388.8737,
+          "max": 566.4654
+        },
+        "changePercent": 1.2207718795748335,
+        "commandMs": {
+          "n": 20,
+          "mean": 183.941795,
+          "median": 177.2858,
+          "p95": 191.4094,
+          "min": 155.19,
+          "max": 325.7368
+        }
+      },
+      {
+        "entries": 3,
+        "operation": "detachment",
+        "previousMeanMs": 222.17788,
+        "nowMs": {
+          "n": 20,
+          "mean": 305.085725,
+          "median": 298.1252,
+          "p95": 408.936,
+          "min": 233.0523,
+          "max": 487.8451
+        },
+        "changePercent": 37.315976279906906,
+        "commandMs": {
+          "n": 20,
+          "mean": 81.913605,
+          "median": 80.77135,
+          "p95": 116.3823,
+          "min": 27.3234,
+          "max": 249.9421
+        }
+      },
+      {
+        "entries": 3,
+        "operation": "enhancement",
+        "previousMeanMs": 170.08396,
+        "nowMs": {
+          "n": 20,
+          "mean": 173.5149,
+          "median": 167.74325,
+          "p95": 204.7141,
+          "min": 155.6904,
+          "max": 208.0723
+        },
+        "changePercent": 2.0172037386712027,
+        "commandMs": {
+          "n": 20,
+          "mean": 125.15713,
+          "median": 119.9134,
+          "p95": 148.0855,
+          "min": 115.8495,
+          "max": 153.421
+        }
+      },
+      {
+        "entries": 3,
+        "operation": "equipment",
+        "previousMeanMs": 140.5292,
+        "nowMs": {
+          "n": 20,
+          "mean": 151.902435,
+          "median": 141.5601,
+          "p95": 208.116,
+          "min": 117.4119,
+          "max": 221.9713
+        },
+        "changePercent": 8.093147189338579,
+        "commandMs": {
+          "n": 20,
+          "mean": 118.08320499999999,
+          "median": 110.36725,
+          "p95": 159.9282,
+          "min": 97.506,
+          "max": 200.1473
+        }
+      },
+      {
+        "entries": 3,
+        "operation": "home",
+        "previousMeanMs": 142.1059,
+        "nowMs": {
+          "n": 20,
+          "mean": 192.62256,
+          "median": 213.99695000000003,
+          "p95": 253.6859,
+          "min": 121.015,
+          "max": 253.8314
+        },
+        "changePercent": 35.54860143034173,
+        "commandMs": {
+          "n": 20,
+          "mean": 5.962935,
+          "median": 5.67605,
+          "p95": 7.5668,
+          "min": 4.9144,
+          "max": 8.5553
+        }
+      },
+      {
+        "entries": 20,
+        "operation": "add",
+        "previousMeanMs": 306.74932,
+        "nowMs": {
+          "n": 20,
+          "mean": 388.9296,
+          "median": 367.2026,
+          "p95": 441.8283,
+          "min": 307.2037,
+          "max": 716.547
+        },
+        "changePercent": 26.7906967161329,
+        "commandMs": {
+          "n": 20,
+          "mean": 364.591615,
+          "median": 343.32680000000005,
+          "p95": 414.1923,
+          "min": 279.7402,
+          "max": 693.4836
+        }
+      },
+      {
+        "entries": 20,
+        "operation": "attachment",
+        "previousMeanMs": 1039.40592,
+        "nowMs": {
+          "n": 20,
+          "mean": 1095.29429,
+          "median": 1071.5322,
+          "p95": 1221.7119,
+          "min": 983.4031,
+          "max": 1271.1737
+        },
+        "changePercent": 5.37695321188858,
+        "commandMs": {
+          "n": 20,
+          "mean": 659.835015,
+          "median": 632.6386,
+          "p95": 726.3308,
+          "min": 611.6225,
+          "max": 871.0436
+        }
+      },
+      {
+        "entries": 20,
+        "operation": "detachment",
+        "previousMeanMs": 380.56282,
+        "nowMs": {
+          "n": 20,
+          "mean": 532.63346,
+          "median": 538.36655,
+          "p95": 602.5903,
+          "min": 413.0661,
+          "max": 623.5618
+        },
+        "changePercent": 39.959405388051316,
+        "commandMs": {
+          "n": 20,
+          "mean": 299.026645,
+          "median": 303.07625,
+          "p95": 326.6823,
+          "min": 248.3495,
+          "max": 329.6812
+        }
+      },
+      {
+        "entries": 20,
+        "operation": "enhancement",
+        "previousMeanMs": 499.21936,
+        "nowMs": {
+          "n": 20,
+          "mean": 542.519015,
+          "median": 537.6777999999999,
+          "p95": 627.0908,
+          "min": 495.0019,
+          "max": 651.7588
+        },
+        "changePercent": 8.673472719487485,
+        "commandMs": {
+          "n": 20,
+          "mean": 488.236165,
+          "median": 484.91415,
+          "p95": 518.6974,
+          "min": 448.7945,
+          "max": 585.5499
+        }
+      },
+      {
+        "entries": 20,
+        "operation": "equipment",
+        "previousMeanMs": 389.93562,
+        "nowMs": {
+          "n": 20,
+          "mean": 392.006125,
+          "median": 364.71845,
+          "p95": 583.6468,
+          "min": 309.0156,
+          "max": 615.5273
+        },
+        "changePercent": 0.5309863715451391,
+        "commandMs": {
+          "n": 20,
+          "mean": 351.62727,
+          "median": 337.67995,
+          "p95": 459.8443,
+          "min": 285.2786,
+          "max": 561.2477
+        }
+      },
+      {
+        "entries": 20,
+        "operation": "home",
+        "previousMeanMs": 206.25632,
+        "nowMs": {
+          "n": 20,
+          "mean": 197.94109,
+          "median": 141.164,
+          "p95": 298.6455,
+          "min": 125.0329,
+          "max": 305.2133
+        },
+        "changePercent": -4.03150313163737,
+        "commandMs": {
+          "n": 20,
+          "mean": 10.06203,
+          "median": 6.597049999999999,
+          "p95": 11.6653,
+          "min": 4.3117,
+          "max": 68.179
+        }
+      }
+    ],
+    "previousStartupMeanMs": 3965.5408,
+    "startup20EntryMs": {
+      "n": 5,
+      "mean": 3809.51714,
+      "median": 3813.8905,
+      "p95": 3825.8859,
+      "min": 3777.2153,
+      "max": 3825.8859
+    }
+  },
+  "windowsShared": {
+    "runs": [
+      {
+        "Environment": {
+          "OS": "Microsoft Windows 10.0.26200",
+          "Runtime": ".NET 10.0.10",
+          "Configuration": "Release",
+          "Provider": "Windows SQLite; shared commands and library lookup only; no UI preparation or rendering measured"
+        },
+        "Source": {
+          "Name": "BSData \u00b7 All armies",
+          "Version": "cc1830fbfead059f8059ed6c7f8e73cd4c390908",
+          "Date": "2026-10-02",
+          "Url": "https://github.com/BSData/wh40k-11e/tree/cc1830fbfead059f8059ed6c7f8e73cd4c390908",
+          "ImportedAt": "2026-10-28T15:28:06.4426477+00:00",
+          "Edition": "11",
+          "ContentHash": "747db24bf29456f0606a937f794a7e7f33154e76116eff1506e9b0750ab5c045"
+        },
+        "Units": 2194,
+        "ReferenceCards": 4396,
+        "InputBytes": 54863318,
+        "Results": [
+          {
+            "Scenario": "cold",
+            "Ms": 184.3731,
+            "AllocatedMiB": 1.2947616577148438,
+            "Rows": 49,
+            "EligibilityBuilds": 1,
+            "RowBuilds": 1
+          },
+          {
+            "Scenario": "warm",
+            "Ms": 4.5097,
+            "AllocatedMiB": 0.0012664794921875,
+            "Rows": 49,
+            "EligibilityBuilds": 0,
+            "RowBuilds": 0
+          },
+          {
+            "Scenario": "three-entry equipment edit",
+            "Samples": [
+              {
+                "CommandMs": 50.0316,
+                "SaveMs": 6.8827,
+                "CalculateMs": 6.8447,
+                "AvailabilityMs": 0.0307,
+                "TotalMs": 50.0776,
+                "CommandAllocatedMiB": 3.8956298828125,
+                "TotalAllocatedMiB": 3.896728515625,
+                "DatasetLoads": 0,
+                "CalculationCalls": 1,
+                "EligibilityBuilds": 0,
+                "RowBuilds": 0
+              },
+              {
+                "CommandMs": 139.8365,
+                "SaveMs": 7.2022,
+                "CalculateMs": 7.5262,
+                "AvailabilityMs": 0.0252,
+                "TotalMs": 139.878,
+                "CommandAllocatedMiB": 3.62286376953125,
+                "TotalAllocatedMiB": 3.62396240234375,
+                "DatasetLoads": 0,
+                "CalculationCalls": 1,
+                "EligibilityBuilds": 0,
+                "RowBuilds": 0
+              },
+              {
+                "CommandMs": 132.1969,
+                "SaveMs": 8.8714,
+                "CalculateMs": 107.6106,
+                "AvailabilityMs": 0.0352,
+                "TotalMs": 132.2701,
+                "CommandAllocatedMiB": 3.6319808959960938,
+                "TotalAllocatedMiB": 3.6330795288085938,
+                "DatasetLoads": 0,
+                "CalculationCalls": 1,
+                "EligibilityBuilds": 0,
+                "RowBuilds": 0
+              },
+              {
+                "CommandMs": 42.8768,
+                "SaveMs": 6.5671,
+                "CalculateMs": 14.3535,
+                "AvailabilityMs": 0.0406,
+                "TotalMs": 42.9484,
+                "CommandAllocatedMiB": 3.6214981079101562,
+                "TotalAllocatedMiB": 3.6225967407226562,
+                "DatasetLoads": 0,
+                "CalculationCalls": 1,
+                "EligibilityBuilds": 0,
+                "RowBuilds": 0
+              },
+              {
+                "CommandMs": 168.2728,
+                "SaveMs": 8.1078,
+                "CalculateMs": 10.5122,
+                "AvailabilityMs": 0.0373,
+                "TotalMs": 168.3444,
+                "CommandAllocatedMiB": 3.6328964233398438,
+                "TotalAllocatedMiB": 3.6339950561523438,
+                "DatasetLoads": 0,
+                "CalculationCalls": 1,
+                "EligibilityBuilds": 0,
+                "RowBuilds": 0
+              }
+            ]
+          },
+          {
+            "Scenario": "after equipment",
+            "Ms": 0.0448,
+            "AllocatedMiB": 0.0010986328125,
+            "Rows": 49,
+            "EligibilityBuilds": 0,
+            "RowBuilds": 0
+          },
+          {
+            "Scenario": "after add",
+            "Ms": 1.3171,
+            "AllocatedMiB": 0.3467864990234375,
+            "Rows": 49,
+            "EligibilityBuilds": 0,
+            "RowBuilds": 1
+          },
+          {
+            "Scenario": "after remove",
+            "Ms": 1.6985,
+            "AllocatedMiB": 0.3360595703125,
+            "Rows": 49,
+            "EligibilityBuilds": 0,
+            "RowBuilds": 1
+          },
+          {
+            "Scenario": "after detachment",
+            "Ms": 8.7107,
+            "AllocatedMiB": 1.2442474365234375,
+            "Rows": 49,
+            "EligibilityBuilds": 1,
+            "RowBuilds": 1
+          },
+          {
+            "Scenario": "after faction",
+            "Ms": 91.1066,
+            "AllocatedMiB": 1.2147140502929688,
+            "Rows": 44,
+            "EligibilityBuilds": 1,
+            "RowBuilds": 1
+          },
+          {
+            "Scenario": "twenty-entry equipment edit",
+            "Samples": [
+              {
+                "CommandMs": 363.0743,
+                "SaveMs": 8.7866,
+                "CalculateMs": 118.3054,
+                "AvailabilityMs": 0.0425,
+                "TotalMs": 363.1489,
+                "CommandAllocatedMiB": 17.38323211669922,
+                "TotalAllocatedMiB": 17.385101318359375,
+                "DatasetLoads": 0,
+                "CalculationCalls": 1,
+                "EligibilityBuilds": 0,
+                "RowBuilds": 0
+              },
+              {
+                "CommandMs": 348.3177,
+                "SaveMs": 9.0678,
+                "CalculateMs": 99.6869,
+                "AvailabilityMs": 0.0374,
+                "TotalMs": 348.3812,
+                "CommandAllocatedMiB": 17.374046325683594,
+                "TotalAllocatedMiB": 17.37591552734375,
+                "DatasetLoads": 0,
+                "CalculationCalls": 1,
+                "EligibilityBuilds": 0,
+                "RowBuilds": 0
+              },
+              {
+                "CommandMs": 580.09,
+                "SaveMs": 9.2997,
+                "CalculateMs": 197.7156,
+                "AvailabilityMs": 0.0402,
+                "TotalMs": 580.1528,
+                "CommandAllocatedMiB": 17.38268280029297,
+                "TotalAllocatedMiB": 17.384552001953125,
+                "DatasetLoads": 0,
+                "CalculationCalls": 1,
+                "EligibilityBuilds": 0,
+                "RowBuilds": 0
+              },
+              {
+                "CommandMs": 236.851,
+                "SaveMs": 9.4121,
+                "CalculateMs": 95.2511,
+                "AvailabilityMs": 0.0407,
+                "TotalMs": 236.9198,
+                "CommandAllocatedMiB": 17.373497009277344,
+                "TotalAllocatedMiB": 17.3753662109375,
+                "DatasetLoads": 0,
+                "CalculationCalls": 1,
+                "EligibilityBuilds": 0,
+                "RowBuilds": 0
+              },
+              {
+                "CommandMs": 407.8878,
+                "SaveMs": 8.3164,
+                "CalculateMs": 136.1464,
+                "AvailabilityMs": 0.0492,
+                "TotalMs": 407.9708,
+                "CommandAllocatedMiB": 17.38355255126953,
+                "TotalAllocatedMiB": 17.385421752929688,
+                "DatasetLoads": 0,
+                "CalculationCalls": 1,
+                "EligibilityBuilds": 0,
+                "RowBuilds": 0
+              }
+            ]
+          },
+          {
+            "Scenario": "save SQL",
+            "DatasetLoads": 0,
+            "Statements": [
+              "INSERT INTO armies(id,name,faction,points_limit,game,updated,detachment) VALUES(?,?,?,?,?,?,?) ON CONFLICT(id) DO UPDATE SET name=excluded.name,faction=excluded.faction,points_limit=excluded.points_limit,game=excluded.game,updated=excluded.updated,detachment=excluded.detachment",
+              "UPDATE armies SET warlord_entry_id=? WHERE id=?",
+              "UPDATE armies SET selected_detachments=? WHERE id=?",
+              "UPDATE armies SET disposition=? WHERE id=?",
+              "UPDATE armies SET muster_selections=? WHERE id=?",
+              "INSERT OR REPLACE INTO settings VALUES('editor_context',?)",
+              "DELETE FROM entries WHERE army_id=?",
+              "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+              "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+              "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+              "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+              "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+              "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+              "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+              "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+              "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+              "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+              "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+              "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+              "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+              "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+              "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+              "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+              "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+              "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+              "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+              "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)"
+            ]
+          }
+        ]
+      },
+      {
+        "Environment": {
+          "OS": "Microsoft Windows 10.0.26200",
+          "Runtime": ".NET 10.0.10",
+          "Configuration": "Release",
+          "Provider": "Windows SQLite; shared commands and library lookup only; no UI preparation or rendering measured"
+        },
+        "Source": {
+          "Name": "BSData \u00b7 All armies",
+          "Version": "cc1830fbfead059f8059ed6c7f8e73cd4c390908",
+          "Date": "2026-10-02",
+          "Url": "https://github.com/BSData/wh40k-11e/tree/cc1830fbfead059f8059ed6c7f8e73cd4c390908",
+          "ImportedAt": "2026-10-28T15:29:33.3657479+00:00",
+          "Edition": "11",
+          "ContentHash": "747db24bf29456f0606a937f794a7e7f33154e76116eff1506e9b0750ab5c045"
+        },
+        "Units": 2194,
+        "ReferenceCards": 4396,
+        "InputBytes": 54863318,
+        "Results": [
+          {
+            "Scenario": "cold",
+            "Ms": 211.9723,
+            "AllocatedMiB": 1.2947616577148438,
+            "Rows": 49,
+            "EligibilityBuilds": 1,
+            "RowBuilds": 1
+          },
+          {
+            "Scenario": "warm",
+            "Ms": 5.8747,
+            "AllocatedMiB": 0.0012664794921875,
+            "Rows": 49,
+            "EligibilityBuilds": 0,
+            "RowBuilds": 0
+          },
+          {
+            "Scenario": "three-entry equipment edit",
+            "Samples": [
+              {
+                "CommandMs": 58.2137,
+                "SaveMs": 7.5566,
+                "CalculateMs": 8.3899,
+                "AvailabilityMs": 0.0511,
+                "TotalMs": 58.287,
+                "CommandAllocatedMiB": 3.8956298828125,
+                "TotalAllocatedMiB": 3.896728515625,
+                "DatasetLoads": 0,
+                "CalculationCalls": 1,
+                "EligibilityBuilds": 0,
+                "RowBuilds": 0
+              },
+              {
+                "CommandMs": 160.007,
+                "SaveMs": 6.8845,
+                "CalculateMs": 8.4778,
+                "AvailabilityMs": 0.0243,
+                "TotalMs": 160.0475,
+                "CommandAllocatedMiB": 3.62286376953125,
+                "TotalAllocatedMiB": 3.62396240234375,
+                "DatasetLoads": 0,
+                "CalculationCalls": 1,
+                "EligibilityBuilds": 0,
+                "RowBuilds": 0
+              },
+              {
+                "CommandMs": 163.3489,
+                "SaveMs": 8.8112,
+                "CalculateMs": 133.4527,
+                "AvailabilityMs": 0.0299,
+                "TotalMs": 163.4084,
+                "CommandAllocatedMiB": 3.6319808959960938,
+                "TotalAllocatedMiB": 3.6330795288085938,
+                "DatasetLoads": 0,
+                "CalculationCalls": 1,
+                "EligibilityBuilds": 0,
+                "RowBuilds": 0
+              },
+              {
+                "CommandMs": 39.5597,
+                "SaveMs": 6.2072,
+                "CalculateMs": 11.1757,
+                "AvailabilityMs": 0.0381,
+                "TotalMs": 39.6315,
+                "CommandAllocatedMiB": 3.6214981079101562,
+                "TotalAllocatedMiB": 3.6225967407226562,
+                "DatasetLoads": 0,
+                "CalculationCalls": 1,
+                "EligibilityBuilds": 0,
+                "RowBuilds": 0
+              },
+              {
+                "CommandMs": 142.9945,
+                "SaveMs": 10.0105,
+                "CalculateMs": 17.0591,
+                "AvailabilityMs": 0.0365,
+                "TotalMs": 143.0677,
+                "CommandAllocatedMiB": 3.6328964233398438,
+                "TotalAllocatedMiB": 3.6339950561523438,
+                "DatasetLoads": 0,
+                "CalculationCalls": 1,
+                "EligibilityBuilds": 0,
+                "RowBuilds": 0
+              }
+            ]
+          },
+          {
+            "Scenario": "after equipment",
+            "Ms": 0.0458,
+            "AllocatedMiB": 0.0010986328125,
+            "Rows": 49,
+            "EligibilityBuilds": 0,
+            "RowBuilds": 0
+          },
+          {
+            "Scenario": "after add",
+            "Ms": 2.5706,
+            "AllocatedMiB": 0.3467864990234375,
+            "Rows": 49,
+            "EligibilityBuilds": 0,
+            "RowBuilds": 1
+          },
+          {
+            "Scenario": "after remove",
+            "Ms": 2.7163,
+            "AllocatedMiB": 0.3360595703125,
+            "Rows": 49,
+            "EligibilityBuilds": 0,
+            "RowBuilds": 1
+          },
+          {
+            "Scenario": "after detachment",
+            "Ms": 10.9758,
+            "AllocatedMiB": 1.2442474365234375,
+            "Rows": 49,
+            "EligibilityBuilds": 1,
+            "RowBuilds": 1
+          },
+          {
+            "Scenario": "after faction",
+            "Ms": 215.3847,
+            "AllocatedMiB": 1.2147140502929688,
+            "Rows": 44,
+            "EligibilityBuilds": 1,
+            "RowBuilds": 1
+          },
+          {
+            "Scenario": "twenty-entry equipment edit",
+            "Samples": [
+              {
+                "CommandMs": 356.9062,
+                "SaveMs": 8.8165,
+                "CalculateMs": 139.3627,
+                "AvailabilityMs": 0.0419,
+                "TotalMs": 356.9784,
+                "CommandAllocatedMiB": 17.38323211669922,
+                "TotalAllocatedMiB": 17.385101318359375,
+                "DatasetLoads": 0,
+                "CalculationCalls": 1,
+                "EligibilityBuilds": 0,
+                "RowBuilds": 0
+              },
+              {
+                "CommandMs": 305.1174,
+                "SaveMs": 8.8088,
+                "CalculateMs": 121.4971,
+                "AvailabilityMs": 0.0372,
+                "TotalMs": 305.1834,
+                "CommandAllocatedMiB": 17.3740234375,
+                "TotalAllocatedMiB": 17.375892639160156,
+                "DatasetLoads": 0,
+                "CalculationCalls": 1,
+                "EligibilityBuilds": 0,
+                "RowBuilds": 0
+              },
+              {
+                "CommandMs": 413.9565,
+                "SaveMs": 18.6922,
+                "CalculateMs": 139.0839,
+                "AvailabilityMs": 0.0413,
+                "TotalMs": 414.0198,
+                "CommandAllocatedMiB": 17.38268280029297,
+                "TotalAllocatedMiB": 17.384552001953125,
+                "DatasetLoads": 0,
+                "CalculationCalls": 1,
+                "EligibilityBuilds": 0,
+                "RowBuilds": 0
+              },
+              {
+                "CommandMs": 470.5027,
+                "SaveMs": 11.7928,
+                "CalculateMs": 146.5121,
+                "AvailabilityMs": 0.0534,
+                "TotalMs": 470.5933,
+                "CommandAllocatedMiB": 17.373497009277344,
+                "TotalAllocatedMiB": 17.3753662109375,
+                "DatasetLoads": 0,
+                "CalculationCalls": 1,
+                "EligibilityBuilds": 0,
+                "RowBuilds": 0
+              },
+              {
+                "CommandMs": 415.6583,
+                "SaveMs": 8.5838,
+                "CalculateMs": 128.1676,
+                "AvailabilityMs": 0.0495,
+                "TotalMs": 415.7397,
+                "CommandAllocatedMiB": 17.38355255126953,
+                "TotalAllocatedMiB": 17.385421752929688,
+                "DatasetLoads": 0,
+                "CalculationCalls": 1,
+                "EligibilityBuilds": 0,
+                "RowBuilds": 0
+              }
+            ]
+          },
+          {
+            "Scenario": "save SQL",
+            "DatasetLoads": 0,
+            "Statements": [
+              "INSERT INTO armies(id,name,faction,points_limit,game,updated,detachment) VALUES(?,?,?,?,?,?,?) ON CONFLICT(id) DO UPDATE SET name=excluded.name,faction=excluded.faction,points_limit=excluded.points_limit,game=excluded.game,updated=excluded.updated,detachment=excluded.detachment",
+              "UPDATE armies SET warlord_entry_id=? WHERE id=?",
+              "UPDATE armies SET selected_detachments=? WHERE id=?",
+              "UPDATE armies SET disposition=? WHERE id=?",
+              "UPDATE armies SET muster_selections=? WHERE id=?",
+              "INSERT OR REPLACE INTO settings VALUES('editor_context',?)",
+              "DELETE FROM entries WHERE army_id=?",
+              "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+              "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+              "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+              "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+              "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+              "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+              "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+              "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+              "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+              "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+              "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+              "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+              "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+              "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+              "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+              "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+              "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+              "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+              "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+              "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)"
+            ]
+          }
+        ]
+      },
+      {
+        "Environment": {
+          "OS": "Microsoft Windows 10.0.26200",
+          "Runtime": ".NET 10.0.10",
+          "Configuration": "Release",
+          "Provider": "Windows SQLite; shared commands and library lookup only; no UI preparation or rendering measured"
+        },
+        "Source": {
+          "Name": "BSData \u00b7 All armies",
+          "Version": "cc1830fbfead059f8059ed6c7f8e73cd4c390908",
+          "Date": "2026-10-02",
+          "Url": "https://github.com/BSData/wh40k-11e/tree/cc1830fbfead059f8059ed6c7f8e73cd4c390908",
+          "ImportedAt": "2026-10-28T15:30:58.3091560+00:00",
+          "Edition": "11",
+          "ContentHash": "747db24bf29456f0606a937f794a7e7f33154e76116eff1506e9b0750ab5c045"
+        },
+        "Units": 2194,
+        "ReferenceCards": 4396,
+        "InputBytes": 54863318,
+        "Results": [
+          {
+            "Scenario": "cold",
+            "Ms": 38.9041,
+            "AllocatedMiB": 1.2936782836914062,
+            "Rows": 49,
+            "EligibilityBuilds": 1,
+            "RowBuilds": 1
+          },
+          {
+            "Scenario": "warm",
+            "Ms": 2.9455,
+            "AllocatedMiB": 0.0012664794921875,
+            "Rows": 49,
+            "EligibilityBuilds": 0,
+            "RowBuilds": 0
+          },
+          {
+            "Scenario": "three-entry equipment edit",
+            "Samples": [
+              {
+                "CommandMs": 45.6694,
+                "SaveMs": 8.8164,
+                "CalculateMs": 6.5276,
+                "AvailabilityMs": 0.0342,
+                "TotalMs": 45.7206,
+                "CommandAllocatedMiB": 3.8953933715820312,
+                "TotalAllocatedMiB": 3.8964920043945312,
+                "DatasetLoads": 0,
+                "CalculationCalls": 1,
+                "EligibilityBuilds": 0,
+                "RowBuilds": 0
+              },
+              {
+                "CommandMs": 107.6063,
+                "SaveMs": 6.801,
+                "CalculateMs": 6.7786,
+                "AvailabilityMs": 0.0342,
+                "TotalMs": 107.6652,
+                "CommandAllocatedMiB": 3.62286376953125,
+                "TotalAllocatedMiB": 3.62396240234375,
+                "DatasetLoads": 0,
+                "CalculationCalls": 1,
+                "EligibilityBuilds": 0,
+                "RowBuilds": 0
+              },
+              {
+                "CommandMs": 83.3688,
+                "SaveMs": 6.2291,
+                "CalculateMs": 65.823,
+                "AvailabilityMs": 0.0463,
+                "TotalMs": 83.4472,
+                "CommandAllocatedMiB": 3.632080078125,
+                "TotalAllocatedMiB": 3.6331787109375,
+                "DatasetLoads": 0,
+                "CalculationCalls": 1,
+                "EligibilityBuilds": 0,
+                "RowBuilds": 0
+              },
+              {
+                "CommandMs": 42.9707,
+                "SaveMs": 6.4125,
+                "CalculateMs": 17.3179,
+                "AvailabilityMs": 0.0586,
+                "TotalMs": 43.0759,
+                "CommandAllocatedMiB": 3.62139892578125,
+                "TotalAllocatedMiB": 3.62249755859375,
+                "DatasetLoads": 0,
+                "CalculationCalls": 1,
+                "EligibilityBuilds": 0,
+                "RowBuilds": 0
+              },
+              {
+                "CommandMs": 85.7127,
+                "SaveMs": 8.385,
+                "CalculateMs": 10.5139,
+                "AvailabilityMs": 0.0395,
+                "TotalMs": 85.7903,
+                "CommandAllocatedMiB": 3.6328964233398438,
+                "TotalAllocatedMiB": 3.6339950561523438,
+                "DatasetLoads": 0,
+                "CalculationCalls": 1,
+                "EligibilityBuilds": 0,
+                "RowBuilds": 0
+              }
+            ]
+          },
+          {
+            "Scenario": "after equipment",
+            "Ms": 0.0414,
+            "AllocatedMiB": 0.0010986328125,
+            "Rows": 49,
+            "EligibilityBuilds": 0,
+            "RowBuilds": 0
+          },
+          {
+            "Scenario": "after add",
+            "Ms": 2.7418,
+            "AllocatedMiB": 0.3467864990234375,
+            "Rows": 49,
+            "EligibilityBuilds": 0,
+            "RowBuilds": 1
+          },
+          {
+            "Scenario": "after remove",
+            "Ms": 1.6533,
+            "AllocatedMiB": 0.3360595703125,
+            "Rows": 49,
+            "EligibilityBuilds": 0,
+            "RowBuilds": 1
+          },
+          {
+            "Scenario": "after detachment",
+            "Ms": 11.7252,
+            "AllocatedMiB": 1.2442474365234375,
+            "Rows": 49,
+            "EligibilityBuilds": 1,
+            "RowBuilds": 1
+          },
+          {
+            "Scenario": "after faction",
+            "Ms": 12.0441,
+            "AllocatedMiB": 1.2147140502929688,
+            "Rows": 44,
+            "EligibilityBuilds": 1,
+            "RowBuilds": 1
+          },
+          {
+            "Scenario": "twenty-entry equipment edit",
+            "Samples": [
+              {
+                "CommandMs": 346.2628,
+                "SaveMs": 9.1187,
+                "CalculateMs": 117.4501,
+                "AvailabilityMs": 0.0466,
+                "TotalMs": 346.3458,
+                "CommandAllocatedMiB": 17.383468627929688,
+                "TotalAllocatedMiB": 17.385337829589844,
+                "DatasetLoads": 0,
+                "CalculationCalls": 1,
+                "EligibilityBuilds": 0,
+                "RowBuilds": 0
+              },
+              {
+                "CommandMs": 504.3634,
+                "SaveMs": 8.6611,
+                "CalculateMs": 174.4252,
+                "AvailabilityMs": 0.0511,
+                "TotalMs": 504.4682,
+                "CommandAllocatedMiB": 17.37371063232422,
+                "TotalAllocatedMiB": 17.375579833984375,
+                "DatasetLoads": 0,
+                "CalculationCalls": 1,
+                "EligibilityBuilds": 0,
+                "RowBuilds": 0
+              },
+              {
+                "CommandMs": 332.8539,
+                "SaveMs": 8.5884,
+                "CalculateMs": 111.3142,
+                "AvailabilityMs": 0.0538,
+                "TotalMs": 332.9372,
+                "CommandAllocatedMiB": 17.38323211669922,
+                "TotalAllocatedMiB": 17.385101318359375,
+                "DatasetLoads": 0,
+                "CalculationCalls": 1,
+                "EligibilityBuilds": 0,
+                "RowBuilds": 0
+              },
+              {
+                "CommandMs": 257.5784,
+                "SaveMs": 10.4989,
+                "CalculateMs": 104.715,
+                "AvailabilityMs": 0.059,
+                "TotalMs": 257.6608,
+                "CommandAllocatedMiB": 17.373497009277344,
+                "TotalAllocatedMiB": 17.3753662109375,
+                "DatasetLoads": 0,
+                "CalculationCalls": 1,
+                "EligibilityBuilds": 0,
+                "RowBuilds": 0
+              },
+              {
+                "CommandMs": 455.7576,
+                "SaveMs": 8.4865,
+                "CalculateMs": 120.4581,
+                "AvailabilityMs": 0.0482,
+                "TotalMs": 455.8395,
+                "CommandAllocatedMiB": 17.383209228515625,
+                "TotalAllocatedMiB": 17.38507843017578,
+                "DatasetLoads": 0,
+                "CalculationCalls": 1,
+                "EligibilityBuilds": 0,
+                "RowBuilds": 0
+              }
+            ]
+          },
+          {
+            "Scenario": "save SQL",
+            "DatasetLoads": 0,
+            "Statements": [
+              "INSERT INTO armies(id,name,faction,points_limit,game,updated,detachment) VALUES(?,?,?,?,?,?,?) ON CONFLICT(id) DO UPDATE SET name=excluded.name,faction=excluded.faction,points_limit=excluded.points_limit,game=excluded.game,updated=excluded.updated,detachment=excluded.detachment",
+              "UPDATE armies SET warlord_entry_id=? WHERE id=?",
+              "UPDATE armies SET selected_detachments=? WHERE id=?",
+              "UPDATE armies SET disposition=? WHERE id=?",
+              "UPDATE armies SET muster_selections=? WHERE id=?",
+              "INSERT OR REPLACE INTO settings VALUES('editor_context',?)",
+              "DELETE FROM entries WHERE army_id=?",
+              "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+              "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+              "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+              "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+              "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+              "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+              "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+              "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+              "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+              "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+              "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+              "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+              "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+              "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+              "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+              "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+              "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+              "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+              "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+              "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)"
+            ]
+          }
+        ]
+      }
+    ],
+    "comparison": [
+      {
+        "scenario": "three-entry equipment edit",
+        "previousMs": {
+          "n": 5,
+          "mean": 55.34246,
+          "median": 65.4153,
+          "p95": 88.5144,
+          "min": 21.0347,
+          "max": 88.5144
+        },
+        "nowMs": {
+          "n": 15,
+          "mean": 97.51108666666667,
+          "median": 85.7127,
+          "p95": 168.2728,
+          "min": 39.5597,
+          "max": 168.2728
+        },
+        "changePercent": 31.028520850626684,
+        "allocationMiB": {
+          "n": 15,
+          "mean": 3.680958048502604,
+          "median": 3.6319808959960938,
+          "p95": 3.8956298828125,
+          "min": 3.62139892578125,
+          "max": 3.8956298828125
+        }
+      },
+      {
+        "scenario": "twenty-entry equipment edit",
+        "previousMs": {
+          "n": 5,
+          "mean": 274.23542,
+          "median": 265.6067,
+          "p95": 366.5732,
+          "min": 212.3869,
+          "max": 366.5732
+        },
+        "nowMs": {
+          "n": 15,
+          "mean": 386.34520000000003,
+          "median": 363.0743,
+          "p95": 580.09,
+          "min": 236.851,
+          "max": 580.09
+        },
+        "changePercent": 36.69621285908826,
+        "allocationMiB": {
+          "n": 15,
+          "mean": 17.379407755533855,
+          "median": 17.38268280029297,
+          "p95": 17.38355255126953,
+          "min": 17.373497009277344,
+          "max": 17.38355255126953
+        }
+      }
+    ],
+    "previousSource": {
+      "Name": "BSData \u00b7 All armies",
+      "Version": "cc1830fbfead059f8059ed6c7f8e73cd4c390908",
+      "Date": "2026-10-02",
+      "Url": "https://github.com/BSData/wh40k-11e/tree/cc1830fbfead059f8059ed6c7f8e73cd4c390908",
+      "ImportedAt": "2026-10-27T22:17:57.1711782+00:00",
+      "Edition": "11",
+      "ContentHash": "747db24bf29456f0606a937f794a7e7f33154e76116eff1506e9b0750ab5c045"
+    }
+  },
+  "windowsUi": {
+    "samples": [
+      {
+        "Operation": "open",
+        "Entries": 3,
+        "CommandMs": 101.5946,
+        "UsableMs": 1293.5372,
+        "AllocatedBytes": 21269064,
+        "ManagedBytes": 48474344
+      },
+      {
+        "Operation": "open",
+        "Entries": 3,
+        "CommandMs": 58.2753,
+        "UsableMs": 1220.4754,
+        "AllocatedBytes": 21140888,
+        "ManagedBytes": 52595112
+      },
+      {
+        "Operation": "open",
+        "Entries": 3,
+        "CommandMs": 54.3202,
+        "UsableMs": 1170.7247,
+        "AllocatedBytes": 21176656,
+        "ManagedBytes": 57145800
+      },
+      {
+        "Operation": "open",
+        "Entries": 3,
+        "CommandMs": 40.0416,
+        "UsableMs": 1056.2889,
+        "AllocatedBytes": 21209296,
+        "ManagedBytes": 61711744
+      },
+      {
+        "Operation": "open",
+        "Entries": 3,
+        "CommandMs": 43.7457,
+        "UsableMs": 1104.1709,
+        "AllocatedBytes": 21200920,
+        "ManagedBytes": 66261368
+      },
+      {
+        "Operation": "open",
+        "Entries": 3,
+        "CommandMs": 271.7158,
+        "UsableMs": 1205.5494,
+        "AllocatedBytes": 21325872,
+        "ManagedBytes": 70927056
+      },
+      {
+        "Operation": "open",
+        "Entries": 3,
+        "CommandMs": 124.9168,
+        "UsableMs": 1079.8673,
+        "AllocatedBytes": 21253304,
+        "ManagedBytes": 76119632
+      },
+      {
+        "Operation": "open",
+        "Entries": 3,
+        "CommandMs": 141.6749,
+        "UsableMs": 950.8476,
+        "AllocatedBytes": 20984216,
+        "ManagedBytes": 47466104
+      },
+      {
+        "Operation": "open",
+        "Entries": 3,
+        "CommandMs": 139.7069,
+        "UsableMs": 937.1104,
+        "AllocatedBytes": 20847504,
+        "ManagedBytes": 52246864
+      },
+      {
+        "Operation": "open",
+        "Entries": 3,
+        "CommandMs": 132.524,
+        "UsableMs": 1357.4423,
+        "AllocatedBytes": 20883752,
+        "ManagedBytes": 46301656
+      },
+      {
+        "Operation": "datasheet",
+        "Entries": 3,
+        "CommandMs": 6.9608,
+        "UsableMs": 347.1185,
+        "AllocatedBytes": 10393408,
+        "ManagedBytes": 46379072
+      },
+      {
+        "Operation": "datasheet",
+        "Entries": 3,
+        "CommandMs": 6.4673,
+        "UsableMs": 374.8588,
+        "AllocatedBytes": 10376504,
+        "ManagedBytes": 51079096
+      },
+      {
+        "Operation": "datasheet",
+        "Entries": 3,
+        "CommandMs": 5.7233,
+        "UsableMs": 320.0961,
+        "AllocatedBytes": 10400512,
+        "ManagedBytes": 59517856
+      },
+      {
+        "Operation": "datasheet",
+        "Entries": 3,
+        "CommandMs": 7.1346,
+        "UsableMs": 344.7666,
+        "AllocatedBytes": 10390928,
+        "ManagedBytes": 50197440
+      },
+      {
+        "Operation": "datasheet",
+        "Entries": 3,
+        "CommandMs": 7.0818,
+        "UsableMs": 310.3303,
+        "AllocatedBytes": 10394192,
+        "ManagedBytes": 54402768
+      },
+      {
+        "Operation": "datasheet",
+        "Entries": 3,
+        "CommandMs": 6.0009,
+        "UsableMs": 288.5372,
+        "AllocatedBytes": 10431152,
+        "ManagedBytes": 58630576
+      },
+      {
+        "Operation": "datasheet",
+        "Entries": 3,
+        "CommandMs": 6.1549,
+        "UsableMs": 307.9822,
+        "AllocatedBytes": 10507080,
+        "ManagedBytes": 67374248
+      },
+      {
+        "Operation": "datasheet",
+        "Entries": 3,
+        "CommandMs": 6.3358,
+        "UsableMs": 272.7005,
+        "AllocatedBytes": 10494872,
+        "ManagedBytes": 71456504
+      },
+      {
+        "Operation": "datasheet",
+        "Entries": 3,
+        "CommandMs": 8.0407,
+        "UsableMs": 371.9817,
+        "AllocatedBytes": 10529080,
+        "ManagedBytes": 75855488
+      },
+      {
+        "Operation": "datasheet",
+        "Entries": 3,
+        "CommandMs": 8.6664,
+        "UsableMs": 397.4993,
+        "AllocatedBytes": 10586912,
+        "ManagedBytes": 80346912
+      },
+      {
+        "Operation": "add",
+        "Entries": 3,
+        "CommandMs": 167.1037,
+        "UsableMs": 962.2379,
+        "AllocatedBytes": 21791976,
+        "ManagedBytes": 60315456
+      },
+      {
+        "Operation": "add",
+        "Entries": 3,
+        "CommandMs": 61.1913,
+        "UsableMs": 825.2911,
+        "AllocatedBytes": 21656168,
+        "ManagedBytes": 52273232
+      },
+      {
+        "Operation": "add",
+        "Entries": 3,
+        "CommandMs": 120.4422,
+        "UsableMs": 802.906,
+        "AllocatedBytes": 21650392,
+        "ManagedBytes": 50958840
+      },
+      {
+        "Operation": "add",
+        "Entries": 3,
+        "CommandMs": 34.0314,
+        "UsableMs": 739.6276,
+        "AllocatedBytes": 21685296,
+        "ManagedBytes": 60995904
+      },
+      {
+        "Operation": "add",
+        "Entries": 3,
+        "CommandMs": 71.8811,
+        "UsableMs": 667.9391,
+        "AllocatedBytes": 21659808,
+        "ManagedBytes": 52360776
+      },
+      {
+        "Operation": "add",
+        "Entries": 3,
+        "CommandMs": 37.8504,
+        "UsableMs": 429.2469,
+        "AllocatedBytes": 21717528,
+        "ManagedBytes": 61306560
+      },
+      {
+        "Operation": "add",
+        "Entries": 3,
+        "CommandMs": 55.6495,
+        "UsableMs": 560.2732,
+        "AllocatedBytes": 21642128,
+        "ManagedBytes": 51679464
+      },
+      {
+        "Operation": "add",
+        "Entries": 3,
+        "CommandMs": 32.7143,
+        "UsableMs": 630.4935,
+        "AllocatedBytes": 21722896,
+        "ManagedBytes": 61354360
+      },
+      {
+        "Operation": "add",
+        "Entries": 3,
+        "CommandMs": 45.4714,
+        "UsableMs": 618.1983,
+        "AllocatedBytes": 21644192,
+        "ManagedBytes": 48341040
+      },
+      {
+        "Operation": "add",
+        "Entries": 3,
+        "CommandMs": 48.6796,
+        "UsableMs": 662.9525,
+        "AllocatedBytes": 21700960,
+        "ManagedBytes": 49235536
+      },
+      {
+        "Operation": "equipment",
+        "Entries": 3,
+        "CommandMs": 48.2416,
+        "UsableMs": 817.5,
+        "AllocatedBytes": 21164240,
+        "ManagedBytes": 56693688
+      },
+      {
+        "Operation": "equipment",
+        "Entries": 3,
+        "CommandMs": 21.2765,
+        "UsableMs": 481.2509,
+        "AllocatedBytes": 21402240,
+        "ManagedBytes": 54261696
+      },
+      {
+        "Operation": "equipment",
+        "Entries": 3,
+        "CommandMs": 67.4662,
+        "UsableMs": 630.9252,
+        "AllocatedBytes": 21362696,
+        "ManagedBytes": 49162352
+      },
+      {
+        "Operation": "equipment",
+        "Entries": 3,
+        "CommandMs": 31.3528,
+        "UsableMs": 559.9026,
+        "AllocatedBytes": 21384608,
+        "ManagedBytes": 60979528
+      },
+      {
+        "Operation": "equipment",
+        "Entries": 3,
+        "CommandMs": 59.2818,
+        "UsableMs": 485.763,
+        "AllocatedBytes": 21347840,
+        "ManagedBytes": 55157352
+      },
+      {
+        "Operation": "equipment",
+        "Entries": 3,
+        "CommandMs": 56.7074,
+        "UsableMs": 513.1675,
+        "AllocatedBytes": 21353128,
+        "ManagedBytes": 49434112
+      },
+      {
+        "Operation": "equipment",
+        "Entries": 3,
+        "CommandMs": 27.5296,
+        "UsableMs": 561.3039,
+        "AllocatedBytes": 21372936,
+        "ManagedBytes": 61069288
+      },
+      {
+        "Operation": "equipment",
+        "Entries": 3,
+        "CommandMs": 58.1363,
+        "UsableMs": 491.7213,
+        "AllocatedBytes": 21316448,
+        "ManagedBytes": 55020144
+      },
+      {
+        "Operation": "equipment",
+        "Entries": 3,
+        "CommandMs": 40.0614,
+        "UsableMs": 524.9657,
+        "AllocatedBytes": 21443184,
+        "ManagedBytes": 53727488
+      },
+      {
+        "Operation": "equipment",
+        "Entries": 3,
+        "CommandMs": 20.7412,
+        "UsableMs": 522.6031,
+        "AllocatedBytes": 21387408,
+        "ManagedBytes": 60834416
+      },
+      {
+        "Operation": "enhancement",
+        "Entries": 3,
+        "CommandMs": 51.4754,
+        "UsableMs": 316.2685,
+        "AllocatedBytes": 17186760,
+        "ManagedBytes": 56184632
+      },
+      {
+        "Operation": "enhancement",
+        "Entries": 3,
+        "CommandMs": 66.7972,
+        "UsableMs": 459.4904,
+        "AllocatedBytes": 17203776,
+        "ManagedBytes": 47256848
+      },
+      {
+        "Operation": "enhancement",
+        "Entries": 3,
+        "CommandMs": 76.1831,
+        "UsableMs": 374.0751,
+        "AllocatedBytes": 17177464,
+        "ManagedBytes": 52226736
+      },
+      {
+        "Operation": "enhancement",
+        "Entries": 3,
+        "CommandMs": 49.3627,
+        "UsableMs": 361.15,
+        "AllocatedBytes": 17186480,
+        "ManagedBytes": 52385576
+      },
+      {
+        "Operation": "enhancement",
+        "Entries": 3,
+        "CommandMs": 74.8848,
+        "UsableMs": 344.9737,
+        "AllocatedBytes": 17197624,
+        "ManagedBytes": 57598640
+      },
+      {
+        "Operation": "enhancement",
+        "Entries": 3,
+        "CommandMs": 67.6492,
+        "UsableMs": 365.2162,
+        "AllocatedBytes": 17205136,
+        "ManagedBytes": 62008944
+      },
+      {
+        "Operation": "enhancement",
+        "Entries": 3,
+        "CommandMs": 60.3955,
+        "UsableMs": 397.5056,
+        "AllocatedBytes": 17215968,
+        "ManagedBytes": 50671480
+      },
+      {
+        "Operation": "enhancement",
+        "Entries": 3,
+        "CommandMs": 57.0584,
+        "UsableMs": 352.0147,
+        "AllocatedBytes": 17175672,
+        "ManagedBytes": 55015000
+      },
+      {
+        "Operation": "enhancement",
+        "Entries": 3,
+        "CommandMs": 65.049,
+        "UsableMs": 373.8184,
+        "AllocatedBytes": 17195480,
+        "ManagedBytes": 58464312
+      },
+      {
+        "Operation": "enhancement",
+        "Entries": 3,
+        "CommandMs": 52.6597,
+        "UsableMs": 334.102,
+        "AllocatedBytes": 17340160,
+        "ManagedBytes": 64641800
+      },
+      {
+        "Operation": "attachment",
+        "Entries": 3,
+        "CommandMs": 80.9863,
+        "UsableMs": 491.9735,
+        "AllocatedBytes": 34153000,
+        "ManagedBytes": 55824552
+      },
+      {
+        "Operation": "attachment",
+        "Entries": 3,
+        "CommandMs": 124.8357,
+        "UsableMs": 460.6815,
+        "AllocatedBytes": 34127512,
+        "ManagedBytes": 60055432
+      },
+      {
+        "Operation": "attachment",
+        "Entries": 3,
+        "CommandMs": 100.6652,
+        "UsableMs": 686.6955,
+        "AllocatedBytes": 34027312,
+        "ManagedBytes": 64142312
+      },
+      {
+        "Operation": "attachment",
+        "Entries": 3,
+        "CommandMs": 148.3622,
+        "UsableMs": 560.2231,
+        "AllocatedBytes": 33980432,
+        "ManagedBytes": 54316912
+      },
+      {
+        "Operation": "attachment",
+        "Entries": 3,
+        "CommandMs": 101.2174,
+        "UsableMs": 491.3085,
+        "AllocatedBytes": 33946064,
+        "ManagedBytes": 56133616
+      },
+      {
+        "Operation": "attachment",
+        "Entries": 3,
+        "CommandMs": 93.0981,
+        "UsableMs": 506.0368,
+        "AllocatedBytes": 33978152,
+        "ManagedBytes": 62211536
+      },
+      {
+        "Operation": "attachment",
+        "Entries": 3,
+        "CommandMs": 55.2896,
+        "UsableMs": 388.0015,
+        "AllocatedBytes": 33999656,
+        "ManagedBytes": 66431176
+      },
+      {
+        "Operation": "attachment",
+        "Entries": 3,
+        "CommandMs": 131.2572,
+        "UsableMs": 482.6877,
+        "AllocatedBytes": 33997840,
+        "ManagedBytes": 55209360
+      },
+      {
+        "Operation": "attachment",
+        "Entries": 3,
+        "CommandMs": 188.7045,
+        "UsableMs": 605.2384,
+        "AllocatedBytes": 33970440,
+        "ManagedBytes": 61534552
+      },
+      {
+        "Operation": "attachment",
+        "Entries": 3,
+        "CommandMs": 92.594,
+        "UsableMs": 477.3976,
+        "AllocatedBytes": 33967384,
+        "ManagedBytes": 63052816
+      },
+      {
+        "Operation": "detachment",
+        "Entries": 3,
+        "CommandMs": 24.1611,
+        "UsableMs": 299.5726,
+        "AllocatedBytes": 12424808,
+        "ManagedBytes": 73680288
+      },
+      {
+        "Operation": "detachment",
+        "Entries": 3,
+        "CommandMs": 25.053,
+        "UsableMs": 432.253,
+        "AllocatedBytes": 12449816,
+        "ManagedBytes": 75090240
+      },
+      {
+        "Operation": "detachment",
+        "Entries": 3,
+        "CommandMs": 18.6307,
+        "UsableMs": 312.6918,
+        "AllocatedBytes": 12442792,
+        "ManagedBytes": 76272768
+      },
+      {
+        "Operation": "detachment",
+        "Entries": 3,
+        "CommandMs": 73.594,
+        "UsableMs": 320.5581,
+        "AllocatedBytes": 12500632,
+        "ManagedBytes": 82228584
+      },
+      {
+        "Operation": "detachment",
+        "Entries": 3,
+        "CommandMs": 24.886,
+        "UsableMs": 260.6335,
+        "AllocatedBytes": 12473352,
+        "ManagedBytes": 86674616
+      },
+      {
+        "Operation": "detachment",
+        "Entries": 3,
+        "CommandMs": 18.3097,
+        "UsableMs": 287.16,
+        "AllocatedBytes": 12495200,
+        "ManagedBytes": 90590160
+      },
+      {
+        "Operation": "detachment",
+        "Entries": 3,
+        "CommandMs": 20.5225,
+        "UsableMs": 279.3244,
+        "AllocatedBytes": 12485632,
+        "ManagedBytes": 91750936
+      },
+      {
+        "Operation": "detachment",
+        "Entries": 3,
+        "CommandMs": 131.0691,
+        "UsableMs": 410.967,
+        "AllocatedBytes": 12474008,
+        "ManagedBytes": 61416600
+      },
+      {
+        "Operation": "detachment",
+        "Entries": 3,
+        "CommandMs": 42.871,
+        "UsableMs": 306.05,
+        "AllocatedBytes": 12411976,
+        "ManagedBytes": 65783552
+      },
+      {
+        "Operation": "detachment",
+        "Entries": 3,
+        "CommandMs": 16.4916,
+        "UsableMs": 268.763,
+        "AllocatedBytes": 12386720,
+        "ManagedBytes": 69731176
+      },
+      {
+        "Operation": "home",
+        "Entries": 3,
+        "CommandMs": 0.8329,
+        "UsableMs": 40.3553,
+        "AllocatedBytes": 1557816,
+        "ManagedBytes": 72009208
+      },
+      {
+        "Operation": "home",
+        "Entries": 3,
+        "CommandMs": 0.1405,
+        "UsableMs": 42.9595,
+        "AllocatedBytes": 1556424,
+        "ManagedBytes": 75028280
+      },
+      {
+        "Operation": "home",
+        "Entries": 3,
+        "CommandMs": 0.1252,
+        "UsableMs": 32.575,
+        "AllocatedBytes": 1555784,
+        "ManagedBytes": 56776328
+      },
+      {
+        "Operation": "home",
+        "Entries": 3,
+        "CommandMs": 0.1459,
+        "UsableMs": 68.1695,
+        "AllocatedBytes": 1555784,
+        "ManagedBytes": 58910040
+      },
+      {
+        "Operation": "home",
+        "Entries": 3,
+        "CommandMs": 0.1086,
+        "UsableMs": 77.6605,
+        "AllocatedBytes": 1555784,
+        "ManagedBytes": 61348632
+      },
+      {
+        "Operation": "home",
+        "Entries": 3,
+        "CommandMs": 0.1251,
+        "UsableMs": 48.5613,
+        "AllocatedBytes": 1555784,
+        "ManagedBytes": 63896280
+      },
+      {
+        "Operation": "home",
+        "Entries": 3,
+        "CommandMs": 0.4352,
+        "UsableMs": 103.8137,
+        "AllocatedBytes": 1555784,
+        "ManagedBytes": 66405320
+      },
+      {
+        "Operation": "home",
+        "Entries": 3,
+        "CommandMs": 0.1185,
+        "UsableMs": 31.9511,
+        "AllocatedBytes": 1555784,
+        "ManagedBytes": 74145192
+      },
+      {
+        "Operation": "home",
+        "Entries": 3,
+        "CommandMs": 0.126,
+        "UsableMs": 31.0337,
+        "AllocatedBytes": 1556616,
+        "ManagedBytes": 58188336
+      },
+      {
+        "Operation": "home",
+        "Entries": 3,
+        "CommandMs": 0.1187,
+        "UsableMs": 27.7153,
+        "AllocatedBytes": 1556616,
+        "ManagedBytes": 60915032
+      },
+      {
+        "Operation": "open",
+        "Entries": 20,
+        "CommandMs": 77.9162,
+        "UsableMs": 549.99,
+        "AllocatedBytes": 34912632,
+        "ManagedBytes": 72915712
+      },
+      {
+        "Operation": "open",
+        "Entries": 20,
+        "CommandMs": 101.3557,
+        "UsableMs": 592.3794,
+        "AllocatedBytes": 34925552,
+        "ManagedBytes": 64426976
+      },
+      {
+        "Operation": "open",
+        "Entries": 20,
+        "CommandMs": 115.9484,
+        "UsableMs": 608.8561,
+        "AllocatedBytes": 34913280,
+        "ManagedBytes": 70209440
+      },
+      {
+        "Operation": "open",
+        "Entries": 20,
+        "CommandMs": 93.8235,
+        "UsableMs": 545.8887,
+        "AllocatedBytes": 34988920,
+        "ManagedBytes": 80513152
+      },
+      {
+        "Operation": "open",
+        "Entries": 20,
+        "CommandMs": 119.1593,
+        "UsableMs": 570.3129,
+        "AllocatedBytes": 34968400,
+        "ManagedBytes": 86448216
+      },
+      {
+        "Operation": "open",
+        "Entries": 20,
+        "CommandMs": 89.8516,
+        "UsableMs": 529.9642,
+        "AllocatedBytes": 34999480,
+        "ManagedBytes": 92624528
+      },
+      {
+        "Operation": "open",
+        "Entries": 20,
+        "CommandMs": 87.2053,
+        "UsableMs": 642.2049,
+        "AllocatedBytes": 35021704,
+        "ManagedBytes": 98516848
+      },
+      {
+        "Operation": "open",
+        "Entries": 20,
+        "CommandMs": 145.4945,
+        "UsableMs": 749.6261,
+        "AllocatedBytes": 35186608,
+        "ManagedBytes": 104693904
+      },
+      {
+        "Operation": "open",
+        "Entries": 20,
+        "CommandMs": 184.0974,
+        "UsableMs": 679.8715,
+        "AllocatedBytes": 35065472,
+        "ManagedBytes": 71878784
+      },
+      {
+        "Operation": "open",
+        "Entries": 20,
+        "CommandMs": 83.2077,
+        "UsableMs": 521.2701,
+        "AllocatedBytes": 34951408,
+        "ManagedBytes": 77878872
+      },
+      {
+        "Operation": "datasheet",
+        "Entries": 20,
+        "CommandMs": 7.366,
+        "UsableMs": 237.1999,
+        "AllocatedBytes": 10317408,
+        "ManagedBytes": 73277760
+      },
+      {
+        "Operation": "datasheet",
+        "Entries": 20,
+        "CommandMs": 6.8118,
+        "UsableMs": 284.7805,
+        "AllocatedBytes": 10356672,
+        "ManagedBytes": 77699720
+      },
+      {
+        "Operation": "datasheet",
+        "Entries": 20,
+        "CommandMs": 5.3936,
+        "UsableMs": 252.3297,
+        "AllocatedBytes": 10385848,
+        "ManagedBytes": 86669144
+      },
+      {
+        "Operation": "datasheet",
+        "Entries": 20,
+        "CommandMs": 6.5741,
+        "UsableMs": 261.9655,
+        "AllocatedBytes": 10426056,
+        "ManagedBytes": 90963696
+      },
+      {
+        "Operation": "datasheet",
+        "Entries": 20,
+        "CommandMs": 7.9158,
+        "UsableMs": 252.9448,
+        "AllocatedBytes": 10454328,
+        "ManagedBytes": 100325520
+      },
+      {
+        "Operation": "datasheet",
+        "Entries": 20,
+        "CommandMs": 6.2454,
+        "UsableMs": 237.837,
+        "AllocatedBytes": 10534904,
+        "ManagedBytes": 104849512
+      },
+      {
+        "Operation": "datasheet",
+        "Entries": 20,
+        "CommandMs": 6.6729,
+        "UsableMs": 220.2541,
+        "AllocatedBytes": 10604656,
+        "ManagedBytes": 114371648
+      },
+      {
+        "Operation": "datasheet",
+        "Entries": 20,
+        "CommandMs": 7.9252,
+        "UsableMs": 237.2993,
+        "AllocatedBytes": 10357080,
+        "ManagedBytes": 75265856
+      },
+      {
+        "Operation": "datasheet",
+        "Entries": 20,
+        "CommandMs": 7.3983,
+        "UsableMs": 197.0136,
+        "AllocatedBytes": 10391080,
+        "ManagedBytes": 84337240
+      },
+      {
+        "Operation": "datasheet",
+        "Entries": 20,
+        "CommandMs": 8.3785,
+        "UsableMs": 213.452,
+        "AllocatedBytes": 10389296,
+        "ManagedBytes": 88485464
+      },
+      {
+        "Operation": "add",
+        "Entries": 20,
+        "CommandMs": 349.4021,
+        "UsableMs": 892.7811,
+        "AllocatedBytes": 40082984,
+        "ManagedBytes": 90272120
+      },
+      {
+        "Operation": "add",
+        "Entries": 20,
+        "CommandMs": 143.5835,
+        "UsableMs": 570.9559,
+        "AllocatedBytes": 40041560,
+        "ManagedBytes": 82168944
+      },
+      {
+        "Operation": "add",
+        "Entries": 20,
+        "CommandMs": 201.6571,
+        "UsableMs": 666.6635,
+        "AllocatedBytes": 40090984,
+        "ManagedBytes": 89496024
+      },
+      {
+        "Operation": "add",
+        "Entries": 20,
+        "CommandMs": 190.0838,
+        "UsableMs": 620.5602,
+        "AllocatedBytes": 40214408,
+        "ManagedBytes": 100942320
+      },
+      {
+        "Operation": "add",
+        "Entries": 20,
+        "CommandMs": 163.8209,
+        "UsableMs": 590.4013,
+        "AllocatedBytes": 40204112,
+        "ManagedBytes": 111922920
+      },
+      {
+        "Operation": "add",
+        "Entries": 20,
+        "CommandMs": 151.4176,
+        "UsableMs": 644.7716,
+        "AllocatedBytes": 40208968,
+        "ManagedBytes": 119225360
+      },
+      {
+        "Operation": "add",
+        "Entries": 20,
+        "CommandMs": 167.1054,
+        "UsableMs": 611.8084,
+        "AllocatedBytes": 40295040,
+        "ManagedBytes": 130766616
+      },
+      {
+        "Operation": "add",
+        "Entries": 20,
+        "CommandMs": 164.4951,
+        "UsableMs": 570.0431,
+        "AllocatedBytes": 40041272,
+        "ManagedBytes": 89672296
+      },
+      {
+        "Operation": "add",
+        "Entries": 20,
+        "CommandMs": 166.4338,
+        "UsableMs": 571.7735,
+        "AllocatedBytes": 40044552,
+        "ManagedBytes": 90490704
+      },
+      {
+        "Operation": "add",
+        "Entries": 20,
+        "CommandMs": 176.906,
+        "UsableMs": 637.1352,
+        "AllocatedBytes": 40133920,
+        "ManagedBytes": 97697344
+      },
+      {
+        "Operation": "equipment",
+        "Entries": 20,
+        "CommandMs": 157.3649,
+        "UsableMs": 571.5837,
+        "AllocatedBytes": 39461008,
+        "ManagedBytes": 99782664
+      },
+      {
+        "Operation": "equipment",
+        "Entries": 20,
+        "CommandMs": 182.1143,
+        "UsableMs": 685.3181,
+        "AllocatedBytes": 39600720,
+        "ManagedBytes": 110414752
+      },
+      {
+        "Operation": "equipment",
+        "Entries": 20,
+        "CommandMs": 151.3748,
+        "UsableMs": 595.4651,
+        "AllocatedBytes": 39629472,
+        "ManagedBytes": 120757760
+      },
+      {
+        "Operation": "equipment",
+        "Entries": 20,
+        "CommandMs": 165.2713,
+        "UsableMs": 785.7316,
+        "AllocatedBytes": 39697800,
+        "ManagedBytes": 131057600
+      },
+      {
+        "Operation": "equipment",
+        "Entries": 20,
+        "CommandMs": 335.677,
+        "UsableMs": 854.0812,
+        "AllocatedBytes": 39708096,
+        "ManagedBytes": 94761480
+      },
+      {
+        "Operation": "equipment",
+        "Entries": 20,
+        "CommandMs": 157.9527,
+        "UsableMs": 628.561,
+        "AllocatedBytes": 39501576,
+        "ManagedBytes": 104729768
+      },
+      {
+        "Operation": "equipment",
+        "Entries": 20,
+        "CommandMs": 148.1544,
+        "UsableMs": 702.7992,
+        "AllocatedBytes": 39612320,
+        "ManagedBytes": 115358328
+      },
+      {
+        "Operation": "equipment",
+        "Entries": 20,
+        "CommandMs": 133.1717,
+        "UsableMs": 606.165,
+        "AllocatedBytes": 39518912,
+        "ManagedBytes": 96089896
+      },
+      {
+        "Operation": "equipment",
+        "Entries": 20,
+        "CommandMs": 172.6486,
+        "UsableMs": 631.6161,
+        "AllocatedBytes": 39488448,
+        "ManagedBytes": 110123152
+      },
+      {
+        "Operation": "equipment",
+        "Entries": 20,
+        "CommandMs": 148.1646,
+        "UsableMs": 662.3265,
+        "AllocatedBytes": 39430872,
+        "ManagedBytes": 97021648
+      },
+      {
+        "Operation": "enhancement",
+        "Entries": 20,
+        "CommandMs": 273.9304,
+        "UsableMs": 637.5851,
+        "AllocatedBytes": 44871592,
+        "ManagedBytes": 111813448
+      },
+      {
+        "Operation": "enhancement",
+        "Entries": 20,
+        "CommandMs": 216.997,
+        "UsableMs": 550.265,
+        "AllocatedBytes": 44886784,
+        "ManagedBytes": 118749688
+      },
+      {
+        "Operation": "enhancement",
+        "Entries": 20,
+        "CommandMs": 218.0723,
+        "UsableMs": 519.0902,
+        "AllocatedBytes": 44952136,
+        "ManagedBytes": 129888000
+      },
+      {
+        "Operation": "enhancement",
+        "Entries": 20,
+        "CommandMs": 226.6185,
+        "UsableMs": 522.2069,
+        "AllocatedBytes": 44929800,
+        "ManagedBytes": 136874688
+      },
+      {
+        "Operation": "enhancement",
+        "Entries": 20,
+        "CommandMs": 228.7446,
+        "UsableMs": 596.6438,
+        "AllocatedBytes": 44990408,
+        "ManagedBytes": 143735328
+      },
+      {
+        "Operation": "enhancement",
+        "Entries": 20,
+        "CommandMs": 209.1143,
+        "UsableMs": 611.999,
+        "AllocatedBytes": 45168648,
+        "ManagedBytes": 150886864
+      },
+      {
+        "Operation": "enhancement",
+        "Entries": 20,
+        "CommandMs": 287.6439,
+        "UsableMs": 671.159,
+        "AllocatedBytes": 44789360,
+        "ManagedBytes": 101954112
+      },
+      {
+        "Operation": "enhancement",
+        "Entries": 20,
+        "CommandMs": 213.8067,
+        "UsableMs": 500.1599,
+        "AllocatedBytes": 44800352,
+        "ManagedBytes": 108687240
+      },
+      {
+        "Operation": "enhancement",
+        "Entries": 20,
+        "CommandMs": 427.0808,
+        "UsableMs": 749.0555,
+        "AllocatedBytes": 44817256,
+        "ManagedBytes": 97819776
+      },
+      {
+        "Operation": "enhancement",
+        "Entries": 20,
+        "CommandMs": 237.1156,
+        "UsableMs": 517.6419,
+        "AllocatedBytes": 44956368,
+        "ManagedBytes": 108855576
+      },
+      {
+        "Operation": "attachment",
+        "Entries": 20,
+        "CommandMs": 284.9701,
+        "UsableMs": 1052.2993,
+        "AllocatedBytes": 101794960,
+        "ManagedBytes": 100219944
+      },
+      {
+        "Operation": "attachment",
+        "Entries": 20,
+        "CommandMs": 330.6411,
+        "UsableMs": 1155.5703,
+        "AllocatedBytes": 101767680,
+        "ManagedBytes": 108084400
+      },
+      {
+        "Operation": "attachment",
+        "Entries": 20,
+        "CommandMs": 388.6849,
+        "UsableMs": 1226.0556,
+        "AllocatedBytes": 101774344,
+        "ManagedBytes": 115960976
+      },
+      {
+        "Operation": "attachment",
+        "Entries": 20,
+        "CommandMs": 403.0557,
+        "UsableMs": 1180.8206,
+        "AllocatedBytes": 101809440,
+        "ManagedBytes": 124200912
+      },
+      {
+        "Operation": "attachment",
+        "Entries": 20,
+        "CommandMs": 391.2963,
+        "UsableMs": 1190.1478,
+        "AllocatedBytes": 102192744,
+        "ManagedBytes": 132567288
+      },
+      {
+        "Operation": "attachment",
+        "Entries": 20,
+        "CommandMs": 286.0057,
+        "UsableMs": 934.8905,
+        "AllocatedBytes": 101849760,
+        "ManagedBytes": 141063352
+      },
+      {
+        "Operation": "attachment",
+        "Entries": 20,
+        "CommandMs": 329.3469,
+        "UsableMs": 996.1499,
+        "AllocatedBytes": 101901096,
+        "ManagedBytes": 149529088
+      },
+      {
+        "Operation": "attachment",
+        "Entries": 20,
+        "CommandMs": 404.2175,
+        "UsableMs": 1081.8122,
+        "AllocatedBytes": 101881160,
+        "ManagedBytes": 162269168
+      },
+      {
+        "Operation": "attachment",
+        "Entries": 20,
+        "CommandMs": 345.1369,
+        "UsableMs": 967.2103,
+        "AllocatedBytes": 101990888,
+        "ManagedBytes": 170806152
+      },
+      {
+        "Operation": "attachment",
+        "Entries": 20,
+        "CommandMs": 236.7522,
+        "UsableMs": 808.1647,
+        "AllocatedBytes": 101740848,
+        "ManagedBytes": 122976696
+      },
+      {
+        "Operation": "detachment",
+        "Entries": 20,
+        "CommandMs": 93.9253,
+        "UsableMs": 430.6386,
+        "AllocatedBytes": 25656248,
+        "ManagedBytes": 135297800
+      },
+      {
+        "Operation": "detachment",
+        "Entries": 20,
+        "CommandMs": 113.3242,
+        "UsableMs": 463.0921,
+        "AllocatedBytes": 25671256,
+        "ManagedBytes": 142094936
+      },
+      {
+        "Operation": "detachment",
+        "Entries": 20,
+        "CommandMs": 97.0467,
+        "UsableMs": 358.1114,
+        "AllocatedBytes": 25695440,
+        "ManagedBytes": 153100176
+      },
+      {
+        "Operation": "detachment",
+        "Entries": 20,
+        "CommandMs": 90.6522,
+        "UsableMs": 360.9591,
+        "AllocatedBytes": 25715800,
+        "ManagedBytes": 159716184
+      },
+      {
+        "Operation": "detachment",
+        "Entries": 20,
+        "CommandMs": 97.6072,
+        "UsableMs": 430.8621,
+        "AllocatedBytes": 25775656,
+        "ManagedBytes": 166122512
+      },
+      {
+        "Operation": "detachment",
+        "Entries": 20,
+        "CommandMs": 103.3175,
+        "UsableMs": 359.1453,
+        "AllocatedBytes": 25763504,
+        "ManagedBytes": 173004200
+      },
+      {
+        "Operation": "detachment",
+        "Entries": 20,
+        "CommandMs": 124.2778,
+        "UsableMs": 429.1776,
+        "AllocatedBytes": 25804968,
+        "ManagedBytes": 184034840
+      },
+      {
+        "Operation": "detachment",
+        "Entries": 20,
+        "CommandMs": 119.3042,
+        "UsableMs": 430.2122,
+        "AllocatedBytes": 25808152,
+        "ManagedBytes": 190891008
+      },
+      {
+        "Operation": "detachment",
+        "Entries": 20,
+        "CommandMs": 128.528,
+        "UsableMs": 502.6742,
+        "AllocatedBytes": 25886928,
+        "ManagedBytes": 197678400
+      },
+      {
+        "Operation": "detachment",
+        "Entries": 20,
+        "CommandMs": 125.7707,
+        "UsableMs": 464.9942,
+        "AllocatedBytes": 25614112,
+        "ManagedBytes": 131939864
+      },
+      {
+        "Operation": "home",
+        "Entries": 20,
+        "CommandMs": 0.1221,
+        "UsableMs": 26.9385,
+        "AllocatedBytes": 2661984,
+        "ManagedBytes": 141667096
+      },
+      {
+        "Operation": "home",
+        "Entries": 20,
+        "CommandMs": 0.1431,
+        "UsableMs": 29.2609,
+        "AllocatedBytes": 2661984,
+        "ManagedBytes": 146138872
+      },
+      {
+        "Operation": "home",
+        "Entries": 20,
+        "CommandMs": 1.3431,
+        "UsableMs": 28.1995,
+        "AllocatedBytes": 2661984,
+        "ManagedBytes": 150691872
+      },
+      {
+        "Operation": "home",
+        "Entries": 20,
+        "CommandMs": 0.187,
+        "UsableMs": 38.1213,
+        "AllocatedBytes": 2661984,
+        "ManagedBytes": 155216472
+      },
+      {
+        "Operation": "home",
+        "Entries": 20,
+        "CommandMs": 0.1314,
+        "UsableMs": 44.1472,
+        "AllocatedBytes": 2661984,
+        "ManagedBytes": 159731800
+      },
+      {
+        "Operation": "home",
+        "Entries": 20,
+        "CommandMs": 0.1397,
+        "UsableMs": 46.4818,
+        "AllocatedBytes": 2661984,
+        "ManagedBytes": 164246936
+      },
+      {
+        "Operation": "home",
+        "Entries": 20,
+        "CommandMs": 0.1141,
+        "UsableMs": 54.8489,
+        "AllocatedBytes": 2661984,
+        "ManagedBytes": 168779160
+      },
+      {
+        "Operation": "home",
+        "Entries": 20,
+        "CommandMs": 0.1098,
+        "UsableMs": 41.8075,
+        "AllocatedBytes": 2661984,
+        "ManagedBytes": 173319376
+      },
+      {
+        "Operation": "home",
+        "Entries": 20,
+        "CommandMs": 0.1064,
+        "UsableMs": 43.8593,
+        "AllocatedBytes": 2661984,
+        "ManagedBytes": 177889592
+      },
+      {
+        "Operation": "home",
+        "Entries": 20,
+        "CommandMs": 0.1219,
+        "UsableMs": 42.0571,
+        "AllocatedBytes": 2661984,
+        "ManagedBytes": 182422384
+      }
+    ],
+    "comparison": [
+      {
+        "operation": "add",
+        "nowMs": {
+          "n": 10,
+          "mean": 637.68938,
+          "median": 616.1843,
+          "p95": 892.7811,
+          "min": 570.0431,
+          "max": 892.7811
+        },
+        "historicalMedianMs": 377.28255
+      },
+      {
+        "operation": "attachment",
+        "nowMs": {
+          "n": 10,
+          "mean": 1059.31212,
+          "median": 1067.05575,
+          "p95": 1226.0556,
+          "min": 808.1647,
+          "max": 1226.0556
+        },
+        "historicalMedianMs": 1159.8775
+      },
+      {
+        "operation": "datasheet",
+        "nowMs": {
+          "n": 10,
+          "mean": 239.50764,
+          "median": 237.56815,
+          "p95": 284.7805,
+          "min": 197.0136,
+          "max": 284.7805
+        },
+        "historicalMedianMs": 129.6915
+      },
+      {
+        "operation": "detachment",
+        "nowMs": {
+          "n": 10,
+          "mean": 422.98668,
+          "median": 430.42539999999997,
+          "p95": 502.6742,
+          "min": 358.1114,
+          "max": 502.6742
+        },
+        "historicalMedianMs": 318.04004999999995
+      },
+      {
+        "operation": "enhancement",
+        "nowMs": {
+          "n": 10,
+          "mean": 587.58063,
+          "median": 573.4544000000001,
+          "p95": 749.0555,
+          "min": 500.1599,
+          "max": 749.0555
+        },
+        "historicalMedianMs": 489.14805
+      },
+      {
+        "operation": "equipment",
+        "nowMs": {
+          "n": 10,
+          "mean": 672.36475,
+          "median": 646.9712999999999,
+          "p95": 854.0812,
+          "min": 571.5837,
+          "max": 854.0812
+        },
+        "historicalMedianMs": 415.51005
+      },
+      {
+        "operation": "home",
+        "nowMs": {
+          "n": 10,
+          "mean": 39.5722,
+          "median": 41.9323,
+          "p95": 54.8489,
+          "min": 26.9385,
+          "max": 54.8489
+        },
+        "historicalMedianMs": 18.88205
+      },
+      {
+        "operation": "open",
+        "nowMs": {
+          "n": 10,
+          "mean": 599.03639,
+          "median": 581.3461500000001,
+          "p95": 749.6261,
+          "min": 521.2701,
+          "max": 749.6261
+        },
+        "historicalMedianMs": 467.06669999999997
+      }
+    ],
+    "startup": [
+      {
+        "AppEntryToUsableMs": 4687.6545,
+        "ProcessStartToUsableMs": 5297.9006,
+        "ManagedBytes": 122459248,
+        "WorkingSetBytes": 264421376,
+        "Runtime": ".NET 10.0.10",
+        "Context": {
+          "ArmyId": "",
+          "EntryId": null,
+          "ModelIndex": null,
+          "LoadoutSection": null,
+          "Screen": "roster"
+        },
+        "SavedArmies": 10,
+        "FullReads": 0,
+        "Assembly": "74997dac-ab4d-4373-9726-3a32320d4d58"
+      },
+      {
+        "AppEntryToUsableMs": 4945.0833,
+        "ProcessStartToUsableMs": 5635.915,
+        "ManagedBytes": 122459248,
+        "WorkingSetBytes": 264114176,
+        "Runtime": ".NET 10.0.10",
+        "Context": {
+          "ArmyId": "",
+          "EntryId": null,
+          "ModelIndex": null,
+          "LoadoutSection": null,
+          "Screen": "roster"
+        },
+        "SavedArmies": 10,
+        "FullReads": 0,
+        "Assembly": "74997dac-ab4d-4373-9726-3a32320d4d58"
+      },
+      {
+        "AppEntryToUsableMs": 5421.3801,
+        "ProcessStartToUsableMs": 5960.802,
+        "ManagedBytes": 122405832,
+        "WorkingSetBytes": 261414912,
+        "Runtime": ".NET 10.0.10",
+        "Context": {
+          "ArmyId": "",
+          "EntryId": null,
+          "ModelIndex": null,
+          "LoadoutSection": null,
+          "Screen": "roster"
+        },
+        "SavedArmies": 10,
+        "FullReads": 0,
+        "Assembly": "74997dac-ab4d-4373-9726-3a32320d4d58"
+      },
+      {
+        "AppEntryToUsableMs": 4989.7083,
+        "ProcessStartToUsableMs": 5605.2969,
+        "ManagedBytes": 122405832,
+        "WorkingSetBytes": 264495104,
+        "Runtime": ".NET 10.0.10",
+        "Context": {
+          "ArmyId": "",
+          "EntryId": null,
+          "ModelIndex": null,
+          "LoadoutSection": null,
+          "Screen": "roster"
+        },
+        "SavedArmies": 10,
+        "FullReads": 0,
+        "Assembly": "74997dac-ab4d-4373-9726-3a32320d4d58"
+      },
+      {
+        "AppEntryToUsableMs": 4718.0771,
+        "ProcessStartToUsableMs": 5427.8652,
+        "ManagedBytes": 122521856,
+        "WorkingSetBytes": 265191424,
+        "Runtime": ".NET 10.0.10",
+        "Context": {
+          "ArmyId": "",
+          "EntryId": null,
+          "ModelIndex": null,
+          "LoadoutSection": null,
+          "Screen": "roster"
+        },
+        "SavedArmies": 10,
+        "FullReads": 0,
+        "Assembly": "74997dac-ab4d-4373-9726-3a32320d4d58"
+      }
+    ]
+  },
+  "storage": {
+    "android": {
+      "raw": {
+        "Checks": [
+          "Legacy and shared formats preserve every bundled field across three revisions",
+          "Provenance updates and one price change round trip"
+        ],
+        "Measurements": [
+          {
+            "Mode": "legacy-full-snapshots",
+            "Revision": 0,
+            "Units": 2194,
+            "WriteMs": 1169.4359,
+            "ReadMs": 2010.8726,
+            "WriteAllocatedBytes": 26349800,
+            "PayloadBytes": 7262108,
+            "DatabaseBytes": 7372800,
+            "Objects": "0"
+          },
+          {
+            "Mode": "legacy-full-snapshots",
+            "Revision": 1,
+            "Units": 2194,
+            "WriteMs": 1139.2182,
+            "ReadMs": 1882.9785,
+            "WriteAllocatedBytes": 21876104,
+            "PayloadBytes": 14524024,
+            "DatabaseBytes": 14700544,
+            "Objects": "0"
+          },
+          {
+            "Mode": "legacy-full-snapshots",
+            "Revision": 2,
+            "Units": 2194,
+            "WriteMs": 1141.6849,
+            "ReadMs": 1896.6452,
+            "WriteAllocatedBytes": 21873648,
+            "PayloadBytes": 21784712,
+            "DatabaseBytes": 22028288,
+            "Objects": "0"
+          },
+          {
+            "Mode": "shared-objects",
+            "Revision": 0,
+            "Units": 2194,
+            "WriteMs": 1835.5468,
+            "ReadMs": 2010.0596,
+            "WriteAllocatedBytes": 36947592,
+            "PayloadBytes": 7048606,
+            "DatabaseBytes": 7630848,
+            "Objects": "513"
+          },
+          {
+            "Mode": "shared-objects",
+            "Revision": 1,
+            "Units": 2194,
+            "WriteMs": 1462.6449,
+            "ReadMs": 2278.2636,
+            "WriteAllocatedBytes": 30819520,
+            "PayloadBytes": 7164336,
+            "DatabaseBytes": 7749632,
+            "Objects": "514"
+          },
+          {
+            "Mode": "shared-objects",
+            "Revision": 2,
+            "Units": 2194,
+            "WriteMs": 1486.795,
+            "ReadMs": 2305.7673,
+            "WriteAllocatedBytes": 30450912,
+            "PayloadBytes": 7299771,
+            "DatabaseBytes": 7888896,
+            "Objects": "516"
+          }
+        ]
+      },
+      "comparison": [
+        {
+          "revision": 0,
+          "previousWriteMs": 1740.0933,
+          "nowWriteMs": 1835.5468,
+          "changePercent": 5.485539194938571,
+          "previousAllocationBytes": 36958856,
+          "nowAllocationBytes": 36947592,
+          "beforeOptimizationAllocationBytes": 93377120
+        },
+        {
+          "revision": 1,
+          "previousWriteMs": 1384.7577,
+          "nowWriteMs": 1462.6449,
+          "changePercent": 5.624608550651122,
+          "previousAllocationBytes": 30819520,
+          "nowAllocationBytes": 30819520,
+          "beforeOptimizationAllocationBytes": 108028632
+        },
+        {
+          "revision": 2,
+          "previousWriteMs": 1422.9907,
+          "nowWriteMs": 1486.795,
+          "changePercent": 4.483817076246521,
+          "previousAllocationBytes": 30450912,
+          "nowAllocationBytes": 30450912,
+          "beforeOptimizationAllocationBytes": 107834056
+        }
+      ]
+    },
+    "windows": {
+      "raw": {
+        "Checks": [
+          "Legacy and shared formats preserve every bundled field across three revisions",
+          "Provenance updates and one price change round trip"
+        ],
+        "Measurements": [
+          {
+            "Mode": "legacy-full-snapshots",
+            "Revision": 0,
+            "Units": 2194,
+            "WriteMs": 1350.7508,
+            "ReadMs": 1822.6856,
+            "WriteAllocatedBytes": 27651528,
+            "PayloadBytes": 9238628,
+            "DatabaseBytes": 9351168,
+            "Objects": "0"
+          },
+          {
+            "Mode": "legacy-full-snapshots",
+            "Revision": 1,
+            "Units": 2194,
+            "WriteMs": 650.9938,
+            "ReadMs": 1038.6821,
+            "WriteAllocatedBytes": 24271640,
+            "PayloadBytes": 18473676,
+            "DatabaseBytes": 18657280,
+            "Objects": "0"
+          },
+          {
+            "Mode": "legacy-full-snapshots",
+            "Revision": 2,
+            "Units": 2194,
+            "WriteMs": 715.9618,
+            "ReadMs": 1400.388,
+            "WriteAllocatedBytes": 24091032,
+            "PayloadBytes": 27704224,
+            "DatabaseBytes": 27967488,
+            "Objects": "0"
+          },
+          {
+            "Mode": "shared-objects",
+            "Revision": 0,
+            "Units": 2194,
+            "WriteMs": 1021.6643,
+            "ReadMs": 1581.3019,
+            "WriteAllocatedBytes": 34576864,
+            "PayloadBytes": 8874412,
+            "DatabaseBytes": 9490432,
+            "Objects": "513"
+          },
+          {
+            "Mode": "shared-objects",
+            "Revision": 1,
+            "Units": 2194,
+            "WriteMs": 808.0333,
+            "ReadMs": 1776.4807,
+            "WriteAllocatedBytes": 28024320,
+            "PayloadBytes": 9044109,
+            "DatabaseBytes": 9662464,
+            "Objects": "514"
+          },
+          {
+            "Mode": "shared-objects",
+            "Revision": 2,
+            "Units": 2194,
+            "WriteMs": 1026.9587,
+            "ReadMs": 1832.1598,
+            "WriteAllocatedBytes": 28167496,
+            "PayloadBytes": 9238962,
+            "DatabaseBytes": 9859072,
+            "Objects": "516"
+          }
+        ]
+      },
+      "comparison": [
+        {
+          "revision": 0,
+          "previousWriteMs": 827.4378,
+          "nowWriteMs": 1021.6643,
+          "changePercent": 23.473244756282586,
+          "previousAllocationBytes": 34857896,
+          "nowAllocationBytes": 34576864,
+          "beforeOptimizationAllocationBytes": 97868688
+        },
+        {
+          "revision": 1,
+          "previousWriteMs": 519.7991,
+          "nowWriteMs": 808.0333,
+          "changePercent": 55.45107715653992,
+          "previousAllocationBytes": 28352104,
+          "nowAllocationBytes": 28024320,
+          "beforeOptimizationAllocationBytes": 106381312
+        },
+        {
+          "revision": 2,
+          "previousWriteMs": 559.2636,
+          "nowWriteMs": 1026.9587,
+          "changePercent": 83.62695158419034,
+          "previousAllocationBytes": 28164096,
+          "nowAllocationBytes": 28167496,
+          "beforeOptimizationAllocationBytes": 106352520
+        }
+      ]
+    }
+  },
+  "limitations": [
+    "WPF host launched hidden; historical visible-window frame timings are not directly comparable.",
+    "Windows shared command timings exclude UI.",
+    "Android 20-entry startup fixture differs from historical fixture; warm caches, fresh processes.",
+    "Storage has one sample per revision/mode, and current/previous same-code latency varies; changes do not isolate code causation.",
+    "Background services and the user desktop app remained active; no network acquisition benchmark."
+  ]
+}

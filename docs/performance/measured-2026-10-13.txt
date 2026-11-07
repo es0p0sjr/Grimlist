@@ -1,0 +1,114 @@
+GrimList Windows and physical Android measurements — 13 October 2026
+
+Measurements and report only. No performance optimizations were applied to production source or deployed. All workloads used isolated disposable databases.
+
+The main priorities are phone datasheet/rule preparation, Windows screen refresh work, and full-library startup. Direct database saves and army copying are small portions of the measured interaction delays.
+
+Startup (milliseconds, median of five fresh-process starts):
+  Existing empty Home: Windows 3,541; Android 7,837.
+  Ten saved 20-unit armies: Windows 4,472; Android 9,070.
+  The saved-army start opens Home on Windows and restores the current roster on Android; these are the platforms’ normal destinations.
+  First installation (one sample, includes bundled database setup): Windows 11,216; Android 46,684.
+
+Actions to render readiness (milliseconds; Windows median / p95 over 20 samples; Android median / maximum over 5 samples):
+Army size / action                      Windows            Android
+ 3 / open                             358 / 503          425 / 575
+ 3 / datasheet                        210 / 237      2,429 / 2,487
+ 3 / add                              255 / 276          459 / 484
+ 3 / equipment                        249 / 328          321 / 326
+ 3 / enhancement                      280 / 304      1,077 / 1,109
+ 3 / attachment                       479 / 586      2,092 / 2,135
+ 3 / detachment                       208 / 252          275 / 282
+ 3 / home                             100 / 121          338 / 353
+20 / open                         1,231 / 1,317          708 / 884
+20 / datasheet                      945 / 1,014      5,618 / 6,192
+20 / add                          1,582 / 1,717          523 / 835
+20 / equipment                    1,561 / 1,650          642 / 689
+20 / enhancement                  2,077 / 2,240      4,945 / 5,119
+20 / attachment                   2,701 / 2,996      6,933 / 7,230
+20 / detachment                   1,492 / 1,694          758 / 771
+20 / home                             799 / 866          372 / 385
+
+Home means returning to a grid containing ten saved armies of the stated size. Each operation resets its fixture before measurement; open and datasheet are navigation cases.
+
+Ranked recommendations for the next optimization pass (potential targets, not measured speedup claims):
+1. Phone datasheet and rules display preparation
+   20-unit datasheet: 5.62 s overall, including 4.45 s preparing data; enhancement preparation 3.21 s; attachment preparation 3.70 s.
+   Profile the individual PrepareUnit steps, reuse effective unit/rule results throughout one refresh, and consider calculating attachment/enhancement choices on demand. Invalidate affected results when equipment, rules, attachments or the library change.
+   src/GrimList.Mobile/MainPage.Unit.cs:16
+2. Windows screen refresh and repeated presentation calculations
+   20-unit equipment: 1.56 s overall versus 0.19 s command; Render submit 1.17 s. Attachments: 2.70 s overall, Render submit 2.05 s.
+   Split Render/RefreshDetails by changed region; reuse unchanged controls and derived display values. Render submit includes calculations as well as constructing controls, so profile its substeps before attributing all cost to layout.
+   src/GrimList.Desktop/MainWindow.xaml.cs:94
+3. Library startup and memory footprint on both platforms
+   Empty Home startup 3.54 s Windows / 7.84 s phone. Phone load/normalization 3.21 s, projection recovery 1.26 s, dataset indexes 2.07 s; 726 MiB cumulative managed allocations.
+   Reduce data materialized before readiness; evaluate lazy faction/datasheet loading and persisted reusable indexes. This is a larger storage/indexing change requiring correctness checks.
+   src/GrimList.Persistence/ArmyStore.cs:105
+4. Windows home summaries
+   Returning home with ten 20-unit armies costs 0.80 s; Windows HomeView recalculates every army, while Android already uses cached summaries.
+   Use the existing shared cached army summaries on Windows, then update only changed cards.
+   src/GrimList.Desktop/HomeView.xaml.cs:22
+5. Remaining command validation/normalization work
+   Phone 20-unit equipment command 0.62 s and attachment command 1.45 s; direct saves roughly 5–6 ms and copies roughly 1–3 ms.
+   Measure normalization and eligibility/validation substeps next. Defer broad SQL-save and clone rewrites: these measured costs do not justify putting them first.
+   src/GrimList.Application/ArmySession.cs:163
+
+Breakdown for 20-unit armies (median milliseconds; phase medians need not add to the overall median):
+WINDOWS
+  open: command=108.6; Calculate=43.1, Copy=0.2, Save=8.7, UI.FrameWait=176.8, UI.RenderSubmit=950.4; allocated=174.2 MiB
+  datasheet: command=6.1; UI.FrameWait=86.5, UI.RenderSubmit=853.4; allocated=147.0 MiB
+  equipment: command=189.0; Calculate=55.9, Copy=0.4, Save=8.9, UI.FrameWait=190.1, UI.RenderSubmit=1173.4; allocated=182.4 MiB
+  enhancement: command=357.6; Calculate=62.2, Copy=0.4, Save=8.4, UI.FrameWait=148.8, UI.RenderSubmit=1577.3; allocated=231.9 MiB
+  attachment: command=493.6; Calculate=184.0, Copy=0.4, Save=9.0, UI.FrameWait=139.1, UI.RenderSubmit=2050.5; allocated=298.6 MiB
+  home: command=0.1; UI.FrameWait=139.8, UI.RenderSubmit=662.5; allocated=81.5 MiB
+ANDROID
+  open: command=520.5; Calculate=129.4, Copy=1.2, Save=5.2, UI.FrameWait=129.2, UI.Prepare=1.7, UI.RenderSubmit=40.4; allocated=19.6 MiB
+  datasheet: command=19.1; UI.FrameWait=90.7, UI.Prepare=4447.5, UI.RenderSubmit=846.1; allocated=207.1 MiB
+  equipment: command=615.9; Calculate=130.2, Copy=2.7, Save=5.2, UI.FrameWait=11.2, UI.Prepare=5.5, UI.RenderSubmit=1.3; allocated=27.4 MiB
+  enhancement: command=1171.8; Calculate=166.4, Copy=2.0, Save=5.5, UI.FrameWait=50.3, UI.Prepare=3213.1, UI.RenderSubmit=464.6; allocated=252.7 MiB
+  attachment: command=1448.7; Calculate=443.5, Copy=1.8, Save=5.5, UI.FrameWait=53.6, UI.Prepare=3696.7, UI.RenderSubmit=1663.8; allocated=345.8 MiB
+  home: command=11.5; UI.FrameWait=34.7, UI.Prepare=29.8, UI.RenderSubmit=293.5; allocated=4.7 MiB
+
+Startup phase medians, existing empty Home (milliseconds):
+  windows: Session.DatasetIndex=663, Session.DetachmentRecovery=68, Session.EffectiveRecovery=547, Session.EnhancementRecovery=2, Session.LoadDataset=1200
+  android: Android.LoadDataset=3213, Session.DatasetIndex=2070, Session.DetachmentRecovery=141, Session.EffectiveRecovery=1264, Session.EnhancementRecovery=4
+
+Memory (snapshots, not peaks; allocations are not resident memory):
+  windows empty: AllocatedBytes=671.8 MiB, ManagedBytes=416.0 MiB, WorkingSetBytes=521.3 MiB
+  windows saved: AllocatedBytes=754.2 MiB, ManagedBytes=417.1 MiB, WorkingSetBytes=526.7 MiB
+  android empty: AllocatedBytes=726.3 MiB, ManagedBytes=453.9 MiB, PssBytes=504.6 MiB, RssBytes=628.5 MiB
+  android saved: AllocatedBytes=750.8 MiB, ManagedBytes=457.9 MiB, PssBytes=549.1 MiB, RssBytes=673.2 MiB
+
+Measurement method and limits:
+  build: Release, current source snapshot with diagnostic instrumentation; Android trimming and AOT disabled as shipped
+  startup: First install measured separately. Five fresh-process repeats with an existing empty database, then five with ten saved 20-entry armies. Windows opens Home; Android restores its roster on the saved-army runs. OS file caches are not reset.
+  operations: Windows: 20 recorded samples per case. Android: 5 recorded samples per case in fresh-process batches after the long stress run aborted in Mono. One unrecorded warm-up per case. Each sample resets the fixture outside the timer. Ten saved armies. Commands use the shared session; native WPF/MAUI presentation follows. No touch-input injection.
+  readiness: Two rendering callbacks after presentation. These are render-readiness proxies, not hardware display/input latency measurements.
+  percentiles: Nearest-rank p95. Windows has 20 interaction samples per case; Android has 5, so its p95 equals the observed maximum and must not be treated as a reliable tail estimate. Startup has 5 samples per state.
+  memory: Managed heap without forced GC; allocated bytes are cumulative allocation, not resident memory. Windows uses precise allocation sampling; Android interaction batches use approximate counters after runtime thread-suspension assertions in the long run. Windows working set and Android PSS are different OS metrics.
+  - Synthetic Death Guard fixtures, not the user database.
+  - Android receives its bundled Stratagem supplement; Windows uses its own normal bundled library. Library card counts differ, so ratios are not pure hardware comparisons.
+  - Diagnostic timings include instrumentation overhead; its exact cost was not isolated.
+  - Desktop command work runs through the shared async harness before native rendering; this does not measure production UI-thread blocking or input latency.
+  - UI.RenderSubmit includes presentation calculations, control creation, and binding work; it is not a GPU-only or layout-only measurement.
+  - The initial Windows datasheet case incorrectly called full Render; its 40 samples were excluded and replaced by 40 samples using the actual RefreshDetails path. Both raw runs are retained.
+  - Background applications and OS caches were not reset.
+  - No scrolling gesture/frame-jank benchmark: phone input injection is restricted.
+  - No optimizations applied; there is no before/after speedup claim.
+
+Environment:
+  Windows 11 build 26200, Intel Core i7-9750H, 12 logical processors; .NET 10.0.10.
+  Physical Redmi Note 12 Pro+ 5G, Android 14; USB powered. Thermal and battery snapshots are retained.
+  Thermal service reported status 0 before and after. Battery temperature: 31.0 C before, 33.6 C after.
+  Normal libraries: Windows 2194 units / 3880 reference cards; Android 2194 units / 6049 reference cards.
+
+Validation: 236 original source/resource files hash-checked unchanged; 400 valid interaction samples. The initial 40 Windows datasheet samples were replaced with a corrected run using the production detail-refresh path.
+The long Android run hit native Mono thread-suspension assertions and produced no valid final interaction samples. Android was remeasured in short checkpointed batches with approximate allocation counters. This is a diagnostic stability finding, not proof that the production app has the same failure or that allocation sampling caused it.
+The precise allocation API has documented overhead; its use was removed from the revised phone interaction harness. Documentation: https://learn.microsoft.com/en-us/dotnet/api/system.gc.gettotalallocatedbytes?view=net-10.0
+A stale incremental Android native-binding failure was caught during the diagnostic rebuild; a fresh intermediate/output build passed scripts/check_android_startup.py for ARM64 and x64 before the successful batched runs.
+
+Raw evidence and diagnostic sources:
+  .local/performance-pass-20261013/ (final source snapshot, both diagnostic APKs, initial and batched collectors, raw JSON, memory/frame/thermal reports)
+  measure-batches.py is the final phone collector. prepare.py and measure.py preserve the initial protocol; the retained source directory includes the later checkpointed-harness changes.
+  The temporary phone benchmark package was removed after collection. Production GrimList remains version 0.2.6/code 8, with its update timestamp unchanged.
+  docs/performance/measured-2026-10-13.json (structured summary and startup samples)

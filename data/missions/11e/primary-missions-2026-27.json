@@ -1,0 +1,2985 @@
+{
+  "schemaVersion": 1,
+  "edition": "11",
+  "season": "2026-27",
+  "source": {
+    "url": "https://wahapedia.ru/wh40k11ed/the-rules/warhammer-event-companion/#Primary-Mission-deck",
+    "sha256": "b838e30469ceb67110d688fcd304e2312d4af54925f370c9a11ad228de92a0c4"
+  },
+  "cards": [
+    {
+      "id": "ca2026-primary-battlefield-dominance",
+      "name": "BATTLEFIELD DOMINANCE",
+      "modes": [
+        "Primary"
+      ],
+      "sections": [
+        {
+          "kind": "scoring",
+          "roundsText": "FIRST AND SECOND BATTLE ROUND",
+          "timingText": "WHEN: End of your turn.",
+          "conditions": [
+            {
+              "id": "ca2026-primary-battlefield-dominance-g1-s1",
+              "relationToPrevious": "independent",
+              "condition": {
+                "text": "You control more objectives than your opponent.",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Primary"
+                  ],
+                  "vp": 2,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "scoring",
+          "roundsText": "SECOND BATTLE ROUND ONWARDS",
+          "timingText": "WHEN: End of your Command phase (or the end of your turn in the fifth battle round).",
+          "conditions": [
+            {
+              "id": "ca2026-primary-battlefield-dominance-g2-s1",
+              "relationToPrevious": "independent",
+              "condition": {
+                "text": "For each objective you control.",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Primary"
+                  ],
+                  "vp": 3,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            },
+            {
+              "id": "ca2026-primary-battlefield-dominance-g2-s2",
+              "relationToPrevious": "cumulative",
+              "condition": {
+                "text": "For each of those objectives (excluding your home objective) if you control your home objective.",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Primary"
+                  ],
+                  "vp": 2,
+                  "bonus": true,
+                  "cumulative": true,
+                  "capVp": null
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ca2026-primary-immovable-object",
+      "name": "IMMOVABLE OBJECT",
+      "modes": [
+        "Primary"
+      ],
+      "sections": [
+        {
+          "kind": "scoring",
+          "roundsText": "ANY BATTLE ROUND",
+          "timingText": "WHEN: End of your turn.",
+          "conditions": [
+            {
+              "id": "ca2026-primary-immovable-object-g1-s1",
+              "relationToPrevious": "independent",
+              "condition": {
+                "text": "You control one or more central objectives.",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Primary"
+                  ],
+                  "vp": 3,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "scoring",
+          "roundsText": "SECOND TO FOURTH BATTLE ROUND",
+          "timingText": "WHEN: End of your Command phase.",
+          "conditions": [
+            {
+              "id": "ca2026-primary-immovable-object-g2-s1",
+              "relationToPrevious": "independent",
+              "condition": {
+                "text": "For each objective you control (excluding your home objective).",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Primary"
+                  ],
+                  "vp": 5,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "scoring",
+          "roundsText": "FIFTH BATTLE ROUND",
+          "timingText": "WHEN: End of your turn.",
+          "conditions": [
+            {
+              "id": "ca2026-primary-immovable-object-g3-s1",
+              "relationToPrevious": "independent",
+              "condition": {
+                "text": "For each objective you control (excluding your home objective).",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Primary"
+                  ],
+                  "vp": 5,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ca2026-primary-determined-acquisition",
+      "name": "DETERMINED ACQUISITION",
+      "modes": [
+        "Primary"
+      ],
+      "sections": [
+        {
+          "kind": "scoring",
+          "roundsText": "ANY BATTLE ROUND",
+          "timingText": "WHEN: End of your turn.",
+          "conditions": [
+            {
+              "id": "ca2026-primary-determined-acquisition-g1-s1",
+              "relationToPrevious": "independent",
+              "condition": {
+                "text": "For each objective you control that you did not control at the start of the turn (excluding your home objective).",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Primary"
+                  ],
+                  "vp": 2,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "scoring",
+          "roundsText": "SECOND BATTLE ROUND ONWARDS",
+          "timingText": "WHEN: End of your Command phase (or the end of your turn in the fifth battle round).",
+          "conditions": [
+            {
+              "id": "ca2026-primary-determined-acquisition-g2-s1",
+              "relationToPrevious": "independent",
+              "condition": {
+                "text": "For each objective you control.",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Primary"
+                  ],
+                  "vp": 3,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            },
+            {
+              "id": "ca2026-primary-determined-acquisition-g2-s2",
+              "relationToPrevious": "cumulative",
+              "condition": {
+                "text": "For each of those objectives that is within your opponent’s territory.",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Primary"
+                  ],
+                  "vp": 3,
+                  "bonus": true,
+                  "cumulative": true,
+                  "capVp": null
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ca2026-primary-purge-and-secure",
+      "name": "PURGE AND SECURE",
+      "modes": [
+        "Primary"
+      ],
+      "sections": [
+        {
+          "kind": "scoring",
+          "roundsText": "ANY BATTLE ROUND",
+          "timingText": "WHEN: End of your turn.",
+          "conditions": [
+            {
+              "id": "ca2026-primary-purge-and-secure-g1-s1",
+              "relationToPrevious": "independent",
+              "condition": {
+                "text": "One or more enemy units were destroyed this turn by a friendly unit that was within range of one or more objectives.",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Primary"
+                  ],
+                  "vp": 3,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            },
+            {
+              "id": "ca2026-primary-purge-and-secure-g1-s2",
+              "relationToPrevious": "alternative",
+              "condition": {
+                "text": "One or more enemy units that started the turn within range of one or more objectives were destroyed this turn.",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Primary"
+                  ],
+                  "vp": 3,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "scoring",
+          "roundsText": "SECOND BATTLE ROUND ONWARDS",
+          "timingText": "WHEN: End of your Command phase (or the end of your turn in the fifth battle round).",
+          "conditions": [
+            {
+              "id": "ca2026-primary-purge-and-secure-g2-s1",
+              "relationToPrevious": "independent",
+              "condition": {
+                "text": "For each objective you control (excluding your home objective).",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Primary"
+                  ],
+                  "vp": 4,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "scoring",
+          "roundsText": "SECOND BATTLE ROUND ONWARDS",
+          "timingText": "WHEN: End of your turn.",
+          "conditions": [
+            {
+              "id": "ca2026-primary-purge-and-secure-g3-s1",
+              "relationToPrevious": "independent",
+              "condition": {
+                "text": "You control one or more objectives you did not control at the start of the turn (excluding your home objective).",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Primary"
+                  ],
+                  "vp": 3,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ca2026-primary-inescapable-dominion",
+      "name": "INESCAPABLE DOMINION",
+      "modes": [
+        "Primary"
+      ],
+      "sections": [
+        {
+          "kind": "scoring",
+          "roundsText": "ANY BATTLE ROUND",
+          "timingText": "WHEN: End of your turn.",
+          "conditions": [
+            {
+              "id": "ca2026-primary-inescapable-dominion-g1-s1",
+              "relationToPrevious": "independent",
+              "condition": {
+                "text": "You control three or more objectives.",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Primary"
+                  ],
+                  "vp": 4,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "scoring",
+          "roundsText": "SECOND BATTLE ROUND ONWARDS",
+          "timingText": "WHEN: End of your Command phase (or the end of your turn in the fifth battle round).",
+          "conditions": [
+            {
+              "id": "ca2026-primary-inescapable-dominion-g2-s1",
+              "relationToPrevious": "independent",
+              "condition": {
+                "text": "You control two or more objectives.",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Primary"
+                  ],
+                  "vp": 5,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            },
+            {
+              "id": "ca2026-primary-inescapable-dominion-g2-s2",
+              "relationToPrevious": "independent",
+              "condition": {
+                "text": "You control more objectives than your opponent.",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Primary"
+                  ],
+                  "vp": 4,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "scoring",
+          "roundsText": "END OF THE BATTLE",
+          "timingText": "End of the battle.",
+          "conditions": [
+            {
+              "id": "ca2026-primary-inescapable-dominion-g3-s1",
+              "relationToPrevious": "independent",
+              "condition": {
+                "text": "You control your opponent’s home objective.",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Primary"
+                  ],
+                  "vp": 5,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ca2026-primary-unstoppable-force",
+      "name": "UNSTOPPABLE FORCE",
+      "modes": [
+        "Primary"
+      ],
+      "sections": [
+        {
+          "kind": "scoring",
+          "roundsText": "ANY BATTLE ROUND",
+          "timingText": "WHEN: End of your turn.",
+          "conditions": [
+            {
+              "id": "ca2026-primary-unstoppable-force-g1-s1",
+              "relationToPrevious": "independent",
+              "condition": {
+                "text": "One or more enemy units were destroyed this turn.",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Primary"
+                  ],
+                  "vp": 3,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "scoring",
+          "roundsText": "SECOND BATTLE ROUND ONWARDS",
+          "timingText": "WHEN: End of your Command phase (or the end of your turn in the fifth battle round).",
+          "conditions": [
+            {
+              "id": "ca2026-primary-unstoppable-force-g2-s1",
+              "relationToPrevious": "independent",
+              "condition": {
+                "text": "For each objective you control (excluding your home objective).",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Primary"
+                  ],
+                  "vp": 4,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "scoring",
+          "roundsText": "SECOND BATTLE ROUND ONWARDS",
+          "timingText": "WHEN: End of your turn.",
+          "conditions": [
+            {
+              "id": "ca2026-primary-unstoppable-force-g3-s1",
+              "relationToPrevious": "independent",
+              "condition": {
+                "text": "You control one or more objectives you did not control at the start of the turn (excluding your home objective).",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Primary"
+                  ],
+                  "vp": 3,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "scoring",
+          "roundsText": "END OF THE BATTLE",
+          "timingText": "End of the battle.",
+          "conditions": [
+            {
+              "id": "ca2026-primary-unstoppable-force-g4-s1",
+              "relationToPrevious": "independent",
+              "condition": {
+                "text": "You control one or more central objectives.",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Primary"
+                  ],
+                  "vp": 5,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ca2026-primary-meatgrinder",
+      "name": "MEATGRINDER",
+      "modes": [
+        "Primary"
+      ],
+      "sections": [
+        {
+          "kind": "scoring",
+          "roundsText": "ANY BATTLE ROUND",
+          "timingText": "WHEN: End of your turn.",
+          "conditions": [
+            {
+              "id": "ca2026-primary-meatgrinder-g1-s1",
+              "relationToPrevious": "independent",
+              "condition": {
+                "text": "One or more enemy units were destroyed this turn.",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Primary"
+                  ],
+                  "vp": 3,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "scoring",
+          "roundsText": "SECOND BATTLE ROUND ONWARDS",
+          "timingText": "WHEN: End of your Command phase (or the end of your turn in the fifth battle round).",
+          "conditions": [
+            {
+              "id": "ca2026-primary-meatgrinder-g2-s1",
+              "relationToPrevious": "independent",
+              "condition": {
+                "text": "You control one or more objectives (excluding your home objective).",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Primary"
+                  ],
+                  "vp": 4,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "scoring",
+          "roundsText": "SECOND BATTLE ROUND ONWARDS",
+          "timingText": "WHEN: End of your turn.",
+          "conditions": [
+            {
+              "id": "ca2026-primary-meatgrinder-g3-s1",
+              "relationToPrevious": "independent",
+              "condition": {
+                "text": "More enemy units were destroyed this turn than friendly units were destroyed in the previous turn.",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Primary"
+                  ],
+                  "vp": 5,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            },
+            {
+              "id": "ca2026-primary-meatgrinder-g3-s2",
+              "relationToPrevious": "independent",
+              "condition": {
+                "text": "You control your opponent’s home objective.",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Primary"
+                  ],
+                  "vp": 5,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ca2026-primary-punishment",
+      "name": "PUNISHMENT",
+      "modes": [
+        "Primary"
+      ],
+      "sections": [
+        {
+          "kind": "instruction",
+          "text": "START OF YOUR TURN: Select one to three enemy units that are on the battlefield and within range of objectives and/or that destroyed one or more friendly units in the previous turn. If you cannot, select one enemy unit that is on the battlefield. Until the start of your next turn, those units are condemned.",
+          "underlined": []
+        },
+        {
+          "kind": "scoring",
+          "roundsText": "ANY BATTLE ROUND",
+          "timingText": "WHEN: End of a turn.",
+          "conditions": [
+            {
+              "id": "ca2026-primary-punishment-g1-s1",
+              "relationToPrevious": "independent",
+              "condition": {
+                "text": "One or more condemned enemy units left the battlefield this turn.",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Primary"
+                  ],
+                  "vp": 5,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "scoring",
+          "roundsText": "SECOND BATTLE ROUND ONWARDS",
+          "timingText": "WHEN: End of your Command phase (or the end of your turn in the fifth battle round).",
+          "conditions": [
+            {
+              "id": "ca2026-primary-punishment-g2-s1",
+              "relationToPrevious": "independent",
+              "condition": {
+                "text": "You control one or more objectives (excluding your home objective).",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Primary"
+                  ],
+                  "vp": 4,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            },
+            {
+              "id": "ca2026-primary-punishment-g2-s2",
+              "relationToPrevious": "independent",
+              "condition": {
+                "text": "You control more objectives than your opponent.",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Primary"
+                  ],
+                  "vp": 5,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "scoring",
+          "roundsText": "END OF THE BATTLE",
+          "timingText": "End of the battle.",
+          "conditions": [
+            {
+              "id": "ca2026-primary-punishment-g3-s1",
+              "relationToPrevious": "independent",
+              "condition": {
+                "text": "You control your opponent’s home objective.",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Primary"
+                  ],
+                  "vp": 8,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ca2026-primary-consecrate",
+      "name": "CONSECRATE",
+      "modes": [
+        "Primary"
+      ],
+      "sections": [
+        {
+          "kind": "instruction",
+          "text": "Each time a friendly unit destroys a unit, that friendly unit becomes a consecration unit. At the end of your turn, for each of your consecration units, you can select one objective it is within range of (excluding your home objective) that has not been consecrated. If you do, place one of your operation markers within range of that objective – that objective is consecrated and that unit is no longer a consecration unit.",
+          "underlined": []
+        },
+        {
+          "kind": "scoring",
+          "roundsText": "ANY BATTLE ROUND",
+          "timingText": "WHEN: End of your turn.",
+          "conditions": [
+            {
+              "id": "ca2026-primary-consecrate-g1-s1",
+              "relationToPrevious": "independent",
+              "condition": {
+                "text": "One or two objectives are consecrated.",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Primary"
+                  ],
+                  "vp": 3,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            },
+            {
+              "id": "ca2026-primary-consecrate-g1-s2",
+              "relationToPrevious": "alternative",
+              "condition": {
+                "text": "Three or more objectives are consecrated.",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Primary"
+                  ],
+                  "vp": 6,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "scoring",
+          "roundsText": "SECOND BATTLE ROUND ONWARDS",
+          "timingText": "WHEN: End of your Command phase (or the end of your turn in the fifth battle round).",
+          "conditions": [
+            {
+              "id": "ca2026-primary-consecrate-g2-s1",
+              "relationToPrevious": "independent",
+              "condition": {
+                "text": "You control one or more objectives (excluding your home objective).",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Primary"
+                  ],
+                  "vp": 4,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            },
+            {
+              "id": "ca2026-primary-consecrate-g2-s2",
+              "relationToPrevious": "independent",
+              "condition": {
+                "text": "You control more objectives than your opponent.",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Primary"
+                  ],
+                  "vp": 4,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "scoring",
+          "roundsText": "END OF THE BATTLE",
+          "timingText": "End of the battle.",
+          "conditions": [
+            {
+              "id": "ca2026-primary-consecrate-g3-s1",
+              "relationToPrevious": "independent",
+              "condition": {
+                "text": "Your opponent’s home objective is consecrated.",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Primary"
+                  ],
+                  "vp": 5,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ca2026-primary-destroyer-s-wrath",
+      "name": "DESTROYER'S WRATH",
+      "modes": [
+        "Primary"
+      ],
+      "sections": [
+        {
+          "kind": "scoring",
+          "roundsText": "ANY BATTLE ROUND",
+          "timingText": "WHEN: End of your turn.",
+          "conditions": [
+            {
+              "id": "ca2026-primary-destroyer-s-wrath-g1-s1",
+              "relationToPrevious": "independent",
+              "condition": {
+                "text": "One or more enemy units were destroyed this turn.",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Primary"
+                  ],
+                  "vp": 3,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "scoring",
+          "roundsText": "SECOND BATTLE ROUND ONWARDS",
+          "timingText": "WHEN: End of your Command phase (or the end of your turn in the fifth battle round).",
+          "conditions": [
+            {
+              "id": "ca2026-primary-destroyer-s-wrath-g2-s1",
+              "relationToPrevious": "independent",
+              "condition": {
+                "text": "You control one or more objectives (excluding your home objective).",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Primary"
+                  ],
+                  "vp": 4,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            },
+            {
+              "id": "ca2026-primary-destroyer-s-wrath-g2-s2",
+              "relationToPrevious": "independent",
+              "condition": {
+                "text": "You control more objectives than your opponent.",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Primary"
+                  ],
+                  "vp": 6,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "scoring",
+          "roundsText": "SECOND BATTLE ROUND ONWARDS",
+          "timingText": "WHEN: End of your turn.",
+          "conditions": [
+            {
+              "id": "ca2026-primary-destroyer-s-wrath-g3-s1",
+              "relationToPrevious": "independent",
+              "condition": {
+                "text": "More enemy units were destroyed this turn than friendly units were destroyed in the previous turn.",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Primary"
+                  ],
+                  "vp": 4,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ca2026-primary-death-trap",
+      "name": "DEATH TRAP",
+      "modes": [
+        "Primary"
+      ],
+      "sections": [
+        {
+          "kind": "scoring",
+          "roundsText": "ANY BATTLE ROUND",
+          "timingText": "WHEN: End of your turn.",
+          "conditions": [
+            {
+              "id": "ca2026-primary-death-trap-g1-s1",
+              "relationToPrevious": "independent",
+              "condition": {
+                "text": "For each terrain area trapped this turn (see below).",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Primary"
+                  ],
+                  "vp": 2,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            },
+            {
+              "id": "ca2026-primary-death-trap-g1-s2",
+              "relationToPrevious": "cumulative",
+              "condition": {
+                "text": "For each of those terrain areas that is an objective.",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Primary"
+                  ],
+                  "vp": 3,
+                  "bonus": true,
+                  "cumulative": true,
+                  "capVp": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "scoring",
+          "roundsText": "ANY BATTLE ROUND",
+          "timingText": "WHEN: End of your turn.",
+          "conditions": [
+            {
+              "id": "ca2026-primary-death-trap-g2-s1",
+              "relationToPrevious": "independent",
+              "condition": {
+                "text": "One or more enemy units that started the turn within a terrain area were destroyed, if that terrain area is trapped.",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Primary"
+                  ],
+                  "vp": 3,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "scoring",
+          "roundsText": "SECOND BATTLE ROUND ONWARDS",
+          "timingText": "WHEN: End of your Command phase (or the end of your turn in the fifth battle round).",
+          "conditions": [
+            {
+              "id": "ca2026-primary-death-trap-g3-s1",
+              "relationToPrevious": "independent",
+              "condition": {
+                "text": "You control one or more objectives (excluding your home objective).",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Primary"
+                  ],
+                  "vp": 4,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "action",
+          "name": "BOOBY TRAP",
+          "actionType": "OBJECTIVE ACTION",
+          "fields": [
+            {
+              "label": "STARTS",
+              "text": "Your Shooting phase."
+            },
+            {
+              "label": "UNITS",
+              "text": "One friendly unit within range of exactly one objective (excluding your home objective) or within exactly one terrain area that is not within your deployment zone, that you have not yet trapped (see below)."
+            },
+            {
+              "label": "USE LIMIT",
+              "text": "Unlimited. Each unit that starts this action this phase must be within a different terrain area."
+            },
+            {
+              "label": "COMPLETES",
+              "text": "Immediately."
+            },
+            {
+              "label": "EFFECT",
+              "text": "That terrain area is trapped: place one of your operation markers within that terrain area."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ca2026-primary-delaying-action",
+      "name": "DELAYING ACTION",
+      "modes": [
+        "Primary"
+      ],
+      "sections": [
+        {
+          "kind": "scoring",
+          "roundsText": "ANY BATTLE ROUND",
+          "timingText": "WHEN: End of your turn.",
+          "conditions": [
+            {
+              "id": "ca2026-primary-delaying-action-g1-s1",
+              "relationToPrevious": "independent",
+              "condition": {
+                "text": "For each enemy unit destroyed this turn.",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Primary"
+                  ],
+                  "vp": 2,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "scoring",
+          "roundsText": "SECOND BATTLE ROUND ONWARDS",
+          "timingText": "WHEN: End of your Command phase (or the end of your turn in the fifth battle round).",
+          "conditions": [
+            {
+              "id": "ca2026-primary-delaying-action-g2-s1",
+              "relationToPrevious": "independent",
+              "condition": {
+                "text": "You control one or more objectives (excluding your home objective).",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Primary"
+                  ],
+                  "vp": 4,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "scoring",
+          "roundsText": "SECOND BATTLE ROUND ONWARDS",
+          "timingText": "WHEN: End of your turn.",
+          "conditions": [
+            {
+              "id": "ca2026-primary-delaying-action-g3-s1",
+              "relationToPrevious": "independent",
+              "condition": {
+                "text": "You control one or more central objectives and one or more expansion objectives.",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Primary"
+                  ],
+                  "vp": 3,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ca2026-primary-outmanoeuvre",
+      "name": "OUTMANOEUVRE",
+      "modes": [
+        "Primary"
+      ],
+      "sections": [
+        {
+          "kind": "scoring",
+          "roundsText": "ANY BATTLE ROUND",
+          "timingText": "WHEN: End of your turn.",
+          "conditions": [
+            {
+              "id": "ca2026-primary-outmanoeuvre-g1-s1",
+              "relationToPrevious": "independent",
+              "condition": {
+                "text": "You control your opponent’s home objective.",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Primary"
+                  ],
+                  "vp": 10,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "scoring",
+          "roundsText": "FIRST BATTLE ROUND",
+          "timingText": "WHEN: End of your turn.",
+          "conditions": [
+            {
+              "id": "ca2026-primary-outmanoeuvre-g2-s1",
+              "relationToPrevious": "independent",
+              "condition": {
+                "text": "For each objective you control (excluding your home objective).",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Primary"
+                  ],
+                  "vp": 4,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "scoring",
+          "roundsText": "SECOND AND THIRD BATTLE ROUND",
+          "timingText": "WHEN: End of your Command phase.",
+          "conditions": [
+            {
+              "id": "ca2026-primary-outmanoeuvre-g3-s1",
+              "relationToPrevious": "independent",
+              "condition": {
+                "text": "For each objective you control (excluding your home objective).",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Primary"
+                  ],
+                  "vp": 5,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "scoring",
+          "roundsText": "FOURTH BATTLE ROUND ONWARDS",
+          "timingText": "WHEN: End of your turn.",
+          "conditions": [
+            {
+              "id": "ca2026-primary-outmanoeuvre-g4-s1",
+              "relationToPrevious": "independent",
+              "condition": {
+                "text": "For each objective you control (excluding your home objective).",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Primary"
+                  ],
+                  "vp": 6,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ca2026-primary-smoke-and-mirrors",
+      "name": "SMOKE AND MIRRORS",
+      "modes": [
+        "Primary"
+      ],
+      "sections": [
+        {
+          "kind": "scoring",
+          "roundsText": "ANY BATTLE ROUND",
+          "timingText": "WHEN: End of your turn.",
+          "conditions": [
+            {
+              "id": "ca2026-primary-smoke-and-mirrors-g1-s1",
+              "relationToPrevious": "independent",
+              "condition": {
+                "text": "For each objective that is decoyed (see below).",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Primary"
+                  ],
+                  "vp": 2,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            },
+            {
+              "id": "ca2026-primary-smoke-and-mirrors-g1-s2",
+              "relationToPrevious": "cumulative",
+              "condition": {
+                "text": "For each of those objectives that is within your opponent’s territory.",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Primary"
+                  ],
+                  "vp": 2,
+                  "bonus": true,
+                  "cumulative": true,
+                  "capVp": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "scoring",
+          "roundsText": "SECOND BATTLE ROUND ONWARDS",
+          "timingText": "WHEN: End of your Command phase (or the end of your turn in the fifth battle round).",
+          "conditions": [
+            {
+              "id": "ca2026-primary-smoke-and-mirrors-g2-s1",
+              "relationToPrevious": "independent",
+              "condition": {
+                "text": "You control one or more objectives (excluding your home objective).",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Primary"
+                  ],
+                  "vp": 4,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "scoring",
+          "roundsText": "END OF THE BATTLE",
+          "timingText": "End of the battle.",
+          "conditions": [
+            {
+              "id": "ca2026-primary-smoke-and-mirrors-g3-s1",
+              "relationToPrevious": "independent",
+              "condition": {
+                "text": "Four or more objectives are decoyed.",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Primary"
+                  ],
+                  "vp": 10,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "action",
+          "name": "DECOY",
+          "actionType": "OBJECTIVE ACTION",
+          "fields": [
+            {
+              "label": "STARTS",
+              "text": "Your Shooting phase."
+            },
+            {
+              "label": "UNITS",
+              "text": "One friendly unit within range of exactly one objective (excluding your home objective) that is not decoyed (see below)."
+            },
+            {
+              "label": "USE LIMIT",
+              "text": "Unlimited. Each unit that starts this action this phase must be within range of a different objective."
+            },
+            {
+              "label": "COMPLETES",
+              "text": "End of your turn, if your unit controls that objective."
+            },
+            {
+              "label": "EFFECT",
+              "text": "That objective is decoyed: place one of your operation markers within range of that objective."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ca2026-primary-locate-and-deny",
+      "name": "LOCATE AND DENY",
+      "modes": [
+        "Primary"
+      ],
+      "sections": [
+        {
+          "kind": "instruction",
+          "text": "START OF THE BATTLE: Select five terrain areas not within your deployment zone; for each one, place one of your operation markers within it. If you cannot, do so for each terrain area that is not within your deployment zone.",
+          "underlined": []
+        },
+        {
+          "kind": "scoring",
+          "roundsText": "ANY BATTLE ROUND",
+          "timingText": "WHEN: End of your turn.",
+          "conditions": [
+            {
+              "id": "ca2026-primary-locate-and-deny-g1-s1",
+              "relationToPrevious": "independent",
+              "condition": {
+                "text": "One or more enemy units that started the turn within range of one or more objectives are destroyed.",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Primary"
+                  ],
+                  "vp": 4,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            },
+            {
+              "id": "ca2026-primary-locate-and-deny-g1-s2",
+              "relationToPrevious": "independent",
+              "condition": {
+                "text": "Only one of your operation markers is on the battlefield (see below), if one or more of your units are within the same terrain area as that marker, and no enemy units are within that terrain area.",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Primary"
+                  ],
+                  "vp": 4,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "scoring",
+          "roundsText": "SECOND BATTLE ROUND ONWARDS",
+          "timingText": "WHEN: End of your Command phase (or the end of your turn in the fifth battle round).",
+          "conditions": [
+            {
+              "id": "ca2026-primary-locate-and-deny-g2-s1",
+              "relationToPrevious": "independent",
+              "condition": {
+                "text": "You control one or more objectives (excluding your home objective).",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Primary"
+                  ],
+                  "vp": 4,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "scoring",
+          "roundsText": "END OF THE BATTLE",
+          "timingText": "End of the battle.",
+          "conditions": [
+            {
+              "id": "ca2026-primary-locate-and-deny-g3-s1",
+              "relationToPrevious": "independent",
+              "condition": {
+                "text": "Only one of your operation markers is on the battlefield, if one or more of your units are within the same terrain area as that marker, and no enemy units are within that terrain area.",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Primary"
+                  ],
+                  "vp": 5,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "action",
+          "name": "SENSOR SWEEP",
+          "actionType": "OBJECTIVE ACTION",
+          "fields": [
+            {
+              "label": "STARTS",
+              "text": "Your Shooting phase."
+            },
+            {
+              "label": "UNITS",
+              "text": "One friendly unit within range of exactly one central objective."
+            },
+            {
+              "label": "USE LIMIT",
+              "text": "Once per turn."
+            },
+            {
+              "label": "COMPLETES",
+              "text": "End of your turn, if your unit controls that objective."
+            },
+            {
+              "label": "EFFECT",
+              "text": "Your unit performs a sensor sweep: remove one operation marker from the battlefield."
+            },
+            {
+              "label": "RESTRICTIONS",
+              "text": "A unit cannot start this action if there is only one operation marker on the battlefield."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ca2026-primary-reconnaissance-sweep",
+      "name": "RECONNAISSANCE SWEEP",
+      "modes": [
+        "Primary"
+      ],
+      "sections": [
+        {
+          "kind": "scoring",
+          "roundsText": "ANY BATTLE ROUND",
+          "timingText": "WHEN: End of your turn.",
+          "conditions": [
+            {
+              "id": "ca2026-primary-reconnaissance-sweep-g1-s1",
+              "relationToPrevious": "independent",
+              "condition": {
+                "text": "Three or more friendly units are wholly within three different table quarters and not within 6\" of the centre of the battlefield.",
+                "underlined": [
+                  "Three",
+                  "three"
+                ]
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Primary"
+                  ],
+                  "vp": 3,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            },
+            {
+              "id": "ca2026-primary-reconnaissance-sweep-g1-s2",
+              "relationToPrevious": "alternative",
+              "condition": {
+                "text": "Four or more friendly units are wholly within four different table quarters and not within 6\" of the centre of the battlefield.",
+                "underlined": [
+                  "Four",
+                  "four"
+                ]
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Primary"
+                  ],
+                  "vp": 6,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "scoring",
+          "roundsText": "ANY BATTLE ROUND",
+          "timingText": "WHEN: End of your turn.",
+          "conditions": [
+            {
+              "id": "ca2026-primary-reconnaissance-sweep-g2-s1",
+              "relationToPrevious": "independent",
+              "condition": {
+                "text": "For each enemy unit destroyed this turn.",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Primary"
+                  ],
+                  "vp": 1,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "scoring",
+          "roundsText": "SECOND BATTLE ROUND ONWARDS",
+          "timingText": "WHEN: End of your Command phase (or the end of your turn in the fifth battle round).",
+          "conditions": [
+            {
+              "id": "ca2026-primary-reconnaissance-sweep-g3-s1",
+              "relationToPrevious": "independent",
+              "condition": {
+                "text": "You control one or more objectives (excluding your home objective).",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Primary"
+                  ],
+                  "vp": 3,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ca2026-primary-triangulation",
+      "name": "TRIANGULATION",
+      "modes": [
+        "Primary"
+      ],
+      "sections": [
+        {
+          "kind": "scoring",
+          "roundsText": "SECOND BATTLE ROUND ONWARDS",
+          "timingText": "WHEN: End of your Command phase (or the end of your turn in the fifth battle round).",
+          "conditions": [
+            {
+              "id": "ca2026-primary-triangulation-g1-s1",
+              "relationToPrevious": "independent",
+              "condition": {
+                "text": "You control one or more objectives (excluding your home objective).",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Primary"
+                  ],
+                  "vp": 4,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "scoring",
+          "roundsText": "SECOND BATTLE ROUND ONWARDS",
+          "timingText": "WHEN: End of your turn.",
+          "conditions": [
+            {
+              "id": "ca2026-primary-triangulation-g2-s1",
+              "relationToPrevious": "independent",
+              "condition": {
+                "text": "One objective is triangulated (see below).",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Primary"
+                  ],
+                  "vp": 3,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            },
+            {
+              "id": "ca2026-primary-triangulation-g2-s2",
+              "relationToPrevious": "alternative",
+              "condition": {
+                "text": "Two objectives are triangulated.",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Primary"
+                  ],
+                  "vp": 6,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            },
+            {
+              "id": "ca2026-primary-triangulation-g2-s3",
+              "relationToPrevious": "alternative",
+              "condition": {
+                "text": "Three or more objectives are triangulated.",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Primary"
+                  ],
+                  "vp": 10,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "scoring",
+          "roundsText": "END OF THE BATTLE",
+          "timingText": "End of the battle.",
+          "conditions": [
+            {
+              "id": "ca2026-primary-triangulation-g3-s1",
+              "relationToPrevious": "independent",
+              "condition": {
+                "text": "You control four or more objectives.",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Primary"
+                  ],
+                  "vp": 10,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "action",
+          "name": "TRIANGULATE",
+          "actionType": "OBJECTIVE ACTION",
+          "fields": [
+            {
+              "label": "STARTS",
+              "text": "Your Shooting phase, from the second battle round onwards."
+            },
+            {
+              "label": "UNITS",
+              "text": "One friendly unit within range of exactly one objective (excluding your home objective)."
+            },
+            {
+              "label": "USE LIMIT",
+              "text": "Once per turn."
+            },
+            {
+              "label": "COMPLETES",
+              "text": "End of your turn, if your unit controls that objective."
+            },
+            {
+              "label": "EFFECT",
+              "text": "That objective is triangulated: place one of your operation markers within range of that objective."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ca2026-primary-surveil-the-foe",
+      "name": "SURVEIL THE FOE",
+      "modes": [
+        "Primary"
+      ],
+      "sections": [
+        {
+          "kind": "instruction",
+          "text": "Each time a friendly unit ends a move within range of one objective that has any of your opponent’s operation markers within range of it, remove those operation markers from the battlefield.",
+          "underlined": []
+        },
+        {
+          "kind": "scoring",
+          "roundsText": "ANY BATTLE ROUND",
+          "timingText": "WHEN: End of your turn.",
+          "conditions": [
+            {
+              "id": "ca2026-primary-surveil-the-foe-g1-s1",
+              "relationToPrevious": "independent",
+              "condition": {
+                "text": "One or more enemy units were surveilled this turn (see below), unless each of those units is within range of one or more objectives that have one or more operation markers within range of them.",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Primary"
+                  ],
+                  "vp": 4,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "scoring",
+          "roundsText": "SECOND BATTLE ROUND ONWARDS",
+          "timingText": "WHEN: End of your Command phase (or the end of your turn in the fifth battle round).",
+          "conditions": [
+            {
+              "id": "ca2026-primary-surveil-the-foe-g2-s1",
+              "relationToPrevious": "independent",
+              "condition": {
+                "text": "You control one or more objectives (excluding your home objective).",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Primary"
+                  ],
+                  "vp": 4,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            },
+            {
+              "id": "ca2026-primary-surveil-the-foe-g2-s2",
+              "relationToPrevious": "independent",
+              "condition": {
+                "text": "You control more objectives than your opponent.",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Primary"
+                  ],
+                  "vp": 4,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "scoring",
+          "roundsText": "SECOND BATTLE ROUND ONWARDS",
+          "timingText": "WHEN: End of your turn.",
+          "conditions": [
+            {
+              "id": "ca2026-primary-surveil-the-foe-g3-s1",
+              "relationToPrevious": "independent",
+              "condition": {
+                "text": "None of your opponent’s operation markers are on the battlefield.",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Primary"
+                  ],
+                  "vp": 5,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "action",
+          "name": "SURVEIL THE FOE",
+          "actionType": "OBJECTIVE ACTION",
+          "fields": [
+            {
+              "label": "STARTS",
+              "text": "Your Shooting phase."
+            },
+            {
+              "label": "UNITS",
+              "text": "One friendly unit."
+            },
+            {
+              "label": "USE LIMIT",
+              "text": "Unlimited."
+            },
+            {
+              "label": "COMPLETES",
+              "text": "Immediately."
+            },
+            {
+              "label": "EFFECT",
+              "text": "Select one enemy unit within 18\" of and visible to your unit that has not been surveilled this turn: until the end of the turn, that enemy unit is surveilled."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ca2026-primary-gather-intel",
+      "name": "GATHER INTEL",
+      "modes": [
+        "Primary"
+      ],
+      "sections": [
+        {
+          "kind": "scoring",
+          "roundsText": "FIRST BATTLE ROUND",
+          "timingText": "WHEN: End of your turn.",
+          "conditions": [
+            {
+              "id": "ca2026-primary-gather-intel-g1-s1",
+              "relationToPrevious": "independent",
+              "condition": {
+                "text": "You control one or more central objectives.",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Primary"
+                  ],
+                  "vp": 6,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "scoring",
+          "roundsText": "SECOND BATTLE ROUND ONWARDS",
+          "timingText": "WHEN: End of your Command phase (or the end of your turn in the fifth battle round).",
+          "conditions": [
+            {
+              "id": "ca2026-primary-gather-intel-g2-s1",
+              "relationToPrevious": "independent",
+              "condition": {
+                "text": "You control one or more objectives (excluding your home objective).",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Primary"
+                  ],
+                  "vp": 4,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "scoring",
+          "roundsText": "SECOND BATTLE ROUND ONWARDS",
+          "timingText": "WHEN: End of your turn.",
+          "conditions": [
+            {
+              "id": "ca2026-primary-gather-intel-g3-s1",
+              "relationToPrevious": "independent",
+              "condition": {
+                "text": "For each friendly unit that completed the Extract Intelligence action this turn (see below).",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Primary"
+                  ],
+                  "vp": 7,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "scoring",
+          "roundsText": "END OF THE BATTLE",
+          "timingText": "End of the battle.",
+          "conditions": [
+            {
+              "id": "ca2026-primary-gather-intel-g4-s1",
+              "relationToPrevious": "independent",
+              "condition": {
+                "text": "Three or more of your operation markers are on the battlefield.",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Primary"
+                  ],
+                  "vp": 5,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            },
+            {
+              "id": "ca2026-primary-gather-intel-g4-s2",
+              "relationToPrevious": "independent",
+              "condition": {
+                "text": "One of your operation markers is within range of your opponent’s home objective.",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Primary"
+                  ],
+                  "vp": 5,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "action",
+          "name": "EXTRACT INTELLIGENCE",
+          "actionType": "OBJECTIVE ACTION",
+          "fields": [
+            {
+              "label": "STARTS",
+              "text": "Your Shooting phase, from the second battle round onwards."
+            },
+            {
+              "label": "UNITS",
+              "text": "One unit within range of exactly one objective (excluding your home objective) that does not have any of your operation markers within range of it."
+            },
+            {
+              "label": "USE LIMIT",
+              "text": "Unlimited. Each unit that starts this action this phase must be within range of a different objective."
+            },
+            {
+              "label": "COMPLETES",
+              "text": "End of your turn, if your unit controls that objective."
+            },
+            {
+              "label": "EFFECT",
+              "text": "Place one of your operation markers within range of that objective."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ca2026-primary-search-and-scour",
+      "name": "SEARCH AND SCOUR",
+      "modes": [
+        "Primary"
+      ],
+      "sections": [
+        {
+          "kind": "scoring",
+          "roundsText": "ANY BATTLE ROUND",
+          "timingText": "WHEN: End of your turn.",
+          "conditions": [
+            {
+              "id": "ca2026-primary-search-and-scour-g1-s1",
+              "relationToPrevious": "independent",
+              "condition": {
+                "text": "You control one or more central objectives.",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Primary"
+                  ],
+                  "vp": 3,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            },
+            {
+              "id": "ca2026-primary-search-and-scour-g1-s2",
+              "relationToPrevious": "independent",
+              "condition": {
+                "text": "One or more enemy units that started the turn within a terrain area are destroyed.",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Primary"
+                  ],
+                  "vp": 2,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "scoring",
+          "roundsText": "SECOND BATTLE ROUND ONWARDS",
+          "timingText": "WHEN: End of your Command phase (or the end of your turn in the fifth battle round).",
+          "conditions": [
+            {
+              "id": "ca2026-primary-search-and-scour-g2-s1",
+              "relationToPrevious": "independent",
+              "condition": {
+                "text": "For each objective you control (excluding your home objective).",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Primary"
+                  ],
+                  "vp": 4,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "scoring",
+          "roundsText": "END OF THE BATTLE",
+          "timingText": "End of the battle.",
+          "conditions": [
+            {
+              "id": "ca2026-primary-search-and-scour-g3-s1",
+              "relationToPrevious": "independent",
+              "condition": {
+                "text": "No enemy units are wholly within your territory.",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Primary"
+                  ],
+                  "vp": 5,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ca2026-primary-secure-asset",
+      "name": "SECURE ASSET",
+      "modes": [
+        "Primary"
+      ],
+      "sections": [
+        {
+          "kind": "scoring",
+          "roundsText": "ANY BATTLE ROUND",
+          "timingText": "WHEN: End of your turn.",
+          "conditions": [
+            {
+              "id": "ca2026-primary-secure-asset-g1-s1",
+              "relationToPrevious": "independent",
+              "condition": {
+                "text": "A friendly unit secured the asset this turn (see below).",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Primary"
+                  ],
+                  "vp": 4,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            },
+            {
+              "id": "ca2026-primary-secure-asset-g1-s2",
+              "relationToPrevious": "independent",
+              "condition": {
+                "text": "One or more enemy units that started the turn within range of one or more central objectives are destroyed.",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Primary"
+                  ],
+                  "vp": 2,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "scoring",
+          "roundsText": "SECOND BATTLE ROUND ONWARDS",
+          "timingText": "WHEN: End of your Command phase (or the end of your turn in the fifth battle round).",
+          "conditions": [
+            {
+              "id": "ca2026-primary-secure-asset-g2-s1",
+              "relationToPrevious": "independent",
+              "condition": {
+                "text": "You control one or more objectives (excluding your home objective).",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Primary"
+                  ],
+                  "vp": 4,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            },
+            {
+              "id": "ca2026-primary-secure-asset-g2-s2",
+              "relationToPrevious": "independent",
+              "condition": {
+                "text": "You control three or more objectives.",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Primary"
+                  ],
+                  "vp": 4,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "action",
+          "name": "SECURE ASSET",
+          "actionType": "OBJECTIVE ACTION",
+          "fields": [
+            {
+              "label": "STARTS",
+              "text": "Your Shooting phase."
+            },
+            {
+              "label": "UNITS",
+              "text": "One friendly unit within range of exactly one objective (excluding your home objective)."
+            },
+            {
+              "label": "USE LIMIT",
+              "text": "Once per turn."
+            },
+            {
+              "label": "COMPLETES",
+              "text": "End of your turn, if your unit controls that objective."
+            },
+            {
+              "label": "EFFECT",
+              "text": "Your unit secures the asset."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ca2026-primary-vital-link",
+      "name": "VITAL LINK",
+      "modes": [
+        "Primary"
+      ],
+      "sections": [
+        {
+          "kind": "scoring",
+          "roundsText": "ANY BATTLE ROUND",
+          "timingText": "WHEN: End of your turn.",
+          "conditions": [
+            {
+              "id": "ca2026-primary-vital-link-g1-s1",
+              "relationToPrevious": "independent",
+              "condition": {
+                "text": "You control one or more central objectives.",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Primary"
+                  ],
+                  "vp": 2,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            },
+            {
+              "id": "ca2026-primary-vital-link-g1-s2",
+              "relationToPrevious": "cumulative",
+              "condition": {
+                "text": "For each of your operation markers within range of one of those objectives (see below).",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Primary"
+                  ],
+                  "vp": 1,
+                  "bonus": true,
+                  "cumulative": true,
+                  "capVp": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "scoring",
+          "roundsText": "SECOND BATTLE ROUND ONWARDS",
+          "timingText": "WHEN: End of your Command phase (or the end of your turn in the fifth battle round).",
+          "conditions": [
+            {
+              "id": "ca2026-primary-vital-link-g2-s1",
+              "relationToPrevious": "independent",
+              "condition": {
+                "text": "You control one or more objectives (excluding your home objective).",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Primary"
+                  ],
+                  "vp": 4,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            },
+            {
+              "id": "ca2026-primary-vital-link-g2-s2",
+              "relationToPrevious": "cumulative",
+              "condition": {
+                "text": "One or more of those objectives is a central objective.",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Primary"
+                  ],
+                  "vp": 4,
+                  "bonus": true,
+                  "cumulative": true,
+                  "capVp": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "scoring",
+          "roundsText": "END OF THE BATTLE",
+          "timingText": "End of the battle.",
+          "conditions": [
+            {
+              "id": "ca2026-primary-vital-link-g3-s1",
+              "relationToPrevious": "independent",
+              "condition": {
+                "text": "You control your opponent’s home objective.",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Primary"
+                  ],
+                  "vp": 10,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "action",
+          "name": "MAINTAIN CONTROL",
+          "actionType": "OBJECTIVE ACTION",
+          "fields": [
+            {
+              "label": "STARTS",
+              "text": "Your Shooting phase."
+            },
+            {
+              "label": "UNITS",
+              "text": "One friendly unit within range of exactly one central objective."
+            },
+            {
+              "label": "USE LIMIT",
+              "text": "Once per turn."
+            },
+            {
+              "label": "COMPLETES",
+              "text": "End of your turn, if your unit controls that objective."
+            },
+            {
+              "label": "EFFECT",
+              "text": "Place one of your operation markers within range of that objective."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ca2026-primary-extract-relic",
+      "name": "EXTRACT RELIC",
+      "modes": [
+        "Primary"
+      ],
+      "sections": [
+        {
+          "kind": "scoring",
+          "roundsText": "ANY BATTLE ROUND",
+          "timingText": "WHEN: End of your turn.",
+          "conditions": [
+            {
+              "id": "ca2026-primary-extract-relic-g1-s1",
+              "relationToPrevious": "independent",
+              "condition": {
+                "text": "A friendly unit performed a sensor sweep this turn (see below).",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Primary"
+                  ],
+                  "vp": 4,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            },
+            {
+              "id": "ca2026-primary-extract-relic-g1-s2",
+              "relationToPrevious": "independent",
+              "condition": {
+                "text": "One or more enemy units that started the turn within range of one or more objectives are destroyed.",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Primary"
+                  ],
+                  "vp": 3,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            },
+            {
+              "id": "ca2026-primary-extract-relic-g1-s3",
+              "relationToPrevious": "independent",
+              "condition": {
+                "text": "Only one of your opponent’s operation markers is on the battlefield, if one or more of your units are within the same terrain area as that operation marker, and no enemy units are within that terrain area.",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Primary"
+                  ],
+                  "vp": 4,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "scoring",
+          "roundsText": "SECOND BATTLE ROUND ONWARDS",
+          "timingText": "WHEN: End of your Command phase (or the end of your turn in the fifth battle round).",
+          "conditions": [
+            {
+              "id": "ca2026-primary-extract-relic-g2-s1",
+              "relationToPrevious": "independent",
+              "condition": {
+                "text": "You control one or more objectives (excluding your home objective).",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Primary"
+                  ],
+                  "vp": 4,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "scoring",
+          "roundsText": "END OF THE BATTLE",
+          "timingText": "End of the battle.",
+          "conditions": [
+            {
+              "id": "ca2026-primary-extract-relic-g3-s1",
+              "relationToPrevious": "independent",
+              "condition": {
+                "text": "Only one of your opponent’s operation markers is on the battlefield, if one or more of your units are within the same terrain area as that operation marker, and no enemy units are within that terrain area.",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Primary"
+                  ],
+                  "vp": 5,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "action",
+          "name": "SENSOR SWEEP",
+          "actionType": "OBJECTIVE ACTION",
+          "fields": [
+            {
+              "label": "STARTS",
+              "text": "Your Shooting phase."
+            },
+            {
+              "label": "UNITS",
+              "text": "One friendly unit within range of exactly one central objective."
+            },
+            {
+              "label": "USE LIMIT",
+              "text": "Once per turn."
+            },
+            {
+              "label": "COMPLETES",
+              "text": "End of your turn, if your unit controls that objective."
+            },
+            {
+              "label": "EFFECT",
+              "text": "Your unit performs a sensor sweep: remove one operation marker from the battlefield."
+            },
+            {
+              "label": "RESTRICTIONS",
+              "text": "A unit cannot start this action if there is only one operation marker on the battlefield."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ca2026-primary-vanguard-operation",
+      "name": "VANGUARD OPERATION",
+      "modes": [
+        "Primary"
+      ],
+      "sections": [
+        {
+          "kind": "scoring",
+          "roundsText": "ANY BATTLE ROUND",
+          "timingText": "WHEN: End of your turn.",
+          "conditions": [
+            {
+              "id": "ca2026-primary-vanguard-operation-g1-s1",
+              "relationToPrevious": "independent",
+              "condition": {
+                "text": "A friendly unit performed a vanguard operation this turn (see below).",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Primary"
+                  ],
+                  "vp": 4,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            },
+            {
+              "id": "ca2026-primary-vanguard-operation-g1-s2",
+              "relationToPrevious": "independent",
+              "condition": {
+                "text": "One or more enemy units were destroyed this turn.",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Primary"
+                  ],
+                  "vp": 2,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "scoring",
+          "roundsText": "SECOND BATTLE ROUND ONWARDS",
+          "timingText": "WHEN: End of your Command phase (or the end of your turn in the fifth battle round).",
+          "conditions": [
+            {
+              "id": "ca2026-primary-vanguard-operation-g2-s1",
+              "relationToPrevious": "independent",
+              "condition": {
+                "text": "You control one or more objectives (excluding your home objective).",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Primary"
+                  ],
+                  "vp": 4,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "scoring",
+          "roundsText": "END OF THE BATTLE",
+          "timingText": "End of the battle.",
+          "conditions": [
+            {
+              "id": "ca2026-primary-vanguard-operation-g3-s1",
+              "relationToPrevious": "independent",
+              "condition": {
+                "text": "You control your opponent’s home objective.",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Primary"
+                  ],
+                  "vp": 10,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "action",
+          "name": "VANGUARD OPERATION",
+          "actionType": "OBJECTIVE ACTION",
+          "fields": [
+            {
+              "label": "STARTS",
+              "text": "Your Shooting phase."
+            },
+            {
+              "label": "UNITS",
+              "text": "One friendly unit within exactly one terrain area that is within your opponent’s territory."
+            },
+            {
+              "label": "USE LIMIT",
+              "text": "Once per turn."
+            },
+            {
+              "label": "COMPLETES",
+              "text": "End of your turn, if no enemy units are within that terrain area."
+            },
+            {
+              "label": "EFFECT",
+              "text": "Your unit performs a vanguard operation."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ca2026-primary-sabotage",
+      "name": "SABOTAGE",
+      "modes": [
+        "Primary"
+      ],
+      "sections": [
+        {
+          "kind": "scoring",
+          "roundsText": "ANY BATTLE ROUND",
+          "timingText": "WHEN: End of your turn.",
+          "conditions": [
+            {
+              "id": "ca2026-primary-sabotage-g1-s1",
+              "relationToPrevious": "independent",
+              "condition": {
+                "text": "For each friendly unit that committed sabotage this turn (see below).",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Primary"
+                  ],
+                  "vp": 3,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            },
+            {
+              "id": "ca2026-primary-sabotage-g1-s2",
+              "relationToPrevious": "cumulative",
+              "condition": {
+                "text": "For each of those units that is within range of one or more objectives in your opponent’s territory.",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Primary"
+                  ],
+                  "vp": 2,
+                  "bonus": true,
+                  "cumulative": true,
+                  "capVp": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "scoring",
+          "roundsText": "SECOND BATTLE ROUND ONWARDS",
+          "timingText": "WHEN: End of your Command phase (or the end of your turn in the fifth battle round).",
+          "conditions": [
+            {
+              "id": "ca2026-primary-sabotage-g2-s1",
+              "relationToPrevious": "independent",
+              "condition": {
+                "text": "You control one or more objectives (excluding your home objective).",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Primary"
+                  ],
+                  "vp": 4,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "action",
+          "name": "SABOTAGE",
+          "actionType": "OBJECTIVE ACTION",
+          "fields": [
+            {
+              "label": "STARTS",
+              "text": "Your Shooting phase."
+            },
+            {
+              "label": "UNITS",
+              "text": "One unit within range of exactly one objective (excluding your home objective)."
+            },
+            {
+              "label": "USE LIMIT",
+              "text": "Unlimited. Each unit that starts this action this phase must be within range of a different objective."
+            },
+            {
+              "label": "COMPLETES",
+              "text": "End of your turn, if that unit controls that objective."
+            },
+            {
+              "label": "EFFECT",
+              "text": "Your unit commits sabotage."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

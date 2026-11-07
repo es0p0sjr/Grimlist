@@ -1,0 +1,1619 @@
+{
+  "Source": {
+    "Name": "Death Guard faction reference \u00B7 Wahapedia",
+    "Version": "11th edition \u00B7 Faction Pack 1.2",
+    "Date": "2026-08-26",
+    "Url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/",
+    "ImportedAt": "2026-10-01T13:55:59.6210788\u002B00:00",
+    "Edition": "11",
+    "ContentHash": "bbc55fab1d665194bc2a161f36f792d37d55c7809b95358251000746b1cdde4a"
+  },
+  "Units": [],
+  "Game": "Warhammer 40,000",
+  "Detachments": [
+    {
+      "Faction": "Death Guard",
+      "Name": "Flyblown Host",
+      "Disposition": "Reconnaissance",
+      "Cost": "1 DP"
+    },
+    {
+      "Faction": "Death Guard",
+      "Name": "Virulent Vectorium",
+      "Disposition": "Take and Hold",
+      "Cost": "3 DP"
+    },
+    {
+      "Faction": "Death Guard",
+      "Name": "Shamblerot Vectorium",
+      "Disposition": "Disruption",
+      "Cost": "2 DP"
+    },
+    {
+      "Faction": "Death Guard",
+      "Name": "Death Lord\u0027s Chosen",
+      "Disposition": "Priority Assets",
+      "Cost": "2 DP"
+    },
+    {
+      "Faction": "Death Guard",
+      "Name": "Mortarion\u0027s Hammer",
+      "Disposition": "Purge the Foe",
+      "Cost": "2 DP"
+    },
+    {
+      "Faction": "Death Guard",
+      "Name": "Champions of Contagion",
+      "Disposition": "Take and Hold",
+      "Cost": "2 DP"
+    },
+    {
+      "Faction": "Death Guard",
+      "Name": "Tallyband Summoners",
+      "Disposition": "Disruption",
+      "Cost": "2 DP"
+    },
+    {
+      "Faction": "Death Guard",
+      "Name": "Contagion Engines",
+      "Disposition": "Reconnaissance",
+      "Cost": "1 DP"
+    },
+    {
+      "Faction": "Death Guard",
+      "Name": "Paragons of Putrescence",
+      "Disposition": "Priority Assets",
+      "Cost": "1 DP"
+    }
+  ],
+  "ReferenceCards": [
+    {
+      "Faction": "Death Guard",
+      "Section": "Detachments",
+      "Name": "Verminous Haze",
+      "Text": "In the Declare Battle Formations step, you can select up to two friendly PLAGUE MARINES units. Those units have Infiltrators.",
+      "Detachment": "Flyblown Host",
+      "Cost": "1 DP",
+      "Source": {
+        "Name": "BSData \u00B7 Death Guard army rules",
+        "Version": "Catalogue revision 14",
+        "Date": "",
+        "Url": "https://github.com/BSData/wh40k-11e",
+        "ImportedAt": "",
+        "Edition": "11",
+        "ContentHash": "68240864e8d605f6ad4118ed8f459430a8e9047f8a9d424717a5b09247f5a487"
+      }
+    },
+    {
+      "Faction": "Death Guard",
+      "Section": "Detachments",
+      "Name": "Worldblight",
+      "Text": "At the end of your Command phase, if a friendly DEATH GUARD unit is controlling an objective, that objective is secured. Until you lose control of that objective, while an enemy unit is within range of that objective, that enemy unit is Afflicted.",
+      "Detachment": "Virulent Vectorium",
+      "Cost": "3 DP",
+      "Source": {
+        "Name": "BSData \u00B7 Death Guard army rules",
+        "Version": "Catalogue revision 14",
+        "Date": "",
+        "Url": "https://github.com/BSData/wh40k-11e",
+        "ImportedAt": "",
+        "Edition": "11",
+        "ContentHash": "68240864e8d605f6ad4118ed8f459430a8e9047f8a9d424717a5b09247f5a487"
+      }
+    },
+    {
+      "Faction": "Death Guard",
+      "Section": "Detachments",
+      "Name": "Numberless Horde",
+      "Text": "In your Command phase in each of the following battle rounds, depending on your chosen battle size, add a new Poxwalkers unit with a Starting Strength of 10 to your army, in Strategic Reserves.\n\nIncursion - Battle Rounds 2,3\nStrike Force - Battle Rounds 2,3,4\nOnslaught - Battle Round 2,3,4,5\n\nPoxwalkers unit from your army gain the Battleline keyword.",
+      "Detachment": "Shamblerot Vectorium",
+      "Cost": "2 DP",
+      "Source": {
+        "Name": "BSData \u00B7 Death Guard army rules",
+        "Version": "Catalogue revision 14",
+        "Date": "",
+        "Url": "https://github.com/BSData/wh40k-11e",
+        "ImportedAt": "",
+        "Edition": "11",
+        "ContentHash": "68240864e8d605f6ad4118ed8f459430a8e9047f8a9d424717a5b09247f5a487"
+      }
+    },
+    {
+      "Faction": "Death Guard",
+      "Section": "Detachments",
+      "Name": "Deadly Vectors",
+      "Text": "In your opponent\u0027s Command phase, roll 2D6 for each Afflicted enemy unit, subtracting 1 from the result if that unit is Below Half-strength. If the result is 6 or less, that enemy unit suffers D3 mortal wounds.",
+      "Detachment": "Death Lord\u0027s Chosen",
+      "Cost": "2 DP",
+      "Source": {
+        "Name": "BSData \u00B7 Death Guard army rules",
+        "Version": "Catalogue revision 14",
+        "Date": "",
+        "Url": "https://github.com/BSData/wh40k-11e",
+        "ImportedAt": "",
+        "Edition": "11",
+        "ContentHash": "68240864e8d605f6ad4118ed8f459430a8e9047f8a9d424717a5b09247f5a487"
+      }
+    },
+    {
+      "Faction": "Death Guard",
+      "Section": "Detachments",
+      "Name": "Miasmic Bombardment",
+      "Text": "At the start of the battle round, select a number of enemy units more than 12\u0022 away from every model in your army that is on the battle field. Until the end of the battle round, those enemy units are Afflicted. The maximum number of units you can select in this way depends on the battle size, as shown below.\n\nIncursion - 1 Unit\nStrike Force - 2 Units\nOnslaught - 3 Units",
+      "Detachment": "Mortarion\u0027s Hammer",
+      "Cost": "2 DP",
+      "Source": {
+        "Name": "BSData \u00B7 Death Guard army rules",
+        "Version": "Catalogue revision 14",
+        "Date": "",
+        "Url": "https://github.com/BSData/wh40k-11e",
+        "ImportedAt": "",
+        "Edition": "11",
+        "ContentHash": "68240864e8d605f6ad4118ed8f459430a8e9047f8a9d424717a5b09247f5a487"
+      }
+    },
+    {
+      "Faction": "Death Guard",
+      "Section": "Detachments",
+      "Name": "Manifold Maladies",
+      "Text": "At the start of the battle round, you can select one of the Plagues listed in Nurgle\u0027s Gift. Until the end of the battle, that is your chosen Plague instead of any previously chosen Plague.",
+      "Detachment": "Champions of Contagion",
+      "Cost": "2 DP",
+      "Source": {
+        "Name": "BSData \u00B7 Death Guard army rules",
+        "Version": "Catalogue revision 14",
+        "Date": "",
+        "Url": "https://github.com/BSData/wh40k-11e",
+        "ImportedAt": "",
+        "Edition": "11",
+        "ContentHash": "68240864e8d605f6ad4118ed8f459430a8e9047f8a9d424717a5b09247f5a487"
+      }
+    },
+    {
+      "Faction": "Death Guard",
+      "Section": "Detachments",
+      "Name": "Reverberant Rancidity",
+      "Text": "While a Plague Legions unit from your army is within 7\u0022 of one or more Death Guard units from your army, that Plague Legions unit has the Nurgle\u0027s Gift ability.\n\nWhile a Death Guard unit from your army is within 7\u0022 of one or more Plague Legions units from your army, add 3\u0022 to that Death Guard unit\u0027s Contagion Range.",
+      "Detachment": "Tallyband Summoners",
+      "Cost": "2 DP",
+      "Source": {
+        "Name": "BSData \u00B7 Death Guard army rules",
+        "Version": "Catalogue revision 14",
+        "Date": "",
+        "Url": "https://github.com/BSData/wh40k-11e",
+        "ImportedAt": "",
+        "Edition": "11",
+        "ContentHash": "68240864e8d605f6ad4118ed8f459430a8e9047f8a9d424717a5b09247f5a487"
+      }
+    },
+    {
+      "Faction": "Death Guard",
+      "Section": "Detachments",
+      "Name": "Warped and Rusted Animus",
+      "Text": "Friendly FOETID BLOAT\u2011DRONE/FOETID BLOAT\u2011DRONE WITH HEAVY BLIGHT LAUNCHER/HELBRUTE/MYPHITIC BLIGHT\u2011HAULER units have CONTAGION ENGINE.\u00A0\n- Friendly CONTAGION ENGINE units\u2019 ranged attacks have [ASSAULT].",
+      "Detachment": "Contagion Engines",
+      "Cost": "1 DP",
+      "Source": {
+        "Name": "BSData \u00B7 Death Guard army rules",
+        "Version": "Catalogue revision 14",
+        "Date": "",
+        "Url": "https://github.com/BSData/wh40k-11e",
+        "ImportedAt": "",
+        "Edition": "11",
+        "ContentHash": "68240864e8d605f6ad4118ed8f459430a8e9047f8a9d424717a5b09247f5a487"
+      }
+    },
+    {
+      "Faction": "Death Guard",
+      "Section": "Detachments",
+      "Name": "Hypervirulent Strains",
+      "Text": "Friendly DEATH GUARD CHARACTER units have \u002B3\u0022 to their Contagion Range (to a maximum of 12\u0022).",
+      "Detachment": "Paragons of Putrescence",
+      "Cost": "1 DP",
+      "Source": {
+        "Name": "BSData \u00B7 Death Guard army rules",
+        "Version": "Catalogue revision 14",
+        "Date": "",
+        "Url": "https://github.com/BSData/wh40k-11e",
+        "ImportedAt": "",
+        "Edition": "11",
+        "ContentHash": "68240864e8d605f6ad4118ed8f459430a8e9047f8a9d424717a5b09247f5a487"
+      }
+    },
+    {
+      "Faction": "Death Guard",
+      "Section": "Army Rules",
+      "Name": "Nurgle\u0027s Gift (Aura)",
+      "Text": "If your Army Faction is DEATH GUARD, while an enemy unit is within Contagion Range of one or more Death Guard units from your army, it is Afflicted.\n\nCONTAGION RANGE\n1st Battle Round: Contagion Range = 3\u0022\n2nd Battle Round: Contagion Range = 6\u0022\n3rd Battle Round Onwards: Contagion Range = 9\u0022\n\nContagion Range cannot be greater than 12\u0022 after modifiers.\n\nAFFLICTED\n\nDuring the Declare Battle Formations step, select one of the Plagues below.\nUntil the end of the battle, while an enemy unit is Afflicted, subtract 1 from the Toughness characteristic of models in that unit, and that unit has the effect of your chosen Plague.\n\nSkullsquirm Blight\n- Each time a model in this unit makes a ranged attack, enemy units have the benefit of cover against that attack.\n- Each time a model in this unit makes a melee attack, subtract 1 from the Hit roll.\n\nRattlejoint Ague\nWorsen the Save characteristic of models in this unit by 1.\n\nScabrous Soulrot\nWorsen the Move, Leadership and Objective Control characteristics of models in this unit by 1 (this rule can only worsen a model\u0027s Objective Control characteristic to a minimum of 1).",
+      "Detachment": "",
+      "Cost": "",
+      "Source": {
+        "Name": "BSData \u00B7 Death Guard army rules",
+        "Version": "Catalogue revision 14",
+        "Date": "",
+        "Url": "https://github.com/BSData/wh40k-11e",
+        "ImportedAt": "",
+        "Edition": "11",
+        "ContentHash": "68240864e8d605f6ad4118ed8f459430a8e9047f8a9d424717a5b09247f5a487"
+      }
+    },
+    {
+      "Faction": "Death Guard",
+      "Section": "Dispositions",
+      "Name": "Reconnaissance",
+      "Text": "Available from:\n\u2022 Flyblown Host (1 DP)\n\u2022 Contagion Engines (1 DP)",
+      "Detachment": "",
+      "Cost": "",
+      "Source": {
+        "Name": "BSData \u00B7 Death Guard army rules",
+        "Version": "Catalogue revision 14",
+        "Date": "",
+        "Url": "https://github.com/BSData/wh40k-11e",
+        "ImportedAt": "",
+        "Edition": "11",
+        "ContentHash": "68240864e8d605f6ad4118ed8f459430a8e9047f8a9d424717a5b09247f5a487"
+      }
+    },
+    {
+      "Faction": "Death Guard",
+      "Section": "Dispositions",
+      "Name": "Take and Hold",
+      "Text": "Available from:\n\u2022 Virulent Vectorium (3 DP)\n\u2022 Champions of Contagion (2 DP)",
+      "Detachment": "",
+      "Cost": "",
+      "Source": {
+        "Name": "BSData \u00B7 Death Guard army rules",
+        "Version": "Catalogue revision 14",
+        "Date": "",
+        "Url": "https://github.com/BSData/wh40k-11e",
+        "ImportedAt": "",
+        "Edition": "11",
+        "ContentHash": "68240864e8d605f6ad4118ed8f459430a8e9047f8a9d424717a5b09247f5a487"
+      }
+    },
+    {
+      "Faction": "Death Guard",
+      "Section": "Dispositions",
+      "Name": "Disruption",
+      "Text": "Available from:\n\u2022 Shamblerot Vectorium (2 DP)\n\u2022 Tallyband Summoners (2 DP)",
+      "Detachment": "",
+      "Cost": "",
+      "Source": {
+        "Name": "BSData \u00B7 Death Guard army rules",
+        "Version": "Catalogue revision 14",
+        "Date": "",
+        "Url": "https://github.com/BSData/wh40k-11e",
+        "ImportedAt": "",
+        "Edition": "11",
+        "ContentHash": "68240864e8d605f6ad4118ed8f459430a8e9047f8a9d424717a5b09247f5a487"
+      }
+    },
+    {
+      "Faction": "Death Guard",
+      "Section": "Dispositions",
+      "Name": "Priority Assets",
+      "Text": "Available from:\n\u2022 Death Lord\u0027s Chosen (2 DP)\n\u2022 Paragons of Putrescence (1 DP)",
+      "Detachment": "",
+      "Cost": "",
+      "Source": {
+        "Name": "BSData \u00B7 Death Guard army rules",
+        "Version": "Catalogue revision 14",
+        "Date": "",
+        "Url": "https://github.com/BSData/wh40k-11e",
+        "ImportedAt": "",
+        "Edition": "11",
+        "ContentHash": "68240864e8d605f6ad4118ed8f459430a8e9047f8a9d424717a5b09247f5a487"
+      }
+    },
+    {
+      "Faction": "Death Guard",
+      "Section": "Dispositions",
+      "Name": "Purge the Foe",
+      "Text": "Available from:\n\u2022 Mortarion\u0027s Hammer (2 DP)",
+      "Detachment": "",
+      "Cost": "",
+      "Source": {
+        "Name": "BSData \u00B7 Death Guard army rules",
+        "Version": "Catalogue revision 14",
+        "Date": "",
+        "Url": "https://github.com/BSData/wh40k-11e",
+        "ImportedAt": "",
+        "Edition": "11",
+        "ContentHash": "68240864e8d605f6ad4118ed8f459430a8e9047f8a9d424717a5b09247f5a487"
+      }
+    },
+    {
+      "Faction": "Death Guard",
+      "Section": "Enhancements",
+      "Name": "Daemon Weapon of Nurgle",
+      "Text": "DEATH GUARD model only. Each time the bearer makes a melee attack, an unmodified Hit roll of 5\u002B scores a Critical Hit.",
+      "Detachment": "Virulent Vectorium",
+      "Cost": "10 pts",
+      "Source": {
+        "Name": "Death Guard faction reference \u00B7 Wahapedia",
+        "Version": "11th edition \u00B7 Faction Pack 1.2",
+        "Date": "2026-08-26",
+        "Url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/",
+        "ImportedAt": "2026-10-01T13:55:59.6210788\u002B00:00",
+        "Edition": "11",
+        "ContentHash": "bbc55fab1d665194bc2a161f36f792d37d55c7809b95358251000746b1cdde4a"
+      }
+    },
+    {
+      "Faction": "Death Guard",
+      "Section": "Enhancements",
+      "Name": "Furnace of Plagues",
+      "Text": "DEATH GUARD model only. Add 1 to the Strength and Attacks characteristics of the bearers melee weapons, and the bearer\u2019s melee weapons have the [DEVASTATING WOUNDS] ability.",
+      "Detachment": "Virulent Vectorium",
+      "Cost": "25 pts",
+      "Source": {
+        "Name": "Death Guard faction reference \u00B7 Wahapedia",
+        "Version": "11th edition \u00B7 Faction Pack 1.2",
+        "Date": "2026-08-26",
+        "Url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/",
+        "ImportedAt": "2026-10-01T13:55:59.6210788\u002B00:00",
+        "Edition": "11",
+        "ContentHash": "bbc55fab1d665194bc2a161f36f792d37d55c7809b95358251000746b1cdde4a"
+      }
+    },
+    {
+      "Faction": "Death Guard",
+      "Section": "Enhancements",
+      "Name": "Arch Contaminator",
+      "Text": "DEATH GUARD model only. While the bearer\u2019s unit is within range of an objective marker you control, each time a model in the bearer\u2019s unit makes an attack, you can re-roll the Wound roll.",
+      "Detachment": "Virulent Vectorium",
+      "Cost": "25 pts",
+      "Source": {
+        "Name": "Death Guard faction reference \u00B7 Wahapedia",
+        "Version": "11th edition \u00B7 Faction Pack 1.2",
+        "Date": "2026-08-26",
+        "Url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/",
+        "ImportedAt": "2026-10-01T13:55:59.6210788\u002B00:00",
+        "Edition": "11",
+        "ContentHash": "bbc55fab1d665194bc2a161f36f792d37d55c7809b95358251000746b1cdde4a"
+      }
+    },
+    {
+      "Faction": "Death Guard",
+      "Section": "Enhancements",
+      "Name": "Revolting Regeneration",
+      "Text": "DEATH GUARD model only. The bearer has the Feel No Pain 5\u002B ability.",
+      "Detachment": "Virulent Vectorium",
+      "Cost": "30 pts",
+      "Source": {
+        "Name": "Death Guard faction reference \u00B7 Wahapedia",
+        "Version": "11th edition \u00B7 Faction Pack 1.2",
+        "Date": "2026-08-26",
+        "Url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/",
+        "ImportedAt": "2026-10-01T13:55:59.6210788\u002B00:00",
+        "Edition": "11",
+        "ContentHash": "bbc55fab1d665194bc2a161f36f792d37d55c7809b95358251000746b1cdde4a"
+      }
+    },
+    {
+      "Faction": "Death Guard",
+      "Section": "Stratagems",
+      "Name": "PUTRID DETONATION",
+      "Text": "WHEN: Any phase.\nTARGET: One DEATH GUARD VEHICLE or DEATH GUARD MONSTER model from your army with the Deadly Demise ability that was just destroyed. You can use this Stratagem on that model even though it was just destroyed.\nEFFECT: Do not roll one D6 to determine whether mortal wounds are inflicted by your model\u2019s Deadly Demise ability. Instead, mortal wounds are automatically inflicted. In addition, any enemy units that suffer mortal wounds as a result of this Stratagem are Afflicted until the start of your next turn.",
+      "Detachment": "Virulent Vectorium",
+      "Cost": "1 CP",
+      "Source": {
+        "Name": "Death Guard faction reference \u00B7 Wahapedia",
+        "Version": "11th edition \u00B7 Faction Pack 1.2",
+        "Date": "2026-08-26",
+        "Url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/",
+        "ImportedAt": "2026-10-01T13:55:59.6210788\u002B00:00",
+        "Edition": "11",
+        "ContentHash": "bbc55fab1d665194bc2a161f36f792d37d55c7809b95358251000746b1cdde4a"
+      }
+    },
+    {
+      "Faction": "Death Guard",
+      "Section": "Stratagems",
+      "Name": "DISGUSTINGLY RESILIENT",
+      "Text": "WHEN: Your opponent\u2019s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.\nTARGET: One DEATH GUARD unit from your army that was selected as the target of one or more of the attacking unit\u2019s attacks.\nEFFECT: Until the end of the phase, each time an attack is allocated to a model in your unit, subtract 1 from the Damage characteristic of that attack.",
+      "Detachment": "Virulent Vectorium",
+      "Cost": "2 CP",
+      "Source": {
+        "Name": "Death Guard faction reference \u00B7 Wahapedia",
+        "Version": "11th edition \u00B7 Faction Pack 1.2",
+        "Date": "2026-08-26",
+        "Url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/",
+        "ImportedAt": "2026-10-01T13:55:59.6210788\u002B00:00",
+        "Edition": "11",
+        "ContentHash": "bbc55fab1d665194bc2a161f36f792d37d55c7809b95358251000746b1cdde4a"
+      }
+    },
+    {
+      "Faction": "Death Guard",
+      "Section": "Stratagems",
+      "Name": "PLAGUESURGE",
+      "Text": "WHEN: Your Command phase.\nTARGET: Your DEATH GUARD WARLORD that is on the battlefield.\nEFFECT: Until the start of your next Command phase, add 3\u0022 to the Contagion Range of models from your army.",
+      "Detachment": "Virulent Vectorium",
+      "Cost": "2 CP",
+      "Source": {
+        "Name": "Death Guard faction reference \u00B7 Wahapedia",
+        "Version": "11th edition \u00B7 Faction Pack 1.2",
+        "Date": "2026-08-26",
+        "Url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/",
+        "ImportedAt": "2026-10-01T13:55:59.6210788\u002B00:00",
+        "Edition": "11",
+        "ContentHash": "bbc55fab1d665194bc2a161f36f792d37d55c7809b95358251000746b1cdde4a"
+      }
+    },
+    {
+      "Faction": "Death Guard",
+      "Section": "Stratagems",
+      "Name": "LEECHSPORE ERUPTION",
+      "Text": "WHEN: Your Command phase.\nTARGET: One DEATH GUARD model your army that has lost one or more wounds.\nEFFECT: Select one enemy unit within 3\u0022 of your model. Roll a number of D6 equal to the number of wounds your model has lost: for each 5\u002B, that enemy unit suffers one mortal wound (to a maximum of 6 mortal wounds) and your model regains 1 lost wound (to a maximum of 6 lost wounds).",
+      "Detachment": "Virulent Vectorium",
+      "Cost": "1 CP",
+      "Source": {
+        "Name": "Death Guard faction reference \u00B7 Wahapedia",
+        "Version": "11th edition \u00B7 Faction Pack 1.2",
+        "Date": "2026-08-26",
+        "Url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/",
+        "ImportedAt": "2026-10-01T13:55:59.6210788\u002B00:00",
+        "Edition": "11",
+        "ContentHash": "bbc55fab1d665194bc2a161f36f792d37d55c7809b95358251000746b1cdde4a"
+      }
+    },
+    {
+      "Faction": "Death Guard",
+      "Section": "Stratagems",
+      "Name": "OVERWHELMING GENEROSITY",
+      "Text": "WHEN: Start of your Shooting phase.\nTARGET: One DEATH GUARD CHARACTER unit from your army.\nEFFECT: Select one enemy unit visible to your unit. Until the end of the phase, each time a DEATH GUARD unit from your army selects that enemy unit as the target of any ranged attacks, you can re-roll the dice to determine how many attacks a weapon equipped by a model in that unit makes.",
+      "Detachment": "Virulent Vectorium",
+      "Cost": "1 CP",
+      "Source": {
+        "Name": "Death Guard faction reference \u00B7 Wahapedia",
+        "Version": "11th edition \u00B7 Faction Pack 1.2",
+        "Date": "2026-08-26",
+        "Url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/",
+        "ImportedAt": "2026-10-01T13:55:59.6210788\u002B00:00",
+        "Edition": "11",
+        "ContentHash": "bbc55fab1d665194bc2a161f36f792d37d55c7809b95358251000746b1cdde4a"
+      }
+    },
+    {
+      "Faction": "Death Guard",
+      "Section": "Stratagems",
+      "Name": "CREEPING BLIGHT",
+      "Text": "WHEN: Your Shooting phase.\nTARGET: One DEATH GUARD INFANTRY unit from your army that has not been selected to shoot this phase.\nEFFECT: Until the end of the phase, each time a model in your unit makes a ranged attack that targets an Afflicted unit, you can re-roll the Hit roll and you can re-roll the Wound roll.",
+      "Detachment": "Virulent Vectorium",
+      "Cost": "1 CP",
+      "Source": {
+        "Name": "Death Guard faction reference \u00B7 Wahapedia",
+        "Version": "11th edition \u00B7 Faction Pack 1.2",
+        "Date": "2026-08-26",
+        "Url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/",
+        "ImportedAt": "2026-10-01T13:55:59.6210788\u002B00:00",
+        "Edition": "11",
+        "ContentHash": "bbc55fab1d665194bc2a161f36f792d37d55c7809b95358251000746b1cdde4a"
+      }
+    },
+    {
+      "Faction": "Death Guard",
+      "Section": "Enhancements",
+      "Name": "Eye of Affliction",
+      "Text": "DEATH GUARD model only. Ranged weapons equipped by models in the bearer\u2019s unit have the [ignores cover] ability while targeting an Afflicted enemy unit.",
+      "Detachment": "Mortarion\u0027s Hammer",
+      "Cost": "20 pts",
+      "Source": {
+        "Name": "Death Guard faction reference \u00B7 Wahapedia",
+        "Version": "11th edition \u00B7 Faction Pack 1.2",
+        "Date": "2026-08-26",
+        "Url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/",
+        "ImportedAt": "2026-10-01T13:55:59.6210788\u002B00:00",
+        "Edition": "11",
+        "ContentHash": "bbc55fab1d665194bc2a161f36f792d37d55c7809b95358251000746b1cdde4a"
+      }
+    },
+    {
+      "Faction": "Death Guard",
+      "Section": "Enhancements",
+      "Name": "Bilemaw Blight",
+      "Text": "MALIGNANT PLAGUECASTER only. At the start of your Shooting phase, until the end of the phase, add 12\u0022 to the Range characteristics of the bearer\u2019s Plague Wind weapon.",
+      "Detachment": "Mortarion\u0027s Hammer",
+      "Cost": "10 pts",
+      "Source": {
+        "Name": "Death Guard faction reference \u00B7 Wahapedia",
+        "Version": "11th edition \u00B7 Faction Pack 1.2",
+        "Date": "2026-08-26",
+        "Url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/",
+        "ImportedAt": "2026-10-01T13:55:59.6210788\u002B00:00",
+        "Edition": "11",
+        "ContentHash": "bbc55fab1d665194bc2a161f36f792d37d55c7809b95358251000746b1cdde4a"
+      }
+    },
+    {
+      "Faction": "Death Guard",
+      "Section": "Enhancements",
+      "Name": "Shriekworm Familiar",
+      "Text": "DEATH GUARD model only. Once per battle round, you can target the bearer\u2019s unit with the Fire Overwatch Stratagem for 0CP.",
+      "Detachment": "Mortarion\u0027s Hammer",
+      "Cost": "15 pts",
+      "Source": {
+        "Name": "Death Guard faction reference \u00B7 Wahapedia",
+        "Version": "11th edition \u00B7 Faction Pack 1.2",
+        "Date": "2026-08-26",
+        "Url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/",
+        "ImportedAt": "2026-10-01T13:55:59.6210788\u002B00:00",
+        "Edition": "11",
+        "ContentHash": "bbc55fab1d665194bc2a161f36f792d37d55c7809b95358251000746b1cdde4a"
+      }
+    },
+    {
+      "Faction": "Death Guard",
+      "Section": "Enhancements",
+      "Name": "Tendrilous Emissions",
+      "Text": "LORD OF VIRULENCE only. While the bearer is within 3\u0022 of one or more friendly DEATH GUARD VEHICLE units, the bearer has the Lone Operative ability, and each time one of those VEHICLE units makes a ranged attack that targets an enemy unit visible to the bearer, re-roll a Wound roll of 1.",
+      "Detachment": "Mortarion\u0027s Hammer",
+      "Cost": "30 pts",
+      "Source": {
+        "Name": "Death Guard faction reference \u00B7 Wahapedia",
+        "Version": "11th edition \u00B7 Faction Pack 1.2",
+        "Date": "2026-08-26",
+        "Url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/",
+        "ImportedAt": "2026-10-01T13:55:59.6210788\u002B00:00",
+        "Edition": "11",
+        "ContentHash": "bbc55fab1d665194bc2a161f36f792d37d55c7809b95358251000746b1cdde4a"
+      }
+    },
+    {
+      "Faction": "Death Guard",
+      "Section": "Stratagems",
+      "Name": "BLIGHTED LAND",
+      "Text": "WHEN: End of your Movement phase.\nTARGET: One DEATH GUARD VEHICLE unit from your army.\nEFFECT: Select one terrain feature within 24\u0022 of and visible to your unit. Until the start of your next turn, enemy units are Afflicted while they are within 3\u0022 of that terrain feature.",
+      "Detachment": "Mortarion\u0027s Hammer",
+      "Cost": "2 CP",
+      "Source": {
+        "Name": "Death Guard faction reference \u00B7 Wahapedia",
+        "Version": "11th edition \u00B7 Faction Pack 1.2",
+        "Date": "2026-08-26",
+        "Url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/",
+        "ImportedAt": "2026-10-01T13:55:59.6210788\u002B00:00",
+        "Edition": "11",
+        "ContentHash": "bbc55fab1d665194bc2a161f36f792d37d55c7809b95358251000746b1cdde4a"
+      }
+    },
+    {
+      "Faction": "Death Guard",
+      "Section": "Stratagems",
+      "Name": "RELENTLESS GRIND",
+      "Text": "WHEN: Your Movement phase or your Charge phase.\nTARGET: One DEATH GUARD VEHICLE unit from your army that has not been selected to move or charge this phase.\nEFFECT: Until the end of the phase, each time your unit makes a Normal, Advance or Charge move, it can move horizontally through terrain features.",
+      "Detachment": "Mortarion\u0027s Hammer",
+      "Cost": "1 CP",
+      "Source": {
+        "Name": "Death Guard faction reference \u00B7 Wahapedia",
+        "Version": "11th edition \u00B7 Faction Pack 1.2",
+        "Date": "2026-08-26",
+        "Url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/",
+        "ImportedAt": "2026-10-01T13:55:59.6210788\u002B00:00",
+        "Edition": "11",
+        "ContentHash": "bbc55fab1d665194bc2a161f36f792d37d55c7809b95358251000746b1cdde4a"
+      }
+    },
+    {
+      "Faction": "Death Guard",
+      "Section": "Stratagems",
+      "Name": "DRAWN TO DESPAIR",
+      "Text": "WHEN: Your Shooting phase.\nTARGET: One DEATH GUARD unit from your army that has not been selected to shoot this phase.\nEFFECT: Until the end of the phase, each time a model in your unit makes an attack that targets a visible enemy unit (excluding AIRCRAFT ) within your opponent\u2019s deployment zone, you can re-roll the Hit roll.",
+      "Detachment": "Mortarion\u0027s Hammer",
+      "Cost": "1 CP",
+      "Source": {
+        "Name": "Death Guard faction reference \u00B7 Wahapedia",
+        "Version": "11th edition \u00B7 Faction Pack 1.2",
+        "Date": "2026-08-26",
+        "Url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/",
+        "ImportedAt": "2026-10-01T13:55:59.6210788\u002B00:00",
+        "Edition": "11",
+        "ContentHash": "bbc55fab1d665194bc2a161f36f792d37d55c7809b95358251000746b1cdde4a"
+      }
+    },
+    {
+      "Faction": "Death Guard",
+      "Section": "Stratagems",
+      "Name": "FONT OF FILTH",
+      "Text": "WHEN: Your Shooting phase.\nTARGET: One DEATH GUARD VEHICLE unit from your army that has not been selected to shoot this phase.\nEFFECT: Until the end of the phase, ranged weapons equipped by models in your unit have the [ASSAULT] ability.",
+      "Detachment": "Mortarion\u0027s Hammer",
+      "Cost": "1 CP",
+      "Source": {
+        "Name": "Death Guard faction reference \u00B7 Wahapedia",
+        "Version": "11th edition \u00B7 Faction Pack 1.2",
+        "Date": "2026-08-26",
+        "Url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/",
+        "ImportedAt": "2026-10-01T13:55:59.6210788\u002B00:00",
+        "Edition": "11",
+        "ContentHash": "bbc55fab1d665194bc2a161f36f792d37d55c7809b95358251000746b1cdde4a"
+      }
+    },
+    {
+      "Faction": "Death Guard",
+      "Section": "Stratagems",
+      "Name": "EYESTINGER STORM",
+      "Text": "WHEN: Your opponent\u2019s Command phase.\nTARGET: One DEATH GUARD VEHICLE unit from your army.\nEFFECT: Select one objective marker visible to one or more models in your unit. Each Afflicted enemy unit within range of that objective marker must take a Battle-shock test. Enemy units affected by this Stratagem do not need to take any other Battle-shock tests in the same phase.",
+      "Detachment": "Mortarion\u0027s Hammer",
+      "Cost": "1 CP",
+      "Source": {
+        "Name": "Death Guard faction reference \u00B7 Wahapedia",
+        "Version": "11th edition \u00B7 Faction Pack 1.2",
+        "Date": "2026-08-26",
+        "Url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/",
+        "ImportedAt": "2026-10-01T13:55:59.6210788\u002B00:00",
+        "Edition": "11",
+        "ContentHash": "bbc55fab1d665194bc2a161f36f792d37d55c7809b95358251000746b1cdde4a"
+      }
+    },
+    {
+      "Faction": "Death Guard",
+      "Section": "Stratagems",
+      "Name": "STINKING MIRE",
+      "Text": "WHEN: Start of your opponent\u2019s Charge phase.\nTARGET: One friendly unengaged DEATH GUARD VEHICLE unit.\nEFFECT: Select one visible enemy unit within 12\u0022 of your unit. When that enemy unit declares a charge, that enemy unit has -1 to charge rolls.",
+      "Detachment": "Mortarion\u0027s Hammer",
+      "Cost": "1 CP",
+      "Source": {
+        "Name": "Death Guard faction reference \u00B7 Wahapedia",
+        "Version": "11th edition \u00B7 Faction Pack 1.2",
+        "Date": "2026-08-26",
+        "Url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/",
+        "ImportedAt": "2026-10-01T13:55:59.6210788\u002B00:00",
+        "Edition": "11",
+        "ContentHash": "bbc55fab1d665194bc2a161f36f792d37d55c7809b95358251000746b1cdde4a"
+      }
+    },
+    {
+      "Faction": "Death Guard",
+      "Section": "Enhancements",
+      "Name": "Final Ingredient",
+      "Text": "BIOLOGUS PUTRIFIER only. Once per battle, after the bearers unit has fought, if one or more CHARACTER models were destroyed as a result of those attacks, select one Plague.\nUntil the end of the battle, while an enemy unit is Afflicted, that unit has the effect of the selected Plague in addition to any other.",
+      "Detachment": "Champions of Contagion",
+      "Cost": "20 pts",
+      "Source": {
+        "Name": "Death Guard faction reference \u00B7 Wahapedia",
+        "Version": "11th edition \u00B7 Faction Pack 1.2",
+        "Date": "2026-08-26",
+        "Url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/",
+        "ImportedAt": "2026-10-01T13:55:59.6210788\u002B00:00",
+        "Edition": "11",
+        "ContentHash": "bbc55fab1d665194bc2a161f36f792d37d55c7809b95358251000746b1cdde4a"
+      }
+    },
+    {
+      "Faction": "Death Guard",
+      "Section": "Enhancements",
+      "Name": "Visions of Virulence",
+      "Text": "MALIGNANT PLAGUECASTER only. While an enemy unit is enfeebled by the bearer\u2019s Pestilent Fallout ability, that unit is also Afflicted.",
+      "Detachment": "Champions of Contagion",
+      "Cost": "15 pts",
+      "Source": {
+        "Name": "Death Guard faction reference \u00B7 Wahapedia",
+        "Version": "11th edition \u00B7 Faction Pack 1.2",
+        "Date": "2026-08-26",
+        "Url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/",
+        "ImportedAt": "2026-10-01T13:55:59.6210788\u002B00:00",
+        "Edition": "11",
+        "ContentHash": "bbc55fab1d665194bc2a161f36f792d37d55c7809b95358251000746b1cdde4a"
+      }
+    },
+    {
+      "Faction": "Death Guard",
+      "Section": "Enhancements",
+      "Name": "Needle of Nurgle",
+      "Text": "PLAGUE SURGEON only. Each time the bearer uses its Tainted Narthecium ability, you can return up to D3 destroyed models to the bearer\u2019s unit (instead of 1).",
+      "Detachment": "Champions of Contagion",
+      "Cost": "25 pts",
+      "Source": {
+        "Name": "Death Guard faction reference \u00B7 Wahapedia",
+        "Version": "11th edition \u00B7 Faction Pack 1.2",
+        "Date": "2026-08-26",
+        "Url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/",
+        "ImportedAt": "2026-10-01T13:55:59.6210788\u002B00:00",
+        "Edition": "11",
+        "ContentHash": "bbc55fab1d665194bc2a161f36f792d37d55c7809b95358251000746b1cdde4a"
+      }
+    },
+    {
+      "Faction": "Death Guard",
+      "Section": "Enhancements",
+      "Name": "Cornucophagus",
+      "Text": "LORD OF POXES only. In the Declare Battle Formations step select one Plague. Until the end of the battle, while an enemy unit is within Contagion Range of the bearer, that enemy unit has the effect of that Plague in addition to any other.",
+      "Detachment": "Champions of Contagion",
+      "Cost": "35 pts",
+      "Source": {
+        "Name": "Death Guard faction reference \u00B7 Wahapedia",
+        "Version": "11th edition \u00B7 Faction Pack 1.2",
+        "Date": "2026-08-26",
+        "Url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/",
+        "ImportedAt": "2026-10-01T13:55:59.6210788\u002B00:00",
+        "Edition": "11",
+        "ContentHash": "bbc55fab1d665194bc2a161f36f792d37d55c7809b95358251000746b1cdde4a"
+      }
+    },
+    {
+      "Faction": "Death Guard",
+      "Section": "Stratagems",
+      "Name": "BLESSINGS OF FILTH",
+      "Text": "WHEN: Your Shooting phase or the Fight phase.\nTARGET: One DEATH GUARD Attached unit from your army that has not been selected to shoot or fight this phase.\nEFFECT: Until the end of the phase, each time a model in your unit makes an attack, an unmodified Hit roll of 5\u002B scores a Critical Hit.",
+      "Detachment": "Champions of Contagion",
+      "Cost": "1 CP",
+      "Source": {
+        "Name": "Death Guard faction reference \u00B7 Wahapedia",
+        "Version": "11th edition \u00B7 Faction Pack 1.2",
+        "Date": "2026-08-26",
+        "Url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/",
+        "ImportedAt": "2026-10-01T13:55:59.6210788\u002B00:00",
+        "Edition": "11",
+        "ContentHash": "bbc55fab1d665194bc2a161f36f792d37d55c7809b95358251000746b1cdde4a"
+      }
+    },
+    {
+      "Faction": "Death Guard",
+      "Section": "Stratagems",
+      "Name": "MALIGNANCE MAGNIFIED",
+      "Text": "WHEN: Your Shooting phase or the Fight phase.\nTARGET: One DEATH GUARD Attached unit from your army that has not been selected to shoot or fight this phase.\nEFFECT: Until the end of the phase, each time a model in your unit makes an attack that targets a unit that is below its Starting Strength, you can re-roll the Hit roll and you can re-roll the Wound roll.",
+      "Detachment": "Champions of Contagion",
+      "Cost": "2 CP",
+      "Source": {
+        "Name": "Death Guard faction reference \u00B7 Wahapedia",
+        "Version": "11th edition \u00B7 Faction Pack 1.2",
+        "Date": "2026-08-26",
+        "Url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/",
+        "ImportedAt": "2026-10-01T13:55:59.6210788\u002B00:00",
+        "Edition": "11",
+        "ContentHash": "bbc55fab1d665194bc2a161f36f792d37d55c7809b95358251000746b1cdde4a"
+      }
+    },
+    {
+      "Faction": "Death Guard",
+      "Section": "Stratagems",
+      "Name": "GROTESQUE FORTITUDE",
+      "Text": "WHEN: Your opponent\u2019s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.\nTARGET: One DEATH GUARD Attached unit from your army that was selected as the target of one or more of the attacking unit\u2019s attacks.\nEFFECT: Until the end of the phase, add 2 to the Toughness characteristic of models in your unit.",
+      "Detachment": "Champions of Contagion",
+      "Cost": "1 CP",
+      "Source": {
+        "Name": "Death Guard faction reference \u00B7 Wahapedia",
+        "Version": "11th edition \u00B7 Faction Pack 1.2",
+        "Date": "2026-08-26",
+        "Url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/",
+        "ImportedAt": "2026-10-01T13:55:59.6210788\u002B00:00",
+        "Edition": "11",
+        "ContentHash": "bbc55fab1d665194bc2a161f36f792d37d55c7809b95358251000746b1cdde4a"
+      }
+    },
+    {
+      "Faction": "Death Guard",
+      "Section": "Stratagems",
+      "Name": "RABID INFUSION",
+      "Text": "WHEN: Start of the Fight phase.\nTARGET: One DEATH GUARD unit from your army that includes two CHARACTER models.\nEFFECT: Until the end of the phase, your unit has the Fights First ability.",
+      "Detachment": "Champions of Contagion",
+      "Cost": "1 CP",
+      "Source": {
+        "Name": "Death Guard faction reference \u00B7 Wahapedia",
+        "Version": "11th edition \u00B7 Faction Pack 1.2",
+        "Date": "2026-08-26",
+        "Url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/",
+        "ImportedAt": "2026-10-01T13:55:59.6210788\u002B00:00",
+        "Edition": "11",
+        "ContentHash": "bbc55fab1d665194bc2a161f36f792d37d55c7809b95358251000746b1cdde4a"
+      }
+    },
+    {
+      "Faction": "Death Guard",
+      "Section": "Stratagems",
+      "Name": "MOBILE VECTOR",
+      "Text": "WHEN: Your Movement phase, before the Reinforcements step.\nTARGET: One DEATH GUARD CHARACTER unit from your army that is not leading a unit.\nEFFECT: Select one other friendly DEATH GUARD unit (excluding Battle-shocked units and Attached units that already have two Leader units or one of your CHARACTER units leading it] within 2\u0022 horizontally and 5\u0022 vertically of your unit that your unit can lead (as described in the Leader section of its datasheet]. Your unit attaches to that unit as a Leader. Change that unit\u2019s Starting Strength accordingly.",
+      "Detachment": "Champions of Contagion",
+      "Cost": "1 CP",
+      "Source": {
+        "Name": "Death Guard faction reference \u00B7 Wahapedia",
+        "Version": "11th edition \u00B7 Faction Pack 1.2",
+        "Date": "2026-08-26",
+        "Url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/",
+        "ImportedAt": "2026-10-01T13:55:59.6210788\u002B00:00",
+        "Edition": "11",
+        "ContentHash": "bbc55fab1d665194bc2a161f36f792d37d55c7809b95358251000746b1cdde4a"
+      }
+    },
+    {
+      "Faction": "Death Guard",
+      "Section": "Stratagems",
+      "Name": "DEATH\u2019S HEADS",
+      "Text": "WHEN: Your Shooting phase.\nTARGET: One BIOLOGUS PUTRIFIER unit from your army that is not within Engagement Range of one or more enemy units and has not been selected to shoot this phase.\nEFFECT: Select one enemy unit (excluding VEHICLES) that is within 8\u0022 of and visible to your unit. Until the start of your next turn, that unit has the effect of all Plagues (see Nurgle\u2019s Gift).",
+      "Detachment": "Champions of Contagion",
+      "Cost": "1 CP",
+      "Source": {
+        "Name": "Death Guard faction reference \u00B7 Wahapedia",
+        "Version": "11th edition \u00B7 Faction Pack 1.2",
+        "Date": "2026-08-26",
+        "Url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/",
+        "ImportedAt": "2026-10-01T13:55:59.6210788\u002B00:00",
+        "Edition": "11",
+        "ContentHash": "bbc55fab1d665194bc2a161f36f792d37d55c7809b95358251000746b1cdde4a"
+      }
+    },
+    {
+      "Faction": "Death Guard",
+      "Section": "Enhancements",
+      "Name": "Beckoning Blight",
+      "Text": "DEATH GUARD model only.\nEach time a PLAGUE LEGIONS unit from your army is set up on the battlefield using the Deep Strike ability, if it is set up wholly within 12\u0022 of the bearer, it can be set up anywhere that is more than 6\u0022 horizontally away from all enemy models, instead of more than 8\u0022.",
+      "Detachment": "Tallyband Summoners",
+      "Cost": "20 pts",
+      "Source": {
+        "Name": "Death Guard faction reference \u00B7 Wahapedia",
+        "Version": "11th edition \u00B7 Faction Pack 1.2",
+        "Date": "2026-08-26",
+        "Url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/",
+        "ImportedAt": "2026-10-01T13:55:59.6210788\u002B00:00",
+        "Edition": "11",
+        "ContentHash": "bbc55fab1d665194bc2a161f36f792d37d55c7809b95358251000746b1cdde4a"
+      }
+    },
+    {
+      "Faction": "Death Guard",
+      "Section": "Enhancements",
+      "Name": "Fell Harvester",
+      "Text": "DEATH GUARD model only. Add 2 to the Attacks characteristic of the bearer\u2019s melee weapons.",
+      "Detachment": "Tallyband Summoners",
+      "Cost": "10 pts",
+      "Source": {
+        "Name": "Death Guard faction reference \u00B7 Wahapedia",
+        "Version": "11th edition \u00B7 Faction Pack 1.2",
+        "Date": "2026-08-26",
+        "Url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/",
+        "ImportedAt": "2026-10-01T13:55:59.6210788\u002B00:00",
+        "Edition": "11",
+        "ContentHash": "bbc55fab1d665194bc2a161f36f792d37d55c7809b95358251000746b1cdde4a"
+      }
+    },
+    {
+      "Faction": "Death Guard",
+      "Section": "Enhancements",
+      "Name": "Entropic Knell",
+      "Text": "GREAT UNCLEAN ONE only. In the Battle-shock step of your opponent\u2019s Command phase, each enemy unit within 6\u0022 of the bearer that is below its Starting Strength must take a Battle-shock test, subtracting 1 from that test.",
+      "Detachment": "Tallyband Summoners",
+      "Cost": "15 pts",
+      "Source": {
+        "Name": "Death Guard faction reference \u00B7 Wahapedia",
+        "Version": "11th edition \u00B7 Faction Pack 1.2",
+        "Date": "2026-08-26",
+        "Url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/",
+        "ImportedAt": "2026-10-01T13:55:59.6210788\u002B00:00",
+        "Edition": "11",
+        "ContentHash": "bbc55fab1d665194bc2a161f36f792d37d55c7809b95358251000746b1cdde4a"
+      }
+    },
+    {
+      "Faction": "Death Guard",
+      "Section": "Enhancements",
+      "Name": "Tome of Bounteous Blessings",
+      "Text": "MALIGNANT PLAGUECASTER only. Each time a PLAGUE LEGIONS unit within 12\u0022 of the bearer takes a Battle-shock test, add 1 to that test and, if that test is passed, one model in that unit regains up to D3 lost wounds (if that unit is a BATTLELINE unit and that test is passed, up to D3 destroyed models can be returned to that unit instead).",
+      "Detachment": "Tallyband Summoners",
+      "Cost": "20 pts",
+      "Source": {
+        "Name": "Death Guard faction reference \u00B7 Wahapedia",
+        "Version": "11th edition \u00B7 Faction Pack 1.2",
+        "Date": "2026-08-26",
+        "Url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/",
+        "ImportedAt": "2026-10-01T13:55:59.6210788\u002B00:00",
+        "Edition": "11",
+        "ContentHash": "bbc55fab1d665194bc2a161f36f792d37d55c7809b95358251000746b1cdde4a"
+      }
+    },
+    {
+      "Faction": "Death Guard",
+      "Section": "Stratagems",
+      "Name": "PERSISTENT PESTS",
+      "Text": "WHEN: Any phase.\nTARGET: One NURGLINGS unit from your army that was just destroyed. You can target that unit with this Stratagem even though it was just destroyed.\nEFFECT: Add a new unit to your army identical to your destroyed unit, in Strategic Reserves, at its Starting Strength and with its full wounds remaining.\nRESTRICTIONS: You can only use this Stratagem once per battle.",
+      "Detachment": "Tallyband Summoners",
+      "Cost": "1 CP",
+      "Source": {
+        "Name": "Death Guard faction reference \u00B7 Wahapedia",
+        "Version": "11th edition \u00B7 Faction Pack 1.2",
+        "Date": "2026-08-26",
+        "Url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/",
+        "ImportedAt": "2026-10-01T13:55:59.6210788\u002B00:00",
+        "Edition": "11",
+        "ContentHash": "bbc55fab1d665194bc2a161f36f792d37d55c7809b95358251000746b1cdde4a"
+      }
+    },
+    {
+      "Faction": "Death Guard",
+      "Section": "Stratagems",
+      "Name": "CLUTCHING CORRUPTION",
+      "Text": "WHEN: Fight phase.\nTARGET: One DEATH GUARD unit from your army that has not been selected to fight this phase.\nEFFECT: Until the end of the phase, each time a model in your unit makes an attack that targets an enemy unit that is within Engagement Range of one or more PLAGUE LEGIONS units from your army, you can re-roll the Hit roll.",
+      "Detachment": "Tallyband Summoners",
+      "Cost": "1 CP",
+      "Source": {
+        "Name": "Death Guard faction reference \u00B7 Wahapedia",
+        "Version": "11th edition \u00B7 Faction Pack 1.2",
+        "Date": "2026-08-26",
+        "Url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/",
+        "ImportedAt": "2026-10-01T13:55:59.6210788\u002B00:00",
+        "Edition": "11",
+        "ContentHash": "bbc55fab1d665194bc2a161f36f792d37d55c7809b95358251000746b1cdde4a"
+      }
+    },
+    {
+      "Faction": "Death Guard",
+      "Section": "Stratagems",
+      "Name": "ALL IS ROT",
+      "Text": "WHEN: Your Shooting phase.\nTARGET: One PLAGUE LEGIONS unit from your army that is within Engagement Range of one or more enemy units.\nEFFECT: Until the end of the phase, enemy units are not considered to be within Engagement Range of your unit for the purposes of selecting targets of ranged weapons. Until the end of the phase, each time an enemy model loses a wound, while that model\u2019s unit is within Engagement Range of your unit, roll one D6: on a 5\u002B, your unit suffers 1 mortal wound after the attacking unit has finished making its attacks.",
+      "Detachment": "Tallyband Summoners",
+      "Cost": "1 CP",
+      "Source": {
+        "Name": "Death Guard faction reference \u00B7 Wahapedia",
+        "Version": "11th edition \u00B7 Faction Pack 1.2",
+        "Date": "2026-08-26",
+        "Url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/",
+        "ImportedAt": "2026-10-01T13:55:59.6210788\u002B00:00",
+        "Edition": "11",
+        "ContentHash": "bbc55fab1d665194bc2a161f36f792d37d55c7809b95358251000746b1cdde4a"
+      }
+    },
+    {
+      "Faction": "Death Guard",
+      "Section": "Stratagems",
+      "Name": "FLESHY AVALANCHE",
+      "Text": "WHEN: Your Movement phase or your Charge phase.\nTARGET: One PLAGUE LEGIONS MONSTER unit from your army that has not been selected to move or charge this phase.\nEFFECT: Until the end of the phase, each time your unit makes a Normal, Advance or Charge move, it can move horizontally through terrain features.",
+      "Detachment": "Tallyband Summoners",
+      "Cost": "1 CP",
+      "Source": {
+        "Name": "Death Guard faction reference \u00B7 Wahapedia",
+        "Version": "11th edition \u00B7 Faction Pack 1.2",
+        "Date": "2026-08-26",
+        "Url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/",
+        "ImportedAt": "2026-10-01T13:55:59.6210788\u002B00:00",
+        "Edition": "11",
+        "ContentHash": "bbc55fab1d665194bc2a161f36f792d37d55c7809b95358251000746b1cdde4a"
+      }
+    },
+    {
+      "Faction": "Death Guard",
+      "Section": "Stratagems",
+      "Name": "AVATARS OF DECAY",
+      "Text": "WHEN: Your Shooting phase.\nTARGET: One PLAGUE LEGIONS unit from your army.\nEFFECT: Until the end of the phase, while an enemy unit is within 6\u0022 of your unit, that enemy unit is Afflicted.",
+      "Detachment": "Tallyband Summoners",
+      "Cost": "1 CP",
+      "Source": {
+        "Name": "Death Guard faction reference \u00B7 Wahapedia",
+        "Version": "11th edition \u00B7 Faction Pack 1.2",
+        "Date": "2026-08-26",
+        "Url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/",
+        "ImportedAt": "2026-10-01T13:55:59.6210788\u002B00:00",
+        "Edition": "11",
+        "ContentHash": "bbc55fab1d665194bc2a161f36f792d37d55c7809b95358251000746b1cdde4a"
+      }
+    },
+    {
+      "Faction": "Death Guard",
+      "Section": "Stratagems",
+      "Name": "MIRESLICK",
+      "Text": "WHEN: Your opponent\u2019s Movement phase, when an enemy unit (excluding MONSTERS and VEHICLES) is selected to Fall Back.\nTARGET: One PLAGUE LEGIONS unit from your army that is within Engagement Range of that enemy unit.\nEFFECT: Until the end of the phase, while an enemy unit is within Engagement Range of your unit, each time that unit is selected to Fall Back, it must take a Leadership test. If that test is failed, that unit must Remain Stationary this phase instead.",
+      "Detachment": "Tallyband Summoners",
+      "Cost": "1 CP",
+      "Source": {
+        "Name": "Death Guard faction reference \u00B7 Wahapedia",
+        "Version": "11th edition \u00B7 Faction Pack 1.2",
+        "Date": "2026-08-26",
+        "Url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/",
+        "ImportedAt": "2026-10-01T13:55:59.6210788\u002B00:00",
+        "Edition": "11",
+        "ContentHash": "bbc55fab1d665194bc2a161f36f792d37d55c7809b95358251000746b1cdde4a"
+      }
+    },
+    {
+      "Faction": "Death Guard",
+      "Section": "Enhancements",
+      "Name": "Witherbone Pipes",
+      "Text": "NOXIOUS BLIGHTBRINGER only. While the bearer is leading a POXWALKERS unit, add 1 to the Objective Control characteristic of models in that unit, and each time that unit takes a Battle-shock or Leadership test, add 1 to that test.",
+      "Detachment": "Shamblerot Vectorium",
+      "Cost": "25 pts",
+      "Source": {
+        "Name": "Death Guard faction reference \u00B7 Wahapedia",
+        "Version": "11th edition \u00B7 Faction Pack 1.2",
+        "Date": "2026-08-26",
+        "Url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/",
+        "ImportedAt": "2026-10-01T13:55:59.6210788\u002B00:00",
+        "Edition": "11",
+        "ContentHash": "bbc55fab1d665194bc2a161f36f792d37d55c7809b95358251000746b1cdde4a"
+      }
+    },
+    {
+      "Faction": "Death Guard",
+      "Section": "Enhancements",
+      "Name": "Lord of the Walking Pox",
+      "Text": "DEATH GUARD model only. If the bearer is leading a POXWALKER unit, and is in Strategic Reserves, for the purposes of setting up that unit on the battlefield, treat the current battle round as the third battle round.",
+      "Detachment": "Shamblerot Vectorium",
+      "Cost": "15 pts",
+      "Source": {
+        "Name": "Death Guard faction reference \u00B7 Wahapedia",
+        "Version": "11th edition \u00B7 Faction Pack 1.2",
+        "Date": "2026-08-26",
+        "Url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/",
+        "ImportedAt": "2026-10-01T13:55:59.6210788\u002B00:00",
+        "Edition": "11",
+        "ContentHash": "bbc55fab1d665194bc2a161f36f792d37d55c7809b95358251000746b1cdde4a"
+      }
+    },
+    {
+      "Faction": "Death Guard",
+      "Section": "Enhancements",
+      "Name": "Sorrowsyphon",
+      "Text": "MALIGNANT PLAGUECASTER only. While the bearer is leading a POXWALKERS unit, add 1 to the Damage characteristic of the bearer\u2019s Plague Wind weapon. Each time the bearer makes one or more attacks with a Plague Wind weapon, after the bearer\u2019s unit has resolved its attacks, D3 Bodyguard models from the bearer\u2019s unit are destroyed.",
+      "Detachment": "Shamblerot Vectorium",
+      "Cost": "10 pts",
+      "Source": {
+        "Name": "Death Guard faction reference \u00B7 Wahapedia",
+        "Version": "11th edition \u00B7 Faction Pack 1.2",
+        "Date": "2026-08-26",
+        "Url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/",
+        "ImportedAt": "2026-10-01T13:55:59.6210788\u002B00:00",
+        "Edition": "11",
+        "ContentHash": "bbc55fab1d665194bc2a161f36f792d37d55c7809b95358251000746b1cdde4a"
+      }
+    },
+    {
+      "Faction": "Death Guard",
+      "Section": "Enhancements",
+      "Name": "Talisman of Burgeoning",
+      "Text": "DEATH GUARD model only. While the bearer is leading a unit, add 1 to the Toughness characteristic of POXWALKERS models in that unit.",
+      "Detachment": "Shamblerot Vectorium",
+      "Cost": "25 pts",
+      "Source": {
+        "Name": "Death Guard faction reference \u00B7 Wahapedia",
+        "Version": "11th edition \u00B7 Faction Pack 1.2",
+        "Date": "2026-08-26",
+        "Url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/",
+        "ImportedAt": "2026-10-01T13:55:59.6210788\u002B00:00",
+        "Edition": "11",
+        "ContentHash": "bbc55fab1d665194bc2a161f36f792d37d55c7809b95358251000746b1cdde4a"
+      }
+    },
+    {
+      "Faction": "Death Guard",
+      "Section": "Stratagems",
+      "Name": "GRIP OF THE WALKING POX",
+      "Text": "WHEN: Fight phase, just after an enemy unit has selected its targets.\nTARGET: One POXWALKERS unit from your army that was selected as the target of one or more of the attacking unit\u2019s attacks.\nEFFECT: After the attacking unit has fought, roll one D6 for each model from your unit that was destroyed as a result of those attacks: on a 6, the attacking unit suffers 1 mortal wound. If your unit is not destroyed after the attacking unit has fought, enemy models destroyed as a result of this Stratagem count as enemy models destroyed by an attack made by a model in your unit for the purposes of the Curse of the Walking Pox ability.",
+      "Detachment": "Shamblerot Vectorium",
+      "Cost": "1 CP",
+      "Source": {
+        "Name": "Death Guard faction reference \u00B7 Wahapedia",
+        "Version": "11th edition \u00B7 Faction Pack 1.2",
+        "Date": "2026-08-26",
+        "Url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/",
+        "ImportedAt": "2026-10-01T13:55:59.6210788\u002B00:00",
+        "Edition": "11",
+        "ContentHash": "bbc55fab1d665194bc2a161f36f792d37d55c7809b95358251000746b1cdde4a"
+      }
+    },
+    {
+      "Faction": "Death Guard",
+      "Section": "Stratagems",
+      "Name": "SMEARED WITH FILTH",
+      "Text": "WHEN: Fight phase.\nTARGET: One POXWALKERS unit from your army that was just destroyed. You can target that unit with this Stratagem even though it was just destroyed.\nEFFECT: Select one enemy unit that made one or more attacks that targeted your unit this phase. Until the end of the battle, that enemy unit is Afflicted.",
+      "Detachment": "Shamblerot Vectorium",
+      "Cost": "1 CP",
+      "Source": {
+        "Name": "Death Guard faction reference \u00B7 Wahapedia",
+        "Version": "11th edition \u00B7 Faction Pack 1.2",
+        "Date": "2026-08-26",
+        "Url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/",
+        "ImportedAt": "2026-10-01T13:55:59.6210788\u002B00:00",
+        "Edition": "11",
+        "ContentHash": "bbc55fab1d665194bc2a161f36f792d37d55c7809b95358251000746b1cdde4a"
+      }
+    },
+    {
+      "Faction": "Death Guard",
+      "Section": "Stratagems",
+      "Name": "GNAWING HUNGER",
+      "Text": "WHEN: Your Command phase.\nTARGET: One POXWALKERS unit from your army.\nEFFECT: Until the end of the turn, add 1 to the Move characteristic of models in your unit, and add 1 to the Attacks and Strength characteristics of melee weapons equipped by models in your unit.",
+      "Detachment": "Shamblerot Vectorium",
+      "Cost": "1 CP",
+      "Source": {
+        "Name": "Death Guard faction reference \u00B7 Wahapedia",
+        "Version": "11th edition \u00B7 Faction Pack 1.2",
+        "Date": "2026-08-26",
+        "Url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/",
+        "ImportedAt": "2026-10-01T13:55:59.6210788\u002B00:00",
+        "Edition": "11",
+        "ContentHash": "bbc55fab1d665194bc2a161f36f792d37d55c7809b95358251000746b1cdde4a"
+      }
+    },
+    {
+      "Faction": "Death Guard",
+      "Section": "Stratagems",
+      "Name": "HIDDEN AMONGST THE DEAD",
+      "Text": "WHEN: The Reinforcements step of your Movement phase.\nTARGET: One POXWALKERS unit from your army that is in Strategic Reserves and that is not an Attached unit.\nEFFECT: Until the end of the phase, models in that unit have the Deep Strike ability.",
+      "Detachment": "Shamblerot Vectorium",
+      "Cost": "1 CP",
+      "Source": {
+        "Name": "Death Guard faction reference \u00B7 Wahapedia",
+        "Version": "11th edition \u00B7 Faction Pack 1.2",
+        "Date": "2026-08-26",
+        "Url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/",
+        "ImportedAt": "2026-10-01T13:55:59.6210788\u002B00:00",
+        "Edition": "11",
+        "ContentHash": "bbc55fab1d665194bc2a161f36f792d37d55c7809b95358251000746b1cdde4a"
+      }
+    },
+    {
+      "Faction": "Death Guard",
+      "Section": "Stratagems",
+      "Name": "SHOCK AND HORROR",
+      "Text": "WHEN: Your Charge phase, just after a DEATH GUARD unit from your army ends a Charge move.\nTARGET: That DEATH GUARD unit.\nEFFECT: Each enemy unit within Engagement Range of your unit must take a Battle-shock test, subtracting 1 from that test.",
+      "Detachment": "Shamblerot Vectorium",
+      "Cost": "1 CP",
+      "Source": {
+        "Name": "Death Guard faction reference \u00B7 Wahapedia",
+        "Version": "11th edition \u00B7 Faction Pack 1.2",
+        "Date": "2026-08-26",
+        "Url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/",
+        "ImportedAt": "2026-10-01T13:55:59.6210788\u002B00:00",
+        "Edition": "11",
+        "ContentHash": "bbc55fab1d665194bc2a161f36f792d37d55c7809b95358251000746b1cdde4a"
+      }
+    },
+    {
+      "Faction": "Death Guard",
+      "Section": "Stratagems",
+      "Name": "SHAMBLING WALL",
+      "Text": "WHEN: Your opponent\u2019s Shooting phase, just after an enemy unit has selected its targets.\nTARGET: One DEATH GUARD unit from your army that was selected as the target of one or more of the attacking unit\u2019s attacks, and one friendly POXWALKERS unit within 3\u0022 of your unit and visible to both your unit and the attacking unit.\nEFFECT: Until the end of the phase, each time you would allocate an attack to a model in your DEATH GUARD unit, if your POXWALKERS unit is visible to the attacking model and is an eligible target for that attack, no saving throw is made for that attack; instead a number of POXWALKERS from your POXWALKERS unit equal to the Damage characteristic of that attack are destroyed.",
+      "Detachment": "Shamblerot Vectorium",
+      "Cost": "1 CP",
+      "Source": {
+        "Name": "Death Guard faction reference \u00B7 Wahapedia",
+        "Version": "11th edition \u00B7 Faction Pack 1.2",
+        "Date": "2026-08-26",
+        "Url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/",
+        "ImportedAt": "2026-10-01T13:55:59.6210788\u002B00:00",
+        "Edition": "11",
+        "ContentHash": "bbc55fab1d665194bc2a161f36f792d37d55c7809b95358251000746b1cdde4a"
+      }
+    },
+    {
+      "Faction": "Death Guard",
+      "Section": "Enhancements",
+      "Name": "Face of Death",
+      "Text": "TERMINATOR model only. At the start of the Fight phase, each enemy unit within Engagement Range of the bearer\u2019s unit must take a Battle-shock test.",
+      "Detachment": "Death Lord\u0027s Chosen",
+      "Cost": "10 pts",
+      "Source": {
+        "Name": "Death Guard faction reference \u00B7 Wahapedia",
+        "Version": "11th edition \u00B7 Faction Pack 1.2",
+        "Date": "2026-08-26",
+        "Url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/",
+        "ImportedAt": "2026-10-01T13:55:59.6210788\u002B00:00",
+        "Edition": "11",
+        "ContentHash": "bbc55fab1d665194bc2a161f36f792d37d55c7809b95358251000746b1cdde4a"
+      }
+    },
+    {
+      "Faction": "Death Guard",
+      "Section": "Enhancements",
+      "Name": "Vile Vigour",
+      "Text": "TERMINATOR model only. While the bearer is leading a unit, add 1\u0022 to the Movement characteristic of models in that unit and you can re-roll Advance rolls made for that unit.",
+      "Detachment": "Death Lord\u0027s Chosen",
+      "Cost": "15 pts",
+      "Source": {
+        "Name": "Death Guard faction reference \u00B7 Wahapedia",
+        "Version": "11th edition \u00B7 Faction Pack 1.2",
+        "Date": "2026-08-26",
+        "Url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/",
+        "ImportedAt": "2026-10-01T13:55:59.6210788\u002B00:00",
+        "Edition": "11",
+        "ContentHash": "bbc55fab1d665194bc2a161f36f792d37d55c7809b95358251000746b1cdde4a"
+      }
+    },
+    {
+      "Faction": "Death Guard",
+      "Section": "Enhancements",
+      "Name": "Warprot Talisman",
+      "Text": "TERMINATOR model only. Once per battle, at the end of your opponent\u2019s turn, if the bearer\u2019s unit is not within Engagement Range of one or more enemy units, you can remove it from the battlefield and place it into Strategic Reserves.",
+      "Detachment": "Death Lord\u0027s Chosen",
+      "Cost": "30 pts",
+      "Source": {
+        "Name": "Death Guard faction reference \u00B7 Wahapedia",
+        "Version": "11th edition \u00B7 Faction Pack 1.2",
+        "Date": "2026-08-26",
+        "Url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/",
+        "ImportedAt": "2026-10-01T13:55:59.6210788\u002B00:00",
+        "Edition": "11",
+        "ContentHash": "bbc55fab1d665194bc2a161f36f792d37d55c7809b95358251000746b1cdde4a"
+      }
+    },
+    {
+      "Faction": "Death Guard",
+      "Section": "Enhancements",
+      "Name": "Helm of the Fly King",
+      "Text": "TERMINATOR model only. While the bearer is leading a unit, models in that unit cannot be targeted by ranged attacks unless the attacking model is within 18\u0022.",
+      "Detachment": "Death Lord\u0027s Chosen",
+      "Cost": "20 pts",
+      "Source": {
+        "Name": "Death Guard faction reference \u00B7 Wahapedia",
+        "Version": "11th edition \u00B7 Faction Pack 1.2",
+        "Date": "2026-08-26",
+        "Url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/",
+        "ImportedAt": "2026-10-01T13:55:59.6210788\u002B00:00",
+        "Edition": "11",
+        "ContentHash": "bbc55fab1d665194bc2a161f36f792d37d55c7809b95358251000746b1cdde4a"
+      }
+    },
+    {
+      "Faction": "Death Guard",
+      "Section": "Stratagems",
+      "Name": "BLOOMING PESTILENCE",
+      "Text": "WHEN: Start of any phase.\nTARGET: One TERMINATOR unit from your army.\nEFFECT: Until the end of the phase, add 3\u0022 to the Contagion Range of models in your unit.",
+      "Detachment": "Death Lord\u0027s Chosen",
+      "Cost": "1 CP",
+      "Source": {
+        "Name": "Death Guard faction reference \u00B7 Wahapedia",
+        "Version": "11th edition \u00B7 Faction Pack 1.2",
+        "Date": "2026-08-26",
+        "Url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/",
+        "ImportedAt": "2026-10-01T13:55:59.6210788\u002B00:00",
+        "Edition": "11",
+        "ContentHash": "bbc55fab1d665194bc2a161f36f792d37d55c7809b95358251000746b1cdde4a"
+      }
+    },
+    {
+      "Faction": "Death Guard",
+      "Section": "Stratagems",
+      "Name": "GRIM REAPERS",
+      "Text": "WHEN: Fight phase.\nTARGET: One TERMINATOR unit from your army that has not been selected to fight this phase.\nEFFECT: Until the end of the phase, each time a model in your unit makes an attack that targets an enemy unit (excluding MONSTERS and VEHICLES) you can re-roll the Hit roll.",
+      "Detachment": "Death Lord\u0027s Chosen",
+      "Cost": "1 CP",
+      "Source": {
+        "Name": "Death Guard faction reference \u00B7 Wahapedia",
+        "Version": "11th edition \u00B7 Faction Pack 1.2",
+        "Date": "2026-08-26",
+        "Url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/",
+        "ImportedAt": "2026-10-01T13:55:59.6210788\u002B00:00",
+        "Edition": "11",
+        "ContentHash": "bbc55fab1d665194bc2a161f36f792d37d55c7809b95358251000746b1cdde4a"
+      }
+    },
+    {
+      "Faction": "Death Guard",
+      "Section": "Stratagems",
+      "Name": "UNDYING SPITE",
+      "Text": "WHEN: Fight phase, just after an enemy unit has selected its targets.\nTARGET: One TERMINATOR unit from your army that was selected as the target of one or more of the attacking unit\u2019s attacks.\nEFFECT: Until the end of the phase, each time a model in your unit is destroyed, if that model has not fought this phase, roll one D6. On a 4\u002B, do not remove the destroyed model from play; it can fight after the attacking unit has finished making its attacks, and is then removed from play.",
+      "Detachment": "Death Lord\u0027s Chosen",
+      "Cost": "1 CP",
+      "Source": {
+        "Name": "Death Guard faction reference \u00B7 Wahapedia",
+        "Version": "11th edition \u00B7 Faction Pack 1.2",
+        "Date": "2026-08-26",
+        "Url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/",
+        "ImportedAt": "2026-10-01T13:55:59.6210788\u002B00:00",
+        "Edition": "11",
+        "ContentHash": "bbc55fab1d665194bc2a161f36f792d37d55c7809b95358251000746b1cdde4a"
+      }
+    },
+    {
+      "Faction": "Death Guard",
+      "Section": "Stratagems",
+      "Name": "SIGNAL POX",
+      "Text": "WHEN: Your Command phase.\nTARGET: One LORD OF VIRULENCE model from your army.\nEFFECT: Select one objective marker within 30\u0022 of and visible to your model. Until the start of your next turn, while an enemy unit is within range of that objective marker, that unit is Afflicted.",
+      "Detachment": "Death Lord\u0027s Chosen",
+      "Cost": "1 CP",
+      "Source": {
+        "Name": "Death Guard faction reference \u00B7 Wahapedia",
+        "Version": "11th edition \u00B7 Faction Pack 1.2",
+        "Date": "2026-08-26",
+        "Url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/",
+        "ImportedAt": "2026-10-01T13:55:59.6210788\u002B00:00",
+        "Edition": "11",
+        "ContentHash": "bbc55fab1d665194bc2a161f36f792d37d55c7809b95358251000746b1cdde4a"
+      }
+    },
+    {
+      "Faction": "Death Guard",
+      "Section": "Stratagems",
+      "Name": "MORTARION\u0027S TEACHINGS",
+      "Text": "WHEN: Your Shooting phase.\nTARGET: One TERMINATOR unit from your army that has not been selected to shoot this phase.\nEFFECT: Until the end of the phase, ranged weapons equipped by models in your unit have the [ASSAULT] and [HEAVY] abilities.",
+      "Detachment": "Death Lord\u0027s Chosen",
+      "Cost": "1 CP",
+      "Source": {
+        "Name": "Death Guard faction reference \u00B7 Wahapedia",
+        "Version": "11th edition \u00B7 Faction Pack 1.2",
+        "Date": "2026-08-26",
+        "Url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/",
+        "ImportedAt": "2026-10-01T13:55:59.6210788\u002B00:00",
+        "Edition": "11",
+        "ContentHash": "bbc55fab1d665194bc2a161f36f792d37d55c7809b95358251000746b1cdde4a"
+      }
+    },
+    {
+      "Faction": "Death Guard",
+      "Section": "Stratagems",
+      "Name": "SICKENING IMPACT",
+      "Text": "WHEN: Your Charge phase, just after a TERMINATOR unit from your army ends a Charge move.\nTARGET: That TERMINATOR unit.\nEFFECT: Select one enemy unit within Engagement Range of your unit, then roll one D6 for each model in your unit that is within Engagement Range of that enemy unit: for each 2\u002B, that enemy unit suffers 1 mortal wound (to a maximum of 6 mortal wounds).",
+      "Detachment": "Death Lord\u0027s Chosen",
+      "Cost": "1 CP",
+      "Source": {
+        "Name": "Death Guard faction reference \u00B7 Wahapedia",
+        "Version": "11th edition \u00B7 Faction Pack 1.2",
+        "Date": "2026-08-26",
+        "Url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/",
+        "ImportedAt": "2026-10-01T13:55:59.6210788\u002B00:00",
+        "Edition": "11",
+        "ContentHash": "bbc55fab1d665194bc2a161f36f792d37d55c7809b95358251000746b1cdde4a"
+      }
+    },
+    {
+      "Faction": "Death Guard",
+      "Section": "Enhancements",
+      "Name": "Parasitic Woe\u2011Reaper UPGRADE",
+      "Text": "CONTAGION ENGINE unit only. When this unit has fought, one model in this unit heals D3 wounds.",
+      "Detachment": "Contagion Engines",
+      "Cost": "15 pts",
+      "Source": {
+        "Name": "Death Guard faction reference \u00B7 Wahapedia",
+        "Version": "11th edition \u00B7 Faction Pack 1.2",
+        "Date": "2026-08-26",
+        "Url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/",
+        "ImportedAt": "2026-10-01T13:55:59.6210788\u002B00:00",
+        "Edition": "11",
+        "ContentHash": "bbc55fab1d665194bc2a161f36f792d37d55c7809b95358251000746b1cdde4a"
+      }
+    },
+    {
+      "Faction": "Death Guard",
+      "Section": "Enhancements",
+      "Name": "Lancet of the Worldsore UPGRADE",
+      "Text": "MYPHITIC BLIGHT-HAULER unit only. This unit has MOBILE.",
+      "Detachment": "Contagion Engines",
+      "Cost": "15 pts",
+      "Source": {
+        "Name": "Death Guard faction reference \u00B7 Wahapedia",
+        "Version": "11th edition \u00B7 Faction Pack 1.2",
+        "Date": "2026-08-26",
+        "Url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/",
+        "ImportedAt": "2026-10-01T13:55:59.6210788\u002B00:00",
+        "Edition": "11",
+        "ContentHash": "bbc55fab1d665194bc2a161f36f792d37d55c7809b95358251000746b1cdde4a"
+      }
+    },
+    {
+      "Faction": "Death Guard",
+      "Section": "Stratagems",
+      "Name": "FRESH VECTORS",
+      "Text": "WHEN: Your Shooting phase or the Fight phase, when a friendly CONTAGION ENGINE unit is selected to attack.\nTARGET: That CONTAGION ENGINE unit.\nEFFECT: Your unit\u2019s attacks can re-roll wound rolls of 1.",
+      "Detachment": "Contagion Engines",
+      "Cost": "1 CP",
+      "Source": {
+        "Name": "Death Guard faction reference \u00B7 Wahapedia",
+        "Version": "11th edition \u00B7 Faction Pack 1.2",
+        "Date": "2026-08-26",
+        "Url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/",
+        "ImportedAt": "2026-10-01T13:55:59.6210788\u002B00:00",
+        "Edition": "11",
+        "ContentHash": "bbc55fab1d665194bc2a161f36f792d37d55c7809b95358251000746b1cdde4a"
+      }
+    },
+    {
+      "Faction": "Death Guard",
+      "Section": "Stratagems",
+      "Name": "BLOODRUST DELUGE",
+      "Text": "WHEN: Your Shooting phase, when a friendly CONTAGION ENGINE unit is selected to shoot.\nTARGET: That CONTAGION ENGINE unit.\nEFFECT: Select one visible enemy unit. That enemy unit is Afflicted until your unit has attacked.",
+      "Detachment": "Contagion Engines",
+      "Cost": "1 CP",
+      "Source": {
+        "Name": "Death Guard faction reference \u00B7 Wahapedia",
+        "Version": "11th edition \u00B7 Faction Pack 1.2",
+        "Date": "2026-08-26",
+        "Url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/",
+        "ImportedAt": "2026-10-01T13:55:59.6210788\u002B00:00",
+        "Edition": "11",
+        "ContentHash": "bbc55fab1d665194bc2a161f36f792d37d55c7809b95358251000746b1cdde4a"
+      }
+    },
+    {
+      "Faction": "Death Guard",
+      "Section": "Stratagems",
+      "Name": "SOULROT FLUX",
+      "Text": "WHEN: Your opponent\u2019s Movement phase, when an enemy unit is selected to make a fall-back move, if that enemy unit is engaged with a friendly CONTAGION ENGINE unit.\nTARGET: That CONTAGION ENGINE unit.\nEFFECT: When an enemy unit engaged with your unit is selected to make a fall-back move, roll one D6:\n  * On a 1, that enemy unit suffers 1 mortal wound.\n  * On a 2-5, that enemy unit suffers D3 mortal wounds.\n  * On a 6, that enemy unit suffers 3 mortal wounds.",
+      "Detachment": "Contagion Engines",
+      "Cost": "1 CP",
+      "Source": {
+        "Name": "Death Guard faction reference \u00B7 Wahapedia",
+        "Version": "11th edition \u00B7 Faction Pack 1.2",
+        "Date": "2026-08-26",
+        "Url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/",
+        "ImportedAt": "2026-10-01T13:55:59.6210788\u002B00:00",
+        "Edition": "11",
+        "ContentHash": "bbc55fab1d665194bc2a161f36f792d37d55c7809b95358251000746b1cdde4a"
+      }
+    },
+    {
+      "Faction": "Death Guard",
+      "Section": "Enhancements",
+      "Name": "Insectile Murmuration UPGRADE",
+      "Text": "PLAGUE MARINES unit only. When this unit\u2019s attacks target a unit within Contagion Range of a friendly unit, those attacks can re-roll wound rolls of 1.",
+      "Detachment": "Flyblown Host",
+      "Cost": "15 pts",
+      "Source": {
+        "Name": "Death Guard faction reference \u00B7 Wahapedia",
+        "Version": "11th edition \u00B7 Faction Pack 1.2",
+        "Date": "2026-08-26",
+        "Url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/",
+        "ImportedAt": "2026-10-01T13:55:59.6210788\u002B00:00",
+        "Edition": "11",
+        "ContentHash": "bbc55fab1d665194bc2a161f36f792d37d55c7809b95358251000746b1cdde4a"
+      }
+    },
+    {
+      "Faction": "Death Guard",
+      "Section": "Enhancements",
+      "Name": "Plagueveil UPGRADE",
+      "Text": "PLAGUE MARINES unit only. This unit has -3\u0022 detection range.",
+      "Detachment": "Flyblown Host",
+      "Cost": "15 pts",
+      "Source": {
+        "Name": "Death Guard faction reference \u00B7 Wahapedia",
+        "Version": "11th edition \u00B7 Faction Pack 1.2",
+        "Date": "2026-08-26",
+        "Url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/",
+        "ImportedAt": "2026-10-01T13:55:59.6210788\u002B00:00",
+        "Edition": "11",
+        "ContentHash": "bbc55fab1d665194bc2a161f36f792d37d55c7809b95358251000746b1cdde4a"
+      }
+    },
+    {
+      "Faction": "Death Guard",
+      "Section": "Stratagems",
+      "Name": "NAUSEATING PAROXYSMS",
+      "Text": "WHEN: Start of the Fight phase\nTARGET: One friendly engaged PLAGUE MARINES unit.\n\nEFFECT: Select one enemy unit engaged with your unit. That enemy unit makes a battle-shock roll, with -1 to that battle-shock roll.",
+      "Detachment": "Flyblown Host",
+      "Cost": "1 CP",
+      "Source": {
+        "Name": "Death Guard faction reference \u00B7 Wahapedia",
+        "Version": "11th edition \u00B7 Faction Pack 1.2",
+        "Date": "2026-08-26",
+        "Url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/",
+        "ImportedAt": "2026-10-01T13:55:59.6210788\u002B00:00",
+        "Edition": "11",
+        "ContentHash": "bbc55fab1d665194bc2a161f36f792d37d55c7809b95358251000746b1cdde4a"
+      }
+    },
+    {
+      "Faction": "Death Guard",
+      "Section": "Stratagems",
+      "Name": "DRONING HORROR",
+      "Text": "WHEN: Your Shooting phase, when a friendly PLAGUE MARINES unit is selected to shoot.\nTARGET: That PLAGUE MARINES unit.\nEFFECT: Your unit\u2019s ranged attacks :\n\n  * Can re-roll hit rolls of 1.\n  * That target a unit within half range, can re-roll wound rolls of 1.",
+      "Detachment": "Flyblown Host",
+      "Cost": "1 CP",
+      "Source": {
+        "Name": "Death Guard faction reference \u00B7 Wahapedia",
+        "Version": "11th edition \u00B7 Faction Pack 1.2",
+        "Date": "2026-08-26",
+        "Url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/",
+        "ImportedAt": "2026-10-01T13:55:59.6210788\u002B00:00",
+        "Edition": "11",
+        "ContentHash": "bbc55fab1d665194bc2a161f36f792d37d55c7809b95358251000746b1cdde4a"
+      }
+    },
+    {
+      "Faction": "Death Guard",
+      "Section": "Stratagems",
+      "Name": "EYE OF THE SWARM",
+      "Text": "WHEN: Your Shooting phase, when a friendly PLAGUE MARINES unit is selected to shoot.\nTARGET: That PLAGUE MARINES unit.\nEFFECT: Your unit\u2019s ranged attacks have [CLOSE-QUARTERS].",
+      "Detachment": "Flyblown Host",
+      "Cost": "1 CP",
+      "Source": {
+        "Name": "Death Guard faction reference \u00B7 Wahapedia",
+        "Version": "11th edition \u00B7 Faction Pack 1.2",
+        "Date": "2026-08-26",
+        "Url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/",
+        "ImportedAt": "2026-10-01T13:55:59.6210788\u002B00:00",
+        "Edition": "11",
+        "ContentHash": "bbc55fab1d665194bc2a161f36f792d37d55c7809b95358251000746b1cdde4a"
+      }
+    },
+    {
+      "Faction": "Death Guard",
+      "Section": "Enhancements",
+      "Name": "Rejuvenating Swarm",
+      "Text": "DEATH GUARD INFANTRY model only (excluding TERMINATOR models). Attacks that target this unit with a S greater than this unit\u2019s T have -1 to wound rolls.",
+      "Detachment": "Paragons of Putrescence",
+      "Cost": "20 pts",
+      "Source": {
+        "Name": "Death Guard faction reference \u00B7 Wahapedia",
+        "Version": "11th edition \u00B7 Faction Pack 1.2",
+        "Date": "2026-08-26",
+        "Url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/",
+        "ImportedAt": "2026-10-01T13:55:59.6210788\u002B00:00",
+        "Edition": "11",
+        "ContentHash": "bbc55fab1d665194bc2a161f36f792d37d55c7809b95358251000746b1cdde4a"
+      }
+    },
+    {
+      "Faction": "Death Guard",
+      "Section": "Enhancements",
+      "Name": "Host of the Hybridised Pox",
+      "Text": "DEATH GUARD INFANTRY model only. (Once per battle, per army) In your Command phase, you can use this ability. If you do, select one of the Plague listed in Nurgle\u2019s Gift. Enemy units within Contagion Range of this unit also have the effect of that Plague in addition to your army\u2019s chosen Plague until the end of the battle.",
+      "Detachment": "Paragons of Putrescence",
+      "Cost": "40 pts",
+      "Source": {
+        "Name": "Death Guard faction reference \u00B7 Wahapedia",
+        "Version": "11th edition \u00B7 Faction Pack 1.2",
+        "Date": "2026-08-26",
+        "Url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/",
+        "ImportedAt": "2026-10-01T13:55:59.6210788\u002B00:00",
+        "Edition": "11",
+        "ContentHash": "bbc55fab1d665194bc2a161f36f792d37d55c7809b95358251000746b1cdde4a"
+      }
+    },
+    {
+      "Faction": "Death Guard",
+      "Section": "Stratagems",
+      "Name": "TERRITORIAL INFECTION",
+      "Text": "WHEN: Start of the Command phase.\nTARGET: One friendly DEATH GUARD CHARACTER unit.\nEFFECT: Your unit has \u002B1 OC until the end of the turn.",
+      "Detachment": "Paragons of Putrescence",
+      "Cost": "1 CP",
+      "Source": {
+        "Name": "Death Guard faction reference \u00B7 Wahapedia",
+        "Version": "11th edition \u00B7 Faction Pack 1.2",
+        "Date": "2026-08-26",
+        "Url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/",
+        "ImportedAt": "2026-10-01T13:55:59.6210788\u002B00:00",
+        "Edition": "11",
+        "ContentHash": "bbc55fab1d665194bc2a161f36f792d37d55c7809b95358251000746b1cdde4a"
+      }
+    },
+    {
+      "Faction": "Death Guard",
+      "Section": "Stratagems",
+      "Name": "AGGRAVUS SPASMS",
+      "Text": "WHEN: Start of your Shooting Phase.\nTARGET: One friendly DEATH GUARD CHARACTER unit.\nEFFECT: Select one visible enemy unit within Contagion Range of your unit. That enemy unit has \u002B6\u0022 detection range.",
+      "Detachment": "Paragons of Putrescence",
+      "Cost": "1 CP",
+      "Source": {
+        "Name": "Death Guard faction reference \u00B7 Wahapedia",
+        "Version": "11th edition \u00B7 Faction Pack 1.2",
+        "Date": "2026-08-26",
+        "Url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/",
+        "ImportedAt": "2026-10-01T13:55:59.6210788\u002B00:00",
+        "Edition": "11",
+        "ContentHash": "bbc55fab1d665194bc2a161f36f792d37d55c7809b95358251000746b1cdde4a"
+      }
+    },
+    {
+      "Faction": "Death Guard",
+      "Section": "Stratagems",
+      "Name": "SIMULTANEOUS CONTAMINATION",
+      "Text": "WHEN: Your Shooting phase, when a friendly DEATH GUARD CHARACTER unit starts an action.\nTARGET: That DEATH GUARD CHARACTER unit.\nEFFECT: That action does not prevent your unit from being eligible to shoot.",
+      "Detachment": "Paragons of Putrescence",
+      "Cost": "1 CP",
+      "Source": {
+        "Name": "Death Guard faction reference \u00B7 Wahapedia",
+        "Version": "11th edition \u00B7 Faction Pack 1.2",
+        "Date": "2026-08-26",
+        "Url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/",
+        "ImportedAt": "2026-10-01T13:55:59.6210788\u002B00:00",
+        "Edition": "11",
+        "ContentHash": "bbc55fab1d665194bc2a161f36f792d37d55c7809b95358251000746b1cdde4a"
+      }
+    },
+    {
+      "Faction": "Death Guard",
+      "Section": "Army Rules",
+      "Name": "Pact of Decay",
+      "Text": "When mustering your army, unless specifically stated otherwise, you cannot select PLAGUE LEGIONS as your Army Faction.",
+      "Detachment": "",
+      "Cost": "",
+      "Source": {
+        "Name": "Death Guard faction reference \u00B7 Wahapedia",
+        "Version": "11th edition \u00B7 Faction Pack 1.2",
+        "Date": "2026-08-26",
+        "Url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/",
+        "ImportedAt": "2026-10-01T13:55:59.6210788\u002B00:00",
+        "Edition": "11",
+        "ContentHash": "bbc55fab1d665194bc2a161f36f792d37d55c7809b95358251000746b1cdde4a"
+      }
+    }
+  ],
+  "ReferenceOnly": true
+}

@@ -1,0 +1,18 @@
+{
+  "appVersion": "0.2.3",
+  "androidVersionCode": 5,
+  "files": [
+    {
+      "platform": "windows",
+      "file": "GrimList-Share-0.2.3/GrimList-Windows-0.2.3.msi",
+      "bytes": 86528000,
+      "sha256": "89283d3d3861f0fb94b851cf92b5431b3916f5dd50f935fe42ebba494a656b9d"
+    },
+    {
+      "platform": "android",
+      "file": "GrimList-Share-0.2.3/GrimList-Android-0.2.3.apk",
+      "bytes": 81045637,
+      "sha256": "162f9628dfa4849d67d8bc2bff6c756d49aee247f222509822e2275c499ad0a9"
+    }
+  ]
+}

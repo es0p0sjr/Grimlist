@@ -1,0 +1,166 @@
+{
+  "Source": {
+    "Name": "Historical Death Guard index — NOT current datasheets",
+    "Version": "December 2024 archive",
+    "Date": "",
+    "Url": "https://assets.warhammer-community.com/eng_warhammer40000_death_guard_dec24-7xzye78lo9-pwyiqcu0u4.pdf",
+    "Edition": "10"
+  },
+  "Units": [
+    {
+      "Faction": "Death Guard",
+      "Name": "Typhus",
+      "Options": [],
+      "Category": "Characters",
+      "Profile": {
+        "Characteristics": {
+          "M": "5\"",
+          "T": "6",
+          "SV": "2+",
+          "W": "6",
+          "LD": "6+",
+          "OC": "1"
+        },
+        "Weapons": [
+          {
+            "Name": "Master-crafted manreaper — strike",
+            "Type": "Melee",
+            "Range": "Melee",
+            "Attacks": "5",
+            "Skill": "2+",
+            "Strength": "9",
+            "Ap": "-2",
+            "Damage": "3",
+            "Keywords": "Lethal Hits"
+          },
+          {
+            "Name": "Master-crafted manreaper — sweep",
+            "Type": "Melee",
+            "Range": "Melee",
+            "Attacks": "10",
+            "Skill": "2+",
+            "Strength": "6",
+            "Ap": "-1",
+            "Damage": "1",
+            "Keywords": "Lethal Hits"
+          }
+        ],
+        "Notes": "Historical sample. Facts transcribed from the cited index; abilities and full rules are omitted. One model. Fixed weapon; two attack profiles, with no equipment substitutions."
+      },
+      "ProfileSource": {
+        "Name": "Historical Death Guard index — NOT current datasheets",
+        "Version": "December 2024 archive",
+        "Date": "",
+        "Url": "https://assets.warhammer-community.com/eng_warhammer40000_death_guard_dec24-7xzye78lo9-pwyiqcu0u4.pdf#page=11",
+        "Edition": "10"
+      }
+    },
+    {
+      "Faction": "Death Guard",
+      "Name": "Poxwalkers",
+      "Options": [],
+      "Category": "Infantry",
+      "Profile": {
+        "Characteristics": {
+          "M": "4\"",
+          "T": "4",
+          "SV": "7+",
+          "W": "1",
+          "LD": "8+",
+          "OC": "1"
+        },
+        "Weapons": [
+          {
+            "Name": "Improvised weapon",
+            "Type": "Melee",
+            "Range": "Melee",
+            "Attacks": "2",
+            "Skill": "5+",
+            "Strength": "3",
+            "Ap": "0",
+            "Damage": "1",
+            "Keywords": "Lethal Hits"
+          }
+        ],
+        "Notes": "Historical sample. Facts transcribed from the cited index; abilities and full rules are omitted. 10–20 models. Fixed melee equipment; no alternative loadouts."
+      },
+      "ProfileSource": {
+        "Name": "Historical Death Guard index — NOT current datasheets",
+        "Version": "December 2024 archive",
+        "Date": "",
+        "Url": "https://assets.warhammer-community.com/eng_warhammer40000_death_guard_dec24-7xzye78lo9-pwyiqcu0u4.pdf#page=29",
+        "Edition": "10"
+      }
+    },
+    {
+      "Faction": "Death Guard",
+      "Name": "Death Guard Rhino",
+      "Options": [],
+      "Category": "Vehicles",
+      "Profile": {
+        "Characteristics": {
+          "M": "12\"",
+          "T": "9",
+          "SV": "3+",
+          "W": "10",
+          "LD": "6+",
+          "OC": "2"
+        },
+        "Weapons": [
+          {
+            "Name": "Combi-weapon",
+            "Type": "Ranged",
+            "Range": "24\"",
+            "Attacks": "1",
+            "Skill": "4+",
+            "Strength": "4",
+            "Ap": "0",
+            "Damage": "1",
+            "Keywords": "Anti-Infantry 4+, Devastating Wounds, Rapid Fire 1"
+          },
+          {
+            "Name": "Havoc launcher",
+            "Type": "Ranged",
+            "Range": "48\"",
+            "Attacks": "D6",
+            "Skill": "3+",
+            "Strength": "5",
+            "Ap": "0",
+            "Damage": "1",
+            "Keywords": "Blast"
+          },
+          {
+            "Name": "Plague combi-bolter",
+            "Type": "Ranged",
+            "Range": "24\"",
+            "Attacks": "2",
+            "Skill": "3+",
+            "Strength": "4",
+            "Ap": "0",
+            "Damage": "1",
+            "Keywords": "Lethal Hits, Rapid Fire 2"
+          },
+          {
+            "Name": "Armoured tracks",
+            "Type": "Melee",
+            "Range": "Melee",
+            "Attacks": "3",
+            "Skill": "4+",
+            "Strength": "6",
+            "Ap": "0",
+            "Damage": "1",
+            "Keywords": ""
+          }
+        ],
+        "Notes": "Historical sample. Facts transcribed from the cited index; abilities and full rules are omitted. One vehicle. Baseline: bolter and tracks. Optional second gun: choose a combi-weapon OR another bolter. A launcher can be added independently. Record the chosen loadout in notes; this sample does not enforce equipment choices."
+      },
+      "ProfileSource": {
+        "Name": "Historical Death Guard index — NOT current datasheets",
+        "Version": "December 2024 archive",
+        "Date": "",
+        "Url": "https://assets.warhammer-community.com/eng_warhammer40000_death_guard_dec24-7xzye78lo9-pwyiqcu0u4.pdf#page=63",
+        "Edition": "10"
+      }
+    }
+  ]
+}

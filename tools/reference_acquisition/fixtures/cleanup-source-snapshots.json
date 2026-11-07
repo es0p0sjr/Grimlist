@@ -1,0 +1,22 @@
+{
+  "space-marines": {
+    "Snapshot": "wahapedia\\11e\\f26003260bef715c84f561480de7ddb6013a0c3405869a53fcd2439ab4737ff5\\0e66e99eb1fd3607bd412b62f193a4f2338eb935481912200c622b7d3ee443b4-f098e7165affe1d5",
+    "Hash": "0e66e99eb1fd3607bd412b62f193a4f2338eb935481912200c622b7d3ee443b4",
+    "SourceUri": "https://wahapedia.ru/wh40k11ed/factions/space-marines/"
+  },
+  "orks": {
+    "Snapshot": "wahapedia\\11e\\2f7c25826e24471f0b6c54dda954e20af543ba9e00f73be987a8584db8b6027e\\d47a4cb0060433cb835e7962ba8b7ae2db5bb3373f652fe8325aaf991a0b3cd7-505d2e2be367ae75",
+    "Hash": "d47a4cb0060433cb835e7962ba8b7ae2db5bb3373f652fe8325aaf991a0b3cd7",
+    "SourceUri": "https://wahapedia.ru/wh40k11ed/factions/orks/"
+  },
+  "imperial-agents": {
+    "Snapshot": "wahapedia\\11e\\7f08f57853d4ced0dd8ee6c26372788c2e433750768cfd559ab3289ad339375e\\090cd362f277be201dfd0216e616b058d56b09ba452859be512a34e9dd9250e3-da491c640e759c0c",
+    "Hash": "090cd362f277be201dfd0216e616b058d56b09ba452859be512a34e9dd9250e3",
+    "SourceUri": "https://wahapedia.ru/wh40k11ed/factions/imperial-agents/"
+  },
+  "chaos-daemons": {
+    "Snapshot": "wahapedia\\11e\\32edca0f7a2f7597c9c90baf51ca8646f68fad46e9a2a551b5ae4d55d9e8f1c4\\cffdc770a11d84a759b6fc5cc6e592c0a760df334a6d0644c819a84a83c16516-3971322d33820d02",
+    "Hash": "cffdc770a11d84a759b6fc5cc6e592c0a760df334a6d0644c819a84a83c16516",
+    "SourceUri": "https://wahapedia.ru/wh40k11ed/factions/chaos-daemons/"
+  }
+}

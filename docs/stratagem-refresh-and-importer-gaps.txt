@@ -1,0 +1,241 @@
+Stratagem refresh and importer regression register
+Reviewed 2026-10-27. Source changes; not a new community release.
+
+Correction after the startup regression: docs/codex-reference-recovery.txt
+supersedes this document's faction-wide quarantine and all-scopes HTML gate.
+Previous references are now accessible as Stale history, per-scope pinned rules
+proofs replace faction-shape invalidation, and verified sections can update
+independently. The audit inventory below remains evidence for its pinned inputs.
+
+Confirmed failure
+-----------------
+The 0.2.27 BSData update restored thirteen Custodes detachment definitions,
+but BSData supplies no Custodes stratagem profiles in the pinned October 26
+archive. Stratagems came from a different, older bundled reference source.
+Lions of the Emperor retained its source ID across the codex change. Its six
+old cards and Complete declaration therefore survived. Solar Watch had no
+cards in that bundle. Resolving detachment IDs was insufficient to fix either.
+
+Evidence: BSData commit 79c2aff2dcf7663b53e6b1c52fb36a564d5ab054,
+archive SHA-256 ef02733b5aeda3f4fbf00b6d37efa218dc6910b3db2aaa75424056f7a0da5549.
+The bundled Custodes page was acquired 2026-10-05T18:53:28.156318+00:00,
+SHA-256 122200e551efca78aaf4bba1c3cd5decac394656d067d42fbdf55ff0c3c9c363.
+Its HTML actually says 11th edition while containing the old rules. This was
+stale upstream content under an edition-correct URL, not just a wrong URL.
+The current page was inspected on October 27:
+https://wahapedia.ru/wh40k11ed/factions/adeptus-custodes/
+It exposes all thirteen current scopes, including Lions and Solar Watch.
+
+Implemented shared behavior
+---------------------------
+LibraryDownloadClient now refreshes stratagem references after an explicit
+11e BSData download, independently of whether MFM acquisition succeeds.
+LibraryWorkflow remains the preview/apply boundary for Windows and Android.
+Opening an offline library does not download anything. Points-only and 10e
+downloads keep their existing paths.
+
+StratagemReferenceClient finds sources through shipped faction IDs and source
+provenance. It does not derive URLs from names. Downloads are limited to three
+concurrent requests, 30 seconds each and 8 MiB per page. Shared URLs are fetched
+once per update, including failed observations. Redirects to other
+sources are rejected. A successful source observation records its bytes hash,
+parser version, URL and acquisition time; it does not invent a publication date.
+The cache retains one validated observation per owner. Library history remains
+in repository snapshots. Acquisition failures become preview warnings and
+Partial coverage; cancellation aborts the operation.
+
+StratagemHtmlReader reads bounded 11e faction sections. It validates edition,
+faction, detachment headings, card ownership, CP, operative text and duplicate
+identities. All current faction scopes must have recognized nonempty sections
+before this adapter declares authoritative completeness. It preserves ordered
+operative blocks and list numbering, excludes FAQ/tooltip payloads and stops
+before other game modes. Its semantic identities match the existing Python
+collector, so a same-name changed card replaces its previous revision.
+
+ReferenceMerge retires absent same-owner cards only under complete authoritative
+coverage, including cards previously quarantined as Unresolved. Partial state
+cannot authorize removal even if an inconsistent authoritative flag is present.
+Other sources and explicit rules-pack authority remain separate. Explicit
+complete-zero JSON scopes still work; a missing HTML section is never zero.
+
+ReferenceCoverage can store a catalogue fingerprint and a review reason.
+Changed detachment identity, rules or selection semantics invalidate a prior
+proof; unit-points-only changes do not. Partial faction views cannot establish
+catalogue drift from omitted rules. Stale cards remain in history as
+Unresolved and are excluded from normal reference display. Coverage warnings
+are restricted to the affected detachment instead of contaminating every
+detachment in that faction.
+
+ReferenceRevisionRecovery also handles the existing shipped snapshot without
+requiring users to reimport it. It requires the exact known source hash,
+matching catalogue identity, matching unchanged card contents and an
+authoritative changed detachment set. It does not reinterpret manual edits,
+newer sources or explicit overrides, and does not resurrect tombstones.
+Repeated recovery is idempotent. The old bundle cannot replace a successful
+newer refresh on reopening.
+
+Regression register: failure class -> guard -> evidence
+------------------------------------------------------
+1. Reused detachment ID with different rules -> source-owned revision merge,
+   compatibility fingerprints and semantic-text assertions ->
+   StratagemRefreshChecks. Counts and successful matching alone are inadequate.
+2. New detachment with missing stratagems -> refresh the independent reference
+   source, require current scope coverage -> StratagemRefreshChecks (arbitrary
+   fixture factions plus historical Custodes HTML).
+3. Old Complete declarations blocking new data -> normal refresh replaces the
+   owner's declaration; source-pinned legacy claims become Partial -> same suite.
+4. Partial, truncated, failed or wrong-edition acquisition treated as zero ->
+   reject as a complete source; preserve history -> same suite plus
+   GenericReferenceChecks and existing explicit-zero fixtures.
+5. Cross-scope warnings, source conflicts and resurrection -> scope-local audit,
+   explicit ownership, tombstones and override guards -> StratagemRefreshChecks,
+   GenericReferenceChecks, ReferenceRecoveryChecks, StratagemTransferChecks.
+6. Nested/linked detachment containers omitted -> recursive discovery retaining
+   inherited visibility and group limits; unresolved links cannot authorize
+   retirement -> NestedDetachmentChecks, docs/nested-detachments.txt.
+7. Old detachments appended forever -> closed source-scoped lifecycle on actual
+   complete BSData download; partial/local/points imports cannot retire ->
+   DetachmentLifecycleChecks, docs/enhancement-stats-and-detachment-updates.txt.
+8. Movement/OC recipient selector flattened incorrectly -> exact structural
+   selector interpretation, shared effective rules, legacy metadata repair ->
+   EnhancementStatChecks. Destroyer Ankh and Writ are examples, not branches.
+9. Weapon-grant/mandatory-upgrade effects lost during loadout filtering -> shared
+   projection retaining provenance -> EnhancementWeaponChecks and PantheonChecks.
+10. Empty price lists interpreted as free equipment -> pricing completeness
+    independent of loadout coverage -> EquipmentPriceChecks and
+    docs/equipment-pricing.txt. Unknown totals must remain visibly incomplete.
+11. Army rules attributed to the wrong native roster/catalogue -> separate rule
+    discovery, explicit faction contexts and pinned recovery ->
+    ArmyRuleCoverageChecks, docs/army-rule-recovery.txt.
+12. Enhancement eligibility lost in a bundled import -> selectable IDs and
+    structural eligibility plus publisher candidate gates ->
+    docs/enhancement-eligibility.txt. Text and price are not identity proofs.
+13. A test silently switches source revisions -> pin archive commit/hash; keep
+    historical fixtures -> existing archive checks. Never choose the sole ZIP
+    from a folder that legitimately grows when users update BSData.
+
+Current gaps and follow-up priorities
+------------------------------------
+A. Live acquisition acceptance: ordinary HTTP is blocked here (WinError 10061).
+   The browser source could be inspected, but no current raw page was acquired
+   through the application HTTP client. Fake-HTTP tests and the real historical
+   HTML fixture do not prove a live refresh works on either device. The bundled
+   reference resource has NOT been regenerated. A newly built app needs a
+   successful explicit update or a separately verified current reference pack.
+
+B. Parser coverage: the runtime adapter handles the bounded modern 11e faction
+   format. Shared chapter pages, alias mappings, embedded-card-only sections,
+   older layouts and complete zero-card HTML sections may be rejected. These
+   are reported as unverified, not silently cleared. The Python collector has
+   broader support; fixture parity and a shared declarative source/layout
+   manifest are the next architectural improvement. New factions need a proven
+   source mapping. Do not add faction-specific rules text to the parser.
+
+C. Freshness is not deducible from HTTP 200, an edition title, a timestamp or a
+   complete set of section names. Fingerprints detect catalogue drift after
+   verification, but cannot prove that an unchanged-shaped upstream page has
+   incorporated every erratum. Legacy scopes lacking a known pinned baseline
+   cannot be retrospectively certified. Preserve source provenance and explicit
+   unknown states; do not advertise the feature as an official freshness check.
+
+D. Offline bundle migration: supplementation deliberately fills missing content
+   and preserves newer cards/tombstones. Arbitrary future bundle replacement
+   still needs an explicit revision lineage and migration policy; replacing a
+   gzip resource alone is insufficient. The new download path uses source-owned
+   revision merge and does not depend on that missing-only recovery behavior.
+
+E. Cached BSData import audit (not the live library and not a legality report):
+   commit 79c2aff... contains 2,170 unit entries across 36 factions. 156 entries
+   have UnsupportedFeature pricing diagnostics and no base point options:
+     57 unsupported composition price operations;
+     37 price selections that are not model roles;
+     31 paid models/equipment needing loadout-aware pricing;
+     12 missing base prices for recursive composition;
+     12 composition searches exceeding 50,000 candidates;
+      5 missing base unit/model cost;
+      2 unpriceable default recursive compositions.
+   113 diagnostic entries explicitly contain [Crucible] in their names. The
+   other 43 include repeated chapter imports and generated/battle-only units;
+   they are not 43 distinct legal matched-play units. Examples for triage include
+   Death Korps of Krieg, Invader ATVs, Deathwatch Veterans/Terminators and spawned
+   Ripper/Spore entries. Do not infer zero cost, legality or a current bug merely
+   from this raw diagnostic inventory.
+
+F. The same cached import has 2,112 entries with profile warnings and 2,136 with
+   loadout warnings. These are review signals, not that many broken units.
+   Raw name-scope comparison finds 408 of 680 detachment definitions without
+   shipped stratagem cards, including nine Custodes scopes. That raw comparison
+   precedes applicability filtering, aliases, recovery and explicit-zero scopes;
+   it is not the application's final coverage total. Add a post-merge semantic
+   coverage gate to future data-release validation, grouped by eligible scope.
+
+G. Selection/price semantics remain bounded. Current readers reject or skip
+   particular repeats, local conditions, complex bundles and price operations.
+   BsDataPricing, BsDataLoadouts, BsDataModelConstraints and BsDataContextPrices
+   still contain explicit unsupported branches. Multiplication is supported in
+   some association/effect paths; do not repeat the old blanket statement that
+   multiplication is unsupported everywhere. The October 2 review's nine-entry
+   count is historical, not a current backlog. A persisted selection-instance
+   graph and independently checked evaluator are preferable to unit-name patches.
+
+H. Diagnostics must distinguish unsupported syntax, broken upstream references,
+   incomplete source coverage and a genuinely absent price. Audit silent skips
+   before extending semantics. Preserve selected quantities, source IDs, unknown
+   totals, conditions, undo/redo and platform parity through any graph migration.
+
+Acceptance for future importer changes
+-------------------------------------
+2026-10-28 addition: source selector/profile metadata parity
+  Eldritch Vortex of E'taph reproduces a generic legacy-library gap: recovered
+  structural modifiers refer to source categories absent from legacy weapons.
+  Fresh import from the same pinned archive works; restoring only matching
+  weapon metadata in memory repairs the old dataset. Numeric unknown selectors
+  are silently skipped, unlike keyword-selector diagnostics. Add source-proven
+  weapon metadata recovery, affected-cache invalidation and numeric unresolved
+  states, plus legacy/fresh/recovered effect parity and non-target checks.
+  Eligibility/selection sweeps do not certify every rule's stat changes.
+  Implemented in shared source on 2026-10-28: source-pinned metadata recovery,
+  weapon-bearing cache overlays, composite recovery idempotence, numeric
+  conditional diagnostics and positive/negative effect checks. Numeric selector
+  diagnostics reach the shared/export summary; a dedicated frontend review panel
+  is not added. Evidence and release status: docs/weapon-metadata-recovery.txt.
+
+Use a minimal synthetic source proving the generic semantics, a pinned real
+source reproducer, and an adversarial incomplete/ambiguous case. Verify actual
+rule text, CP, scope, visibility and selected effects, not just card counts.
+Test preview/apply, persisted reopen, repeat import, obsolete selections,
+explicit overrides, cancellation and failed source acquisition. Check both
+frontends use the shared path. Compare old/new source revisions with the same
+IDs and same names. Keep complete-zero separate from unavailable/partial.
+Do not refresh rules while packaging a UI release or replace shipped binaries
+under the same version. Do not use a developer's live database as a fixture.
+
+Verification, 2026-10-27
+-----------------------
+- Final Windows and Android Debug builds: successful, zero warnings/errors.
+  Android used the installed SDK and JDK overrides documented in AGENTS.md.
+- Added 15 stratagem-refresh checks, including arbitrary-faction HTTP fixtures,
+  the real historical 45-card Custodes HTML, persisted recovery, preview purity,
+  shared URL deduplication, explicit overrides and negative acquisition cases.
+- Full regression: 501 PASS, one FAIL. The failure was the new persistence test
+  fixture's placeholder source revision; authority validation correctly requires
+  a 40-character hexadecimal commit. The fixture was corrected. This full run
+  preceded the final shared-request deduplication and partial-view guard checks.
+- Final affected-area regression: 160 PASS, zero FAIL, including the corrected
+  persistence test and all 15 new checks. This also covers reference merging,
+  recovery, nested detachments, Movement/OC, equipment, lifecycle and integration.
+  No second full run was performed. Do not describe the initial full run as green.
+- Full run exercised 16,755 eligible enhancement/bearer pairs and real PDF
+  extraction. Those are pinned fixture checks, not current-source certification.
+- Evidence: artifacts/distribution-evidence/stratagem-refresh-full.log and
+  stratagem-refresh-final.log. Earlier targeted/integration runs also remain as
+  small text logs in that folder.
+- No live application HTTP acquisition, physical Android UI/update, new package
+  release or installer lifecycle check was performed. The shipped reference gzip
+  and community 0.2.27 packages were not regenerated by this source-code change.
+- Successful regression runs removed their own synthetic databases using the
+  standard wrapper. Automatic approval review rejected direct cleanup of
+  .local/tests/410a1477-bff7-4666-a274-6443036afaf7 ("blocked by policy").
+  The full wrapper also retained its failed-run diagnostics at
+  .local/tests/f6ad36ed-de27-447f-a0b6-4e2b66d38530. These are disposable test runs,
+  not live user data; they remain for manual cleanup. No restriction was bypassed.

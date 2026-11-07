@@ -1,0 +1,399 @@
+{
+  "device": "Redmi Note 12 Pro+ 5G (22101316UG), Android 14",
+  "fixture_entries": 20,
+  "operations": {
+    "add": {
+      "before_source": "original 2026-10-13 baseline; not rerun in this pass",
+      "before": {
+        "samples": 5,
+        "median_ms": 523.1941,
+        "min_ms": 506.3126,
+        "max_ms": 834.7335,
+        "command_median_ms": 502.2535,
+        "allocated_mib_median": 27.40471649169922,
+        "phase_median_ms": {
+          "Calculate": 149.52959999999985,
+          "Copy": 2.089299999999639,
+          "Save": 5.976699999999255,
+          "UI.FrameWait": 10.2058,
+          "UI.Prepare": 9.2929,
+          "UI.RenderSubmit": 1.6289
+        }
+      },
+      "after": {
+        "samples": 5,
+        "median_ms": 498.0006,
+        "min_ms": 490.7126,
+        "max_ms": 506.1268,
+        "command_median_ms": 476.4576,
+        "allocated_mib_median": 27.406333923339844,
+        "phase_median_ms": {
+          "Calculate": 141.09450000000106,
+          "Copy": 1.9981000000007043,
+          "Save": 5.369700000001103,
+          "UI.FrameWait": 11.1302,
+          "UI.Prepare": 8.6993,
+          "UI.RenderSubmit": 1.3825
+        }
+      }
+    },
+    "attachment": {
+      "before_source": "fresh baseline, this pass",
+      "before": {
+        "samples": 5,
+        "median_ms": 7163.9206,
+        "min_ms": 6086.1544,
+        "max_ms": 7474.4166,
+        "command_median_ms": 1544.1883,
+        "allocated_mib_median": 345.70755767822266,
+        "phase_median_ms": {
+          "Calculate": 451.2358999999997,
+          "Copy": 1.8658999999970547,
+          "Save": 5.368399999999383,
+          "UI.FrameWait": 57.419,
+          "UI.Prepare": 3829.0043,
+          "UI.RenderSubmit": 1737.2901
+        }
+      },
+      "after": {
+        "samples": 5,
+        "median_ms": 3825.9008,
+        "min_ms": 3353.2067,
+        "max_ms": 4186.1978,
+        "command_median_ms": 1281.0781,
+        "allocated_mib_median": 192.5633773803711,
+        "phase_median_ms": {
+          "Calculate": 411.32800000000134,
+          "Copy": 1.838500000001659,
+          "Save": 5.337299999999232,
+          "UI.FrameWait": 58.2667,
+          "UI.Prepare": 866.8618,
+          "UI.RenderSubmit": 1559.332
+        }
+      }
+    },
+    "datasheet": {
+      "before_source": "fresh baseline, this pass",
+      "before": {
+        "samples": 5,
+        "median_ms": 5489.4028,
+        "min_ms": 5119.7163,
+        "max_ms": 6309.61,
+        "command_median_ms": 9.9852,
+        "allocated_mib_median": 207.1151351928711,
+        "phase_median_ms": {
+          "UI.FrameWait": 83.143,
+          "UI.Prepare": 4498.8667,
+          "UI.RenderSubmit": 861.3763
+        }
+      },
+      "after": {
+        "samples": 5,
+        "median_ms": 2347.8779,
+        "min_ms": 2330.3873,
+        "max_ms": 2842.6185,
+        "command_median_ms": 19.9756,
+        "allocated_mib_median": 50.67237854003906,
+        "phase_median_ms": {
+          "UI.FrameWait": 74.4946,
+          "UI.Prepare": 1561.0153,
+          "UI.RenderSubmit": 677.965
+        }
+      }
+    },
+    "detachment": {
+      "before_source": "original 2026-10-13 baseline; not rerun in this pass",
+      "before": {
+        "samples": 5,
+        "median_ms": 758.108,
+        "min_ms": 747.9156,
+        "max_ms": 770.7929,
+        "command_median_ms": 388.0763,
+        "allocated_mib_median": 27.43901824951172,
+        "phase_median_ms": {
+          "Calculate": 110.35779999999977,
+          "Copy": 1.9367999999994936,
+          "Save": 5.090199999998731,
+          "UI.FrameWait": 293.7144,
+          "UI.Prepare": 30.2256,
+          "UI.RenderSubmit": 44.8756
+        }
+      },
+      "after": {
+        "samples": 5,
+        "median_ms": 741.4338,
+        "min_ms": 731.651,
+        "max_ms": 782.7343,
+        "command_median_ms": 379.6603,
+        "allocated_mib_median": 27.428665161132812,
+        "phase_median_ms": {
+          "Calculate": 107.9372000000003,
+          "Copy": 1.8735999999989872,
+          "Save": 5.156599999998434,
+          "UI.FrameWait": 282.8873,
+          "UI.Prepare": 30.1883,
+          "UI.RenderSubmit": 41.7129
+        }
+      }
+    },
+    "enhancement": {
+      "before_source": "fresh baseline, this pass",
+      "before": {
+        "samples": 5,
+        "median_ms": 4941.8653,
+        "min_ms": 4193.78,
+        "max_ms": 5114.2877,
+        "command_median_ms": 1155.9819,
+        "allocated_mib_median": 252.81694793701172,
+        "phase_median_ms": {
+          "Calculate": 166.08740000000398,
+          "Copy": 1.9488999999957741,
+          "Save": 5.218699999997625,
+          "UI.FrameWait": 54.0707,
+          "UI.Prepare": 3186.4297,
+          "UI.RenderSubmit": 459.8738
+        }
+      },
+      "after": {
+        "samples": 5,
+        "median_ms": 1437.7489,
+        "min_ms": 1279.0859,
+        "max_ms": 1504.5501,
+        "command_median_ms": 987.1516,
+        "allocated_mib_median": 63.755348205566406,
+        "phase_median_ms": {
+          "Calculate": 152.71579999999813,
+          "Copy": 1.8659000000006927,
+          "Save": 5.094500000001062,
+          "UI.FrameWait": 59.8747,
+          "UI.Prepare": 86.0202,
+          "UI.RenderSubmit": 170.1864
+        }
+      }
+    },
+    "equipment": {
+      "before_source": "original 2026-10-13 baseline; not rerun in this pass",
+      "before": {
+        "samples": 5,
+        "median_ms": 641.9856,
+        "min_ms": 623.3803,
+        "max_ms": 689.396,
+        "command_median_ms": 615.8794,
+        "allocated_mib_median": 27.412628173828125,
+        "phase_median_ms": {
+          "Calculate": 130.23559999999998,
+          "Copy": 2.657500000001164,
+          "Save": 5.212600000000748,
+          "UI.FrameWait": 11.1913,
+          "UI.Prepare": 5.5266,
+          "UI.RenderSubmit": 1.3381
+        }
+      },
+      "after": {
+        "samples": 5,
+        "median_ms": 663.1855,
+        "min_ms": 635.6505,
+        "max_ms": 788.4265,
+        "command_median_ms": 634.8757,
+        "allocated_mib_median": 27.386276245117188,
+        "phase_median_ms": {
+          "Calculate": 131.5505000000012,
+          "Copy": 2.2260999999980413,
+          "Save": 5.623700000000099,
+          "UI.FrameWait": 13.231,
+          "UI.Prepare": 5.4388,
+          "UI.RenderSubmit": 1.4258
+        }
+      }
+    },
+    "home": {
+      "before_source": "original 2026-10-13 baseline; not rerun in this pass",
+      "before": {
+        "samples": 5,
+        "median_ms": 371.5707,
+        "min_ms": 359.6871,
+        "max_ms": 384.8313,
+        "command_median_ms": 11.4658,
+        "allocated_mib_median": 4.661102294921875,
+        "phase_median_ms": {
+          "UI.FrameWait": 34.7246,
+          "UI.Prepare": 29.8338,
+          "UI.RenderSubmit": 293.5147
+        }
+      },
+      "after": {
+        "samples": 5,
+        "median_ms": 356.2717,
+        "min_ms": 345.9139,
+        "max_ms": 386.5059,
+        "command_median_ms": 14.2246,
+        "allocated_mib_median": 4.6606292724609375,
+        "phase_median_ms": {
+          "UI.FrameWait": 33.6273,
+          "UI.Prepare": 28.632,
+          "UI.RenderSubmit": 279.8366
+        }
+      }
+    },
+    "open": {
+      "before_source": "original 2026-10-13 baseline; not rerun in this pass",
+      "before": {
+        "samples": 5,
+        "median_ms": 708.4627,
+        "min_ms": 667.3323,
+        "max_ms": 883.9033,
+        "command_median_ms": 520.5163,
+        "allocated_mib_median": 19.584259033203125,
+        "phase_median_ms": {
+          "Calculate": 129.39530000000013,
+          "Copy": 1.1876000000011118,
+          "Save": 5.229300000000876,
+          "UI.FrameWait": 129.1891,
+          "UI.Prepare": 1.6933,
+          "UI.RenderSubmit": 40.3753
+        }
+      },
+      "after": {
+        "samples": 5,
+        "median_ms": 843.8846,
+        "min_ms": 699.0486,
+        "max_ms": 894.9574,
+        "command_median_ms": 504.1734,
+        "allocated_mib_median": 19.591705322265625,
+        "phase_median_ms": {
+          "Calculate": 128.78179999999884,
+          "Copy": 1.078799999999319,
+          "Save": 5.128699999999299,
+          "UI.FrameWait": 295.9666,
+          "UI.Prepare": 1.6787,
+          "UI.RenderSubmit": 47.2386
+        }
+      }
+    }
+  },
+  "native_attachment_checks": {
+    "Checks": [
+      "Datasheet does not calculate attachment choices",
+      "Deferred choices match full session rules",
+      "Native chooser offers bodyguard",
+      "Repeated chooser reuses calculation",
+      "Datasheet does not calculate attachment choices",
+      "Deferred choices match full session rules",
+      "Native chooser offers bodyguard",
+      "Repeated chooser reuses calculation",
+      "Datasheet does not calculate attachment choices",
+      "Deferred choices match full session rules",
+      "Native chooser offers bodyguard",
+      "Repeated chooser reuses calculation",
+      "Datasheet does not calculate attachment choices",
+      "Deferred choices match full session rules",
+      "Native chooser offers bodyguard",
+      "Repeated chooser reuses calculation",
+      "Datasheet does not calculate attachment choices",
+      "Deferred choices match full session rules",
+      "Native chooser offers bodyguard",
+      "Repeated chooser reuses calculation",
+      "Datasheet does not calculate attachment choices",
+      "Deferred choices match full session rules",
+      "Native chooser offers bodyguard",
+      "Repeated chooser reuses calculation",
+      "Pending result ignored after navigation",
+      "Pending result ignored after attachment",
+      "Cache invalidated after attachment",
+      "Pending result ignored after undo",
+      "Cache invalidated after undo",
+      "Pending result ignored after redo",
+      "Cache invalidated after redo",
+      "Pending result ignored after enhancement",
+      "Cache invalidated after enhancement",
+      "Pending result ignored after library",
+      "Cache invalidated after library",
+      "Failed calculation permits retry",
+      "Retry replaces faulted calculation"
+    ],
+    "Timings": [
+      {
+        "ColdMs": 3426.5898,
+        "WarmMs": 98.0867,
+        "FramesWhileLoadingMs": 16.1048,
+        "SessionWaitMs": 1.6537
+      },
+      {
+        "ColdMs": 3311.6697,
+        "WarmMs": 97.0916,
+        "FramesWhileLoadingMs": 16.1254,
+        "SessionWaitMs": 1.004
+      },
+      {
+        "ColdMs": 3349.0815,
+        "WarmMs": 93.3279,
+        "FramesWhileLoadingMs": 15.267,
+        "SessionWaitMs": 1.6055
+      },
+      {
+        "ColdMs": 3267.7586,
+        "WarmMs": 50.169,
+        "FramesWhileLoadingMs": 171.5377,
+        "SessionWaitMs": 2.8907
+      },
+      {
+        "ColdMs": 3316.49,
+        "WarmMs": 98.6784,
+        "FramesWhileLoadingMs": 16.1055,
+        "SessionWaitMs": 1.4556
+      }
+    ]
+  },
+  "notes": [
+    "Five samples per operation plus one discarded warm-up.",
+    "Prepare, RenderSubmit and two native Choreographer callbacks follow shared commands.",
+    "Frame readiness is a proxy, not hardware input-to-photon latency or a scrolling/jank benchmark.",
+    "Attachment choice loading is measured separately; deferred work is not claimed to be eliminated.",
+    "Isolated com.grimlist.perfpass database; approximate Android allocation sampling.",
+    "Phase scopes overlap; do not sum parent/child scope medians.",
+    "OS background activity and caches were not reset."
+  ],
+  "installation": {
+    "package": "com.grimlist.mobile",
+    "apk_sha256": "81c7857c75d249658bc040c19b057ebabfb23816b5541d12cf18d637f70d8cb0",
+    "installed_apk_sha256": "81c7857c75d249658bc040c19b057ebabfb23816b5541d12cf18d637f70d8cb0",
+    "launch": "Starting: Intent { cmp=com.grimlist.mobile/crc64c040c7e13546c831.MainActivity }\r\nStatus: ok\r\nLaunchState: COLD\r\nActivity: com.grimlist.mobile/crc64c040c7e13546c831.MainActivity\r\nTotalTime: 1583\r\nWaitTime: 1592\r\nComplete\r\n",
+    "pid": "32441",
+    "before": [
+      "versionCode=8 minSdk=30 targetSdk=36",
+      "versionName=0.2.6",
+      "lastUpdateTime=2026-10-13 15:21:40",
+      "firstInstallTime=2026-10-08 15:46:45"
+    ],
+    "after": [
+      "versionCode=8 minSdk=30 targetSdk=36",
+      "versionName=0.2.6",
+      "lastUpdateTime=2026-10-13 21:02:27",
+      "firstInstallTime=2026-10-08 15:46:45"
+    ],
+    "ready_screen_verified": true,
+    "ready_ui_labels": 28
+  },
+  "build_verification": {
+    "build-clean.log": {
+      "warnings": [],
+      "errors": []
+    },
+    "build-release.log": {
+      "warnings": [],
+      "errors": []
+    },
+    "apk_sha256": {
+      "apk-clean\\com.grimlist.perfpass-Signed.apk": "b2809ae0dd4048580dcdb6edb3391bd8f341c7499220655fa7bfb8445e1ef2af",
+      "release-apk\\com.grimlist.mobile-Signed.apk": "81c7857c75d249658bc040c19b057ebabfb23816b5541d12cf18d637f70d8cb0"
+    }
+  },
+  "shared_checks_passed": 342,
+  "native_assertions_passed": 37,
+  "chooser_medians_ms": {
+    "ColdMs": 3316.49,
+    "WarmMs": 97.0916,
+    "FramesWhileLoadingMs": 16.1055,
+    "SessionWaitMs": 1.6055
+  }
+}

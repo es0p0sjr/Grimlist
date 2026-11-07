@@ -1,0 +1,55 @@
+﻿Manual phone acceptance - reference coverage update
+===================================================
+
+Manual test status: NOT RUN. Files prepared for the connected phone. Host tests are
+separate evidence. Automated ADB taps and extra app permissions are not required.
+
+Install and import
+1. Install GrimList-Android-Test.apk over the current app. Do not uninstall or
+   clear storage. Copy the new GrimList-References.json into Downloads.
+2. Open GrimList. Export your current dataset as a backup and note the names of
+   your saved armies. The dataset export does not itself back up saved armies.
+3. Menu > Manage data > Import rules references. Select GrimList-References.json
+   using Android's document picker. The pack contains 1,119 display cards and
+   source detachment definitions, no units, prices, enhancements or dispositions.
+4. Review the preview: zero price changes; saved army totals unchanged; source
+   edition 11; added/updated references. Cancel once and verify nothing changed.
+5. Select the pack again, review and explicitly Apply. No internet is needed.
+   If conflicts appear, do not force a source choice: record the reported owners.
+
+Use separate test armies; do not alter your regular lists.
+6. Death Guard / Virulent Vectorium: check Worldblight and Nurgle's Gift (Aura).
+   Check the six supplied stratagems:
+     Putrid Detonation, Disgustingly Resilient, Plaguesurge,
+     Leechspore Eruption, Overwhelming Generosity, Creeping Blight.
+   Cards for other detachments must stay hidden. Coverage remains Partial.
+7. Sisters / Hallowed Martyrs: check The Blood of Martyrs and Acts of Faith.
+   Other detachment cards must stay hidden. Stratagem text is still absent from
+   our sources; Unknown/missing coverage here is expected, not an import failure.
+8. Orks / War Horde: check Get Stuck In and the faction-wide Waaagh! reference.
+   Other detachment cards must stay hidden. Stratagem coverage remains Unknown.
+9. Optional recovered-source checks: create Mechanicus or Grey Knights test
+   armies and check detachment rules now recovered from plural source groups.
+
+Persistence and portability
+10. Record one test army's units, equipment, attachments, warlord, enhancement,
+    points and validation. Make one ordinary edit and save.
+11. Background/resume; then force-stop GrimList through Android app settings.
+    Do not clear data. Relaunch and reopen the same army. Compare recorded values
+    and references. Undo history should be empty after process recreation.
+12. Make another edit, save and reopen. Confirm it remains writable.
+13. Export dataset on Android, transfer it to a separate Windows test library,
+    import/review/apply, and confirm the same applicable cards and coverage.
+    Export again from Windows and verify importing into Android preserves them.
+    These exports transfer the library, not saved armies between platforms.
+14. Cancel the document picker once; try an invalid JSON file once. Existing
+    references, library and armies must survive both actions unchanged.
+
+Record separately for each step: PASS / FAIL / NOT RUN, phone model, Android
+version and any displayed error. Do not mark a missing-content faction complete
+just because its existing army/detachment rule cards display correctly.
+
+Pack coverage: 45 existing supplemental stratagems across nine Death Guard
+detachments; no complete all-faction stratagem source is present. The source
+audit and full named gap list are reference-coverage.json and reference-coverage.txt in this folder.
+

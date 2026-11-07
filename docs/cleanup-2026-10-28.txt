@@ -1,0 +1,91 @@
+Manual cleanup inventory — 2026-10-28
+
+Workspace: D:\Konstantinos\GrimList-BACKUP-2026-10-06
+
+Result: NO FILES DELETED; zero bytes reclaimed by this task.
+Automatic approval review rejected the native PowerShell cleanup command
+before execution: "blocked by policy". No alternative deletion was attempted.
+Earlier blocked test directories were inventoried only, not retried.
+Sizes below are logical file sizes, not measured free-space gains.
+
+Close GrimList, IDE/build/test processes and Android emulators before manual
+cleanup. GrimList was running from the desktop Release output during this
+inspection; a dotnet process was also present. No emulator was running.
+
+DISPOSABLE TARGETS — about 8.21 GiB total
+Paths are relative to the workspace above. Delete only the listed targets.
+
+1. .local\tests
+   4,851,980,143 bytes (4.52 GiB), 6,272 files.
+   Generated regression/workload libraries, not the live app library.
+   Includes previously policy-blocked test directories.
+
+2. .local\.local\tests
+   1,367,780,891 bytes (1.27 GiB), 242 files.
+   Historical test output from the old working-directory layout.
+   Includes previously policy-blocked test directories.
+
+3. .local\standalone-emulator\avd\Standalone.avd\snapshots\default_boot
+   2,147,549,184 bytes (2.00 GiB), one ram.img file.
+   Disposable emulator quick-boot snapshot. Removing it requires the next
+   emulator launch to cold boot; keep the AVD userdata and configuration.
+
+4. artifacts\distribution-evidence\emulator.stdout.log
+   233,212,361 bytes (222.41 MiB).
+   Old emulator diagnostic log containing repeated lock errors.
+
+5. Obsolete Android 0.2.27 delivery files ONLY:
+   0.2.27\GrimList-Android-0.2.27.apk             105,597,061 bytes
+   0.2.27\GrimList-Android-0.2.27.zip             104,401,397 bytes
+   0.2.27\GrimList-Android-0.2.27.apk.sha256               95 bytes
+   Combined 200.27 MiB. Do not delete the whole 0.2.27 folder: its Windows
+   MSI and portable ZIP remain the current Windows release.
+   SHA256SUMS/release notes can remain as historical release records.
+
+ADDITIONAL OPTIONAL CLEANUP AFTER CLOSING BUILDS
+
+- src\GrimList.Mobile\bin and src\GrimList.Mobile\obj:
+  approximately 1.14 GiB combined, generated build outputs. Deleting them
+  makes the next build regenerate outputs and may require package restore.
+  No deletion attempted because a dotnet process was active and some old
+  subpaths had previously been blocked.
+- .local\derived-cache: approximately 420.5 MiB. Rebuildable, but leave it
+  unless space is needed; deletion makes subsequent library loading slower.
+- The complete .local\standalone-emulator directory is about 5.91 GiB,
+  INCLUDING the 2.00 GiB snapshot already listed above. Remove the entire
+  directory only if this old test emulator is no longer wanted: that also
+  deletes its installed apps, virtual-device data and local ADB key files.
+  This is optional and was not attempted.
+
+REVIEW BEFORE DELETING — NOT INCLUDED IN DISPOSABLE TOTAL
+
+- .local\backups\repository-cleanup-20261006\workspace-before.zip:
+  approximately 6.28 GiB. Historical source backup previously used to
+  restore sample fixtures. Confirm another sufficient backup first.
+- .local\application-reference-verification: approximately 3.48 GiB.
+- .local\android-acceptance: approximately 1.52 GiB.
+- .local\android-update-evidence: approximately 1.06 GiB.
+  These contain historical databases/evidence or copies of app data.
+  They were left intact; inspect whether their data/evidence is still needed.
+
+KEEP
+
+- .local\grimlist.db and all SQLite WAL/SHM/journal sidecars.
+- .local\sources, .local\reference-sources, battles, battle-exchanges,
+  historical backups, and any other user libraries not explicitly listed.
+- AndroidDetachFixExport (original user export/evidence).
+- Source code, project resources, data, samples and tests\fixtures.
+- src\GrimList.Desktop\bin while the source-launched app is running.
+- artifacts\builds\android\0.2.28 (current production Android package).
+- artifacts\builds\android-performance\0.2.28 (latest diagnostic package).
+- artifacts\builds\windows\0.2.27 and
+  artifacts\installers\windows\0.2.27 (current Windows release).
+- Windows delivery files in the root 0.2.27 directory.
+
+VERIFICATION
+
+Current Android APK ZIP integrity passed; aapt reports com.grimlist.mobile,
+versionName 0.2.28, versionCode 29. Current Windows MSI remains present.
+No builds, regression tests, source/data changes or package regeneration
+were performed. This note and the agent handoff are documentation only.
+Do not retry the blocked deletions through another tool or shell.

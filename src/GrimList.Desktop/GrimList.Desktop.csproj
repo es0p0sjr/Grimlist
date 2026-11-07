@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows10.0.18362.0</TargetFramework>
+    <WindowsSdkPackageVersion>10.0.18362.29</WindowsSdkPackageVersion>
+    <UseWPF>true</UseWPF>
+    <AssemblyName>GrimList</AssemblyName>
+    <ApplicationIcon>../../Icon/AppIcon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup><ProjectReference Include="../GrimList.Core/GrimList.Core.csproj" /></ItemGroup>
+  <PropertyGroup Condition="'$(Configuration)' != 'Release' or '$(IncludeSmokeChecks)' == 'true'"><DefineConstants>$(DefineConstants);SMOKE_CHECKS</DefineConstants></PropertyGroup>
+  <ItemGroup Condition="'$(Configuration)' == 'Release' and '$(IncludeSmokeChecks)' != 'true'"><Compile Remove="SmokeChecks*.cs" /></ItemGroup>
+  <ItemGroup Condition="'$(Configuration)' != 'Release' or '$(IncludeSmokeChecks)' == 'true'"><Compile Include="../../tools/GrimList.Performance/EnhancementAcceptance.cs" Link="EnhancementAcceptance.cs" /></ItemGroup>
+  <ItemGroup><ProjectReference Include="../GrimList.Application/GrimList.Application.csproj" /><ProjectReference Include="../GrimList.Platform.Windows/GrimList.Platform.Windows.csproj" /></ItemGroup>
+</Project>

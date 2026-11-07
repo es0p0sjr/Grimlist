@@ -1,0 +1,593 @@
+BSData Importer – Proposed Fixes
+================================
+
+I would not fix these unit-by-unit. The failures are clustering around a few BSData concepts that the importer currently simplifies too aggressively.
+
+BSData is fundamentally a rule graph: selections, constraints, conditions, modifiers, queries and repeats can reference each other and affect values dynamically.
+
+The main approach should be to expand the importer around three generic rule types:
+- conditional composition
+- nested model groups
+- richer pricing modifiers
+
+That gives reusable BSData support rather than ten unit-specific exceptions.
+
+
+1. Add these generic capabilities
+---------------------------------
+
+Capability: Dynamic constraint evaluation
+Fixes:
+- Cadian Recon Squad
+- Atalan Jackals
+- Wolf Scouts
+- Neurogaunts
+- Jakhals
+
+Capability: Recursive unit/model structure
+Fixes:
+- Wolf Guard Headtakers
+- partly Cadian Recon Squad
+- partly Wolf Scouts
+
+Capability: Full modifier/repeat pricing engine
+Fixes:
+- Inquisitorial Agents
+- Ghostkeel Battlesuit
+
+Capability: ID-based equipment resolution
+Fixes:
+- Scourges with Heavy Weapons
+
+Capability: Dangling-reference diagnostics
+Fixes:
+- Kapricus Defenders
+
+
+2. Stop calculating composition during import
+---------------------------------------------
+
+Instead of:
+
+Import unit
+    -> determine min models
+    -> determine max models
+    -> determine specialists
+    -> create normalized War Organ unit
+
+use:
+
+BSData
+    -> Lossless BSData IR
+    -> Resolved rule graph
+    -> Current roster selections
+    -> Rule evaluator
+    -> Effective constraints
+    -> War Organ UI
+
+Do not permanently reduce dynamic BSData rules into static fields.
+
+For example, do not turn:
+
+    constraint.value = 10
+    modifier = ...
+
+into:
+
+    maxModels = 10
+
+Instead retain something like:
+
+    {
+        "baseValue": 10,
+        "modifiers": [...]
+    }
+
+Then evaluate it using the current roster selections.
+
+
+3. Build a generic dynamic constraint evaluator
+-----------------------------------------------
+
+This fixes:
+- Cadian Recon Squad
+- Atalan Jackals
+- Wolf Scouts
+- Neurogaunts
+- Jakhals
+
+The engine should be able to answer:
+
+    What is the effective value of constraint X
+    given the current selection tree?
+
+Example concept:
+
+Base:
+    Wolfquad max = 1
+
+Modifier:
+    if Jackals >= 8
+        Wolfquad max += 1
+
+Evaluation flow:
+
+    constraint.baseValue
+        -> matching modifiers
+        -> modifier conditions
+        -> modifier repeats
+        -> effective value
+
+Pseudo-code:
+
+function evaluateConstraint(constraint, context) {
+    let value = constraint.value;
+
+    for (const modifier of modifiersTargeting(constraint.id)) {
+        if (!conditionsPass(modifier, context)) {
+            continue;
+        }
+
+        const repetitions = evaluateRepeats(modifier.repeats, context);
+
+        value = applyModifier(
+            value,
+            modifier,
+            repetitions
+        );
+    }
+
+    return value;
+}
+
+The evaluation context should support BSData selection scopes, for example:
+- parent
+- unit
+- force
+- roster
+- ancestor
+
+It should also preserve fields such as:
+- includeChildSelections
+- includeChildForces
+- childId
+
+
+4. Model replacements as selections, not subtraction hacks
+----------------------------------------------------------
+
+This is important for:
+- Cadian Recon Squad
+- Wolf Scouts
+- Jakhals
+
+Avoid rules such as:
+
+    if (unit.name === "Cadian Recon Squad") {
+        troopers -= weaponTeams * 2;
+    }
+
+Instead preserve the selection structure.
+
+Example:
+
+Cadian Recon Squad
+|
++-- Troopers x7
++-- Sergeant x1
++-- Specialist x1
++-- Weapons Team x1
+    +-- Gunner
+    +-- Loader
+
+The squad selection count and physical model count do not necessarily need to be the same thing.
+
+Possible representation:
+
+interface Selection {
+    count: number;
+
+    // Number of actual physical models represented
+    modelContribution?: number;
+
+    // Selection/resource contribution
+    selectionContribution?: number;
+}
+
+A weapons team could potentially be represented as:
+
+    selection count = 1
+    physical models = 2
+
+The BSData constraints should decide whether the combination is legal.
+
+
+5. Do not flatten nested units
+------------------------------
+
+Main fix for:
+- Wolf Guard Headtakers
+
+The importer should support arbitrarily nested structures:
+
+UNIT
+    -> GROUP
+        -> MODEL
+            -> MODEL / OPTION / GROUP
+
+Possible model:
+
+interface SelectionNode {
+    id: string;
+    sourceId: string;
+
+    type:
+        | "unit"
+        | "model"
+        | "upgrade"
+        | "group";
+
+    count: number;
+
+    children: SelectionNode[];
+}
+
+Then use explicit recursive functions such as:
+
+    countSelections(node)
+    countModels(node)
+    collectEquipment(node)
+    calculateCost(node)
+
+Avoid assumptions such as:
+
+    unit.children.length === squadSize
+
+The final UI can flatten the evaluated result for display:
+
+Wolf Guard Headtakers
+    3 x Headtaker
+    2 x Hunting Wolf
+
+But the internal imported representation should remain nested.
+
+
+6. Treat pricing as an expression evaluator
+-------------------------------------------
+
+This fixes:
+- Inquisitorial Agents
+- Ghostkeel Battlesuit
+
+Instead of supporting only:
+
+    base price
+    + upgrade price
+
+support price modifiers such as:
+
+    SET
+    INCREMENT
+    DECREMENT
+    MULTIPLY
+    REPEAT
+    conditional operation
+
+Suggested structure:
+
+interface Modifier {
+    type:
+        | "set"
+        | "increment"
+        | "decrement"
+        | "multiply";
+
+    targetField: string;
+    value: number;
+
+    conditions: Condition[];
+    repeats: Repeat[];
+}
+
+Then a generic function can handle them:
+
+    applyModifier(current, modifier, repetitions)
+
+For Ghostkeel, proper generic repeat support should replace any Ghostkeel-specific workaround.
+
+
+7. Inquisitorial Agents: preserve modifier ordering
+---------------------------------------------------
+
+The unit uses:
+- a price multiplier
+- a separate allied-price override
+
+Preserve source ordering information during import, for example:
+
+interface Modifier {
+    sourceIndex: number;
+    ...
+}
+
+Do not discard ordering even if the initial implementation does not know whether order is significant.
+
+Create explicit tests such as:
+
+Normal Inquisitorial Agents:
+    expected = X
+
+Allied:
+    expected = Y
+
+Allied + multiplier:
+    expected = Z
+
+Compare the evaluator against known-good roster output.
+
+This is a good candidate for golden/differential tests.
+
+
+8. Scourges: separate equipment identity from pricing
+-----------------------------------------------------
+
+Problem:
+Some weapon choices cannot currently be mapped into the loadout, so paid equipment cannot be calculated reliably.
+
+Do not tightly couple:
+
+    recognize weapon
+        -> attach weapon
+        -> therefore know weapon price
+
+Instead retain the source selection independently of your internal weapon mapping.
+
+For example:
+
+{
+    sourceId: "...",
+    targetId: "...",
+    name: "Dark Lance",
+    count: 1,
+
+    resolvedEquipmentId: "...", // optional
+
+    costs: [...]
+}
+
+If the weapon cannot be mapped to the local War Organ equipment database, the importer should still be able to know its BSData price when the source data provides enough information.
+
+Possible UI:
+
+    Warning: Unmapped equipment: Some weapon
+    Cost: +10
+
+Unknown equipment should not automatically invalidate the whole unit.
+
+Use IDs as the primary identity:
+- entryLink.targetId
+- sharedSelectionEntry.id
+- selectionEntry.id
+
+Use names mainly as fallback/display information.
+
+
+9. Kapricus Defenders: intentionally fail on broken source references
+--------------------------------------------------------------------
+
+Problem:
+The larger-squad pricing rule references an identifier that is missing from the cached source.
+
+Do not guess.
+
+Generate a source-integrity error similar to:
+
+BSDataSourceIntegrityError
+
+Unit:
+    Kapricus Defenders
+
+Rule:
+    Large squad pricing modifier
+
+Missing target:
+    xxxxxxxx-xxxx-xxxx
+
+Source:
+    Leagues of Votann catalogue
+
+Optionally support a local compatibility patch layer:
+
+bsdata-patches/
+    wh40k-11e/
+        leagues-of-votann.json
+
+Example:
+
+{
+    "missingReferences": {
+        "broken-id": "replacement-id"
+    }
+}
+
+This keeps:
+- source data
+separate from:
+- local compatibility workarounds
+
+That makes updates much easier to maintain.
+
+
+10. Exact fix mapping
+---------------------
+
+Cadian Recon Squad
+    -> Dynamic constraints
+    -> Recursive/bundled model selections
+
+Scourges with Heavy Weapons
+    -> Source-ID equipment resolution
+    -> Decouple equipment display from cost evaluation
+
+Atalan Jackals
+    -> Dynamic constraint modifier evaluation
+
+Inquisitorial Agents
+    -> Multiply pricing modifier
+    -> Proper modifier evaluation
+    -> Ordering tests
+
+Kapricus Defenders
+    -> Detect dangling references
+    -> Optional external compatibility patch
+
+Wolf Guard Headtakers
+    -> Recursive model tree
+    -> Recursive model counting
+
+Wolf Scouts
+    -> Dynamic constraints
+    -> Replacements
+    -> Alternate bundles
+
+Ghostkeel Battlesuit
+    -> Generic repeat evaluator for pricing modifiers
+
+Neurogaunts
+    -> Dynamic constraint modifier evaluation
+
+Jakhals
+    -> Dynamic constraints
+    -> Bundled/replacement selections
+
+
+11. Recommended implementation order
+------------------------------------
+
+1. Lossless BSData IR + reference resolver
+
+Do not normalize away:
+- IDs
+- links
+- constraints
+- modifiers
+- conditions
+- conditionGroups
+- repeats
+- scope
+- includeChildSelections
+- includeChildForces
+
+
+2. Generic query/condition evaluator
+
+Support at least:
+- selection count
+- atLeast
+- atMost
+- equalTo
+- greaterThan
+- lessThan
+- AND
+- OR
+- scope
+- childId
+
+
+3. Modifier engine
+
+Support:
+- SET
+- INCREMENT
+- DECREMENT
+- MULTIPLY
+- REPEAT
+
+
+4. Recursive composition
+
+Allow structures such as:
+
+    unit
+        -> group
+            -> model
+                -> group
+                    -> model
+
+
+5. Equipment resolver + tolerant unknown equipment
+
+Unknown equipment should not necessarily make an otherwise importable unit unusable.
+
+
+6. Source integrity validator
+
+Before generating units, scan for:
+- dangling IDs
+- unresolved links
+- unsupported modifier types
+- unsupported scopes
+- cycles
+- invalid constraints
+
+
+12. Recommended internal pipeline
+---------------------------------
+
+Keep these concepts separate:
+
+RAW
+RESOLVED
+EVALUATED
+PROJECTED
+
+Example:
+
+BSData XML
+    -> RawCatalogue
+    -> ResolvedCatalogue
+    -> EvaluatedUnit
+    -> WarOrganUnit
+
+Avoid:
+
+BSData XML
+    -> WarOrganUnit
+
+This makes debugging much easier.
+
+Example debug trace:
+
+RAW:
+    max Nodebeast = 1
+    modifier XYZ exists
+
+RESOLVED:
+    modifier XYZ targets Nodebeast max constraint
+
+EVALUATED:
+    Neurogaunts = 20
+    condition = true
+    repeat = 1
+    effective Nodebeast max = 2
+
+PROJECTED:
+    Nodebeast 0-2
+
+
+13. Final recommendation
+------------------------
+
+Most of these errors are not ten separate edge cases.
+
+They are manifestations of a few missing generic BSData capabilities:
+
+1. Dynamic rule/constraint evaluation
+2. Recursive selection structures
+3. Modifier and repeat evaluation
+4. Robust ID-based reference resolution
+5. Source-integrity validation
+
+With that architecture, 9 of the 10 listed units should become normal supported cases rather than hardcoded exceptions.
+
+Kapricus Defenders is the main case that should remain a diagnosed source-data error unless the upstream BSData source is corrected or a local compatibility patch is deliberately applied.

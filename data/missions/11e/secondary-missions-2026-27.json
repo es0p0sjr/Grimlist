@@ -1,0 +1,1194 @@
+{
+  "schemaVersion": 1,
+  "game": "Warhammer 40,000",
+  "edition": "11",
+  "season": "2026-27",
+  "missionPack": "Chapter Approved 2026-27",
+  "uniqueCardCount": 18,
+  "decks": {
+    "Attacker": [
+      "ca2026-secondary-a-grievous-blow",
+      "ca2026-secondary-a-tempting-target",
+      "ca2026-secondary-assassination",
+      "ca2026-secondary-beacon",
+      "ca2026-secondary-behind-enemy-lines",
+      "ca2026-secondary-bring-it-down",
+      "ca2026-secondary-burden-of-trust",
+      "ca2026-secondary-centre-ground",
+      "ca2026-secondary-cleanse",
+      "ca2026-secondary-defend-stronghold",
+      "ca2026-secondary-display-of-might",
+      "ca2026-secondary-engage-on-all-fronts",
+      "ca2026-secondary-forward-position",
+      "ca2026-secondary-no-prisoners",
+      "ca2026-secondary-outflank",
+      "ca2026-secondary-overwhelming-force",
+      "ca2026-secondary-plunder",
+      "ca2026-secondary-secure-no-man-s-land"
+    ],
+    "Defender": [
+      "ca2026-secondary-a-grievous-blow",
+      "ca2026-secondary-a-tempting-target",
+      "ca2026-secondary-assassination",
+      "ca2026-secondary-beacon",
+      "ca2026-secondary-behind-enemy-lines",
+      "ca2026-secondary-bring-it-down",
+      "ca2026-secondary-burden-of-trust",
+      "ca2026-secondary-centre-ground",
+      "ca2026-secondary-cleanse",
+      "ca2026-secondary-defend-stronghold",
+      "ca2026-secondary-display-of-might",
+      "ca2026-secondary-engage-on-all-fronts",
+      "ca2026-secondary-forward-position",
+      "ca2026-secondary-no-prisoners",
+      "ca2026-secondary-outflank",
+      "ca2026-secondary-overwhelming-force",
+      "ca2026-secondary-plunder",
+      "ca2026-secondary-secure-no-man-s-land"
+    ]
+  },
+  "source": {
+    "name": "Wahapedia community transcription",
+    "url": "https://wahapedia.ru/wh40k11ed/the-rules/warhammer-event-companion/#Secondary-Mission-deck",
+    "retrievedAt": "2026-10-14T14:41:17.003154+00:00",
+    "sha256": "b838e30469ceb67110d688fcd304e2312d4af54925f370c9a11ad228de92a0c4"
+  },
+  "verification": {
+    "inventoryAndFixedEligibility": "https://game-datamissions.com/11th/secondary-missions",
+    "officialAuthority": "https://assets.warhammer-community.com/eng_wh40k_event_companion-pl87i44rzn-a7ieny8i9x.pdf",
+    "officialVersion": "1.2",
+    "scope": "Inventory and eligibility cross-checked; official scoring limits and FAQ checked. Full card wording is a community transcription, not an independent audit of the physical deck."
+  },
+  "scoringLimits": {
+    "secondaryVpPerPlayerPerBattleRound": 15,
+    "secondaryVpPerPlayerPerBattle": 45,
+    "vpPerFixedCardPerPlayerPerBattle": 20,
+    "sourceUrl": "https://assets.warhammer-community.com/eng_wh40k_event_companion-pl87i44rzn-a7ieny8i9x.pdf",
+    "sourcePage": 2
+  },
+  "clarifications": [
+    {
+      "cardId": "ca2026-secondary-plunder",
+      "summary": "The territory restriction applies to the terrain area, not the acting unit.",
+      "sourceUrl": "https://assets.warhammer-community.com/eng_wh40k_event_companion-pl87i44rzn-a7ieny8i9x.pdf",
+      "sourcePage": 4
+    },
+    {
+      "cardId": "ca2026-secondary-beacon",
+      "summary": "A destroyed Beacon unit cannot be replaced by selecting another unit.",
+      "sourceUrl": "https://assets.warhammer-community.com/eng_wh40k_event_companion-pl87i44rzn-a7ieny8i9x.pdf",
+      "sourcePage": 4
+    }
+  ],
+  "cards": [
+    {
+      "id": "ca2026-secondary-a-grievous-blow",
+      "name": "A GRIEVOUS BLOW",
+      "modes": [
+        "Fixed",
+        "Tactical"
+      ],
+      "deckRoles": [
+        "Attacker",
+        "Defender"
+      ],
+      "sections": [
+        {
+          "kind": "instruction",
+          "text": "WHEN DRAWN: If there are no enemy units with a starting strength of 13+ on the battlefield, you can discard this card and draw one new Secondary Mission card.",
+          "underlined": [
+            "you can"
+          ]
+        },
+        {
+          "kind": "scoring",
+          "roundsText": "ANY BATTLE ROUND",
+          "timingText": "WHEN: End of a turn.",
+          "conditions": [
+            {
+              "id": "ca2026-secondary-a-grievous-blow-g1-s1",
+              "relationToPrevious": "independent",
+              "condition": {
+                "text": "For each enemy unit with a starting strength of 13+ destroyed this turn.",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Fixed"
+                  ],
+                  "vp": 4,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                },
+                {
+                  "modes": [
+                    "Tactical"
+                  ],
+                  "vp": 5,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": 5
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "sourceUrl": "https://wahapedia.ru/wh40k11ed/the-rules/warhammer-event-companion/#Secondary-Mission-deck",
+      "automationStatus": "reference-collected; scoring-predicates-not-implemented"
+    },
+    {
+      "id": "ca2026-secondary-a-tempting-target",
+      "name": "A TEMPTING TARGET",
+      "modes": [
+        "Tactical"
+      ],
+      "deckRoles": [
+        "Attacker",
+        "Defender"
+      ],
+      "sections": [
+        {
+          "kind": "instruction",
+          "text": "WHEN DRAWN: Your opponent selects one objective (excluding home objectives) within No Man’s Land to be your tempting target.",
+          "underlined": []
+        },
+        {
+          "kind": "scoring",
+          "roundsText": "ANY BATTLE ROUND",
+          "timingText": "WHEN: End of your turn.",
+          "conditions": [
+            {
+              "id": "ca2026-secondary-a-tempting-target-g1-s1",
+              "relationToPrevious": "independent",
+              "condition": {
+                "text": "You control your tempting target.",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Tactical"
+                  ],
+                  "vp": 5,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "sourceUrl": "https://wahapedia.ru/wh40k11ed/the-rules/warhammer-event-companion/#Secondary-Mission-deck",
+      "automationStatus": "reference-collected; scoring-predicates-not-implemented"
+    },
+    {
+      "id": "ca2026-secondary-assassination",
+      "name": "ASSASSINATION",
+      "modes": [
+        "Fixed",
+        "Tactical"
+      ],
+      "deckRoles": [
+        "Attacker",
+        "Defender"
+      ],
+      "sections": [
+        {
+          "kind": "scoring",
+          "roundsText": "ANY BATTLE ROUND",
+          "timingText": "WHEN: End of a turn.",
+          "conditions": [
+            {
+              "id": "ca2026-secondary-assassination-g1-s1",
+              "relationToPrevious": "independent",
+              "condition": {
+                "text": "For each enemy CHARACTER model destroyed this turn.",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Fixed"
+                  ],
+                  "vp": 3,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            },
+            {
+              "id": "ca2026-secondary-assassination-g1-s2",
+              "relationToPrevious": "cumulative",
+              "condition": {
+                "text": "For each of those models with a W of 4 or more.",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Fixed"
+                  ],
+                  "vp": 1,
+                  "bonus": true,
+                  "cumulative": true,
+                  "capVp": null
+                }
+              ]
+            },
+            {
+              "id": "ca2026-secondary-assassination-g1-s3",
+              "relationToPrevious": "independent",
+              "condition": {
+                "text": "One or more enemy CHARACTER models were destroyed this turn, or all enemy CHARACTER models have been destroyed during the battle.",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Tactical"
+                  ],
+                  "vp": 5,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "sourceUrl": "https://wahapedia.ru/wh40k11ed/the-rules/warhammer-event-companion/#Secondary-Mission-deck",
+      "automationStatus": "reference-collected; scoring-predicates-not-implemented"
+    },
+    {
+      "id": "ca2026-secondary-beacon",
+      "name": "BEACON",
+      "modes": [
+        "Tactical"
+      ],
+      "deckRoles": [
+        "Attacker",
+        "Defender"
+      ],
+      "sections": [
+        {
+          "kind": "instruction",
+          "text": "WHEN DRAWN: Select one friendly unit on the battlefield or embarked within a TRANSPORT on the battlefield to be your beacon unit.",
+          "underlined": []
+        },
+        {
+          "kind": "scoring",
+          "roundsText": "ANY BATTLE ROUND",
+          "timingText": "WHEN: End of your opponent’s turn or the end of the fifth battle round (whichever comes first).",
+          "conditions": [
+            {
+              "id": "ca2026-secondary-beacon-g1-s1",
+              "relationToPrevious": "independent",
+              "condition": {
+                "text": "Your beacon unit is on the battlefield and not within your deployment zone.",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Tactical"
+                  ],
+                  "vp": 3,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            },
+            {
+              "id": "ca2026-secondary-beacon-g1-s2",
+              "relationToPrevious": "alternative",
+              "condition": {
+                "text": "Your beacon unit is on the battlefield and not within your territory.",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Tactical"
+                  ],
+                  "vp": 5,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "sourceUrl": "https://wahapedia.ru/wh40k11ed/the-rules/warhammer-event-companion/#Secondary-Mission-deck",
+      "automationStatus": "reference-collected; scoring-predicates-not-implemented"
+    },
+    {
+      "id": "ca2026-secondary-behind-enemy-lines",
+      "name": "BEHIND ENEMY LINES",
+      "modes": [
+        "Tactical"
+      ],
+      "deckRoles": [
+        "Attacker",
+        "Defender"
+      ],
+      "sections": [
+        {
+          "kind": "instruction",
+          "text": "WHEN DRAWN: If it is the first battle round, you can draw one new Secondary Mission card and shuffle this card back into your Secondary Mission deck.",
+          "underlined": [
+            "you can"
+          ]
+        },
+        {
+          "kind": "scoring",
+          "roundsText": "ANY BATTLE ROUND",
+          "timingText": "WHEN: End of your turn.",
+          "conditions": [
+            {
+              "id": "ca2026-secondary-behind-enemy-lines-g1-s1",
+              "relationToPrevious": "independent",
+              "condition": {
+                "text": "For each friendly unit (excluding AIRCRAFT and battle-shocked units) wholly within your opponent’s deployment zone.",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Tactical"
+                  ],
+                  "vp": 3,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": 5
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "sourceUrl": "https://wahapedia.ru/wh40k11ed/the-rules/warhammer-event-companion/#Secondary-Mission-deck",
+      "automationStatus": "reference-collected; scoring-predicates-not-implemented"
+    },
+    {
+      "id": "ca2026-secondary-bring-it-down",
+      "name": "BRING IT DOWN",
+      "modes": [
+        "Fixed",
+        "Tactical"
+      ],
+      "deckRoles": [
+        "Attacker",
+        "Defender"
+      ],
+      "sections": [
+        {
+          "kind": "instruction",
+          "text": "WHEN DRAWN: If there are no enemy models with a W of 10 or more on the battlefield, you can discard this card and draw one new Secondary Mission card.",
+          "underlined": [
+            "you can"
+          ]
+        },
+        {
+          "kind": "scoring",
+          "roundsText": "ANY BATTLE ROUND",
+          "timingText": "WHEN: End of a turn.",
+          "conditions": [
+            {
+              "id": "ca2026-secondary-bring-it-down-g1-s1",
+              "relationToPrevious": "independent",
+              "condition": {
+                "text": "For each enemy model with a W of 10 or more destroyed this turn.",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Fixed"
+                  ],
+                  "vp": 4,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                },
+                {
+                  "modes": [
+                    "Tactical"
+                  ],
+                  "vp": 5,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": 5
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "sourceUrl": "https://wahapedia.ru/wh40k11ed/the-rules/warhammer-event-companion/#Secondary-Mission-deck",
+      "automationStatus": "reference-collected; scoring-predicates-not-implemented"
+    },
+    {
+      "id": "ca2026-secondary-burden-of-trust",
+      "name": "BURDEN OF TRUST",
+      "modes": [
+        "Tactical"
+      ],
+      "deckRoles": [
+        "Attacker",
+        "Defender"
+      ],
+      "sections": [
+        {
+          "kind": "instruction",
+          "text": "WHEN DRAWN/START OF YOUR TURN: For each objective, you can select one friendly unit on the battlefield to guard that objective. Until the start of your next turn, while that unit is within range of that objective and while you control that objective, that objective is guarded by your army.",
+          "underlined": [
+            "you can"
+          ]
+        },
+        {
+          "kind": "scoring",
+          "roundsText": "ANY BATTLE ROUND",
+          "timingText": "WHEN: End of your opponent’s turn or the end of the fifth battle round (whichever comes first).",
+          "conditions": [
+            {
+              "id": "ca2026-secondary-burden-of-trust-g1-s1",
+              "relationToPrevious": "independent",
+              "condition": {
+                "text": "For each objective guarded by your army.",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Tactical"
+                  ],
+                  "vp": 2,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": 5
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "sourceUrl": "https://wahapedia.ru/wh40k11ed/the-rules/warhammer-event-companion/#Secondary-Mission-deck",
+      "automationStatus": "reference-collected; scoring-predicates-not-implemented"
+    },
+    {
+      "id": "ca2026-secondary-centre-ground",
+      "name": "CENTRE GROUND",
+      "modes": [
+        "Tactical"
+      ],
+      "deckRoles": [
+        "Attacker",
+        "Defender"
+      ],
+      "sections": [
+        {
+          "kind": "scoring",
+          "roundsText": "ANY BATTLE ROUND",
+          "timingText": "WHEN: End of your turn.",
+          "conditions": [
+            {
+              "id": "ca2026-secondary-centre-ground-g1-s1",
+              "relationToPrevious": "independent",
+              "condition": {
+                "text": "One or more friendly units (excluding AIRCRAFT and battle-shocked units) are within 3\" of the centre of the battlefield, and no enemy units are within 3\" of the centre of the battlefield.",
+                "underlined": [
+                  "no"
+                ]
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Tactical"
+                  ],
+                  "vp": 3,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            },
+            {
+              "id": "ca2026-secondary-centre-ground-g1-s2",
+              "relationToPrevious": "alternative",
+              "condition": {
+                "text": "One or more friendly units (excluding AIRCRAFT and battle-shocked units) are within 3\" of the centre of the battlefield, and no enemy units are within 6\" of the centre of the battlefield.",
+                "underlined": [
+                  "no",
+                  "within 6\""
+                ]
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Tactical"
+                  ],
+                  "vp": 5,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "sourceUrl": "https://wahapedia.ru/wh40k11ed/the-rules/warhammer-event-companion/#Secondary-Mission-deck",
+      "automationStatus": "reference-collected; scoring-predicates-not-implemented"
+    },
+    {
+      "id": "ca2026-secondary-cleanse",
+      "name": "CLEANSE",
+      "modes": [
+        "Tactical"
+      ],
+      "deckRoles": [
+        "Attacker",
+        "Defender"
+      ],
+      "sections": [
+        {
+          "kind": "instruction",
+          "text": "WHEN DRAWN: If the Plunder Secondary Mission is active for you, you can draw one new Secondary Mission card and shuffle this card back into your Secondary Mission deck.",
+          "underlined": [
+            "you can"
+          ]
+        },
+        {
+          "kind": "action",
+          "name": "CLEANSE",
+          "actionType": "OBJECTIVE ACTION",
+          "fields": [
+            {
+              "label": "STARTS",
+              "text": "Your Shooting phase.",
+              "underlined": []
+            },
+            {
+              "label": "UNITS",
+              "text": "One friendly unit within range of one objective (excluding your home objective).",
+              "underlined": [
+                "one objective"
+              ]
+            },
+            {
+              "label": "USE LIMIT",
+              "text": "Unlimited. Each unit that starts this action this phase must be within range of a different objective.",
+              "underlined": []
+            },
+            {
+              "label": "COMPLETES",
+              "text": "End of your turn, if that unit is controlling that objective.",
+              "underlined": []
+            },
+            {
+              "label": "EFFECT",
+              "text": "That objective is cleansed by your army.",
+              "underlined": []
+            }
+          ]
+        },
+        {
+          "kind": "scoring",
+          "roundsText": "ANY BATTLE ROUND",
+          "timingText": "WHEN: End of your turn.",
+          "conditions": [
+            {
+              "id": "ca2026-secondary-cleanse-g1-s1",
+              "relationToPrevious": "independent",
+              "condition": {
+                "text": "One objective was cleansed by your army this turn.",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Tactical"
+                  ],
+                  "vp": 2,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            },
+            {
+              "id": "ca2026-secondary-cleanse-g1-s2",
+              "relationToPrevious": "alternative",
+              "condition": {
+                "text": "Two or more objectives were cleansed by your army this turn.",
+                "underlined": [
+                  "Two or more"
+                ]
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Tactical"
+                  ],
+                  "vp": 5,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "sourceUrl": "https://wahapedia.ru/wh40k11ed/the-rules/warhammer-event-companion/#Secondary-Mission-deck",
+      "automationStatus": "reference-collected; scoring-predicates-not-implemented"
+    },
+    {
+      "id": "ca2026-secondary-defend-stronghold",
+      "name": "DEFEND STRONGHOLD",
+      "modes": [
+        "Tactical"
+      ],
+      "deckRoles": [
+        "Attacker",
+        "Defender"
+      ],
+      "sections": [
+        {
+          "kind": "instruction",
+          "text": "WHEN DRAWN: If it is the first battle round, draw one new Secondary Mission card and shuffle this card back into your Secondary Mission deck.",
+          "underlined": []
+        },
+        {
+          "kind": "scoring",
+          "roundsText": "SECOND BATTLE ROUND ONWARDS",
+          "timingText": "WHEN: End of your opponent’s turn or the end of the fifth battle round (whichever comes first).",
+          "conditions": [
+            {
+              "id": "ca2026-secondary-defend-stronghold-g1-s1",
+              "relationToPrevious": "independent",
+              "condition": {
+                "text": "You control your home objective.",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Tactical"
+                  ],
+                  "vp": 3,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            },
+            {
+              "id": "ca2026-secondary-defend-stronghold-g1-s2",
+              "relationToPrevious": "cumulative",
+              "condition": {
+                "text": "No enemy units are within your deployment zone.",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Tactical"
+                  ],
+                  "vp": 2,
+                  "bonus": true,
+                  "cumulative": true,
+                  "capVp": null
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "sourceUrl": "https://wahapedia.ru/wh40k11ed/the-rules/warhammer-event-companion/#Secondary-Mission-deck",
+      "automationStatus": "reference-collected; scoring-predicates-not-implemented"
+    },
+    {
+      "id": "ca2026-secondary-display-of-might",
+      "name": "DISPLAY OF MIGHT",
+      "modes": [
+        "Tactical"
+      ],
+      "deckRoles": [
+        "Attacker",
+        "Defender"
+      ],
+      "sections": [
+        {
+          "kind": "scoring",
+          "roundsText": "ANY BATTLE ROUND",
+          "timingText": "WHEN: End of your turn.",
+          "conditions": [
+            {
+              "id": "ca2026-secondary-display-of-might-g1-s1",
+              "relationToPrevious": "independent",
+              "condition": {
+                "text": "There are more friendly units than enemy units (excluding AIRCRAFT and battle-shocked units) wholly within No Man’s Land.",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Tactical"
+                  ],
+                  "vp": 2,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "scoring",
+          "roundsText": "ANY BATTLE ROUND",
+          "timingText": "WHEN: End of your opponent’s turn.",
+          "conditions": [
+            {
+              "id": "ca2026-secondary-display-of-might-g2-s1",
+              "relationToPrevious": "independent",
+              "condition": {
+                "text": "There are more friendly units than enemy units (excluding AIRCRAFT and battle-shocked units) wholly within No Man’s Land.",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Tactical"
+                  ],
+                  "vp": 5,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "sourceUrl": "https://wahapedia.ru/wh40k11ed/the-rules/warhammer-event-companion/#Secondary-Mission-deck",
+      "automationStatus": "reference-collected; scoring-predicates-not-implemented"
+    },
+    {
+      "id": "ca2026-secondary-engage-on-all-fronts",
+      "name": "ENGAGE ON ALL FRONTS",
+      "modes": [
+        "Fixed",
+        "Tactical"
+      ],
+      "deckRoles": [
+        "Attacker",
+        "Defender"
+      ],
+      "sections": [
+        {
+          "kind": "instruction",
+          "text": "If one or more friendly units (excluding AIRCRAFT and battle-shocked units) are wholly within a table quarter, and those units are not within 6\" of the centre of the battlefield, you have a presence in that table quarter.",
+          "underlined": []
+        },
+        {
+          "kind": "scoring",
+          "roundsText": "ANY BATTLE ROUND",
+          "timingText": "WHEN: End of your turn.",
+          "conditions": [
+            {
+              "id": "ca2026-secondary-engage-on-all-fronts-g1-s1",
+              "relationToPrevious": "independent",
+              "condition": {
+                "text": "You have a presence in three table quarters.",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Fixed"
+                  ],
+                  "vp": 2,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                },
+                {
+                  "modes": [
+                    "Tactical"
+                  ],
+                  "vp": 3,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            },
+            {
+              "id": "ca2026-secondary-engage-on-all-fronts-g1-s2",
+              "relationToPrevious": "alternative",
+              "condition": {
+                "text": "You have a presence in four table quarters.",
+                "underlined": [
+                  "four"
+                ]
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Fixed"
+                  ],
+                  "vp": 4,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                },
+                {
+                  "modes": [
+                    "Tactical"
+                  ],
+                  "vp": 5,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "sourceUrl": "https://wahapedia.ru/wh40k11ed/the-rules/warhammer-event-companion/#Secondary-Mission-deck",
+      "automationStatus": "reference-collected; scoring-predicates-not-implemented"
+    },
+    {
+      "id": "ca2026-secondary-forward-position",
+      "name": "FORWARD POSITION",
+      "modes": [
+        "Tactical"
+      ],
+      "deckRoles": [
+        "Attacker",
+        "Defender"
+      ],
+      "sections": [
+        {
+          "kind": "instruction",
+          "text": "WHEN DRAWN: If it is the first battle round, you can draw one new Secondary Mission card and shuffle this card back into your Secondary Mission deck.",
+          "underlined": [
+            "you can"
+          ]
+        },
+        {
+          "kind": "scoring",
+          "roundsText": "ANY BATTLE ROUND",
+          "timingText": "WHEN: End of your turn.",
+          "conditions": [
+            {
+              "id": "ca2026-secondary-forward-position-g1-s1",
+              "relationToPrevious": "independent",
+              "condition": {
+                "text": "You control your opponent’s home objective and/or each expansion objective.",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Tactical"
+                  ],
+                  "vp": 5,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "sourceUrl": "https://wahapedia.ru/wh40k11ed/the-rules/warhammer-event-companion/#Secondary-Mission-deck",
+      "automationStatus": "reference-collected; scoring-predicates-not-implemented"
+    },
+    {
+      "id": "ca2026-secondary-no-prisoners",
+      "name": "NO PRISONERS",
+      "modes": [
+        "Tactical"
+      ],
+      "deckRoles": [
+        "Attacker",
+        "Defender"
+      ],
+      "sections": [
+        {
+          "kind": "scoring",
+          "roundsText": "ANY BATTLE ROUND",
+          "timingText": "WHEN: End of a turn.",
+          "conditions": [
+            {
+              "id": "ca2026-secondary-no-prisoners-g1-s1",
+              "relationToPrevious": "independent",
+              "condition": {
+                "text": "For each enemy unit destroyed this turn.",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Tactical"
+                  ],
+                  "vp": 2,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": 5
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "sourceUrl": "https://wahapedia.ru/wh40k11ed/the-rules/warhammer-event-companion/#Secondary-Mission-deck",
+      "automationStatus": "reference-collected; scoring-predicates-not-implemented"
+    },
+    {
+      "id": "ca2026-secondary-outflank",
+      "name": "OUTFLANK",
+      "modes": [
+        "Tactical"
+      ],
+      "deckRoles": [
+        "Attacker",
+        "Defender"
+      ],
+      "sections": [
+        {
+          "kind": "scoring",
+          "roundsText": "ANY BATTLE ROUND",
+          "timingText": "WHEN: End of your turn.",
+          "conditions": [
+            {
+              "id": "ca2026-secondary-outflank-g1-s1",
+              "relationToPrevious": "independent",
+              "condition": {
+                "text": "One or more friendly units (excluding AIRCRAFT and battle-shocked units) are within 6\" of one or more battlefield edges and not within your territory.",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Tactical"
+                  ],
+                  "vp": 3,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            },
+            {
+              "id": "ca2026-secondary-outflank-g1-s2",
+              "relationToPrevious": "alternative",
+              "condition": {
+                "text": "Two or more friendly units (excluding AIRCRAFT and battle-shocked units) are within 6\" of opposite battlefield edges and one or more of those units is not within your territory.",
+                "underlined": [
+                  "Two or more",
+                  "opposite",
+                  "one or more"
+                ]
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Tactical"
+                  ],
+                  "vp": 5,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "note",
+          "text": "Designer’s Note: Opposite battlefield edges are those parallel to each other.",
+          "underlined": []
+        }
+      ],
+      "sourceUrl": "https://wahapedia.ru/wh40k11ed/the-rules/warhammer-event-companion/#Secondary-Mission-deck",
+      "automationStatus": "reference-collected; scoring-predicates-not-implemented"
+    },
+    {
+      "id": "ca2026-secondary-overwhelming-force",
+      "name": "OVERWHELMING FORCE",
+      "modes": [
+        "Tactical"
+      ],
+      "deckRoles": [
+        "Attacker",
+        "Defender"
+      ],
+      "sections": [
+        {
+          "kind": "scoring",
+          "roundsText": "ANY BATTLE ROUND",
+          "timingText": "WHEN: End of a turn.",
+          "conditions": [
+            {
+              "id": "ca2026-secondary-overwhelming-force-g1-s1",
+              "relationToPrevious": "independent",
+              "condition": {
+                "text": "For each enemy unit that started the turn within range of one or more objectives and is destroyed.",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Tactical"
+                  ],
+                  "vp": 3,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": 5
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "sourceUrl": "https://wahapedia.ru/wh40k11ed/the-rules/warhammer-event-companion/#Secondary-Mission-deck",
+      "automationStatus": "reference-collected; scoring-predicates-not-implemented"
+    },
+    {
+      "id": "ca2026-secondary-plunder",
+      "name": "PLUNDER",
+      "modes": [
+        "Tactical"
+      ],
+      "deckRoles": [
+        "Attacker",
+        "Defender"
+      ],
+      "sections": [
+        {
+          "kind": "instruction",
+          "text": "WHEN DRAWN: If the Cleanse Secondary Mission is active for you, you can draw one new Secondary Mission card and shuffle this card back into your Secondary Mission deck.",
+          "underlined": [
+            "you can"
+          ]
+        },
+        {
+          "kind": "action",
+          "name": "PLUNDER",
+          "actionType": "OBJECTIVE ACTION",
+          "fields": [
+            {
+              "label": "STARTS",
+              "text": "Your Shooting phase.",
+              "underlined": []
+            },
+            {
+              "label": "UNITS",
+              "text": "One unit within a terrain area that is not within your territory.",
+              "underlined": []
+            },
+            {
+              "label": "USE LIMIT",
+              "text": "Once per turn.",
+              "underlined": []
+            },
+            {
+              "label": "COMPLETES",
+              "text": "Immediately.",
+              "underlined": []
+            },
+            {
+              "label": "EFFECT",
+              "text": "That terrain area is plundered.",
+              "underlined": []
+            }
+          ]
+        },
+        {
+          "kind": "scoring",
+          "roundsText": "ANY BATTLE ROUND",
+          "timingText": "WHEN: End of your turn.",
+          "conditions": [
+            {
+              "id": "ca2026-secondary-plunder-g1-s1",
+              "relationToPrevious": "independent",
+              "condition": {
+                "text": "A terrain area was plundered this turn.",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Tactical"
+                  ],
+                  "vp": 5,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "sourceUrl": "https://wahapedia.ru/wh40k11ed/the-rules/warhammer-event-companion/#Secondary-Mission-deck",
+      "automationStatus": "reference-collected; scoring-predicates-not-implemented"
+    },
+    {
+      "id": "ca2026-secondary-secure-no-man-s-land",
+      "name": "SECURE NO MAN'S LAND",
+      "modes": [
+        "Tactical"
+      ],
+      "deckRoles": [
+        "Attacker",
+        "Defender"
+      ],
+      "sections": [
+        {
+          "kind": "scoring",
+          "roundsText": "ANY BATTLE ROUND",
+          "timingText": "WHEN: End of your turn.",
+          "conditions": [
+            {
+              "id": "ca2026-secondary-secure-no-man-s-land-g1-s1",
+              "relationToPrevious": "independent",
+              "condition": {
+                "text": "You control two or more objectives within No Man’s Land (excluding your home objective).",
+                "underlined": []
+              },
+              "points": [
+                {
+                  "modes": [
+                    "Tactical"
+                  ],
+                  "vp": 5,
+                  "bonus": false,
+                  "cumulative": false,
+                  "capVp": null
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "sourceUrl": "https://wahapedia.ru/wh40k11ed/the-rules/warhammer-event-companion/#Secondary-Mission-deck",
+      "automationStatus": "reference-collected; scoring-predicates-not-implemented"
+    }
+  ]
+}

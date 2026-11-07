@@ -1,0 +1,115 @@
+{
+  "SourceEntryId": "8467-b3a2-2597-de0d",
+  "IdentityIds": [
+    "9888-ddb2-a141-6037",
+    "cf47-a0d7-7207-29dc",
+    "4c00-2578-faf5-6918",
+    "ed0d-8e2a-225c-2340",
+    "5a61-81ac-eb7c-a87e",
+    "e338-111e-d0c6-b687",
+    "8448-53ec-fbc3-467c",
+    "8467-b3a2-2597-de0d"
+  ],
+  "Constraints": [
+    {
+      "Id": "7d52-af78-d77f-b4f3",
+      "Scope": "self",
+      "ChildId": "1556-9b56-fba6-4370",
+      "ChildName": "Leader",
+      "Type": "max",
+      "Value": 1,
+      "Modifiers": [
+        {
+          "Operation": "set",
+          "Value": 2,
+          "Condition": {
+            "Kind": "and",
+            "Scope": "",
+            "ChildId": "",
+            "ChildName": "",
+            "Comparison": "",
+            "Value": 0,
+            "Children": [
+              {
+                "Kind": "or",
+                "Scope": "",
+                "ChildId": "",
+                "ChildName": "",
+                "Comparison": "",
+                "Value": 0,
+                "Children": [
+                  {
+                    "Kind": "count",
+                    "Scope": "self",
+                    "ChildId": "917-dc6c-ae70-a45b",
+                    "ChildName": "Foul Blightspawn",
+                    "Comparison": "atLeast",
+                    "Value": 1,
+                    "Children": null,
+                    "Field": "associations"
+                  },
+                  {
+                    "Kind": "count",
+                    "Scope": "self",
+                    "ChildId": "82ec-2c74-d449-2afb",
+                    "ChildName": "Tallyman",
+                    "Comparison": "atLeast",
+                    "Value": 1,
+                    "Children": null,
+                    "Field": "associations"
+                  },
+                  {
+                    "Kind": "count",
+                    "Scope": "self",
+                    "ChildId": "b631-a560-7efd-9c94",
+                    "ChildName": "Plague Surgeon",
+                    "Comparison": "atLeast",
+                    "Value": 1,
+                    "Children": null,
+                    "Field": "associations"
+                  },
+                  {
+                    "Kind": "count",
+                    "Scope": "self",
+                    "ChildId": "483a-2919-74ca-338e",
+                    "ChildName": "Death Guard Icon Bearer",
+                    "Comparison": "atLeast",
+                    "Value": 1,
+                    "Children": null,
+                    "Field": "associations"
+                  },
+                  {
+                    "Kind": "count",
+                    "Scope": "self",
+                    "ChildId": "a376-7f02-1fc8-6be0",
+                    "ChildName": "Biologus Putrifier",
+                    "Comparison": "atLeast",
+                    "Value": 1,
+                    "Children": null,
+                    "Field": "associations"
+                  },
+                  {
+                    "Kind": "count",
+                    "Scope": "self",
+                    "ChildId": "4184-cab9-b99a-d510",
+                    "ChildName": "Noxious Blightbringer",
+                    "Comparison": "atLeast",
+                    "Value": 1,
+                    "Children": null,
+                    "Field": "associations"
+                  }
+                ],
+                "Field": "associations"
+              }
+            ],
+            "Field": "associations"
+          },
+          "Repeats": [],
+          "Order": 0,
+          "SourceId": ""
+        }
+      ]
+    }
+  ],
+  "Warnings": []
+}

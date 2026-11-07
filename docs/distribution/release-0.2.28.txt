@@ -1,0 +1,69 @@
+GrimList 0.2.28 - Android phone verification build, 2026-10-28
+
+APK: artifacts/builds/android/0.2.28/GrimList-Android-0.2.28.apk
+Size: 105,691,269 bytes
+SHA-256: dfd1582e6c45c5ba244c2b3ab8806bda19eb1260acb543d169c74d0e4846346e
+Package: com.grimlist.mobile; version code 29; ARM64 and x64; minimum API 30.
+Existing development certificate SHA-256:
+9be9c191c53dc33ee955dcaedad94868fe4a4e6817a1fb30187ac0baf7f28f25
+
+Changes since 0.2.27
+- Per-detachment reference compatibility and source-proven recovery of incorrectly
+  hidden cards. Previous references remain accessible and explicitly unverified.
+  Explicit data updates refresh mapped stratagem sources; failed or partial
+  sections do not erase stored rules. See docs/codex-reference-recovery.txt.
+- Shared lazy static-rule interpretation and incremental Android datasheet updates.
+  See docs/performance/optimization-2026-10-28.txt for measured allocation savings,
+  variable timing results and remaining architectural phases.
+- Includes the earlier enhancement Movement/OC and nested-detachment fixes.
+
+Packaging and verification
+- Shared version and Android display version incremented to 0.2.28; code 29.
+- Standard Publish-StandaloneAndroid.ps1 completed. Candidate validation passed:
+  2,695 enhancement cards, 36 army-rule factions, equipment pricing coverage;
+  102 unsupported conditions remain explicit.
+- APK identity, certificate continuity, ZIP CRC integrity, no-PDB check, hash
+  sidecar, ARM64/x64 presence and both native onCreate bindings passed.
+- Publisher emitted the known stale-symbol warnings and retried without symbols.
+  No cleanup workaround was used. Complete-Build removed canonical Android
+  0.2.27 output after verifying the replacement; one distributable APK remains.
+- Prior source verification: 515 full checks plus six focused checks after the
+  final presentation-order refinement; normal Windows/Android builds clean.
+  No new full regression was run for this version-only packaging change.
+- No rules-data refresh occurred as a packaging side effect. Bootstrap data
+  remains grimlist-11e-2026.10.16.2. No Windows 0.2.28 installer was built;
+  Windows community packages remain 0.2.27. No upload or external sharing occurred.
+
+Physical phone update
+- Connected Redmi model 22101316UG, serial kjuoaevc95hagaz9.
+- Updated installed 0.2.24/code 25 using adb install --no-streaming -r with the
+  exact verified APK above. Android reported Success. PowerShell classified
+  adb's informational transfer stderr as a native error; subsequent package
+  inspection independently confirmed version 0.2.28/code 29.
+- Package appId 10345 and original firstInstallTime 2026-10-13 23:15:00 were
+  retained. No uninstall, clear-data action or synthetic roster seeding occurred.
+- Force-stop and explicit launcher activity start returned Status: ok and
+  LaunchState: COLD. Android reported TotalTime 1,384 ms / WaitTime 1,392 ms;
+  these are activity startup timings, not complete library-preparation timings.
+- Process 14212 remained alive. A subsequent read-only UI hierarchy inspection
+  found 227 GrimList nodes and 19 enabled interactive controls. No user-visible
+  army text was persisted in the evidence, and the app was left open.
+- This confirms installation and basic cold launch. Enhancement/attachment UI,
+  scroll retention, performance and individual roster/rule contents remain for
+  the user's manual verification. No destructive automated acceptance suite ran
+  against the production app.
+
+User verification priorities
+Open an existing army, change enhancements and attachments, and check stats,
+weapons, FNP details, undo/redo and scroll position. Use Update data and review
+the preview if this phone's rules library needs current source replacements.
+Report the version, affected unit/rule and exact steps via the local bug-report
+flow; sharing a report remains user-controlled.
+
+Evidence in artifacts/distribution-evidence/release-0.2.28-*:
+android-publish.log, apk-signature.txt, apk-identity.txt, apk-checks.json,
+phone-before.txt, phone-install.txt, phone-launch.json and phone-ui.json.
+
+Distribution limitation: this Android community build uses the existing
+development signing certificate. Earlier root delivery folders and the prior
+task's policy-blocked benchmark directories were not cleaned by this task.

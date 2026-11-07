@@ -1,0 +1,71 @@
+GrimList 0.2.26 - local community delivery, 2026-10-25
+
+Delivery folder: repository-root 0.2.26
+  GrimList-0.2.26-win-x64.msi    98,738,176 bytes
+  SHA-256 f191277df4c6d5ba0a4efedcc0c7eb1f6ba13b75ea0777d2b980612013f6df4b
+  GrimList-Android-0.2.26.apk   105,560,197 bytes
+  SHA-256 fde53abb59f1d56e0007c99effeaf31447f1973ce1c7966b083376e68fddfad9
+README.txt provides installation/update instructions and test priorities.
+Individual hashes, SHA256SUMS.txt, MSI inventory and CLEANUP.txt are included.
+No upload, external publication or tester messaging was performed.
+
+Changes
+Shared TXT roster export omits the effective-rule modifier summary that added
+Range/Source/Conditional annotations to unit blocks. Equipment quantities still
+follow saved selections: standard plus pintle Combi-bolters yield a single
+2 x Combi-bolter row; one selected bolter yields one. Detailed datasheets retain
+their effective rules. The PDF roster summary also uses the shared text exporter.
+See ../text-roster-export.txt. Includes all prior 0.2.25 changes.
+
+Identity and provenance
+- Shared version 0.2.26; Android display version 0.2.26, version code 27.
+  Package com.grimlist.mobile; minimum Android API 30; ARM64 and x64.
+- Existing APK development certificate SHA-256:
+  9be9c191c53dc33ee955dcaedad94868fe4a4e6817a1fb30187ac0baf7f28f25
+- MSI ProductCode {F2A0CFDF-E72E-5239-97F6-8A7A3BF951A0}.
+  Stable UpgradeCode {5F1E3A2A-2390-5993-A9F9-4AF11C89E68A}.
+  MSI remains unsigned and includes private Windows Desktop runtime 10.0.10.
+- Standard Android and Windows publishers and Build-WindowsInstaller.py ran
+  sequentially from the existing source tree. No rules/source refresh occurred.
+  Bootstrap release remains grimlist-11e-2026.10.16.2.
+
+Verification
+- All 13 targeted text/Yellowscribe export and army-validation checks passed
+  before the packaging version bump, including the exact requested Rhino block,
+  known/unknown modifier conditions, optional weapons and manual quantities.
+  Log: artifacts/distribution-evidence/concise-text-export-regression.log.
+  No full regression rerun for this release; prior full-suite evidence is in
+  release-0.2.25.txt. Successful targeted test data was removed by its wrapper.
+- Both publishers passed bundled enhancement/army-rule/equipment candidate
+  gates. Unsupported source conditions remain explicit and are not guessed.
+- Delivered APK passed identity/version, signature/certificate continuity,
+  ZIP integrity, both ABI presence and published SHA-256 checks. No PDB entries.
+  Both native MAUI onCreate bindings passed the publisher's startup check.
+- Android emitted the previously documented stale-symbol warnings and retried
+  loading without symbols; publishing and package checks succeeded. No attempt
+  was made to bypass the earlier cleanup restriction on these intermediates.
+- Delivered MSI passed 19 checks, including table validation, upgrade metadata,
+  cabinet extraction and all 490 payload hashes (223,482,407 payload bytes).
+- The exact MSI-extracted production app passed 13 native checks, including
+  offline bootstrap, 375-point army creation, validation, save/reopen and loading
+  the bundled runtime. Standard checks removed temporary extracted/test data.
+- Installer welcome/per-user destination and cancel/finish checks passed;
+  exit 1602 without installing.
+- All 14 build-retention checks passed. Standard publishers removed superseded
+  canonical 0.2.25 Android, Windows and installer directories. Root delivery
+  folders remain for optional manual cleanup; see 0.2.26/CLEANUP.txt.
+
+Limits
+- adb devices -l listed no connected device. Exact-APK installation, physical
+  in-place update/cold launch and native Android UI behavior remain unverified.
+- Windows install/repair/upgrade/uninstall lifecycle was not performed.
+  Package, extracted-app and welcome/cancel checks do not prove that lifecycle.
+
+Evidence under artifacts/distribution-evidence:
+  release-0.2.26-android-publish.log
+  release-0.2.26-apk-signature.txt / release-0.2.26-apk-identity.txt
+  release-0.2.26-apk-checks.txt / release-0.2.26-retention.log
+  release-0.2.26-windows-publish.log / release-0.2.26-msi-build.log
+  release-0.2.26-msi-validation.log / release-0.2.26-msi/results.json
+  release-0.2.26-msi/app/results.json
+  release-0.2.26-msi-ui.log / release-0.2.26-msi-ui/ui-results.json

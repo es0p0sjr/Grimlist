@@ -1,0 +1,122 @@
+BSData importer proposal review - 2026-10-02
+===========================================
+
+Compared docs/design/bsdata-importer-proposed-fixes.txt with the current GrimList code and
+cached BSData 11e revision cc1830fbfead059f8059ed6c7f8e73cd4c390908.
+
+The proposal identifies useful architectural gaps. It is a design outline,
+not a verified implementation specification. Its claim that nine of ten units
+will be fixed is not yet established by tests against a reference evaluator.
+
+Already implemented before this pass
+-----------------------------------
+
+Raw catalogue preservation and references:
+- BsDataDocument retains the raw JSON tree and normalizes XML into a tree.
+- Repository ZIPs retain the original source for reproducible offline retries.
+- Catalogue/game dependencies and shared selections resolve using source IDs.
+- Cycle guards distinguish repeated finite links from actual ancestor cycles.
+- This is not yet a complete resolved selection graph stored in each roster.
+  Link instances, conditional branches and their selected counts still need a
+  richer runtime representation for some nested/bundled compositions.
+
+Pricing expressions:
+- Set, increment and decrement operations; AND/OR conditions; six numeric
+  comparisons; total-model and named-role/group counts; native/allied contexts.
+- Optional paid models, equipment bundles, mandatory detachment upgrades and
+  unit/category copy surcharges are included in roster totals.
+- UnitPriceFormula preserves supported conditional rules for runtime evaluation.
+- Source modifier enumeration is retained by the current readers, but the
+  operation precedence for multiply plus allied overrides is not verified.
+- Full repeat semantics and multiplication are still unsupported. In particular,
+  localConditionGroups.repeats must not be assumed to mean the same thing as a
+  modifier's separate repeats collection.
+
+Composition and equipment:
+- Recursive source traversal, fixed/ranged model groups, some exclusive bundles,
+  exact specialist substitutions and squad-size-dependent loadout limits.
+- Equipment options and their costs already use source IDs. Changing name
+  matching to ID matching alone will not fix Scourges.
+- An incomplete weapon-to-loadout mapping can still disable automatic equipment
+  choices. Persisting selectable source equipment independently of display
+  profiles would be a useful next extension, with explicit unknown-profile
+  warnings and verified quantities/defaults.
+
+Repair workflow:
+- Bulk re-import, source retries, preview, backups, stale-preview protection,
+  saved-army preservation and verification of recovered default loadout prices.
+- Crucible entries and battle-only references are skipped separately.
+
+Implemented from the proposal in this pass
+-----------------------------------------
+
+1. Selection-dependent model limits
+
+LoadoutAdjustment can retain a source selection query: scope, child ID,
+includeChildSelections and the resolved model-role IDs. LoadoutBound evaluates
+it against the selected models rather than treating the whole squad size as
+the count of a particular role. Defaults, resize, validation and displayed
+model limits use those selections.
+
+The importer accepts a verified subset of unit-scoped named-model/model-group
+comparisons with set/increment/decrement operations. A conservative maximum
+envelope only enumerates possible squad sizes; conditions remain stored and
+candidate default loadouts are validated. Unknown scopes and ambiguous
+selection structures are still rejected.
+
+This recovers Atalan Jackals and Neurogaunts without unit-name exceptions.
+Five default squad sizes in the cached source produce prices and valid loadouts.
+Tests cover actual selected counts, group descendant counting, resizing,
+persistence, missing role IDs and rejection of unsupported roster queries.
+
+This is not a full constraint engine: arbitrary force/roster/ancestor queries,
+conditional bundle choices, repeated constraints and mutually dependent
+selection trees remain future work.
+
+2. Missing source-scope diagnostics
+
+Price rules now identify missing ID-shaped scope references before projection.
+Kapricus Defenders reports missing scope e49d-ee2d-8886-071d, its unit name and
+the Xenos - Leagues of Votann catalogue. No replacement ID or price is guessed.
+This is targeted pricing diagnostics, not a complete catalogue integrity scan.
+
+Correction to the proposed unit mapping
+--------------------------------------
+
+Wolf Guard Headtakers variant 0f93-6850-8f14-a351 is hidden by its source when
+there is no Crusade Force (cac3-71d1-ea4b-795d). Its nested structure is a Crusade
+representation. The regular Army Roster variant d4ef-1ddc-1ed5-5156 already has
+supported prices. The app currently imports this extra variant and reports its
+unsupported composition; force-mode-aware availability is a separate needed
+improvement. Crusade and Crucible are different labels.
+
+Remaining work after these two recoveries
+----------------------------------------
+
+- Cadian Recon Squad (two faction entries): selected weapon-team bundles change
+  direct selection counts and model contributions. Needs branch/bundle state.
+- Wolf Scouts: alternative bundles, repeated specialist replacements and
+  duplicate constraint definitions need resolved selection-instance handling.
+- Jakhals: selected squad bundle controls required Dishonoured counts.
+- Scourges with Heavy Weapons: retain and price selected source equipment even
+  when its weapon profiles cannot be fully projected into the current loadout UI.
+- Inquisitorial Agents: implement multiplication only after confirming its
+  precedence relative to allied set-price rules with known-good roster output.
+- Ghostkeel Battlesuit: verify and implement the local repeat-count semantics.
+- Kapricus Defenders: corrected upstream reference or an explicitly verified,
+  revision-scoped compatibility patch.
+- Crusade-only Headtakers variant: mode-aware availability; not a missing
+  regular Army Roster price.
+
+There are nine unresolved imported entries after this pass. One is the extra
+Crusade-only variant; the ordinary Army Roster failures account for eight entries.
+
+Recommended next architecture step
+----------------------------------
+
+Extend the existing raw/resolved representation with persisted selection-instance
+and bundle state, keeping physical model counts separate from selection counts.
+Use that state for constraints, equipment quantities and pricing, then project
+the evaluated choices into the UI. Build a small regression catalogue and compare
+the resulting rosters with a trusted evaluator before enabling new semantics.
+The current supported readers can remain during that incremental migration.

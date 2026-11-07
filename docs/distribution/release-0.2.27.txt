@@ -1,0 +1,91 @@
+GrimList 0.2.27 - local community delivery, 2026-10-26
+
+Delivery folder: repository-root 0.2.27
+  GrimList-0.2.27-win-x64.msi    98,754,560 bytes
+  SHA-256 ed8b7730f7cc568bba8e4659adaa331b59323527a8b512fdb5edd6fd1192047e
+  GrimList-Android-0.2.27.apk   105,597,061 bytes
+  SHA-256 46c0e6a8d83b04ea539f46c1b05188e2ac416704d0fa5180384d5f0bbeaa6d4e
+README.txt provides installation/update instructions and test priorities.
+Individual hashes, SHA256SUMS.txt, MSI inventory, RELEASE-NOTES.txt and
+CLEANUP.txt are included. No upload, publication or tester messaging occurred.
+
+Changes
+- Shared unit-recipient enhancement stat projection corrects Movement/OC,
+  including the Destroyer Ankh selector and Writ of Compunction. Matching
+  legacy source metadata recovers without reimport. The original reporter's
+  exact OC rule remains unspecified; this is not a claim about every OC rule.
+- Complete authoritative BSData downloads persist active/obsolete detachment
+  metadata. Missing definitions and their benefits retire across factions;
+  source-ID renames, explicit overrides and saved army selections are preserved.
+  Partial/local/points-only imports cannot authorize retirement.
+- Generic nested/linked detachment traversal imports the six previously missed
+  Custodes choices, rules and enhancements. The user's Oct 26 source contains
+  thirteen current choices and retires five obsolete choices on a complete apply.
+  Inherited visibility and source group maxima survive selection, persistence
+  and export. ID-less local reference inputs remain readable without authority.
+- Includes all previous 0.2.26 fixes. Implementation details and prepackaging
+  evidence: docs/enhancement-stats-and-detachment-updates.txt and
+  docs/nested-detachments.txt.
+
+After installing, use Update BSData and apply the preview to repair an already
+imported partial Custodes library. Installing alone does not reimport user data.
+Review saved obsolete selections and choose replacements explicitly.
+
+Identity and provenance
+- Shared version 0.2.27; Android display version 0.2.27, version code 28.
+  Package com.grimlist.mobile; minimum Android API 30; ARM64 and x64.
+- Existing APK development certificate SHA-256:
+  9be9c191c53dc33ee955dcaedad94868fe4a4e6817a1fb30187ac0baf7f28f25
+- MSI ProductCode {5228DB10-B97C-5B96-9AC4-FF6E8575F2EE}.
+  Stable UpgradeCode {5F1E3A2A-2390-5993-A9F9-4AF11C89E68A}.
+  MSI is unsigned and includes private Windows Desktop runtime 10.0.10.
+- Standard Android/Windows publishers and Build-WindowsInstaller.py ran
+  sequentially from the existing tree, reusing project intermediates.
+  No rules/source refresh occurred. Bootstrap stays grimlist-11e-2026.10.16.2.
+
+Verification
+- Before the version bump, the full regression run completed with 487 passes
+  and one legacy ID-less-container regression. That regression was corrected;
+  the final focused rerun passed all 41 checks, including the failing case.
+  All 488 full-suite checks were covered across those runs. No second full run
+  after the correction or packaging-only version bump is claimed.
+- Both publishers passed bundled enhancement/army-rule/equipment candidate
+  gates: 2,695 cards, 36 factions; 102 unsupported source conditions remain
+  explicit and are not guessed.
+- Delivered APK passed identity/version, signature/certificate continuity,
+  ZIP integrity, both ABI presence, no-PDB and published/canonical hash checks.
+  Both native MAUI onCreate bindings passed the publisher's startup check.
+- Android emitted known stale-symbol warnings and retried without symbols;
+  publishing and package checks succeeded. No intermediate-cleanup workaround
+  was used. Windows publishing completed successfully.
+- Exact delivered MSI passed 19 checks, including all 2,148 authored table rows,
+  upgrade metadata, cabinet extraction and all 490 embedded file hashes
+  (223,535,655 payload bytes).
+- Its extracted production app passed 13 native checks: offline bootstrap,
+  factions/detachments/references, 375-point army creation, validation,
+  save/reopen and loading the bundled private runtime. Standard checks removed
+  their disposable app data and extracted payload.
+- Installer welcome/per-user destination and cancel/finish passed; exit 1602
+  without installing.
+- All 14 build-retention checks passed. Standard publishers removed superseded
+  canonical 0.2.26 Android, Windows and installer directories. Only 0.2.27 remains
+  in those channels. Older root delivery folders remain for optional cleanup.
+
+Limits
+- adb devices -l listed no connected device. Exact-APK installation, physical
+  in-place update/cold launch and native Android UI remain unverified.
+- Windows install/repair/upgrade/uninstall lifecycle was not performed.
+  Package, extracted-app and welcome/cancel checks do not prove that lifecycle.
+- Earlier bug-fix synthetic test folders remain after policy-blocked cleanup;
+  packaging did not retry that action. See docs/nested-detachments.txt.
+
+Evidence under artifacts/distribution-evidence:
+  nested-detachments-full-final.log (487 passes, subsequently corrected failure)
+  nested-detachments-compatibility-final.log (41 passes, final implementation)
+  release-0.2.27-android-publish.log
+  release-0.2.27-apk-signature.txt / release-0.2.27-apk-identity.txt
+  release-0.2.27-apk-checks.txt / release-0.2.27-retention.log
+  release-0.2.27-windows-publish.log / release-0.2.27-msi-build.log
+  release-0.2.27-msi-validation.log / release-0.2.27-msi/results.json
+  release-0.2.27-msi/app/results.json
+  release-0.2.27-msi-ui.log / release-0.2.27-msi-ui/ui-results.json

@@ -1,0 +1,1463 @@
+{
+  "scope": "Windows measurements only; production unchanged",
+  "source_files_unchanged": 236,
+  "interaction_samples": 200,
+  "operations": {
+    "open": {
+      "samples": 20,
+      "total_ms": {
+        "median": 1296.6849499999998,
+        "p95": 1496.5676,
+        "min": 1197.4911,
+        "max": 1931.9575
+      },
+      "command_or_handler_ms": {
+        "median": 111.07055,
+        "p95": 135.6001,
+        "min": 86.31,
+        "max": 156.839
+      },
+      "allocated_mib": {
+        "median": 172.74607467651367,
+        "p95": 176.45095825195312,
+        "min": 171.1305923461914,
+        "max": 176.72129821777344
+      },
+      "phases_ms": {
+        "Attachments.Candidates": {
+          "median": 922.80665,
+          "p95": 1018.4383,
+          "min": 835.7271,
+          "max": 1178.2107
+        },
+        "Calculate": {
+          "median": 48.07574999999815,
+          "p95": 61.889100000000326,
+          "min": 35.32800000000134,
+          "max": 69.86079999999856
+        },
+        "Copy": {
+          "median": 0.16605000000163272,
+          "p95": 0.41700000000128057,
+          "min": 0.15829999999914435,
+          "max": 1.0313000000005559
+        },
+        "Details.Attachments": {
+          "median": 927.0514000000001,
+          "p95": 1019.4124,
+          "min": 836.524,
+          "max": 1180.4579
+        },
+        "Details.DatasheetChoices": {
+          "median": 0.0104,
+          "p95": 0.0296,
+          "min": 0.0094,
+          "max": 0.036
+        },
+        "Details.Effects": {
+          "median": 0.59595,
+          "p95": 0.9029,
+          "min": 0.5021,
+          "max": 1.0574
+        },
+        "Details.Enhancements": {
+          "median": 4.49455,
+          "p95": 25.838,
+          "min": 3.1005,
+          "max": 26.0482
+        },
+        "Details.FeelNoPain": {
+          "median": 0.0511,
+          "p95": 0.0913,
+          "min": 0.0469,
+          "max": 0.1119
+        },
+        "Details.Loadout": {
+          "median": 3.0229,
+          "p95": 24.52,
+          "min": 2.5389,
+          "max": 27.0715
+        },
+        "Details.Project": {
+          "median": 0.00545,
+          "p95": 0.0087,
+          "min": 0.0043,
+          "max": 0.0094
+        },
+        "Details.Total": {
+          "median": 947.0654,
+          "p95": 1055.5005,
+          "min": 872.9892,
+          "max": 1244.5969
+        },
+        "Render.Library": {
+          "median": 6.361,
+          "p95": 19.967,
+          "min": 4.6097,
+          "max": 37.7223
+        },
+        "Render.Muster": {
+          "median": 0.0224,
+          "p95": 0.0428,
+          "min": 0.0164,
+          "max": 0.0601
+        },
+        "Render.RosterRows": {
+          "median": 0.1257,
+          "p95": 0.188,
+          "min": 0.1157,
+          "max": 0.242
+        },
+        "Render.Rules": {
+          "median": 0.8952,
+          "p95": 15.0308,
+          "min": 0.6955,
+          "max": 15.6005
+        },
+        "Render.Total": {
+          "median": 988.3247,
+          "p95": 1101.3057,
+          "min": 902.982,
+          "max": 1287.1318
+        },
+        "Render.Warlord": {
+          "median": 5.889950000000001,
+          "p95": 29.5923,
+          "min": 4.5461,
+          "max": 35.7763
+        },
+        "Save": {
+          "median": 9.479050000001735,
+          "p95": 10.54870000000301,
+          "min": 7.824200000000928,
+          "max": 11.014599999998609
+        },
+        "UI.FrameWait": {
+          "median": 187.49775,
+          "p95": 334.3701,
+          "min": 168.0729,
+          "max": 485.8305
+        },
+        "UI.RenderSubmit": {
+          "median": 989.90205,
+          "p95": 1103.0623,
+          "min": 903.8434,
+          "max": 1289.2622
+        }
+      },
+      "attachment_fraction_of_render": {
+        "median": 0.931778421206876,
+        "p95": 0.9669018100094185,
+        "min": 0.8941329968397976,
+        "max": 0.9675358289336908
+      }
+    },
+    "datasheet": {
+      "samples": 20,
+      "total_ms": {
+        "median": 1099.1302,
+        "p95": 1177.04,
+        "min": 997.156,
+        "max": 1178.1109
+      },
+      "command_or_handler_ms": {
+        "median": 5.91425,
+        "p95": 8.2281,
+        "min": 5.141,
+        "max": 8.5223
+      },
+      "allocated_mib": {
+        "median": 146.34967041015625,
+        "p95": 146.6456298828125,
+        "min": 145.95388793945312,
+        "max": 149.1519546508789
+      },
+      "phases_ms": {
+        "Attachments.Candidates": {
+          "median": 973.4051999999999,
+          "p95": 1047.037,
+          "min": 883.4088,
+          "max": 1055.1366
+        },
+        "Details.Attachments": {
+          "median": 974.2017000000001,
+          "p95": 1047.942,
+          "min": 884.2042,
+          "max": 1055.9436
+        },
+        "Details.DatasheetChoices": {
+          "median": 0.0202,
+          "p95": 0.0247,
+          "min": 0.0183,
+          "max": 0.0277
+        },
+        "Details.Effects": {
+          "median": 0.78135,
+          "p95": 1.1375,
+          "min": 0.6704,
+          "max": 1.2696
+        },
+        "Details.Enhancements": {
+          "median": 4.01305,
+          "p95": 27.3701,
+          "min": 3.407,
+          "max": 30.036
+        },
+        "Details.FeelNoPain": {
+          "median": 0.06294999999999999,
+          "p95": 0.0829,
+          "min": 0.0529,
+          "max": 13.3592
+        },
+        "Details.Loadout": {
+          "median": 2.779,
+          "p95": 22.0569,
+          "min": 1.9985,
+          "max": 22.5285
+        },
+        "Details.Project": {
+          "median": 0.009850000000000001,
+          "p95": 0.0145,
+          "min": 0.0086,
+          "max": 0.0901
+        },
+        "Details.Total": {
+          "median": 987.9209000000001,
+          "p95": 1073.6576,
+          "min": 916.2816,
+          "max": 1088.6453
+        },
+        "UI.FrameWait": {
+          "median": 89.47245,
+          "p95": 108.4489,
+          "min": 74.3713,
+          "max": 110.8037
+        },
+        "UI.RenderSubmit": {
+          "median": 988.1662,
+          "p95": 1073.869,
+          "min": 916.4682,
+          "max": 1088.8523
+        }
+      },
+      "attachment_fraction_of_render": {
+        "median": 0.9709022838169157,
+        "p95": 0.9900718564128445,
+        "min": 0.9611119463925221,
+        "max": 0.9900722494441405
+      }
+    },
+    "add": {
+      "samples": 20,
+      "total_ms": {
+        "median": 1536.91425,
+        "p95": 1695.4271,
+        "min": 1399.3819,
+        "max": 2004.6622
+      },
+      "command_or_handler_ms": {
+        "median": 169.13275,
+        "p95": 189.0838,
+        "min": 152.883,
+        "max": 210.006
+      },
+      "allocated_mib": {
+        "median": 194.88634490966797,
+        "p95": 196.96693420410156,
+        "min": 194.4051284790039,
+        "max": 197.2409439086914
+      },
+      "phases_ms": {
+        "Attachments.Candidates": {
+          "median": 1126.2005,
+          "p95": 1271.9886,
+          "min": 1014.0436,
+          "max": 1490.0335
+        },
+        "Calculate": {
+          "median": 45.923950000011246,
+          "p95": 71.17710000000079,
+          "min": 40.42820000000938,
+          "max": 80.27400000000489
+        },
+        "Copy": {
+          "median": 0.4212500000066939,
+          "p95": 0.5871000000042841,
+          "min": 0.3576999999640975,
+          "max": 0.6744999999937136
+        },
+        "Details.Attachments": {
+          "median": 1126.937,
+          "p95": 1272.7411,
+          "min": 1014.7384,
+          "max": 1490.8149
+        },
+        "Details.DatasheetChoices": {
+          "median": 0.0084,
+          "p95": 0.0094,
+          "min": 0.0072,
+          "max": 0.0133
+        },
+        "Details.Effects": {
+          "median": 0.653,
+          "p95": 0.8481,
+          "min": 0.6296,
+          "max": 18.9216
+        },
+        "Details.Enhancements": {
+          "median": 3.7119,
+          "p95": 22.5066,
+          "min": 3.3954,
+          "max": 27.78
+        },
+        "Details.FeelNoPain": {
+          "median": 0.04085,
+          "p95": 0.0531,
+          "min": 0.0345,
+          "max": 0.0532
+        },
+        "Details.Loadout": {
+          "median": 1.90445,
+          "p95": 21.1928,
+          "min": 1.8106,
+          "max": 23.2372
+        },
+        "Details.Project": {
+          "median": 0.0046,
+          "p95": 0.006,
+          "min": 0.003,
+          "max": 0.0062
+        },
+        "Details.Total": {
+          "median": 1151.89885,
+          "p95": 1314.9537,
+          "min": 1022.4985,
+          "max": 1499.6817
+        },
+        "Render.Library": {
+          "median": 5.56475,
+          "p95": 28.3467,
+          "min": 4.9645,
+          "max": 36.5851
+        },
+        "Render.Muster": {
+          "median": 0.016300000000000002,
+          "p95": 0.0185,
+          "min": 0.0142,
+          "max": 0.0271
+        },
+        "Render.RosterRows": {
+          "median": 0.12045,
+          "p95": 0.1689,
+          "min": 0.1144,
+          "max": 0.1889
+        },
+        "Render.Rules": {
+          "median": 0.7125,
+          "p95": 0.8444,
+          "min": 0.5764,
+          "max": 0.991
+        },
+        "Render.Total": {
+          "median": 1177.3002999999999,
+          "p95": 1331.4083,
+          "min": 1055.0611,
+          "max": 1532.8566
+        },
+        "Render.Warlord": {
+          "median": 5.12425,
+          "p95": 23.4762,
+          "min": 4.4762,
+          "max": 49.8585
+        },
+        "Save": {
+          "median": 9.198100000008708,
+          "p95": 10.188500000018394,
+          "min": 7.6943000000028405,
+          "max": 12.168100000009872
+        },
+        "UI.FrameWait": {
+          "median": 193.45839999999998,
+          "p95": 213.9257,
+          "min": 168.262,
+          "max": 306.5853
+        },
+        "UI.RenderSubmit": {
+          "median": 1178.1664500000002,
+          "p95": 1331.583,
+          "min": 1055.6279,
+          "max": 1533.6219
+        }
+      },
+      "attachment_fraction_of_render": {
+        "median": 0.9609655846939773,
+        "p95": 0.9662992912693658,
+        "min": 0.9400246579425778,
+        "max": 0.9715781314807775
+      }
+    },
+    "equipment": {
+      "samples": 20,
+      "total_ms": {
+        "median": 1512.2170999999998,
+        "p95": 1786.4095,
+        "min": 1440.4431,
+        "max": 2011.5064
+      },
+      "command_or_handler_ms": {
+        "median": 185.4746,
+        "p95": 223.2196,
+        "min": 152.3116,
+        "max": 237.8187
+      },
+      "allocated_mib": {
+        "median": 179.4793243408203,
+        "p95": 179.98341369628906,
+        "min": 179.0314483642578,
+        "max": 182.56336212158203
+      },
+      "phases_ms": {
+        "Attachments.Candidates": {
+          "median": 1082.9742999999999,
+          "p95": 1199.223,
+          "min": 1011.6482,
+          "max": 1525.9643
+        },
+        "Calculate": {
+          "median": 48.11850000001141,
+          "p95": 91.14990000001853,
+          "min": 38.225600000005215,
+          "max": 113.60779999999795
+        },
+        "Copy": {
+          "median": 0.4012500000098953,
+          "p95": 0.46920000002137385,
+          "min": 0.34420000002137385,
+          "max": 0.47079999998095445
+        },
+        "Details.Attachments": {
+          "median": 1083.69695,
+          "p95": 1199.9521,
+          "min": 1030.9555,
+          "max": 1527.1364
+        },
+        "Details.DatasheetChoices": {
+          "median": 0.008150000000000001,
+          "p95": 0.0111,
+          "min": 0.0071,
+          "max": 0.0118
+        },
+        "Details.Effects": {
+          "median": 0.4934,
+          "p95": 0.8951,
+          "min": 0.483,
+          "max": 1.2666
+        },
+        "Details.Enhancements": {
+          "median": 3.4132,
+          "p95": 39.7475,
+          "min": 3.044,
+          "max": 85.8662
+        },
+        "Details.FeelNoPain": {
+          "median": 0.047049999999999995,
+          "p95": 0.0709,
+          "min": 0.0446,
+          "max": 0.0788
+        },
+        "Details.Loadout": {
+          "median": 2.5369,
+          "p95": 22.7856,
+          "min": 2.3691,
+          "max": 46.6953
+        },
+        "Details.Project": {
+          "median": 0.0038,
+          "p95": 0.0068,
+          "min": 0.003,
+          "max": 0.0232
+        },
+        "Details.Total": {
+          "median": 1112.8066,
+          "p95": 1316.0416,
+          "min": 1044.3073,
+          "max": 1587.7197
+        },
+        "Render.Library": {
+          "median": 4.424300000000001,
+          "p95": 5.8182,
+          "min": 4.2285,
+          "max": 23.756
+        },
+        "Render.Muster": {
+          "median": 0.0158,
+          "p95": 0.0176,
+          "min": 0.0142,
+          "max": 0.0187
+        },
+        "Render.RosterRows": {
+          "median": 0.1131,
+          "p95": 0.1837,
+          "min": 0.1075,
+          "max": 0.2194
+        },
+        "Render.Rules": {
+          "median": 0.63405,
+          "p95": 1.2718,
+          "min": 0.5653,
+          "max": 23.5085
+        },
+        "Render.Total": {
+          "median": 1138.80425,
+          "p95": 1331.4999,
+          "min": 1059.0397,
+          "max": 1606.84
+        },
+        "Render.Warlord": {
+          "median": 5.0078499999999995,
+          "p95": 25.2867,
+          "min": 4.4589,
+          "max": 31.8278
+        },
+        "Save": {
+          "median": 9.655650000000605,
+          "p95": 12.251600000017788,
+          "min": 7.509300000005169,
+          "max": 17.139400000014575
+        },
+        "UI.FrameWait": {
+          "median": 191.2506,
+          "p95": 215.981,
+          "min": 165.1883,
+          "max": 232.7472
+        },
+        "UI.RenderSubmit": {
+          "median": 1139.4263,
+          "p95": 1332.5885,
+          "min": 1059.6706,
+          "max": 1607.6976
+        }
+      },
+      "attachment_fraction_of_render": {
+        "median": 0.9523871285164613,
+        "p95": 0.9575141751051204,
+        "min": 0.8999199677920078,
+        "max": 0.9577735566703005
+      }
+    },
+    "enhancement": {
+      "samples": 20,
+      "total_ms": {
+        "median": 2021.9495000000002,
+        "p95": 2498.364,
+        "min": 1884.1177,
+        "max": 2600.7266
+      },
+      "command_or_handler_ms": {
+        "median": 375.2149,
+        "p95": 496.7037,
+        "min": 316.9741,
+        "max": 570.256
+      },
+      "allocated_mib": {
+        "median": 227.692138671875,
+        "p95": 228.45540618896484,
+        "min": 227.0805206298828,
+        "max": 230.2965087890625
+      },
+      "phases_ms": {
+        "Attachments.Candidates": {
+          "median": 1459.3141,
+          "p95": 1606.6203,
+          "min": 1309.6669,
+          "max": 1787.7359
+        },
+        "Calculate": {
+          "median": 76.82984999998007,
+          "p95": 112.63449999998556,
+          "min": 46.679200000013225,
+          "max": 141.00150000001304
+        },
+        "Copy": {
+          "median": 0.3819000000366941,
+          "p95": 0.41740000003483146,
+          "min": 0.3391999999876134,
+          "max": 0.46280000000842847
+        },
+        "Details.Attachments": {
+          "median": 1459.77385,
+          "p95": 1607.1223,
+          "min": 1310.1352,
+          "max": 1788.3142
+        },
+        "Details.DatasheetChoices": {
+          "median": 0.008799999999999999,
+          "p95": 0.0109,
+          "min": 0.0077,
+          "max": 0.0113
+        },
+        "Details.Effects": {
+          "median": 0.5831500000000001,
+          "p95": 0.6751,
+          "min": 0.5584,
+          "max": 0.75
+        },
+        "Details.Enhancements": {
+          "median": 34.7816,
+          "p95": 53.5889,
+          "min": 7.4604,
+          "max": 75.1782
+        },
+        "Details.FeelNoPain": {
+          "median": 0.2401,
+          "p95": 0.2811,
+          "min": 0.2347,
+          "max": 21.3071
+        },
+        "Details.Loadout": {
+          "median": 0.36750000000000005,
+          "p95": 0.4321,
+          "min": 0.3527,
+          "max": 0.5998
+        },
+        "Details.Project": {
+          "median": 0.00385,
+          "p95": 0.0054,
+          "min": 0.0031,
+          "max": 0.0073
+        },
+        "Details.Total": {
+          "median": 1487.8594,
+          "p95": 1685.2956,
+          "min": 1347.7746,
+          "max": 1828.0697
+        },
+        "Enhancements.ValidateChoice": {
+          "median": 0.036000000000000004,
+          "p95": 0.053,
+          "min": 0.0329,
+          "max": 0.0896
+        },
+        "Render.Library": {
+          "median": 4.4773499999999995,
+          "p95": 27.0644,
+          "min": 4.2451,
+          "max": 29.2078
+        },
+        "Render.Muster": {
+          "median": 0.01575,
+          "p95": 0.0168,
+          "min": 0.0141,
+          "max": 0.0203
+        },
+        "Render.RosterRows": {
+          "median": 0.1124,
+          "p95": 0.1219,
+          "min": 0.1084,
+          "max": 0.1928
+        },
+        "Render.Rules": {
+          "median": 0.6507499999999999,
+          "p95": 0.7851,
+          "min": 0.5799,
+          "max": 0.8691
+        },
+        "Render.Total": {
+          "median": 1517.9807,
+          "p95": 1723.4643,
+          "min": 1387.7394,
+          "max": 1848.8027
+        },
+        "Render.Warlord": {
+          "median": 4.90475,
+          "p95": 31.1276,
+          "min": 4.3188,
+          "max": 61.6592
+        },
+        "Save": {
+          "median": 9.035999999992782,
+          "p95": 10.342199999984587,
+          "min": 7.333099999988917,
+          "max": 10.710399999981746
+        },
+        "UI.FrameWait": {
+          "median": 139.88909999999998,
+          "p95": 163.4697,
+          "min": 123.0231,
+          "max": 455.879
+        },
+        "UI.RenderSubmit": {
+          "median": 1519.2648,
+          "p95": 1724.288,
+          "min": 1389.4847,
+          "max": 1884.2191
+        }
+      },
+      "attachment_fraction_of_render": {
+        "median": 0.9621319901132297,
+        "p95": 0.9661701875498764,
+        "min": 0.931758673725039,
+        "max": 0.9686185294159052
+      }
+    },
+    "attachment": {
+      "samples": 20,
+      "total_ms": {
+        "median": 2938.31805,
+        "p95": 3788.8677,
+        "min": 2400.6296,
+        "max": 4277.9124
+      },
+      "command_or_handler_ms": {
+        "median": 524.5419999999999,
+        "p95": 652.4147,
+        "min": 394.3003,
+        "max": 920.9851
+      },
+      "allocated_mib": {
+        "median": 291.23848724365234,
+        "p95": 293.69686126708984,
+        "min": 291.0102081298828,
+        "max": 293.794677734375
+      },
+      "phases_ms": {
+        "Attachments.Candidates": {
+          "median": 1295.3650499999999,
+          "p95": 1982.6487,
+          "min": 1110.4706,
+          "max": 2462.016
+        },
+        "Calculate": {
+          "median": 206.39519999996992,
+          "p95": 288.4232999999658,
+          "min": 154.49739999999292,
+          "max": 408.12670000002254
+        },
+        "Copy": {
+          "median": 0.3770999999833293,
+          "p95": 0.5597999999881722,
+          "min": 0.33489999995799735,
+          "max": 0.605100000044331
+        },
+        "Details.Attachments": {
+          "median": 1296.2876500000002,
+          "p95": 1984.3764,
+          "min": 1111.6828,
+          "max": 2463.13
+        },
+        "Details.DatasheetChoices": {
+          "median": 0.0095,
+          "p95": 0.0121,
+          "min": 0.0082,
+          "max": 0.0129
+        },
+        "Details.Effects": {
+          "median": 195.64495,
+          "p95": 251.2493,
+          "min": 158.3401,
+          "max": 304.3718
+        },
+        "Details.Enhancements": {
+          "median": 641.2190499999999,
+          "p95": 1054.1225,
+          "min": 482.7448,
+          "max": 1241.5839
+        },
+        "Details.FeelNoPain": {
+          "median": 0.0672,
+          "p95": 0.0782,
+          "min": 0.0623,
+          "max": 41.0821
+        },
+        "Details.Loadout": {
+          "median": 0.38405,
+          "p95": 0.4474,
+          "min": 0.3661,
+          "max": 0.6341
+        },
+        "Details.Project": {
+          "median": 0.0043,
+          "p95": 0.0061,
+          "min": 0.003,
+          "max": 0.0076
+        },
+        "Details.Total": {
+          "median": 2137.81735,
+          "p95": 3058.6255,
+          "min": 1837.5728,
+          "max": 3489.5721
+        },
+        "Enhancements.ValidateChoice": {
+          "median": 610.63985,
+          "p95": 949.3932,
+          "min": 475.30310000000003,
+          "max": 1198.2046
+        },
+        "Render.Library": {
+          "median": 4.81145,
+          "p95": 32.4445,
+          "min": 4.3024,
+          "max": 35.1283
+        },
+        "Render.Muster": {
+          "median": 0.01695,
+          "p95": 0.0331,
+          "min": 0.0146,
+          "max": 0.0455
+        },
+        "Render.RosterRows": {
+          "median": 0.1182,
+          "p95": 0.1594,
+          "min": 0.1068,
+          "max": 0.1601
+        },
+        "Render.Rules": {
+          "median": 0.6795,
+          "p95": 0.9194,
+          "min": 0.5864,
+          "max": 1.18
+        },
+        "Render.Total": {
+          "median": 2168.7843000000003,
+          "p95": 3075.3653,
+          "min": 1852.1811,
+          "max": 3506.2709
+        },
+        "Render.Warlord": {
+          "median": 5.167249999999999,
+          "p95": 37.5782,
+          "min": 4.3413,
+          "max": 59.4684
+        },
+        "Save": {
+          "median": 8.0853000000061,
+          "p95": 9.222799999988638,
+          "min": 6.87320000003092,
+          "max": 10.01390000001993
+        },
+        "UI.FrameWait": {
+          "median": 148.63524999999998,
+          "p95": 227.0903,
+          "min": 118.1911,
+          "max": 261.6177
+        },
+        "UI.RenderSubmit": {
+          "median": 2169.46295,
+          "p95": 3075.6481,
+          "min": 1852.5086,
+          "max": 3507.1367
+        }
+      },
+      "attachment_fraction_of_render": {
+        "median": 0.599449405234294,
+        "p95": 0.6734820481366582,
+        "min": 0.4798345128074178,
+        "max": 0.7020017212331644
+      }
+    },
+    "detachment": {
+      "samples": 20,
+      "total_ms": {
+        "median": 1575.9243000000001,
+        "p95": 1752.8183,
+        "min": 1432.7359,
+        "max": 2217.1893
+      },
+      "command_or_handler_ms": {
+        "median": 183.83159999999998,
+        "p95": 236.3518,
+        "min": 163.589,
+        "max": 355.9737
+      },
+      "allocated_mib": {
+        "median": 147.45403671264648,
+        "p95": 149.98241424560547,
+        "min": 147.20551300048828,
+        "max": 150.09207916259766
+      },
+      "phases_ms": {
+        "Attachments.Candidates": {
+          "median": 1179.5072,
+          "p95": 1358.2179,
+          "min": 1063.5005,
+          "max": 1613.2881
+        },
+        "Calculate": {
+          "median": 62.46940000000177,
+          "p95": 117.03590000001714,
+          "min": 48.79460000002291,
+          "max": 182.9780000000028
+        },
+        "Copy": {
+          "median": 0.4403500000189524,
+          "p95": 0.5895000000018626,
+          "min": 0.3612999999895692,
+          "max": 17.788999999931548
+        },
+        "Details.Attachments": {
+          "median": 1179.9768,
+          "p95": 1358.7397,
+          "min": 1064.0574,
+          "max": 1613.9715
+        },
+        "Details.DatasheetChoices": {
+          "median": 0.009850000000000001,
+          "p95": 0.0269,
+          "min": 0.0081,
+          "max": 0.0272
+        },
+        "Details.Effects": {
+          "median": 0.5716,
+          "p95": 1.3243,
+          "min": 0.5449,
+          "max": 22.6944
+        },
+        "Details.Enhancements": {
+          "median": 29.90945,
+          "p95": 53.4258,
+          "min": 7.2594,
+          "max": 58.7903
+        },
+        "Details.FeelNoPain": {
+          "median": 0.035750000000000004,
+          "p95": 0.0775,
+          "min": 0.0313,
+          "max": 0.0813
+        },
+        "Details.Loadout": {
+          "median": 0.38149999999999995,
+          "p95": 0.5386,
+          "min": 0.363,
+          "max": 0.8176
+        },
+        "Details.Project": {
+          "median": 0.00575,
+          "p95": 0.0128,
+          "min": 0.004,
+          "max": 0.0129
+        },
+        "Details.Total": {
+          "median": 1190.4378,
+          "p95": 1414.8859,
+          "min": 1106.6077,
+          "max": 1627.5669
+        },
+        "Render.Library": {
+          "median": 9.8476,
+          "p95": 33.9775,
+          "min": 8.708,
+          "max": 40.7625
+        },
+        "Render.Muster": {
+          "median": 0.00385,
+          "p95": 0.0132,
+          "min": 0.0024,
+          "max": 0.0273
+        },
+        "Render.RosterRows": {
+          "median": 0.11485000000000001,
+          "p95": 0.2612,
+          "min": 0.1083,
+          "max": 28.8998
+        },
+        "Render.Rules": {
+          "median": 0.70285,
+          "p95": 1.8867,
+          "min": 0.6275,
+          "max": 29.1798
+        },
+        "Render.Total": {
+          "median": 1235.18795,
+          "p95": 1433.5215,
+          "min": 1148.1883,
+          "max": 1692.7937
+        },
+        "Render.Warlord": {
+          "median": 3.91305,
+          "p95": 38.0632,
+          "min": 3.1922,
+          "max": 39.3974
+        },
+        "Save": {
+          "median": 7.867049999971641,
+          "p95": 9.640600000042468,
+          "min": 6.735300000000279,
+          "max": 9.664099999994505
+        },
+        "UI.FrameWait": {
+          "median": 137.42645,
+          "p95": 161.4352,
+          "min": 115.122,
+          "max": 166.0813
+        },
+        "UI.RenderSubmit": {
+          "median": 1236.76215,
+          "p95": 1434.6813,
+          "min": 1149.1695,
+          "max": 1695.1194
+        }
+      },
+      "attachment_fraction_of_render": {
+        "median": 0.9489598216673056,
+        "p95": 0.9573265388612109,
+        "min": 0.9144347083100668,
+        "max": 0.9583593827476347
+      }
+    },
+    "home": {
+      "samples": 20,
+      "total_ms": {
+        "median": 809.3094000000001,
+        "p95": 872.4745,
+        "min": 738.3403,
+        "max": 1099.7813
+      },
+      "command_or_handler_ms": {
+        "median": 0.0887,
+        "p95": 0.1364,
+        "min": 0.0629,
+        "max": 0.139
+      },
+      "allocated_mib": {
+        "median": 78.24539566040039,
+        "p95": 78.25300598144531,
+        "min": 78.24479675292969,
+        "max": 80.7448959350586
+      },
+      "phases_ms": {
+        "Home.Calculate": {
+          "median": 660.4440999999999,
+          "p95": 744.6210000000001,
+          "min": 592.574,
+          "max": 976.7102000000001
+        },
+        "Home.Tiles": {
+          "median": 662.64885,
+          "p95": 747.1004,
+          "min": 594.7834,
+          "max": 978.9561
+        },
+        "UI.FrameWait": {
+          "median": 127.31855,
+          "p95": 140.5842,
+          "min": 110.9517,
+          "max": 157.6254
+        },
+        "UI.RenderSubmit": {
+          "median": 677.69085,
+          "p95": 754.7739,
+          "min": 602.0939,
+          "max": 988.3022
+        }
+      }
+    },
+    "unchanged-fields": {
+      "samples": 20,
+      "total_ms": {
+        "median": 1205.2345,
+        "p95": 1322.9363,
+        "min": 1107.7868,
+        "max": 1710.6086
+      },
+      "command_or_handler_ms": {
+        "median": 1075.7384499999998,
+        "p95": 1217.3783,
+        "min": 993.54,
+        "max": 1440.7458
+      },
+      "allocated_mib": {
+        "median": 195.94693756103516,
+        "p95": 196.0826873779297,
+        "min": 191.79299926757812,
+        "max": 196.08679962158203
+      },
+      "phases_ms": {
+        "Attachments.Candidates": {
+          "median": 789.4389,
+          "p95": 874.1821,
+          "min": 712.3281,
+          "max": 939.1906
+        },
+        "Details.Attachments": {
+          "median": 790.0141,
+          "p95": 874.6232,
+          "min": 712.9393,
+          "max": 939.7028
+        },
+        "Details.DatasheetChoices": {
+          "median": 0.0098,
+          "p95": 0.0131,
+          "min": 0.0078,
+          "max": 0.0141
+        },
+        "Details.Effects": {
+          "median": 0.68415,
+          "p95": 0.8507,
+          "min": 0.5955,
+          "max": 1.3841
+        },
+        "Details.Enhancements": {
+          "median": 241.89895,
+          "p95": 291.1996,
+          "min": 210.2543,
+          "max": 527.2354
+        },
+        "Details.FeelNoPain": {
+          "median": 0.033299999999999996,
+          "p95": 0.043,
+          "min": 0.0271,
+          "max": 0.0708
+        },
+        "Details.Loadout": {
+          "median": 0.4065,
+          "p95": 0.471,
+          "min": 0.3711,
+          "max": 0.6168
+        },
+        "Details.Project": {
+          "median": 0.005,
+          "p95": 0.008,
+          "min": 0.0031,
+          "max": 0.0095
+        },
+        "Details.Total": {
+          "median": 1037.3022,
+          "p95": 1191.0892,
+          "min": 965.5958,
+          "max": 1401.3069
+        },
+        "Enhancements.ValidateChoice": {
+          "median": 229.39905000000002,
+          "p95": 264.7099,
+          "min": 200.05180000000001,
+          "max": 515.9517999999999
+        },
+        "Render.Library": {
+          "median": 5.0275,
+          "p95": 18.1598,
+          "min": 4.2573,
+          "max": 28.6929
+        },
+        "Render.Muster": {
+          "median": 0.0225,
+          "p95": 0.0324,
+          "min": 0.0158,
+          "max": 0.0373
+        },
+        "Render.RosterRows": {
+          "median": 0.11910000000000001,
+          "p95": 0.1593,
+          "min": 0.1075,
+          "max": 0.1682
+        },
+        "Render.Rules": {
+          "median": 0.8063,
+          "p95": 1.0184,
+          "min": 0.6974,
+          "max": 12.2504
+        },
+        "Render.Total": {
+          "median": 1066.5394999999999,
+          "p95": 1209.6928,
+          "min": 985.2789,
+          "max": 1433.322
+        },
+        "Render.Warlord": {
+          "median": 4.93355,
+          "p95": 14.7709,
+          "min": 4.3082,
+          "max": 15.9973
+        },
+        "UI.FrameWait": {
+          "median": 121.7892,
+          "p95": 158.6351,
+          "min": 105.5325,
+          "max": 269.8215
+        },
+        "UI.Handler": {
+          "median": 1075.7384499999998,
+          "p95": 1217.3783,
+          "min": 993.54,
+          "max": 1440.7458
+        }
+      }
+    },
+    "go-home": {
+      "samples": 20,
+      "total_ms": {
+        "median": 1780.1217000000001,
+        "p95": 1932.7245,
+        "min": 1670.5946,
+        "max": 2119.5416
+      },
+      "command_or_handler_ms": {
+        "median": 1659.04125,
+        "p95": 1797.3565,
+        "min": 1548.5336,
+        "max": 1931.8858
+      },
+      "allocated_mib": {
+        "median": 275.04831314086914,
+        "p95": 275.8126220703125,
+        "min": 274.1549606323242,
+        "max": 275.8411178588867
+      },
+      "phases_ms": {
+        "Attachments.Candidates": {
+          "median": 899.3874,
+          "p95": 969.3191,
+          "min": 789.9284,
+          "max": 978.2258
+        },
+        "Details.Attachments": {
+          "median": 899.8099500000001,
+          "p95": 969.7394,
+          "min": 790.3408,
+          "max": 978.7521
+        },
+        "Details.DatasheetChoices": {
+          "median": 0.0083,
+          "p95": 0.013,
+          "min": 0.0073,
+          "max": 0.0161
+        },
+        "Details.Effects": {
+          "median": 0.5983499999999999,
+          "p95": 0.7164,
+          "min": 0.5621,
+          "max": 0.7432
+        },
+        "Details.Enhancements": {
+          "median": 265.37245,
+          "p95": 303.1594,
+          "min": 242.7203,
+          "max": 376.5919
+        },
+        "Details.FeelNoPain": {
+          "median": 0.02885,
+          "p95": 0.0345,
+          "min": 0.0261,
+          "max": 0.0508
+        },
+        "Details.Loadout": {
+          "median": 0.37,
+          "p95": 0.4022,
+          "min": 0.3539,
+          "max": 0.6351
+        },
+        "Details.Project": {
+          "median": 0.00435,
+          "p95": 0.0063,
+          "min": 0.0031,
+          "max": 0.007
+        },
+        "Details.Total": {
+          "median": 1175.12435,
+          "p95": 1265.6729,
+          "min": 1045.9519,
+          "max": 1277.9901
+        },
+        "Enhancements.ValidateChoice": {
+          "median": 243.5445,
+          "p95": 295.7448,
+          "min": 225.3178,
+          "max": 331.6649
+        },
+        "Home.Calculate": {
+          "median": 443.52009999999996,
+          "p95": 503.461,
+          "min": 399.5278,
+          "max": 631.3665
+        },
+        "Home.Tiles": {
+          "median": 445.94285,
+          "p95": 505.5721,
+          "min": 401.7646,
+          "max": 634.6857
+        },
+        "Render.Library": {
+          "median": 4.6448,
+          "p95": 21.347,
+          "min": 4.3166,
+          "max": 21.4753
+        },
+        "Render.Muster": {
+          "median": 0.0165,
+          "p95": 0.0239,
+          "min": 0.0151,
+          "max": 0.0266
+        },
+        "Render.RosterRows": {
+          "median": 0.11355,
+          "p95": 0.2292,
+          "min": 0.1083,
+          "max": 0.2561
+        },
+        "Render.Rules": {
+          "median": 0.7092,
+          "p95": 1.1034,
+          "min": 0.5862,
+          "max": 25.2162
+        },
+        "Render.Total": {
+          "median": 1190.28735,
+          "p95": 1279.4971,
+          "min": 1078.5654,
+          "max": 1292.2574
+        },
+        "Render.Warlord": {
+          "median": 4.649150000000001,
+          "p95": 13.9996,
+          "min": 4.3259,
+          "max": 14.2246
+        },
+        "UI.FrameWait": {
+          "median": 133.64195,
+          "p95": 163.7196,
+          "min": 115.7069,
+          "max": 187.6251
+        },
+        "UI.Handler": {
+          "median": 1659.04125,
+          "p95": 1797.3565,
+          "min": 1548.5336,
+          "max": 1931.8858
+        }
+      }
+    }
+  },
+  "summary_api_samples": [
+    {
+      "State": "cold",
+      "Ms": 456.9148,
+      "Count": 10,
+      "Calculations": 9
+    },
+    {
+      "State": "warm",
+      "Ms": 3.0353,
+      "Count": 10,
+      "Calculations": 0
+    },
+    {
+      "State": "warm",
+      "Ms": 2.9259,
+      "Count": 10,
+      "Calculations": 0
+    },
+    {
+      "State": "warm",
+      "Ms": 17.4119,
+      "Count": 10,
+      "Calculations": 0
+    },
+    {
+      "State": "warm",
+      "Ms": 2.6793,
+      "Count": 10,
+      "Calculations": 0
+    },
+    {
+      "State": "warm",
+      "Ms": 2.6666,
+      "Count": 10,
+      "Calculations": 0
+    },
+    {
+      "State": "warm",
+      "Ms": 11.348,
+      "Count": 10,
+      "Calculations": 0
+    },
+    {
+      "State": "warm",
+      "Ms": 2.7877,
+      "Count": 10,
+      "Calculations": 0
+    },
+    {
+      "State": "warm",
+      "Ms": 2.6986,
+      "Count": 10,
+      "Calculations": 0
+    },
+    {
+      "State": "warm",
+      "Ms": 2.7661,
+      "Count": 10,
+      "Calculations": 0
+    },
+    {
+      "State": "warm",
+      "Ms": 9.6514,
+      "Count": 10,
+      "Calculations": 0
+    },
+    {
+      "State": "warm",
+      "Ms": 2.8162,
+      "Count": 10,
+      "Calculations": 0
+    },
+    {
+      "State": "warm",
+      "Ms": 2.6664,
+      "Count": 10,
+      "Calculations": 0
+    },
+    {
+      "State": "warm",
+      "Ms": 2.8934,
+      "Count": 10,
+      "Calculations": 0
+    },
+    {
+      "State": "warm",
+      "Ms": 9.6177,
+      "Count": 10,
+      "Calculations": 0
+    },
+    {
+      "State": "warm",
+      "Ms": 2.7607,
+      "Count": 10,
+      "Calculations": 0
+    },
+    {
+      "State": "warm",
+      "Ms": 2.7989,
+      "Count": 10,
+      "Calculations": 0
+    },
+    {
+      "State": "warm",
+      "Ms": 3.4259,
+      "Count": 10,
+      "Calculations": 0
+    },
+    {
+      "State": "warm",
+      "Ms": 9.5787,
+      "Count": 10,
+      "Calculations": 0
+    },
+    {
+      "State": "warm",
+      "Ms": 5.4362,
+      "Count": 10,
+      "Calculations": 0
+    },
+    {
+      "State": "warm",
+      "Ms": 3.566,
+      "Count": 10,
+      "Calculations": 0
+    }
+  ],
+  "summary_api_warm_ms": {
+    "median": 2.90965,
+    "p95": 11.348,
+    "min": 2.6664,
+    "max": 17.4119
+  }
+}

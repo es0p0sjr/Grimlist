@@ -1,0 +1,477 @@
+[
+  {
+    "Id": "dfcf-1214-b57-2205",
+    "Name": "Aeldari - Aeldari Library",
+    "FileName": "Aeldari - Aeldari Library.json",
+    "Faction": "Aeldari",
+    "ArmyCatalogue": false,
+    "NativeRootIds": [
+      "dfcf-1214-b57-2205"
+    ]
+  },
+  {
+    "Id": "34a5-8c7e-f468-82d1",
+    "Name": "Xenos - Aeldari",
+    "FileName": "Aeldari - Craftworlds.json",
+    "Faction": "Aeldari",
+    "ArmyCatalogue": true,
+    "NativeRootIds": [
+      "34a5-8c7e-f468-82d1",
+      "dfcf-1214-b57-2205"
+    ]
+  },
+  {
+    "Id": "38de-521f-1ce0-44a0",
+    "Name": "Xenos - Drukhari",
+    "FileName": "Aeldari - Drukhari.json",
+    "Faction": "Drukhari",
+    "ArmyCatalogue": true,
+    "NativeRootIds": [
+      "38de-521f-1ce0-44a0"
+    ]
+  },
+  {
+    "Id": "b45c-af22-788a-dfd6",
+    "Name": "Chaos - Daemons Library",
+    "FileName": "Chaos - Chaos Daemons Library.json",
+    "Faction": "Chaos Daemons",
+    "ArmyCatalogue": false,
+    "NativeRootIds": [
+      "b45c-af22-788a-dfd6"
+    ]
+  },
+  {
+    "Id": "d265-877b-e03d-30ca",
+    "Name": "Chaos - Chaos Daemons",
+    "FileName": "Chaos - Chaos Daemons.json",
+    "Faction": "Chaos Daemons",
+    "ArmyCatalogue": true,
+    "NativeRootIds": [
+      "d265-877b-e03d-30ca",
+      "b45c-af22-788a-dfd6"
+    ]
+  },
+  {
+    "Id": "8106-aad2-918a-9ac",
+    "Name": "Chaos - Chaos Knights Library",
+    "FileName": "Chaos - Chaos Knights Library.json",
+    "Faction": "Chaos Knights",
+    "ArmyCatalogue": false,
+    "NativeRootIds": [
+      "8106-aad2-918a-9ac"
+    ]
+  },
+  {
+    "Id": "46d8-abc8-ef3a-9f85",
+    "Name": "Chaos - Chaos Knights",
+    "FileName": "Chaos - Chaos Knights.json",
+    "Faction": "Chaos Knights",
+    "ArmyCatalogue": true,
+    "NativeRootIds": [
+      "46d8-abc8-ef3a-9f85",
+      "8106-aad2-918a-9ac"
+    ]
+  },
+  {
+    "Id": "c8da-e875-58f7-f6d6",
+    "Name": "Chaos - Chaos Space Marines",
+    "FileName": "Chaos - Chaos Space Marines.json",
+    "Faction": "Chaos Space Marines",
+    "ArmyCatalogue": true,
+    "NativeRootIds": [
+      "c8da-e875-58f7-f6d6"
+    ]
+  },
+  {
+    "Id": "5108-f98-63c2-53cb",
+    "Name": "Chaos - Death Guard",
+    "FileName": "Chaos - Death Guard.json",
+    "Faction": "Death Guard",
+    "ArmyCatalogue": true,
+    "NativeRootIds": [
+      "5108-f98-63c2-53cb"
+    ]
+  },
+  {
+    "Id": "03fe-a162-4c02-f07b",
+    "Name": "Chaos - Emperor\u0027s Children",
+    "FileName": "Chaos - Emperor\u0027s Children.json",
+    "Faction": "Emperor\u2019s Children",
+    "ArmyCatalogue": true,
+    "NativeRootIds": [
+      "03fe-a162-4c02-f07b"
+    ]
+  },
+  {
+    "Id": "1069-10ff-3ba9-873b",
+    "Name": "Chaos - Thousand Sons",
+    "FileName": "Chaos - Thousand Sons.json",
+    "Faction": "Thousand Sons",
+    "ArmyCatalogue": true,
+    "NativeRootIds": [
+      "1069-10ff-3ba9-873b"
+    ]
+  },
+  {
+    "Id": "880c-c7e-4a43-a0c1",
+    "Name": "Chaos - Titanicus Traitoris",
+    "FileName": "Chaos - Titanicus Traitoris.json",
+    "Faction": "Chaos Titan Legions",
+    "ArmyCatalogue": true,
+    "NativeRootIds": [
+      "880c-c7e-4a43-a0c1"
+    ]
+  },
+  {
+    "Id": "df9a-59b2-f464-59ad",
+    "Name": "Chaos - World Eaters",
+    "FileName": "Chaos - World Eaters.json",
+    "Faction": "World Eaters",
+    "ArmyCatalogue": true,
+    "NativeRootIds": [
+      "df9a-59b2-f464-59ad"
+    ]
+  },
+  {
+    "Id": "3bdf-a114-5035-c6ac",
+    "Name": "Xenos - Genestealer Cults",
+    "FileName": "Genestealer Cults.json",
+    "Faction": "Genestealer Cults",
+    "ArmyCatalogue": true,
+    "NativeRootIds": [
+      "3bdf-a114-5035-c6ac"
+    ]
+  },
+  {
+    "Id": "b39e-4401-8f3e-fdf7",
+    "Name": "Imperium - Adepta Sororitas",
+    "FileName": "Imperium - Adepta Sororitas.json",
+    "Faction": "Adepta Sororitas",
+    "ArmyCatalogue": true,
+    "NativeRootIds": [
+      "b39e-4401-8f3e-fdf7"
+    ]
+  },
+  {
+    "Id": "1f19-6509-d906-ca10",
+    "Name": "Imperium - Adeptus Custodes",
+    "FileName": "Imperium - Adeptus Custodes.json",
+    "Faction": "Adeptus Custodes",
+    "ArmyCatalogue": true,
+    "NativeRootIds": [
+      "1f19-6509-d906-ca10"
+    ]
+  },
+  {
+    "Id": "77b9-2f66-3f9b-5cf3",
+    "Name": "Imperium - Adeptus Mechanicus",
+    "FileName": "Imperium - Adeptus Mechanicus.json",
+    "Faction": "Adeptus Mechanicus",
+    "ArmyCatalogue": true,
+    "NativeRootIds": [
+      "77b9-2f66-3f9b-5cf3"
+    ]
+  },
+  {
+    "Id": "bdc0-c0d-72d7-87e2",
+    "Name": "Imperium - Adeptus Titanicus",
+    "FileName": "Imperium - Adeptus Titanicus.json",
+    "Faction": "Titan Legions",
+    "ArmyCatalogue": true,
+    "NativeRootIds": [
+      "bdc0-c0d-72d7-87e2"
+    ]
+  },
+  {
+    "Id": "b00-cd86-4b4c-97ba",
+    "Name": "Imperium - Agents of the Imperium",
+    "FileName": "Imperium - Agents of the Imperium.json",
+    "Faction": "Imperial Agents",
+    "ArmyCatalogue": true,
+    "NativeRootIds": [
+      "b00-cd86-4b4c-97ba"
+    ]
+  },
+  {
+    "Id": "5a44-f048-114b-e3ff",
+    "Name": "Imperium - Astra Militarum - Library",
+    "FileName": "Imperium - Astra Militarum - Library.json",
+    "Faction": "Astra Militarum",
+    "ArmyCatalogue": false,
+    "NativeRootIds": [
+      "5a44-f048-114b-e3ff"
+    ]
+  },
+  {
+    "Id": "b0ae-12a5-c84-ea45",
+    "Name": "Imperium - Astra Militarum",
+    "FileName": "Imperium - Astra Militarum.json",
+    "Faction": "Astra Militarum",
+    "ArmyCatalogue": true,
+    "NativeRootIds": [
+      "b0ae-12a5-c84-ea45"
+    ]
+  },
+  {
+    "Id": "36d3-36bc-68dd-40ac",
+    "Name": "Imperium - Adeptus Astartes - Black Templars",
+    "FileName": "Imperium - Black Templars.json",
+    "Faction": "Black Templars",
+    "ArmyCatalogue": true,
+    "NativeRootIds": [
+      "36d3-36bc-68dd-40ac",
+      "e0af-67df-9d63-8fb7"
+    ]
+  },
+  {
+    "Id": "4ef9-15ce-e3e6-36de",
+    "Name": "Imperium - Adeptus Astartes - Blood Angels",
+    "FileName": "Imperium - Blood Angels.json",
+    "Faction": "Blood Angels",
+    "ArmyCatalogue": true,
+    "NativeRootIds": [
+      "4ef9-15ce-e3e6-36de",
+      "e0af-67df-9d63-8fb7"
+    ]
+  },
+  {
+    "Id": "470a-6daa-9014-12df",
+    "Name": "Imperium - Adeptus Astartes - Dark Angels",
+    "FileName": "Imperium - Dark Angels.json",
+    "Faction": "Dark Angels",
+    "ArmyCatalogue": true,
+    "NativeRootIds": [
+      "470a-6daa-9014-12df",
+      "e0af-67df-9d63-8fb7"
+    ]
+  },
+  {
+    "Id": "f89b-84e0-6e3b-f1e2",
+    "Name": "Imperium - Adeptus Astartes - Deathwatch",
+    "FileName": "Imperium - Deathwatch.json",
+    "Faction": "Deathwatch",
+    "ArmyCatalogue": true,
+    "NativeRootIds": [
+      "f89b-84e0-6e3b-f1e2",
+      "e0af-67df-9d63-8fb7"
+    ]
+  },
+  {
+    "Id": "50c4-3e83-fe54-97c4",
+    "Name": "Imperium - Grey Knights",
+    "FileName": "Imperium - Grey Knights.json",
+    "Faction": "Grey Knights",
+    "ArmyCatalogue": true,
+    "NativeRootIds": [
+      "50c4-3e83-fe54-97c4"
+    ]
+  },
+  {
+    "Id": "5d6e-fd3-330a-11dd",
+    "Name": "Imperium - Adeptus Astartes - Imperial Fists",
+    "FileName": "Imperium - Imperial Fists.json",
+    "Faction": "Imperial Fists",
+    "ArmyCatalogue": true,
+    "NativeRootIds": [
+      "5d6e-fd3-330a-11dd",
+      "e0af-67df-9d63-8fb7"
+    ]
+  },
+  {
+    "Id": "1b6d-dc06-5db9-c7d1",
+    "Name": "Imperium - Imperial Knights - Library",
+    "FileName": "Imperium - Imperial Knights - Library.json",
+    "Faction": "Imperial Knights",
+    "ArmyCatalogue": false,
+    "NativeRootIds": [
+      "1b6d-dc06-5db9-c7d1"
+    ]
+  },
+  {
+    "Id": "25dd-7aa0-6bf4-f2d5",
+    "Name": "Imperium - Imperial Knights",
+    "FileName": "Imperium - Imperial Knights.json",
+    "Faction": "Imperial Knights",
+    "ArmyCatalogue": true,
+    "NativeRootIds": [
+      "25dd-7aa0-6bf4-f2d5",
+      "1b6d-dc06-5db9-c7d1"
+    ]
+  },
+  {
+    "Id": "f27e-18c0-b73e-748e",
+    "Name": "Imperium - Adeptus Astartes - Iron Hands",
+    "FileName": "Imperium - Iron Hands.json",
+    "Faction": "Iron Hands",
+    "ArmyCatalogue": true,
+    "NativeRootIds": [
+      "f27e-18c0-b73e-748e",
+      "e0af-67df-9d63-8fb7"
+    ]
+  },
+  {
+    "Id": "6e59-e1ee-47ad-6ce5",
+    "Name": "Imperium - Adeptus Astartes - Raven Guard",
+    "FileName": "Imperium - Raven Guard.json",
+    "Faction": "Raven Guard",
+    "ArmyCatalogue": true,
+    "NativeRootIds": [
+      "6e59-e1ee-47ad-6ce5",
+      "e0af-67df-9d63-8fb7"
+    ]
+  },
+  {
+    "Id": "2261-79a5-19d9-1668",
+    "Name": "Imperium - Adeptus Astartes - Salamanders",
+    "FileName": "Imperium - Salamanders.json",
+    "Faction": "Salamanders",
+    "ArmyCatalogue": true,
+    "NativeRootIds": [
+      "2261-79a5-19d9-1668",
+      "e0af-67df-9d63-8fb7"
+    ]
+  },
+  {
+    "Id": "e0af-67df-9d63-8fb7",
+    "Name": "Imperium - Adeptus Astartes - Space Marines",
+    "FileName": "Imperium - Space Marines.json",
+    "Faction": "Space Marines",
+    "ArmyCatalogue": true,
+    "NativeRootIds": [
+      "e0af-67df-9d63-8fb7"
+    ]
+  },
+  {
+    "Id": "94bb-3284-ee14-57a1",
+    "Name": "Imperium - Adeptus Astartes - Space Wolves",
+    "FileName": "Imperium - Space Wolves.json",
+    "Faction": "Space Wolves",
+    "ArmyCatalogue": true,
+    "NativeRootIds": [
+      "94bb-3284-ee14-57a1",
+      "e0af-67df-9d63-8fb7"
+    ]
+  },
+  {
+    "Id": "4029-9237-e8db-af55",
+    "Name": "Imperium - Adeptus Astartes - Ultramarines",
+    "FileName": "Imperium - Ultramarines.json",
+    "Faction": "Ultramarines",
+    "ArmyCatalogue": true,
+    "NativeRootIds": [
+      "4029-9237-e8db-af55",
+      "e0af-67df-9d63-8fb7"
+    ]
+  },
+  {
+    "Id": "67c1-fc13-f9a1-cbbf",
+    "Name": "Imperium - Adeptus Astartes - White Scars",
+    "FileName": "Imperium - White Scars.json",
+    "Faction": "White Scars",
+    "ArmyCatalogue": true,
+    "NativeRootIds": [
+      "67c1-fc13-f9a1-cbbf",
+      "e0af-67df-9d63-8fb7"
+    ]
+  },
+  {
+    "Id": "f616-3f08-ee8e-3349",
+    "Name": "Xenos - Leagues of Votann",
+    "FileName": "Leagues of Votann.json",
+    "Faction": "Leagues of Votann",
+    "ArmyCatalogue": true,
+    "NativeRootIds": [
+      "f616-3f08-ee8e-3349"
+    ]
+  },
+  {
+    "Id": "ac3b-689c-4ad4-70cb",
+    "Name": "Library - Astartes Heresy Legends",
+    "FileName": "Library - Astartes Heresy Legends.json",
+    "Faction": "Astartes Heresy Legends",
+    "ArmyCatalogue": false,
+    "NativeRootIds": [
+      "ac3b-689c-4ad4-70cb"
+    ]
+  },
+  {
+    "Id": "7481-280e-b55e-7867",
+    "Name": "Library - Titans",
+    "FileName": "Library - Titans.json",
+    "Faction": "Titans",
+    "ArmyCatalogue": false,
+    "NativeRootIds": [
+      "7481-280e-b55e-7867"
+    ]
+  },
+  {
+    "Id": "374d-45f0-5832-001e",
+    "Name": "Library - Tyranids",
+    "FileName": "Library - Tyranids.json",
+    "Faction": "Tyranids",
+    "ArmyCatalogue": false,
+    "NativeRootIds": [
+      "374d-45f0-5832-001e"
+    ]
+  },
+  {
+    "Id": "b654-a18a-ea1-3bf2",
+    "Name": "Xenos - Necrons",
+    "FileName": "Necrons.json",
+    "Faction": "Necrons",
+    "ArmyCatalogue": true,
+    "NativeRootIds": [
+      "b654-a18a-ea1-3bf2"
+    ]
+  },
+  {
+    "Id": "a55f-b7b3-6c65-a05f",
+    "Name": "Xenos - Orks",
+    "FileName": "Orks.json",
+    "Faction": "Orks",
+    "ArmyCatalogue": true,
+    "NativeRootIds": [
+      "a55f-b7b3-6c65-a05f"
+    ]
+  },
+  {
+    "Id": "d81a-61dd-6d27-a3ce",
+    "Name": "Xenos - T\u0027au Empire",
+    "FileName": "T\u0027au Empire.json",
+    "Faction": "T\u2019au Empire",
+    "ArmyCatalogue": true,
+    "NativeRootIds": [
+      "d81a-61dd-6d27-a3ce"
+    ]
+  },
+  {
+    "Id": "b984-7317-81cc-20f",
+    "Name": "Xenos - Tyranids",
+    "FileName": "Tyranids.json",
+    "Faction": "Tyranids",
+    "ArmyCatalogue": true,
+    "NativeRootIds": [
+      "b984-7317-81cc-20f"
+    ]
+  },
+  {
+    "Id": "581a-46b9-5b86-44b7",
+    "Name": "Unaligned Forces",
+    "FileName": "Unaligned Forces.json",
+    "Faction": "Unaligned Forces",
+    "ArmyCatalogue": false,
+    "NativeRootIds": [
+      "581a-46b9-5b86-44b7"
+    ]
+  },
+  {
+    "Id": "sys-352e-adc2-7639-d610",
+    "Name": "Warhammer 40,000 11th Edition",
+    "FileName": "Warhammer 40,000.json",
+    "Faction": "Warhammer 40,000 11th Edition",
+    "ArmyCatalogue": false,
+    "NativeRootIds": [
+      "sys-352e-adc2-7639-d610"
+    ]
+  }
+]

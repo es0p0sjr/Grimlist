@@ -1,0 +1,4 @@
+TODO:
+
+- Json dependence will be hard when points etc change -> new codexes etc. So we need to either eliminate the need or find another way.
+

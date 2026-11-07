@@ -1,0 +1,279 @@
+{
+  "catalogue": {
+    "id": "8106-aad2-918a-9ac",
+    "name": "Chaos - Chaos Knights Library",
+    "revision": 10,
+    "gameSystemId": "sys-352e-adc2-7639-d610",
+    "selectionEntryGroups": [
+      {
+        "id": "fixture-detachments",
+        "name": "Detachments",
+        "selectionEntries": [
+          {
+            "name": "Houndpack Lance",
+            "id": "6cb5-45cf-c626-fa86",
+            "hidden": false,
+            "import": true,
+            "type": "upgrade",
+            "categoryLinks": [
+              {
+                "name": "Reconnaissance",
+                "id": "76ff-2763-47d3-40b5",
+                "hidden": false,
+                "primary": false,
+                "targetId": "b4a7-5083-fe94-4d24"
+              }
+            ],
+            "constraints": [
+              {
+                "id": "c386-9469-d502-0b12",
+                "field": "selections",
+                "includeChildSelections": false,
+                "scope": "parent",
+                "shared": true,
+                "type": "max",
+                "value": 1
+              }
+            ],
+            "costs": [
+              {
+                "name": "pts",
+                "typeId": "51b2-306e-1021-d207",
+                "value": 0
+              },
+              {
+                "name": "Crusade Points",
+                "typeId": "b03b-c239-15a5-da55",
+                "value": 0
+              },
+              {
+                "name": "Crusade: Battle Honours",
+                "typeId": "75bb-ded1-c86d-bdf0",
+                "value": 0
+              },
+              {
+                "name": "Crusade: Experience",
+                "typeId": "a623-fe74-1d33-cddf",
+                "value": 0
+              },
+              {
+                "name": "Crusade: Weapon Modifications",
+                "typeId": "716d-91b7-d55a-1022",
+                "value": 0
+              },
+              {
+                "name": "Blackstone Fragments",
+                "typeId": "ac6b-ced3-9b5e-9a6e",
+                "value": 0
+              },
+              {
+                "name": "Detachment Points",
+                "typeId": "82ae-1066-5107-6ae0",
+                "value": 2
+              }
+            ],
+            "rules": [
+              {
+                "name": "Marked Prey",
+                "id": "012f-2864-25e8-4ff6",
+                "description": "At the start of your Command phase, select one unit from your opponent's army. Until the start of your next Command phase, each time a ^^**War Dog^^** model from your army makes an attack that targets that enemy unit, if that unit is visible to the attacking model, that attack has the [Sustained Hits 1] ability.\n\n\n**Keywords**\nWhile using the Houndpack Lance Detachment, the following rules apply:\n\n\n- Your army must include 3 or more ^^**War Dog^^** units.\n- ^^**War Dog^^** units from your army have the ^^**Battleline^^** keyword.\n- When mustering your army, select 3 ^^**War Dog^^** units from your army. Until the end of the battle, those units have the ^^**Character^^** keyword.*\n\n\n*** Designer's Note:** *This means that the selected units can be given Enhancements and one of them can be selected as your* ^^**Warlord^^**.",
+                "hidden": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Enhancements",
+        "id": "18da-1609-c0fb-cf69",
+        "collapsible": true,
+        "collective": false,
+        "hidden": false,
+        "import": true,
+        "constraints": [
+          {
+            "id": "1ac3-0c48-a1f5-8b56",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": true,
+            "percentValue": false,
+            "scope": "self",
+            "shared": true,
+            "type": "max",
+            "value": 1
+          }
+        ],
+        "selectionEntries": [
+          {
+            "name": "Loping Predator",
+            "id": "64b1-051f-daf5-e148",
+            "comment": "Houndpack Lance",
+            "hidden": false,
+            "import": true,
+            "sortIndex": 8,
+            "type": "upgrade",
+            "constraints": [
+              {
+                "id": "b682-e702-6e3f-e7c7",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "force",
+                "shared": true,
+                "type": "max",
+                "value": 1
+              }
+            ],
+            "costs": [
+              {
+                "name": "pts",
+                "typeId": "51b2-306e-1021-d207",
+                "value": 10
+              },
+              {
+                "name": "Crusade Points",
+                "typeId": "b03b-c239-15a5-da55",
+                "value": 0
+              },
+              {
+                "name": "Crusade: Battle Honours",
+                "typeId": "75bb-ded1-c86d-bdf0",
+                "value": 0
+              },
+              {
+                "name": "Crusade: Experience",
+                "typeId": "a623-fe74-1d33-cddf",
+                "value": 0
+              },
+              {
+                "name": "Crusade: Weapon Modifications",
+                "typeId": "716d-91b7-d55a-1022",
+                "value": 0
+              },
+              {
+                "name": "Blackstone Fragments",
+                "typeId": "ac6b-ced3-9b5e-9a6e",
+                "value": 0
+              },
+              {
+                "name": "Detachment Points",
+                "typeId": "82ae-1066-5107-6ae0",
+                "value": 0
+              },
+              {
+                "name": "Enhancements",
+                "typeId": "f759-1bc4-cb3a-f0d2",
+                "value": 1
+              }
+            ],
+            "modifiers": [
+              {
+                "field": "hidden",
+                "type": "set",
+                "value": true,
+                "conditionGroups": [
+                  {
+                    "type": "or",
+                    "conditionGroups": [
+                      {
+                        "type": "and",
+                        "conditions": [
+                          {
+                            "childId": "cac3-71d1-ea4b-795d",
+                            "field": "forces",
+                            "includeChildForces": true,
+                            "includeChildSelections": true,
+                            "scope": "roster",
+                            "shared": true,
+                            "type": "lessThan",
+                            "value": 1
+                          },
+                          {
+                            "childId": "6cb5-45cf-c626-fa86",
+                            "field": "selections",
+                            "includeChildSelections": true,
+                            "scope": "roster",
+                            "shared": true,
+                            "type": "equalTo",
+                            "value": 0
+                          }
+                        ]
+                      }
+                    ],
+                    "conditions": [
+                      {
+                        "childId": "9cfd-1c32-585f-7d5c",
+                        "childName": "Character",
+                        "field": "selections",
+                        "includeChildSelections": false,
+                        "scope": "ancestor",
+                        "shared": true,
+                        "type": "notInstanceOf",
+                        "value": 1
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "field": "hidden",
+                "type": "set",
+                "value": true,
+                "conditions": [
+                  {
+                    "childId": "99dc-0f47-85e2-75da",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "ancestor",
+                    "shared": true,
+                    "type": "notInstanceOf",
+                    "value": 0
+                  }
+                ]
+              },
+              {
+                "affects": "self.entries.profiles.Ranged Weapons",
+                "field": "7f1b-8591-2fcf-d01c",
+                "join": ", ",
+                "scope": "parent",
+                "type": "append",
+                "value": "Assault"
+              }
+            ],
+            "profiles": [
+              {
+                "name": "Loping Predator",
+                "id": "6871-9f72-fab6-7543",
+                "hidden": false,
+                "typeId": "9cc3-6d83-4dd3-9b64",
+                "typeName": "Abilities",
+                "characteristics": [
+                  {
+                    "name": "Description",
+                    "$text": "The bearer's ranged weapons have the [Assault] ability.",
+                    "typeId": "9b8f-694b-e5e-b573"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "categoryEntries": [
+      {
+        "id": "9cfd-1c32-585f-7d5c",
+        "name": "Character"
+      },
+      {
+        "id": "99dc-0f47-85e2-75da",
+        "name": "War Dog"
+      }
+    ],
+    "forceEntries": [
+      {
+        "id": "cac3-71d1-ea4b-795d",
+        "name": "Crusade Force"
+      }
+    ]
+  }
+}

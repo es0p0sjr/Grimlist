@@ -1,0 +1,73 @@
+Enhancement eligibility and bundled-data validation
+2026-10-16
+
+Enhancement availability is shared by Windows and Android. Source import carries
+the selectable entry ID, structured Eligibility and IsUpgrade classification.
+Multiple links to one source definition contribute alternative eligibility paths;
+conflicting definitions are retained as evidence, never resolved by taking the first.
+
+Recovery pins edition and exact source-content SHA-256, faction, detachment and
+source entry ID. The hash identifies the source revision even for legacy metadata
+packs whose Version is a format label. Cards without source IDs can use a unique
+name within that pinned scope. An explicit ID never falls back to another ID by
+name. Descriptive text, linked keyword explanations and points are not eligibility
+evidence. Old TextHash/Cost fields are readable but unused. Recovery preserves card
+text, price, provenance, explicit eligibility, saved armies and selection history.
+
+Duplicate equivalent evidence is allowed. Ambiguous identities, conflicting
+eligibility/classification and unknown conditions cannot grant recovery. Diagnostic
+callbacks (or Trace warnings) explain skipped conflicts. Bundled and cached evidence
+are checked together. Source caches use enhancement-semantics-v3.json; changed
+assemblies automatically invalidate startup recovery decisions.
+Effective-datasheet recovery and its derived overlay cache restore effects only;
+they cannot restore or overwrite eligibility from historical text-hash metadata.
+
+All three previously shipped source revisions remain in enhancement-recovery.json.gz.
+The bootstrap was regenerated using the pinned cc1830fbfead059f8059ed6c7f8e73cd4c390908
+archive already in tests/fixtures/bsdata/11e, not a live download or a user database.
+It contains 2,695 enhancement cards: 2,593 with structured source eligibility,
+72 with unsupported source conditions, and 30 from a text-only reference source.
+The latter two groups retain their existing safe eligibility behavior. They are
+reported as unsupported by the structured evidence audit, never filled with guesses.
+Rebuilding from selectable source entries also removes legacy linked-rule pseudo-
+enhancements and corrects profile/display names without introducing faction exceptions.
+Units, points sources and unrelated reference cards are not refreshed by this task.
+
+Generation and validation
+
+Build tools/GrimList.Bootstrap with -m:1 -nr:false -p:UseSharedCompilation=false.
+The generator accepts:
+  <validated-library.json|--regenerate-bundled> <output-directory> <release-id>
+  [pinned-archive-directory]
+Archive replacement requires a matching content hash and existing source-owned scope.
+The candidate must already contain every recoverable eligibility condition and the
+correct classification. Duplicate selectable identities, conflicting metadata and
+missing source cards within published scopes fail validation. Unknown source
+conditions are counted separately. No runtime repair is applied by the validator.
+
+Run scripts/Test-BundledEnhancements.ps1 to validate the embedded candidate.
+Both standalone publish scripts run this before publishing or retiring old builds.
+An invalid candidate exits nonzero and leaves the previous release intact.
+The existing bootstrap integrity hash and schema/count validation remain in force.
+Existing installations are repaired in place; a new bootstrap never replaces their
+database or saved armies. A community binary release still requires a new app version.
+
+Regression entry point:
+  dotnet run --project tests/GrimList.Tests -- --enhancement-evidence-only --lf-json
+
+EnhancementEvidenceChecks independently reimports the pinned archive, verifies
+candidate metadata, prose/price independence, revision and identity isolation,
+legacy matching, conflict handling, unknown conditions and idempotence.
+EnhancementAcceptance is linked into the console, WPF smoke and Android test builds.
+It compares source-backed choices across default catalogue bearer configurations,
+checks all eligible pairs, and executes selection for each witnessed enhancement.
+Cards without an eligible bearer in those configurations are explicitly reported;
+this is not a claim to enumerate every wargear, attachment or multi-detachment army.
+Native tests additionally click a picker choice for each represented faction and
+verify selection, undo and redo.
+
+Windows smoke flag: --enhancement-evidence-only with --smoke-test and an isolated
+--data-dir, using a build with SmokeChecks included.
+Android test flag: enhancementEvidenceChecks=true in the isolated
+com.grimlist.perftest build (IncludePerformanceChecks=true). Production app storage
+must never be used for this fixture workload.

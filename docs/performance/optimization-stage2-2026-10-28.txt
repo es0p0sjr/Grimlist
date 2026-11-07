@@ -1,0 +1,154 @@
+Optimization stage 2 -- static attachment interpretation and reference lookup
+============================================================================
+
+Changes
+-------
+AttachedEffects compiles each immutable ability's leading, led and starting-size
+clauses once via a weak identity cache. It retains unsupported clauses as readable
+effects without guessing numeric changes. Unit size, Character presence, legal
+relationships and target-Afflicted state remain live decisions. Returned effects
+own copies of mutable keyword lists. Changed ability objects get new compilation.
+
+WeaponRuleReference indexes normalized ability names and ordered, distinct texts
+by immutable ability-list identity. Missing shared indexes use an edition-specific
+index weakly owned by the Dataset. This removes repeated scans/normalization of
+the shared ability catalogue. Local definitions retain priority, including an
+explicit local definition with empty text; edition boundaries, display names and
+text order are unchanged. New dataset/list identities invalidate old results.
+The original uncached lookup remains an internal comparison oracle.
+
+This stage changes static interpretation and lookup, not the roster evaluator's
+dependency/condition algorithm, database schema, catalogue revision storage or
+UI framework. It does not introduce partial roster evaluation. The phone harness
+also records PrepareAsync, RefreshPresentation and frame-wait durations separately
+to guide the next UI work; those diagnostics exist only in PERFORMANCE_CHECKS.
+
+Host measurements
+-----------------
+Alternating five warm batches, identical inputs/results, current Debug build:
+  Weapon definitions, 188 lookups over 36 factions:
+    uncached median 554.00 ms / 73,308,120 allocated bytes
+    indexed median    0.47 ms /    245,856 allocated bytes
+  Attachment source interpretation, 2,692 distinct abilities:
+    parsed median    14.11 ms /  1,473,416 allocated bytes
+    cached median     0.30 ms /         40 allocated bytes
+
+These are isolated repeated-work measurements, not whole-app speedups. They
+exclude initial index/compilation construction. Structural equivalence passed
+for the sampled definition queries and every distinct bundled attachment source.
+Raw samples: docs/performance/reference-preparation-2026-10-28.json.
+Reproduce: build tools/GrimList.Performance, run DLL with
+  --reference-preparation <output.json>
+
+Physical verification method
+----------------------------
+Use scripts/Publish-StandaloneAndroid.ps1 -PerformanceChecks, then
+scripts/Measure-AndroidPerformance.py with the exact isolated APK, connected
+serial, --iterations 10 --starts 5. It preserves production com.grimlist.mobile.
+The default fixture has 3 and 20 entries, six operations and one unrecorded
+warm-up per operation/size. Final timings include command, preparation, render
+and two vsync callbacks. Reset/open and initial presentation are excluded.
+Home is a refresh, not navigation from another page. Post-upgrade initialization
+is distinct from first installation and ordinary cached process-cold startup.
+
+scripts/Check-AndroidPerformanceApp.py runs native weaponMetadataChecks and
+attachmentChecks against com.grimlist.perftest only. The first exercises build,
+play, undo/redo, retained page and reopened profiles. The second exercises deferred
+attachment choices, stale-result rejection, retry and page retention. Neither
+tool clears production storage or sends any army outside the device/workspace.
+
+The intermediate phone run preceded the final recovery-order correction and is
+retained separately at artifacts/distribution-evidence/android-runtime-stage2-2026-10-28.
+Its timings must not be presented as final-binary validation.
+
+Final verification and measurements
+----------------------------------
+Final production-code phone benchmark: 120 operation samples and five startups.
+Same Redmi and workload as the earlier measurement; mean milliseconds:
+
+Operation           3 entries final     20 entries before -> final
+Add unit                  136                     439 -> 375
+Equipment                 153                     444 -> 393
+Enhancement               224                     896 -> 608
+Attach leader             704                   2,535 -> 2,035
+Remove detachment         322                     662 -> 590
+Home refresh              140                     151 -> 142
+
+Enhancement mean fell about 32%, attachment mean about 20%. These compare the
+combined new build (including corrected metadata) with the previous build, not
+an isolated causal A/B of either optimization. Home medians are effectively
+unchanged (91 vs 90.5 ms). There is no universal speedup claim.
+
+Four cached process-cold launches averaged 3,732 ms vs the previous 3,208 ms;
+startup was slower in this run. Post-upgrade recovery took 24,881 ms. That is a
+different operation from the earlier fresh initialization's 54,513 ms, so do not
+claim a first-install improvement from that comparison. Last repeat-launch PSS
+was 336,649 KiB (~329 MiB); after the workload 782,691 KiB (~764 MiB), vs ~794 MiB
+previously. These snapshots are not peak/post-GC live memory or leak evidence.
+Whole-process frame-deadline misses were 520/2,325 (22.37%), including setup/reset.
+
+For 20-entry attachments, average stages were 716 ms command, 241 ms preparation,
+1,013 ms synchronous presentation and 64 ms frame wait. Presentation includes
+RenderEnhancementChoices calling Enhancements.Select for each visible option;
+it is not a measurement of layout alone. Moving or avoiding repeated proposal
+validation needs a separate correctness-preserving UI change. Deferred chooser
+opening is also distinct from the direct attachment operation benchmarked here.
+
+Raw final samples and presentation-stage alignment:
+  docs/performance/android-stage2-2026-10-28.json
+  artifacts/distribution-evidence/android-runtime-stage2-final-2026-10-28/
+Benchmark APK SHA-256:
+  ff37938df3409366695d2fa1fccc884eb3b670b808592315ff99df192d64c494
+
+The initial native metadata check passed 26 assertions. The attachment check
+then exposed a fixture ID collision: its synthetic entries reused the benchmark's
+globally unique entry IDs in the separate performance database. The fixture now
+prefixes its own IDs. No production data was involved, and no storage clearing
+was used. Only the test fixture changed after the final benchmark. The standard
+publisher retains the latest single diagnostic APK; the native-check rebuild is:
+  a3d1a14fd6005aac851930173509d14d147bde0d099261618a46718d3d318ab4
+
+Final native rerun: 26 metadata checks and 41 attachment checks passed. Build,
+play, undo/redo/reopen and retained datasheets are verified on the actual phone;
+attachment checks cover lazy choices, snapshot invalidation, stale results and
+retry. Chooser cold mean was 1,242 ms, cached mean 46 ms; frames continued while
+loading (mean 14 ms to the measured callbacks), with mean session wait 11 ms.
+This is routing/control behavior, not a manual scroll-gesture acceptance claim.
+Reports: artifacts/distribution-evidence/metadata-optimization-native-final/.
+The normal app was returned to the foreground after stopping the isolated app.
+
+Initial full regression: 524 PASS, two composite-recovery idempotence failures.
+Both were corrected by finishing newly matching semantic fingerprints after
+weapon repair. Final full regression: 526 PASS, zero FAIL, including both repaired
+idempotence checks, cache/persistence coverage, 16,755 eligible bearer/card pairs
+and real PDF extraction. Eligibility counts are not effect-level certification;
+the separate numeric metadata and negative-target tests supply that evidence.
+Log: artifacts/distribution-evidence/metadata-optimization-final-full.log.
+The standard wrapper removed this successful run's synthetic test directory.
+Final normal Windows/Android Debug builds and the diagnostic tool build passed
+with zero warnings/errors. Diagnostic Android publishing passed candidate,
+identity/signature and both ABI startup checks; it retains the existing symbols
+fallback and three existing nullable warnings in MainPage.Performance.cs.
+
+No community binaries were replaced. The user's installed com.grimlist.mobile
+remains 0.2.28 without these new source changes; com.grimlist.perftest is solely
+the isolated verification app. No live BSData download was performed.
+
+Retained failed-run output
+--------------------------
+Automatic approval review rejected the verified native PowerShell cleanup as
+"blocked by policy". No alternative deletion method was attempted. The initial
+failed regression run remains at:
+  .local/tests/c50402ea-8d2d-4e9e-af06-4edaeca3f08c
+429 files, 365,394,347 bytes (~348 MiB). This is synthetic test output; live
+user data was not a cleanup target. Logs preserve the two diagnosed failures.
+
+Remaining roadmap
+-----------------
+Independent faction/shared-dependency revisioning remains the next architectural
+phase. Then introduce reusable catalogue content and atomic manifests behind
+Dataset, with history/reconstruction/interruption/corruption acceptance. Consider
+dependency-based incremental evaluation last, preserving the full evaluator as
+oracle and falling back to it for unknown dependencies. First-launch recovery
+memory and attachment presentation remain measured targets; static-cache wins do
+not prove that all UI or startup work is optimized.

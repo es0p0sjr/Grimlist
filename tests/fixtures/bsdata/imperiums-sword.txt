@@ -1,0 +1,13 @@
+Imperium's Sword fixture provenance
+
+The selection entry 342a-2485-9ec0-b0a3 is copied unchanged from
+Imperium - Space Marines.json in BSData/wh40k-11e commit
+0fb7e6ac9cb5289c4cfe519029787d34eca95032 (cached source date 2026-10-14).
+https://github.com/BSData/wh40k-11e/tree/0fb7e6ac9cb5289c4cfe519029787d34eca95032
+Cached repository ZIP SHA-256:
+76e61be4e86ea63030c93ba13fb57c6c67f76882328802ebb509f566ed27d270
+
+Weapon profile: 6dc6-4f92-c8b4-ebda; Melee, A 6, WS 2+, S 7, AP -3, D 3.
+The surrounding catalogue, enhancement group and detachment container are
+synthetic minimal test scaffolding. No saved armies or user database included.
+The source was read from the existing local cache; no live acquisition performed.

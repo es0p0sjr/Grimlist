@@ -1,0 +1,461 @@
+{
+  "environment": "Windows shared Release harness, .NET 10.0.10; no Android rendering in PC timings",
+  "method": "Nearest-rank p95. Editing: two alternating runs of ten samples per operation/roster, plus unrecorded warm-up. Fresh processes with existing library for startup; OS file cache is not reset.",
+  "limitations": [
+    "Physical Android installation was blocked by INSTALL_FAILED_USER_RESTRICTED; user deferred phone tests.",
+    "Android cold-to-usable timing, managed/native heap, PSS/swap and native virtualization acceptance remain pending.",
+    "Editing latency varied substantially; lower allocation and isolated comparison cost do not establish an end-to-end latency improvement.",
+    "Five baseline starts and four cache-hit starts give limited startup-tail estimates.",
+    "WorkingSetBytes in raw host reports is sampled after workload completion, not a native-heap measurement.",
+    "AOT is an opt-in experiment; no compilation setting has been adopted based on unmeasured device gains."
+  ],
+  "phase1": {
+    "baseline": {
+      "LibraryReadyMs": {
+        "samples": 5,
+        "median": 14488.3966,
+        "p95": 15181.6979
+      },
+      "StartupAllocatedBytes": {
+        "samples": 5,
+        "median": 3529071040,
+        "p95": 3529075520
+      },
+      "ManagedAfterRecoveryBytes": {
+        "samples": 5,
+        "median": 535638232,
+        "p95": 815573008
+      }
+    },
+    "indexedCacheMiss": {
+      "LibraryReadyMs": {
+        "samples": 1,
+        "median": 5009.1127,
+        "p95": 5009.1127
+      },
+      "StartupAllocatedBytes": {
+        "samples": 1,
+        "median": 1129106640,
+        "p95": 1129106640
+      },
+      "ManagedAfterRecoveryBytes": {
+        "samples": 1,
+        "median": 459762264,
+        "p95": 459762264
+      }
+    },
+    "indexedCacheHit": {
+      "LibraryReadyMs": {
+        "samples": 4,
+        "median": 3997.29625,
+        "p95": 4053.9341
+      },
+      "StartupAllocatedBytes": {
+        "samples": 4,
+        "median": 976000504.0,
+        "p95": 976077136
+      },
+      "ManagedAfterRecoveryBytes": {
+        "samples": 4,
+        "median": 459575136.0,
+        "p95": 459590520
+      }
+    }
+  },
+  "phase2": {
+    "before": [
+      {
+        "entries": 3,
+        "operation": "add",
+        "CommandMs": {
+          "samples": 20,
+          "median": 65.8896,
+          "p95": 87.0857
+        },
+        "AllocatedBytes": {
+          "samples": 20,
+          "median": 5931984.0,
+          "p95": 5932728
+        }
+      },
+      {
+        "entries": 3,
+        "operation": "equipment",
+        "CommandMs": {
+          "samples": 20,
+          "median": 48.2563,
+          "p95": 67.8209
+        },
+        "AllocatedBytes": {
+          "samples": 20,
+          "median": 4417040.0,
+          "p95": 4419704
+        }
+      },
+      {
+        "entries": 3,
+        "operation": "enhancement",
+        "CommandMs": {
+          "samples": 20,
+          "median": 114.6028,
+          "p95": 154.1323
+        },
+        "AllocatedBytes": {
+          "samples": 20,
+          "median": 15712148.0,
+          "p95": 15892800
+        }
+      },
+      {
+        "entries": 3,
+        "operation": "attachment",
+        "CommandMs": {
+          "samples": 20,
+          "median": 147.83485000000002,
+          "p95": 197.0739
+        },
+        "AllocatedBytes": {
+          "samples": 20,
+          "median": 19678200.0,
+          "p95": 19788936
+        }
+      },
+      {
+        "entries": 3,
+        "operation": "detachment",
+        "CommandMs": {
+          "samples": 20,
+          "median": 23.9022,
+          "p95": 36.8002
+        },
+        "AllocatedBytes": {
+          "samples": 20,
+          "median": 3510336.0,
+          "p95": 3510720
+        }
+      },
+      {
+        "entries": 20,
+        "operation": "add",
+        "CommandMs": {
+          "samples": 20,
+          "median": 179.1846,
+          "p95": 217.8445
+        },
+        "AllocatedBytes": {
+          "samples": 20,
+          "median": 28969728.0,
+          "p95": 28973504
+        }
+      },
+      {
+        "entries": 20,
+        "operation": "equipment",
+        "CommandMs": {
+          "samples": 20,
+          "median": 160.99790000000002,
+          "p95": 192.5806
+        },
+        "AllocatedBytes": {
+          "samples": 20,
+          "median": 27383092.0,
+          "p95": 27390416
+        }
+      },
+      {
+        "entries": 20,
+        "operation": "enhancement",
+        "CommandMs": {
+          "samples": 20,
+          "median": 322.2129,
+          "p95": 423.3764
+        },
+        "AllocatedBytes": {
+          "samples": 20,
+          "median": 52815748.0,
+          "p95": 52825712
+        }
+      },
+      {
+        "entries": 20,
+        "operation": "attachment",
+        "CommandMs": {
+          "samples": 20,
+          "median": 425.0058,
+          "p95": 637.2741
+        },
+        "AllocatedBytes": {
+          "samples": 20,
+          "median": 68409088.0,
+          "p95": 71009880
+        }
+      },
+      {
+        "entries": 20,
+        "operation": "detachment",
+        "CommandMs": {
+          "samples": 20,
+          "median": 159.4057,
+          "p95": 202.9321
+        },
+        "AllocatedBytes": {
+          "samples": 20,
+          "median": 22792156.0,
+          "p95": 23108312
+        }
+      }
+    ],
+    "after": [
+      {
+        "entries": 3,
+        "operation": "add",
+        "CommandMs": {
+          "samples": 20,
+          "median": 59.8044,
+          "p95": 74.7785
+        },
+        "AllocatedBytes": {
+          "samples": 20,
+          "median": 4978748.0,
+          "p95": 4978936
+        }
+      },
+      {
+        "entries": 3,
+        "operation": "equipment",
+        "CommandMs": {
+          "samples": 20,
+          "median": 54.3524,
+          "p95": 81.2401
+        },
+        "AllocatedBytes": {
+          "samples": 20,
+          "median": 3714224.0,
+          "p95": 3716888
+        }
+      },
+      {
+        "entries": 3,
+        "operation": "enhancement",
+        "CommandMs": {
+          "samples": 20,
+          "median": 141.5009,
+          "p95": 230.1369
+        },
+        "AllocatedBytes": {
+          "samples": 20,
+          "median": 14613672.0,
+          "p95": 14756896
+        }
+      },
+      {
+        "entries": 3,
+        "operation": "attachment",
+        "CommandMs": {
+          "samples": 20,
+          "median": 160.00615,
+          "p95": 197.0102
+        },
+        "AllocatedBytes": {
+          "samples": 20,
+          "median": 18184488.0,
+          "p95": 18281256
+        }
+      },
+      {
+        "entries": 3,
+        "operation": "detachment",
+        "CommandMs": {
+          "samples": 20,
+          "median": 41.30265,
+          "p95": 59.2117
+        },
+        "AllocatedBytes": {
+          "samples": 20,
+          "median": 2826512.0,
+          "p95": 2827216
+        }
+      },
+      {
+        "entries": 20,
+        "operation": "add",
+        "CommandMs": {
+          "samples": 20,
+          "median": 246.15965,
+          "p95": 577.0583
+        },
+        "AllocatedBytes": {
+          "samples": 20,
+          "median": 24249624.0,
+          "p95": 24249856
+        }
+      },
+      {
+        "entries": 20,
+        "operation": "equipment",
+        "CommandMs": {
+          "samples": 20,
+          "median": 280.8694,
+          "p95": 638.342
+        },
+        "AllocatedBytes": {
+          "samples": 20,
+          "median": 22916792.0,
+          "p95": 22919288
+        }
+      },
+      {
+        "entries": 20,
+        "operation": "enhancement",
+        "CommandMs": {
+          "samples": 20,
+          "median": 396.23400000000004,
+          "p95": 780.0432
+        },
+        "AllocatedBytes": {
+          "samples": 20,
+          "median": 45409272.0,
+          "p95": 45409632
+        }
+      },
+      {
+        "entries": 20,
+        "operation": "attachment",
+        "CommandMs": {
+          "samples": 20,
+          "median": 511.1724,
+          "p95": 603.2001
+        },
+        "AllocatedBytes": {
+          "samples": 20,
+          "median": 58599840.0,
+          "p95": 61219320
+        }
+      },
+      {
+        "entries": 20,
+        "operation": "detachment",
+        "CommandMs": {
+          "samples": 20,
+          "median": 195.15055,
+          "p95": 352.6317
+        },
+        "AllocatedBytes": {
+          "samples": 20,
+          "median": 18342904.0,
+          "p95": 18834376
+        }
+      }
+    ],
+    "isolatedComparison": [
+      {
+        "method": "JSON",
+        "comparisons": 500,
+        "ms": 870.7,
+        "allocatedBytes": 285922520
+      },
+      {
+        "method": "Structural",
+        "comparisons": 500,
+        "ms": 353.6,
+        "allocatedBytes": 7684464
+      },
+      {
+        "method": "JSON",
+        "comparisons": 500,
+        "ms": 720.6,
+        "allocatedBytes": 285848040
+      },
+      {
+        "method": "Structural",
+        "comparisons": 500,
+        "ms": 232.7,
+        "allocatedBytes": 7242984
+      }
+    ],
+    "stageNote": "Macro timings use frozen stage binaries. The final comparer additionally enforces ordinal dictionary-key equality; the isolated comparison and full regression suite include that guard."
+  },
+  "phase3": {
+    "implementation": "Data-backed CollectionViews; no prebuilt item Views; incremental updates and 250 ms search debounce retained.",
+    "deviceGain": null,
+    "deviceAcceptance": "Deferred"
+  },
+  "phase4": [
+    {
+      "entriesPerArmy": 3,
+      "savedArmies": 10,
+      "cached": false,
+      "Ms": {
+        "samples": 20,
+        "median": 82.8493,
+        "p95": 96.3934
+      },
+      "AllocatedBytes": {
+        "samples": 20,
+        "median": 11546104.0,
+        "p95": 11547936
+      }
+    },
+    {
+      "entriesPerArmy": 3,
+      "savedArmies": 10,
+      "cached": true,
+      "Ms": {
+        "samples": 20,
+        "median": 1.2645499999999998,
+        "p95": 6.5963
+      },
+      "AllocatedBytes": {
+        "samples": 20,
+        "median": 543248.0,
+        "p95": 543248
+      }
+    },
+    {
+      "entriesPerArmy": 20,
+      "savedArmies": 10,
+      "cached": false,
+      "Ms": {
+        "samples": 20,
+        "median": 447.78610000000003,
+        "p95": 500.5729
+      },
+      "AllocatedBytes": {
+        "samples": 20,
+        "median": 72843712.0,
+        "p95": 73007152
+      }
+    },
+    {
+      "entriesPerArmy": 20,
+      "savedArmies": 10,
+      "cached": true,
+      "Ms": {
+        "samples": 20,
+        "median": 2.96305,
+        "p95": 18.3992
+      },
+      "AllocatedBytes": {
+        "samples": 20,
+        "median": 1646384.0,
+        "p95": 1646384
+      }
+    }
+  ],
+  "phase5": {
+    "profiledAotBuild": "Rejected by installed SDK: XA1030 requires PublishTrimmed=true. Unusable experimental profile removed; trimming was not enabled.",
+    "deviceBenchmarks": "Deferred",
+    "otherCompilationBenchmarks": "Deferred",
+    "shippingCompilationChanged": false
+  },
+  "validation": {
+    "regressionChecks": 303,
+    "regressionResult": "All checks passed.",
+    "windowsBuild": "Passed; two existing CS4014 smoke-dispatch warnings",
+    "windowsRecipientUiSmoke": "Passed leader/bodyguard build/play, detach, undo and redo",
+    "androidDebugBuild": "Passed, no warnings or errors",
+    "androidReleaseTestPackage": ".local/staged-performance/release-apk/com.grimlist.perftest-Signed.apk",
+    "androidReleasePackageIdentity": "Verified com.grimlist.perftest, arm64-v8a and x86_64; not installed",
+    "productionReleaseArtifactsReplaced": false
+  }
+}

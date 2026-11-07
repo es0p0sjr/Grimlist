@@ -1,0 +1,57 @@
+Enhancement eligibility system validation - 2026-10-16
+
+Source change only. No new community release, MSI or production APK was published.
+Existing community packages remain 0.2.20. App versions must be incremented when
+new community packages are requested.
+
+Bundled data
+- Release ID: grimlist-11e-2026.10.16.1
+- Pinned BSData source: cc1830fbfead059f8059ed6c7f8e73cd4c390908
+- Source archive SHA-256: 747DB24BF29456F0606A937F794A7E7F33154E76116EFF1506E9B0750AB5C045
+- 2,194 units; 36 factions; 823 detachments; 3,861 reference cards.
+- 2,695 enhancements: 2,593 structured eligibility records, 72 unsupported source
+  conditions, 30 text-only reference-source cards. Unknowns were not guessed.
+- 2,665 selectable BSData entry IDs retained directly in enhancement cards.
+- Manifest content hash and uncompressed length: PASS.
+- Candidate validation through scripts/Test-BundledEnhancements.ps1: PASS.
+- Independent pinned-archive reimport agrees with bundled eligibility: PASS.
+- Older recovery revisions cc1830fb, da724877 and 6166445e retained.
+- No live source download or user-library update was performed.
+
+Resource SHA-256
+bootstrap/library.json.gz:
+fba6e4ac22dd0ff899f6a74f0626113cd298a391a2ec704a4700ab1cb9d82886
+enhancement-recovery.json.gz:
+13cc6bfe3d7e021e026ee339a1bdfa6ff8a23b35f9b937167e697209026b704c
+
+Platform checks
+- Full regression wrapper with --lf-json: PASS, 432 checks, zero failures.
+  Log: artifacts/distribution-evidence/enhancement-eligibility-regression.log.
+  Includes historical effect-pack eligibility isolation, legacy/source recovery,
+  bootstrap persistence, selection/undo/redo, exports, derived-cache corruption
+  and real PDF extraction. The successful run's synthetic databases were removed.
+- Windows Debug build with native checks: PASS, zero warnings/errors.
+- Native Windows shared selection check: 1,329 selectable enhancement cards and
+  16,755 eligible bearer/card pairs passed. Picker click, selection, undo and redo
+  passed for all 29 represented factions.
+- 1,264 source-metadata cards have no eligible bearer in the tested default
+  catalogue configurations. These are reported, not counted as selectable cards.
+  The check does not enumerate every wargear/attachment/multiple-detachment state.
+- Android Debug build with IncludePerformanceChecks=true: PASS. Three nullable
+  warnings remain in existing MainPage.Performance.cs checks, zero errors.
+- Android native enhancementEvidenceChecks path is compiled into the isolated
+  com.grimlist.perftest build. Runtime execution was unavailable: adb listed no
+  device, and emulator startup failed on sandbox-denied Windows named pipes and
+  emulator lock-file access. No device install or production phone data change.
+
+Storage limitation
+Automatic approval review rejected removal of these temporary regression folders
+with "blocked by policy"; they were left intact, without a cleanup workaround:
+.local/tests/a20e2de3-7ab3-4341-aa59-07c6d1e531ab
+.local/tests/919ccfd8-89c3-4f0d-ace7-a6d9bc00e148
+.local/tests/11403019-817e-4237-a4d5-bdea819d9bad
+The failed emulator and its child processes were stopped; its large task log was
+removed before that separate cleanup rejection.
+The generated Android test APKs are absent after cleanup; normal shared bin/obj
+intermediates are retained. The isolated Windows acceptance library/report remain
+under .local/enhancement-evidence; no user's live library was used for these tests.

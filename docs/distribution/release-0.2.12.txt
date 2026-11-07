@@ -1,0 +1,45 @@
+GrimList 0.2.12 distribution - 14 October 2026
+
+Share folder: GrimList-Share-0.2.12/
+Windows: GrimList-Windows-0.2.12.msi, x64, includes private .NET 10.0.10 runtime.
+Android: GrimList-Android-0.2.12.apk, ARM64/x64, com.grimlist.mobile, version code 14.
+ZIP copies contain the same MSI/APK. Each package has a SHA-256 sidecar.
+Exact sizes and hashes: docs/distribution/release-0.2.12-files.json.
+
+Changes
+- Windows runs import preparation, saving and library refresh in the background,
+  with visible progress stages and cancellation/duplicate-operation protection.
+- Downloaded libraries avoid a large JSON text-box roundtrip on Windows.
+- Android displays progress while reading, preparing/comparing changes,
+  checking saved armies, saving, rebuilding and refreshing the library view.
+
+Upgrade
+Close GrimList before running the Windows MSI. The Windows upgrade identity
+matches 0.2.11, with a new product identity for 0.2.12. Android retains its
+application ID and signing certificate. Install over the existing application
+without uninstalling or clearing storage. Previous share folders remain available.
+
+Verification
+Windows publish and MSI generation succeeded. The executable reports 0.2.12.
+All 19 installer checks passed, including exact embedded payload verification.
+The MSI contains 490 payload files and passed all 13 packaged-app native checks:
+startup, bundled data/runtime, army creation, saving, reopening and validation.
+Actual Windows MSI installation, repair and uninstall were not run this release.
+The user's installed Windows app was not replaced.
+
+Android was rebuilt from a fresh source copy verified against the current source
+after an incremental build failed the native startup guard. The fresh APK passed
+both ARM64 and x64 native onCreate binding checks, signature verification, ZIP
+integrity and package/version/ABI checks. Its signer matches the installed app.
+Only the verified fresh APK is included in the share and canonical build folders.
+Package checksums and the contents of both ZIP copies were verified.
+
+The connected phone successfully upgraded from 0.2.11/code 13 to 0.2.12/code 14.
+The installed APK hash matches the distributed file. Original first-install time
+and app-data directory inode were preserved. The updated app opened its Home
+screen with four saved army cards visible. The army displayed before updating
+appears with the same title and points in its Home card after updating.
+
+Evidence: .local/release-0.2.12/ contains source hashes, build logs, MSI/app checks,
+Android signature/metadata checks and phone upgrade records. This retains the
+existing sideload signing identity; no store upload or publication was performed.

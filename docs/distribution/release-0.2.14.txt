@@ -1,0 +1,46 @@
+GrimList 0.2.14 Windows distribution - 14 October 2026
+
+Installer: GrimList-Share-0.2.14/GrimList-Windows-0.2.14.msi
+ZIP: GrimList-Share-0.2.14/GrimList-Windows-0.2.14.zip
+Platform: Windows x64. Includes private .NET 10.0.10 runtime and offline library.
+MSI size: 97,353,728 bytes. Payload: 490 files, 221,770,791 bytes.
+MSI SHA-256: 01061cb08203718dedb8f7e702c565aad31685695056103ca5959bd220c3868f
+File inventory and share hashes: release-0.2.14-files.json and the adjacent MSI inventory.
+
+Changes
+Fixes missing detachment Stratagems across supported armies, including Space
+Marine chapters. Recovery code and its reference package are now shared across
+frontends. Windows restores missing references offline in its startup background
+task, and library reloads rerun recovery after imports. Faction caches are rebuilt
+for the new recovery version. Setup previews use the same resolved lookup as Rules.
+Newer imports, explicit removals, rules packs, custom catalogue identities and
+saved armies are preserved. Explicitly complete zero-card scopes stay empty.
+Includes previous alphabetical roster ordering and import progress improvements.
+
+Upgrade
+Close GrimList, then run the MSI over the existing installation. The production
+upgrade identity matches 0.2.13 and the product identity changes for 0.2.14.
+Do not uninstall or clear application storage. Recovery runs on first launch.
+This is a Windows-only package release; the Android APK remains at 0.2.13.
+Previous release packages remain unchanged.
+
+Verification
+Windows Release publish succeeded; executable reports 0.2.14.0 / 0.2.14.
+All 19 MSI validation/extraction checks and all 13 native extracted-app acceptance
+checks passed, including offline bootstrap, private runtime, save/reopen and validation.
+All 490 extracted payload files match the published source hashes exactly.
+The packaged 0.2.14 assemblies and embedded recovery resource passed the complete
+416-detachment audit at 1000, 2000 and 3000 points, including 370 Incursion options.
+No unknown or unexplained zero-card sets; three explicitly complete empty sets retained.
+The implementation previously passed 19 recovery/startup, 60 integration and six
+native UI checks. These cover existing-library recovery, imported overrides,
+custom catalogues, Space Marine previews, cache invalidation and army preservation.
+Production upgrade identity, changed product identity, checksum sidecar and ZIP
+contents were verified. Final share files were rehashed against the release manifest.
+
+Limitations
+Actual MSI installation, repair, upgrade and uninstall were not run in this restricted
+environment. This retains the existing unsigned installer distribution model.
+No external hosting/upload or local production installation was performed.
+
+Evidence: .local/release-0.2.14/ and .local/reference-recovery-fix/.

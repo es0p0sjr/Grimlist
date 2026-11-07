@@ -1,0 +1,123 @@
+Import allocations and dependency evaluation — 2026-10-28
+
+Implementation
+--------------
+CatalogueStorage keeps JSON, compressed and verification buffers for one write
+operation. Each page is serialized once, hashed, and either compressed into the
+reusable buffer or compared against its stored, streaming decompression. Reuse
+checks compressed digest, exact decompressed input, lengths, end-of-stream,
+chunk count, positions and the existing 48-KiB SQL transfer bound. No verification
+result survives the write. Corrupted historical objects cannot be certified by
+a cached hash. Both old formats and GLCM1 remain unchanged and readable.
+
+Object metadata and chunk count use one database query. For each reused object,
+this replaces three separate calls (existence, metadata and count), retaining
+the individual bounded BLOB reads. ArmyStore also batches alias migration and
+canonical-name updates using the native adapters' prepared statements, in the
+same order and transaction as before. Saved entry IDs and source history remain.
+
+RuleDependencies compiles immutable unit/card evidence into local, roster-reader
+and unknown facts. It examines inactive branches, recipient conditions,
+attachment permissions, association constraints, modifier conditions and repeats.
+Actual cross-entry reads add dependency edges. Dirty entries expand through old
+and new attachment edges and the reader graph before either convergence phase.
+Roster consumers are invalidated by any changed contributor: matching only old
+keywords would miss newly granted keywords. This is deliberately conservative;
+it does not yet prove that an unrelated changed keyword cannot affect a count.
+
+Add/remove/replace/order edits preserve unrelated results, including exact
+copy-label provenance. Muster nomination changes invalidate selected entry IDs
+and their dependants. Army name/disposition changes reuse effective states.
+Other context changes, unknown dependencies/scopes, unsupported schema versions
+and nonconvergence retain full evaluation. Both convergence phases and the
+enhancement self-eligibility exclusion remain. No pricing/validation shortcut
+was added. Removed dependency IDs are pruned; weak caches retain no history chain.
+
+LibraryRecoveryVersion.Evaluation is army-evaluation-3. When adding condition
+kinds, association scopes, direct roster reads or effective context inputs,
+update dependency compilation and compare against EvaluateFull. Do not infer
+support from an unfamiliar scope string or a previously false predicate.
+
+Verification design
+-------------------
+The shared IncrementalEvaluationWorkload runs unchanged on host and isolated
+Android builds. It covers transitive roster grants, force-wide association limits
+that invalidate another group's attachment, local/roster/force constraints and
+repeats, additions/removals/replacements/order/copy labels, muster context,
+unknown branches and 80 seeded mixed edits including cached undo states.
+Every resulting effective state is compared in full with EvaluateFull.
+
+Storage regressions independently damage lengths, digests, missing/extra/shifted
+chunks, oversized BLOBs, valid gzip carrying the wrong JSON and trailing decoded
+bytes. Reusing those pages must reject and roll back publication. Existing tests
+cover complete round trips, legacy formats, stale previews, interrupted writes,
+prepared projection rejection, history, provenance and saved armies/context.
+
+The first focused run exposed a test-fixture error: numeric modifiers used the
+textual 'add' operation. Both full and incremental evaluators agreed; fixtures
+were corrected to use 'increment', and the focused checks then passed. No rule
+behavior was changed to accommodate that fixture.
+
+Measurements
+------------
+Complete bundled Windows storage workload, same 2,194-unit, three-revision input:
+shared writes allocated 97,868,688 / 106,381,312 / 106,352,520 bytes before and
+34,857,896 / 28,352,104 / 28,164,096 bytes after (about 64% / 73% / 74% less).
+Payload totals remain exactly 8,874,412 / 9,044,109 / 9,238,962 bytes. Every
+field and provenance binding round-tripped in both formats at every revision.
+Write times were 596 / 566 / 568 ms before, 827 / 520 / 559 ms after. The legacy
+control also slowed in the latter batch. These single batches support lower
+managed allocations, not a universal latency or whole-app speedup claim.
+
+One focused Windows mixed-edit run measured 47.1 ms and 13,216,752 allocated
+bytes for incremental evaluation versus 119.1 ms and 49,997,744 bytes for the
+full oracle, across 80 edits including cached undo. It recorded 1,395 reused
+entries and 705 projections; cached snapshots contribute their recorded work
+counters again. Timings exclude JSON parity comparison and are not UI latency.
+
+Detailed storage results: import-evaluation-storage-2026-10-28.json.
+On the physical Redmi, the three shared writes allocated 93,377,120 /
+108,028,632 / 107,834,056 bytes before and 36,958,856 / 30,819,520 /
+30,450,912 bytes after (about 60% / 71% / 72% less). Times were 1,875 /
+1,849 / 1,918 ms before and 1,740 / 1,385 / 1,423 ms after. Update writes
+were about 25% faster in this batch; no general app-latency claim follows.
+Payload totals stayed exactly 7,048,606 / 7,164,336 / 7,299,771 bytes. The
+Android mixed-edit check took 58.9 ms and 15,309,520 allocated bytes versus
+194.2 ms and 57,091,376 bytes for full evaluation, with exact state parity.
+
+Physical checks all passed: nine dependency groups, two storage checks (six
+complete catalogue round trips), seven transaction/cache workflow assertions,
+41 attachment checks, 26 weapon metadata checks and 58 enhancement chooser
+checks, totaling 143 reported checks. The original diagnostic APK was verified
+on-device as 2eb6987973c43cdd12dfde2489234a924c66ad2208b7bfa2f1372cafdfa1c3fc.
+The updated diagnostic APK passed publisher identity/signature/archive and both
+ABI startup-binding checks, installed with adb install -r, cold-launched and
+reported com.grimlist.perftest, version 0.2.28/code 29. Its SHA-256 is:
+2815d4cf1f095ea9c5ddd6d94b7d622b83781a66cc633aee59036bbc683d8c65
+Path: artifacts/builds/android-performance/0.2.28/GrimList-Performance-0.2.28.apk
+Diagnostic publishing retains the existing four nullable warnings and Android
+symbol-reader fallback. Main app/installers were not replaced; the phone was
+returned to com.grimlist.mobile after tests. No source-data refresh occurred.
+
+Execution evidence: artifacts/distribution-evidence/import-evaluation-*.log
+and import-evaluation-phone-before / import-evaluation-phone-after.
+Final verification: all 561 full regression checks passed, zero failures. This
+includes exhaustive selection coverage for 1,329 selectable enhancement cards
+and 16,755 eligible bearer/card pairs, as well as real PDF extraction. Before
+the full run, all 17 focused import/dependency checks passed. Both final normal
+Windows and Android Debug frontend builds had zero warnings/errors, reusing the
+shared Debug projects built by the full regression wrapper. No code changes
+followed that full run. On-device SHA-256 also matched the exact diagnostic APK.
+The successful full wrapper removed its synthetic test database directory.
+
+Temporary output
+----------------
+Automatic approval review blocked native cleanup of these completed failed-run
+fixtures with "blocked by policy". No alternative deletion was attempted:
+.local/tests/1b1d6ddb-3b08-4f68-9c4d-1ec4e67b0640 — 71,477,437 bytes
+.local/tests/d08ccf2c-bce6-4f80-90cb-8992906c62ac — 278,528 bytes
+Total 71,755,965 bytes (68.43 MiB); they may be deleted manually. Previous blocked
+targets and live libraries were not touched. Successful focused/full wrappers
+removed their own GUID directories; catalogue benchmarks removed their own
+closed DBs. Small benchmark JSON reports remain in the before/after workload
+directories and are consolidated in the measurement file above.

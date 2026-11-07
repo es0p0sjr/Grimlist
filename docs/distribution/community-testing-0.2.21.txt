@@ -1,0 +1,41 @@
+GrimList 0.2.21 - community testing
+
+Install or update
+- Windows 10/11 x64: close GrimList and run GrimList-0.2.21-win-x64.msi.
+  The installer includes its own .NET runtime and is unsigned.
+- Android 11 or newer, ARM64/x64: open GrimList-Android-0.2.21.apk and allow
+  installation from your chosen file/browser app if Android requests it.
+  This sideload test build uses the existing development signing certificate.
+- Install over the previous version. Do not uninstall or clear app storage.
+  Check that diagnostics show version 0.2.21 (Android version code 22).
+
+Changes to try
+- Army rules use catalogue references, explicit faction scope and source
+  visibility. Tyranids should show Synapse and Shadow in the Warp. Check other
+  factions too, including rules recovered in libraries imported previously.
+- Enhancement eligibility is included in bundled data and recovered using
+  pinned source identity. Unrelated description changes do not block recovery.
+- Unit search matches imported keywords as well as names for every faction.
+  Examples include Damned for Chaos Space Marines and Harvester for Tyranids.
+- Each player's secondaries can be hidden and restored in the battle tracker.
+  Scores remain visible; hiding controls must not change battle data.
+- Open an existing army, review rules and enhancements, save and reopen it.
+  Try unit filters, equipment, attachments, undo/redo and roster validation.
+- On Android, check vertical battle scrolling and round changes. Round swipes
+  remain on the fixed heading; Previous/Next buttons remain available.
+
+Report a problem
+Use Report a Bug, include reproducible steps and expected/actual behavior, then
+review and save/share the report yourself. Nothing is submitted automatically.
+Include version 0.2.21, platform/device, faction and detachment, source revision,
+and a screenshot when helpful. Do not assume a numeric total proves completeness.
+
+Limits
+This is a community test build, not a claim that every rule or point value is
+current. The bundled data was regenerated from pinned cached sources; packaging
+does not download new rules. Ambiguous recovery remains unresolved.
+Windows installer lifecycle testing (install/repair/upgrade/uninstall) on an
+unrestricted test machine remains separate from package extraction/app checks.
+QR recognition uses an external phone scanner and still needs manual testing.
+Battle exchange shares player name, faction and disposition plus internal IDs;
+it does not share rosters or synchronize scores.

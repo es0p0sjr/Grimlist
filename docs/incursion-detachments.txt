@@ -1,0 +1,49 @@
+1,000-point detachment allowance - 2026-10-24
+
+User-requested behavior
+At exactly 1,000 points, allow selected detachments totaling at most 2 DP,
+or one detachment costing 3 DP. A 3-DP detachment must stand alone, even if
+the second detachment is free. This is not a general increase to a 3-DP budget.
+Unknown costs and unsupported game sizes remain unresolved. Faction/catalogue
+eligibility, duplicate selection and incompatible combinations remain enforced.
+Budgets at 2,000 and 3,000 points are unchanged.
+
+Implementation
+DetachmentRules.WithinBudget is shared by CanAdd and validation. Existing legacy
+single Detachment fields are supported through the usual Selected projection.
+Both platform setup/rules screens use shared budget summary text. Windows
+selection previews and remaining-budget hints recognize the exception, and long
+summary text wraps. Export explains the allowance instead of showing 3/2 DP.
+No army persistence, library/source data or versioned packages were changed.
+
+Verification
+- 20 targeted regressions passed with zero failures; wrapper exited 0 and
+  removed its synthetic run directory. Covers valid 3-DP singles, 2-DP combined
+  selections, invalid additions in both orders, zero-cost companions, duplicate
+  and unknown selections, unchanged other game sizes, export, legacy storage,
+  session rejection, save/reopen, undo/redo, applicability and dispositions.
+- Reference recovery checks all 416 bundled detachment definitions against
+  individual cost-based Incursion availability instead of the obsolete 370
+  selectable-detachment expectation. Existing coverage/recovery checks passed.
+- Windows Debug build and Android Release Compile target: zero warnings/errors.
+- Native WPF selector passed selection, blocked-addition and budget-hint checks.
+  Initial launcher wait expired after 45 seconds during first-run bootstrap;
+  the same process subsequently completed the checks, wrote PASS and exited.
+  This was not a second test run or a production-installer smoke check.
+- Android native UI/device execution and the full regression suite were not
+  rerun for this change. Existing 0.2.24 installers do not contain this update;
+  a future community package must receive a new version.
+
+Packaged on 2026-10-25 as 0.2.25 (Android code 26). See
+docs/distribution/release-0.2.25.txt for exact package validation and the full
+regression run's restored historical-fixture recheck.
+
+Evidence
+  artifacts/distribution-evidence/incursion-detachment-regression.log
+  artifacts/distribution-evidence/incursion-native.txt
+
+Cleanup
+Automatic approval review rejected removal of the disposable native UI test
+directory as "blocked by policy". No alternate deletion method was attempted.
+Manual cleanup target (34.4 MiB, not live user data):
+  .local/tests/incursion-ui-20261024

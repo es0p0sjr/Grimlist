@@ -1,0 +1,87 @@
+Source and build-storage cleanup - 16 October 2026
+
+Source maintenance
+- Removed six eagerly built indexes with no readers: DatasetSnapshot's
+  UnitsByFaction/UnitsByKeyword and ReferenceIndex's ById/ByEdition/ByCategory/
+  ByDetachment. Kept identity lookup, faction reference lookup, army candidates
+  and lazy coverage. Removed the unused Indexed.Category projection.
+- Removed OfficialSources.CheckUpdate, MainWindow.CloneArmy,
+  ArmyMutation.AvailabilityChanged, ArmySession.CalculationCount and
+  ArmySession.AvailabilityVersion. Official URL constants remain in use.
+- Removed unused ImportedUnitFacts name/faction fields and the intermediate
+  keyword set. Membership still normalizes and deduplicates keywords/category.
+- Removed MobileProbe.cs and its stale preparation timings from the host
+  performance harness. The harness retains shared command, persistence,
+  calculation and library-cache measurements. Real Android preparation and
+  presentation measurements remain in the isolated performance app.
+- Retired Inventory-StandaloneBuilds.py, which targeted absent 0.2.0 builds
+  and could overwrite historical inventories with empty results. Updated its
+  documentation; historical release evidence and inventories are preserved.
+- No changes to saved-data formats, legacy battle compatibility, recovery
+  resources, rules/points, signing identity or release versions.
+
+Build storage
+- Removed 248 validated scratch build trees, intermediate directories and
+  superseded APK/MSI files: 58,700,002,528 logical bytes (54.67 GiB).
+- Every target was resolved within .local or artifacts and checked for linked
+  paths; the build pass excluded databases and SQLite sidecars. All 248 targets
+  were confirmed absent afterward. The temporary cleanup script was removed.
+- Preserved the current Windows payload, Android APK, Windows MSI and root
+  0.2.21 delivery folder. Production APK/MSI SHA-256 values match the recorded
+  release-0.2.21.txt values before and after cleanup. No packages rebuilt or
+  distributed; the source changes belong to a future versioned release.
+- Preserved .local/grimlist.db, backups, sources, reference-sources, battles,
+  battle-exchanges, emulator environment, historical measurements, fixtures
+  and normal project bin/obj folders used for incremental builds.
+- Exact removed-path/byte inventory:
+  artifacts/repository-cleanup/obsolete-build-cleanup-results.json
+  Initial storage inventory and reviewed plan are beside that file.
+
+Remaining cleanup restriction
+Automatic approval review rejected a separate deletion command as
+"blocked by policy" before execution. No alternative deletion was attempted.
+These inspected synthetic test directories and obsolete test-package leftovers
+were left intact:
+  .local/tests/11403019-817e-4237-a4d5-bdea819d9bad
+  .local/tests/176adc6b-bb19-4021-b396-ba17e957ebc1
+  .local/tests/2282eb70-3412-4dea-8c30-610f9c867d53
+  .local/tests/919ccfd8-89c3-4f0d-ace7-a6d9bc00e148
+  .local/tests/a20e2de3-7ab3-4341-aa59-07c6d1e531ab
+  .local/tests/a89fa75a-a583-4c37-924e-a040970069aa
+  .local/tests/bf4d34fa-75eb-49a9-959d-117f17ee2bc8
+  .local/tests/e63970db-fb7a-4fea-88ea-66e6deaeb317
+  .local/.local/tests/2d8e8340-bca0-4e1a-a352-48b917c1326a
+  .local/.local/tests/eb1a976d-1a20-4e46-868e-8adb48976c1f
+  .local/stratagem-fix/test-final-source
+  artifacts/builds/android-standalone-test/0.2.0
+The last directory now contains its old README and resource-designer DLL;
+the obsolete APKs were removed in the completed build-cleanup pass.
+
+Follow-up: obsolete output inside src/GrimList.Mobile
+The user explicitly requested removal after a size audit found old versions
+inside the otherwise retained project bin/obj folders. APK metadata confirmed
+version 0.2.0 in StandalonePhone and version 0.1 in the nested publish folder.
+Automatic approval review rejected the deletion command as "blocked by policy"
+before execution. No alternate deletion method was attempted; all three remain:
+  src/GrimList.Mobile/bin/StandalonePhone
+  src/GrimList.Mobile/obj/StandalonePhone
+  src/GrimList.Mobile/bin/Release/net10.0-android/publish
+These account for approximately 791 MiB and are not included in removed totals.
+
+Verification
+- Windows Desktop Debug build: passed, zero warnings/errors.
+- Android Debug Compile target: passed, zero warnings/errors. Compilation only;
+  no new APK, device installation or native/UI execution claimed.
+- Performance harness Release build: passed, zero warnings/errors.
+- Test-BuildRetention.ps1: all 14 checks passed; its temporary fixture removed.
+- Full regression: 443 passed, zero failures, including the real PDF extractor
+  and 16,755 eligible enhancement/bearer pairs. The run built the initial cleanup
+  before the final unused ImportedUnitFacts field/intermediate-set removal.
+  Log: artifacts/repository-cleanup/cleanup-regression-2026-10-16.log
+- Final source rebuilt successfully, then all three keyword/library eligibility
+  regressions passed, including bundled CSM and Tyranid keyword discovery.
+  Log: artifacts/repository-cleanup/cleanup-final-projection-2026-10-16.log
+  Windows, Android and performance builds above also include this final removal.
+- Both regression runs' own synthetic directories were removed by the normal
+  Test-Regression.ps1 wrapper. The separate blocked historical cleanup remains
+  untouched. Removed-symbol scan found no remaining source/tool callers.

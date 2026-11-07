@@ -1,0 +1,45 @@
+{
+  "version": "0.2.12",
+  "files": [
+    {
+      "name": "GrimList-Android-0.2.12.apk",
+      "bytes": 102762629,
+      "sha256": "4f52a7234e28be6e891744844b9dd9f850fbfc55157c8c15277eb8fbe08748fd"
+    },
+    {
+      "name": "GrimList-Android-0.2.12.apk.sha256",
+      "bytes": 95,
+      "sha256": "1f3c50a016223e3967fdbd300e906c29181cf2637e70de017e62b2c394023e02"
+    },
+    {
+      "name": "GrimList-Android-0.2.12.zip",
+      "bytes": 101566843,
+      "sha256": "920ccfeee18a06ab4a0ed2da567748ed5ccbc23469581e35a90383e1a919a4db"
+    },
+    {
+      "name": "GrimList-Windows-0.2.12.inventory.json",
+      "bytes": 109477,
+      "sha256": "c5005334347cf7479007ee7f546c5f00729db13f5a65f166b0a296c04909e341"
+    },
+    {
+      "name": "GrimList-Windows-0.2.12.msi",
+      "bytes": 96817152,
+      "sha256": "975be8d326ed4a4de3ec1aa8d86181b01b891874c4262e7cbd6573e75dda166f"
+    },
+    {
+      "name": "GrimList-Windows-0.2.12.msi.sha256",
+      "bytes": 95,
+      "sha256": "4eec3c709b391d6684dffb9792d156ebd7ccfbb1f86509323f1d6fec82dabb75"
+    },
+    {
+      "name": "GrimList-Windows-0.2.12.zip",
+      "bytes": 96078620,
+      "sha256": "00dbc30655a5dd750feb72a0bc52905d4b7383837deb560b42579d30a41fe0a8"
+    },
+    {
+      "name": "README.txt",
+      "bytes": 920,
+      "sha256": "178fb09afb56e605ef60b1e3a1b3bdbca785214f2132660a658023a6098c0537"
+    }
+  ]
+}

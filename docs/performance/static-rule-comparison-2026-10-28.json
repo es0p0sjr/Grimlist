@@ -1,0 +1,157 @@
+{
+  "Runtime": ".NET 10.0.10",
+  "Configuration": "Release",
+  "Scope": "Static interpretation and stat comparison only; excludes persistence, complete evaluation and native UI",
+  "Source": {
+    "Name": "BSData \u00B7 All armies",
+    "Version": "cc1830fbfead059f8059ed6c7f8e73cd4c390908",
+    "Date": "2026-10-02",
+    "Url": "https://github.com/BSData/wh40k-11e/tree/cc1830fbfead059f8059ed6c7f8e73cd4c390908",
+    "ImportedAt": "",
+    "Edition": "11",
+    "ContentHash": "747db24bf29456f0606a937f794a7e7f33154e76116eff1506e9b0750ab5c045"
+  },
+  "ReleaseId": "grimlist-11e-2026.10.16.2",
+  "Sha256": "22B56CF021D15BEF1816FB276BB328ED41B745FB68A0F89FBC6C9882AD17D027",
+  "CompilerVersion": 1,
+  "Cards": 3684,
+  "Abilities": 2747,
+  "ColdMs": 479.5844,
+  "ColdAllocatedBytes": 52783944,
+  "Samples": [
+    {
+      "Compiled": false,
+      "Ms": 409.3694,
+      "AllocatedBytes": 48563192,
+      "Modifiers": 2651
+    },
+    {
+      "Compiled": true,
+      "Ms": 0.8683,
+      "AllocatedBytes": 117928,
+      "Modifiers": 2651
+    },
+    {
+      "Compiled": true,
+      "Ms": 0.6591,
+      "AllocatedBytes": 117928,
+      "Modifiers": 2651
+    },
+    {
+      "Compiled": false,
+      "Ms": 455.609,
+      "AllocatedBytes": 48562936,
+      "Modifiers": 2651
+    },
+    {
+      "Compiled": false,
+      "Ms": 486.6728,
+      "AllocatedBytes": 49218656,
+      "Modifiers": 2651
+    },
+    {
+      "Compiled": true,
+      "Ms": 0.8736,
+      "AllocatedBytes": 117928,
+      "Modifiers": 2651
+    },
+    {
+      "Compiled": true,
+      "Ms": 0.7222,
+      "AllocatedBytes": 117928,
+      "Modifiers": 2651
+    },
+    {
+      "Compiled": false,
+      "Ms": 470.2882,
+      "AllocatedBytes": 48562688,
+      "Modifiers": 2651
+    },
+    {
+      "Compiled": false,
+      "Ms": 386.2293,
+      "AllocatedBytes": 48564136,
+      "Modifiers": 2651
+    },
+    {
+      "Compiled": true,
+      "Ms": 0.9211,
+      "AllocatedBytes": 117928,
+      "Modifiers": 2651
+    },
+    {
+      "Compiled": true,
+      "Ms": 0.761,
+      "AllocatedBytes": 117928,
+      "Modifiers": 2651
+    },
+    {
+      "Compiled": false,
+      "Ms": 235.1943,
+      "AllocatedBytes": 48251304,
+      "Modifiers": 2651
+    }
+  ],
+  "Presentation": [
+    {
+      "Structural": false,
+      "Ms": 141.1112,
+      "AllocatedBytes": 25937880
+    },
+    {
+      "Structural": true,
+      "Ms": 8.9688,
+      "AllocatedBytes": 128
+    },
+    {
+      "Structural": true,
+      "Ms": 7.4914,
+      "AllocatedBytes": 40
+    },
+    {
+      "Structural": false,
+      "Ms": 109.5802,
+      "AllocatedBytes": 25910440
+    },
+    {
+      "Structural": false,
+      "Ms": 104.1814,
+      "AllocatedBytes": 25910440
+    },
+    {
+      "Structural": true,
+      "Ms": 8.6007,
+      "AllocatedBytes": 40
+    },
+    {
+      "Structural": true,
+      "Ms": 7.1913,
+      "AllocatedBytes": 40
+    },
+    {
+      "Structural": false,
+      "Ms": 103.1759,
+      "AllocatedBytes": 25910440
+    },
+    {
+      "Structural": false,
+      "Ms": 108.2501,
+      "AllocatedBytes": 25910440
+    },
+    {
+      "Structural": true,
+      "Ms": 7.4327,
+      "AllocatedBytes": 40
+    },
+    {
+      "Structural": true,
+      "Ms": 7.3593,
+      "AllocatedBytes": 40
+    },
+    {
+      "Structural": false,
+      "Ms": 93.5751,
+      "AllocatedBytes": 25910440
+    }
+  ]
+}

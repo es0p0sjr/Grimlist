@@ -1,0 +1,28 @@
+{
+  "Edition": "11",
+  "Adapter": "wahapedia",
+  "Evidence": "Previously recorded source URIs; fresh automated access and full-page parser acceptance remain unverified.",
+  "Factions": [
+    {
+      "Name": "Death Guard",
+      "SourceFactionId": "death-guard",
+      "SourceUri": "https://wahapedia.ru/wh40k11ed/factions/death-guard/",
+      "ManualHtml": ".local/reference-input/death-guard.html",
+      "ManualText": ".local/reference-input/death-guard.txt"
+    },
+    {
+      "Name": "Adepta Sororitas",
+      "SourceFactionId": "adepta-sororitas",
+      "SourceUri": "https://wahapedia.ru/wh40k11ed/factions/adepta-sororitas/",
+      "ManualHtml": ".local/reference-input/adepta-sororitas.html",
+      "ManualText": ".local/reference-input/adepta-sororitas.txt"
+    },
+    {
+      "Name": "World Eaters",
+      "SourceFactionId": "world-eaters",
+      "SourceUri": "https://wahapedia.ru/wh40k11ed/factions/world-eaters/",
+      "ManualHtml": ".local/reference-input/world-eaters.html",
+      "ManualText": ".local/reference-input/world-eaters.txt"
+    }
+  ]
+}

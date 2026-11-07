@@ -1,0 +1,67 @@
+GrimList 0.2.21 - community test release - 16 October 2026
+
+Files
+Windows: artifacts/installers/windows/0.2.21/GrimList-0.2.21-win-x64.msi
+  97,677,312 bytes
+  SHA-256 980d92f580ef4056001eff85aaddd502a1be536c66219549d2d1c2c9c554204a
+Android: artifacts/builds/android/0.2.21/GrimList-Android-0.2.21.apk
+  103,430,277 bytes; com.grimlist.mobile; version code 22
+  SHA-256 906953680d8e7bd48eb7b1202804fbd5675b65a6f5840e88b158eb0ec458667d
+Both packages have adjacent .sha256 files. Manifest: release-0.2.21-files.json.
+Tester instructions: community-testing-0.2.21.txt.
+
+Changes
+- Generic source-aware army-rule discovery, FactionContexts matching, recovery
+  for existing imports, and source/import/display completeness validation.
+- Enhancement eligibility bundled directly and recovered by semantic source
+  identity, independent of unrelated descriptive text.
+- Shared unit search includes imported keywords for all factions.
+- Per-player secondary Show/Hide controls in both battle trackers.
+- Bootstrap grimlist-11e-2026.10.16.2 uses the original pinned cached source;
+  no live source refresh was performed while packaging.
+
+Verified
+- The final implementation regression run passed 443 checks with zero failures
+  before packaging. Only version metadata changed for this release; the full
+  suite was not repeated for that metadata change. See army-rule-coverage-validation.txt.
+- Both publish paths passed the bundled candidate gate: 2,695 Enhancements and
+  army-rule source/import/display coverage for all 36 factions. The 102 source
+  Enhancement conditions already marked unsupported remain unsupported.
+- Android Standalone build, package identity/version, ZIP integrity, signature,
+  absence of database/development-file payload and ARM64/x64 native startup
+  bindings passed. Existing signing certificate SHA-256 retained:
+  9be9c191c53dc33ee955dcaedad94868fe4a4e6817a1fb30187ac0baf7f28f25
+- Exact delivered APK installed with adb install -r over 0.2.20 on the connected
+  Redmi 22101316UG (kjuoaevc95hagaz9): Success. Cold launch reported COLD/ok;
+  the app completed reference recovery and opened the existing saved army.
+  Installed version is 0.2.21/code 22; firstInstallTime remains 2026-10-13
+  23:15:00. No uninstall, storage clear or synthetic army/battle was performed.
+  The crash buffer had no entries since the start of this installation check.
+- Windows standalone build passed; executable version 0.2.21; private runtime
+  included. All 490 embedded MSI files match their recorded published hashes.
+- All 19 MSI checks passed, including 2,148 authored table rows and extraction.
+  All 13 extracted-app acceptance checks passed, including offline bootstrap,
+  army validation, reference cards, save/reopen and private runtime loading.
+- Native installer welcome/destination and Cancel/Finish checks passed without
+  installing the Windows application. Installer upgrade identity is unchanged.
+- Windows and both Android ABI payloads contain byte-identical Application
+  assemblies: 2cb2036f6f7049579a8b2159e23fa8b14fe95255cc920c9ad264e926fed0bd70.
+
+Storage and evidence
+Standard publish/installer scripts removed superseded 0.2.20 Android packages,
+Windows payload and MSI directories. One distributable APK remains for 0.2.21.
+Build-retention regression checks passed. This release's extracted payload and
+temporary Windows acceptance data were confirmed removed. Historical temporary
+directories whose cleanup was previously rejected remain as documented in
+army-rule-coverage-validation.txt; they were not retried here.
+Evidence: artifacts/distribution-evidence/0.2.21/.
+The earlier full regression and all-faction UI evidence remain at the paths in
+army-rule-coverage-validation.txt.
+
+Limits
+Windows MSI is unsigned; Android uses the established development signing key.
+Windows install/repair/upgrade/uninstall lifecycle remains unverified; extraction
+and welcome/cancel tests do not establish those lifecycle operations. Android
+verification here covers the in-place update and cold launch, not every faction
+or battle workflow on the physical device. Optical QR scanning and broader device
+coverage remain manual. No packages were uploaded or sent to testers.

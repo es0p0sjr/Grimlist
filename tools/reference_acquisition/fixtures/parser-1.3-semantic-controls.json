@@ -1,0 +1,26 @@
+{
+  "death-guard": {
+    "Snapshot": "wahapedia\\11e\\5e95f9e7cd328fb338098b0a47efc31bd982e52336e504aff4255894d0fad0e2\\7a33dada28098029417fdb3a9c2ab72ef62973ac482439098d6e67e1d76b57df-dec617d8e80bb2fa",
+    "SnapshotHash": "7a33dada28098029417fdb3a9c2ab72ef62973ac482439098d6e67e1d76b57df",
+    "Cards": 45,
+    "DocumentSemanticHash": "acd471e43dd676499b9650b077445427eaf2af3775c741d60a872a47dacfa87a"
+  },
+  "adepta-sororitas": {
+    "Snapshot": "wahapedia\\11e\\71adb2497baea773a27cc22ee103635714ae38643a6aeeac9c9968694cf2cd0b\\7aaa3e988f3ef81c26d462d21daae8b56c6998adfc49ece9dede51192c76a03e-e9722d3646867c1d",
+    "SnapshotHash": "7aaa3e988f3ef81c26d462d21daae8b56c6998adfc49ece9dede51192c76a03e",
+    "Cards": 36,
+    "DocumentSemanticHash": "354f9df6602ecea274a3ebafb1dc88cf49af5bca9b92fe5f458d91d0052a26e7"
+  },
+  "world-eaters": {
+    "Snapshot": "wahapedia\\11e\\8bbcb96670417d69647048ae82a04aae682ca736ebf9288ea6adfa33fe35011b\\20224f1ab27121e1f213995791868211d83e377fa0d9dfbb13f6b7e82f8d9d4e-0c800ce084ee5d2a",
+    "SnapshotHash": "20224f1ab27121e1f213995791868211d83e377fa0d9dfbb13f6b7e82f8d9d4e",
+    "Cards": 39,
+    "DocumentSemanticHash": "87a8693ee72d88b7ba8f5935c9b4e19fa65250c64230fb28363f53eff321344a"
+  },
+  "black-templars": {
+    "Snapshot": "wahapedia\\11e\\f26003260bef715c84f561480de7ddb6013a0c3405869a53fcd2439ab4737ff5\\0e66e99eb1fd3607bd412b62f193a4f2338eb935481912200c622b7d3ee443b4-f098e7165affe1d5",
+    "SnapshotHash": "0e66e99eb1fd3607bd412b62f193a4f2338eb935481912200c622b7d3ee443b4",
+    "Cards": 24,
+    "DocumentSemanticHash": "89ae362f7a79bd15e7919e8b48c36530d66c7fafe26c6aca88de4a50c7ed94c3"
+  }
+}

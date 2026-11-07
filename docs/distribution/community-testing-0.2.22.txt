@@ -1,0 +1,37 @@
+GrimList 0.2.22 - community testing
+
+Install or update
+- Windows 10/11 x64: close GrimList and run GrimList-0.2.22-win-x64.msi.
+  The installer includes its own .NET runtime and is unsigned.
+- Android 11 or newer, ARM64/x64: open GrimList-Android-0.2.22.apk and allow
+  installation from your chosen file/browser app if Android requests it.
+  This sideload build uses the same development signing certificate as 0.2.21.
+- Install over the previous version. Do not uninstall or clear app storage.
+  Check version 0.2.22 in diagnostics (Android version code 23).
+
+Changes to try
+- Open Ork Boyz equipment: source-confirmed included weapons should show zero
+  additional points instead of points unavailable. Check other units too.
+- Existing libraries receive source-matched equipment price recovery without
+  requiring a fresh import. Saved quantities and unit base points are preserved.
+- Partially mapped loadouts retain their supported choices and flag additional
+  weapons for manual review. A known price does not prove a loadout is legal.
+- Paid equipment retains its cost. Missing, conditional or ambiguous source
+  prices remain unresolved instead of silently becoming free.
+- Open an existing army, change equipment, undo/redo, save and reopen it.
+  Review totals and validation, including existing manual loadouts.
+
+Report a problem
+Use Report a Bug, include reproducible steps and expected/actual behavior, then
+review and save/share the report yourself. Nothing is submitted automatically.
+Include version 0.2.22, platform/device, faction, unit, source revision and a
+screenshot when helpful.
+
+Limits
+This is a community test build, not a claim that every rule or price is current.
+Equipment recovery uses pinned cached sources. Packaging did not download new
+rules or refresh the unit/profile bootstrap. Unknown prices remain explicit.
+No Android device was connected for this release's in-place update/cold-launch
+test; package and native startup checks are separate from device testing.
+Windows install/repair/upgrade/uninstall testing on an unrestricted test machine
+remains separate from package extraction/app checks.

@@ -1,0 +1,3308 @@
+{
+  "Device": "Redmi 22101316UG",
+  "Package": "com.grimlist.perftest",
+  "Version": "0.2.28",
+  "BenchmarkApkSha256": "ff37938df3409366695d2fa1fccc884eb3b670b808592315ff99df192d64c494",
+  "BeforeReport": "android-runtime-and-eldritch-2026-10-28.json",
+  "Method": "Same workload; 10 samples per operation/size; one warm-up excluded. Combined optimization and corrected metadata; not an isolated causal A/B. Startup zero is post-upgrade recovery, not first installation. Presentation samples omit warm-ups and pre-action resets.",
+  "Startup": [
+    {
+      "LibraryReadyMs": 24324.8566,
+      "MauiEntryToUsableMs": 24880.5694,
+      "ManagedBytes": 767037648,
+      "AllocatedBytes": 2184174424,
+      "NativeAllocatedBytes": 91426216,
+      "ExternalReadyMs": 26187.00000003446,
+      "AmStart": "Starting: Intent { cmp=com.grimlist.perftest/crc64c040c7e13546c831.MainActivity (has extras) }\nStatus: ok\nLaunchState: COLD\nActivity: com.grimlist.perftest/crc64c040c7e13546c831.MainActivity\nTotalTime: 1794\nWaitTime: 1801\nComplete\n"
+    },
+    {
+      "LibraryReadyMs": 3243.3523,
+      "MauiEntryToUsableMs": 3825.4775,
+      "ManagedBytes": 35166656,
+      "AllocatedBytes": 71043400,
+      "NativeAllocatedBytes": 83438128,
+      "ExternalReadyMs": 4719.000000040978,
+      "AmStart": "Starting: Intent { cmp=com.grimlist.perftest/crc64c040c7e13546c831.MainActivity (has extras) }\nStatus: ok\nLaunchState: COLD\nActivity: com.grimlist.perftest/crc64c040c7e13546c831.MainActivity\nTotalTime: 1510\nWaitTime: 1529\nComplete\n"
+    },
+    {
+      "LibraryReadyMs": 3112.4474,
+      "MauiEntryToUsableMs": 3702.2782,
+      "ManagedBytes": 34985328,
+      "AllocatedBytes": 70963768,
+      "NativeAllocatedBytes": 83468504,
+      "ExternalReadyMs": 4547.000000020489,
+      "AmStart": "Starting: Intent { cmp=com.grimlist.perftest/crc64c040c7e13546c831.MainActivity (has extras) }\nStatus: ok\nLaunchState: COLD\nActivity: com.grimlist.perftest/crc64c040c7e13546c831.MainActivity\nTotalTime: 1311\nWaitTime: 1327\nComplete\n"
+    },
+    {
+      "LibraryReadyMs": 3009.973,
+      "MauiEntryToUsableMs": 3572.2606,
+      "ManagedBytes": 35124576,
+      "AllocatedBytes": 71031888,
+      "NativeAllocatedBytes": 83284472,
+      "ExternalReadyMs": 4609.000000054948,
+      "AmStart": "Starting: Intent { cmp=com.grimlist.perftest/crc64c040c7e13546c831.MainActivity (has extras) }\nStatus: ok\nLaunchState: COLD\nActivity: com.grimlist.perftest/crc64c040c7e13546c831.MainActivity\nTotalTime: 1337\nWaitTime: 1347\nComplete\n"
+    },
+    {
+      "LibraryReadyMs": 3234.1523,
+      "MauiEntryToUsableMs": 3826.3819,
+      "ManagedBytes": 34987624,
+      "AllocatedBytes": 70945792,
+      "NativeAllocatedBytes": 82510792,
+      "ExternalReadyMs": 4687.000000034459,
+      "AmStart": "Starting: Intent { cmp=com.grimlist.perftest/crc64c040c7e13546c831.MainActivity (has extras) }\nStatus: ok\nLaunchState: COLD\nActivity: com.grimlist.perftest/crc64c040c7e13546c831.MainActivity\nTotalTime: 1490\nWaitTime: 1514\nComplete\n"
+    }
+  ],
+  "RepeatStartupMs": {
+    "Mean": 3731.59955,
+    "Median": 3763.87785,
+    "P95NearestRank": 3826.3819,
+    "Min": 3572.2606,
+    "Max": 3826.3819,
+    "Count": 4
+  },
+  "Comparisons": [
+    {
+      "Entries": 3,
+      "Operation": "add",
+      "BeforeUsableMs": {
+        "Mean": 156.38357,
+        "Median": 152.15055,
+        "P95NearestRank": 180.3596,
+        "Min": 143.1851,
+        "Max": 180.3596,
+        "Count": 10
+      },
+      "AfterUsableMs": {
+        "Mean": 135.98556,
+        "Median": 134.27859999999998,
+        "P95NearestRank": 157.3696,
+        "Min": 122.12,
+        "Max": 157.3696,
+        "Count": 10
+      },
+      "AfterCommandMs": {
+        "Mean": 82.42965,
+        "Median": 79.2824,
+        "P95NearestRank": 102.4763,
+        "Min": 75.7701,
+        "Max": 102.4763,
+        "Count": 10
+      },
+      "AfterMeanPresentationMs": {
+        "PrepareMs": 6.30743,
+        "RenderMs": 3.5322,
+        "FrameWaitMs": 43.70531
+      },
+      "BeforeMeanAllocatedBytes": 7037594.4,
+      "AfterMeanAllocatedBytes": 6229232
+    },
+    {
+      "Entries": 3,
+      "Operation": "equipment",
+      "BeforeUsableMs": {
+        "Mean": 164.78393,
+        "Median": 144.5861,
+        "P95NearestRank": 292.6013,
+        "Min": 124.5342,
+        "Max": 292.6013,
+        "Count": 10
+      },
+      "AfterUsableMs": {
+        "Mean": 153.0355,
+        "Median": 141.7837,
+        "P95NearestRank": 226.2627,
+        "Min": 113.0418,
+        "Max": 226.2627,
+        "Count": 10
+      },
+      "AfterCommandMs": {
+        "Mean": 114.56439999999999,
+        "Median": 107.14789999999999,
+        "P95NearestRank": 172.051,
+        "Min": 94.2467,
+        "Max": 172.051,
+        "Count": 10
+      },
+      "AfterMeanPresentationMs": {
+        "PrepareMs": 23.897,
+        "RenderMs": 2.4246000000000003,
+        "FrameWaitMs": 12.14075
+      },
+      "BeforeMeanAllocatedBytes": 5666432.8,
+      "AfterMeanAllocatedBytes": 6118686.4
+    },
+    {
+      "Entries": 3,
+      "Operation": "enhancement",
+      "BeforeUsableMs": {
+        "Mean": 287.9228,
+        "Median": 268.63075000000003,
+        "P95NearestRank": 367.0495,
+        "Min": 244.524,
+        "Max": 367.0495,
+        "Count": 10
+      },
+      "AfterUsableMs": {
+        "Mean": 224.39085,
+        "Median": 221.59975,
+        "P95NearestRank": 282.5457,
+        "Min": 188.0277,
+        "Max": 282.5457,
+        "Count": 10
+      },
+      "AfterCommandMs": {
+        "Mean": 132.2102,
+        "Median": 130.44075,
+        "P95NearestRank": 153.4939,
+        "Min": 119.9923,
+        "Max": 153.4939,
+        "Count": 10
+      },
+      "AfterMeanPresentationMs": {
+        "PrepareMs": 7.6489,
+        "RenderMs": 66.751,
+        "FrameWaitMs": 17.771530000000002
+      },
+      "BeforeMeanAllocatedBytes": 10404493.6,
+      "AfterMeanAllocatedBytes": 9922350.4
+    },
+    {
+      "Entries": 3,
+      "Operation": "attachment",
+      "BeforeUsableMs": {
+        "Mean": 882.67039,
+        "Median": 875.5257,
+        "P95NearestRank": 962.5805,
+        "Min": 816.3876,
+        "Max": 962.5805,
+        "Count": 10
+      },
+      "AfterUsableMs": {
+        "Mean": 704.11419,
+        "Median": 703.30485,
+        "P95NearestRank": 800.0082,
+        "Min": 616.723,
+        "Max": 800.0082,
+        "Count": 10
+      },
+      "AfterCommandMs": {
+        "Mean": 187.18414,
+        "Median": 185.8145,
+        "P95NearestRank": 201.6279,
+        "Min": 176.6043,
+        "Max": 201.6279,
+        "Count": 10
+      },
+      "AfterMeanPresentationMs": {
+        "PrepareMs": 52.73938,
+        "RenderMs": 421.74665,
+        "FrameWaitMs": 42.43488
+      },
+      "BeforeMeanAllocatedBytes": 37568068.8,
+      "AfterMeanAllocatedBytes": 31851640
+    },
+    {
+      "Entries": 3,
+      "Operation": "detachment",
+      "BeforeUsableMs": {
+        "Mean": 366.42005,
+        "Median": 361.63874999999996,
+        "P95NearestRank": 468.1593,
+        "Min": 287.8757,
+        "Max": 468.1593,
+        "Count": 10
+      },
+      "AfterUsableMs": {
+        "Mean": 321.94245,
+        "Median": 310.7725,
+        "P95NearestRank": 378.8553,
+        "Min": 250.174,
+        "Max": 378.8553,
+        "Count": 10
+      },
+      "AfterCommandMs": {
+        "Mean": 103.85833,
+        "Median": 124.13595000000001,
+        "P95NearestRank": 163.3529,
+        "Min": 39.9993,
+        "Max": 163.3529,
+        "Count": 10
+      },
+      "AfterMeanPresentationMs": {
+        "PrepareMs": 22.06797,
+        "RenderMs": 61.29978,
+        "FrameWaitMs": 134.7038
+      },
+      "BeforeMeanAllocatedBytes": 6259860,
+      "AfterMeanAllocatedBytes": 5447722.4
+    },
+    {
+      "Entries": 3,
+      "Operation": "home",
+      "BeforeUsableMs": {
+        "Mean": 127.03845,
+        "Median": 92.57675,
+        "P95NearestRank": 235.9901,
+        "Min": 87.642,
+        "Max": 235.9901,
+        "Count": 10
+      },
+      "AfterUsableMs": {
+        "Mean": 140.22378,
+        "Median": 95.76685,
+        "P95NearestRank": 309.3153,
+        "Min": 90.6132,
+        "Max": 309.3153,
+        "Count": 10
+      },
+      "AfterCommandMs": {
+        "Mean": 5.64351,
+        "Median": 5.17225,
+        "P95NearestRank": 9.6898,
+        "Min": 4.0774,
+        "Max": 9.6898,
+        "Count": 10
+      },
+      "AfterMeanPresentationMs": {
+        "PrepareMs": 34.23754,
+        "RenderMs": 80.42832,
+        "FrameWaitMs": 19.90553
+      },
+      "BeforeMeanAllocatedBytes": 1658454.4,
+      "AfterMeanAllocatedBytes": 1404843.2
+    },
+    {
+      "Entries": 20,
+      "Operation": "add",
+      "BeforeUsableMs": {
+        "Mean": 439.46231,
+        "Median": 443.85275,
+        "P95NearestRank": 471.8619,
+        "Min": 390.7925,
+        "Max": 471.8619,
+        "Count": 10
+      },
+      "AfterUsableMs": {
+        "Mean": 375.08153,
+        "Median": 368.59655,
+        "P95NearestRank": 434.3273,
+        "Min": 335.1951,
+        "Max": 434.3273,
+        "Count": 10
+      },
+      "AfterCommandMs": {
+        "Mean": 345.60789,
+        "Median": 339.68345,
+        "P95NearestRank": 389.748,
+        "Min": 310.1086,
+        "Max": 389.748,
+        "Count": 10
+      },
+      "AfterMeanPresentationMs": {
+        "PrepareMs": 12.57919,
+        "RenderMs": 3.69937,
+        "FrameWaitMs": 13.1852
+      },
+      "BeforeMeanAllocatedBytes": 26147682.4,
+      "AfterMeanAllocatedBytes": 25645835.2
+    },
+    {
+      "Entries": 20,
+      "Operation": "equipment",
+      "BeforeUsableMs": {
+        "Mean": 444.08898,
+        "Median": 416.9805,
+        "P95NearestRank": 724.7416,
+        "Min": 337.8313,
+        "Max": 724.7416,
+        "Count": 10
+      },
+      "AfterUsableMs": {
+        "Mean": 393.00084,
+        "Median": 365.69505000000004,
+        "P95NearestRank": 498.2999,
+        "Min": 339.1254,
+        "Max": 498.2999,
+        "Count": 10
+      },
+      "AfterCommandMs": {
+        "Mean": 345.50513,
+        "Median": 334.2578,
+        "P95NearestRank": 444.9617,
+        "Min": 317.1326,
+        "Max": 444.9617,
+        "Count": 10
+      },
+      "AfterMeanPresentationMs": {
+        "PrepareMs": 31.79253,
+        "RenderMs": 2.505390000000002,
+        "FrameWaitMs": 13.18835
+      },
+      "BeforeMeanAllocatedBytes": 25117209.6,
+      "AfterMeanAllocatedBytes": 25007783.2
+    },
+    {
+      "Entries": 20,
+      "Operation": "enhancement",
+      "BeforeUsableMs": {
+        "Mean": 896.21373,
+        "Median": 838.89455,
+        "P95NearestRank": 1245.228,
+        "Min": 743.731,
+        "Max": 1245.228,
+        "Count": 10
+      },
+      "AfterUsableMs": {
+        "Mean": 608.3628,
+        "Median": 591.98915,
+        "P95NearestRank": 734.7809,
+        "Min": 546.0416,
+        "Max": 734.7809,
+        "Count": 10
+      },
+      "AfterCommandMs": {
+        "Mean": 514.81804,
+        "Median": 502.6471,
+        "P95NearestRank": 629.6307,
+        "Min": 463.2376,
+        "Max": 629.6307,
+        "Count": 10
+      },
+      "AfterMeanPresentationMs": {
+        "PrepareMs": 18.26735,
+        "RenderMs": 49.76891,
+        "FrameWaitMs": 25.49878
+      },
+      "BeforeMeanAllocatedBytes": 41660885.6,
+      "AfterMeanAllocatedBytes": 39672059.2
+    },
+    {
+      "Entries": 20,
+      "Operation": "attachment",
+      "BeforeUsableMs": {
+        "Mean": 2535.0975,
+        "Median": 2378.66775,
+        "P95NearestRank": 3639.4526,
+        "Min": 2196.6766,
+        "Max": 3639.4526,
+        "Count": 10
+      },
+      "AfterUsableMs": {
+        "Mean": 2034.45748,
+        "Median": 1989.6271000000002,
+        "P95NearestRank": 2332.0528,
+        "Min": 1839.611,
+        "Max": 2332.0528,
+        "Count": 10
+      },
+      "AfterCommandMs": {
+        "Mean": 716.43301,
+        "Median": 693.95775,
+        "P95NearestRank": 834.386,
+        "Min": 642.0091,
+        "Max": 834.386,
+        "Count": 10
+      },
+      "AfterMeanPresentationMs": {
+        "PrepareMs": 240.73714,
+        "RenderMs": 1013.31792,
+        "FrameWaitMs": 63.95817000000002
+      },
+      "BeforeMeanAllocatedBytes": 121556077.6,
+      "AfterMeanAllocatedBytes": 113315755.2
+    },
+    {
+      "Entries": 20,
+      "Operation": "detachment",
+      "BeforeUsableMs": {
+        "Mean": 661.7136,
+        "Median": 622.5163,
+        "P95NearestRank": 1075.2073,
+        "Min": 557.047,
+        "Max": 1075.2073,
+        "Count": 10
+      },
+      "AfterUsableMs": {
+        "Mean": 590.07554,
+        "Median": 606.0747,
+        "P95NearestRank": 639.3282,
+        "Min": 500.0454,
+        "Max": 639.3282,
+        "Count": 10
+      },
+      "AfterCommandMs": {
+        "Mean": 323.69012,
+        "Median": 320.1898,
+        "P95NearestRank": 341.1,
+        "Min": 303.4867,
+        "Max": 341.1,
+        "Count": 10
+      },
+      "AfterMeanPresentationMs": {
+        "PrepareMs": 11.98566,
+        "RenderMs": 90.93285,
+        "FrameWaitMs": 163.45577
+      },
+      "BeforeMeanAllocatedBytes": 20264096.8,
+      "AfterMeanAllocatedBytes": 19881394.4
+    },
+    {
+      "Entries": 20,
+      "Operation": "home",
+      "BeforeUsableMs": {
+        "Mean": 151.20107000000002,
+        "Median": 91.01025,
+        "P95NearestRank": 269.3713,
+        "Min": 87.0396,
+        "Max": 269.3713,
+        "Count": 10
+      },
+      "AfterUsableMs": {
+        "Mean": 142.35255,
+        "Median": 90.5235,
+        "P95NearestRank": 594.8666,
+        "Min": 88.1676,
+        "Max": 594.8666,
+        "Count": 10
+      },
+      "AfterCommandMs": {
+        "Mean": 5.77431,
+        "Median": 5.1686,
+        "P95NearestRank": 8.6037,
+        "Min": 4.3957,
+        "Max": 8.6037,
+        "Count": 10
+      },
+      "AfterMeanPresentationMs": {
+        "PrepareMs": 52.1209,
+        "RenderMs": 65.34255,
+        "FrameWaitMs": 19.106829999999995
+      },
+      "BeforeMeanAllocatedBytes": 1738332.8,
+      "AfterMeanAllocatedBytes": 276201.6
+    }
+  ],
+  "Samples": [
+    {
+      "Operation": "add",
+      "Entries": 3,
+      "CommandMs": 83.077,
+      "UsableMs": 134.2345,
+      "AllocatedBytes": 8269736,
+      "ManagedBytes": 37042912
+    },
+    {
+      "Operation": "add",
+      "Entries": 3,
+      "CommandMs": 81.7673,
+      "UsableMs": 127.8956,
+      "AllocatedBytes": 4154144,
+      "ManagedBytes": 37599240
+    },
+    {
+      "Operation": "add",
+      "Entries": 3,
+      "CommandMs": 80.0332,
+      "UsableMs": 137.6787,
+      "AllocatedBytes": 8285984,
+      "ManagedBytes": 38247848
+    },
+    {
+      "Operation": "add",
+      "Entries": 3,
+      "CommandMs": 78.3657,
+      "UsableMs": 134.3227,
+      "AllocatedBytes": 4147664,
+      "ManagedBytes": 38815112
+    },
+    {
+      "Operation": "add",
+      "Entries": 3,
+      "CommandMs": 88.6996,
+      "UsableMs": 143.9451,
+      "AllocatedBytes": 8268400,
+      "ManagedBytes": 39450416
+    },
+    {
+      "Operation": "add",
+      "Entries": 3,
+      "CommandMs": 102.4763,
+      "UsableMs": 157.3696,
+      "AllocatedBytes": 4277232,
+      "ManagedBytes": 37030160
+    },
+    {
+      "Operation": "add",
+      "Entries": 3,
+      "CommandMs": 77.6283,
+      "UsableMs": 129.4397,
+      "AllocatedBytes": 8293120,
+      "ManagedBytes": 37716920
+    },
+    {
+      "Operation": "add",
+      "Entries": 3,
+      "CommandMs": 75.7701,
+      "UsableMs": 132.8614,
+      "AllocatedBytes": 4159240,
+      "ManagedBytes": 38241776
+    },
+    {
+      "Operation": "add",
+      "Entries": 3,
+      "CommandMs": 77.9474,
+      "UsableMs": 139.9883,
+      "AllocatedBytes": 8280400,
+      "ManagedBytes": 38870384
+    },
+    {
+      "Operation": "add",
+      "Entries": 3,
+      "CommandMs": 78.5316,
+      "UsableMs": 122.12,
+      "AllocatedBytes": 4156400,
+      "ManagedBytes": 39427320
+    },
+    {
+      "Operation": "equipment",
+      "Entries": 3,
+      "CommandMs": 112.2695,
+      "UsableMs": 136.1231,
+      "AllocatedBytes": 8238032,
+      "ManagedBytes": 45415984
+    },
+    {
+      "Operation": "equipment",
+      "Entries": 3,
+      "CommandMs": 94.2467,
+      "UsableMs": 113.0418,
+      "AllocatedBytes": 4093952,
+      "ManagedBytes": 47971584
+    },
+    {
+      "Operation": "equipment",
+      "Entries": 3,
+      "CommandMs": 105.3608,
+      "UsableMs": 196.4609,
+      "AllocatedBytes": 8735448,
+      "ManagedBytes": 51087992
+    },
+    {
+      "Operation": "equipment",
+      "Entries": 3,
+      "CommandMs": 105.2828,
+      "UsableMs": 128.103,
+      "AllocatedBytes": 4113432,
+      "ManagedBytes": 53674032
+    },
+    {
+      "Operation": "equipment",
+      "Entries": 3,
+      "CommandMs": 172.051,
+      "UsableMs": 189.3104,
+      "AllocatedBytes": 7153728,
+      "ManagedBytes": 56275984
+    },
+    {
+      "Operation": "equipment",
+      "Entries": 3,
+      "CommandMs": 98.8523,
+      "UsableMs": 114.3969,
+      "AllocatedBytes": 4110120,
+      "ManagedBytes": 55369296
+    },
+    {
+      "Operation": "equipment",
+      "Entries": 3,
+      "CommandMs": 102.9018,
+      "UsableMs": 153.8372,
+      "AllocatedBytes": 8249432,
+      "ManagedBytes": 57991448
+    },
+    {
+      "Operation": "equipment",
+      "Entries": 3,
+      "CommandMs": 108.935,
+      "UsableMs": 125.3747,
+      "AllocatedBytes": 4101592,
+      "ManagedBytes": 60558072
+    },
+    {
+      "Operation": "equipment",
+      "Entries": 3,
+      "CommandMs": 121.3022,
+      "UsableMs": 226.2627,
+      "AllocatedBytes": 8269160,
+      "ManagedBytes": 63219448
+    },
+    {
+      "Operation": "equipment",
+      "Entries": 3,
+      "CommandMs": 124.4419,
+      "UsableMs": 147.4443,
+      "AllocatedBytes": 4121968,
+      "ManagedBytes": 65833280
+    },
+    {
+      "Operation": "enhancement",
+      "Entries": 3,
+      "CommandMs": 153.4939,
+      "UsableMs": 225.7542,
+      "AllocatedBytes": 12405912,
+      "ManagedBytes": 71135504
+    },
+    {
+      "Operation": "enhancement",
+      "Entries": 3,
+      "CommandMs": 149.9735,
+      "UsableMs": 236.8039,
+      "AllocatedBytes": 8253448,
+      "ManagedBytes": 72140656
+    },
+    {
+      "Operation": "enhancement",
+      "Entries": 3,
+      "CommandMs": 119.9923,
+      "UsableMs": 188.0277,
+      "AllocatedBytes": 8242568,
+      "ManagedBytes": 67410376
+    },
+    {
+      "Operation": "enhancement",
+      "Entries": 3,
+      "CommandMs": 123.4175,
+      "UsableMs": 209.924,
+      "AllocatedBytes": 12390816,
+      "ManagedBytes": 68515152
+    },
+    {
+      "Operation": "enhancement",
+      "Entries": 3,
+      "CommandMs": 122.5016,
+      "UsableMs": 233.4772,
+      "AllocatedBytes": 12519624,
+      "ManagedBytes": 70104016
+    },
+    {
+      "Operation": "enhancement",
+      "Entries": 3,
+      "CommandMs": 132.2562,
+      "UsableMs": 218.6482,
+      "AllocatedBytes": 8258536,
+      "ManagedBytes": 70759480
+    },
+    {
+      "Operation": "enhancement",
+      "Entries": 3,
+      "CommandMs": 122.1664,
+      "UsableMs": 209.7828,
+      "AllocatedBytes": 8261144,
+      "ManagedBytes": 71822872
+    },
+    {
+      "Operation": "enhancement",
+      "Entries": 3,
+      "CommandMs": 133.7353,
+      "UsableMs": 282.5457,
+      "AllocatedBytes": 12386816,
+      "ManagedBytes": 73116096
+    },
+    {
+      "Operation": "enhancement",
+      "Entries": 3,
+      "CommandMs": 128.6253,
+      "UsableMs": 214.3935,
+      "AllocatedBytes": 8259160,
+      "ManagedBytes": 73893928
+    },
+    {
+      "Operation": "enhancement",
+      "Entries": 3,
+      "CommandMs": 135.94,
+      "UsableMs": 224.5513,
+      "AllocatedBytes": 8245480,
+      "ManagedBytes": 74966280
+    },
+    {
+      "Operation": "attachment",
+      "Entries": 3,
+      "CommandMs": 185.9987,
+      "UsableMs": 673.3092,
+      "AllocatedBytes": 33685552,
+      "ManagedBytes": 84306304
+    },
+    {
+      "Operation": "attachment",
+      "Entries": 3,
+      "CommandMs": 190.5323,
+      "UsableMs": 696.9366,
+      "AllocatedBytes": 29373248,
+      "ManagedBytes": 88586416
+    },
+    {
+      "Operation": "attachment",
+      "Entries": 3,
+      "CommandMs": 193.9089,
+      "UsableMs": 800.0082,
+      "AllocatedBytes": 33609280,
+      "ManagedBytes": 94720880
+    },
+    {
+      "Operation": "attachment",
+      "Entries": 3,
+      "CommandMs": 176.6043,
+      "UsableMs": 616.723,
+      "AllocatedBytes": 33490880,
+      "ManagedBytes": 81186976
+    },
+    {
+      "Operation": "attachment",
+      "Entries": 3,
+      "CommandMs": 182.5621,
+      "UsableMs": 620.6605,
+      "AllocatedBytes": 29318136,
+      "ManagedBytes": 85466640
+    },
+    {
+      "Operation": "attachment",
+      "Entries": 3,
+      "CommandMs": 180.9052,
+      "UsableMs": 709.6731,
+      "AllocatedBytes": 33500960,
+      "ManagedBytes": 91553832
+    },
+    {
+      "Operation": "attachment",
+      "Entries": 3,
+      "CommandMs": 185.6303,
+      "UsableMs": 668.9679,
+      "AllocatedBytes": 29349904,
+      "ManagedBytes": 95591144
+    },
+    {
+      "Operation": "attachment",
+      "Entries": 3,
+      "CommandMs": 201.6279,
+      "UsableMs": 748.8975,
+      "AllocatedBytes": 33489872,
+      "ManagedBytes": 101947760
+    },
+    {
+      "Operation": "attachment",
+      "Entries": 3,
+      "CommandMs": 182.1311,
+      "UsableMs": 710.3499,
+      "AllocatedBytes": 29200768,
+      "ManagedBytes": 106026176
+    },
+    {
+      "Operation": "attachment",
+      "Entries": 3,
+      "CommandMs": 191.9406,
+      "UsableMs": 795.616,
+      "AllocatedBytes": 33497800,
+      "ManagedBytes": 112361272
+    },
+    {
+      "Operation": "detachment",
+      "Entries": 3,
+      "CommandMs": 44.6343,
+      "UsableMs": 299.5867,
+      "AllocatedBytes": 4210824,
+      "ManagedBytes": 116019696
+    },
+    {
+      "Operation": "detachment",
+      "Entries": 3,
+      "CommandMs": 163.3529,
+      "UsableMs": 341.1375,
+      "AllocatedBytes": 4147408,
+      "ManagedBytes": 117470200
+    },
+    {
+      "Operation": "detachment",
+      "Entries": 3,
+      "CommandMs": 114.415,
+      "UsableMs": 295.5451,
+      "AllocatedBytes": 4258192,
+      "ManagedBytes": 91267144
+    },
+    {
+      "Operation": "detachment",
+      "Entries": 3,
+      "CommandMs": 134.3493,
+      "UsableMs": 364.5979,
+      "AllocatedBytes": 8289864,
+      "ManagedBytes": 93553216
+    },
+    {
+      "Operation": "detachment",
+      "Entries": 3,
+      "CommandMs": 39.9993,
+      "UsableMs": 250.174,
+      "AllocatedBytes": 4170912,
+      "ManagedBytes": 94426704
+    },
+    {
+      "Operation": "detachment",
+      "Entries": 3,
+      "CommandMs": 133.8569,
+      "UsableMs": 371.712,
+      "AllocatedBytes": 8456624,
+      "ManagedBytes": 97265664
+    },
+    {
+      "Operation": "detachment",
+      "Entries": 3,
+      "CommandMs": 57.3066,
+      "UsableMs": 296.271,
+      "AllocatedBytes": 4178912,
+      "ManagedBytes": 97925824
+    },
+    {
+      "Operation": "detachment",
+      "Entries": 3,
+      "CommandMs": 140.6311,
+      "UsableMs": 301.777,
+      "AllocatedBytes": 4144792,
+      "ManagedBytes": 99271296
+    },
+    {
+      "Operation": "detachment",
+      "Entries": 3,
+      "CommandMs": 139.2551,
+      "UsableMs": 378.8553,
+      "AllocatedBytes": 8453808,
+      "ManagedBytes": 101557928
+    },
+    {
+      "Operation": "detachment",
+      "Entries": 3,
+      "CommandMs": 70.7828,
+      "UsableMs": 319.768,
+      "AllocatedBytes": 4165888,
+      "ManagedBytes": 102637120
+    },
+    {
+      "Operation": "home",
+      "Entries": 3,
+      "CommandMs": 5.111,
+      "UsableMs": 90.8317,
+      "AllocatedBytes": 0,
+      "ManagedBytes": 140205640
+    },
+    {
+      "Operation": "home",
+      "Entries": 3,
+      "CommandMs": 5.7796,
+      "UsableMs": 193.9966,
+      "AllocatedBytes": 4151072,
+      "ManagedBytes": 142522760
+    },
+    {
+      "Operation": "home",
+      "Entries": 3,
+      "CommandMs": 4.5956,
+      "UsableMs": 93.8313,
+      "AllocatedBytes": 0,
+      "ManagedBytes": 143368880
+    },
+    {
+      "Operation": "home",
+      "Entries": 3,
+      "CommandMs": 4.0774,
+      "UsableMs": 309.3153,
+      "AllocatedBytes": 1549200,
+      "ManagedBytes": 108200104
+    },
+    {
+      "Operation": "home",
+      "Entries": 3,
+      "CommandMs": 6.566,
+      "UsableMs": 90.6132,
+      "AllocatedBytes": 0,
+      "ManagedBytes": 109032344
+    },
+    {
+      "Operation": "home",
+      "Entries": 3,
+      "CommandMs": 4.2304,
+      "UsableMs": 162.9704,
+      "AllocatedBytes": 4175408,
+      "ManagedBytes": 111759496
+    },
+    {
+      "Operation": "home",
+      "Entries": 3,
+      "CommandMs": 6.9217,
+      "UsableMs": 95.6276,
+      "AllocatedBytes": 0,
+      "ManagedBytes": 112552376
+    },
+    {
+      "Operation": "home",
+      "Entries": 3,
+      "CommandMs": 5.2335,
+      "UsableMs": 91.2837,
+      "AllocatedBytes": 0,
+      "ManagedBytes": 113699144
+    },
+    {
+      "Operation": "home",
+      "Entries": 3,
+      "CommandMs": 4.2301,
+      "UsableMs": 177.8619,
+      "AllocatedBytes": 4172752,
+      "ManagedBytes": 116024968
+    },
+    {
+      "Operation": "home",
+      "Entries": 3,
+      "CommandMs": 9.6898,
+      "UsableMs": 95.9061,
+      "AllocatedBytes": 0,
+      "ManagedBytes": 116747296
+    },
+    {
+      "Operation": "add",
+      "Entries": 20,
+      "CommandMs": 388.6317,
+      "UsableMs": 422.6673,
+      "AllocatedBytes": 24930752,
+      "ManagedBytes": 123038464
+    },
+    {
+      "Operation": "add",
+      "Entries": 20,
+      "CommandMs": 364.4025,
+      "UsableMs": 391.3732,
+      "AllocatedBytes": 24751472,
+      "ManagedBytes": 124292304
+    },
+    {
+      "Operation": "add",
+      "Entries": 20,
+      "CommandMs": 353.7369,
+      "UsableMs": 379.9658,
+      "AllocatedBytes": 24740944,
+      "ManagedBytes": 125574568
+    },
+    {
+      "Operation": "add",
+      "Entries": 20,
+      "CommandMs": 363.1408,
+      "UsableMs": 392.3806,
+      "AllocatedBytes": 24768424,
+      "ManagedBytes": 126814256
+    },
+    {
+      "Operation": "add",
+      "Entries": 20,
+      "CommandMs": 322.8342,
+      "UsableMs": 357.173,
+      "AllocatedBytes": 28907544,
+      "ManagedBytes": 128240040
+    },
+    {
+      "Operation": "add",
+      "Entries": 20,
+      "CommandMs": 325.63,
+      "UsableMs": 357.2273,
+      "AllocatedBytes": 24795944,
+      "ManagedBytes": 129472936
+    },
+    {
+      "Operation": "add",
+      "Entries": 20,
+      "CommandMs": 389.748,
+      "UsableMs": 434.3273,
+      "AllocatedBytes": 25187856,
+      "ManagedBytes": 131090968
+    },
+    {
+      "Operation": "add",
+      "Entries": 20,
+      "CommandMs": 318.1819,
+      "UsableMs": 340.3726,
+      "AllocatedBytes": 24765976,
+      "ManagedBytes": 132357440
+    },
+    {
+      "Operation": "add",
+      "Entries": 20,
+      "CommandMs": 319.6643,
+      "UsableMs": 340.1331,
+      "AllocatedBytes": 24727176,
+      "ManagedBytes": 133636288
+    },
+    {
+      "Operation": "add",
+      "Entries": 20,
+      "CommandMs": 310.1086,
+      "UsableMs": 335.1951,
+      "AllocatedBytes": 28882264,
+      "ManagedBytes": 135094488
+    },
+    {
+      "Operation": "equipment",
+      "Entries": 20,
+      "CommandMs": 335.1076,
+      "UsableMs": 459.8304,
+      "AllocatedBytes": 24784592,
+      "ManagedBytes": 142288304
+    },
+    {
+      "Operation": "equipment",
+      "Entries": 20,
+      "CommandMs": 320.91,
+      "UsableMs": 347.9526,
+      "AllocatedBytes": 24762336,
+      "ManagedBytes": 145778328
+    },
+    {
+      "Operation": "equipment",
+      "Entries": 20,
+      "CommandMs": 331.6258,
+      "UsableMs": 360.557,
+      "AllocatedBytes": 24766936,
+      "ManagedBytes": 149311536
+    },
+    {
+      "Operation": "equipment",
+      "Entries": 20,
+      "CommandMs": 333.408,
+      "UsableMs": 360.2699,
+      "AllocatedBytes": 24781328,
+      "ManagedBytes": 152838096
+    },
+    {
+      "Operation": "equipment",
+      "Entries": 20,
+      "CommandMs": 360.571,
+      "UsableMs": 498.2999,
+      "AllocatedBytes": 25117808,
+      "ManagedBytes": 156702392
+    },
+    {
+      "Operation": "equipment",
+      "Entries": 20,
+      "CommandMs": 343.1322,
+      "UsableMs": 370.8331,
+      "AllocatedBytes": 24759064,
+      "ManagedBytes": 160225136
+    },
+    {
+      "Operation": "equipment",
+      "Entries": 20,
+      "CommandMs": 346.6953,
+      "UsableMs": 373.8531,
+      "AllocatedBytes": 24748040,
+      "ManagedBytes": 163758336
+    },
+    {
+      "Operation": "equipment",
+      "Entries": 20,
+      "CommandMs": 444.9617,
+      "UsableMs": 475.067,
+      "AllocatedBytes": 26883024,
+      "ManagedBytes": 169426232
+    },
+    {
+      "Operation": "equipment",
+      "Entries": 20,
+      "CommandMs": 317.1326,
+      "UsableMs": 339.1254,
+      "AllocatedBytes": 24732632,
+      "ManagedBytes": 121765952
+    },
+    {
+      "Operation": "equipment",
+      "Entries": 20,
+      "CommandMs": 321.5071,
+      "UsableMs": 344.22,
+      "AllocatedBytes": 24742072,
+      "ManagedBytes": 125288072
+    },
+    {
+      "Operation": "enhancement",
+      "Entries": 20,
+      "CommandMs": 629.6307,
+      "UsableMs": 734.7809,
+      "AllocatedBytes": 41705320,
+      "ManagedBytes": 134069384
+    },
+    {
+      "Operation": "enhancement",
+      "Entries": 20,
+      "CommandMs": 463.2376,
+      "UsableMs": 614.9708,
+      "AllocatedBytes": 41280256,
+      "ManagedBytes": 137638736
+    },
+    {
+      "Operation": "enhancement",
+      "Entries": 20,
+      "CommandMs": 465.1163,
+      "UsableMs": 546.0416,
+      "AllocatedBytes": 41271568,
+      "ManagedBytes": 140433136
+    },
+    {
+      "Operation": "enhancement",
+      "Entries": 20,
+      "CommandMs": 491.0264,
+      "UsableMs": 566.7126,
+      "AllocatedBytes": 37089656,
+      "ManagedBytes": 143522848
+    },
+    {
+      "Operation": "enhancement",
+      "Entries": 20,
+      "CommandMs": 584.3726,
+      "UsableMs": 692.1185,
+      "AllocatedBytes": 41245784,
+      "ManagedBytes": 146778192
+    },
+    {
+      "Operation": "enhancement",
+      "Entries": 20,
+      "CommandMs": 522.3926,
+      "UsableMs": 598.151,
+      "AllocatedBytes": 37120744,
+      "ManagedBytes": 150198480
+    },
+    {
+      "Operation": "enhancement",
+      "Entries": 20,
+      "CommandMs": 502.9586,
+      "UsableMs": 585.8273,
+      "AllocatedBytes": 41268984,
+      "ManagedBytes": 153483824
+    },
+    {
+      "Operation": "enhancement",
+      "Entries": 20,
+      "CommandMs": 474.1688,
+      "UsableMs": 546.924,
+      "AllocatedBytes": 37071280,
+      "ManagedBytes": 156555088
+    },
+    {
+      "Operation": "enhancement",
+      "Entries": 20,
+      "CommandMs": 512.9412,
+      "UsableMs": 620.0462,
+      "AllocatedBytes": 41260936,
+      "ManagedBytes": 159832536
+    },
+    {
+      "Operation": "enhancement",
+      "Entries": 20,
+      "CommandMs": 502.3356,
+      "UsableMs": 578.0551,
+      "AllocatedBytes": 37406064,
+      "ManagedBytes": 163270440
+    },
+    {
+      "Operation": "attachment",
+      "Entries": 20,
+      "CommandMs": 642.0091,
+      "UsableMs": 1957.6052,
+      "AllocatedBytes": 111625976,
+      "ManagedBytes": 178839104
+    },
+    {
+      "Operation": "attachment",
+      "Entries": 20,
+      "CommandMs": 699.3249,
+      "UsableMs": 2180.296,
+      "AllocatedBytes": 115552880,
+      "ManagedBytes": 188731104
+    },
+    {
+      "Operation": "attachment",
+      "Entries": 20,
+      "CommandMs": 657.6473,
+      "UsableMs": 2013.5796,
+      "AllocatedBytes": 111444904,
+      "ManagedBytes": 195859528
+    },
+    {
+      "Operation": "attachment",
+      "Entries": 20,
+      "CommandMs": 811.5609,
+      "UsableMs": 2332.0528,
+      "AllocatedBytes": 113158680,
+      "ManagedBytes": 145248952
+    },
+    {
+      "Operation": "attachment",
+      "Entries": 20,
+      "CommandMs": 688.5906,
+      "UsableMs": 1839.611,
+      "AllocatedBytes": 111459400,
+      "ManagedBytes": 154542160
+    },
+    {
+      "Operation": "attachment",
+      "Entries": 20,
+      "CommandMs": 791.7098,
+      "UsableMs": 2002.1754,
+      "AllocatedBytes": 115654328,
+      "ManagedBytes": 164455520
+    },
+    {
+      "Operation": "attachment",
+      "Entries": 20,
+      "CommandMs": 705.8135,
+      "UsableMs": 1939.1443,
+      "AllocatedBytes": 111520872,
+      "ManagedBytes": 171728600
+    },
+    {
+      "Operation": "attachment",
+      "Entries": 20,
+      "CommandMs": 653.9852,
+      "UsableMs": 1927.5342,
+      "AllocatedBytes": 115611880,
+      "ManagedBytes": 181548616
+    },
+    {
+      "Operation": "attachment",
+      "Entries": 20,
+      "CommandMs": 679.3028,
+      "UsableMs": 1977.0788,
+      "AllocatedBytes": 111489656,
+      "ManagedBytes": 188728016
+    },
+    {
+      "Operation": "attachment",
+      "Entries": 20,
+      "CommandMs": 834.386,
+      "UsableMs": 2175.4975,
+      "AllocatedBytes": 115638976,
+      "ManagedBytes": 198617320
+    },
+    {
+      "Operation": "detachment",
+      "Entries": 20,
+      "CommandMs": 320.7603,
+      "UsableMs": 588.6179,
+      "AllocatedBytes": 20659080,
+      "ManagedBytes": 204410720
+    },
+    {
+      "Operation": "detachment",
+      "Entries": 20,
+      "CommandMs": 319.0849,
+      "UsableMs": 618.3045,
+      "AllocatedBytes": 20682640,
+      "ManagedBytes": 207285976
+    },
+    {
+      "Operation": "detachment",
+      "Entries": 20,
+      "CommandMs": 303.4867,
+      "UsableMs": 581.8293,
+      "AllocatedBytes": 20675728,
+      "ManagedBytes": 210175392
+    },
+    {
+      "Operation": "detachment",
+      "Entries": 20,
+      "CommandMs": 307.1325,
+      "UsableMs": 595.1322,
+      "AllocatedBytes": 21002024,
+      "ManagedBytes": 213419088
+    },
+    {
+      "Operation": "detachment",
+      "Entries": 20,
+      "CommandMs": 341.1,
+      "UsableMs": 633.6532,
+      "AllocatedBytes": 20701328,
+      "ManagedBytes": 216320376
+    },
+    {
+      "Operation": "detachment",
+      "Entries": 20,
+      "CommandMs": 319.6122,
+      "UsableMs": 502.03,
+      "AllocatedBytes": 16551096,
+      "ManagedBytes": 217507984
+    },
+    {
+      "Operation": "detachment",
+      "Entries": 20,
+      "CommandMs": 319.6193,
+      "UsableMs": 500.0454,
+      "AllocatedBytes": 16545224,
+      "ManagedBytes": 220288912
+    },
+    {
+      "Operation": "detachment",
+      "Entries": 20,
+      "CommandMs": 331.9956,
+      "UsableMs": 639.3282,
+      "AllocatedBytes": 20651112,
+      "ManagedBytes": 222893488
+    },
+    {
+      "Operation": "detachment",
+      "Entries": 20,
+      "CommandMs": 338.7803,
+      "UsableMs": 624.7975,
+      "AllocatedBytes": 20674448,
+      "ManagedBytes": 225705176
+    },
+    {
+      "Operation": "detachment",
+      "Entries": 20,
+      "CommandMs": 335.3294,
+      "UsableMs": 617.0172,
+      "AllocatedBytes": 20671264,
+      "ManagedBytes": 228412312
+    },
+    {
+      "Operation": "home",
+      "Entries": 20,
+      "CommandMs": 5.1413,
+      "UsableMs": 94.1738,
+      "AllocatedBytes": 0,
+      "ManagedBytes": 232807488
+    },
+    {
+      "Operation": "home",
+      "Entries": 20,
+      "CommandMs": 5.6003,
+      "UsableMs": 90.571,
+      "AllocatedBytes": 0,
+      "ManagedBytes": 234359048
+    },
+    {
+      "Operation": "home",
+      "Entries": 20,
+      "CommandMs": 8.381,
+      "UsableMs": 94.432,
+      "AllocatedBytes": 0,
+      "ManagedBytes": 237121568
+    },
+    {
+      "Operation": "home",
+      "Entries": 20,
+      "CommandMs": 5.1959,
+      "UsableMs": 88.8775,
+      "AllocatedBytes": 0,
+      "ManagedBytes": 238672560
+    },
+    {
+      "Operation": "home",
+      "Entries": 20,
+      "CommandMs": 4.631,
+      "UsableMs": 89.8132,
+      "AllocatedBytes": 0,
+      "ManagedBytes": 241769080
+    },
+    {
+      "Operation": "home",
+      "Entries": 20,
+      "CommandMs": 5.0673,
+      "UsableMs": 90.1626,
+      "AllocatedBytes": 0,
+      "ManagedBytes": 243370264
+    },
+    {
+      "Operation": "home",
+      "Entries": 20,
+      "CommandMs": 4.3957,
+      "UsableMs": 90.476,
+      "AllocatedBytes": 0,
+      "ManagedBytes": 246106520
+    },
+    {
+      "Operation": "home",
+      "Entries": 20,
+      "CommandMs": 5.0876,
+      "UsableMs": 88.1676,
+      "AllocatedBytes": 0,
+      "ManagedBytes": 247716392
+    },
+    {
+      "Operation": "home",
+      "Entries": 20,
+      "CommandMs": 8.6037,
+      "UsableMs": 101.9852,
+      "AllocatedBytes": 0,
+      "ManagedBytes": 250448152
+    },
+    {
+      "Operation": "home",
+      "Entries": 20,
+      "CommandMs": 5.6393,
+      "UsableMs": 594.8666,
+      "AllocatedBytes": 2762016,
+      "ManagedBytes": 167527968
+    }
+  ],
+  "Presentation": [
+    {
+      "Operation": "add",
+      "PrepareMs": 7.8901,
+      "RenderMs": 14.307199999999998,
+      "FrameWaitMs": 127.0716,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "add",
+      "PrepareMs": 5.8659,
+      "RenderMs": 4.356199999999999,
+      "FrameWaitMs": 51.7492,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "add",
+      "PrepareMs": 5.584,
+      "RenderMs": 4.1173,
+      "FrameWaitMs": 15.2165,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "add",
+      "PrepareMs": 7.5563,
+      "RenderMs": 3.665799999999999,
+      "FrameWaitMs": 39.9104,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "add",
+      "PrepareMs": 35.3852,
+      "RenderMs": 4.111900000000006,
+      "FrameWaitMs": 13.987699999999997,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "add",
+      "PrepareMs": 5.3143,
+      "RenderMs": 3.4120999999999997,
+      "FrameWaitMs": 37.3936,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "add",
+      "PrepareMs": 5.287,
+      "RenderMs": 3.3843000000000005,
+      "FrameWaitMs": 14.9813,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "add",
+      "PrepareMs": 5.6375,
+      "RenderMs": 3.9105,
+      "FrameWaitMs": 48.0873,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "add",
+      "PrepareMs": 5.5383,
+      "RenderMs": 3.3841,
+      "FrameWaitMs": 12.2347,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "add",
+      "PrepareMs": 5.4699,
+      "RenderMs": 3.3728000000000007,
+      "FrameWaitMs": 47.1056,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "add",
+      "PrepareMs": 5.9403,
+      "RenderMs": 3.7168,
+      "FrameWaitMs": 13.9483,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "add",
+      "PrepareMs": 5.5193,
+      "RenderMs": 3.4821,
+      "FrameWaitMs": 46.2346,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "add",
+      "PrepareMs": 5.2911,
+      "RenderMs": 12.2162,
+      "FrameWaitMs": 22.197000000000003,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "add",
+      "PrepareMs": 5.9553,
+      "RenderMs": 3.6191000000000004,
+      "FrameWaitMs": 45.310199999999995,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "add",
+      "PrepareMs": 5.1218,
+      "RenderMs": 3.3086,
+      "FrameWaitMs": 12.2176,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "add",
+      "PrepareMs": 8.0138,
+      "RenderMs": 3.4361999999999995,
+      "FrameWaitMs": 40.3493,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "add",
+      "PrepareMs": 37.527,
+      "RenderMs": 3.503999999999998,
+      "FrameWaitMs": 12.4861,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "add",
+      "PrepareMs": 5.7818,
+      "RenderMs": 3.3289,
+      "FrameWaitMs": 47.971399999999996,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "add",
+      "PrepareMs": 5.556,
+      "RenderMs": 3.995399999999999,
+      "FrameWaitMs": 14.600900000000001,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "add",
+      "PrepareMs": 7.9708,
+      "RenderMs": 3.4498000000000006,
+      "FrameWaitMs": 50.6108,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "add",
+      "PrepareMs": 41.0833,
+      "RenderMs": 3.8947000000000003,
+      "FrameWaitMs": 15.669599999999996,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "add",
+      "PrepareMs": 5.8553,
+      "RenderMs": 3.6447000000000003,
+      "FrameWaitMs": 34.0799,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "equipment",
+      "PrepareMs": 88.1953,
+      "RenderMs": 314.1613,
+      "FrameWaitMs": 93.76799999999997,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "equipment",
+      "PrepareMs": 5.197,
+      "RenderMs": 9.048200000000001,
+      "FrameWaitMs": 7.431100000000001,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "equipment",
+      "PrepareMs": 5.2978,
+      "RenderMs": 225.0477,
+      "FrameWaitMs": 38.74030000000002,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "equipment",
+      "PrepareMs": 5.4763,
+      "RenderMs": 4.7333,
+      "FrameWaitMs": 13.635,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "equipment",
+      "PrepareMs": 46.1163,
+      "RenderMs": 257.2464,
+      "FrameWaitMs": 38.46690000000001,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "equipment",
+      "PrepareMs": 6.147,
+      "RenderMs": 1.884599999999999,
+      "FrameWaitMs": 10.751400000000002,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "equipment",
+      "PrepareMs": 5.2335,
+      "RenderMs": 229.09980000000002,
+      "FrameWaitMs": 38.219899999999996,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "equipment",
+      "PrepareMs": 75.6803,
+      "RenderMs": 2.7361999999999966,
+      "FrameWaitMs": 12.6751,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "equipment",
+      "PrepareMs": 56.8433,
+      "RenderMs": 262.128,
+      "FrameWaitMs": 38.35270000000003,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "equipment",
+      "PrepareMs": 5.3034,
+      "RenderMs": 1.9717000000000002,
+      "FrameWaitMs": 15.536499999999998,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "equipment",
+      "PrepareMs": 5.2104,
+      "RenderMs": 237.5886,
+      "FrameWaitMs": 37.93909999999997,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "equipment",
+      "PrepareMs": 4.9966,
+      "RenderMs": 1.9880000000000004,
+      "FrameWaitMs": 10.266099999999998,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "equipment",
+      "PrepareMs": 7.4812,
+      "RenderMs": 250.36790000000002,
+      "FrameWaitMs": 37.906499999999994,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "equipment",
+      "PrepareMs": 5.1726,
+      "RenderMs": 1.9424000000000001,
+      "FrameWaitMs": 8.421199999999999,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "equipment",
+      "PrepareMs": 5.1363,
+      "RenderMs": 241.8502,
+      "FrameWaitMs": 37.70770000000002,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "equipment",
+      "PrepareMs": 36.3777,
+      "RenderMs": 1.7675000000000054,
+      "FrameWaitMs": 12.782799999999995,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "equipment",
+      "PrepareMs": 52.0375,
+      "RenderMs": 241.26380000000003,
+      "FrameWaitMs": 39.54549999999995,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "equipment",
+      "PrepareMs": 4.9929,
+      "RenderMs": 2.1612,
+      "FrameWaitMs": 9.2775,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "equipment",
+      "PrepareMs": 4.852,
+      "RenderMs": 268.9406,
+      "FrameWaitMs": 38.75749999999999,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "equipment",
+      "PrepareMs": 89.8299,
+      "RenderMs": 2.7623999999999995,
+      "FrameWaitMs": 12.360700000000008,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "equipment",
+      "PrepareMs": 62.5645,
+      "RenderMs": 274.6238,
+      "FrameWaitMs": 40.49629999999996,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "equipment",
+      "PrepareMs": 4.9933,
+      "RenderMs": 2.2987,
+      "FrameWaitMs": 15.701200000000002,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "enhancement",
+      "PrepareMs": 15.1187,
+      "RenderMs": 341.6519,
+      "FrameWaitMs": 128.73270000000002,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "enhancement",
+      "PrepareMs": 8.9147,
+      "RenderMs": 58.5136,
+      "FrameWaitMs": 16.74430000000001,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "enhancement",
+      "PrepareMs": 6.4408,
+      "RenderMs": 165.8933,
+      "FrameWaitMs": 13.857799999999997,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "enhancement",
+      "PrepareMs": 8.8845,
+      "RenderMs": 46.7355,
+      "FrameWaitMs": 16.6295,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "enhancement",
+      "PrepareMs": 78.7751,
+      "RenderMs": 163.35840000000002,
+      "FrameWaitMs": 13.650200000000012,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "enhancement",
+      "PrepareMs": 5.9532,
+      "RenderMs": 62.5178,
+      "FrameWaitMs": 18.350399999999993,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "enhancement",
+      "PrepareMs": 5.7257,
+      "RenderMs": 300.0428,
+      "FrameWaitMs": 13.15179999999998,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "enhancement",
+      "PrepareMs": 8.1839,
+      "RenderMs": 45.0819,
+      "FrameWaitMs": 14.7603,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "enhancement",
+      "PrepareMs": 6.2793,
+      "RenderMs": 133.21689999999998,
+      "FrameWaitMs": 12.468700000000013,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "enhancement",
+      "PrepareMs": 8.7839,
+      "RenderMs": 59.8994,
+      "FrameWaitMs": 17.8138,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "enhancement",
+      "PrepareMs": 6.2929,
+      "RenderMs": 129.6324,
+      "FrameWaitMs": 14.198000000000008,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "enhancement",
+      "PrepareMs": 6.756,
+      "RenderMs": 88.6151,
+      "FrameWaitMs": 15.594800000000006,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "enhancement",
+      "PrepareMs": 7.1932,
+      "RenderMs": 164.1741,
+      "FrameWaitMs": 13.423699999999997,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "enhancement",
+      "PrepareMs": 6.1818,
+      "RenderMs": 60.1376,
+      "FrameWaitMs": 20.062200000000004,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "enhancement",
+      "PrepareMs": 5.9748,
+      "RenderMs": 175.6695,
+      "FrameWaitMs": 12.544700000000006,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "enhancement",
+      "PrepareMs": 6.211,
+      "RenderMs": 62.7055,
+      "FrameWaitMs": 18.691100000000006,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "enhancement",
+      "PrepareMs": 6.1277,
+      "RenderMs": 136.0692,
+      "FrameWaitMs": 13.187099999999987,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "enhancement",
+      "PrepareMs": 13.7344,
+      "RenderMs": 119.5428,
+      "FrameWaitMs": 15.525400000000019,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "enhancement",
+      "PrepareMs": 6.8658,
+      "RenderMs": 179.0642,
+      "FrameWaitMs": 14.915199999999999,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "enhancement",
+      "PrepareMs": 5.9061,
+      "RenderMs": 60.128899999999994,
+      "FrameWaitMs": 19.724100000000007,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "enhancement",
+      "PrepareMs": 6.0651,
+      "RenderMs": 192.5299,
+      "FrameWaitMs": 13.671999999999997,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "enhancement",
+      "PrepareMs": 5.8942,
+      "RenderMs": 62.1455,
+      "FrameWaitMs": 20.563699999999997,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "attachment",
+      "PrepareMs": 5.8806,
+      "RenderMs": 139.1584,
+      "FrameWaitMs": 13.382900000000006,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "attachment",
+      "PrepareMs": 76.5393,
+      "RenderMs": 393.89300000000003,
+      "FrameWaitMs": 95.97869999999995,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "attachment",
+      "PrepareMs": 6.848,
+      "RenderMs": 252.13079999999997,
+      "FrameWaitMs": 26.786800000000028,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "attachment",
+      "PrepareMs": 56.0248,
+      "RenderMs": 396.1354,
+      "FrameWaitMs": 35.13820000000004,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "attachment",
+      "PrepareMs": 6.1148,
+      "RenderMs": 275.54019999999997,
+      "FrameWaitMs": 27.620300000000043,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "attachment",
+      "PrepareMs": 51.566,
+      "RenderMs": 418.9982,
+      "FrameWaitMs": 35.831399999999974,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "attachment",
+      "PrepareMs": 6.043,
+      "RenderMs": 317.3397,
+      "FrameWaitMs": 26.699000000000012,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "attachment",
+      "PrepareMs": 49.6366,
+      "RenderMs": 519.6057,
+      "FrameWaitMs": 36.848100000000045,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "attachment",
+      "PrepareMs": 5.945,
+      "RenderMs": 345.6784,
+      "FrameWaitMs": 26.367399999999975,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "attachment",
+      "PrepareMs": 58.2716,
+      "RenderMs": 348.2708,
+      "FrameWaitMs": 33.56729999999999,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "attachment",
+      "PrepareMs": 6.5206,
+      "RenderMs": 240.9757,
+      "FrameWaitMs": 26.716199999999986,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "attachment",
+      "PrepareMs": 48.4501,
+      "RenderMs": 355.67749999999995,
+      "FrameWaitMs": 33.9624,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "attachment",
+      "PrepareMs": 6.1519,
+      "RenderMs": 236.1187,
+      "FrameWaitMs": 25.838000000000022,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "attachment",
+      "PrepareMs": 49.1901,
+      "RenderMs": 444.5719,
+      "FrameWaitMs": 34.997000000000014,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "attachment",
+      "PrepareMs": 6.2526,
+      "RenderMs": 260.5375,
+      "FrameWaitMs": 26.822400000000016,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "attachment",
+      "PrepareMs": 56.7141,
+      "RenderMs": 391.8514,
+      "FrameWaitMs": 34.76370000000003,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "attachment",
+      "PrepareMs": 5.9021,
+      "RenderMs": 270.6898,
+      "FrameWaitMs": 27.018399999999986,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "attachment",
+      "PrepareMs": 49.1151,
+      "RenderMs": 463.4981,
+      "FrameWaitMs": 34.64739999999995,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "attachment",
+      "PrepareMs": 78.8622,
+      "RenderMs": 207.30300000000003,
+      "FrameWaitMs": 95.93939999999998,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "attachment",
+      "PrepareMs": 57.8083,
+      "RenderMs": 434.52059999999994,
+      "FrameWaitMs": 35.8809,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "attachment",
+      "PrepareMs": 6.321,
+      "RenderMs": 304.7131,
+      "FrameWaitMs": 27.381899999999973,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "attachment",
+      "PrepareMs": 50.6171,
+      "RenderMs": 444.3369,
+      "FrameWaitMs": 108.71239999999995,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "detachment",
+      "PrepareMs": 7.5336,
+      "RenderMs": 113.3768,
+      "FrameWaitMs": 112.5235,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "detachment",
+      "PrepareMs": 52.9302,
+      "RenderMs": 35.4932,
+      "FrameWaitMs": 205.5575,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "detachment",
+      "PrepareMs": 95.4268,
+      "RenderMs": 1.6203000000000003,
+      "FrameWaitMs": 14.653499999999994,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "detachment",
+      "PrepareMs": 16.6126,
+      "RenderMs": 127.82639999999999,
+      "FrameWaitMs": 110.499,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "detachment",
+      "PrepareMs": 5.3713,
+      "RenderMs": 1.5591,
+      "FrameWaitMs": 10.330100000000002,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "detachment",
+      "PrepareMs": 5.467,
+      "RenderMs": 48.3924,
+      "FrameWaitMs": 123.9067,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "detachment",
+      "PrepareMs": 6.8584,
+      "RenderMs": 1.4822000000000006,
+      "FrameWaitMs": 15.577,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "detachment",
+      "PrepareMs": 6.0383,
+      "RenderMs": 60.24870000000001,
+      "FrameWaitMs": 114.82579999999999,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "detachment",
+      "PrepareMs": 5.294,
+      "RenderMs": 1.4071000000000007,
+      "FrameWaitMs": 13.6979,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "detachment",
+      "PrepareMs": 5.4436,
+      "RenderMs": 49.838499999999996,
+      "FrameWaitMs": 174.95589999999999,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "detachment",
+      "PrepareMs": 71.831,
+      "RenderMs": 1.7449999999999903,
+      "FrameWaitMs": 11.718100000000007,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "detachment",
+      "PrepareMs": 58.6138,
+      "RenderMs": 36.37180000000001,
+      "FrameWaitMs": 115.1808,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "detachment",
+      "PrepareMs": 5.4779,
+      "RenderMs": 1.7992999999999997,
+      "FrameWaitMs": 10.9407,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "detachment",
+      "PrepareMs": 5.4692,
+      "RenderMs": 50.5874,
+      "FrameWaitMs": 181.788,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "detachment",
+      "PrepareMs": 82.1142,
+      "RenderMs": 2.3140999999999963,
+      "FrameWaitMs": 9.52000000000001,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "detachment",
+      "PrepareMs": 17.1046,
+      "RenderMs": 107.4853,
+      "FrameWaitMs": 114.36330000000001,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "detachment",
+      "PrepareMs": 5.4482,
+      "RenderMs": 1.8767000000000005,
+      "FrameWaitMs": 13.151399999999999,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "detachment",
+      "PrepareMs": 5.9843,
+      "RenderMs": 43.527,
+      "FrameWaitMs": 111.6216,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "detachment",
+      "PrepareMs": 6.5506,
+      "RenderMs": 1.9547999999999996,
+      "FrameWaitMs": 14.5404,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "detachment",
+      "PrepareMs": 5.3879,
+      "RenderMs": 52.0477,
+      "FrameWaitMs": 182.15470000000002,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "detachment",
+      "PrepareMs": 6.3273,
+      "RenderMs": 2.1884000000000006,
+      "FrameWaitMs": 15.227299999999998,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "detachment",
+      "PrepareMs": 94.5584,
+      "RenderMs": 36.67259999999999,
+      "FrameWaitMs": 117.7422,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "home",
+      "PrepareMs": 833.5683,
+      "RenderMs": 82.68830000000003,
+      "FrameWaitMs": 107.83010000000002,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "home",
+      "PrepareMs": 8.2664,
+      "RenderMs": 68.9966,
+      "FrameWaitMs": 19.975099999999998,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "home",
+      "PrepareMs": 2.4499,
+      "RenderMs": 65.3399,
+      "FrameWaitMs": 19.427800000000005,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "home",
+      "PrepareMs": 4.8585,
+      "RenderMs": 61.33560000000001,
+      "FrameWaitMs": 19.51849999999999,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "home",
+      "PrepareMs": 2.3633,
+      "RenderMs": 64.17790000000001,
+      "FrameWaitMs": 19.851100000000002,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "home",
+      "PrepareMs": 104.1547,
+      "RenderMs": 63.605299999999986,
+      "FrameWaitMs": 20.44580000000002,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "home",
+      "PrepareMs": 2.7043,
+      "RenderMs": 68.411,
+      "FrameWaitMs": 19.22569999999999,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "home",
+      "PrepareMs": 4.3325,
+      "RenderMs": 65.2296,
+      "FrameWaitMs": 19.666200000000003,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "home",
+      "PrepareMs": 12.8523,
+      "RenderMs": 65.8492,
+      "FrameWaitMs": 19.240300000000005,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "home",
+      "PrepareMs": 205.1889,
+      "RenderMs": 78.6114,
+      "FrameWaitMs": 21.42919999999998,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "home",
+      "PrepareMs": 2.3501,
+      "RenderMs": 63.31790000000001,
+      "FrameWaitMs": 19.3292,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "home",
+      "PrepareMs": 3.6297,
+      "RenderMs": 61.148700000000005,
+      "FrameWaitMs": 19.260599999999997,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "home",
+      "PrepareMs": 3.0866,
+      "RenderMs": 68.0466,
+      "FrameWaitMs": 19.4384,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "home",
+      "PrepareMs": 4.1314,
+      "RenderMs": 133.0673,
+      "FrameWaitMs": 21.533299999999997,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "home",
+      "PrepareMs": 12.2131,
+      "RenderMs": 147.8449,
+      "FrameWaitMs": 19.27000000000001,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "home",
+      "PrepareMs": 3.8904,
+      "RenderMs": 65.7507,
+      "FrameWaitMs": 19.0561,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "home",
+      "PrepareMs": 2.4585,
+      "RenderMs": 64.7114,
+      "FrameWaitMs": 19.647000000000006,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "home",
+      "PrepareMs": 3.965,
+      "RenderMs": 62.4418,
+      "FrameWaitMs": 19.629800000000003,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "home",
+      "PrepareMs": 2.3187,
+      "RenderMs": 62.7844,
+      "FrameWaitMs": 19.072000000000003,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "home",
+      "PrepareMs": 4.523,
+      "RenderMs": 150.1274,
+      "FrameWaitMs": 18.973900000000015,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "home",
+      "PrepareMs": 9.309,
+      "RenderMs": 159.1174,
+      "FrameWaitMs": 19.387399999999985,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "home",
+      "PrepareMs": 3.7013,
+      "RenderMs": 62.9654,
+      "FrameWaitMs": 19.5419,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "add",
+      "PrepareMs": 15.0768,
+      "RenderMs": 36.2123,
+      "FrameWaitMs": 111.81390000000002,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "add",
+      "PrepareMs": 13.5833,
+      "RenderMs": 2.7173,
+      "FrameWaitMs": 15.005200000000002,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "add",
+      "PrepareMs": 72.0711,
+      "RenderMs": 6.011700000000005,
+      "FrameWaitMs": 21.26979999999999,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "add",
+      "PrepareMs": 17.0394,
+      "RenderMs": 2.6233000000000004,
+      "FrameWaitMs": 14.362499999999997,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "add",
+      "PrepareMs": 8.1105,
+      "RenderMs": 2.5920000000000005,
+      "FrameWaitMs": 13.716000000000001,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "add",
+      "PrepareMs": 8.3863,
+      "RenderMs": 2.675699999999999,
+      "FrameWaitMs": 15.899700000000001,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "add",
+      "PrepareMs": 8.1054,
+      "RenderMs": 2.334200000000001,
+      "FrameWaitMs": 17.352400000000003,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "add",
+      "PrepareMs": 8.6225,
+      "RenderMs": 2.5429999999999993,
+      "FrameWaitMs": 15.0511,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "add",
+      "PrepareMs": 8.0418,
+      "RenderMs": 2.341199999999999,
+      "FrameWaitMs": 7.842000000000002,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "add",
+      "PrepareMs": 8.8461,
+      "RenderMs": 2.9193999999999996,
+      "FrameWaitMs": 17.4658,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "add",
+      "PrepareMs": 8.3426,
+      "RenderMs": 2.3346,
+      "FrameWaitMs": 11.8722,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "add",
+      "PrepareMs": 15.735,
+      "RenderMs": 5.659700000000001,
+      "FrameWaitMs": 12.935299999999998,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "add",
+      "PrepareMs": 14.4412,
+      "RenderMs": 2.367399999999998,
+      "FrameWaitMs": 14.0806,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "add",
+      "PrepareMs": 14.7359,
+      "RenderMs": 2.7205999999999975,
+      "FrameWaitMs": 14.128900000000002,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "add",
+      "PrepareMs": 15.6258,
+      "RenderMs": 2.6560000000000006,
+      "FrameWaitMs": 9.7682,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "add",
+      "PrepareMs": 27.1606,
+      "RenderMs": 4.435700000000001,
+      "FrameWaitMs": 12.971600000000002,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "add",
+      "PrepareMs": 8.4926,
+      "RenderMs": 2.551400000000001,
+      "FrameWaitMs": 15.4542,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "add",
+      "PrepareMs": 8.3646,
+      "RenderMs": 2.5424000000000007,
+      "FrameWaitMs": 11.274999999999999,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "add",
+      "PrepareMs": 8.2088,
+      "RenderMs": 2.5671,
+      "FrameWaitMs": 12.6587,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "add",
+      "PrepareMs": 8.3273,
+      "RenderMs": 2.6087000000000007,
+      "FrameWaitMs": 9.524899999999999,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "add",
+      "PrepareMs": 8.6649,
+      "RenderMs": 2.4923,
+      "FrameWaitMs": 15.994399999999999,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "add",
+      "PrepareMs": 8.5742,
+      "RenderMs": 8.265200000000002,
+      "FrameWaitMs": 8.237199999999998,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "equipment",
+      "PrepareMs": 11.5826,
+      "RenderMs": 282.0668,
+      "FrameWaitMs": 38.43700000000001,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "equipment",
+      "PrepareMs": 12.0966,
+      "RenderMs": 2.1256000000000004,
+      "FrameWaitMs": 14.017799999999998,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "equipment",
+      "PrepareMs": 10.7265,
+      "RenderMs": 291.19780000000003,
+      "FrameWaitMs": 39.8621,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "equipment",
+      "PrepareMs": 107.5538,
+      "RenderMs": 2.2468000000000075,
+      "FrameWaitMs": 14.913799999999995,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "equipment",
+      "PrepareMs": 11.2182,
+      "RenderMs": 297.41339999999997,
+      "FrameWaitMs": 38.5059,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "equipment",
+      "PrepareMs": 12.8652,
+      "RenderMs": 2.1258,
+      "FrameWaitMs": 12.0413,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "equipment",
+      "PrepareMs": 13.4557,
+      "RenderMs": 301.36620000000005,
+      "FrameWaitMs": 39.08359999999999,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "equipment",
+      "PrepareMs": 12.5688,
+      "RenderMs": 2.4726,
+      "FrameWaitMs": 13.881,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "equipment",
+      "PrepareMs": 11.33,
+      "RenderMs": 294.60060000000004,
+      "FrameWaitMs": 37.922799999999995,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "equipment",
+      "PrepareMs": 12.7864,
+      "RenderMs": 2.5876,
+      "FrameWaitMs": 11.4791,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "equipment",
+      "PrepareMs": 4.9292,
+      "RenderMs": 299.4807,
+      "FrameWaitMs": 37.17439999999999,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "equipment",
+      "PrepareMs": 125.264,
+      "RenderMs": 2.7113000000000085,
+      "FrameWaitMs": 9.743200000000002,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "equipment",
+      "PrepareMs": 5.1806,
+      "RenderMs": 294.47229999999996,
+      "FrameWaitMs": 36.793000000000006,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "equipment",
+      "PrepareMs": 11.7648,
+      "RenderMs": 2.674800000000001,
+      "FrameWaitMs": 13.251,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "equipment",
+      "PrepareMs": 4.978,
+      "RenderMs": 294.9016,
+      "FrameWaitMs": 39.450199999999995,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "equipment",
+      "PrepareMs": 12.2076,
+      "RenderMs": 2.9247000000000014,
+      "FrameWaitMs": 12.016299999999998,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "equipment",
+      "PrepareMs": 5.1384,
+      "RenderMs": 306.3899,
+      "FrameWaitMs": 39.66730000000001,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "equipment",
+      "PrepareMs": 12.4593,
+      "RenderMs": 2.959999999999999,
+      "FrameWaitMs": 14.6769,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "equipment",
+      "PrepareMs": 5.2043,
+      "RenderMs": 270.4467,
+      "FrameWaitMs": 36.89510000000001,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "equipment",
+      "PrepareMs": 5.1864,
+      "RenderMs": 2.0821000000000005,
+      "FrameWaitMs": 14.7148,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "equipment",
+      "PrepareMs": 5.0689,
+      "RenderMs": 243.17989999999998,
+      "FrameWaitMs": 38.71920000000003,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "equipment",
+      "PrepareMs": 5.269,
+      "RenderMs": 2.2682,
+      "FrameWaitMs": 15.166099999999998,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "enhancement",
+      "PrepareMs": 13.2889,
+      "RenderMs": 589.7434,
+      "FrameWaitMs": 40.54079999999999,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "enhancement",
+      "PrepareMs": 13.895,
+      "RenderMs": 119.6846,
+      "FrameWaitMs": 14.710200000000015,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "enhancement",
+      "PrepareMs": 22.0117,
+      "RenderMs": 565.7853,
+      "FrameWaitMs": 13.07529999999997,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "enhancement",
+      "PrepareMs": 21.0329,
+      "RenderMs": 61.596599999999995,
+      "FrameWaitMs": 22.51010000000001,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "enhancement",
+      "PrepareMs": 13.7511,
+      "RenderMs": 585.2953,
+      "FrameWaitMs": 12.652700000000095,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "enhancement",
+      "PrepareMs": 13.3397,
+      "RenderMs": 42.4908,
+      "FrameWaitMs": 95.8945,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "enhancement",
+      "PrepareMs": 45.6326,
+      "RenderMs": 761.1388,
+      "FrameWaitMs": 13.108900000000062,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "enhancement",
+      "PrepareMs": 21.341,
+      "RenderMs": 44.636,
+      "FrameWaitMs": 14.939899999999994,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "enhancement",
+      "PrepareMs": 17.6426,
+      "RenderMs": 564.5838,
+      "FrameWaitMs": 17.593200000000024,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "enhancement",
+      "PrepareMs": 14.0211,
+      "RenderMs": 45.5089,
+      "FrameWaitMs": 16.147099999999995,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "enhancement",
+      "PrepareMs": 23.8453,
+      "RenderMs": 603.7273,
+      "FrameWaitMs": 12.633800000000065,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "enhancement",
+      "PrepareMs": 22.6713,
+      "RenderMs": 63.7993,
+      "FrameWaitMs": 21.262599999999992,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "enhancement",
+      "PrepareMs": 13.8428,
+      "RenderMs": 626.7732,
+      "FrameWaitMs": 13.26279999999997,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "enhancement",
+      "PrepareMs": 13.7356,
+      "RenderMs": 46.241600000000005,
+      "FrameWaitMs": 15.7725,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "enhancement",
+      "PrepareMs": 26.8452,
+      "RenderMs": 628.8633,
+      "FrameWaitMs": 12.94900000000007,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "enhancement",
+      "PrepareMs": 24.0597,
+      "RenderMs": 43.6474,
+      "FrameWaitMs": 15.152299999999997,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "enhancement",
+      "PrepareMs": 13.4461,
+      "RenderMs": 652.2849,
+      "FrameWaitMs": 12.709900000000061,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "enhancement",
+      "PrepareMs": 13.487,
+      "RenderMs": 44.0749,
+      "FrameWaitMs": 15.183699999999995,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "enhancement",
+      "PrepareMs": 23.2436,
+      "RenderMs": 666.2950999999999,
+      "FrameWaitMs": 13.64650000000006,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "enhancement",
+      "PrepareMs": 25.1655,
+      "RenderMs": 60.1256,
+      "FrameWaitMs": 21.802400000000006,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "enhancement",
+      "PrepareMs": 13.5907,
+      "RenderMs": 671.3714,
+      "FrameWaitMs": 12.420000000000073,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "enhancement",
+      "PrepareMs": 13.8197,
+      "RenderMs": 45.568000000000005,
+      "FrameWaitMs": 16.322700000000005,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "attachment",
+      "PrepareMs": 13.5648,
+      "RenderMs": 781.1945000000001,
+      "FrameWaitMs": 13.335099999999898,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "attachment",
+      "PrepareMs": 222.903,
+      "RenderMs": 930.2526,
+      "FrameWaitMs": 45.73569999999995,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "attachment",
+      "PrepareMs": 22.8707,
+      "RenderMs": 912.4437,
+      "FrameWaitMs": 26.754999999999995,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "attachment",
+      "PrepareMs": 232.187,
+      "RenderMs": 1039.1628,
+      "FrameWaitMs": 44.23479999999995,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "attachment",
+      "PrepareMs": 13.3913,
+      "RenderMs": 786.5541,
+      "FrameWaitMs": 27.87360000000001,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "attachment",
+      "PrepareMs": 264.8971,
+      "RenderMs": 1050.7293,
+      "FrameWaitMs": 165.33219999999983,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "attachment",
+      "PrepareMs": 25.5943,
+      "RenderMs": 917.6237,
+      "FrameWaitMs": 34.25240000000008,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "attachment",
+      "PrepareMs": 235.5588,
+      "RenderMs": 1082.0845,
+      "FrameWaitMs": 38.27670000000012,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "attachment",
+      "PrepareMs": 19.0425,
+      "RenderMs": 822.4345,
+      "FrameWaitMs": 27.470100000000002,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "attachment",
+      "PrepareMs": 219.9396,
+      "RenderMs": 1254.3661,
+      "FrameWaitMs": 46.17360000000008,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "attachment",
+      "PrepareMs": 13.8332,
+      "RenderMs": 682.7457999999999,
+      "FrameWaitMs": 27.67450000000008,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "attachment",
+      "PrepareMs": 237.8387,
+      "RenderMs": 870.8287,
+      "FrameWaitMs": 42.3433,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "attachment",
+      "PrepareMs": 13.5043,
+      "RenderMs": 636.9656,
+      "FrameWaitMs": 27.354099999999903,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "attachment",
+      "PrepareMs": 236.0865,
+      "RenderMs": 841.0378,
+      "FrameWaitMs": 133.32799999999997,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "attachment",
+      "PrepareMs": 27.15,
+      "RenderMs": 763.9958,
+      "FrameWaitMs": 26.75649999999996,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "attachment",
+      "PrepareMs": 234.216,
+      "RenderMs": 954.0513,
+      "FrameWaitMs": 45.053499999999985,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "attachment",
+      "PrepareMs": 14.132,
+      "RenderMs": 696.7470000000001,
+      "FrameWaitMs": 27.347999999999956,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "attachment",
+      "PrepareMs": 241.0446,
+      "RenderMs": 990.682,
+      "FrameWaitMs": 41.8121000000001,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "attachment",
+      "PrepareMs": 26.9337,
+      "RenderMs": 813.4079999999999,
+      "FrameWaitMs": 27.354900000000043,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "attachment",
+      "PrepareMs": 249.2253,
+      "RenderMs": 1006.7774,
+      "FrameWaitMs": 41.76440000000002,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "attachment",
+      "PrepareMs": 13.9923,
+      "RenderMs": 763.5923,
+      "FrameWaitMs": 28.60469999999998,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "attachment",
+      "PrepareMs": 256.3778,
+      "RenderMs": 1043.4593,
+      "FrameWaitMs": 41.26310000000012,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "detachment",
+      "PrepareMs": 8.4187,
+      "RenderMs": 127.40530000000001,
+      "FrameWaitMs": 243.1542,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "detachment",
+      "PrepareMs": 24.3066,
+      "RenderMs": 37.5496,
+      "FrameWaitMs": 111.4358,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "detachment",
+      "PrepareMs": 8.7409,
+      "RenderMs": 2.2825000000000006,
+      "FrameWaitMs": 8.6886,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "detachment",
+      "PrepareMs": 8.9652,
+      "RenderMs": 145.92589999999998,
+      "FrameWaitMs": 112.95620000000002,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "detachment",
+      "PrepareMs": 9.104,
+      "RenderMs": 2.5837000000000003,
+      "FrameWaitMs": 9.4286,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "detachment",
+      "PrepareMs": 8.8076,
+      "RenderMs": 174.42589999999998,
+      "FrameWaitMs": 115.97640000000001,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "detachment",
+      "PrepareMs": 8.8273,
+      "RenderMs": 2.527700000000001,
+      "FrameWaitMs": 7.091100000000001,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "detachment",
+      "PrepareMs": 8.9166,
+      "RenderMs": 38.2733,
+      "FrameWaitMs": 231.14270000000002,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "detachment",
+      "PrepareMs": 8.6953,
+      "RenderMs": 2.6115000000000013,
+      "FrameWaitMs": 14.7172,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "detachment",
+      "PrepareMs": 8.6095,
+      "RenderMs": 39.307100000000005,
+      "FrameWaitMs": 240.0741,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "detachment",
+      "PrepareMs": 23.0298,
+      "RenderMs": 2.7520999999999987,
+      "FrameWaitMs": 15.162100000000002,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "detachment",
+      "PrepareMs": 8.7366,
+      "RenderMs": 39.8507,
+      "FrameWaitMs": 243.95669999999998,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "detachment",
+      "PrepareMs": 25.5942,
+      "RenderMs": 2.6183999999999976,
+      "FrameWaitMs": 12.563100000000002,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "detachment",
+      "PrepareMs": 24.646,
+      "RenderMs": 40.164,
+      "FrameWaitMs": 117.5976,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "detachment",
+      "PrepareMs": 25.1166,
+      "RenderMs": 3.081800000000001,
+      "FrameWaitMs": 13.322099999999999,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "detachment",
+      "PrepareMs": 23.9953,
+      "RenderMs": 40.525999999999996,
+      "FrameWaitMs": 115.89500000000001,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "detachment",
+      "PrepareMs": 8.8298,
+      "RenderMs": 2.8345000000000002,
+      "FrameWaitMs": 11.8003,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "detachment",
+      "PrepareMs": 8.9101,
+      "RenderMs": 183.0349,
+      "FrameWaitMs": 115.375,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "detachment",
+      "PrepareMs": 8.9437,
+      "RenderMs": 3.1240000000000006,
+      "FrameWaitMs": 11.260599999999998,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "detachment",
+      "PrepareMs": 9.5747,
+      "RenderMs": 167.66989999999998,
+      "FrameWaitMs": 108.75040000000001,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "detachment",
+      "PrepareMs": 9.0415,
+      "RenderMs": 2.8945000000000007,
+      "FrameWaitMs": 14.714400000000001,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "detachment",
+      "PrepareMs": 8.695,
+      "RenderMs": 40.1508,
+      "FrameWaitMs": 232.8336,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "home",
+      "PrepareMs": 5.0113,
+      "RenderMs": 66.4258,
+      "FrameWaitMs": 21.291399999999996,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "home",
+      "PrepareMs": 6.0434,
+      "RenderMs": 64.4649,
+      "FrameWaitMs": 18.60589999999999,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "home",
+      "PrepareMs": 4.2626,
+      "RenderMs": 196.17340000000002,
+      "FrameWaitMs": 19.372600000000006,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "home",
+      "PrepareMs": 7.1033,
+      "RenderMs": 61.553000000000004,
+      "FrameWaitMs": 20.368899999999996,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "home",
+      "PrepareMs": 3.975,
+      "RenderMs": 62.6043,
+      "FrameWaitMs": 18.820300000000003,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "home",
+      "PrepareMs": 6.7216,
+      "RenderMs": 59.32019999999999,
+      "FrameWaitMs": 18.9204,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "home",
+      "PrepareMs": 3.9806,
+      "RenderMs": 205.215,
+      "FrameWaitMs": 19.664699999999982,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "home",
+      "PrepareMs": 5.8067,
+      "RenderMs": 61.131499999999996,
+      "FrameWaitMs": 19.10430000000001,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "home",
+      "PrepareMs": 3.9498,
+      "RenderMs": 60.27989999999999,
+      "FrameWaitMs": 18.785900000000012,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "home",
+      "PrepareMs": 5.0523,
+      "RenderMs": 59.3541,
+      "FrameWaitMs": 19.2671,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "home",
+      "PrepareMs": 3.935,
+      "RenderMs": 211.0092,
+      "FrameWaitMs": 18.587999999999994,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "home",
+      "PrepareMs": 5.6316,
+      "RenderMs": 61.054700000000004,
+      "FrameWaitMs": 18.488299999999995,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "home",
+      "PrepareMs": 5.1993,
+      "RenderMs": 60.1677,
+      "FrameWaitMs": 19.025199999999998,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "home",
+      "PrepareMs": 5.8403,
+      "RenderMs": 59.80500000000001,
+      "FrameWaitMs": 19.441999999999993,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "home",
+      "PrepareMs": 3.8966,
+      "RenderMs": 221.2874,
+      "FrameWaitMs": 19.285799999999995,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "home",
+      "PrepareMs": 5.833,
+      "RenderMs": 61.07900000000001,
+      "FrameWaitMs": 19.160299999999992,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "home",
+      "PrepareMs": 3.8163,
+      "RenderMs": 61.9816,
+      "FrameWaitMs": 21.9285,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "home",
+      "PrepareMs": 5.6252,
+      "RenderMs": 58.888299999999994,
+      "FrameWaitMs": 18.55900000000001,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "home",
+      "PrepareMs": 4.0587,
+      "RenderMs": 223.3178,
+      "FrameWaitMs": 19.608400000000017,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "home",
+      "PrepareMs": 6.7873,
+      "RenderMs": 67.23049999999999,
+      "FrameWaitMs": 19.35560000000001,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "home",
+      "PrepareMs": 4.6732,
+      "RenderMs": 65.40050000000001,
+      "FrameWaitMs": 18.801900000000003,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "home",
+      "PrepareMs": 466.8077,
+      "RenderMs": 104.00920000000002,
+      "FrameWaitMs": 18.402399999999943,
+      "FullPageBuilds": 1
+    }
+  ],
+  "Frames": {
+    "Rendered": 2325,
+    "MissedDeadline": 520,
+    "JankyPercent": 22.37,
+    "IncludesSetupAndReset": true
+  },
+  "PssKiB": {
+    "AfterUpgrade": 842198,
+    "LastRepeatLaunch": 336649,
+    "AfterWorkload": 782691
+  }
+}

@@ -1,0 +1,28 @@
+GrimList Android 0.2.19 - 15 October 2026
+
+APK: artifacts/builds/android/0.2.19/GrimList-Android-0.2.19.apk
+Package: com.grimlist.mobile
+Version code: 20
+Size: 102934661 bytes
+SHA-256: 9531dc7b716fbb0be8ea1dc118d3c698739f4ecef60a0176ed8001f93b824616
+
+Fix: battle round SwipeGestureRecognizers are attached only to the fixed round
+heading, outside the vertical ScrollView. Scrolling the battle content no longer
+competes with round navigation. Previous/Next buttons remain available.
+
+The previously completed build was reused after comparing all 191 source snapshot
+files with the current project: no differences. APK ZIP integrity, package identity,
+version, and signing certificate verified. The signing certificate matches 0.2.18.
+Installed with adb install -r on Redmi kjuoaevc95hagaz9: Success.
+Verified versionName 0.2.19 / versionCode 20 and successful physical cold launch.
+First install timestamp unchanged; no uninstall or data clearing performed.
+User tested battle scrolling and replied: "Scrolling works now".
+
+Build retention: see AGENTS.md and scripts/Complete-Build.ps1. New Android and
+Windows builds reuse the source tree, and verified releases remove older numeric
+release directories in their own output channel. Saved user data is excluded.
+Retention fixture checks passed: preview, invalid/missing replacement rejection,
+older-version removal, preservation of current/newer/unversioned outputs, other
+platforms and user data, and repeated cleanup. Fourteen older Android release
+directories were removed after this APK was verified and installed. Historical
+.local scratch directories are outside the release-retention script's scope.

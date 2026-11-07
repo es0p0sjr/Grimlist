@@ -1,0 +1,47 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0-android</TargetFramework>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>GrimList.Mobile</RootNamespace>
+    <UseMaui>true</UseMaui>
+    <SingleProject>true</SingleProject>
+    <ApplicationTitle>GrimList</ApplicationTitle>
+    <ApplicationId>com.grimlist.mobile</ApplicationId>
+    <Version>0.2.29</Version>
+    <ApplicationDisplayVersion>$(Version)</ApplicationDisplayVersion>
+    <ApplicationVersion>30</ApplicationVersion>
+    <!-- Android 11 supplies SQLite with the UPSERT syntax used by the shared schema. -->
+    <SupportedOSPlatformVersion>30.0</SupportedOSPlatformVersion>
+    <MauiVersion>10.0.110</MauiVersion>
+    <JsonSerializerIsReflectionEnabledByDefault>true</JsonSerializerIsReflectionEnabledByDefault>
+    <RestoreIgnoreFailedSources>false</RestoreIgnoreFailedSources>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
+    <ProjectReference Include="../GrimList.Application/GrimList.Application.csproj" />
+    <ProjectReference Include="../GrimList.Persistence/GrimList.Persistence.csproj" />
+    <!-- Preserve the same reflection-based dataset contract in trimmed Android builds. -->
+    <TrimmerRootAssembly Include="GrimList.Core" />
+    <MauiIcon Include="Resources/AppIcon/grimlist_appicon.png" Color="#000000" BaseSize="128,128" Resize="true" />
+    <MauiSplashScreen Include="Resources/Splash/splash.svg" Color="#20242B" BaseSize="128,128" />
+  </ItemGroup>
+  <PropertyGroup Condition="'$(IncludePerformanceChecks)' == 'true'">
+    <DefineConstants>$(DefineConstants);PERFORMANCE_CHECKS</DefineConstants>
+    <ApplicationId>com.grimlist.perftest</ApplicationId>
+    <ApplicationTitle>GrimList Performance Test</ApplicationTitle>
+  </PropertyGroup>
+  <ItemGroup Condition="'$(IncludePerformanceChecks)' == 'true'">
+    <Compile Include="../../tools/GrimList.Performance/EnhancementAcceptance.cs" Link="EnhancementAcceptance.cs" />
+    <Compile Include="../../tools/GrimList.Performance/AcceptanceWorkload.cs" Link="AcceptanceWorkload.cs" />
+    <Compile Include="../../tools/GrimList.Performance/ControlledComparison.cs" Link="ControlledComparison.cs" />
+    <Compile Include="../../tools/GrimList.Performance/FactionLoadingWorkload.cs" Link="FactionLoadingWorkload.cs" />
+    <Compile Include="../../tools/GrimList.Performance/CatalogueStorageWorkload.cs" Link="CatalogueStorageWorkload.cs" />
+    <Compile Include="../../tools/GrimList.Performance/CatalogueWorkflowWorkload.cs" Link="CatalogueWorkflowWorkload.cs" />
+    <Compile Include="../../tools/GrimList.Performance/IncrementalEvaluationWorkload.cs" Link="IncrementalEvaluationWorkload.cs" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(IncludePerformanceChecks)' == 'true' and '$(ImportStorageFixtureDirectory)' != ''">
+    <EmbeddedResource Include="$(ImportStorageFixtureDirectory)/repository.zip" LogicalName="GrimList.Mobile.ImportStorage.repository.zip" />
+    <EmbeddedResource Include="$(ImportStorageFixtureDirectory)/source.json" LogicalName="GrimList.Mobile.ImportStorage.source.json" />
+    <EmbeddedResource Include="$(ImportStorageFixtureDirectory)/mfm.json" LogicalName="GrimList.Mobile.ImportStorage.mfm.json" />
+  </ItemGroup>
+</Project>

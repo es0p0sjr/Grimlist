@@ -1,0 +1,176 @@
+{
+  "Edition": "11",
+  "Factions": {
+    "b00-cd86-4b4c-97ba": {
+      "SourceUri": "https://wahapedia.ru/wh40k11ed/factions/imperial-agents/",
+      "DiscoveryMethod": "IndexedSourceUrl",
+      "Evidence": "Wahapedia edition-11 faction landing page returned by web search on 2026-10-05; full HTML not acquired"
+    },
+    "d81a-61dd-6d27-a3ce": {
+      "SourceUri": "https://wahapedia.ru/wh40k11ed/factions/t-au-empire/",
+      "DiscoveryMethod": "IndexedSourceUrl",
+      "Evidence": "Wahapedia edition-11 faction landing page returned by web search on 2026-10-05; full HTML not acquired"
+    },
+    "03fe-a162-4c02-f07b": {
+      "SourceUri": "https://wahapedia.ru/wh40k11ed/factions/emperor-s-children/",
+      "DiscoveryMethod": "IndexedSourceUrl",
+      "Evidence": "Wahapedia edition-11 faction landing page returned by web search on 2026-10-05; full HTML not acquired"
+    },
+    "36d3-36bc-68dd-40ac": {
+      "SourceUri": "https://wahapedia.ru/wh40k11ed/factions/space-marines/",
+      "SourcePageFaction": "Space Marines",
+      "SourceFactionSection": "Black Templars",
+      "DiscoveryMethod": "SharedFactionPage",
+      "Evidence": "User-confirmed Black Templars correction; chapter groups evidenced on shared Wahapedia 11e Space Marines page, 2026-10-05",
+      "Reason": "Source-declared chapter bit composes applicable generic and exclusive detachment containers",
+      "SourceComposition": {
+        "FilterGroup": "CH",
+        "FilterOption": "BT",
+        "FilterLabel": "BLACK TEMPLARS"
+      }
+    },
+    "4ef9-15ce-e3e6-36de": {
+      "SourceUri": "https://wahapedia.ru/wh40k11ed/factions/space-marines/",
+      "SourcePageFaction": "Space Marines",
+      "SourceFactionSection": "Blood Angels",
+      "DiscoveryMethod": "SharedFactionPage",
+      "Evidence": "User-confirmed Black Templars correction; chapter groups evidenced on shared Wahapedia 11e Space Marines page, 2026-10-05",
+      "Reason": "Source-declared chapter bit composes applicable generic and exclusive detachment containers",
+      "SourceComposition": {
+        "FilterGroup": "CH",
+        "FilterOption": "BA",
+        "FilterLabel": "BLOOD ANGELS"
+      }
+    },
+    "470a-6daa-9014-12df": {
+      "SourceUri": "https://wahapedia.ru/wh40k11ed/factions/space-marines/",
+      "SourcePageFaction": "Space Marines",
+      "SourceFactionSection": "Dark Angels",
+      "DiscoveryMethod": "SharedFactionPage",
+      "Evidence": "User-confirmed Black Templars correction; chapter groups evidenced on shared Wahapedia 11e Space Marines page, 2026-10-05",
+      "Reason": "Source-declared chapter bit composes applicable generic and exclusive detachment containers",
+      "SourceComposition": {
+        "FilterGroup": "CH",
+        "FilterOption": "DA",
+        "FilterLabel": "DARK ANGELS"
+      }
+    },
+    "f89b-84e0-6e3b-f1e2": {
+      "SourceUri": "https://wahapedia.ru/wh40k11ed/factions/space-marines/",
+      "SourcePageFaction": "Space Marines",
+      "SourceFactionSection": "Deathwatch",
+      "DiscoveryMethod": "SharedFactionPage",
+      "Evidence": "User-confirmed Black Templars correction; chapter groups evidenced on shared Wahapedia 11e Space Marines page, 2026-10-05",
+      "Reason": "Source-declared chapter bit composes applicable generic and exclusive detachment containers",
+      "SourceComposition": {
+        "FilterGroup": "CH",
+        "FilterOption": "DW",
+        "FilterLabel": "DEATHWATCH"
+      }
+    },
+    "5d6e-fd3-330a-11dd": {
+      "SourceUri": "https://wahapedia.ru/wh40k11ed/factions/space-marines/",
+      "SourcePageFaction": "Space Marines",
+      "SourceFactionSection": "Imperial Fists",
+      "DiscoveryMethod": "SharedFactionPage",
+      "Evidence": "User-confirmed Black Templars correction; chapter groups evidenced on shared Wahapedia 11e Space Marines page, 2026-10-05",
+      "Reason": "Source-declared chapter bit composes applicable generic and exclusive detachment containers",
+      "SourceComposition": {
+        "FilterGroup": "CH",
+        "FilterOption": "IF",
+        "FilterLabel": "IMPERIAL FISTS"
+      }
+    },
+    "f27e-18c0-b73e-748e": {
+      "SourceUri": "https://wahapedia.ru/wh40k11ed/factions/space-marines/",
+      "SourcePageFaction": "Space Marines",
+      "SourceFactionSection": "Iron Hands",
+      "DiscoveryMethod": "SharedFactionPage",
+      "Evidence": "User-confirmed Black Templars correction; chapter groups evidenced on shared Wahapedia 11e Space Marines page, 2026-10-05",
+      "Reason": "Source-declared chapter bit composes applicable generic and exclusive detachment containers",
+      "SourceComposition": {
+        "FilterGroup": "CH",
+        "FilterOption": "IH",
+        "FilterLabel": "IRON HANDS"
+      }
+    },
+    "6e59-e1ee-47ad-6ce5": {
+      "SourceUri": "https://wahapedia.ru/wh40k11ed/factions/space-marines/",
+      "SourcePageFaction": "Space Marines",
+      "SourceFactionSection": "Raven Guard",
+      "DiscoveryMethod": "SharedFactionPage",
+      "Evidence": "User-confirmed Black Templars correction; chapter groups evidenced on shared Wahapedia 11e Space Marines page, 2026-10-05",
+      "Reason": "Source-declared chapter bit composes applicable generic and exclusive detachment containers",
+      "SourceComposition": {
+        "FilterGroup": "CH",
+        "FilterOption": "RG",
+        "FilterLabel": "RAVEN GUARD"
+      }
+    },
+    "2261-79a5-19d9-1668": {
+      "SourceUri": "https://wahapedia.ru/wh40k11ed/factions/space-marines/",
+      "SourcePageFaction": "Space Marines",
+      "SourceFactionSection": "Salamanders",
+      "DiscoveryMethod": "SharedFactionPage",
+      "Evidence": "User-confirmed Black Templars correction; chapter groups evidenced on shared Wahapedia 11e Space Marines page, 2026-10-05",
+      "Reason": "Source-declared chapter bit composes applicable generic and exclusive detachment containers",
+      "SourceComposition": {
+        "FilterGroup": "CH",
+        "FilterOption": "SA",
+        "FilterLabel": "SALAMANDERS"
+      }
+    },
+    "e0af-67df-9d63-8fb7": {
+      "SourceUri": "https://wahapedia.ru/wh40k11ed/factions/space-marines/",
+      "SourcePageFaction": "Space Marines",
+      "SourceFactionSection": "Space Marines",
+      "DiscoveryMethod": "SharedFactionPage",
+      "Evidence": "User-confirmed Black Templars correction; chapter groups evidenced on shared Wahapedia 11e Space Marines page, 2026-10-05",
+      "Reason": "Source-declared chapter bit composes applicable generic and exclusive detachment containers",
+      "SourceComposition": {
+        "FilterGroup": "CH",
+        "FilterOption": "C0",
+        "FilterLabel": "No supplements"
+      }
+    },
+    "94bb-3284-ee14-57a1": {
+      "SourceUri": "https://wahapedia.ru/wh40k11ed/factions/space-marines/",
+      "SourcePageFaction": "Space Marines",
+      "SourceFactionSection": "Space Wolves",
+      "DiscoveryMethod": "SharedFactionPage",
+      "Evidence": "User-confirmed Black Templars correction; chapter groups evidenced on shared Wahapedia 11e Space Marines page, 2026-10-05",
+      "Reason": "Source-declared chapter bit composes applicable generic and exclusive detachment containers",
+      "SourceComposition": {
+        "FilterGroup": "CH",
+        "FilterOption": "SW",
+        "FilterLabel": "SPACE WOLVES"
+      }
+    },
+    "4029-9237-e8db-af55": {
+      "SourceUri": "https://wahapedia.ru/wh40k11ed/factions/space-marines/",
+      "SourcePageFaction": "Space Marines",
+      "SourceFactionSection": "Ultramarines",
+      "DiscoveryMethod": "SharedFactionPage",
+      "Evidence": "User-confirmed Black Templars correction; chapter groups evidenced on shared Wahapedia 11e Space Marines page, 2026-10-05",
+      "Reason": "Source-declared chapter bit composes applicable generic and exclusive detachment containers",
+      "SourceComposition": {
+        "FilterGroup": "CH",
+        "FilterOption": "UL",
+        "FilterLabel": "ULTRAMARINES"
+      }
+    },
+    "67c1-fc13-f9a1-cbbf": {
+      "SourceUri": "https://wahapedia.ru/wh40k11ed/factions/space-marines/",
+      "SourcePageFaction": "Space Marines",
+      "SourceFactionSection": "White Scars",
+      "DiscoveryMethod": "SharedFactionPage",
+      "Evidence": "User-confirmed Black Templars correction; chapter groups evidenced on shared Wahapedia 11e Space Marines page, 2026-10-05",
+      "Reason": "Source-declared chapter bit composes applicable generic and exclusive detachment containers",
+      "SourceComposition": {
+        "FilterGroup": "CH",
+        "FilterOption": "WS",
+        "FilterLabel": "WHITE SCARS"
+      }
+    }
+  }
+}

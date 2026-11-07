@@ -1,0 +1,472 @@
+=== Biologus / Plague Marines Attachment Diagnostic ===
+Generated UTC: 2026-10-02T23:20:02.676134+00:00
+
+CORRECTED CONCLUSION
+The revision-17 catalogue DOES contain the extra-Leader permission, structurally
+on the Plague Marines bodyguard. The previous conclusion based on Biologus's
+Leader text and outgoing references was incomplete and incorrect.
+The loss occurred during IMPORT: bodyguard association constraints AND their
+constraint-targeting modifiers were omitted from the intermediate/runtime model.
+The candidate path already constructed the complete proposed group; it had no
+structural rules to evaluate. No Death Guard/Biologus special case was added.
+
+CATALOGUE / RUNTIME PROVENANCE
+Database: D:\Konstantinos\GrimList\.local\grimlist.db
+ActiveSourceId: f388f689-c0d0-4eba-a815-7b70dfad8cca
+Archive: D:\Konstantinos\GrimList\tests\fixtures\bsdata\11e\cc1830fbfead059f8059ed6c7f8e73cd4c390908\repository.zip
+ArchiveSha256: 747db24bf29456f0606a937f794a7e7f33154e76116eff1506e9b0750ab5c045
+SourceMetadata: D:\Konstantinos\GrimList\tests\fixtures\bsdata\11e\cc1830fbfead059f8059ed6c7f8e73cd4c390908\source.json
+CatalogueFile: wh40k-11e-cc1830fbfead059f8059ed6c7f8e73cd4c390908/Chaos - Death Guard.json
+CatalogueId: 5108-f98-63c2-53cb
+CatalogueRevision: 17
+GameSystemRevision: 1
+EntryId: 690b-a189-5935-f32e
+BodyguardEntryId: 8467-b3a2-2597-de0d
+Biologus category ID used by association conditions: a376-7f02-1fc8-6be0
+At startup the desktop reads the active dataset snapshot in grimlist.db.
+It does not parse repository.zip each time an attachment is attempted.
+The ZIP hash above matches the installed profile's source metadata.
+
+RAW
+Found Biologus Leader reference: YES
+Found extra-Leader phrase in Biologus Leader text: NO
+Found additional-Leader permission on BODYGUARD: YES, conditional
+Plague Marines raw association constraints:
+[
+  {
+    "id": "7d52-af78-d77f-b4f3",
+    "childId": "1556-9b56-fba6-4370",
+    "childName": "Leader",
+    "field": "associations",
+    "includeChildSelections": false,
+    "scope": "self",
+    "shared": true,
+    "type": "max",
+    "value": 1
+  }
+]
+Modifiers targeting those exact constraint IDs:
+[
+  {
+    "field": "7d52-af78-d77f-b4f3",
+    "type": "set",
+    "value": 2,
+    "conditionGroups": [
+      {
+        "type": "or",
+        "conditions": [
+          {
+            "childId": "917-dc6c-ae70-a45b",
+            "childName": "Foul Blightspawn",
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "type": "atLeast",
+            "value": 1
+          },
+          {
+            "childId": "82ec-2c74-d449-2afb",
+            "childName": "Tallyman",
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "type": "atLeast",
+            "value": 1
+          },
+          {
+            "childId": "b631-a560-7efd-9c94",
+            "childName": "Plague Surgeon",
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "type": "atLeast",
+            "value": 1
+          },
+          {
+            "childId": "483a-2919-74ca-338e",
+            "childName": "Death Guard Icon Bearer",
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "type": "atLeast",
+            "value": 1
+          },
+          {
+            "childId": "a376-7f02-1fc8-6be0",
+            "childName": "Biologus Putrifier",
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "type": "atLeast",
+            "value": 1
+          },
+          {
+            "childId": "4184-cab9-b99a-d510",
+            "childName": "Noxious Blightbringer",
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "type": "atLeast",
+            "value": 1
+          }
+        ]
+      }
+    ]
+  }
+]
+
+RESOLVED
+Additional-Leader permission: YES, conditional
+The bodyguard constraint and modifier are inline on its selection entry.
+Category child IDs identify Leader and the qualifying characters. Biologus's
+category links include a376-7f02-1fc8-6be0, so the association predicate matches
+by source ID. Human-readable names are used only in diagnostics.
+Biologus's shared Leader profile b102-6947-89c2-991f still only lists Plague Marines;
+its text does not need a 10e exception and no text was copied into the import.
+The complete source inventory now includes the bodyguard and its category refs:
+.local/attachment-diagnostic/raw-entry.json
+.local/attachment-diagnostic/raw-bodyguard.json
+.local/attachment-diagnostic/reachable-raw-definitions.json
+.local/attachment-diagnostic/reference-edges.json
+.local/attachment-diagnostic/reachable-text-matches.json
+tests/fixtures/bsdata/11e/cc1830fbfead059f8059ed6c7f8e73cd4c390908/death-guard/raw-catalogue.json
+
+PARSED
+Additional-Leader permission: YES, conditional, on Plague Marines
+Biologus: role = Leader; bodyguardTargets = [Plague Marines]
+Biologus additionalAttachment = NONE (correct for this source)
+Plague Marines: Leader max base 1; SET 2 when the imported OR group matches.
+Constraint 7d52-af78-d77f-b4f3 remains base 1. The six qualifying characters are
+Foul Blightspawn, Tallyman, Plague Surgeon, Death Guard Icon Bearer,
+Biologus Putrifier and Noxious Blightbringer.
+The full parsed object is in bodyguard-association-import.json.
+
+RUNTIME
+Additional-Leader permission: YES, evaluated against complete PROPOSED set
+The installed Teams roster has 10 Plague Marines. The following diagnostic was
+produced by the application code against the refreshed live database without
+changing the saved roster:
+Bodyguard: Plague Marines
+Proposed associations: Malignant Plaguecaster, Biologus Putrifier
+Base: Leader max = 1
+Applied modifiers: SET Leader max 2: ((Biologus Putrifier associations atLeast 1 (actual 1, scope self)))
+Effective: Leader max = 2
+Actual: Leader count = 2
+Association result: VALID
+Complete attachment validation: VALID
+
+The exact runtime bodyguard semantics supplied to validation:
+{
+  "Version": 2,
+  "SourceFingerprint": "953B907CB886ED697E769FD54C300DAFC4B9A87CF2A88CD2C1EE8F3B6AED29F6",
+  "CanAttach": false,
+  "IsSupport": false,
+  "BodyguardTargets": [],
+  "AllowsLeaderAndSupport": false,
+  "AdditionalAttachments": [],
+  "BodyguardRules": [],
+  "Associations": {
+    "SourceEntryId": "8467-b3a2-2597-de0d",
+    "IdentityIds": [
+      "9888-ddb2-a141-6037",
+      "cf47-a0d7-7207-29dc",
+      "4c00-2578-faf5-6918",
+      "ed0d-8e2a-225c-2340",
+      "5a61-81ac-eb7c-a87e",
+      "e338-111e-d0c6-b687",
+      "8448-53ec-fbc3-467c",
+      "8467-b3a2-2597-de0d"
+    ],
+    "Constraints": [
+      {
+        "Id": "7d52-af78-d77f-b4f3",
+        "Scope": "self",
+        "ChildId": "1556-9b56-fba6-4370",
+        "ChildName": "Leader",
+        "Type": "max",
+        "Value": 1,
+        "Modifiers": [
+          {
+            "Operation": "set",
+            "Value": 2,
+            "Condition": {
+              "Kind": "and",
+              "Scope": "",
+              "ChildId": "",
+              "ChildName": "",
+              "Comparison": "",
+              "Value": 0,
+              "Children": [
+                {
+                  "Kind": "or",
+                  "Scope": "",
+                  "ChildId": "",
+                  "ChildName": "",
+                  "Comparison": "",
+                  "Value": 0,
+                  "Children": [
+                    {
+                      "Kind": "count",
+                      "Scope": "self",
+                      "ChildId": "917-dc6c-ae70-a45b",
+                      "ChildName": "Foul Blightspawn",
+                      "Comparison": "atLeast",
+                      "Value": 1,
+                      "Children": null,
+                      "Field": "associations"
+                    },
+                    {
+                      "Kind": "count",
+                      "Scope": "self",
+                      "ChildId": "82ec-2c74-d449-2afb",
+                      "ChildName": "Tallyman",
+                      "Comparison": "atLeast",
+                      "Value": 1,
+                      "Children": null,
+                      "Field": "associations"
+                    },
+                    {
+                      "Kind": "count",
+                      "Scope": "self",
+                      "ChildId": "b631-a560-7efd-9c94",
+                      "ChildName": "Plague Surgeon",
+                      "Comparison": "atLeast",
+                      "Value": 1,
+                      "Children": null,
+                      "Field": "associations"
+                    },
+                    {
+                      "Kind": "count",
+                      "Scope": "self",
+                      "ChildId": "483a-2919-74ca-338e",
+                      "ChildName": "Death Guard Icon Bearer",
+                      "Comparison": "atLeast",
+                      "Value": 1,
+                      "Children": null,
+                      "Field": "associations"
+                    },
+                    {
+                      "Kind": "count",
+                      "Scope": "self",
+                      "ChildId": "a376-7f02-1fc8-6be0",
+                      "ChildName": "Biologus Putrifier",
+                      "Comparison": "atLeast",
+                      "Value": 1,
+                      "Children": null,
+                      "Field": "associations"
+                    },
+                    {
+                      "Kind": "count",
+                      "Scope": "self",
+                      "ChildId": "4184-cab9-b99a-d510",
+                      "ChildName": "Noxious Blightbringer",
+                      "Comparison": "atLeast",
+                      "Value": 1,
+                      "Children": null,
+                      "Field": "associations"
+                    }
+                  ],
+                  "Field": "associations"
+                }
+              ],
+              "Field": "associations"
+            }
+          }
+        ]
+      }
+    ],
+    "Warnings": []
+  }
+}
+Proposed Leader semantics:
+[
+  {
+    "Entry": {
+      "Id": "bb3a5306-38ea-4707-b4da-c9dca2575a7f",
+      "UnitKey": "unit-b89617941e5d3c864f8e6f90",
+      "Name": "Malignant Plaguecaster",
+      "Models": 1,
+      "Notes": "",
+      "Loadout": {
+        "Models": [
+          {
+            "RoleId": "9900-77d7-10e3-5c91",
+            "Equipment": [
+              {
+                "GroupId": "7aac-3e93-1cad-7b1e",
+                "OptionId": "1558-8b0f-dbed-3552",
+                "Count": 1
+              },
+              {
+                "GroupId": "7aac-3e93-1cad-7b1e",
+                "OptionId": "1275-f312-b4d0-9e2b",
+                "Count": 1
+              },
+              {
+                "GroupId": "7aac-3e93-1cad-7b1e",
+                "OptionId": "cb66-ea67-29a2-316d",
+                "Count": 1
+              }
+            ]
+          }
+        ],
+        "Equipment": [],
+        "Manual": false
+      },
+      "AttachedToId": "4bba7c8a-71b5-4998-a955-989a0685e75b",
+      "Enhancement": null
+    },
+    "Rules": {
+      "Version": 2,
+      "SourceFingerprint": "0AE3440378FBE2B59218A6A7676867026CCCEE0FE067D98578D8676E9EABDFDA",
+      "CanAttach": true,
+      "IsSupport": false,
+      "BodyguardTargets": [
+        "PLAGUE MARINES",
+        "POXWALKERS"
+      ],
+      "AllowsLeaderAndSupport": true,
+      "AdditionalAttachments": [],
+      "BodyguardRules": [],
+      "Associations": {
+        "SourceEntryId": "9900-77d7-10e3-5c91",
+        "IdentityIds": [
+          "9888-ddb2-a141-6037",
+          "cf47-a0d7-7207-29dc",
+          "9cfd-1c32-585f-7d5c",
+          "4c00-2578-faf5-6918",
+          "ed0d-8e2a-225c-2340",
+          "13bf-2bee-3ae0-b414",
+          "966f-9cb8-39fe-450",
+          "1556-9b56-fba6-4370",
+          "9900-77d7-10e3-5c91"
+        ],
+        "Constraints": [],
+        "Warnings": []
+      }
+    }
+  },
+  {
+    "Entry": {
+      "Id": "31485f9a-a655-4709-a369-0c4be27bec4d",
+      "UnitKey": "unit-0f0ec1d8be616f7cce98fd7f",
+      "Name": "Biologus Putrifier",
+      "Models": 1,
+      "Notes": "",
+      "Loadout": {
+        "Models": [
+          {
+            "RoleId": "690b-a189-5935-f32e",
+            "Equipment": [
+              {
+                "GroupId": "879b-b245-d141-ce38",
+                "OptionId": "20c3-7fb0-9b72-5294",
+                "Count": 1
+              },
+              {
+                "GroupId": "879b-b245-d141-ce38",
+                "OptionId": "e151-aace-f9b9-c76",
+                "Count": 1
+              },
+              {
+                "GroupId": "879b-b245-d141-ce38",
+                "OptionId": "e0e0-965d-717-2705",
+                "Count": 1
+              }
+            ]
+          }
+        ],
+        "Equipment": [],
+        "Manual": false
+      },
+      "AttachedToId": "",
+      "Enhancement": null
+    },
+    "Rules": {
+      "Version": 2,
+      "SourceFingerprint": "8ECC76B73D445BE52D6667ADD3A21F482B0C2A1FDC1A29238BADA09DFA2D6BC8",
+      "CanAttach": true,
+      "IsSupport": false,
+      "BodyguardTargets": [
+        "PLAGUE MARINES"
+      ],
+      "AllowsLeaderAndSupport": true,
+      "AdditionalAttachments": [],
+      "BodyguardRules": [],
+      "Associations": {
+        "SourceEntryId": "690b-a189-5935-f32e",
+        "IdentityIds": [
+          "9888-ddb2-a141-6037",
+          "cf47-a0d7-7207-29dc",
+          "9cfd-1c32-585f-7d5c",
+          "4c00-2578-faf5-6918",
+          "ed0d-8e2a-225c-2340",
+          "5a61-81ac-eb7c-a87e",
+          "a376-7f02-1fc8-6be0",
+          "1556-9b56-fba6-4370",
+          "690b-a189-5935-f32e"
+        ],
+        "Constraints": [],
+        "Warnings": []
+      }
+    }
+  }
+]
+
+GENERIC CHANGES
+1. BsDataAssociations.cs retains source entry/category IDs, association constraints,
+   and their targeted modifiers, including inherited modifier-group conditions.
+2. AssociationRules.cs evaluates source counts against the complete proposed set
+   before applying attachment capacity. It retains base limits and applies ordered
+   set/increment/decrement operations only when the associated conditions match.
+3. RuleEvaluation.cs shares numeric comparison, modifier operations and nested
+   AND/OR evaluation with formula pricing. Supported comparisons: atLeast, atMost,
+   greaterThan, lessThan, equalTo and notEqualTo. Unsupported grammar requires review.
+4. Local conditions use the target body's proposed group; force/roster conditions
+   use the prospective roster associations. Constraints without childId count all
+   attachments. Explicit bodyguard model-count conditions are supported; Plague
+   Marines have no such condition and squad size does not affect their capacity.
+5. UnitProfile and compiled AttachmentDefinition persist association metadata.
+   Compiled semantics are versioned and fingerprinted, including structural rules.
+6. LeaderRules.CombinationProblem evaluates association limits for candidate checks,
+   attachment, roster validation and restored groups. Existing textual named-partner,
+   duplicate, bodyguard and Leader/Support checks remain. No global maximum changed.
+7. Both actual desktop pickers call the same proposed-combination path. Selecting a
+   picker option attaches immediately; there is no separate Attach button. The new
+   Attachment capacity panel displays base limits, matching modifiers and counts.
+
+VALIDATION
+154 core checks passed, including real revision-17 archive import:
+- Malignant + Biologus in both orders for each legal size 5, 7 and 10.
+- Same checks with Tallyman and Foul Blightspawn.
+- Two ordinary Leaders rejected (effective max 1); third Leader rejected (max 2).
+- Current set max 1 vs proposed set max 2; persisted base remains 1.
+- Numeric comparisons, scopes, AND/OR, set/increment/decrement, unknown grammar.
+- Existing order-independent textual permissions and restrictions retained.
+The incorrect negative revision-17 test was replaced, not weakened with fake text.
+8 native desktop real-source flows passed: Biologus/Tallyman, both orders and both
+pickers, selection/enabled state, final saved pair, ordinary/third rejection,
+removing the qualifying character, undo/redo, reopening and Play mode.
+Release desktop build: zero errors and zero warnings.
+Core log: .local/association-tests.txt
+Native results: .local/tests/ab504d7a-1840-4b9e-b1e2-f497bd418d25/association-smoke.png.result.txt
+Native real-source results: .local/tests/ab504d7a-1840-4b9e-b1e2-f497bd418d25/association-smoke.png.real-associations.txt
+Screenshot: .local/tests/ab504d7a-1840-4b9e-b1e2-f497bd418d25/association-smoke.png.real-associations.png
+
+INSTALLED LIBRARY REFRESH
+Refreshed association metadata for 2194 units from the exact cached archive;
+556 retain structural constraints, zero association-import warnings.
+Backup: D:\Konstantinos\GrimList\.local\backups\before-associations-20261002-231748-195
+Saved armies verified unchanged. Dataset comparison confirms every field outside
+association metadata/compiled semantics and import timestamp is unchanged.
+The running desktop must be restarted via Start-GrimList.cmd to load the new code
+and refreshed snapshot.
+Older import-runtime-trace.json / controlled-variant-test.json artifacts predate
+this correction and are superseded by runtime-attachment-rules.json and this report.
+
+REPRODUCTION
+python scripts/trace_attachment_source.py --data-dir .local --catalogue "Chaos - Death Guard" --faction "Death Guard" --unit "Biologus Putrifier" --bodyguard "Plague Marines" --out .local/attachment-diagnostic
+
+dotnet run --project tests/GrimList.Tests -- --attachment-source tests/fixtures/libraries/sororitas-attachment-source.json --all-factions-attachment-source tests/fixtures/libraries/all-factions-attachment-source.json --attachment-diagnostic tests/fixtures/bsdata/11e/cc1830fbfead059f8059ed6c7f8e73cd4c390908/death-guard
+
+dotnet run --project tools/GrimList.Data -- inspect-attachments .local 969593f7-e6d2-49f3-a7e0-d48b7ddda5fa 4bba7c8a-71b5-4998-a955-989a0685e75b bb3a5306-38ea-4707-b4da-c9dca2575a7f,31485f9a-a655-4709-a369-0c4be27bec4d .local/attachment-diagnostic

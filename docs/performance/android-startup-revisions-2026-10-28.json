@@ -1,0 +1,2742 @@
+{
+  "Device": "Redmi 22101316UG",
+  "Package": "com.grimlist.perftest",
+  "ApkSha256": "e72464adebfc342121f61e0ceb5703b90cda4ac99093ab10455a319a660016d0",
+  "Method": "Five baseline cold starts of the already installed previous diagnostic app; three transition starts after changing cache contracts; five final starts including compatible migration. Same saved attachment fixture with 20 entries. Baseline spans 3.78 to 8.13 seconds; do not treat mean differences as isolated causal speedups. Sixty final edit samples (five per operation/size after warm-up).",
+  "Before": [
+    {
+      "LibraryReadyMs": 6823.8542,
+      "MauiEntryToUsableMs": 7584.0603,
+      "ManagedBytes": 33416232,
+      "AllocatedBytes": 66418872,
+      "NativeAllocatedBytes": 77890112,
+      "Stages": [
+        {
+          "Stage": "startup.database-open",
+          "Milliseconds": 105.8622
+        },
+        {
+          "Stage": "factions.manifest-read",
+          "Milliseconds": 2025.3466
+        },
+        {
+          "Stage": "startup.session",
+          "Milliseconds": 3126.4904
+        },
+        {
+          "Stage": "factions.shards-read",
+          "Milliseconds": 386.897
+        },
+        {
+          "Stage": "factions.abilities-read",
+          "Milliseconds": 81.8181
+        },
+        {
+          "Stage": "startup.restore",
+          "Milliseconds": 3144.7723
+        }
+      ],
+      "ExternalReadyMs": 8358.999999938533,
+      "AmStart": "Starting: Intent { cmp=com.grimlist.perftest/crc64c040c7e13546c831.MainActivity (has extras) }\nStatus: ok\nLaunchState: COLD\nActivity: com.grimlist.perftest/crc64c040c7e13546c831.MainActivity\nTotalTime: 1712\nWaitTime: 1715\nComplete\n"
+    },
+    {
+      "LibraryReadyMs": 6576.0329,
+      "MauiEntryToUsableMs": 7363.0926,
+      "ManagedBytes": 33397280,
+      "AllocatedBytes": 66444984,
+      "NativeAllocatedBytes": 77872680,
+      "Stages": [
+        {
+          "Stage": "startup.database-open",
+          "Milliseconds": 95.1433
+        },
+        {
+          "Stage": "factions.manifest-read",
+          "Milliseconds": 1814.6375
+        },
+        {
+          "Stage": "startup.session",
+          "Milliseconds": 2979.9263
+        },
+        {
+          "Stage": "factions.shards-read",
+          "Milliseconds": 375.7833
+        },
+        {
+          "Stage": "factions.abilities-read",
+          "Milliseconds": 85.7175
+        },
+        {
+          "Stage": "startup.restore",
+          "Milliseconds": 3069.6534
+        }
+      ],
+      "ExternalReadyMs": 8000.0,
+      "AmStart": "Starting: Intent { cmp=com.grimlist.perftest/crc64c040c7e13546c831.MainActivity (has extras) }\nStatus: ok\nLaunchState: COLD\nActivity: com.grimlist.perftest/crc64c040c7e13546c831.MainActivity\nTotalTime: 1362\nWaitTime: 1366\nComplete\n"
+    },
+    {
+      "LibraryReadyMs": 6919.2374,
+      "MauiEntryToUsableMs": 8126.5866,
+      "ManagedBytes": 33398320,
+      "AllocatedBytes": 66467576,
+      "NativeAllocatedBytes": 77779856,
+      "Stages": [
+        {
+          "Stage": "startup.database-open",
+          "Milliseconds": 95.9283
+        },
+        {
+          "Stage": "factions.manifest-read",
+          "Milliseconds": 1802.472
+        },
+        {
+          "Stage": "startup.session",
+          "Milliseconds": 2868.5723
+        },
+        {
+          "Stage": "factions.shards-read",
+          "Milliseconds": 381.7147
+        },
+        {
+          "Stage": "factions.abilities-read",
+          "Milliseconds": 78.48
+        },
+        {
+          "Stage": "startup.restore",
+          "Milliseconds": 3511.386
+        }
+      ],
+      "ExternalReadyMs": 8625.0,
+      "AmStart": "Starting: Intent { cmp=com.grimlist.perftest/crc64c040c7e13546c831.MainActivity (has extras) }\nStatus: ok\nLaunchState: COLD\nActivity: com.grimlist.perftest/crc64c040c7e13546c831.MainActivity\nTotalTime: 1369\nWaitTime: 1372\nComplete\n"
+    },
+    {
+      "LibraryReadyMs": 5854.5302,
+      "MauiEntryToUsableMs": 6452.9976,
+      "ManagedBytes": 34299072,
+      "AllocatedBytes": 70670568,
+      "NativeAllocatedBytes": 84209952,
+      "Stages": [
+        {
+          "Stage": "startup.database-open",
+          "Milliseconds": 283.1455
+        },
+        {
+          "Stage": "factions.manifest-read",
+          "Milliseconds": 2220.5941
+        },
+        {
+          "Stage": "startup.session",
+          "Milliseconds": 2906.096
+        },
+        {
+          "Stage": "factions.shards-read",
+          "Milliseconds": 180.9846
+        },
+        {
+          "Stage": "factions.abilities-read",
+          "Milliseconds": 32.1593
+        },
+        {
+          "Stage": "startup.restore",
+          "Milliseconds": 1477.6314
+        }
+      ],
+      "ExternalReadyMs": 7312.000000034459,
+      "AmStart": "Starting: Intent { cmp=com.grimlist.perftest/crc64c040c7e13546c831.MainActivity (has extras) }\nStatus: ok\nLaunchState: COLD\nActivity: com.grimlist.perftest/crc64c040c7e13546c831.MainActivity\nTotalTime: 2819\nWaitTime: 2821\nComplete\n"
+    },
+    {
+      "LibraryReadyMs": 3231.3923,
+      "MauiEntryToUsableMs": 3782.8042,
+      "ManagedBytes": 34298312,
+      "AllocatedBytes": 70595952,
+      "NativeAllocatedBytes": 82871744,
+      "Stages": [
+        {
+          "Stage": "startup.database-open",
+          "Milliseconds": 174.8051
+        },
+        {
+          "Stage": "factions.manifest-read",
+          "Milliseconds": 1010.7356
+        },
+        {
+          "Stage": "startup.session",
+          "Milliseconds": 1389.007
+        },
+        {
+          "Stage": "factions.shards-read",
+          "Milliseconds": 123.5839
+        },
+        {
+          "Stage": "factions.abilities-read",
+          "Milliseconds": 24.7606
+        },
+        {
+          "Stage": "startup.restore",
+          "Milliseconds": 1192.1938
+        }
+      ],
+      "ExternalReadyMs": 4625.0,
+      "AmStart": "Starting: Intent { cmp=com.grimlist.perftest/crc64c040c7e13546c831.MainActivity (has extras) }\nStatus: ok\nLaunchState: COLD\nActivity: com.grimlist.perftest/crc64c040c7e13546c831.MainActivity\nTotalTime: 1394\nWaitTime: 1399\nComplete\n"
+    }
+  ],
+  "Transition": [
+    {
+      "LibraryReadyMs": 28122.8566,
+      "MauiEntryToUsableMs": 28834.2615,
+      "ManagedBytes": 774947496,
+      "AllocatedBytes": 2194898448,
+      "NativeAllocatedBytes": 95996416,
+      "Stages": [
+        {
+          "Stage": "startup.database-open",
+          "Milliseconds": 159.466
+        },
+        {
+          "Stage": "factions.manifest-read",
+          "Milliseconds": 82.1636
+        },
+        {
+          "Stage": "library.read-and-reference-check",
+          "Milliseconds": 8631.957
+        },
+        {
+          "Stage": "library.reference-recovery",
+          "Milliseconds": 0.5397
+        },
+        {
+          "Stage": "library.eligibility-recovery",
+          "Milliseconds": 1820.5899
+        },
+        {
+          "Stage": "library.effective-recovery",
+          "Milliseconds": 1955.0036
+        },
+        {
+          "Stage": "library.detachment-recovery",
+          "Milliseconds": 111.108
+        },
+        {
+          "Stage": "library.price-recovery",
+          "Milliseconds": 362.1384
+        },
+        {
+          "Stage": "factions.dependencies",
+          "Milliseconds": 7927.2937
+        },
+        {
+          "Stage": "factions.build",
+          "Milliseconds": 13231.7206
+        },
+        {
+          "Stage": "startup.session",
+          "Milliseconds": 26305.5483
+        },
+        {
+          "Stage": "cache.checksum",
+          "Milliseconds": 0.1928
+        },
+        {
+          "Stage": "cache.json-metadata",
+          "Milliseconds": 0.2702
+        },
+        {
+          "Stage": "cache.deserialize",
+          "Milliseconds": 0.8605
+        },
+        {
+          "Stage": "cache.checksum",
+          "Milliseconds": 0.4105
+        },
+        {
+          "Stage": "cache.json-metadata",
+          "Milliseconds": 0.0083
+        },
+        {
+          "Stage": "cache.deserialize",
+          "Milliseconds": 44.3051
+        },
+        {
+          "Stage": "cache.checksum",
+          "Milliseconds": 0.7492
+        },
+        {
+          "Stage": "cache.json-metadata",
+          "Milliseconds": 0.0098
+        },
+        {
+          "Stage": "cache.deserialize",
+          "Milliseconds": 72.5901
+        },
+        {
+          "Stage": "factions.shards-read",
+          "Milliseconds": 124.4082
+        },
+        {
+          "Stage": "cache.checksum",
+          "Milliseconds": 0.6243
+        },
+        {
+          "Stage": "cache.json-metadata",
+          "Milliseconds": 0.0323
+        },
+        {
+          "Stage": "cache.deserialize",
+          "Milliseconds": 30.668
+        },
+        {
+          "Stage": "factions.abilities-read",
+          "Milliseconds": 31.7816
+        },
+        {
+          "Stage": "startup.restore",
+          "Milliseconds": 1004.6501
+        }
+      ],
+      "ExternalReadyMs": 30375.0,
+      "AmStart": "Starting: Intent { cmp=com.grimlist.perftest/crc64c040c7e13546c831.MainActivity (has extras) }\nStatus: ok\nLaunchState: COLD\nActivity: com.grimlist.perftest/crc64c040c7e13546c831.MainActivity\nTotalTime: 2231\nWaitTime: 2249\nComplete\n"
+    },
+    {
+      "LibraryReadyMs": 3390.3849,
+      "MauiEntryToUsableMs": 3991.1049,
+      "ManagedBytes": 33713624,
+      "AllocatedBytes": 66007344,
+      "NativeAllocatedBytes": 85278088,
+      "Stages": [
+        {
+          "Stage": "startup.database-open",
+          "Milliseconds": 114.4043
+        },
+        {
+          "Stage": "cache.checksum",
+          "Milliseconds": 15.9181
+        },
+        {
+          "Stage": "cache.json-metadata",
+          "Milliseconds": 83.3696
+        },
+        {
+          "Stage": "cache.deserialize",
+          "Milliseconds": 636.4732
+        },
+        {
+          "Stage": "factions.manifest-read",
+          "Milliseconds": 754.895
+        },
+        {
+          "Stage": "startup.session",
+          "Milliseconds": 1345.6424
+        },
+        {
+          "Stage": "cache.checksum",
+          "Milliseconds": 0.1464
+        },
+        {
+          "Stage": "cache.json-metadata",
+          "Milliseconds": 2.3175
+        },
+        {
+          "Stage": "cache.deserialize",
+          "Milliseconds": 0.6185
+        },
+        {
+          "Stage": "cache.checksum",
+          "Milliseconds": 0.3815
+        },
+        {
+          "Stage": "cache.json-metadata",
+          "Milliseconds": 0.0077
+        },
+        {
+          "Stage": "cache.deserialize",
+          "Milliseconds": 50.5234
+        },
+        {
+          "Stage": "cache.checksum",
+          "Milliseconds": 0.6153
+        },
+        {
+          "Stage": "cache.json-metadata",
+          "Milliseconds": 0.0083
+        },
+        {
+          "Stage": "cache.deserialize",
+          "Milliseconds": 64.332
+        },
+        {
+          "Stage": "factions.shards-read",
+          "Milliseconds": 126.4033
+        },
+        {
+          "Stage": "cache.checksum",
+          "Milliseconds": 0.5932
+        },
+        {
+          "Stage": "cache.json-metadata",
+          "Milliseconds": 0.8286
+        },
+        {
+          "Stage": "cache.deserialize",
+          "Milliseconds": 23.9522
+        },
+        {
+          "Stage": "factions.abilities-read",
+          "Milliseconds": 25.7537
+        },
+        {
+          "Stage": "startup.restore",
+          "Milliseconds": 1435.8569
+        }
+      ],
+      "ExternalReadyMs": 4968.999999924563,
+      "AmStart": "Starting: Intent { cmp=com.grimlist.perftest/crc64c040c7e13546c831.MainActivity (has extras) }\nStatus: ok\nLaunchState: COLD\nActivity: com.grimlist.perftest/crc64c040c7e13546c831.MainActivity\nTotalTime: 1391\nWaitTime: 1396\nComplete\n"
+    },
+    {
+      "LibraryReadyMs": 3371.9974,
+      "MauiEntryToUsableMs": 3951.6101,
+      "ManagedBytes": 33899752,
+      "AllocatedBytes": 66534192,
+      "NativeAllocatedBytes": 85195632,
+      "Stages": [
+        {
+          "Stage": "startup.database-open",
+          "Milliseconds": 131.4267
+        },
+        {
+          "Stage": "cache.checksum",
+          "Milliseconds": 14.5777
+        },
+        {
+          "Stage": "cache.json-metadata",
+          "Milliseconds": 85.7488
+        },
+        {
+          "Stage": "cache.deserialize",
+          "Milliseconds": 616.051
+        },
+        {
+          "Stage": "factions.manifest-read",
+          "Milliseconds": 729.3642
+        },
+        {
+          "Stage": "startup.session",
+          "Milliseconds": 1327.076
+        },
+        {
+          "Stage": "cache.checksum",
+          "Milliseconds": 0.127
+        },
+        {
+          "Stage": "cache.json-metadata",
+          "Milliseconds": 2.5021
+        },
+        {
+          "Stage": "cache.deserialize",
+          "Milliseconds": 0.7772
+        },
+        {
+          "Stage": "cache.checksum",
+          "Milliseconds": 0.3916
+        },
+        {
+          "Stage": "cache.json-metadata",
+          "Milliseconds": 0.0097
+        },
+        {
+          "Stage": "cache.deserialize",
+          "Milliseconds": 49.7586
+        },
+        {
+          "Stage": "cache.checksum",
+          "Milliseconds": 0.5935
+        },
+        {
+          "Stage": "cache.json-metadata",
+          "Milliseconds": 0.0089
+        },
+        {
+          "Stage": "cache.deserialize",
+          "Milliseconds": 65.3539
+        },
+        {
+          "Stage": "factions.shards-read",
+          "Milliseconds": 126.9436
+        },
+        {
+          "Stage": "cache.checksum",
+          "Milliseconds": 0.611
+        },
+        {
+          "Stage": "cache.json-metadata",
+          "Milliseconds": 0.7808
+        },
+        {
+          "Stage": "cache.deserialize",
+          "Milliseconds": 25.4794
+        },
+        {
+          "Stage": "factions.abilities-read",
+          "Milliseconds": 27.208
+        },
+        {
+          "Stage": "startup.restore",
+          "Milliseconds": 1422.6736
+        }
+      ],
+      "ExternalReadyMs": 4734.000000054948,
+      "AmStart": "Starting: Intent { cmp=com.grimlist.perftest/crc64c040c7e13546c831.MainActivity (has extras) }\nStatus: ok\nLaunchState: COLD\nActivity: com.grimlist.perftest/crc64c040c7e13546c831.MainActivity\nTotalTime: 1356\nWaitTime: 1382\nComplete\n"
+    }
+  ],
+  "After": [
+    {
+      "LibraryReadyMs": 3560.1089,
+      "MauiEntryToUsableMs": 4110.3325,
+      "ManagedBytes": 33736976,
+      "AllocatedBytes": 66396248,
+      "NativeAllocatedBytes": 85530384,
+      "Stages": [
+        {
+          "Stage": "startup.database-open",
+          "Milliseconds": 158.2673
+        },
+        {
+          "Stage": "factions.manifest-read",
+          "Milliseconds": 98.9581
+        },
+        {
+          "Stage": "cache.checksum",
+          "Milliseconds": 12.5566
+        },
+        {
+          "Stage": "cache.json-metadata",
+          "Milliseconds": 65.472
+        },
+        {
+          "Stage": "cache.deserialize",
+          "Milliseconds": 641.7914
+        },
+        {
+          "Stage": "factions.manifest-read",
+          "Milliseconds": 730.5504
+        },
+        {
+          "Stage": "startup.session",
+          "Milliseconds": 1523.0615
+        },
+        {
+          "Stage": "cache.checksum",
+          "Milliseconds": 0.3799
+        },
+        {
+          "Stage": "cache.json-metadata",
+          "Milliseconds": 2.2144
+        },
+        {
+          "Stage": "cache.deserialize",
+          "Milliseconds": 0.527
+        },
+        {
+          "Stage": "cache.checksum",
+          "Milliseconds": 1.1388
+        },
+        {
+          "Stage": "cache.json-metadata",
+          "Milliseconds": 0.009
+        },
+        {
+          "Stage": "cache.deserialize",
+          "Milliseconds": 47.372
+        },
+        {
+          "Stage": "cache.checksum",
+          "Milliseconds": 1.9319
+        },
+        {
+          "Stage": "cache.json-metadata",
+          "Milliseconds": 0.0098
+        },
+        {
+          "Stage": "cache.deserialize",
+          "Milliseconds": 64.9046
+        },
+        {
+          "Stage": "factions.shards-read",
+          "Milliseconds": 126.8922
+        },
+        {
+          "Stage": "cache.checksum",
+          "Milliseconds": 1.307
+        },
+        {
+          "Stage": "cache.json-metadata",
+          "Milliseconds": 0.9172
+        },
+        {
+          "Stage": "cache.deserialize",
+          "Milliseconds": 23.5532
+        },
+        {
+          "Stage": "factions.abilities-read",
+          "Milliseconds": 27.4417
+        },
+        {
+          "Stage": "startup.restore",
+          "Milliseconds": 1395.9814
+        }
+      ],
+      "RecoveryContract": "recovery-2/references-1/normalization-1/40E72D1F64DFED69EA997944967813F66B662201D269F3311995B368C25F5270/enhancement-eligibility-1/normalization-1/FE26E2AE5494604463F448A1B7ACBF893B9DF8561406FE04F87C8B1EA0728278/effective-1/rule-compilation-1/A1C7A1F8CC505220A8ED0648D0F02B35B49BC74CC8AEF39D28649A47018630C5/catalogue-1/normalization-1/659C6F8C5995CA0039BAC4E2819C93D3DA3C459AADB6CE58CDD0F5943583BEA5",
+      "ApplicationModule": "628bf071-250e-4ffa-a769-071b64fe1a91",
+      "FullReads": 0,
+      "ShardReads": 3,
+      "DependencyCalculations": 0,
+      "DependencyReuses": 0,
+      "MigratedManifest": true,
+      "Context": {
+        "Id": "attachment-checks",
+        "Faction": "Death Guard",
+        "Entries": 20,
+        "Screen": "roster"
+      },
+      "ExternalReadyMs": 4920.999999972992,
+      "AmStart": "Starting: Intent { cmp=com.grimlist.perftest/crc64c040c7e13546c831.MainActivity (has extras) }\nStatus: ok\nLaunchState: COLD\nActivity: com.grimlist.perftest/crc64c040c7e13546c831.MainActivity\nTotalTime: 1635\nWaitTime: 1640\nComplete\n"
+    },
+    {
+      "LibraryReadyMs": 3263.8787,
+      "MauiEntryToUsableMs": 3819.1344,
+      "ManagedBytes": 32946128,
+      "AllocatedBytes": 65518320,
+      "NativeAllocatedBytes": 84276688,
+      "Stages": [
+        {
+          "Stage": "startup.database-open",
+          "Milliseconds": 135.3406
+        },
+        {
+          "Stage": "cache.checksum",
+          "Milliseconds": 15.5962
+        },
+        {
+          "Stage": "cache.json-metadata",
+          "Milliseconds": 78.3477
+        },
+        {
+          "Stage": "cache.deserialize",
+          "Milliseconds": 628.1005
+        },
+        {
+          "Stage": "factions.manifest-read",
+          "Milliseconds": 738.3911
+        },
+        {
+          "Stage": "startup.session",
+          "Milliseconds": 1364.616
+        },
+        {
+          "Stage": "cache.checksum",
+          "Milliseconds": 0.1156
+        },
+        {
+          "Stage": "cache.json-metadata",
+          "Milliseconds": 2.0268
+        },
+        {
+          "Stage": "cache.deserialize",
+          "Milliseconds": 0.4857
+        },
+        {
+          "Stage": "cache.checksum",
+          "Milliseconds": 0.3775
+        },
+        {
+          "Stage": "cache.json-metadata",
+          "Milliseconds": 0.0067
+        },
+        {
+          "Stage": "cache.deserialize",
+          "Milliseconds": 46.4692
+        },
+        {
+          "Stage": "cache.checksum",
+          "Milliseconds": 0.6341
+        },
+        {
+          "Stage": "cache.json-metadata",
+          "Milliseconds": 0.0095
+        },
+        {
+          "Stage": "cache.deserialize",
+          "Milliseconds": 61.403
+        },
+        {
+          "Stage": "factions.shards-read",
+          "Milliseconds": 115.8566
+        },
+        {
+          "Stage": "cache.checksum",
+          "Milliseconds": 0.5102
+        },
+        {
+          "Stage": "cache.json-metadata",
+          "Milliseconds": 0.6984
+        },
+        {
+          "Stage": "cache.deserialize",
+          "Milliseconds": 22.16
+        },
+        {
+          "Stage": "factions.abilities-read",
+          "Milliseconds": 23.6864
+        },
+        {
+          "Stage": "startup.restore",
+          "Milliseconds": 1309.073
+        }
+      ],
+      "RecoveryContract": "recovery-2/references-1/normalization-1/40E72D1F64DFED69EA997944967813F66B662201D269F3311995B368C25F5270/enhancement-eligibility-1/normalization-1/FE26E2AE5494604463F448A1B7ACBF893B9DF8561406FE04F87C8B1EA0728278/effective-1/rule-compilation-1/A1C7A1F8CC505220A8ED0648D0F02B35B49BC74CC8AEF39D28649A47018630C5/catalogue-1/normalization-1/659C6F8C5995CA0039BAC4E2819C93D3DA3C459AADB6CE58CDD0F5943583BEA5",
+      "ApplicationModule": "628bf071-250e-4ffa-a769-071b64fe1a91",
+      "FullReads": 0,
+      "ShardReads": 3,
+      "DependencyCalculations": 0,
+      "DependencyReuses": 0,
+      "MigratedManifest": false,
+      "Context": {
+        "Id": "attachment-checks",
+        "Faction": "Death Guard",
+        "Entries": 20,
+        "Screen": "roster"
+      },
+      "ExternalReadyMs": 4718.999999924563,
+      "AmStart": "Starting: Intent { cmp=com.grimlist.perftest/crc64c040c7e13546c831.MainActivity (has extras) }\nStatus: ok\nLaunchState: COLD\nActivity: com.grimlist.perftest/crc64c040c7e13546c831.MainActivity\nTotalTime: 1339\nWaitTime: 1362\nComplete\n"
+    },
+    {
+      "LibraryReadyMs": 3411.4858,
+      "MauiEntryToUsableMs": 3978.4073,
+      "ManagedBytes": 33078024,
+      "AllocatedBytes": 65940440,
+      "NativeAllocatedBytes": 85374184,
+      "Stages": [
+        {
+          "Stage": "startup.database-open",
+          "Milliseconds": 178.964
+        },
+        {
+          "Stage": "cache.checksum",
+          "Milliseconds": 13.9726
+        },
+        {
+          "Stage": "cache.json-metadata",
+          "Milliseconds": 87.3516
+        },
+        {
+          "Stage": "cache.deserialize",
+          "Milliseconds": 617.5627
+        },
+        {
+          "Stage": "factions.manifest-read",
+          "Milliseconds": 735.7298
+        },
+        {
+          "Stage": "startup.session",
+          "Milliseconds": 1382.6372
+        },
+        {
+          "Stage": "cache.checksum",
+          "Milliseconds": 0.103
+        },
+        {
+          "Stage": "cache.json-metadata",
+          "Milliseconds": 1.8612
+        },
+        {
+          "Stage": "cache.deserialize",
+          "Milliseconds": 0.6673
+        },
+        {
+          "Stage": "cache.checksum",
+          "Milliseconds": 0.3882
+        },
+        {
+          "Stage": "cache.json-metadata",
+          "Milliseconds": 0.0089
+        },
+        {
+          "Stage": "cache.deserialize",
+          "Milliseconds": 48.0735
+        },
+        {
+          "Stage": "cache.checksum",
+          "Milliseconds": 0.5926
+        },
+        {
+          "Stage": "cache.json-metadata",
+          "Milliseconds": 0.0107
+        },
+        {
+          "Stage": "cache.deserialize",
+          "Milliseconds": 61.3756
+        },
+        {
+          "Stage": "factions.shards-read",
+          "Milliseconds": 117.6086
+        },
+        {
+          "Stage": "cache.checksum",
+          "Milliseconds": 0.5276
+        },
+        {
+          "Stage": "cache.json-metadata",
+          "Milliseconds": 0.7174
+        },
+        {
+          "Stage": "cache.deserialize",
+          "Milliseconds": 22.3179
+        },
+        {
+          "Stage": "factions.abilities-read",
+          "Milliseconds": 23.9086
+        },
+        {
+          "Stage": "startup.restore",
+          "Milliseconds": 1346.4806
+        }
+      ],
+      "RecoveryContract": "recovery-2/references-1/normalization-1/40E72D1F64DFED69EA997944967813F66B662201D269F3311995B368C25F5270/enhancement-eligibility-1/normalization-1/FE26E2AE5494604463F448A1B7ACBF893B9DF8561406FE04F87C8B1EA0728278/effective-1/rule-compilation-1/A1C7A1F8CC505220A8ED0648D0F02B35B49BC74CC8AEF39D28649A47018630C5/catalogue-1/normalization-1/659C6F8C5995CA0039BAC4E2819C93D3DA3C459AADB6CE58CDD0F5943583BEA5",
+      "ApplicationModule": "628bf071-250e-4ffa-a769-071b64fe1a91",
+      "FullReads": 0,
+      "ShardReads": 3,
+      "DependencyCalculations": 0,
+      "DependencyReuses": 0,
+      "MigratedManifest": false,
+      "Context": {
+        "Id": "attachment-checks",
+        "Faction": "Death Guard",
+        "Entries": 20,
+        "Screen": "roster"
+      },
+      "ExternalReadyMs": 5030.999999959022,
+      "AmStart": "Starting: Intent { cmp=com.grimlist.perftest/crc64c040c7e13546c831.MainActivity (has extras) }\nStatus: ok\nLaunchState: COLD\nActivity: com.grimlist.perftest/crc64c040c7e13546c831.MainActivity\nTotalTime: 1446\nWaitTime: 1458\nComplete\n"
+    },
+    {
+      "LibraryReadyMs": 3515.4554,
+      "MauiEntryToUsableMs": 4126.1145,
+      "ManagedBytes": 32938840,
+      "AllocatedBytes": 65451424,
+      "NativeAllocatedBytes": 85485800,
+      "Stages": [
+        {
+          "Stage": "startup.database-open",
+          "Milliseconds": 122.3559
+        },
+        {
+          "Stage": "cache.checksum",
+          "Milliseconds": 17.6345
+        },
+        {
+          "Stage": "cache.json-metadata",
+          "Milliseconds": 96.2163
+        },
+        {
+          "Stage": "cache.deserialize",
+          "Milliseconds": 653.7648
+        },
+        {
+          "Stage": "factions.manifest-read",
+          "Milliseconds": 790.6667
+        },
+        {
+          "Stage": "startup.session",
+          "Milliseconds": 1404.6179
+        },
+        {
+          "Stage": "cache.checksum",
+          "Milliseconds": 0.1237
+        },
+        {
+          "Stage": "cache.json-metadata",
+          "Milliseconds": 2.1308
+        },
+        {
+          "Stage": "cache.deserialize",
+          "Milliseconds": 0.5572
+        },
+        {
+          "Stage": "cache.checksum",
+          "Milliseconds": 0.3557
+        },
+        {
+          "Stage": "cache.json-metadata",
+          "Milliseconds": 0.0073
+        },
+        {
+          "Stage": "cache.deserialize",
+          "Milliseconds": 49.4335
+        },
+        {
+          "Stage": "cache.checksum",
+          "Milliseconds": 0.5646
+        },
+        {
+          "Stage": "cache.json-metadata",
+          "Milliseconds": 0.0083
+        },
+        {
+          "Stage": "cache.deserialize",
+          "Milliseconds": 63.427
+        },
+        {
+          "Stage": "factions.shards-read",
+          "Milliseconds": 120.826
+        },
+        {
+          "Stage": "cache.checksum",
+          "Milliseconds": 0.5251
+        },
+        {
+          "Stage": "cache.json-metadata",
+          "Milliseconds": 0.7803
+        },
+        {
+          "Stage": "cache.deserialize",
+          "Milliseconds": 21.7056
+        },
+        {
+          "Stage": "factions.abilities-read",
+          "Milliseconds": 23.356
+        },
+        {
+          "Stage": "startup.restore",
+          "Milliseconds": 1505.8316
+        }
+      ],
+      "RecoveryContract": "recovery-2/references-1/normalization-1/40E72D1F64DFED69EA997944967813F66B662201D269F3311995B368C25F5270/enhancement-eligibility-1/normalization-1/FE26E2AE5494604463F448A1B7ACBF893B9DF8561406FE04F87C8B1EA0728278/effective-1/rule-compilation-1/A1C7A1F8CC505220A8ED0648D0F02B35B49BC74CC8AEF39D28649A47018630C5/catalogue-1/normalization-1/659C6F8C5995CA0039BAC4E2819C93D3DA3C459AADB6CE58CDD0F5943583BEA5",
+      "ApplicationModule": "628bf071-250e-4ffa-a769-071b64fe1a91",
+      "FullReads": 0,
+      "ShardReads": 3,
+      "DependencyCalculations": 0,
+      "DependencyReuses": 0,
+      "MigratedManifest": false,
+      "Context": {
+        "Id": "attachment-checks",
+        "Faction": "Death Guard",
+        "Entries": 20,
+        "Screen": "roster"
+      },
+      "ExternalReadyMs": 4750.0,
+      "AmStart": "Starting: Intent { cmp=com.grimlist.perftest/crc64c040c7e13546c831.MainActivity (has extras) }\nStatus: ok\nLaunchState: COLD\nActivity: com.grimlist.perftest/crc64c040c7e13546c831.MainActivity\nTotalTime: 1431\nWaitTime: 1451\nComplete\n"
+    },
+    {
+      "LibraryReadyMs": 3415.0753,
+      "MauiEntryToUsableMs": 3994.0017,
+      "ManagedBytes": 32926016,
+      "AllocatedBytes": 65427816,
+      "NativeAllocatedBytes": 84252864,
+      "Stages": [
+        {
+          "Stage": "startup.database-open",
+          "Milliseconds": 138.0548
+        },
+        {
+          "Stage": "cache.checksum",
+          "Milliseconds": 17.8213
+        },
+        {
+          "Stage": "cache.json-metadata",
+          "Milliseconds": 67.5176
+        },
+        {
+          "Stage": "cache.deserialize",
+          "Milliseconds": 641.1766
+        },
+        {
+          "Stage": "factions.manifest-read",
+          "Milliseconds": 743.8114
+        },
+        {
+          "Stage": "startup.session",
+          "Milliseconds": 1394.5643
+        },
+        {
+          "Stage": "cache.checksum",
+          "Milliseconds": 0.1313
+        },
+        {
+          "Stage": "cache.json-metadata",
+          "Milliseconds": 1.9972
+        },
+        {
+          "Stage": "cache.deserialize",
+          "Milliseconds": 0.5095
+        },
+        {
+          "Stage": "cache.checksum",
+          "Milliseconds": 0.3815
+        },
+        {
+          "Stage": "cache.json-metadata",
+          "Milliseconds": 0.0071
+        },
+        {
+          "Stage": "cache.deserialize",
+          "Milliseconds": 50.1906
+        },
+        {
+          "Stage": "cache.checksum",
+          "Milliseconds": 0.628
+        },
+        {
+          "Stage": "cache.json-metadata",
+          "Milliseconds": 0.0083
+        },
+        {
+          "Stage": "cache.deserialize",
+          "Milliseconds": 67.5846
+        },
+        {
+          "Stage": "factions.shards-read",
+          "Milliseconds": 126.2449
+        },
+        {
+          "Stage": "cache.checksum",
+          "Milliseconds": 0.5945
+        },
+        {
+          "Stage": "cache.json-metadata",
+          "Milliseconds": 0.9572
+        },
+        {
+          "Stage": "cache.deserialize",
+          "Milliseconds": 24.243
+        },
+        {
+          "Stage": "factions.abilities-read",
+          "Milliseconds": 26.255
+        },
+        {
+          "Stage": "startup.restore",
+          "Milliseconds": 1413.8338
+        }
+      ],
+      "RecoveryContract": "recovery-2/references-1/normalization-1/40E72D1F64DFED69EA997944967813F66B662201D269F3311995B368C25F5270/enhancement-eligibility-1/normalization-1/FE26E2AE5494604463F448A1B7ACBF893B9DF8561406FE04F87C8B1EA0728278/effective-1/rule-compilation-1/A1C7A1F8CC505220A8ED0648D0F02B35B49BC74CC8AEF39D28649A47018630C5/catalogue-1/normalization-1/659C6F8C5995CA0039BAC4E2819C93D3DA3C459AADB6CE58CDD0F5943583BEA5",
+      "ApplicationModule": "628bf071-250e-4ffa-a769-071b64fe1a91",
+      "FullReads": 0,
+      "ShardReads": 3,
+      "DependencyCalculations": 0,
+      "DependencyReuses": 0,
+      "MigratedManifest": false,
+      "Context": {
+        "Id": "attachment-checks",
+        "Faction": "Death Guard",
+        "Entries": 20,
+        "Screen": "roster"
+      },
+      "ExternalReadyMs": 4797.000000020489,
+      "AmStart": "Starting: Intent { cmp=com.grimlist.perftest/crc64c040c7e13546c831.MainActivity (has extras) }\nStatus: ok\nLaunchState: COLD\nActivity: com.grimlist.perftest/crc64c040c7e13546c831.MainActivity\nTotalTime: 1352\nWaitTime: 1380\nComplete\n"
+    }
+  ],
+  "BeforeMeanMs": 6661.90826,
+  "FinalRepeatMeanMs": 3979.4144749999996,
+  "FinalSamples": [
+    {
+      "Operation": "add",
+      "Entries": 3,
+      "CommandMs": 82.8652,
+      "UsableMs": 199.7896,
+      "AllocatedBytes": 8563424,
+      "ManagedBytes": 34902568
+    },
+    {
+      "Operation": "add",
+      "Entries": 3,
+      "CommandMs": 81.6701,
+      "UsableMs": 127.3054,
+      "AllocatedBytes": 4188736,
+      "ManagedBytes": 35466912
+    },
+    {
+      "Operation": "add",
+      "Entries": 3,
+      "CommandMs": 75.5673,
+      "UsableMs": 132.8947,
+      "AllocatedBytes": 8286336,
+      "ManagedBytes": 36126328
+    },
+    {
+      "Operation": "add",
+      "Entries": 3,
+      "CommandMs": 77.0846,
+      "UsableMs": 128.22,
+      "AllocatedBytes": 4171768,
+      "ManagedBytes": 36693952
+    },
+    {
+      "Operation": "add",
+      "Entries": 3,
+      "CommandMs": 79.9996,
+      "UsableMs": 144.7214,
+      "AllocatedBytes": 8275136,
+      "ManagedBytes": 37322888
+    },
+    {
+      "Operation": "equipment",
+      "Entries": 3,
+      "CommandMs": 94.1096,
+      "UsableMs": 118.8378,
+      "AllocatedBytes": 4125528,
+      "ManagedBytes": 43261072
+    },
+    {
+      "Operation": "equipment",
+      "Entries": 3,
+      "CommandMs": 100.8313,
+      "UsableMs": 152.5173,
+      "AllocatedBytes": 8252944,
+      "ManagedBytes": 45874448
+    },
+    {
+      "Operation": "equipment",
+      "Entries": 3,
+      "CommandMs": 105.2519,
+      "UsableMs": 120.7135,
+      "AllocatedBytes": 4114528,
+      "ManagedBytes": 48925968
+    },
+    {
+      "Operation": "equipment",
+      "Entries": 3,
+      "CommandMs": 105.2455,
+      "UsableMs": 174.6331,
+      "AllocatedBytes": 8261696,
+      "ManagedBytes": 51567936
+    },
+    {
+      "Operation": "equipment",
+      "Entries": 3,
+      "CommandMs": 210.1369,
+      "UsableMs": 232.716,
+      "AllocatedBytes": 5056904,
+      "ManagedBytes": 50771360
+    },
+    {
+      "Operation": "enhancement",
+      "Entries": 3,
+      "CommandMs": 116.262,
+      "UsableMs": 156.4836,
+      "AllocatedBytes": 8257592,
+      "ManagedBytes": 54250024
+    },
+    {
+      "Operation": "enhancement",
+      "Entries": 3,
+      "CommandMs": 117.6858,
+      "UsableMs": 212.3574,
+      "AllocatedBytes": 12393032,
+      "ManagedBytes": 55082528
+    },
+    {
+      "Operation": "enhancement",
+      "Entries": 3,
+      "CommandMs": 134.0252,
+      "UsableMs": 185.543,
+      "AllocatedBytes": 12404136,
+      "ManagedBytes": 55458936
+    },
+    {
+      "Operation": "enhancement",
+      "Entries": 3,
+      "CommandMs": 124.6376,
+      "UsableMs": 167.7348,
+      "AllocatedBytes": 8248440,
+      "ManagedBytes": 55987112
+    },
+    {
+      "Operation": "enhancement",
+      "Entries": 3,
+      "CommandMs": 118.5178,
+      "UsableMs": 171.6353,
+      "AllocatedBytes": 8258592,
+      "ManagedBytes": 56538384
+    },
+    {
+      "Operation": "attachment",
+      "Entries": 3,
+      "CommandMs": 185.7132,
+      "UsableMs": 450.8741,
+      "AllocatedBytes": 20873904,
+      "ManagedBytes": 63966712
+    },
+    {
+      "Operation": "attachment",
+      "Entries": 3,
+      "CommandMs": 177.827,
+      "UsableMs": 393.3914,
+      "AllocatedBytes": 20921840,
+      "ManagedBytes": 67298000
+    },
+    {
+      "Operation": "attachment",
+      "Entries": 3,
+      "CommandMs": 311.4027,
+      "UsableMs": 539.1686,
+      "AllocatedBytes": 19440264,
+      "ManagedBytes": 65814944
+    },
+    {
+      "Operation": "attachment",
+      "Entries": 3,
+      "CommandMs": 160.1009,
+      "UsableMs": 407.6348,
+      "AllocatedBytes": 20929056,
+      "ManagedBytes": 71149880
+    },
+    {
+      "Operation": "attachment",
+      "Entries": 3,
+      "CommandMs": 170.2126,
+      "UsableMs": 422.1639,
+      "AllocatedBytes": 20922408,
+      "ManagedBytes": 74221312
+    },
+    {
+      "Operation": "detachment",
+      "Entries": 3,
+      "CommandMs": 76.4948,
+      "UsableMs": 305.36,
+      "AllocatedBytes": 8274384,
+      "ManagedBytes": 80077320
+    },
+    {
+      "Operation": "detachment",
+      "Entries": 3,
+      "CommandMs": 26.082,
+      "UsableMs": 249.4085,
+      "AllocatedBytes": 4180424,
+      "ManagedBytes": 80787112
+    },
+    {
+      "Operation": "detachment",
+      "Entries": 3,
+      "CommandMs": 76.74,
+      "UsableMs": 228.5722,
+      "AllocatedBytes": 4144640,
+      "ManagedBytes": 82260728
+    },
+    {
+      "Operation": "detachment",
+      "Entries": 3,
+      "CommandMs": 81.9969,
+      "UsableMs": 321.64,
+      "AllocatedBytes": 9342792,
+      "ManagedBytes": 85495016
+    },
+    {
+      "Operation": "detachment",
+      "Entries": 3,
+      "CommandMs": 25.902,
+      "UsableMs": 245.4423,
+      "AllocatedBytes": 4165312,
+      "ManagedBytes": 86474984
+    },
+    {
+      "Operation": "home",
+      "Entries": 3,
+      "CommandMs": 5.383,
+      "UsableMs": 133.7505,
+      "AllocatedBytes": 0,
+      "ManagedBytes": 107453400
+    },
+    {
+      "Operation": "home",
+      "Entries": 3,
+      "CommandMs": 4.9048,
+      "UsableMs": 132.2409,
+      "AllocatedBytes": 0,
+      "ManagedBytes": 110311288
+    },
+    {
+      "Operation": "home",
+      "Entries": 3,
+      "CommandMs": 8.5833,
+      "UsableMs": 204.614,
+      "AllocatedBytes": 4304184,
+      "ManagedBytes": 113070064
+    },
+    {
+      "Operation": "home",
+      "Entries": 3,
+      "CommandMs": 5.985,
+      "UsableMs": 300.3262,
+      "AllocatedBytes": 2500504,
+      "ManagedBytes": 84942624
+    },
+    {
+      "Operation": "home",
+      "Entries": 3,
+      "CommandMs": 5.2825,
+      "UsableMs": 200.4015,
+      "AllocatedBytes": 4310424,
+      "ManagedBytes": 87879488
+    },
+    {
+      "Operation": "add",
+      "Entries": 20,
+      "CommandMs": 273.0563,
+      "UsableMs": 298.4516,
+      "AllocatedBytes": 24758672,
+      "ManagedBytes": 93229856
+    },
+    {
+      "Operation": "add",
+      "Entries": 20,
+      "CommandMs": 269.0974,
+      "UsableMs": 299.1513,
+      "AllocatedBytes": 24779816,
+      "ManagedBytes": 94639672
+    },
+    {
+      "Operation": "add",
+      "Entries": 20,
+      "CommandMs": 273.4178,
+      "UsableMs": 297.8593,
+      "AllocatedBytes": 24796280,
+      "ManagedBytes": 95884584
+    },
+    {
+      "Operation": "add",
+      "Entries": 20,
+      "CommandMs": 278.8699,
+      "UsableMs": 298.8542,
+      "AllocatedBytes": 24763496,
+      "ManagedBytes": 97138896
+    },
+    {
+      "Operation": "add",
+      "Entries": 20,
+      "CommandMs": 283.4686,
+      "UsableMs": 306.7374,
+      "AllocatedBytes": 25051744,
+      "ManagedBytes": 98710360
+    },
+    {
+      "Operation": "equipment",
+      "Entries": 20,
+      "CommandMs": 287.068,
+      "UsableMs": 303.2177,
+      "AllocatedBytes": 20625632,
+      "ManagedBytes": 105923056
+    },
+    {
+      "Operation": "equipment",
+      "Entries": 20,
+      "CommandMs": 285.8043,
+      "UsableMs": 308.2303,
+      "AllocatedBytes": 20635040,
+      "ManagedBytes": 109430008
+    },
+    {
+      "Operation": "equipment",
+      "Entries": 20,
+      "CommandMs": 304.7615,
+      "UsableMs": 321.111,
+      "AllocatedBytes": 20602136,
+      "ManagedBytes": 112944744
+    },
+    {
+      "Operation": "equipment",
+      "Entries": 20,
+      "CommandMs": 308.7449,
+      "UsableMs": 328.6591,
+      "AllocatedBytes": 20674024,
+      "ManagedBytes": 116556048
+    },
+    {
+      "Operation": "equipment",
+      "Entries": 20,
+      "CommandMs": 310.3105,
+      "UsableMs": 325.5369,
+      "AllocatedBytes": 20619168,
+      "ManagedBytes": 120083312
+    },
+    {
+      "Operation": "enhancement",
+      "Entries": 20,
+      "CommandMs": 501.891,
+      "UsableMs": 602.1377,
+      "AllocatedBytes": 37105720,
+      "ManagedBytes": 126357576
+    },
+    {
+      "Operation": "enhancement",
+      "Entries": 20,
+      "CommandMs": 501.2791,
+      "UsableMs": 543.5753,
+      "AllocatedBytes": 41549232,
+      "ManagedBytes": 128736776
+    },
+    {
+      "Operation": "enhancement",
+      "Entries": 20,
+      "CommandMs": 508.8064,
+      "UsableMs": 562.9993,
+      "AllocatedBytes": 41226584,
+      "ManagedBytes": 130784216
+    },
+    {
+      "Operation": "enhancement",
+      "Entries": 20,
+      "CommandMs": 500.783,
+      "UsableMs": 670.3289,
+      "AllocatedBytes": 42290560,
+      "ManagedBytes": 133056160
+    },
+    {
+      "Operation": "enhancement",
+      "Entries": 20,
+      "CommandMs": 475.5848,
+      "UsableMs": 516.1501,
+      "AllocatedBytes": 37129744,
+      "ManagedBytes": 100894712
+    },
+    {
+      "Operation": "attachment",
+      "Entries": 20,
+      "CommandMs": 585.6058,
+      "UsableMs": 1018.5922,
+      "AllocatedBytes": 74717648,
+      "ManagedBytes": 111420504
+    },
+    {
+      "Operation": "attachment",
+      "Entries": 20,
+      "CommandMs": 609.2254,
+      "UsableMs": 1030.2088,
+      "AllocatedBytes": 74395952,
+      "ManagedBytes": 118500640
+    },
+    {
+      "Operation": "attachment",
+      "Entries": 20,
+      "CommandMs": 554.7706,
+      "UsableMs": 965.5612,
+      "AllocatedBytes": 74386512,
+      "ManagedBytes": 123336168
+    },
+    {
+      "Operation": "attachment",
+      "Entries": 20,
+      "CommandMs": 584.8926,
+      "UsableMs": 1000.8547,
+      "AllocatedBytes": 74409344,
+      "ManagedBytes": 130305112
+    },
+    {
+      "Operation": "attachment",
+      "Entries": 20,
+      "CommandMs": 613.2415,
+      "UsableMs": 954.2374,
+      "AllocatedBytes": 74343912,
+      "ManagedBytes": 135696960
+    },
+    {
+      "Operation": "detachment",
+      "Entries": 20,
+      "CommandMs": 324.1656,
+      "UsableMs": 573.4886,
+      "AllocatedBytes": 20770272,
+      "ManagedBytes": 143490560
+    },
+    {
+      "Operation": "detachment",
+      "Entries": 20,
+      "CommandMs": 345.7125,
+      "UsableMs": 603.7852,
+      "AllocatedBytes": 20681344,
+      "ManagedBytes": 146389688
+    },
+    {
+      "Operation": "detachment",
+      "Entries": 20,
+      "CommandMs": 335.2584,
+      "UsableMs": 588.574,
+      "AllocatedBytes": 20699560,
+      "ManagedBytes": 149313704
+    },
+    {
+      "Operation": "detachment",
+      "Entries": 20,
+      "CommandMs": 324.8846,
+      "UsableMs": 492.3141,
+      "AllocatedBytes": 16563632,
+      "ManagedBytes": 150469000
+    },
+    {
+      "Operation": "detachment",
+      "Entries": 20,
+      "CommandMs": 337.3016,
+      "UsableMs": 516.8954,
+      "AllocatedBytes": 16696024,
+      "ManagedBytes": 153242112
+    },
+    {
+      "Operation": "home",
+      "Entries": 20,
+      "CommandMs": 11.375,
+      "UsableMs": 144.4933,
+      "AllocatedBytes": 0,
+      "ManagedBytes": 160096528
+    },
+    {
+      "Operation": "home",
+      "Entries": 20,
+      "CommandMs": 6.0002,
+      "UsableMs": 734.6331,
+      "AllocatedBytes": 379424,
+      "ManagedBytes": 131330072
+    },
+    {
+      "Operation": "home",
+      "Entries": 20,
+      "CommandMs": 4.8426,
+      "UsableMs": 211.7433,
+      "AllocatedBytes": 4518384,
+      "ManagedBytes": 134480832
+    },
+    {
+      "Operation": "home",
+      "Entries": 20,
+      "CommandMs": 5.0784,
+      "UsableMs": 218.7461,
+      "AllocatedBytes": 4516848,
+      "ManagedBytes": 137805400
+    },
+    {
+      "Operation": "home",
+      "Entries": 20,
+      "CommandMs": 5.431,
+      "UsableMs": 203.2605,
+      "AllocatedBytes": 4516960,
+      "ManagedBytes": 141144720
+    }
+  ],
+  "FinalPresentation": [
+    {
+      "Operation": "add",
+      "PrepareMs": 6.9378,
+      "RenderMs": 57.24739999999999,
+      "FrameWaitMs": 128.65500000000003,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "add",
+      "PrepareMs": 5.622,
+      "RenderMs": 7.337300000000001,
+      "FrameWaitMs": 50.4656,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "add",
+      "PrepareMs": 5.5208,
+      "RenderMs": 5.117499999999999,
+      "FrameWaitMs": 13.7887,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "add",
+      "PrepareMs": 6.3665,
+      "RenderMs": 62.663399999999996,
+      "FrameWaitMs": 47.8673,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "add",
+      "PrepareMs": 36.8803,
+      "RenderMs": 3.3880000000000052,
+      "FrameWaitMs": 13.011299999999999,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "add",
+      "PrepareMs": 5.4876,
+      "RenderMs": 3.4819000000000004,
+      "FrameWaitMs": 36.6575,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "add",
+      "PrepareMs": 5.513,
+      "RenderMs": 4.3969000000000005,
+      "FrameWaitMs": 14.450099999999999,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "add",
+      "PrepareMs": 7.3656,
+      "RenderMs": 3.4715999999999996,
+      "FrameWaitMs": 46.480999999999995,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "add",
+      "PrepareMs": 37.886,
+      "RenderMs": 3.366199999999999,
+      "FrameWaitMs": 12.221799999999995,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "add",
+      "PrepareMs": 5.1891,
+      "RenderMs": 3.5539000000000005,
+      "FrameWaitMs": 42.381499999999996,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "add",
+      "PrepareMs": 4.932,
+      "RenderMs": 3.7264999999999997,
+      "FrameWaitMs": 15.488299999999999,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "add",
+      "PrepareMs": 8.0729,
+      "RenderMs": 3.6140999999999988,
+      "FrameWaitMs": 53.0256,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "equipment",
+      "PrepareMs": 79.3593,
+      "RenderMs": 291.8809,
+      "FrameWaitMs": 45.596000000000004,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "equipment",
+      "PrepareMs": 6.2054,
+      "RenderMs": 10.145599999999998,
+      "FrameWaitMs": 8.415100000000002,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "equipment",
+      "PrepareMs": 7.2039,
+      "RenderMs": 196.708,
+      "FrameWaitMs": 90.72039999999998,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "equipment",
+      "PrepareMs": 5.2408,
+      "RenderMs": 1.7246999999999995,
+      "FrameWaitMs": 17.753800000000002,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "equipment",
+      "PrepareMs": 5.1628,
+      "RenderMs": 220.46699999999998,
+      "FrameWaitMs": 38.84800000000001,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "equipment",
+      "PrepareMs": 35.7877,
+      "RenderMs": 1.6766000000000005,
+      "FrameWaitMs": 14.213799999999999,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "equipment",
+      "PrepareMs": 50.0879,
+      "RenderMs": 261.78430000000003,
+      "FrameWaitMs": 36.02589999999998,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "equipment",
+      "PrepareMs": 4.9793,
+      "RenderMs": 1.9375,
+      "FrameWaitMs": 8.5358,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "equipment",
+      "PrepareMs": 5.221,
+      "RenderMs": 234.2215,
+      "FrameWaitMs": 36.644000000000005,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "equipment",
+      "PrepareMs": 57.2599,
+      "RenderMs": 2.0366,
+      "FrameWaitMs": 10.083099999999995,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "equipment",
+      "PrepareMs": 59.9073,
+      "RenderMs": 261.8107,
+      "FrameWaitMs": 37.71139999999997,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "equipment",
+      "PrepareMs": 5.5936,
+      "RenderMs": 2.4350000000000005,
+      "FrameWaitMs": 14.5409,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "enhancement",
+      "PrepareMs": 20.9437,
+      "RenderMs": 245.855,
+      "FrameWaitMs": 47.76280000000003,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "enhancement",
+      "PrepareMs": 7.8468,
+      "RenderMs": 22.451700000000002,
+      "FrameWaitMs": 19.364299999999997,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "enhancement",
+      "PrepareMs": 6.9033,
+      "RenderMs": 14.696299999999999,
+      "FrameWaitMs": 11.511399999999998,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "enhancement",
+      "PrepareMs": 6.0433,
+      "RenderMs": 20.445999999999998,
+      "FrameWaitMs": 13.723599999999998,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "enhancement",
+      "PrepareMs": 5.8251,
+      "RenderMs": 14.2335,
+      "FrameWaitMs": 12.987099999999998,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "enhancement",
+      "PrepareMs": 6.1139,
+      "RenderMs": 75.331,
+      "FrameWaitMs": 13.21759999999999,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "enhancement",
+      "PrepareMs": 7.1412,
+      "RenderMs": 17.9089,
+      "FrameWaitMs": 11.919699999999999,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "enhancement",
+      "PrepareMs": 9.7513,
+      "RenderMs": 20.9507,
+      "FrameWaitMs": 20.8038,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "enhancement",
+      "PrepareMs": 6.9526,
+      "RenderMs": 65.97229999999999,
+      "FrameWaitMs": 11.441600000000008,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "enhancement",
+      "PrepareMs": 6.0768,
+      "RenderMs": 19.8185,
+      "FrameWaitMs": 17.191000000000003,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "enhancement",
+      "PrepareMs": 54.7059,
+      "RenderMs": 13.967600000000004,
+      "FrameWaitMs": 12.9238,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "enhancement",
+      "PrepareMs": 8.7827,
+      "RenderMs": 24.2286,
+      "FrameWaitMs": 20.088300000000004,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "attachment",
+      "PrepareMs": 8.7473,
+      "RenderMs": 17.4736,
+      "FrameWaitMs": 16.2947,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "attachment",
+      "PrepareMs": 78.7849,
+      "RenderMs": 124.6961,
+      "FrameWaitMs": 31.578000000000003,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "attachment",
+      "PrepareMs": 6.4676,
+      "RenderMs": 126.9924,
+      "FrameWaitMs": 22.79139999999998,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "attachment",
+      "PrepareMs": 48.224,
+      "RenderMs": 186.66150000000002,
+      "FrameWaitMs": 30.26649999999998,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "attachment",
+      "PrepareMs": 6.2731,
+      "RenderMs": 80.3136,
+      "FrameWaitMs": 22.338800000000006,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "attachment",
+      "PrepareMs": 49.6944,
+      "RenderMs": 133.8422,
+      "FrameWaitMs": 32.018400000000014,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "attachment",
+      "PrepareMs": 5.9966,
+      "RenderMs": 148.7994,
+      "FrameWaitMs": 23.41760000000002,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "attachment",
+      "PrepareMs": 46.8908,
+      "RenderMs": 152.00150000000002,
+      "FrameWaitMs": 28.864900000000006,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "attachment",
+      "PrepareMs": 6.7683,
+      "RenderMs": 120.06450000000001,
+      "FrameWaitMs": 22.948400000000007,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "attachment",
+      "PrepareMs": 47.3683,
+      "RenderMs": 170.5698,
+      "FrameWaitMs": 29.587199999999996,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "attachment",
+      "PrepareMs": 52.975,
+      "RenderMs": 82.51160000000002,
+      "FrameWaitMs": 24.89949999999999,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "attachment",
+      "PrepareMs": 47.4459,
+      "RenderMs": 173.9163,
+      "FrameWaitMs": 30.580000000000013,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "detachment",
+      "PrepareMs": 5.219,
+      "RenderMs": 42.733599999999996,
+      "FrameWaitMs": 162.7504,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "detachment",
+      "PrepareMs": 55.4057,
+      "RenderMs": 35.36249999999999,
+      "FrameWaitMs": 114.72530000000002,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "detachment",
+      "PrepareMs": 5.6692,
+      "RenderMs": 1.5233999999999996,
+      "FrameWaitMs": 15.797500000000003,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "detachment",
+      "PrepareMs": 5.683,
+      "RenderMs": 48.0806,
+      "FrameWaitMs": 175.0908,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "detachment",
+      "PrepareMs": 62.9046,
+      "RenderMs": 1.523699999999991,
+      "FrameWaitMs": 13.01270000000001,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "detachment",
+      "PrepareMs": 6.3621,
+      "RenderMs": 103.0049,
+      "FrameWaitMs": 113.9446,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "detachment",
+      "PrepareMs": 5.1883,
+      "RenderMs": 1.5981000000000005,
+      "FrameWaitMs": 7.6776,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "detachment",
+      "PrepareMs": 6.264,
+      "RenderMs": 37.053599999999996,
+      "FrameWaitMs": 108.5042,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "detachment",
+      "PrepareMs": 5.8533,
+      "RenderMs": 1.7538,
+      "FrameWaitMs": 14.525500000000001,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "detachment",
+      "PrepareMs": 5.5329,
+      "RenderMs": 49.136,
+      "FrameWaitMs": 184.96529999999998,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "detachment",
+      "PrepareMs": 6.2619,
+      "RenderMs": 1.9714,
+      "FrameWaitMs": 8.7366,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "detachment",
+      "PrepareMs": 60.7325,
+      "RenderMs": 49.3351,
+      "FrameWaitMs": 109.46459999999999,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "home",
+      "PrepareMs": 1105.8193,
+      "RenderMs": 181.13019999999983,
+      "FrameWaitMs": 29.767700000000104,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "home",
+      "PrepareMs": 12.6139,
+      "RenderMs": 93.7067,
+      "FrameWaitMs": 24.87230000000001,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "home",
+      "PrepareMs": 5.3455,
+      "RenderMs": 158.62650000000002,
+      "FrameWaitMs": 27.540300000000002,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "home",
+      "PrepareMs": 8.6538,
+      "RenderMs": 93.0945,
+      "FrameWaitMs": 26.6113,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "home",
+      "PrepareMs": 5.4886,
+      "RenderMs": 173.535,
+      "FrameWaitMs": 25.61760000000001,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "home",
+      "PrepareMs": 9.403,
+      "RenderMs": 91.5471,
+      "FrameWaitMs": 26.377499999999998,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "home",
+      "PrepareMs": 5.2913,
+      "RenderMs": 95.49719999999999,
+      "FrameWaitMs": 25.996899999999997,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "home",
+      "PrepareMs": 6.8599,
+      "RenderMs": 163.0249,
+      "FrameWaitMs": 26.137599999999992,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "home",
+      "PrepareMs": 14.9016,
+      "RenderMs": 92.5027,
+      "FrameWaitMs": 26.32649999999998,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "home",
+      "PrepareMs": 169.0303,
+      "RenderMs": 96.3084,
+      "FrameWaitMs": 28.99449999999996,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "home",
+      "PrepareMs": 5.4636,
+      "RenderMs": 106.9957,
+      "FrameWaitMs": 26.23020000000001,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "home",
+      "PrepareMs": 6.7606,
+      "RenderMs": 162.2498,
+      "FrameWaitMs": 26.100899999999996,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "add",
+      "PrepareMs": 8.2476,
+      "RenderMs": 129.207,
+      "FrameWaitMs": 108.36070000000001,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "add",
+      "PrepareMs": 7.9258,
+      "RenderMs": 2.033500000000001,
+      "FrameWaitMs": 8.684,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "add",
+      "PrepareMs": 7.7209,
+      "RenderMs": 1.8813999999999993,
+      "FrameWaitMs": 9.3869,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "add",
+      "PrepareMs": 8.128,
+      "RenderMs": 1.9004999999999992,
+      "FrameWaitMs": 15.3545,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "add",
+      "PrepareMs": 11.0786,
+      "RenderMs": 1.9383,
+      "FrameWaitMs": 13.5061,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "add",
+      "PrepareMs": 13.1557,
+      "RenderMs": 2.0357000000000003,
+      "FrameWaitMs": 14.8502,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "add",
+      "PrepareMs": 11.662,
+      "RenderMs": 1.8329999999999984,
+      "FrameWaitMs": 17.2686,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "add",
+      "PrepareMs": 12.0331,
+      "RenderMs": 1.9354000000000013,
+      "FrameWaitMs": 10.461599999999999,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "add",
+      "PrepareMs": 7.9387,
+      "RenderMs": 1.9796000000000005,
+      "FrameWaitMs": 15.730299999999998,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "add",
+      "PrepareMs": 8.1292,
+      "RenderMs": 1.9783999999999988,
+      "FrameWaitMs": 9.865900000000002,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "add",
+      "PrepareMs": 8.1708,
+      "RenderMs": 1.9135000000000009,
+      "FrameWaitMs": 8.876299999999999,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "add",
+      "PrepareMs": 8.0874,
+      "RenderMs": 1.9301999999999992,
+      "FrameWaitMs": 13.2387,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "equipment",
+      "PrepareMs": 5.1409,
+      "RenderMs": 255.4042,
+      "FrameWaitMs": 37.651700000000005,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "equipment",
+      "PrepareMs": 5.0476,
+      "RenderMs": 1.553,
+      "FrameWaitMs": 14.883700000000001,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "equipment",
+      "PrepareMs": 4.8893,
+      "RenderMs": 259.0295,
+      "FrameWaitMs": 125.31820000000005,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "equipment",
+      "PrepareMs": 5.4329,
+      "RenderMs": 1.8577000000000004,
+      "FrameWaitMs": 8.849599999999999,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "equipment",
+      "PrepareMs": 4.8516,
+      "RenderMs": 252.8982,
+      "FrameWaitMs": 126.79450000000003,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "equipment",
+      "PrepareMs": 5.1353,
+      "RenderMs": 1.7519999999999998,
+      "FrameWaitMs": 15.5286,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "equipment",
+      "PrepareMs": 4.8042,
+      "RenderMs": 267.87210000000005,
+      "FrameWaitMs": 132.43399999999997,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "equipment",
+      "PrepareMs": 4.9499,
+      "RenderMs": 1.8887999999999998,
+      "FrameWaitMs": 9.5019,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "equipment",
+      "PrepareMs": 9.0135,
+      "RenderMs": 184.8425,
+      "FrameWaitMs": 140.327,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "equipment",
+      "PrepareMs": 5.0594,
+      "RenderMs": 1.9235999999999995,
+      "FrameWaitMs": 12.922,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "equipment",
+      "PrepareMs": 9.4993,
+      "RenderMs": 297.17969999999997,
+      "FrameWaitMs": 36.65110000000004,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "equipment",
+      "PrepareMs": 5.112,
+      "RenderMs": 2.1228,
+      "FrameWaitMs": 7.9808,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "enhancement",
+      "PrepareMs": 17.4762,
+      "RenderMs": 145.08929999999998,
+      "FrameWaitMs": 146.55810000000002,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "enhancement",
+      "PrepareMs": 13.4939,
+      "RenderMs": 20.519900000000003,
+      "FrameWaitMs": 10.5659,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "enhancement",
+      "PrepareMs": 13.5953,
+      "RenderMs": 14.4261,
+      "FrameWaitMs": 146.6969,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "enhancement",
+      "PrepareMs": 56.3255,
+      "RenderMs": 32.3255,
+      "FrameWaitMs": 11.565300000000008,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "enhancement",
+      "PrepareMs": 13.2916,
+      "RenderMs": 13.1424,
+      "FrameWaitMs": 10.0917,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "enhancement",
+      "PrepareMs": 13.7283,
+      "RenderMs": 18.893599999999996,
+      "FrameWaitMs": 9.663000000000004,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "enhancement",
+      "PrepareMs": 12.9171,
+      "RenderMs": 13.28,
+      "FrameWaitMs": 8.375700000000002,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "enhancement",
+      "PrepareMs": 22.3618,
+      "RenderMs": 18.5275,
+      "FrameWaitMs": 13.291699999999999,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "enhancement",
+      "PrepareMs": 13.2769,
+      "RenderMs": 13.045700000000002,
+      "FrameWaitMs": 8.602599999999995,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "enhancement",
+      "PrepareMs": 20.061,
+      "RenderMs": 139.2303,
+      "FrameWaitMs": 10.24339999999998,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "enhancement",
+      "PrepareMs": 19.1208,
+      "RenderMs": 13.351699999999997,
+      "FrameWaitMs": 10.307500000000005,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "enhancement",
+      "PrepareMs": 13.3497,
+      "RenderMs": 17.682499999999997,
+      "FrameWaitMs": 9.5241,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "attachment",
+      "PrepareMs": 13.3246,
+      "RenderMs": 12.096900000000002,
+      "FrameWaitMs": 8.340499999999999,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "attachment",
+      "PrepareMs": 209.0525,
+      "RenderMs": 102.53269999999998,
+      "FrameWaitMs": 31.043000000000006,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "attachment",
+      "PrepareMs": 15.2338,
+      "RenderMs": 133.6412,
+      "FrameWaitMs": 23.767200000000003,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "attachment",
+      "PrepareMs": 202.3018,
+      "RenderMs": 200.58400000000003,
+      "FrameWaitMs": 30.090499999999963,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "attachment",
+      "PrepareMs": 13.1765,
+      "RenderMs": 139.3458,
+      "FrameWaitMs": 21.492999999999995,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "attachment",
+      "PrepareMs": 198.0013,
+      "RenderMs": 192.55570000000003,
+      "FrameWaitMs": 30.4169,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "attachment",
+      "PrepareMs": 24.7916,
+      "RenderMs": 69.328,
+      "FrameWaitMs": 21.809399999999997,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "attachment",
+      "PrepareMs": 206.1849,
+      "RenderMs": 174.54909999999998,
+      "FrameWaitMs": 30.04740000000004,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "attachment",
+      "PrepareMs": 13.2535,
+      "RenderMs": 148.816,
+      "FrameWaitMs": 22.241199999999992,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "attachment",
+      "PrepareMs": 201.8025,
+      "RenderMs": 183.79879999999997,
+      "FrameWaitMs": 30.350099999999998,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "attachment",
+      "PrepareMs": 12.972,
+      "RenderMs": 69.0215,
+      "FrameWaitMs": 22.158500000000004,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "attachment",
+      "PrepareMs": 205.4025,
+      "RenderMs": 103.76820000000001,
+      "FrameWaitMs": 31.812599999999975,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "detachment",
+      "PrepareMs": 14.0464,
+      "RenderMs": 38.9517,
+      "FrameWaitMs": 112.88589999999999,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "detachment",
+      "PrepareMs": 8.496,
+      "RenderMs": 120.95620000000001,
+      "FrameWaitMs": 114.0941,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "detachment",
+      "PrepareMs": 8.3295,
+      "RenderMs": 2.450800000000001,
+      "FrameWaitMs": 11.013200000000001,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "detachment",
+      "PrepareMs": 8.591,
+      "RenderMs": 36.5219,
+      "FrameWaitMs": 204.2002,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "detachment",
+      "PrepareMs": 8.6248,
+      "RenderMs": 2.3536,
+      "FrameWaitMs": 10.3139,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "detachment",
+      "PrepareMs": 8.4196,
+      "RenderMs": 36.5486,
+      "FrameWaitMs": 213.093,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "detachment",
+      "PrepareMs": 15.8772,
+      "RenderMs": 2.6035999999999984,
+      "FrameWaitMs": 11.945500000000003,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "detachment",
+      "PrepareMs": 8.6353,
+      "RenderMs": 36.676,
+      "FrameWaitMs": 207.9952,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "detachment",
+      "PrepareMs": 15.1145,
+      "RenderMs": 2.6647999999999996,
+      "FrameWaitMs": 10.9986,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "detachment",
+      "PrepareMs": 19.6679,
+      "RenderMs": 37.2726,
+      "FrameWaitMs": 110.47850000000001,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "detachment",
+      "PrepareMs": 17.9883,
+      "RenderMs": 3.2652,
+      "FrameWaitMs": 10.3692,
+      "FullPageBuilds": 0
+    },
+    {
+      "Operation": "detachment",
+      "PrepareMs": 15.4178,
+      "RenderMs": 41.1791,
+      "FrameWaitMs": 122.98509999999999,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "home",
+      "PrepareMs": 8.29,
+      "RenderMs": 205.96040000000002,
+      "FrameWaitMs": 29.175099999999986,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "home",
+      "PrepareMs": 9.4748,
+      "RenderMs": 95.6408,
+      "FrameWaitMs": 26.540999999999997,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "home",
+      "PrepareMs": 7.1729,
+      "RenderMs": 203.609,
+      "FrameWaitMs": 26.36759999999998,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "home",
+      "PrepareMs": 11.7234,
+      "RenderMs": 95.4679,
+      "FrameWaitMs": 25.91789999999999,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "home",
+      "PrepareMs": 7.3777,
+      "RenderMs": 112.99239999999999,
+      "FrameWaitMs": 153.78950000000003,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "home",
+      "PrepareMs": 465.303,
+      "RenderMs": 232.60810000000004,
+      "FrameWaitMs": 30.71199999999999,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "home",
+      "PrepareMs": 6.6425,
+      "RenderMs": 86.8476,
+      "FrameWaitMs": 24.525199999999998,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "home",
+      "PrepareMs": 10.5418,
+      "RenderMs": 170.9467,
+      "FrameWaitMs": 25.402800000000013,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "home",
+      "PrepareMs": 6.5575,
+      "RenderMs": 87.7246,
+      "FrameWaitMs": 25.6729,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "home",
+      "PrepareMs": 11.1357,
+      "RenderMs": 176.06310000000002,
+      "FrameWaitMs": 26.460800000000006,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "home",
+      "PrepareMs": 6.867,
+      "RenderMs": 91.191,
+      "FrameWaitMs": 26.157299999999992,
+      "FullPageBuilds": 1
+    },
+    {
+      "Operation": "home",
+      "PrepareMs": 9.8845,
+      "RenderMs": 162.1317,
+      "FrameWaitMs": 25.804300000000012,
+      "FullPageBuilds": 1
+    }
+  ],
+  "Native": {
+    "enhancement-choice-checks": {
+      "Checks": [
+        "Datasheet does not calculate enhancement choices",
+        "Native enhancement chooser rendered",
+        "Prepared enhancement matches authoritative acceptance",
+        "Prepared enhancement matches authoritative acceptance",
+        "Prepared enhancement matches authoritative acceptance",
+        "Prepared enhancement matches authoritative acceptance",
+        "Repeated chooser reuses snapshot calculation",
+        "Datasheet does not calculate enhancement choices",
+        "Native enhancement chooser rendered",
+        "Prepared enhancement matches authoritative acceptance",
+        "Prepared enhancement matches authoritative acceptance",
+        "Prepared enhancement matches authoritative acceptance",
+        "Prepared enhancement matches authoritative acceptance",
+        "Repeated chooser reuses snapshot calculation",
+        "Datasheet does not calculate enhancement choices",
+        "Native enhancement chooser rendered",
+        "Prepared enhancement matches authoritative acceptance",
+        "Prepared enhancement matches authoritative acceptance",
+        "Prepared enhancement matches authoritative acceptance",
+        "Prepared enhancement matches authoritative acceptance",
+        "Repeated chooser reuses snapshot calculation",
+        "Datasheet does not calculate enhancement choices",
+        "Native enhancement chooser rendered",
+        "Prepared enhancement matches authoritative acceptance",
+        "Prepared enhancement matches authoritative acceptance",
+        "Prepared enhancement matches authoritative acceptance",
+        "Prepared enhancement matches authoritative acceptance",
+        "Repeated chooser reuses snapshot calculation",
+        "Datasheet does not calculate enhancement choices",
+        "Native enhancement chooser rendered",
+        "Prepared enhancement matches authoritative acceptance",
+        "Prepared enhancement matches authoritative acceptance",
+        "Prepared enhancement matches authoritative acceptance",
+        "Prepared enhancement matches authoritative acceptance",
+        "Repeated chooser reuses snapshot calculation",
+        "Datasheet does not calculate enhancement choices",
+        "Native enhancement chooser rendered",
+        "Prepared enhancement matches authoritative acceptance",
+        "Prepared enhancement matches authoritative acceptance",
+        "Prepared enhancement matches authoritative acceptance",
+        "Prepared enhancement matches authoritative acceptance",
+        "Repeated chooser reuses snapshot calculation",
+        "Pending enhancement result ignored after navigation",
+        "Pending enhancement result ignored after attachment",
+        "Enhancement cache invalidated after attachment",
+        "Pending enhancement result ignored after undo",
+        "Enhancement cache invalidated after undo",
+        "Pending enhancement result ignored after redo",
+        "Enhancement cache invalidated after redo",
+        "Pending enhancement result ignored after enhancement",
+        "Enhancement cache invalidated after enhancement",
+        "Pending enhancement result ignored after library",
+        "Enhancement cache invalidated after library",
+        "Failed enhancement calculation permits retry",
+        "Retry replaces failed enhancement calculation",
+        "Old enhancement button cannot edit a previous unit",
+        "Native button applies enhancement through session",
+        "Selected enhancement remains visible without preparing options"
+      ],
+      "Timings": [
+        {
+          "ColdMs": 172.2636,
+          "WarmMs": 95.1883,
+          "FramesWhileLoadingMs": 57.1297,
+          "SessionWaitMs": 1.3426
+        },
+        {
+          "ColdMs": 148.1894,
+          "WarmMs": 46.2864,
+          "FramesWhileLoadingMs": 10.7295,
+          "SessionWaitMs": 1.6492
+        },
+        {
+          "ColdMs": 133.5224,
+          "WarmMs": 46.7027,
+          "FramesWhileLoadingMs": 12.043,
+          "SessionWaitMs": 1.1824
+        },
+        {
+          "ColdMs": 147.1264,
+          "WarmMs": 103.3003,
+          "FramesWhileLoadingMs": 80.009,
+          "SessionWaitMs": 1.5283
+        },
+        {
+          "ColdMs": 165.4175,
+          "WarmMs": 49.8046,
+          "FramesWhileLoadingMs": 16.6553,
+          "SessionWaitMs": 1.2686
+        }
+      ]
+    },
+    "weapon-metadata-checks": {
+      "Checks": [
+        "Enhancement retains datasheet page",
+        "Build has displayed weapons",
+        "Build: Dark Blessing",
+        "Build: Infernal cannon",
+        "Build: \u27a4 Hellforged weapons - strike",
+        "Build: \u27a4 Hellforged weapons - sweep",
+        "Play has displayed weapons",
+        "Play: Dark Blessing",
+        "Play: Infernal cannon",
+        "Play: \u27a4 Hellforged weapons - strike",
+        "Play: \u27a4 Hellforged weapons - sweep",
+        "Undo has displayed weapons",
+        "Undo: Dark Blessing",
+        "Undo: Infernal cannon",
+        "Undo: \u27a4 Hellforged weapons - strike",
+        "Undo: \u27a4 Hellforged weapons - sweep",
+        "Redo has displayed weapons",
+        "Redo: Dark Blessing",
+        "Redo: Infernal cannon",
+        "Redo: \u27a4 Hellforged weapons - strike",
+        "Redo: \u27a4 Hellforged weapons - sweep",
+        "Reopen has displayed weapons",
+        "Reopen: Dark Blessing",
+        "Reopen: Infernal cannon",
+        "Reopen: \u27a4 Hellforged weapons - strike",
+        "Reopen: \u27a4 Hellforged weapons - sweep"
+      ],
+      "Passed": 26
+    },
+    "attachment-checks": {
+      "Checks": [
+        "Datasheet does not calculate attachment choices",
+        "Deferred choices match full session rules",
+        "Native chooser offers bodyguard",
+        "Repeated chooser reuses calculation",
+        "Datasheet does not calculate attachment choices",
+        "Deferred choices match full session rules",
+        "Native chooser offers bodyguard",
+        "Repeated chooser reuses calculation",
+        "Datasheet does not calculate attachment choices",
+        "Deferred choices match full session rules",
+        "Native chooser offers bodyguard",
+        "Repeated chooser reuses calculation",
+        "Datasheet does not calculate attachment choices",
+        "Deferred choices match full session rules",
+        "Native chooser offers bodyguard",
+        "Repeated chooser reuses calculation",
+        "Datasheet does not calculate attachment choices",
+        "Deferred choices match full session rules",
+        "Native chooser offers bodyguard",
+        "Repeated chooser reuses calculation",
+        "Datasheet does not calculate attachment choices",
+        "Deferred choices match full session rules",
+        "Native chooser offers bodyguard",
+        "Repeated chooser reuses calculation",
+        "Pending result ignored after navigation",
+        "Datasheet retained after attachment",
+        "Pending result ignored after attachment",
+        "Cache invalidated after attachment",
+        "Datasheet retained after undo",
+        "Pending result ignored after undo",
+        "Cache invalidated after undo",
+        "Datasheet retained after redo",
+        "Pending result ignored after redo",
+        "Cache invalidated after redo",
+        "Datasheet retained after enhancement",
+        "Pending result ignored after enhancement",
+        "Cache invalidated after enhancement",
+        "Pending result ignored after library",
+        "Cache invalidated after library",
+        "Failed calculation permits retry",
+        "Retry replaces faulted calculation"
+      ],
+      "Timings": [
+        {
+          "ColdMs": 1167.7504,
+          "WarmMs": 68.7864,
+          "FramesWhileLoadingMs": 10.6529,
+          "SessionWaitMs": 1.687
+        },
+        {
+          "ColdMs": 1131.7548,
+          "WarmMs": 29.1994,
+          "FramesWhileLoadingMs": 15.1504,
+          "SessionWaitMs": 1.0976
+        },
+        {
+          "ColdMs": 1206.4147,
+          "WarmMs": 31.1175,
+          "FramesWhileLoadingMs": 16.0018,
+          "SessionWaitMs": 1.584
+        },
+        {
+          "ColdMs": 1156.1059,
+          "WarmMs": 29.8016,
+          "FramesWhileLoadingMs": 14.3653,
+          "SessionWaitMs": 1.27
+        },
+        {
+          "ColdMs": 1193.5145,
+          "WarmMs": 28.1723,
+          "FramesWhileLoadingMs": 11.2136,
+          "SessionWaitMs": 1.3455
+        }
+      ]
+    }
+  },
+  "ManifestJsonBytes": {
+    "Before": 1533235,
+    "After": 1213911
+  },
+  "ManifestCompressedBytes": {
+    "Before": 221817,
+    "After": 210266
+  }
+}

@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup><TargetFramework>net10.0</TargetFramework></PropertyGroup>
+  <PropertyGroup Condition="'$(IncludePerformanceChecks)' == 'true'">
+    <DefineConstants>$(DefineConstants);PERFORMANCE_CHECKS</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup><InternalsVisibleTo Include="GrimList.Tests" /></ItemGroup>
+  <ItemGroup><InternalsVisibleTo Include="GrimList.Performance" /></ItemGroup>
+  <ItemGroup><InternalsVisibleTo Include="GrimList.Mobile" /></ItemGroup>
+  <ItemGroup><EmbeddedResource Include="Resources/core-stratagems-*.json" /></ItemGroup>
+  <ItemGroup><EmbeddedResource Include="Resources/detachment-catalogue-11.json.gz" /></ItemGroup>
+  <ItemGroup><EmbeddedResource Include="Resources/space-marine-army-rule-11.json" /></ItemGroup>
+  <ItemGroup><EmbeddedResource Include="Resources/space-marine-stratagems-11.json" /></ItemGroup>
+</Project>

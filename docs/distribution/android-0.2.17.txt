@@ -1,0 +1,29 @@
+GrimList Android 0.2.17 - 15 October 2026
+
+APK: artifacts/builds/android/0.2.17/GrimList-Android-0.2.17.apk
+Package: com.grimlist.mobile
+Version code: 18
+Size: 102914181 bytes
+SHA-256: d7992ebe5d2932eb0c5b4ead9b388ecbb77f9e7795a147b8115c90ead9543c99
+
+Includes battle invitation/response exchange with Windows and Android, readable
+army snapshots, saved exchanges, and a separate first-player choice at Start
+battle. Transfer the full Copy exchange text or a .grimbattle file; the short
+display code is not an online lookup key. Each device tracks its own scores.
+See docs/battle-exchange.txt for the PC + Android test sequence.
+
+Published from a clean source copy with the Standalone profile, ARM64/x64,
+embedded assemblies, no trimming/AOT. APK integrity and both native MAUI startup
+bindings passed. APK signing certificate matches the installed 0.2.16 package.
+All 46 focused battle checks passed with Android-style JSON newlines.
+
+Installed on connected Redmi kjuoaevc95hagaz9 using adb install -r: Success.
+Verified versionName 0.2.17 and versionCode 18. First install timestamp remains
+2026-10-13 23:15:00. No uninstall or data clearing was performed.
+Cold launch passed and restored the existing fnc army with Norn Emissary,
+250/2000 points. The running PC development build contains the same exchange
+feature. Interactive PC/phone file or clipboard exchange remains for the user's
+manual test. No Windows distribution installer was rebuilt.
+
+Evidence: .local/phone-0.2.17/ (source hashes, publish and test logs, previous
+APK, signature comparison, package metadata, install result and launch UI).

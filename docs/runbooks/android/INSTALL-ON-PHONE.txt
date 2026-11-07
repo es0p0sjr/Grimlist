@@ -1,0 +1,146 @@
+GrimList Android phone test
+
+LATEST: Coverage audit and generic plural-container extraction, 2026-10-05
+
+Use TEST-REFERENCE-COVERAGE-ON-PHONE.txt for this build. Install the APK over the
+existing app and import the NEW GrimList-References.json via Import rules references.
+The pack now has 1,119 display cards plus source detachment definitions; no unit,
+price, enhancement or disposition data. It recovers 104 existing BSData reference
+cards for Mechanicus, Aeldari, Drukhari and Grey Knights. Missing stratagem text
+for other factions has not been invented. All supplied stratagems remain Partial.
+
+243 shared automated tests + 11 audit tests PASS; desktop build/smoke and Android
+publish PASS. This latest APK was not installed/launched on the disconnected
+phone. Manual native import/filter/persistence checks are NOT RUN.
+
+Current APK SHA-256:
+347B289E55FF4962844456D2E90FBAC58E9E0EDFF1D939369EE0FF1E1C5BFF8E
+
+The sections below describe prior builds and their historical counts/hashes.
+
+PRIOR UPDATE: Generic rules-reference library, 2026-10-05
+
+For a phone with an existing imported library:
+1. Install GrimList-Android-Test.apk OVER the existing app. Do not uninstall or
+   clear storage; saved armies are local. The connected test phone already has
+   this APK installed successfully.
+2. Keep your current unit library. The full GrimList-Library.json below is older
+   than the supplied October 4 phone export; do not import it for this update.
+3. Copy GrimList-References.json to Downloads (already staged on the connected
+   phone). This reference-only pack contains 1,015 cards, including the existing
+   45 Death Guard stratagems. It contains no units, prices or enhancements.
+4. In GrimList: top-right menu > Manage data > Import rules references.
+5. Choose GrimList-References.json. Review the source, reference changes,
+   matching and coverage. Expect zero price changes. Preview changes nothing.
+6. Tap Apply update only after reviewing. Conflicts block Apply; cancel and
+   resolve the source input rather than silently overwriting it.
+7. Open a separate test army with Virulent Vectorium. Army rules should show its
+   six existing stratagem cards, not another detachment's cards. Card counts do
+   not certify completeness. Other factions still need sources for absent text.
+8. Record the test army's units, loadouts, attachments, points and validation.
+   Save, force-stop without clearing storage, relaunch, check restored state and
+   references, then edit/save/reopen again. Undo history resets after process death.
+9. Export dataset to confirm the cards, provenance and coverage travel with it.
+
+The same importer accepts any faction's structured reference pack. It cannot
+invent missing stratagem text. Reference-Coverage.json reports 36 factions and
+823 detachments: 9 Partial, 814 Unknown, no verified-complete claims. See
+REFERENCE-LIBRARY-FORMAT.txt for source formats, updates, conflicts and coverage.
+
+Verification: 240 automated checks PASS; desktop build and extended smoke PASS;
+Android Release build/publish PASS. Installed and launched on the connected
+Android 14/API 34 phone. Automated document-picker taps are blocked by the phone's
+USB debugging security setting, so native reference import/lifecycle acceptance
+is NOT YET complete. No existing armies were edited.
+
+Current APK SHA-256:
+4EC401C998A19A658B9F74CCFD8E6F2553491FFF61E9F9F5AC230B6D032F478F
+
+The notes below describe first installation and earlier updates. Their older
+test counts, timing observations and hashes are historical, not this build.
+
+Files
+  GrimList-Android-Test.apk - standalone app, about 64 MB
+  GrimList-Library.json     - tested edition-11 library, 2,194 units
+  GrimList-DeathGuard-Stratagems.json - Windows Death Guard stratagems only
+  TEST-STRATAGEMS-ON-PHONE.txt - reference transfer and verification steps
+
+Requires Android 11 or newer on an ARM64 phone.
+No Visual Studio, .NET installation, USB debugging or PC connection is needed to run it.
+
+1. Copy the APK and JSON to your phone's Downloads folder using USB or Quick Share.
+2. Open GrimList-Android-Test.apk in the phone's Files app.
+3. If Android asks, allow installation from this Files app, then tap Install.
+4. Open GrimList.
+5. Open the top-right menu > Manage data. Select BSData community and
+   Points + datasheets, then Choose local source.
+6. Select GrimList-Library.json, review the preview, then tap Apply update.
+   Full-library preview took about 77 seconds in the latest Release emulator check.
+   Physical-phone timing has not yet been measured.
+7. Open the menu > New army. Choose faction, detachment, name and points, then Create army.
+8. Add a unit. Tap its roster card, then Equipment to edit its wargear.
+   Others appears before every Allies faction section in both the unit browser and roster.
+   Champion and squad equipment use the same groups as Windows.
+   Squad upgrades show individual maxima and shared special-weapon capacity.
+   Counters replace standard equipment automatically; dimmed controls have reached a limit.
+   Highlighted single-model choices are selected.
+9. Return to the roster to see selected upgrades and their costs.
+   Hold a unit card for Delete/Duplicate, or tap its X to remove it.
+   Leader/Support attachment controls are on Datasheet, above Abilities.
+   Universal weapon rules such as Lethal Hits have their own Keywords section.
+   Unit size is on Equipment; the former Manage tab has been removed.
+10. Committed changes save automatically. Close and reopen the app to test restoration.
+
+You can instead export your current library from Windows using Export dataset
+and import that JSON. Dataset JSON contains the library, not Windows saved armies.
+
+To update later, install the new APK over the existing app. Uninstalling removes
+this app's locally saved armies.
+
+Reference corrections (2026-10-05): existing libraries are cleaned on load by the
+updated app; reimporting the JSON is not required to remove the duplicated
+detachment rules and keyword-shaped enhancement cards. Saved armies are retained.
+The supplied Sisters BSData catalogue has no stratagem definitions. Missing cards
+are now labelled explicitly and need a complete rules reference for that edition.
+
+Generic importer update (2026-10-05): install this APK over the existing app,
+then import the accompanying GrimList-Library.json using steps 5-6 above.
+The new engine alone does not reparse an already saved library. This JSON repairs
+the nine reported missing-price entries and retains the existing reference cards.
+Alternatively, use Manage data's source update/price repair with a full BSData ZIP
+after installing this APK. Review the preview before applying the repair.
+The same repaired JSON can be imported by the updated Windows app.
+Do not uninstall or clear app storage: your saved armies are local to the app.
+The importer change originally passed 214 automated checks. The current performance
+update passes 221 checks and the desktop smoke suite.
+
+Editing performance update (2026-10-05): install this APK over the existing app.
+If you already imported the repaired library successfully, keep using it: no
+library reimport or database reset is required for this performance update.
+Test repeated equipment changes, unit size, attachments, undo/redo and reopening
+your saved army. This build removes full-library reads from army saves and retains
+equipment controls during edits. Host benchmarks pass; actual phone performance
+and Android lifecycle acceptance for this update remain to be verified.
+
+This is a development-signed, untrimmed Release test build (version 0.1),
+containing ARM64 phone and x64 emulator code. It uses the shared GrimList engine.
+Keywords have coloured tap targets matching Windows. Tap one for its rule definition.
+Tap the points header (or Army rules > Maximum points) to change an existing limit.
+Manage data includes official MFM downloads, manual source editing and price repair.
+PDF roster/datasheet export is available through Android's Save document picker.
+MFM PDF text import requires Android 15+; JSON/text import works on older versions.
+PDF import supports text documents, not image-only scans.
+
+APK SHA-256:
+04D4A64A3184C7ACB80D0673BF197384E091DA5A2384EFC56FC3AD4633F37F86
+
+Library SHA-256:
+FAFC749F56F19DBF09E3117772C39384B3674DF1EC0CDE3A932A1DA414AD6439
+
+Library: BSData edition 11, revision cc1830fbfead059f8059ed6c7f8e73cd4c390908.
+
+Stratagem transfer update (2026-10-05): import previews now explain whether
+stratagem cards are included or skipped by Points only, and show coverage by
+detachment. 225 automated tests and the extended desktop smoke suite pass.
+For missing Death Guard cards, follow TEST-STRATAGEMS-ON-PHONE.txt and use the
+small reference-only JSON. Native phone verification remains pending.

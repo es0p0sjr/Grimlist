@@ -1,0 +1,44 @@
+{
+  "SchemaVersion": 3,
+  "Source": {
+    "Name": "Dark Angels verified stat update (partial)",
+    "Version": "1",
+    "Date": "2026-09-15",
+    "Url": "https://www.warhammer-community.com/en-gb/articles/voakmnny/space-marines-detachments-blood-angels-and-dark-angels/",
+    "Edition": "11"
+  },
+  "Units": [],
+  "RulesPacks": [
+    {
+      "Id": "dark-angels-codex-2026",
+      "Revision": 1,
+      "FormatVersion": 1,
+      "Source": {
+        "Name": "Dark Angels verified stat update (partial)",
+        "Version": "1",
+        "Date": "2026-09-15",
+        "Url": "https://www.warhammer-community.com/en-gb/articles/voakmnny/space-marines-detachments-blood-angels-and-dark-angels/",
+        "Edition": "11"
+      },
+      "Factions": ["Dark Angels"],
+      "Status": "Verified",
+      "Coverage": "Partial",
+      "Notes": "Statline correction only. This is NOT the complete codex update: abilities, army rules, weapons, detachments, stratagems and enhancements still need a complete current source. Existing points and unrelated rules are retained.",
+      "Units": [
+        {
+          "Faction": "Dark Angels",
+          "Name": "Lion El'Jonson",
+          "Fields": ["Characteristics", "Models"],
+          "Profile": {
+            "Characteristics": { "M": "8\"", "T": "10", "Sv": "2+", "W": "16", "LD": "5+", "OC": "4", "InSv": "3+" },
+            "Models": [
+              { "Name": "Lion El'Jonson", "Characteristics": { "M": "8\"", "T": "10", "Sv": "2+", "W": "16", "LD": "5+", "OC": "4", "InSv": "3+" } }
+            ]
+          }
+        }
+      ],
+      "Detachments": [],
+      "Cards": []
+    }
+  ]
+}

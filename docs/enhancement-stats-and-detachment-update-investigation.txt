@@ -1,0 +1,121 @@
+Enhancement stats and detachment updates: investigation, 2026-10-26
+
+Historical investigation record. Subsequent implementation and verification:
+docs/enhancement-stats-and-detachment-updates.txt.
+
+Scope
+User requested investigation first: missing +2 Movement (Destroyer Ankh),
+missing OC changes, and stale Custodes detachments after a codex/update.
+Requested follow-up behavior: reconcile obsolete detachments dynamically when
+a BSData update is applied, for all factions rather than a Custodes blacklist.
+No application behavior, bundled resources, versions or live libraries changed.
+
+Confirmed: Destroyer Ankh Movement
+BsDataWeaponSelectors.Type does not recognize
+self.entries.group.recursive.profiles.Unit.
+ReadEnhancementModifiers in BsDataEffectiveDatasheets.cs consequently imports
+its M increment as Target=weapon with an unknown WeaponPredicate, rather than
+a model characteristic modifier with the appropriate unit recipients.
+EffectiveDatasheets ignores that numeric modifier when matching weapons.
+The separately encoded melee Attacks increment works.
+
+The prose fallback does not rescue it: the source combines the Movement and
+Attacks changes in one sentence, with different recipients. DatasheetRuleText's
+numeric grammar does not handle that clause combination or "models in the
+bearer's unit". WeaponRules.WithTextFallback only fills weapon-keyword grants
+when stored modifiers exist, so fixing prose alone would not repair old cards.
+
+The source rule grants Movement to models in the bearer's unit, not just the
+bearer. Merely classifying the selector as Model would be an incomplete fix:
+the effect must reach legal attached members and also work for a lone bearer,
+without giving those members the bearer's melee Attacks or Destroyer Cult.
+RosterEvaluation.AttachedModifiers currently routes recipients only when
+there is more than one member, which matters when designing the self path.
+
+Confirmed OC example; exact reported OC selection still unknown
+Writ of Compunction has the same selector and is imported as weapon/OC.
+Its +1 OC is ignored. Regimental Banner's ordinary model/OC +3 works.
+Destroyer Ankh's inspected text grants no OC; these are separate effects.
+Other OC rules have timing/leading/Battle-shock conditions, so a universal
+unconditional OC increase would be incorrect. Need the reported OC rule name
+to establish whether the user's specific case is this defect or another one.
+
+Reproduction evidence
+Ran a temporary console probe against the current Core/Application projects.
+Used shipped bootstrap library.json.gz (source cc1830..., 2026-10-02) and
+freshly called ImportEnhancementReferences on cached repository ZIP
+0fb7e6ac9cb5289c4cfe519029787d34eca95032 (2026-10-14).
+Synthetic bearer: M 6 inches, OC 2, melee A 4. Source rule text/modifiers were
+preserved; eligibility was made constant to isolate modifier projection.
+Both bundled and freshly imported cards gave identical results:
+  Destroyer Ankh: M 6 (expected 8), OC 2, melee A 6.
+  Writ of Compunction: M 6, OC 2 (expected 3), melee A 4.
+  Regimental Banner control: M 6, OC 5, melee A 4.
+These are shared-engine reproductions, not native UI/device tests.
+
+Confirmed: stale detachments and associated rules survive update
+DatasetMerge.cs:153 unions current and incoming definitions, keyed by
+normalized faction/name. It replaces matching names but retains absent ones.
+At :160, selectable rule cards are also retained unless replaced by key.
+completeFactions only affects unit prices (and not for Profiles imports).
+Both desktop ImportWindow and mobile MainPage.Library call LibraryWorkflow.
+Its removal preview already exists, but ordinary BSData union merging cannot
+produce the required detachment removals.
+
+Synthetic Combined imports, tested with completeFactions false and true:
+  Current: Old probe detachment plus its enhancement.
+  Incoming: New probe detachment, old definition/card absent.
+  Result in both cases: old and new detachments; old enhancement retained.
+
+Confirmed: startup recovery can resurrect removed Custodes definitions
+ReferenceLibraryRecovery.Supplement adds missing bundled detachment scopes
+based on faction/catalogue identity. It honors explicit rules-pack ownership,
+but has no authoritative BSData detachment replacement boundary.
+Removed all Custodes definitions from an in-memory bootstrap copy, then called
+the actual Supplement with ReadBundled. It restored these nine definitions:
+  Talons of the Emperor, Shield Host, Null Maiden Vigil, Auric Champions,
+  Solar Spearhead, Lions of the Emperor, Might of the Moritoi, Silent Hunters,
+  Tharanatoi Hammerblow.
+This demonstrates resurrection; it does NOT establish that all nine are
+obsolete. The cached 2026-10-14 source also imports these same nine names.
+
+DetachmentCatalogue is an additional futureproofing concern: it uses a static
+Space Marine/chapter retirement list and supplements missing known-context
+definitions. That resource does not currently contain Custodes. Any general
+retirement mechanism must also prevent this path restoring superseded data.
+
+Live-source limitation
+Checked https://github.com/BSData/wh40k-11e and the Custodes file page.
+Raw file retrieval failed through both local HTTP and web retrieval; the
+GitHub HTML file page did not expose its JSON content. No current download,
+current codex replacement list, or latest-source import is claimed.
+
+Proposed implementation boundaries (not implemented)
+1. Import recognized unit-stat selectors with explicit recipients and conditions.
+   Cover bearer alone, legal attached bodyguards/co-leaders, detach/removal,
+   and unchanged unrelated units. Keep separate weapon effects on their owner.
+2. Repair already imported malformed metadata with source-proven recovery;
+   ensure cached recovery resources cannot overwrite repaired semantics.
+3. Carry authoritative detachment coverage from a successfully resolved BSData
+   repository/faction snapshot through preview, persistence and startup.
+   Match source IDs and faction identities; account for renames and hidden
+   legacy definitions. Do not infer completeness merely from a nonempty list.
+4. Reconcile definitions and detachment-scoped rules, enhancements, stratagem
+   applicability/coverage only inside those authoritative scopes. Preserve
+   manual/rules-pack overrides and surviving scopes of shared reference cards.
+5. Persist retirement/authority evidence so startup supplements cannot resurrect
+   old entries. Keep historical army selections/IDs and report invalid choices
+   for review; do not silently replace a saved detachment or erase armies.
+6. Run this automatically for successful BSData datasheet/combined updates
+   within the existing preview/apply flow. Points-only, partial or failed
+   imports must not retire absent detachments. Show removals in the preview.
+
+Validation and cleanup
+Temporary probe built successfully with 0 warnings/errors using serial MSBuild;
+its run completed with exit code 0. Six stat projections, two merge variants,
+startup supplementation and cached detachment metadata import were exercised.
+No full regression suite, native UI tests or release packaging was performed.
+Cleanup of temporary probe source/bin/obj was attempted but blocked by execution
+policy; no bypass was attempted. They remain under
+.local/tests/bug-investigation-2026-10-26. No storage reclamation is claimed.
+No user database was opened or changed.

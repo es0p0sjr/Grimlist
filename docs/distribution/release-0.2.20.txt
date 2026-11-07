@@ -1,0 +1,74 @@
+GrimList 0.2.20 - community test release - 15 October 2026
+
+Files
+Windows: artifacts/installers/windows/0.2.20/GrimList-0.2.20-win-x64.msi
+  97,435,648 bytes
+  SHA-256 a580905ece1a92f1bcbcca5ddd7c002f6f72e25cdb2469f4f5e265d0fcada11a
+Android: artifacts/builds/android/0.2.20/GrimList-Android-0.2.20.apk
+  102,926,469 bytes; com.grimlist.mobile; version code 21
+  SHA-256 cadd3e48f8d643e514bcf282647ff0f00ab91c68755f31c592f213c5a539b1e3
+Both have adjacent .sha256 files. Release manifest: release-0.2.20-files.json.
+Tester instructions: community-testing-0.2.20.md.
+
+Scope
+Matching Windows and Android versions contain the current army builder, battle
+tracker, bug-report workflow, compact version-3 battle exchange and QR display.
+Outgoing exchanges share player name, faction and disposition plus matching IDs;
+players discuss armies in person. Secondary choices are local, scores do not sync,
+and phone scanning uses an external QR scanner/custom app link.
+Android round swipes are on the fixed heading, outside the vertical scroll view.
+That fix was confirmed by the user on 0.2.19 and is retained unchanged here.
+No live rules/data refresh was performed for this app release.
+
+Agent/build handoff
+AGENTS.md now records architecture, sources/provenance, user decisions, protected
+storage, toolchain, release/testing commands, limitations and bounded build storage.
+The old QR test launcher now delegates to the normal current-source launcher.
+Builds reuse project bin/obj rather than creating per-task source copies. Publishing
+removed older numeric Android, Windows payload and Windows installer release folders.
+Only the current package is retained in each of those release channels.
+Successful regression runs clean their own generated databases. MSI/app validation
+now removes temporary extracted payloads and disposable user-data folders.
+
+Verified
+- Android Standalone build, signature and package/version checks, ZIP integrity,
+  no developer/user-data payload, and ARM64/x64 native startup bindings passed.
+- Existing Android signing certificate retained (SHA-256):
+  9be9c191c53dc33ee955dcaedad94868fe4a4e6817a1fb30187ac0baf7f28f25
+- Exact APK installed over 0.2.19 on the Redmi with adb install -r: Success.
+  Cold launch passed; installed version 0.2.20/code 21; original first-install
+  timestamp unchanged. No uninstall, storage clearing or synthetic battle created.
+- Windows standalone build passed, executable version 0.2.20, private runtime
+  included. All 490 embedded MSI files match the published payload hashes.
+- 19 MSI identity/table/extraction checks and all 13 native extracted-app checks
+  passed: offline bootstrap, references, army validation, save/reopen and private
+  runtime loading. Temporary extracted app and acceptance data confirmed removed.
+- Native MSI welcome/destination and Cancel/Finish checks passed without installing.
+- Windows and both Android ABI payloads have byte-identical Application assemblies.
+- All 425 full regression checks passed (zero failures), including both corrected
+  fixture checks and the real PDF extractor. The successful run's synthetic data
+  was removed; final package hashes were checked again after validation.
+
+Regression maintenance
+The initial full run passed 423 checks and found two test issues. The idempotence
+assertion assumed one source row even after legitimate reference recovery; it now
+compares source IDs before/after reopening and still rejects any bootstrap reload.
+Three missing historical sample fixtures were restored byte-for-byte from the old
+workspace ZIP. These changes affect tests/fixtures only; application packages did
+not need rebuilding. Both initial and final logs are retained for transparency.
+
+Limitations
+Windows MSI is unsigned. Android uses the established development signing key.
+Actual MSI install/repair/upgrade/uninstall remains unverified in this restricted
+session; do those checks on an unrestricted test machine. Camera optical scanning
+and broader community device coverage remain manual. This release does not claim
+all game rules are current or that every bug has been found.
+
+Automatic approval review rejected removal of the initial failed run's disposable
+data with "blocked by policy". That folder was not deleted:
+.local/tests/e63970db-fb7a-4fea-88ea-66e6deaeb317
+It occupies about 0.30 GiB of synthetic data, not the live .local/grimlist.db library.
+Historical .local scratch folders and root share copies are outside automatic
+release-retention scope; this release does not claim the entire workspace is clean.
+
+Evidence: artifacts/distribution-evidence/0.2.20/

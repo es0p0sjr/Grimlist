@@ -1,0 +1,74 @@
+{
+  "Checks": [
+    "Legacy and shared formats preserve every bundled field across three revisions",
+    "Provenance updates and one price change round trip"
+  ],
+  "Measurements": [
+    {
+      "Mode": "legacy-full-snapshots",
+      "Revision": 0,
+      "Units": 2194,
+      "WriteMs": 548.197,
+      "ReadMs": 813.6816,
+      "WriteAllocatedBytes": 26315240,
+      "PayloadBytes": 9238628,
+      "DatabaseBytes": 9351168,
+      "Objects": "0"
+    },
+    {
+      "Mode": "legacy-full-snapshots",
+      "Revision": 1,
+      "Units": 2194,
+      "WriteMs": 346.6014,
+      "ReadMs": 591.7053,
+      "WriteAllocatedBytes": 24427816,
+      "PayloadBytes": 18473676,
+      "DatabaseBytes": 18657280,
+      "Objects": "0"
+    },
+    {
+      "Mode": "legacy-full-snapshots",
+      "Revision": 2,
+      "Units": 2194,
+      "WriteMs": 318.3487,
+      "ReadMs": 726.1012,
+      "WriteAllocatedBytes": 24091032,
+      "PayloadBytes": 27704224,
+      "DatabaseBytes": 27967488,
+      "Objects": "0"
+    },
+    {
+      "Mode": "shared-objects",
+      "Revision": 0,
+      "Units": 2194,
+      "WriteMs": 626.3142,
+      "ReadMs": 833.1766,
+      "WriteAllocatedBytes": 98196472,
+      "PayloadBytes": 8874412,
+      "DatabaseBytes": 9490432,
+      "Objects": "513"
+    },
+    {
+      "Mode": "shared-objects",
+      "Revision": 1,
+      "Units": 2194,
+      "WriteMs": 567.4335,
+      "ReadMs": 983.4531,
+      "WriteAllocatedBytes": 106709096,
+      "PayloadBytes": 9044109,
+      "DatabaseBytes": 9662464,
+      "Objects": "514"
+    },
+    {
+      "Mode": "shared-objects",
+      "Revision": 2,
+      "Units": 2194,
+      "WriteMs": 548.5718,
+      "ReadMs": 840.8707,
+      "WriteAllocatedBytes": 106352520,
+      "PayloadBytes": 9238962,
+      "DatabaseBytes": 9859072,
+      "Objects": "516"
+    }
+  ]
+}

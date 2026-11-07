@@ -1,0 +1,160 @@
+Codex updates and recovery of hidden references
+2026-10-27; source changes, not a new community package.
+
+Incident and confirmed evidence
+-------------------------------
+Launching the previous development build changed 413 stored stratagems from
+Active to Unresolved across nine factions. The user's .local library retained
+the card text and the prior snapshot, but normal display excluded those cards.
+Custodes went from 21 visible cards to zero. Solar Watch already had no cards.
+There was no successful replacement snapshot in the reference download cache.
+The user confirmed this happened on launch, before downloading an update.
+
+The prior repair incorrectly used a change in a whole faction's detachment list
+to invalidate every matching bundled reference scope. It also used the same
+Unresolved state for obsolete-source risk and genuinely unmatched identities.
+The shipped reference bundle had not been refreshed, so startup could hide
+cards without having any replacement. Tests had proved that old cards were
+hidden, not that a user could still access them or obtain replacements.
+
+Corrected shared behavior
+-------------------------
+1. Active = usable, matched reference. Stale = stored previous reference that
+   needs verification against the current detachment. Unresolved = genuinely
+   unmatched or ambiguous data. Removed/Obsolete remain history/tombstones.
+   Stale cards do not enter current-rule lookup, gameplay or roster exports.
+   Both rules screens expose them in a separate, initially collapsed Previous
+   references group, with an explicit warning that they are not verified current
+   rules. Mobile preserves this group's and its cards' expansion state.
+
+2. Recovery repairs the earlier quarantine only with source evidence: matching
+   owner/hash, edition, catalogue identity, scope and unchanged card content.
+   Genuine matching failures, manual edits and explicit rules-pack overrides are
+   preserved. Removed and obsolete cards are never resurrected.
+
+3. The new embedded reference-baselines-11.json.gz stores 444 compact per-scope
+   proofs generated from the exact historical catalogue used to match the bundled
+   references (da7248777da54218034f09b6271ad89ff6b68a77, repository hash
+   9ba45e3e9fffa9eb061f762d7703e386c566b391c7a463eeb60f3800bfa7f8cd).
+   The resource contains hashes and scope identities, not a user database or new
+   rules text. An unrelated detachment addition does not invalidate existing
+   scopes. Unchanged scopes wrongly quarantined by the old code become Active;
+   changed scopes become accessible Stale history.
+
+4. rules3 fingerprints compare detachment IDs, normalized names/costs/dispositions
+   and source-owned rule content. They deliberately exclude derived selection
+   metadata such as Tags, Applicability and GroupLimits: enriching an importer
+   must not masquerade as a new codex. Those fields retain their normal selection
+   and validation behavior. Fingerprints and baseline keys use stable compact
+   JSON, independent of Windows/Android newline conventions. Legacy rules/rules2
+   proofs remain readable; faction-wide shape stamps no longer prove scope drift.
+   Partial faction views cannot infer missing rules from unloaded data.
+
+5. Update data still explicitly downloads BSData, MFM and mapped reference pages;
+   startup remains offline. The HTML adapter can now accept independently verified
+   detachment sections while reporting other sections as Partial/missing. A bad
+   card invalidates its scope's completeness, not every other detachment. Wrong
+   edition/faction, truncated documents and structural limits still reject the
+   page. DP markers must agree with the catalogue when its DP cost is known.
+
+6. An HTTP 200 response containing a known historical page cannot certify changed
+   scopes: the byte hash is checked against the pinned baseline. Such scopes do
+   not overwrite fresher installed cards. Failure declarations retain the last
+   successful compatibility proof. The cache records source.json, raw.html and
+   coverage.json, distinguishing an observation from verified complete coverage.
+
+7. Verified complete scopes replace changed same-ID cards and retire absent
+   same-owner cards, including Stale history. Missing/partial scopes never imply
+   zero cards or authorize deletion. Existing explicit complete-zero structured
+   packs keep their semantics. Preview describes cards becoming previous
+   references; apply remains an atomic ArmyStore operation with saved armies and
+   historical snapshots retained.
+
+What happens when a new codex arrives
+-------------------------------------
+The importer cannot infer a codex publication independently of its sources.
+On an explicit Update data action it reconciles source-proven detachment IDs,
+retirements, renames and changes, then checks each reference scope against the
+new catalogue. Verified source replacements update that scope. New scopes with
+no references are reported as missing. Changed scopes awaiting replacement keep
+their previous cards accessible but visibly unverified. Unchanged scopes retain
+their cards. A source outage or unsupported page never becomes complete-zero.
+
+An unchanged source shape and a recent download timestamp still do not prove
+that every erratum has reached the upstream page. Source hash, edition, scope,
+coverage and acquisition date remain available for review. Shared chapter page
+composition, unsupported embedded-card layouts and explicit zero-card HTML
+sections remain adapter gaps; they must not be guessed from absent markup.
+The historical-page guard recognizes pinned byte hashes. A cosmetically changed
+page has a different hash; neither that change nor matching headings independently
+proves a codex revision. Stronger upstream revision markers and reviewed current
+source fixtures remain necessary before claiming general freshness detection.
+
+Read-only preview against the affected library
+----------------------------------------------
+The completed pure recovery preview restored 386 formerly Unresolved cards to
+Active. Custodes' 21 cards and six Tyranid cards remained available as Stale
+history because their scope proofs changed. Six previously Active Sororitas
+cards were also identified as changed scopes. Unchanged factions such as Death
+Guard stayed Active. Repeating recovery produced no further changes.
+This was an in-memory preview of a read-only SQLite snapshot; it did not modify
+the live library. The source launcher rebuilds on launch, and normal startup
+recovery applies the repair through ArmyStore after restarting the updated app.
+
+Current Custodes data limitation
+--------------------------------
+The old six Lions cards are not the current rules, and no Solar Watch cards can
+be invented from them. The current rules bundle was not regenerated. Ordinary
+HTTP acquisition of the current Custodes page still fails in this environment
+with WinError 10061. A successful Update data from a reachable source, or a
+verified current reference import, is required to populate the actual new cards.
+A browser-saved current source page can be processed offline. Do not claim the
+current Lions/Solar Watch text has been verified from synthetic fixtures.
+
+Maintenance and regression requirements
+---------------------------------------
+Regenerate baseline metadata from the exact matching catalogue after a reviewed
+reference-bundle update, then rebuild to embed it:
+
+dotnet tests/GrimList.Tests/bin/Debug/net10.0/GrimList.Tests.dll --build-reference-baselines tests/fixtures/bsdata/11e/da7248777da54218034f09b6271ad89ff6b68a77/reimported.json src/GrimList.Application/Resources/reference-baselines-11.json.gz
+
+The generation helper rejects missing source hashes; the regression compares
+every embedded proof with independent regeneration. Replace the input revision
+only when the reviewed reference bundle actually targets that catalogue.
+
+StratagemRefreshChecks covers the old startup quarantine, unchanged scopes after
+an addition, reused IDs with changed rules, metadata enrichment, cross-platform
+JSON, real historical HTML against the current 13-scope Custodes catalogue,
+partial section acceptance, misleading HTTP success, source failure, conflict
+and override preservation, persistence and repeat startup. Its positive codex
+transition test asserts current replacement text, a newly populated scope and
+retired old cards after preview/apply/reopen. Tests use arbitrary fixture names;
+Custodes is an additional real-source reproducer, not a production-code branch.
+
+Verification, 2026-10-27
+-----------------------
+- Focused stratagem-refresh regression: 21 PASS, zero FAIL. Evidence:
+  artifacts/distribution-evidence/codex-recovery-targeted.log.
+- Final Windows and Android Debug builds: successful, zero warnings/errors.
+  Android used the installed SDK/JDK overrides documented in AGENTS.md.
+- Full regression: 509 PASS, zero FAIL, including all 16,755 eligible enhancement
+  bearer/card pairs and real PDF extraction. Evidence:
+  artifacts/distribution-evidence/codex-recovery-full.log. The final UI-only
+  wording correction was checked by rebuilding both frontends; shared code did
+  not change during the full run. The wrapper removed its synthetic database.
+- No physical Android UI/update, installer lifecycle or live-source acquisition
+  success is claimed. Community 0.2.27 installers and the reference-rules bundle
+  were not rebuilt. The new embedded resource contains baseline metadata only.
+- The successful focused run removed its synthetic database through the standard
+  wrapper. An initial failed test retained .local/tests/e0870144-776d-4bdd-90f8-91a64a9bfb1c;
+  its test-only attempt to mutate immutable JSON options was corrected to clone
+  the options. Live user data was never changed by the verification commands.
+
+User confirmation, 2026-10-28
+-----------------------------
+The user reported: "downloading data fixes the issue" in response to the missing
+Custodes stratagem investigation and repair. Record the reported app issue as
+resolved after a data download. The acquisition restriction above describes the
+agent's environment, not a continuing failure in the user's app. This report
+does not independently verify individual card contents, both platforms or a new
+installer; no code, packaged rules or installers changed for this confirmation.

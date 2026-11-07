@@ -1,0 +1,113 @@
+Equipment pricing and incomplete loadouts (2026-10-21)
+
+Problem
+The previous importer discarded a free-equipment loadout when any weapon profile
+was unmapped. EquipmentPrices then returned an empty list, while the editor made
+manual:<weapon family> choices. Those choices had no price rows, so choosing a
+weapon made both its label and the unit total unavailable. The repair scan did
+not detect empty lists. Boyz's nested Nob weapon bundles exposed this path.
+
+Shared behavior
+- ReadDatasheet retains mapped choices and source profile IDs. Unmapped weapons
+  remain available in an explicitly labelled manual-review group; Incomplete
+  and Loadouts.ReviewWarning prevent a partial mapping from implying legality.
+- ManualEquipmentPrices reads the original source paths independently of the
+  automatic editor. Every occurrence of a profile must agree. Complete source
+  paths with no additional equipment cost yield explicit zero-price records.
+  Simple paid selections retain their charge. Missing references, conflicting
+  costs, equipment price modifiers and paid multi-weapon bundles stay unknown.
+  Unit/copy/model price modifiers remain the responsibility of their existing
+  calculators. Equipment modifiers affecting descendants remain unresolved.
+- Manual option IDs and saved quantities are preserved. Existing manual entries
+  can still be edited and rendered after an import gains automatic choices.
+  No automatic redistribution of weapons across models is attempted.
+- Pricing and legality are separate: known equipment can retain a numeric total
+  while replacement limits require review. Unresolvable saved selections must
+  not silently disappear from pricing. Legacy paid-equipment warnings remain
+  protected. Existing implicit pricing for old non-BSData definitions is retained.
+- PricingRepair detects selectable options missing from a non-null cost table.
+  New source imports and repricing retain manual price records. Extra unresolved
+  manual aliases do not invalidate a fully mapped automatic option's known price.
+
+Existing libraries
+EquipmentPriceRecovery applies a library projection through ArmySession, also
+feeding the versioned faction cache. It adds missing manual price records only.
+Existing prices/overrides, profiles/loadouts, army/entry IDs, saved equipment,
+MFM base prices and source snapshots are preserved. Repeated application is a
+no-op. There are no live database migrations or downloads in this recovery.
+Units already carrying source-selection cost rows are left intact, since those
+rows may contain overrides that newly introduced manual aliases could bypass.
+
+Evidence requires matching edition, archive SHA-256, faction and BSData entry
+alias, plus an exact weapon-content hash. Flattened legacy profiles lacking
+source IDs/categories use a separately generated legacy hash of the same pinned
+source's weapon contents. Edited profiles and conflicting evidence are skipped.
+Unsupported source revisions retain unknown prices until suitable evidence is
+provided; this is not a blanket zero-cost fallback.
+
+Bundled evidence: src/GrimList.Application/Resources/equipment-prices.json.gz
+Generated from the existing pinned repository archives, not a user database:
+- cc1830fbfead059f8059ed6c7f8e73cd4c390908
+  SHA-256 747DB24BF29456F0606A937F794A7E7F33154E76116EFF1506E9B0750AB5C045
+- 0fb7e6ac9cb5289c4cfe519029787d34eca95032
+  SHA-256 76E61BE4E86EA63030C93BA13FB57C6C67F76882328802EBB509F566ED27D270
+
+Regeneration (build tool first; run once per pinned archive):
+dotnet tools/GrimList.Bootstrap/bin/Debug/net10.0/GrimList.Bootstrap.dll --build-equipment-evidence <repository.zip> src/GrimList.Application/Resources/equipment-prices.json.gz
+The generator replaces only that archive's evidence and retains other revisions.
+Rebuild Application afterward to embed the updated resource.
+Read-only audit of an exported gzip library:
+dotnet tools/GrimList.Bootstrap/bin/Debug/net10.0/GrimList.Bootstrap.dll --audit-equipment <library.json.gz>
+
+Validation
+The existing Test-BundledEnhancements.ps1 gate, used by both publishing scripts,
+now also validates equipment coverage after recovery: every selectable bundled
+option needs a numeric price or an explicit unresolved reason. It does not claim
+that every source rule is supported, or that every loadout is legal.
+EquipmentPriceChecks covers included/paid/conditional/ambiguous/missing/bundled
+prices, empty-list detection, stale selections, source/override guards, legacy
+profiles, persistence and actual pinned Boyz import plus bundled recovery.
+Focused command: dotnet run --project tests/GrimList.Tests/GrimList.Tests.csproj -- --equipment-prices-only --lf-json
+
+Local audit: 2,219 unit entries, all 63 previously affected entries recovered to
+known equipment prices, zero coverage gaps. Boyz: all 15 manual choices known.
+The audit read a consistent SQLite transaction in read-only mode, verified the
+compressed library checksum, and evaluated recovery on the library snapshot only.
+It did not open ArmyStore on the live directory or copy saved armies/database files.
+Bundled audit: 2,194 unit entries, all 81 previously affected entries recovered to
+known equipment prices, zero coverage gaps. No live source acquisition was used.
+Evidence payload: 1,062,066 bytes; SHA-256
+2E40BDAA24FA634F925DAC65BCA514CF9A6829809D5BE5235837BDCCEB2E8D53.
+
+The final focused run passed 21 checks, including the existing contextual-pricing
+regressions. An initial full run found a missing reset diagnostic for manual
+loadouts with additional per-model costs; the diagnostic was restored and the
+existing regression passed in that focused run. Saved manual weapons still do
+not acquire invented per-model ownership.
+The final full regression rerun passed all 455 checks with --lf-json (zero
+failures), including real pdftotext extraction and 16,755 eligible enhancement
+bearer/card combinations. The wrapper removed that successful run's synthetic
+directory; equipment-prices-final-regression.log retains the results.
+Windows Debug build and Android Debug Compile target both passed with zero
+warnings/errors. Android used the configured SDK and Microsoft JDK 21 paths.
+These are build/compile checks, not device or installer lifecycle acceptance.
+The expanded bundled candidate gate passed enhancement, army-rule and equipment
+coverage validation. The unit/profile bootstrap payload itself was not refreshed.
+Audit JSON and focused/regression logs are in artifacts/distribution-evidence
+under the equipment-prices prefix; no live network source checks were performed.
+
+Cleanup limitation
+The environment's command policy rejected the explicit removal of the following
+task-created directories under .local/tests. They remain (about 323 MiB total):
+da87cf50-28c4-400a-8637-e3dbe3c64490
+f555b777-8e9b-4345-89c9-4a68bc3485d9
+79e790a5-5ae9-479d-b623-eb9b35088400
+3ceddaa1-92b2-4abe-938b-c158cfd04d67
+equipment-audit-20261021
+The first four contain synthetic test output; the last contains only the
+read-only compressed library audit snapshot. The successful focused run's normal
+wrapper and the final full-run wrapper removed their own synthetic output. No
+alternate deletion method was used for the rejected cleanup targets.
+
+Packaged as 0.2.22 (Android version code 23). See
+docs/distribution/release-0.2.22.txt for package verification and device limits.

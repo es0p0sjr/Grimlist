@@ -1,0 +1,157 @@
+Fresh Windows and physical Android performance measurements, 2026-10-28
+======================================================================
+
+Results
+-------
+These runs do not demonstrate a universal speedup. Editing is slower in several
+matching workloads; lower allocations alone have not established lower latency.
+Historical timings are comparisons, not a controlled attribution to one change.
+
+Windows shared equipment command (median milliseconds; previous -> current):
+3 entries:   65.42 -> 85.71, 31.0% slower (15 current samples).
+20 entries: 265.61 -> 363.07, 36.7% slower (15 current samples).
+Current 20-entry p95: 580.09 ms. Every edit still had zero full dataset reads,
+one calculation, zero eligibility builds and zero library-row builds. Median
+20-entry command allocation: 17.38 MiB. The fixture source revision matches.
+
+Android 20-entry actions (mean milliseconds; previous -> current):
+Add unit:           306.75 -> 388.93, 26.8% slower.
+Attach leader:     1039.41 ->1095.29,  5.4% slower.
+Change detachment:  380.56 -> 532.63, 40.0% slower.
+Select enhancement: 499.22 -> 542.52,  8.7% slower.
+Change equipment:   389.94 -> 392.01,  0.5% slower (essentially unchanged).
+Home:               206.26 -> 197.94,  4.0% faster.
+20 current samples/action, pooled from both batches, versus 5/action previously.
+Add/detachment remained slower in both individual batches. Home varied notably
+between batches (256.19 and 139.70 ms means); do not treat its 4% as a firm gain.
+Warm-cache, fresh-process Android startup: 3965.54 -> 3809.52 ms mean, about 3.9%
+lower. Five current samples range 3777.22-3825.89 ms, all zero full dataset reads.
+Different restored 20-entry fixture limits this startup comparison.
+
+Hidden WPF diagnostic current 20-entry medians (not comparable UI regressions):
+Open 581.35 ms; datasheet 237.57; add 616.18; equipment 646.97;
+enhancement 573.45; attachment 1067.06; detachment 430.43; Home 41.93.
+Five warm app-entry starts: mean 4952.38 ms, range 4687.65-5421.38 ms, zero
+full dataset reads. Historical visible-window October 13 medians are preserved
+in JSON, not converted into misleading speedup/regression percentages.
+
+Shared catalogue writes, revisions 0/1/2 (milliseconds):
+Windows previous: 827 / 520 / 559; current: 1022 / 808 / 1027.
+Android previous: 1740 / 1385 / 1423; current: 1836 / 1463 / 1487.
+These prior storage records already use the same optimized implementation;
+their slowdown indicates measurement/environment variability, not proof of a
+new code regression. All six round trips passed on each platform.
+Current Windows write allocations: 34.58 / 28.02 / 28.17 million bytes.
+Current Android write allocations: 36.95 / 30.82 / 30.45 million bytes.
+Versus the pre-optimization records, the allocation reduction remains roughly
+60-74%. Three shared revisions still use about 66.5-66.7% less payload than
+three full snapshots. No reduction of existing historical user data is claimed.
+
+Follow-up priority: profile PC shared commands and phone add/detachment paths
+under matched conditions. Separate dependency calculation from save/UI costs;
+do not replace the engine or claim a regression cause from these timings alone.
+
+Scope
+-----
+Requested measurements only; no application behavior, library data, installed
+production package or user army changes. Added a separate Windows diagnostic
+host and measurement script. The live Windows app was left running. Phone
+measurements used the isolated com.grimlist.perftest package, then returned to
+the user's main application.
+
+Android: Redmi 22101316UG (rubypro), serial kjuoaevc95hagaz9. Installed diagnostic
+APK SHA-256 was verified on-device against the local APK:
+2815d4cf1f095ea9c5ddd6d94b7d622b83781a66cc633aee59036bbc683d8c65
+Version 0.2.28/code 29; this is the current optimized source diagnostic build,
+not a timing claim about the older production package on the phone.
+
+Windows: same workstation, .NET 10.0.10, Release shared-command benchmark and
+separate Release WPF diagnostic. Storage uses Debug to match its previous
+record. Three command processes ran sequentially without a concurrent build.
+The user's existing application and ordinary background services remained open.
+CPU/RAM inventory through CIM was unavailable (access denied).
+
+Method and comparability
+------------------------
+Android: two batches, each with 10 measured edits per action for 3- and 20-entry
+Death Guard armies, plus five fresh-process launches. One unrecorded warm-up
+per editing action. Both editing batches are pooled, not selected by best run.
+Command-to-usable includes shared command, preparation and MAUI presentation.
+Warm filesystem/derived caches; neither device reboot nor OS cache flushing.
+The first startup batch restored a 2-entry enhancement-check fixture and is
+excluded from the 20-entry startup comparison. The second batch restored a
+20-entry performance fixture; the prior record restored a different 20-entry
+attachment-check fixture. Startup comparison therefore remains approximate.
+
+Windows shared command: three processes, five samples each per 3/20-entry
+equipment workload (15 pooled samples per size). Same historical library JSON
+fixture and harness; timings exclude UI preparation/rendering. Compare medians
+with editing-2026-10-28.json's uncontended "after" record. The concurrent-build
+record in that file is deliberately not used as baseline.
+
+Windows WPF diagnostic: actual current MainWindow, resources and shared session,
+its own marked synthetic database, ten saved armies, eight actions, 3/20-entry
+rosters, ten samples/action/size (160 total), one unrecorded warm-up/action.
+Two rendering callbacks and dispatcher idle after each presentation. The host
+launches hidden; Windows may throttle its rendering callbacks. Consequently
+these timings are NOT a valid visible-window latency comparison or proof of a
+UI regression. Historical October 13 values are retained only as context,
+because window visibility, catalogue and instrumentation differ. The host also
+loads loose XAML resources outside its app-entry timer and omits the production
+loading splash. Its process-start metric includes resource loading. Five warm
+launches reuse ten saved synthetic armies. Do not describe them as installed
+production startup timings.
+
+Storage: each platform writes and reads the bundled catalogue through both
+legacy full snapshots and shared objects over three revisions. Full field
+round trips, provenance changes and a single price change are checked. One
+sample per revision/mode: useful allocation/storage evidence, not a robust
+latency distribution. No internet download time is included.
+
+Earlier baselines
+-----------------
+docs/performance/editing-2026-10-28.json
+docs/performance/catalogue-runtime-android-2026-10-28.json
+docs/performance/windows-improvements-2026-10-13.json
+docs/performance/import-evaluation-storage-2026-10-28.json
+
+Raw current evidence is consolidated in performance-comparison-2026-10-28.json.
+Android raw diagnostics and process logs are under:
+artifacts/distribution-evidence/performance-now-20261028
+Initial Windows host attempts exposed diagnostic-only resource, shutdown and
+reflection overload problems; these were corrected before the final run.
+No failed attempt is included as a successful editing benchmark.
+
+Reproduction
+------------
+Shared Windows command workload:
+dotnet tools/GrimList.Performance/bin/Release/net10.0/GrimList.Performance.dll tests/fixtures/libraries/GrimList-Library.json <new-disposable-directory>
+Windows storage workload (matching prior Debug measurement):
+dotnet tools/GrimList.Performance/bin/Debug/net10.0/GrimList.Performance.dll --catalogue-storage <new-disposable-directory>
+Android:
+python scripts/Measure-AndroidPerformance.py --apk artifacts/builds/android-performance/0.2.28/GrimList-Performance-0.2.28.apk --serial <connected-device> --output <report-directory> --iterations 10 --starts 5 --skip-install
+Only use --skip-install after verifying the installed isolated APK hash.
+python scripts/Check-AndroidPerformanceApp.py --serial <connected-device> --output <report-directory> --checks catalogueStorageChecks
+Hidden Windows diagnostic (not visible-window frame latency):
+dotnet build tools/GrimList.WindowsPerformance/GrimList.WindowsPerformance.csproj -c Release -p:OutputPath=bin/Performance/ -p:NuGetAudit=false -m:1 -nr:false -p:UseSharedCompilation=false
+python scripts/Measure-WindowsPerformance.py --database <new-disposable-directory> --output <new-report-directory>
+Use a new report directory; failed-run error markers must not be mistaken for
+the next run. Do not point this host at a live library. It refuses a preexisting
+database directory without its own disposable-fixture marker.
+
+Validation and retention
+------------------------
+Final diagnostic build: zero warnings/errors. All 240 Android action samples,
+160 WPF diagnostic samples, 30 Windows command samples and expected startup
+counts were verified. Every measured shared command retained the expected
+reuse counters; all five final warm starts on each platform had zero full
+dataset reads. Both platforms passed all six storage round trips. Application
+regression tests were not rerun because no application code changed.
+
+Automatic approval review rejected cleanup with "blocked by policy". No retry
+or alternative deletion was attempted. Manual disposable target:
+D:\Konstantinos\GrimList-BACKUP-2026-10-06\.local\tests\performance-now-20261028
+253,258,233 bytes (241.53 MiB). Results are already consolidated in the JSON.
+Previous blocked paths and all user libraries remain untouched. Reusable
+diagnostic binaries occupy one bin/Performance output per dependent project;
+no repository copy, release installer or additional APK was created.

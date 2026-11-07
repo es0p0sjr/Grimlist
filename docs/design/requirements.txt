@@ -1,0 +1,120 @@
+WARHAMMER 40K LOCAL ARMY MANAGER
+Project Requirements - Short Specification
+
+1. PURPOSE
+Build a local desktop application for personal use that helps create, manage, validate, and track Warhammer 40,000 army lists.
+
+2. DATA SCOPE
+Use only basic/publicly available Games Workshop data, primarily from official public sources such as:
+- Munitorum Field Manual
+- Balance Dataslates
+- Other freely available Warhammer Community documents/pages
+
+The project must NOT:
+- Access or interact with the official GW app
+- Use private or authenticated GW APIs
+- Access Codex-code / subscriber-only content
+- Bypass authentication, DRM, access controls, or paywalls
+- Scrape or reproduce private/protected app data
+
+3. CONTENT POLICY
+Prefer factual/structured data such as:
+- Faction names
+- Unit names
+- Points values
+- Unit sizes
+- Leader relationships
+- Keywords/categories
+- Detachment points
+- Force dispositions
+- Enhancements where publicly listed
+- Other public army-building restrictions
+
+Avoid storing/reproducing:
+- Full copyrighted datasheet text unless manually supplied by the user for local use
+- GW artwork
+- Lore text
+- Codex layouts
+- Proprietary visual assets
+
+4. DATA IMPORT
+The application should support importing official public documents locally.
+
+Initial priority:
+- Import Munitorum Field Manual PDF
+- Parse factions, units, unit sizes, and points
+- Store normalized data in a local database
+
+Each imported value should track:
+- Source document
+- Source version/date
+- Import date
+
+5. UPDATE SYSTEM
+The app should be able to:
+- Detect/import newer MFM versions
+- Compare old and new points
+- Show point changes
+- Recalculate existing army lists after an update
+- Warn when a previously valid list becomes invalid or exceeds its points limit
+
+6. CORE FEATURES
+Minimum useful version:
+- Search/browse factions and units
+- Create army lists
+- Add/remove units
+- Select unit size
+- Automatically calculate points
+- Set army points limit
+- Save/load lists
+- Validate basic list legality
+- Export/copy a readable army list
+
+Later features:
+- Leader attachment validation
+- Detachment support
+- Enhancements
+- Force dispositions
+- Collection/model ownership tracking
+- Game history
+- VP/CP/battle-round tracking
+- Import/export JSON or YAML datasets
+- Manual data editor
+
+7. ARCHITECTURE
+Keep the application separate from game data.
+
+Suggested structure:
+- Core army-builder application
+- Local SQLite database
+- Importers/parsers
+- User data
+- Versioned source data
+
+The application should be capable of working with other tabletop games in the future instead of hard-coding all logic specifically for 40K.
+
+8. LOCAL-FIRST DESIGN
+- All data should be stored locally
+- No account should be required
+- No cloud dependency should be required
+- User-created/imported datasets remain on the user's machine
+
+9. POSSIBLE TECHNOLOGY
+Recommended starting stack:
+- C# / .NET
+- Avalonia UI or WinUI
+- SQLite
+- PDF parsing library for MFM imports
+
+10. FIRST DEVELOPMENT MILESTONE
+Create a working prototype that can:
+
+1. Import an MFM PDF
+2. Extract faction/unit/points data
+3. Store it in SQLite
+4. Browse/search units
+5. Create a 2,000-point army list
+6. Automatically calculate the total
+7. Save and reload the army list
+
+This document describes the intended scope only and can be expanded as development progresses.

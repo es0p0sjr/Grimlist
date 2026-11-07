@@ -1,0 +1,18 @@
+<Project>
+  <!-- Resource evidence changes invalidate only the contracts consuming it. Hash
+       at build time: startup must not read every recovery archive to identify it. -->
+  <Target Name="GrimListCacheResourceFingerprints" BeforeTargets="GetAssemblyAttributes"
+          Condition="'$(MSBuildProjectName)' == 'GrimList.Application' Or '$(MSBuildProjectName)' == 'GrimList.Core'">
+    <ItemGroup>
+      <_GrimListCacheResource Include="@(EmbeddedResource)" Condition="$([System.String]::Copy('%(EmbeddedResource.Identity)').StartsWith('Resources')) And !$([System.String]::Copy('%(EmbeddedResource.Identity)').Contains('bootstrap'))" />
+    </ItemGroup>
+    <GetFileHash Files="@(_GrimListCacheResource)" Algorithm="SHA256">
+      <Output TaskParameter="Items" ItemName="_GrimListCacheHash" />
+    </GetFileHash>
+    <ItemGroup>
+      <AssemblyMetadata Include="GrimList.CacheResource.%(_GrimListCacheHash.Identity)">
+        <Value>%(_GrimListCacheHash.FileHash)</Value>
+      </AssemblyMetadata>
+    </ItemGroup>
+  </Target>
+</Project>

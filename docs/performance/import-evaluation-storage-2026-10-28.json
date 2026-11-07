@@ -1,0 +1,329 @@
+{
+  "windows": {
+    "before": {
+      "Checks": [
+        "Legacy and shared formats preserve every bundled field across three revisions",
+        "Provenance updates and one price change round trip"
+      ],
+      "Measurements": [
+        {
+          "Mode": "legacy-full-snapshots",
+          "Revision": 0,
+          "Units": 2194,
+          "WriteMs": 561.656,
+          "ReadMs": 801.5957,
+          "WriteAllocatedBytes": 26315912,
+          "PayloadBytes": 9238628,
+          "DatabaseBytes": 9351168,
+          "Objects": "0"
+        },
+        {
+          "Mode": "legacy-full-snapshots",
+          "Revision": 1,
+          "Units": 2194,
+          "WriteMs": 387.6973,
+          "ReadMs": 668.0085,
+          "WriteAllocatedBytes": 24265272,
+          "PayloadBytes": 18473676,
+          "DatabaseBytes": 18657280,
+          "Objects": "0"
+        },
+        {
+          "Mode": "legacy-full-snapshots",
+          "Revision": 2,
+          "Units": 2194,
+          "WriteMs": 346.8061,
+          "ReadMs": 706.9053,
+          "WriteAllocatedBytes": 24091032,
+          "PayloadBytes": 27704224,
+          "DatabaseBytes": 27967488,
+          "Objects": "0"
+        },
+        {
+          "Mode": "shared-objects",
+          "Revision": 0,
+          "Units": 2194,
+          "WriteMs": 596.1697,
+          "ReadMs": 834.0851,
+          "WriteAllocatedBytes": 97868688,
+          "PayloadBytes": 8874412,
+          "DatabaseBytes": 9490432,
+          "Objects": "513"
+        },
+        {
+          "Mode": "shared-objects",
+          "Revision": 1,
+          "Units": 2194,
+          "WriteMs": 565.8137,
+          "ReadMs": 1052.6833,
+          "WriteAllocatedBytes": 106381312,
+          "PayloadBytes": 9044109,
+          "DatabaseBytes": 9662464,
+          "Objects": "514"
+        },
+        {
+          "Mode": "shared-objects",
+          "Revision": 2,
+          "Units": 2194,
+          "WriteMs": 568.0686,
+          "ReadMs": 869.297,
+          "WriteAllocatedBytes": 106352520,
+          "PayloadBytes": 9238962,
+          "DatabaseBytes": 9859072,
+          "Objects": "516"
+        }
+      ]
+    },
+    "after": {
+      "Checks": [
+        "Legacy and shared formats preserve every bundled field across three revisions",
+        "Provenance updates and one price change round trip"
+      ],
+      "Measurements": [
+        {
+          "Mode": "legacy-full-snapshots",
+          "Revision": 0,
+          "Units": 2194,
+          "WriteMs": 826.9987,
+          "ReadMs": 1127.3305,
+          "WriteAllocatedBytes": 27675408,
+          "PayloadBytes": 9238628,
+          "DatabaseBytes": 9351168,
+          "Objects": "0"
+        },
+        {
+          "Mode": "legacy-full-snapshots",
+          "Revision": 1,
+          "Units": 2194,
+          "WriteMs": 413.4406,
+          "ReadMs": 753.6616,
+          "WriteAllocatedBytes": 24427816,
+          "PayloadBytes": 18473676,
+          "DatabaseBytes": 18657280,
+          "Objects": "0"
+        },
+        {
+          "Mode": "legacy-full-snapshots",
+          "Revision": 2,
+          "Units": 2194,
+          "WriteMs": 432.7741,
+          "ReadMs": 1004.27,
+          "WriteAllocatedBytes": 24091032,
+          "PayloadBytes": 27704224,
+          "DatabaseBytes": 27967488,
+          "Objects": "0"
+        },
+        {
+          "Mode": "shared-objects",
+          "Revision": 0,
+          "Units": 2194,
+          "WriteMs": 827.4378,
+          "ReadMs": 1125.446,
+          "WriteAllocatedBytes": 34857896,
+          "PayloadBytes": 8874412,
+          "DatabaseBytes": 9490432,
+          "Objects": "513"
+        },
+        {
+          "Mode": "shared-objects",
+          "Revision": 1,
+          "Units": 2194,
+          "WriteMs": 519.7991,
+          "ReadMs": 1118.2048,
+          "WriteAllocatedBytes": 28352104,
+          "PayloadBytes": 9044109,
+          "DatabaseBytes": 9662464,
+          "Objects": "514"
+        },
+        {
+          "Mode": "shared-objects",
+          "Revision": 2,
+          "Units": 2194,
+          "WriteMs": 559.2636,
+          "ReadMs": 1396.8493,
+          "WriteAllocatedBytes": 28164096,
+          "PayloadBytes": 9238962,
+          "DatabaseBytes": 9859072,
+          "Objects": "516"
+        }
+      ]
+    }
+  },
+  "android": {
+    "before": {
+      "Checks": [
+        "Legacy and shared formats preserve every bundled field across three revisions",
+        "Provenance updates and one price change round trip"
+      ],
+      "Measurements": [
+        {
+          "Mode": "legacy-full-snapshots",
+          "Revision": 0,
+          "Units": 2194,
+          "WriteMs": 1183.8267,
+          "ReadMs": 2003.7676,
+          "WriteAllocatedBytes": 26350424,
+          "PayloadBytes": 7262108,
+          "DatabaseBytes": 7372800,
+          "Objects": "0"
+        },
+        {
+          "Mode": "legacy-full-snapshots",
+          "Revision": 1,
+          "Units": 2194,
+          "WriteMs": 1137.0953,
+          "ReadMs": 1890.8947,
+          "WriteAllocatedBytes": 21876104,
+          "PayloadBytes": 14524024,
+          "DatabaseBytes": 14700544,
+          "Objects": "0"
+        },
+        {
+          "Mode": "legacy-full-snapshots",
+          "Revision": 2,
+          "Units": 2194,
+          "WriteMs": 1109.9094,
+          "ReadMs": 1888.5341,
+          "WriteAllocatedBytes": 21873648,
+          "PayloadBytes": 21784712,
+          "DatabaseBytes": 22028288,
+          "Objects": "0"
+        },
+        {
+          "Mode": "shared-objects",
+          "Revision": 0,
+          "Units": 2194,
+          "WriteMs": 1875.1196,
+          "ReadMs": 2199.04,
+          "WriteAllocatedBytes": 93377120,
+          "PayloadBytes": 7048606,
+          "DatabaseBytes": 7630848,
+          "Objects": "513"
+        },
+        {
+          "Mode": "shared-objects",
+          "Revision": 1,
+          "Units": 2194,
+          "WriteMs": 1849.0412,
+          "ReadMs": 2277.4366,
+          "WriteAllocatedBytes": 108028632,
+          "PayloadBytes": 7164336,
+          "DatabaseBytes": 7749632,
+          "Objects": "514"
+        },
+        {
+          "Mode": "shared-objects",
+          "Revision": 2,
+          "Units": 2194,
+          "WriteMs": 1917.5533,
+          "ReadMs": 2323.9083,
+          "WriteAllocatedBytes": 107834056,
+          "PayloadBytes": 7299771,
+          "DatabaseBytes": 7888896,
+          "Objects": "516"
+        }
+      ]
+    },
+    "after": {
+      "Checks": [
+        "Legacy and shared formats preserve every bundled field across three revisions",
+        "Provenance updates and one price change round trip"
+      ],
+      "Measurements": [
+        {
+          "Mode": "legacy-full-snapshots",
+          "Revision": 0,
+          "Units": 2194,
+          "WriteMs": 1162.5224,
+          "ReadMs": 1977.6982,
+          "WriteAllocatedBytes": 26340504,
+          "PayloadBytes": 7262108,
+          "DatabaseBytes": 7372800,
+          "Objects": "0"
+        },
+        {
+          "Mode": "legacy-full-snapshots",
+          "Revision": 1,
+          "Units": 2194,
+          "WriteMs": 1105.7166,
+          "ReadMs": 1886.1446,
+          "WriteAllocatedBytes": 21876104,
+          "PayloadBytes": 14524024,
+          "DatabaseBytes": 14700544,
+          "Objects": "0"
+        },
+        {
+          "Mode": "legacy-full-snapshots",
+          "Revision": 2,
+          "Units": 2194,
+          "WriteMs": 1114.3732,
+          "ReadMs": 1917.6375,
+          "WriteAllocatedBytes": 21873648,
+          "PayloadBytes": 21784712,
+          "DatabaseBytes": 22028288,
+          "Objects": "0"
+        },
+        {
+          "Mode": "shared-objects",
+          "Revision": 0,
+          "Units": 2194,
+          "WriteMs": 1740.0933,
+          "ReadMs": 2077.352,
+          "WriteAllocatedBytes": 36958856,
+          "PayloadBytes": 7048606,
+          "DatabaseBytes": 7630848,
+          "Objects": "513"
+        },
+        {
+          "Mode": "shared-objects",
+          "Revision": 1,
+          "Units": 2194,
+          "WriteMs": 1384.7577,
+          "ReadMs": 2246.6705,
+          "WriteAllocatedBytes": 30819520,
+          "PayloadBytes": 7164336,
+          "DatabaseBytes": 7749632,
+          "Objects": "514"
+        },
+        {
+          "Mode": "shared-objects",
+          "Revision": 2,
+          "Units": 2194,
+          "WriteMs": 1422.9907,
+          "ReadMs": 2296.463,
+          "WriteAllocatedBytes": 30450912,
+          "PayloadBytes": 7299771,
+          "DatabaseBytes": 7888896,
+          "Objects": "516"
+        }
+      ]
+    },
+    "dependencyEvaluation": {
+      "Checks": [
+        "Compiled roster dependencies invalidate readers, including newly matching contributors and transitive grants",
+        "Roster add/remove, ordering, replacement and duplicate source labels preserve full-evaluator results",
+        "Association dependency plans cover constraints, conditions and repeats: self",
+        "Association dependency plans cover constraints, conditions and repeats: roster",
+        "Association dependency plans cover constraints, conditions and repeats: force",
+        "A force association limit changes an untouched group's legality when another group attaches",
+        "Seeded mixed roster edits match full evaluation and measure incremental work",
+        "Per-entry muster nominations and presentation context reuse unaffected rules",
+        "Unknown dependency branches and association scopes retain full fallback"
+      ],
+      "Measurements": [
+        "MEASURE mixed-dependencies 80 edits incl. cached undo: incremental 58.9 ms/15309520 bytes, full 194.2 ms/57091376 bytes; 1395 reused, 705 projections"
+      ]
+    },
+    "workflow": {
+      "Checks": [
+        "First open uses the prepared projection",
+        "Another connection sees only the committed revision",
+        "Rejected projection rolls back source content and revision",
+        "Active old reader survives multiple imports and collection",
+        "Retention keeps two recent manifests plus the active old reader",
+        "New reader sees current content",
+        "Imports preserve saved entry IDs and editor context"
+      ]
+    }
+  }
+}

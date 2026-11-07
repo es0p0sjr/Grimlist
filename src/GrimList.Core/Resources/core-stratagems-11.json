@@ -1,0 +1,163 @@
+{
+  "Source": {
+    "Name": "Core stratagem rules (Wahapedia reference)",
+    "Version": "Checked 2026-10-03",
+    "Date": "",
+    "Url": "https://wahapedia.ru/wh40k11ed/the-rules/core-rules/#Core-Stratagems",
+    "Edition": "11"
+  },
+  "Units": [],
+  "ReferenceCards": [
+    {
+      "Faction": "Core",
+      "Section": "Stratagems",
+      "Name": "Command Re-roll",
+      "Text": "WHEN: Any phase, just after you make one of the following rolls for a friendly unit or model:\n• Advance roll\n• Charge roll\n• Damage roll\n• Hazard roll\n• Hit roll\n• Save roll\n• Wound roll\n• A roll to determine the number of attacks generated with a weapon.\nTARGET: That unit or model.\nEFFECT: You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding charge rolls, which you must re-roll in full).",
+      "Detachment": "",
+      "Cost": "1 CP",
+      "Source": {
+        "Name": "Core stratagem rules (Wahapedia reference)",
+        "Version": "Checked 2026-10-03",
+        "Date": "",
+        "Url": "https://wahapedia.ru/wh40k11ed/the-rules/core-rules/#Core-Stratagems",
+        "Edition": "11"
+      }
+    },
+    {
+      "Faction": "Core",
+      "Section": "Stratagems",
+      "Name": "Epic Challenge",
+      "Text": "WHEN: Fight phase, just after a friendly CHARACTER unit is selected to fight.\nTARGET: That CHARACTER unit.\nEFFECT: Select one CHARACTER model in your unit. Until the end of the phase, that model’s melee weapons have the [PRECISION] ability.",
+      "Detachment": "",
+      "Cost": "1 CP",
+      "Source": {
+        "Name": "Core stratagem rules (Wahapedia reference)",
+        "Version": "Checked 2026-10-03",
+        "Date": "",
+        "Url": "https://wahapedia.ru/wh40k11ed/the-rules/core-rules/#Core-Stratagems",
+        "Edition": "11"
+      }
+    },
+    {
+      "Faction": "Core",
+      "Section": "Stratagems",
+      "Name": "Insane Bravery",
+      "Text": "WHEN: Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit.\nTARGET: That unit.\nEFFECT: That battle-shock roll is automatically successful.\nRESTRICTIONS: You cannot use this stratagem more than once per battle.",
+      "Detachment": "",
+      "Cost": "1 CP",
+      "Source": {
+        "Name": "Core stratagem rules (Wahapedia reference)",
+        "Version": "Checked 2026-10-03",
+        "Date": "",
+        "Url": "https://wahapedia.ru/wh40k11ed/the-rules/core-rules/#Core-Stratagems",
+        "Edition": "11"
+      }
+    },
+    {
+      "Faction": "Core",
+      "Section": "Stratagems",
+      "Name": "Explosives",
+      "Text": "WHEN: Your Shooting phase.\nTARGET: One friendly unengaged EXPLOSIVES/GRENADES unit that is eligible to shoot and did not make an advance move this turn.\nEFFECT: Resolve the following sequence:\n\n  1. Select one EXPLOSIVES/GRENADES model in your unit.\n  2. Select one unengaged enemy unit within 8\" of and visible to that model.\n  3. Roll six D6: for each 4+, that enemy unit suffers 1 mortal wound (06.02).",
+      "Detachment": "",
+      "Cost": "1 CP",
+      "Source": {
+        "Name": "Core stratagem rules (Wahapedia reference)",
+        "Version": "Checked 2026-10-03",
+        "Date": "",
+        "Url": "https://wahapedia.ru/wh40k11ed/the-rules/core-rules/#Core-Stratagems",
+        "Edition": "11"
+      }
+    },
+    {
+      "Faction": "Core",
+      "Section": "Stratagems",
+      "Name": "Crushing Impact",
+      "Text": "WHEN: Your Charge phase, just after a friendly MONSTER/VEHICLE unit ends a charge move.\nTARGET: That MONSTER/VEHICLE unit.\nEFFECT: Resolve the following sequence:\n\n  1. Select one enemy unit engaged with your unit.\n  2. Select one model in your unit engaged with that enemy unit.\n  3. Roll a number of D6 equal to the T characteristic of that model: for each 1, your unit suffers 1 mortal wound; for each 5+, that enemy unit suffers 1 mortal wound (to a maximum of 6 mortal wounds per unit).",
+      "Detachment": "",
+      "Cost": "1 CP",
+      "Source": {
+        "Name": "Core stratagem rules (Wahapedia reference)",
+        "Version": "Checked 2026-10-03",
+        "Date": "",
+        "Url": "https://wahapedia.ru/wh40k11ed/the-rules/core-rules/#Core-Stratagems",
+        "Edition": "11"
+      }
+    },
+    {
+      "Faction": "Core",
+      "Section": "Stratagems",
+      "Name": "Rapid Ingress",
+      "Text": "WHEN: End of your opponent’s Movement phase.\nTARGET: One friendly unit that is in strategic reserves (excluding AIRCRAFT).\nEFFECT: Your unit makes an ingress move (20.04).\nRESTRICTIONS: You cannot use this stratagem during the first battle round.",
+      "Detachment": "",
+      "Cost": "1 CP",
+      "Source": {
+        "Name": "Core stratagem rules (Wahapedia reference)",
+        "Version": "Checked 2026-10-03",
+        "Date": "",
+        "Url": "https://wahapedia.ru/wh40k11ed/the-rules/core-rules/#Core-Stratagems",
+        "Edition": "11"
+      }
+    },
+    {
+      "Faction": "Core",
+      "Section": "Stratagems",
+      "Name": "Fire Overwatch",
+      "Text": "WHEN: End of your opponent’s Movement phase.\nTARGET: One friendly unengaged unit (excluding TITANIC units).\nEFFECT: Your unit shoots using snap shooting.\n\nSNAP SHOOTING 15.09\n\nELIGIBLE IF: As stated in the rule allowing this shooting type.\n\nEFFECT: Your unit shoots as described in Making Attacks (04 ).\n\nWHILE SHOOTING:\n• You can only target one visible enemy unit within 24\" of your unit (and only if it is an eligible target).\n• Each attack only hits on an unmodified hit roll of 6 (irrespective of the attacking weapon’s BS characteristic or any modifiers ).\n• You cannot re-roll hit rolls.\n\nAFTER SHOOTING: Until the end of the phase, your unit is not eligible to start an action.",
+      "Detachment": "",
+      "Cost": "1 CP",
+      "Source": {
+        "Name": "Core stratagem rules (Wahapedia reference)",
+        "Version": "Checked 2026-10-03",
+        "Date": "",
+        "Url": "https://wahapedia.ru/wh40k11ed/the-rules/core-rules/#Core-Stratagems",
+        "Edition": "11"
+      }
+    },
+    {
+      "Faction": "Core",
+      "Section": "Stratagems",
+      "Name": "Smokescreen",
+      "Text": "WHEN: Start of your opponent’s Shooting phase.\nTARGET: One friendly SMOKE unit.\nEFFECT: Until the end of the phase, each time an attack targets either your SMOKE unit, or a unit that is not fully visible to the attacking model because of one or more models in your SMOKE unit, the target has the benefit of cover against that attack (13.08).",
+      "Detachment": "",
+      "Cost": "1 CP",
+      "Source": {
+        "Name": "Core stratagem rules (Wahapedia reference)",
+        "Version": "Checked 2026-10-03",
+        "Date": "",
+        "Url": "https://wahapedia.ru/wh40k11ed/the-rules/core-rules/#Core-Stratagems",
+        "Edition": "11"
+      }
+    },
+    {
+      "Faction": "Core",
+      "Section": "Stratagems",
+      "Name": "Heroic Intervention",
+      "Text": "WHEN: End of your opponent’s Charge phase.\nTARGET: One friendly unengaged unit within 12\" of one or more enemy units. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit.\nEFFECT: Resolve a charge with your unit (11.02 ). While doing so, before making the charge roll, you must select one of the following modes:\n• Leap to Defend: When selecting charge targets, you can only select enemy units that made a charge move this phase and are within the maximum distance.\n\n+1CP\n• Into the Fray:\n• When making the charge roll, if the result is greater than 6 (after modifiers ), change it to 6.\n• When selecting charge targets, you can select any enemy units that are within 6\" of your unit and within the maximum distance.",
+      "Detachment": "",
+      "Cost": "1 CP",
+      "Source": {
+        "Name": "Core stratagem rules (Wahapedia reference)",
+        "Version": "Checked 2026-10-03",
+        "Date": "",
+        "Url": "https://wahapedia.ru/wh40k11ed/the-rules/core-rules/#Core-Stratagems",
+        "Edition": "11"
+      }
+    },
+    {
+      "Faction": "Core",
+      "Section": "Stratagems",
+      "Name": "Counteroffensive",
+      "Text": "WHEN: Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks.\nTARGET: One friendly unit that is eligible to fight.\nEFFECT: Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04 ).",
+      "Detachment": "",
+      "Cost": "2 CP",
+      "Source": {
+        "Name": "Core stratagem rules (Wahapedia reference)",
+        "Version": "Checked 2026-10-03",
+        "Date": "",
+        "Url": "https://wahapedia.ru/wh40k11ed/the-rules/core-rules/#Core-Stratagems",
+        "Edition": "11"
+      }
+    }
+  ],
+  "ReferenceOnly": true
+}

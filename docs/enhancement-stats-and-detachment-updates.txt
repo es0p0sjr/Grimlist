@@ -1,0 +1,119 @@
+Enhancement stats and dynamic BSData detachment retirement
+Implementation: 2026-10-26; source changes, not a community release.
+
+Movement and Objective Control
+
+The shared importer now recognizes the exact BSData selector
+self.entries.group.recursive.profiles.Unit as a model-stat recipient covering
+the bearer's unit. Destroyer Ankh's +2 Move therefore reaches the lone bearer
+or its legal attached bodyguard and co-leaders. The separate melee Attacks
+and Destroyer Cult effects retain their own bearer-only scope.
+
+The same fix handles Objective Control, including the reproduced Writ of
+Compunction +1 OC. The original report did not identify its OC rule, so that
+specific selection remains unverified. Destroyer Ankh itself does not grant OC.
+
+ModelStatModifiers repairs legacy imported metadata by its retained exact
+selector and characteristic, preserving conditions and operations. Bundled
+effective-datasheet recovery compares normalized metadata before replacing
+it, preventing repeated repair churn. Indexed recovery cache version is 3.
+No resource regeneration or user reimport is required for this repair.
+
+The conservative prose parser supports compound numeric clauses and unit
+recipients. Imported structural evidence takes precedence. Unsupported
+selectors and unresolved battlefield conditions stay unapplied; they must
+never become unconditional numeric bonuses. Base profiles remain immutable.
+Selection, removal, attachments, undo/redo, reopen, build/play displays and
+exports use the shared effective roster evaluation.
+
+Detachment lifecycle
+
+Dataset schema 4 adds DetachmentSources. Each faction scope records its
+catalogue ID, pinned BSData commit/hash/edition/date, active source IDs/names,
+proven rename aliases and retired identities with the retiring source.
+The SQLite database schema is unchanged; historical library snapshots remain.
+
+BsDataClient marks a freshly downloaded, pinned repository import as eligible
+for authoritative reconciliation. The transient IsBsDataDownload flag is not
+serialized. The importer verifies catalogue/game dependencies, resolved links,
+known detachment containers/entries and nonambiguous identities separately
+from points completeness. Unknown/incomplete structures retain existing
+detachments and produce a warning. An explicit resolved empty container is a
+complete zero-detachment scope; a missing container is not.
+
+Permanent source unavailability is distinguished from conditional visibility.
+Only a proven constant-false applicability retires a still-present entry.
+This cannot infer a codex release that BSData itself has not represented by
+removing or permanently disabling the old entries.
+
+On Combined/Datasheets apply, each complete scope replaces its prior active
+set. Missing old BSData detachments become obsolete. Their definitions,
+enhancements, rules, scoped references/coverage and mandatory detachment costs
+are excluded from the active library. Shared cards retain surviving scopes.
+Explicit rules-pack ownership and custom detachment definitions are preserved.
+Renames follow stable source IDs, including saved enhancement selections,
+conditions, contextual pricing, muster nominations and reference target IDs.
+Renamed cards cannot shadow their updated versions with duplicate old content.
+
+The preview names obsolete detachments and proven renames. Apply uses the
+existing transactional revision check; cancel/failure does not alter the
+installed library. Points-only and partial/local imports cannot infer missing
+detachments. A local/cached import cannot roll back installed authority.
+Portable schema-4 metadata is retained when importing into an empty library.
+A later authoritative download can reactivate a reintroduced source identity.
+
+Startup catalogue/reference supplements and shared selection/effect checks
+honor the persisted authority, including faction-scoped loading. Saved armies
+keep obsolete selections and enhancement choices for review, with validation
+warnings; no replacement is guessed. Inactive rules no longer grant benefits.
+Obsolete muster nominations remain reviewable while their detachment remains
+selected, without granting keywords. Selecting a current detachment is an
+explicit user edit. The import does not rewrite stored armies.
+
+Coverage and evidence
+
+Regression additions: EnhancementStatChecks, DetachmentLifecycleChecks and
+the isolated Windows --stats-retirement-only native smoke check. They include
+cached real BSData source parsing and shipped Necron bootstrap data, synthetic
+OC/attachment/condition cases, effective ROS export, transactional persistence,
+recovery, source-ID rename/reactivation and unknown/partial/empty coverage.
+
+Verification
+
+- Tests project and final Windows Debug build: 0 warnings, 0 errors.
+- Final Android Debug build, with the installed Android SDK/JDK: 0 warnings,
+  0 errors. This builds the app; it is not a physical-device acceptance test.
+- Windows native isolated smoke check passed on the final build: effective
+  Movement/OC cells in build/play, removal/undo, retirement clearing bonuses,
+  obsolete warning, preserved selection and obsolete picker exclusion.
+  Evidence: artifacts/distribution-evidence/stats-retirement-native-final.result.txt.
+- An initial full run exposed five normalization/recovery idempotence failures.
+  All five were corrected; the compatibility rerun passed 47 checks, 0 failed.
+  Evidence: artifacts/distribution-evidence/stats-retirement-compatibility.log.
+- Final full regression: 483 PASS, 0 FAIL, process exit 0, including all 16
+  new stat/lifecycle checks. The source eligibility matrix exercised 1,329
+  selectable cards and 16,755 eligible bearer/card pairs; 1,264 cards had no
+  eligible bearer in the tested catalogue configurations, so this does not
+  claim every possible catalogue configuration was exercised.
+  Evidence: artifacts/distribution-evidence/stats-retirement-full-final.log.
+  Command: dotnet tests/GrimList.Tests/bin/Debug/net10.0/GrimList.Tests.dll --lf-json
+  Final isolated artifacts: .local/tests/d5a782c0-78b4-4a80-a314-ed4f9f6e3d5b.
+
+During the initial investigation source acquisition was unavailable. A later
+user download exposed nested Custodes detachment groups that this first fix
+did not yet import. The follow-up generic parser/authority fix and its separate
+verification are documented in docs/nested-detachments.txt. The earlier 483-pass
+run above predates that change. No Android device was connected; physical
+Android UI/update behavior remains unverified.
+No production packages, version bumps or live user-database edits were made.
+
+Cleanup limitation
+
+The regression wrapper was unavailable because PowerShell script execution
+was disabled; the console harness was run directly with retained text logs.
+The environment separately rejected Remove-Item cleanup of seven verified,
+completed synthetic test directories under .local/tests (approximately
+470 MiB). No cleanup bypass was attempted. Those directories, the earlier
+investigation probe and the final regression directory remain. No storage
+reclamation is claimed. Exact test artifact paths are recorded in the logs
+and stats-retirement-native[-final]-path.txt evidence files.

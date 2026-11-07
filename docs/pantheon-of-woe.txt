@@ -1,0 +1,109 @@
+Pantheon of Woe missing mandatory abilities - investigation, 2026-10-23
+
+Status: fixed in source on 2026-10-23. Not yet packaged as a community release.
+The investigation below describes the original failure.
+
+BSData represents the four Necrodermal Bindings as hidden upgrade entries
+inside the relevant C'tan unit/model, outside normal Enhancements groups.
+Selecting Pantheon of Woe makes each entry visible and changes its parent
+minimum/maximum selection constraints from 0/0 to 1/1. These are mandatory
+detachment abilities, not optional enhancement picker selections.
+
+The import/evaluation paths disagree:
+- BsDataContextPrices.DetachmentPrices recognizes the mandatory pattern and
+  retains its surcharge in DetachmentCosts.
+- BsDataProfiles.ReadDatasheet skips hidden branches, omitting the base ability.
+- BsDataConditionalRules.ReadConditionalSemantics retains the ability but adds
+  a selection predicate for its upgrade ID, AND the detachment predicate.
+- BsDataLoadouts.Option rejects hidden entries, so no corresponding equipment
+  option/default selection exists.
+- EffectiveDatasheets.Test counts explicit Choices and Loadout equipment for a
+  selection predicate. It does not activate these mandatory source selections.
+  Effective ability projection therefore excludes all four abilities.
+- BsDataReferences only imports enhancement cards from EnhancementGroup nodes;
+  these entries are outside those groups, so there is no picker fallback.
+
+Offline reproduction
+Used the current production Core importer on cached BSData archive
+da7248777da54218034f09b6271ad89ff6b68a77, selecting Necrons and its dependencies.
+Created disposable in-memory armies with default loadouts; no database opened.
+All four cases reproduced, with the following cached-source surcharges:
+  Deceiver: Singularity Matrix / Lord of Deceit (Aura), +45 points
+  Nightbringer: Quantum Goad, +45 points
+  Void Dragon: Animus Damper, +35 points
+  Transcendent C'tan: Reletavistic Tether (source spelling), +40 points
+For each: surcharge applied; no loadout option; no base ability; conditional
+ability retained; effective ability absent with and without the detachment.
+Injecting its source selection ID into an in-memory diagnostic entry made the
+condition evaluate true. This was a predicate probe, not a supported workaround.
+The reimport produced zero Pantheon enhancement cards. Diagnostic exited 0.
+
+The shipped bootstrap also retains all four surcharges and omits the base
+abilities. Its source-pinned effective recovery archive
+747DB24BF29456F0606A937F794A7E7F33154E76116EFF1506E9B0750AB5C045.zip
+contains all four abilities with the same selection AND detachment condition.
+Thus reimport alone does not fix the bug; existing-library recovery must also
+be addressed. The older bootstrap source archive was not available locally
+for reimport; its shipped library/recovery metadata was inspected directly.
+
+Rules cross-check
+https://wahapedia.ru/wh40k11ed/factions/necrons/#Pantheon-of-Woe
+Viewed 2026-10-23. Restrictions require the relevant Necrodermal Binding and
+its surcharge; the designer's note requires the ability on every Transcendent
+C'tan. Current page text also contains a once-per-turn Lord of Deceit erratum
+absent from the inspected cached BSData text. No rules refresh was performed.
+
+Implementation
+EffectiveDatasheets.SelectionCount now recognizes automatic selections using
+DetachmentCosts.SourceId and the active detachment. This metadata is already
+derived from exact mandatory source constraints; a price amount, matching
+display name or visible upgrade alone does not establish a grant. Explicit and
+automatic selection counts are not added together for the same mandatory item.
+
+The first regression also exposed a second filter: BSData labels these nested
+upgrade abilities as Equipment rules. Play mode and export filter that section
+against selected equipment. Effective projection now labels abilities requiring
+an active mandatory selection as Detachment abilities, so they survive that
+filter without creating editable equipment.
+
+The existing source/profile/ability-hash-matched recovery already restores the
+required conditional text. Correctly evaluating its selection predicates fixes
+legacy libraries without modifying the recovery archives, bootstrap manifests,
+saved armies, optional enhancement allowance or pricing. MFM base-point updates
+remain independent. Changing detachment removes the abilities automatically.
+This shared projection serves Windows, Android and export; no rules text refresh
+or source acquisition was performed.
+
+Regression coverage
+PantheonChecks covers fresh imports; all four bindings; two Transcendent C'tan;
+build/play/export; detachment removal; exact source IDs; optional selections;
+single charging; independent points; immutable source data; bundled legacy
+recovery and its source guard; SQLite reopen; undo/redo; and saved IDs/loadouts.
+The WPF --pantheon-only smoke checks rendered ability cards in build/play and
+detachment removal. It also checks the accompanying largest-unit-first sort.
+RosterOrderChecks covers category/name priority, descending model count, stable
+ties, attachments and reordering after resizing. Both UIs and export use the
+shared RosterOrder.ByNameThenSize comparer.
+
+Verification completed 2026-10-23
+- Targeted regression: 4 passed, 0 failed.
+- Full scripts/Test-Regression.ps1 run with --lf-json: 459 passed, 0 failed,
+  including PDF extraction and 16,755 eligible enhancement/bearer pairs.
+  Log: artifacts/distribution-evidence/pantheon-and-sorting-regression.log.
+- Windows Debug build: 0 warnings, 0 errors. Native WPF --pantheon-only smoke
+  exited 0; all four abilities rendered once in Build and Play, detachment
+  removal hid them, and the 20-model Warriors preceded the 10-model unit.
+  Result: artifacts/distribution-evidence/pantheon-wpf.txt.
+- Android Release Compile target, using the installed Android SDK and JDK 21:
+  0 warnings, 0 errors. No device was listed by adb devices -l; physical UI
+  verification remains unperformed. No APK/MSI was published or delivered.
+- Successful targeted/full regression wrappers removed their synthetic data.
+  Execution policy blocked deletion of two additional diagnostic/UI directories:
+  .local/tests/06cc9928-3cee-4a51-82af-92d050d44ec4
+  .local/tests/39bfb35d-0a83-44c8-b90b-bcd9cc134b9c
+  They remain intact. The earlier investigation's separately blocked diagnostic
+  directory also remains; no cleanup restriction was bypassed.
+
+These source changes are included in release 0.2.24 alongside Android scroll
+retention. Final package validation: docs/distribution/release-0.2.24.txt.
+The root 0.2.24/CLEANUP.txt lists exact remaining disposable directories.

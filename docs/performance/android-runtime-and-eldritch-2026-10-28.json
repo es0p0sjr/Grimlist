@@ -1,0 +1,2777 @@
+{
+  "Date": "2026-10-28",
+  "Device": "Redmi 22101316UG",
+  "Package": "com.grimlist.perftest",
+  "Version": "0.2.28",
+  "ApkSha256": "c22c5fccb7c10e0f9b23f7174dfdf6dea729443bcbfcc082f7488355d332b531",
+  "Method": "Isolated Release performance build; 10 samples per operation/roster size after one warm-up. Reset/open and initial presentation excluded. Usable time includes command, preparation, presentation and two vsync callbacks. Startup clock begins at MAUI entry. No before-build phone comparison.",
+  "Startup": [
+    {
+      "LibraryReadyMs": 53991.7263,
+      "MauiEntryToUsableMs": 54513.0372,
+      "ManagedBytes": 2112329024,
+      "AllocatedBytes": 4288507584,
+      "NativeAllocatedBytes": 87634136,
+      "ExternalReadyMs": 56093.99999992456,
+      "AmStart": "Starting: Intent { cmp=com.grimlist.perftest/crc64c040c7e13546c831.MainActivity (has extras) }\nStatus: ok\nLaunchState: COLD\nActivity: com.grimlist.perftest/crc64c040c7e13546c831.MainActivity\nTotalTime: 1736\nWaitTime: 1742\nComplete\n"
+    },
+    {
+      "LibraryReadyMs": 2734.7003,
+      "MauiEntryToUsableMs": 3201.2264,
+      "ManagedBytes": 39813200,
+      "AllocatedBytes": 60617576,
+      "NativeAllocatedBytes": 77261488,
+      "ExternalReadyMs": 4157.000000006519,
+      "AmStart": "Starting: Intent { cmp=com.grimlist.perftest/crc64c040c7e13546c831.MainActivity (has extras) }\nStatus: ok\nLaunchState: COLD\nActivity: com.grimlist.perftest/crc64c040c7e13546c831.MainActivity\nTotalTime: 1564\nWaitTime: 1573\nComplete\n"
+    },
+    {
+      "LibraryReadyMs": 2756.5759,
+      "MauiEntryToUsableMs": 3209.7934,
+      "ManagedBytes": 39834824,
+      "AllocatedBytes": 60758432,
+      "NativeAllocatedBytes": 77476400,
+      "ExternalReadyMs": 3905.999999959022,
+      "AmStart": "Starting: Intent { cmp=com.grimlist.perftest/crc64c040c7e13546c831.MainActivity (has extras) }\nStatus: ok\nLaunchState: COLD\nActivity: com.grimlist.perftest/crc64c040c7e13546c831.MainActivity\nTotalTime: 1304\nWaitTime: 1310\nComplete\n"
+    },
+    {
+      "LibraryReadyMs": 2765.8303,
+      "MauiEntryToUsableMs": 3224.5996,
+      "ManagedBytes": 39826248,
+      "AllocatedBytes": 60764488,
+      "NativeAllocatedBytes": 77282344,
+      "ExternalReadyMs": 3875.0,
+      "AmStart": "Starting: Intent { cmp=com.grimlist.perftest/crc64c040c7e13546c831.MainActivity (has extras) }\nStatus: ok\nLaunchState: COLD\nActivity: com.grimlist.perftest/crc64c040c7e13546c831.MainActivity\nTotalTime: 1311\nWaitTime: 1317\nComplete\n"
+    },
+    {
+      "LibraryReadyMs": 2735.5751,
+      "MauiEntryToUsableMs": 3196.592,
+      "ManagedBytes": 39816600,
+      "AllocatedBytes": 60594632,
+      "NativeAllocatedBytes": 78227424,
+      "ExternalReadyMs": 3890.00000001397,
+      "AmStart": "Starting: Intent { cmp=com.grimlist.perftest/crc64c040c7e13546c831.MainActivity (has extras) }\nStatus: ok\nLaunchState: COLD\nActivity: com.grimlist.perftest/crc64c040c7e13546c831.MainActivity\nTotalTime: 1308\nWaitTime: 1314\nComplete\n"
+    }
+  ],
+  "RepeatStartupMs": {
+    "Count": 4,
+    "Mean": 3208.05285,
+    "Median": 3205.5099,
+    "P95NearestRank": 3224.5996,
+    "Min": 3196.592,
+    "Max": 3224.5996
+  },
+  "Operations": [
+    {
+      "Entries": 3,
+      "Operation": "add",
+      "UsableMs": {
+        "Count": 10,
+        "Mean": 156.38357,
+        "Median": 152.15055,
+        "P95NearestRank": 180.3596,
+        "Min": 143.1851,
+        "Max": 180.3596
+      },
+      "CommandMs": {
+        "Count": 10,
+        "Mean": 93.00471,
+        "Median": 93.80959999999999,
+        "P95NearestRank": 102.4972,
+        "Min": 76.1021,
+        "Max": 102.4972
+      },
+      "MeanAllocatedBytes": 7037594.4
+    },
+    {
+      "Entries": 3,
+      "Operation": "equipment",
+      "UsableMs": {
+        "Count": 10,
+        "Mean": 164.78393,
+        "Median": 144.5861,
+        "P95NearestRank": 292.6013,
+        "Min": 124.5342,
+        "Max": 292.6013
+      },
+      "CommandMs": {
+        "Count": 10,
+        "Mean": 134.33523,
+        "Median": 122.08195,
+        "P95NearestRank": 267.3569,
+        "Min": 104.403,
+        "Max": 267.3569
+      },
+      "MeanAllocatedBytes": 5666432.8
+    },
+    {
+      "Entries": 3,
+      "Operation": "enhancement",
+      "UsableMs": {
+        "Count": 10,
+        "Mean": 287.9228,
+        "Median": 268.63075000000003,
+        "P95NearestRank": 367.0495,
+        "Min": 244.524,
+        "Max": 367.0495
+      },
+      "CommandMs": {
+        "Count": 10,
+        "Mean": 176.47852,
+        "Median": 172.4932,
+        "P95NearestRank": 212.6095,
+        "Min": 161.9701,
+        "Max": 212.6095
+      },
+      "MeanAllocatedBytes": 10404493.6
+    },
+    {
+      "Entries": 3,
+      "Operation": "attachment",
+      "UsableMs": {
+        "Count": 10,
+        "Mean": 882.67039,
+        "Median": 875.5257,
+        "P95NearestRank": 962.5805,
+        "Min": 816.3876,
+        "Max": 962.5805
+      },
+      "CommandMs": {
+        "Count": 10,
+        "Mean": 224.77391,
+        "Median": 225.84769999999997,
+        "P95NearestRank": 247.1686,
+        "Min": 203.567,
+        "Max": 247.1686
+      },
+      "MeanAllocatedBytes": 37568068.8
+    },
+    {
+      "Entries": 3,
+      "Operation": "detachment",
+      "UsableMs": {
+        "Count": 10,
+        "Mean": 366.42005,
+        "Median": 361.63874999999996,
+        "P95NearestRank": 468.1593,
+        "Min": 287.8757,
+        "Max": 468.1593
+      },
+      "CommandMs": {
+        "Count": 10,
+        "Mean": 120.04232,
+        "Median": 150.6946,
+        "P95NearestRank": 170.0777,
+        "Min": 30.1904,
+        "Max": 170.0777
+      },
+      "MeanAllocatedBytes": 6259860
+    },
+    {
+      "Entries": 3,
+      "Operation": "home",
+      "UsableMs": {
+        "Count": 10,
+        "Mean": 127.03845,
+        "Median": 92.57675,
+        "P95NearestRank": 235.9901,
+        "Min": 87.642,
+        "Max": 235.9901
+      },
+      "CommandMs": {
+        "Count": 10,
+        "Mean": 5.17798,
+        "Median": 4.772550000000001,
+        "P95NearestRank": 8.7291,
+        "Min": 3.9507,
+        "Max": 8.7291
+      },
+      "MeanAllocatedBytes": 1658454.4
+    },
+    {
+      "Entries": 20,
+      "Operation": "add",
+      "UsableMs": {
+        "Count": 10,
+        "Mean": 439.46231,
+        "Median": 443.85275,
+        "P95NearestRank": 471.8619,
+        "Min": 390.7925,
+        "Max": 471.8619
+      },
+      "CommandMs": {
+        "Count": 10,
+        "Mean": 411.37805,
+        "Median": 414.03195,
+        "P95NearestRank": 449.5345,
+        "Min": 366.139,
+        "Max": 449.5345
+      },
+      "MeanAllocatedBytes": 26147682.4
+    },
+    {
+      "Entries": 20,
+      "Operation": "equipment",
+      "UsableMs": {
+        "Count": 10,
+        "Mean": 444.08898,
+        "Median": 416.9805,
+        "P95NearestRank": 724.7416,
+        "Min": 337.8313,
+        "Max": 724.7416
+      },
+      "CommandMs": {
+        "Count": 10,
+        "Mean": 410.40229,
+        "Median": 382.9805,
+        "P95NearestRank": 699.0954,
+        "Min": 315.4436,
+        "Max": 699.0954
+      },
+      "MeanAllocatedBytes": 25117209.6
+    },
+    {
+      "Entries": 20,
+      "Operation": "enhancement",
+      "UsableMs": {
+        "Count": 10,
+        "Mean": 896.21373,
+        "Median": 838.89455,
+        "P95NearestRank": 1245.228,
+        "Min": 743.731,
+        "Max": 1245.228
+      },
+      "CommandMs": {
+        "Count": 10,
+        "Mean": 769.75092,
+        "Median": 707.85865,
+        "P95NearestRank": 1116.9326,
+        "Min": 638.994,
+        "Max": 1116.9326
+      },
+      "MeanAllocatedBytes": 41660885.6
+    },
+    {
+      "Entries": 20,
+      "Operation": "attachment",
+      "UsableMs": {
+        "Count": 10,
+        "Mean": 2535.0975,
+        "Median": 2378.66775,
+        "P95NearestRank": 3639.4526,
+        "Min": 2196.6766,
+        "Max": 3639.4526
+      },
+      "CommandMs": {
+        "Count": 10,
+        "Mean": 972.6381700000001,
+        "Median": 877.5004,
+        "P95NearestRank": 1547.6101,
+        "Min": 778.7329,
+        "Max": 1547.6101
+      },
+      "MeanAllocatedBytes": 121556077.6
+    },
+    {
+      "Entries": 20,
+      "Operation": "detachment",
+      "UsableMs": {
+        "Count": 10,
+        "Mean": 661.7136,
+        "Median": 622.5163,
+        "P95NearestRank": 1075.2073,
+        "Min": 557.047,
+        "Max": 1075.2073
+      },
+      "CommandMs": {
+        "Count": 10,
+        "Mean": 404.04003,
+        "Median": 365.9477,
+        "P95NearestRank": 761.524,
+        "Min": 328.3741,
+        "Max": 761.524
+      },
+      "MeanAllocatedBytes": 20264096.8
+    },
+    {
+      "Entries": 20,
+      "Operation": "home",
+      "UsableMs": {
+        "Count": 10,
+        "Mean": 151.20107000000002,
+        "Median": 91.01025,
+        "P95NearestRank": 269.3713,
+        "Min": 87.0396,
+        "Max": 269.3713
+      },
+      "CommandMs": {
+        "Count": 10,
+        "Mean": 5.45834,
+        "Median": 4.8035,
+        "P95NearestRank": 9.7402,
+        "Min": 4.0283,
+        "Max": 9.7402
+      },
+      "MeanAllocatedBytes": 1738332.8
+    }
+  ],
+  "Samples": [
+    {
+      "Operation": "add",
+      "Entries": 3,
+      "CommandMs": 76.1021,
+      "UsableMs": 180.3596,
+      "AllocatedBytes": 8296424,
+      "ManagedBytes": 51813416
+    },
+    {
+      "Operation": "add",
+      "Entries": 3,
+      "CommandMs": 102.4972,
+      "UsableMs": 161.9323,
+      "AllocatedBytes": 4133160,
+      "ManagedBytes": 52305520
+    },
+    {
+      "Operation": "add",
+      "Entries": 3,
+      "CommandMs": 90.2867,
+      "UsableMs": 156.776,
+      "AllocatedBytes": 8274408,
+      "ManagedBytes": 52946976
+    },
+    {
+      "Operation": "add",
+      "Entries": 3,
+      "CommandMs": 90.2209,
+      "UsableMs": 143.1851,
+      "AllocatedBytes": 4148296,
+      "ManagedBytes": 53497968
+    },
+    {
+      "Operation": "add",
+      "Entries": 3,
+      "CommandMs": 94.1575,
+      "UsableMs": 151.8193,
+      "AllocatedBytes": 8304736,
+      "ManagedBytes": 54161736
+    },
+    {
+      "Operation": "add",
+      "Entries": 3,
+      "CommandMs": 90.931,
+      "UsableMs": 143.6973,
+      "AllocatedBytes": 4151224,
+      "ManagedBytes": 54731536
+    },
+    {
+      "Operation": "add",
+      "Entries": 3,
+      "CommandMs": 98.1519,
+      "UsableMs": 152.4818,
+      "AllocatedBytes": 8247984,
+      "ManagedBytes": 55399680
+    },
+    {
+      "Operation": "add",
+      "Entries": 3,
+      "CommandMs": 96.2098,
+      "UsableMs": 176.6876,
+      "AllocatedBytes": 8262248,
+      "ManagedBytes": 56100504
+    },
+    {
+      "Operation": "add",
+      "Entries": 3,
+      "CommandMs": 98.0283,
+      "UsableMs": 146.1316,
+      "AllocatedBytes": 8282784,
+      "ManagedBytes": 53517224
+    },
+    {
+      "Operation": "add",
+      "Entries": 3,
+      "CommandMs": 93.4617,
+      "UsableMs": 150.7651,
+      "AllocatedBytes": 8274680,
+      "ManagedBytes": 54224680
+    },
+    {
+      "Operation": "equipment",
+      "Entries": 3,
+      "CommandMs": 115.1538,
+      "UsableMs": 154.4336,
+      "AllocatedBytes": 8264088,
+      "ManagedBytes": 60090720
+    },
+    {
+      "Operation": "equipment",
+      "Entries": 3,
+      "CommandMs": 123.3479,
+      "UsableMs": 144.9098,
+      "AllocatedBytes": 4123816,
+      "ManagedBytes": 62650120
+    },
+    {
+      "Operation": "equipment",
+      "Entries": 3,
+      "CommandMs": 104.403,
+      "UsableMs": 124.5342,
+      "AllocatedBytes": 4111336,
+      "ManagedBytes": 65724064
+    },
+    {
+      "Operation": "equipment",
+      "Entries": 3,
+      "CommandMs": 120.816,
+      "UsableMs": 200.5341,
+      "AllocatedBytes": 8247192,
+      "ManagedBytes": 68361016
+    },
+    {
+      "Operation": "equipment",
+      "Entries": 3,
+      "CommandMs": 125.9254,
+      "UsableMs": 143.9332,
+      "AllocatedBytes": 4093192,
+      "ManagedBytes": 70927608
+    },
+    {
+      "Operation": "equipment",
+      "Entries": 3,
+      "CommandMs": 267.3569,
+      "UsableMs": 292.6013,
+      "AllocatedBytes": 7159864,
+      "ManagedBytes": 70076296
+    },
+    {
+      "Operation": "equipment",
+      "Entries": 3,
+      "CommandMs": 123.541,
+      "UsableMs": 139.8406,
+      "AllocatedBytes": 4123704,
+      "ManagedBytes": 72652128
+    },
+    {
+      "Operation": "equipment",
+      "Entries": 3,
+      "CommandMs": 117.9664,
+      "UsableMs": 133.0045,
+      "AllocatedBytes": 4142872,
+      "ManagedBytes": 75266048
+    },
+    {
+      "Operation": "equipment",
+      "Entries": 3,
+      "CommandMs": 118.9846,
+      "UsableMs": 169.7856,
+      "AllocatedBytes": 8288160,
+      "ManagedBytes": 77929600
+    },
+    {
+      "Operation": "equipment",
+      "Entries": 3,
+      "CommandMs": 125.8573,
+      "UsableMs": 144.2624,
+      "AllocatedBytes": 4110104,
+      "ManagedBytes": 80495880
+    },
+    {
+      "Operation": "enhancement",
+      "Entries": 3,
+      "CommandMs": 166.7677,
+      "UsableMs": 256.4622,
+      "AllocatedBytes": 12376456,
+      "ManagedBytes": 85785848
+    },
+    {
+      "Operation": "enhancement",
+      "Entries": 3,
+      "CommandMs": 163.975,
+      "UsableMs": 333.3384,
+      "AllocatedBytes": 12386744,
+      "ManagedBytes": 87066080
+    },
+    {
+      "Operation": "enhancement",
+      "Entries": 3,
+      "CommandMs": 183.5387,
+      "UsableMs": 264.1948,
+      "AllocatedBytes": 8255960,
+      "ManagedBytes": 87853368
+    },
+    {
+      "Operation": "enhancement",
+      "Entries": 3,
+      "CommandMs": 161.9701,
+      "UsableMs": 244.524,
+      "AllocatedBytes": 8248160,
+      "ManagedBytes": 88937344
+    },
+    {
+      "Operation": "enhancement",
+      "Entries": 3,
+      "CommandMs": 212.6095,
+      "UsableMs": 296.2861,
+      "AllocatedBytes": 12410896,
+      "ManagedBytes": 90065896
+    },
+    {
+      "Operation": "enhancement",
+      "Entries": 3,
+      "CommandMs": 169.3191,
+      "UsableMs": 334.632,
+      "AllocatedBytes": 12366952,
+      "ManagedBytes": 91225400
+    },
+    {
+      "Operation": "enhancement",
+      "Entries": 3,
+      "CommandMs": 181.1624,
+      "UsableMs": 273.0667,
+      "AllocatedBytes": 8251424,
+      "ManagedBytes": 92159000
+    },
+    {
+      "Operation": "enhancement",
+      "Entries": 3,
+      "CommandMs": 170.9267,
+      "UsableMs": 251.3494,
+      "AllocatedBytes": 8251432,
+      "ManagedBytes": 93248968
+    },
+    {
+      "Operation": "enhancement",
+      "Entries": 3,
+      "CommandMs": 174.0597,
+      "UsableMs": 258.3249,
+      "AllocatedBytes": 8242312,
+      "ManagedBytes": 94326256
+    },
+    {
+      "Operation": "enhancement",
+      "Entries": 3,
+      "CommandMs": 180.4563,
+      "UsableMs": 367.0495,
+      "AllocatedBytes": 13254600,
+      "ManagedBytes": 95787448
+    },
+    {
+      "Operation": "attachment",
+      "Entries": 3,
+      "CommandMs": 203.567,
+      "UsableMs": 821.2937,
+      "AllocatedBytes": 37563392,
+      "ManagedBytes": 95486016
+    },
+    {
+      "Operation": "attachment",
+      "Entries": 3,
+      "CommandMs": 204.7422,
+      "UsableMs": 816.3876,
+      "AllocatedBytes": 37600152,
+      "ManagedBytes": 100931184
+    },
+    {
+      "Operation": "attachment",
+      "Entries": 3,
+      "CommandMs": 220.1403,
+      "UsableMs": 865.8043,
+      "AllocatedBytes": 37622512,
+      "ManagedBytes": 106416800
+    },
+    {
+      "Operation": "attachment",
+      "Entries": 3,
+      "CommandMs": 225.4268,
+      "UsableMs": 885.2471,
+      "AllocatedBytes": 37569856,
+      "ManagedBytes": 111809792
+    },
+    {
+      "Operation": "attachment",
+      "Entries": 3,
+      "CommandMs": 226.2686,
+      "UsableMs": 902.8086,
+      "AllocatedBytes": 37572472,
+      "ManagedBytes": 117215208
+    },
+    {
+      "Operation": "attachment",
+      "Entries": 3,
+      "CommandMs": 240.9937,
+      "UsableMs": 962.5805,
+      "AllocatedBytes": 37516160,
+      "ManagedBytes": 122982616
+    },
+    {
+      "Operation": "attachment",
+      "Entries": 3,
+      "CommandMs": 226.3122,
+      "UsableMs": 853.8107,
+      "AllocatedBytes": 37551152,
+      "ManagedBytes": 105999608
+    },
+    {
+      "Operation": "attachment",
+      "Entries": 3,
+      "CommandMs": 215.0977,
+      "UsableMs": 859.8048,
+      "AllocatedBytes": 37562504,
+      "ManagedBytes": 111408520
+    },
+    {
+      "Operation": "attachment",
+      "Entries": 3,
+      "CommandMs": 247.1686,
+      "UsableMs": 916.6657,
+      "AllocatedBytes": 37554680,
+      "ManagedBytes": 116859888
+    },
+    {
+      "Operation": "attachment",
+      "Entries": 3,
+      "CommandMs": 238.022,
+      "UsableMs": 942.3009,
+      "AllocatedBytes": 37567808,
+      "ManagedBytes": 122230608
+    },
+    {
+      "Operation": "detachment",
+      "Entries": 3,
+      "CommandMs": 165.4409,
+      "UsableMs": 320.5326,
+      "AllocatedBytes": 4138816,
+      "ManagedBytes": 126143712
+    },
+    {
+      "Operation": "detachment",
+      "Entries": 3,
+      "CommandMs": 170.0777,
+      "UsableMs": 430.6353,
+      "AllocatedBytes": 8655304,
+      "ManagedBytes": 128833688
+    },
+    {
+      "Operation": "detachment",
+      "Entries": 3,
+      "CommandMs": 40.5519,
+      "UsableMs": 302.8931,
+      "AllocatedBytes": 4166640,
+      "ManagedBytes": 129673120
+    },
+    {
+      "Operation": "detachment",
+      "Entries": 3,
+      "CommandMs": 153.7056,
+      "UsableMs": 408.1345,
+      "AllocatedBytes": 8283176,
+      "ManagedBytes": 132285392
+    },
+    {
+      "Operation": "detachment",
+      "Entries": 3,
+      "CommandMs": 37.0101,
+      "UsableMs": 315.6569,
+      "AllocatedBytes": 4166328,
+      "ManagedBytes": 132905928
+    },
+    {
+      "Operation": "detachment",
+      "Entries": 3,
+      "CommandMs": 147.6836,
+      "UsableMs": 413.8531,
+      "AllocatedBytes": 8291560,
+      "ManagedBytes": 135681496
+    },
+    {
+      "Operation": "detachment",
+      "Entries": 3,
+      "CommandMs": 166.9614,
+      "UsableMs": 468.1593,
+      "AllocatedBytes": 8305544,
+      "ManagedBytes": 136322496
+    },
+    {
+      "Operation": "detachment",
+      "Entries": 3,
+      "CommandMs": 158.8916,
+      "UsableMs": 313.7151,
+      "AllocatedBytes": 4143808,
+      "ManagedBytes": 137489376
+    },
+    {
+      "Operation": "detachment",
+      "Entries": 3,
+      "CommandMs": 129.91,
+      "UsableMs": 402.7449,
+      "AllocatedBytes": 8283528,
+      "ManagedBytes": 139722784
+    },
+    {
+      "Operation": "detachment",
+      "Entries": 3,
+      "CommandMs": 30.1904,
+      "UsableMs": 287.8757,
+      "AllocatedBytes": 4163896,
+      "ManagedBytes": 140727688
+    },
+    {
+      "Operation": "home",
+      "Entries": 3,
+      "CommandMs": 3.9507,
+      "UsableMs": 156.8963,
+      "AllocatedBytes": 4103464,
+      "ManagedBytes": 134349928
+    },
+    {
+      "Operation": "home",
+      "Entries": 3,
+      "CommandMs": 8.7291,
+      "UsableMs": 93.3796,
+      "AllocatedBytes": 0,
+      "ManagedBytes": 135194720
+    },
+    {
+      "Operation": "home",
+      "Entries": 3,
+      "CommandMs": 4.5667,
+      "UsableMs": 160.276,
+      "AllocatedBytes": 4169720,
+      "ManagedBytes": 137895704
+    },
+    {
+      "Operation": "home",
+      "Entries": 3,
+      "CommandMs": 5.3664,
+      "UsableMs": 90.0578,
+      "AllocatedBytes": 0,
+      "ManagedBytes": 138672328
+    },
+    {
+      "Operation": "home",
+      "Entries": 3,
+      "CommandMs": 5.6037,
+      "UsableMs": 87.8449,
+      "AllocatedBytes": 0,
+      "ManagedBytes": 139758960
+    },
+    {
+      "Operation": "home",
+      "Entries": 3,
+      "CommandMs": 4.1268,
+      "UsableMs": 235.9901,
+      "AllocatedBytes": 4134648,
+      "ManagedBytes": 142058552
+    },
+    {
+      "Operation": "home",
+      "Entries": 3,
+      "CommandMs": 5.56,
+      "UsableMs": 91.1654,
+      "AllocatedBytes": 0,
+      "ManagedBytes": 142890528
+    },
+    {
+      "Operation": "home",
+      "Entries": 3,
+      "CommandMs": 4.623,
+      "UsableMs": 175.3585,
+      "AllocatedBytes": 4176712,
+      "ManagedBytes": 145607144
+    },
+    {
+      "Operation": "home",
+      "Entries": 3,
+      "CommandMs": 4.3313,
+      "UsableMs": 87.642,
+      "AllocatedBytes": 0,
+      "ManagedBytes": 146473864
+    },
+    {
+      "Operation": "home",
+      "Entries": 3,
+      "CommandMs": 4.9221,
+      "UsableMs": 91.7739,
+      "AllocatedBytes": 0,
+      "ManagedBytes": 147553200
+    },
+    {
+      "Operation": "add",
+      "Entries": 20,
+      "CommandMs": 415.8166,
+      "UsableMs": 447.9862,
+      "AllocatedBytes": 29221784,
+      "ManagedBytes": 154861072
+    },
+    {
+      "Operation": "add",
+      "Entries": 20,
+      "CommandMs": 367.836,
+      "UsableMs": 390.7925,
+      "AllocatedBytes": 24731064,
+      "ManagedBytes": 156341240
+    },
+    {
+      "Operation": "add",
+      "Entries": 20,
+      "CommandMs": 449.5345,
+      "UsableMs": 471.8619,
+      "AllocatedBytes": 25253248,
+      "ManagedBytes": 158405520
+    },
+    {
+      "Operation": "add",
+      "Entries": 20,
+      "CommandMs": 380.468,
+      "UsableMs": 416.6788,
+      "AllocatedBytes": 28892552,
+      "ManagedBytes": 160036960
+    },
+    {
+      "Operation": "add",
+      "Entries": 20,
+      "CommandMs": 439.4412,
+      "UsableMs": 463.9261,
+      "AllocatedBytes": 25082296,
+      "ManagedBytes": 161800736
+    },
+    {
+      "Operation": "add",
+      "Entries": 20,
+      "CommandMs": 366.139,
+      "UsableMs": 398.7298,
+      "AllocatedBytes": 28903080,
+      "ManagedBytes": 163384512
+    },
+    {
+      "Operation": "add",
+      "Entries": 20,
+      "CommandMs": 412.2473,
+      "UsableMs": 439.7193,
+      "AllocatedBytes": 24767056,
+      "ManagedBytes": 165161920
+    },
+    {
+      "Operation": "add",
+      "Entries": 20,
+      "CommandMs": 430.3696,
+      "UsableMs": 467.8299,
+      "AllocatedBytes": 24791888,
+      "ManagedBytes": 166796784
+    },
+    {
+      "Operation": "add",
+      "Entries": 20,
+      "CommandMs": 408.575,
+      "UsableMs": 431.714,
+      "AllocatedBytes": 24749928,
+      "ManagedBytes": 168567048
+    },
+    {
+      "Operation": "add",
+      "Entries": 20,
+      "CommandMs": 443.3533,
+      "UsableMs": 465.3846,
+      "AllocatedBytes": 25083928,
+      "ManagedBytes": 170433120
+    },
+    {
+      "Operation": "equipment",
+      "Entries": 20,
+      "CommandMs": 378.9212,
+      "UsableMs": 504.1221,
+      "AllocatedBytes": 24710072,
+      "ManagedBytes": 178143880
+    },
+    {
+      "Operation": "equipment",
+      "Entries": 20,
+      "CommandMs": 439.3652,
+      "UsableMs": 458.0572,
+      "AllocatedBytes": 24688624,
+      "ManagedBytes": 182126016
+    },
+    {
+      "Operation": "equipment",
+      "Entries": 20,
+      "CommandMs": 386.1906,
+      "UsableMs": 413.918,
+      "AllocatedBytes": 24758312,
+      "ManagedBytes": 188062512
+    },
+    {
+      "Operation": "equipment",
+      "Entries": 20,
+      "CommandMs": 410.3485,
+      "UsableMs": 433.3393,
+      "AllocatedBytes": 24719896,
+      "ManagedBytes": 192143232
+    },
+    {
+      "Operation": "equipment",
+      "Entries": 20,
+      "CommandMs": 379.7704,
+      "UsableMs": 409.0799,
+      "AllocatedBytes": 24745776,
+      "ManagedBytes": 195926312
+    },
+    {
+      "Operation": "equipment",
+      "Entries": 20,
+      "CommandMs": 403.396,
+      "UsableMs": 420.043,
+      "AllocatedBytes": 24671048,
+      "ManagedBytes": 200011424
+    },
+    {
+      "Operation": "equipment",
+      "Entries": 20,
+      "CommandMs": 699.0954,
+      "UsableMs": 724.7416,
+      "AllocatedBytes": 28679864,
+      "ManagedBytes": 136647928
+    },
+    {
+      "Operation": "equipment",
+      "Entries": 20,
+      "CommandMs": 315.4436,
+      "UsableMs": 337.8313,
+      "AllocatedBytes": 24753504,
+      "ManagedBytes": 140731360
+    },
+    {
+      "Operation": "equipment",
+      "Entries": 20,
+      "CommandMs": 358.7627,
+      "UsableMs": 376.7593,
+      "AllocatedBytes": 24713736,
+      "ManagedBytes": 144555584
+    },
+    {
+      "Operation": "equipment",
+      "Entries": 20,
+      "CommandMs": 332.7293,
+      "UsableMs": 362.9981,
+      "AllocatedBytes": 24731264,
+      "ManagedBytes": 148376136
+    },
+    {
+      "Operation": "enhancement",
+      "Entries": 20,
+      "CommandMs": 1116.9326,
+      "UsableMs": 1245.228,
+      "AllocatedBytes": 41199432,
+      "ManagedBytes": 156893488
+    },
+    {
+      "Operation": "enhancement",
+      "Entries": 20,
+      "CommandMs": 666.4934,
+      "UsableMs": 762.7313,
+      "AllocatedBytes": 41173416,
+      "ManagedBytes": 160266840
+    },
+    {
+      "Operation": "enhancement",
+      "Entries": 20,
+      "CommandMs": 668.5609,
+      "UsableMs": 782.265,
+      "AllocatedBytes": 41248240,
+      "ManagedBytes": 164065112
+    },
+    {
+      "Operation": "enhancement",
+      "Entries": 20,
+      "CommandMs": 732.591,
+      "UsableMs": 931.4169,
+      "AllocatedBytes": 45346624,
+      "ManagedBytes": 167884384
+    },
+    {
+      "Operation": "enhancement",
+      "Entries": 20,
+      "CommandMs": 800.6473,
+      "UsableMs": 994.2264,
+      "AllocatedBytes": 41249040,
+      "ManagedBytes": 171009832
+    },
+    {
+      "Operation": "enhancement",
+      "Entries": 20,
+      "CommandMs": 766.3396,
+      "UsableMs": 890.7523,
+      "AllocatedBytes": 41225600,
+      "ManagedBytes": 174194264
+    },
+    {
+      "Operation": "enhancement",
+      "Entries": 20,
+      "CommandMs": 683.1263,
+      "UsableMs": 787.0368,
+      "AllocatedBytes": 41596800,
+      "ManagedBytes": 177889608
+    },
+    {
+      "Operation": "enhancement",
+      "Entries": 20,
+      "CommandMs": 638.994,
+      "UsableMs": 743.731,
+      "AllocatedBytes": 41207008,
+      "ManagedBytes": 181218208
+    },
+    {
+      "Operation": "enhancement",
+      "Entries": 20,
+      "CommandMs": 680.9778,
+      "UsableMs": 769.8928,
+      "AllocatedBytes": 41193416,
+      "ManagedBytes": 184601352
+    },
+    {
+      "Operation": "enhancement",
+      "Entries": 20,
+      "CommandMs": 942.8463,
+      "UsableMs": 1054.8568,
+      "AllocatedBytes": 41169280,
+      "ManagedBytes": 187990264
+    },
+    {
+      "Operation": "attachment",
+      "Entries": 20,
+      "CommandMs": 778.7329,
+      "UsableMs": 2492.4399,
+      "AllocatedBytes": 124274840,
+      "ManagedBytes": 205568448
+    },
+    {
+      "Operation": "attachment",
+      "Entries": 20,
+      "CommandMs": 809.3225,
+      "UsableMs": 2566.5203,
+      "AllocatedBytes": 119924352,
+      "ManagedBytes": 214874112
+    },
+    {
+      "Operation": "attachment",
+      "Entries": 20,
+      "CommandMs": 1547.6101,
+      "UsableMs": 3639.4526,
+      "AllocatedBytes": 119973624,
+      "ManagedBytes": 224381000
+    },
+    {
+      "Operation": "attachment",
+      "Entries": 20,
+      "CommandMs": 1320.8221,
+      "UsableMs": 2768.4283,
+      "AllocatedBytes": 119338520,
+      "ManagedBytes": 155014512
+    },
+    {
+      "Operation": "attachment",
+      "Entries": 20,
+      "CommandMs": 878.0574,
+      "UsableMs": 2269.199,
+      "AllocatedBytes": 119928936,
+      "ManagedBytes": 164540944
+    },
+    {
+      "Operation": "attachment",
+      "Entries": 20,
+      "CommandMs": 952.5345,
+      "UsableMs": 2304.5256,
+      "AllocatedBytes": 119929896,
+      "ManagedBytes": 174012008
+    },
+    {
+      "Operation": "attachment",
+      "Entries": 20,
+      "CommandMs": 876.9434,
+      "UsableMs": 2196.6766,
+      "AllocatedBytes": 119973008,
+      "ManagedBytes": 183479872
+    },
+    {
+      "Operation": "attachment",
+      "Entries": 20,
+      "CommandMs": 896.9464,
+      "UsableMs": 2374.1833,
+      "AllocatedBytes": 124088640,
+      "ManagedBytes": 194857496
+    },
+    {
+      "Operation": "attachment",
+      "Entries": 20,
+      "CommandMs": 860.218,
+      "UsableMs": 2383.1522,
+      "AllocatedBytes": 124099096,
+      "ManagedBytes": 204228440
+    },
+    {
+      "Operation": "attachment",
+      "Entries": 20,
+      "CommandMs": 805.1944,
+      "UsableMs": 2356.3972,
+      "AllocatedBytes": 124029864,
+      "ManagedBytes": 213559208
+    },
+    {
+      "Operation": "detachment",
+      "Entries": 20,
+      "CommandMs": 328.3741,
+      "UsableMs": 611.7251,
+      "AllocatedBytes": 20697800,
+      "ManagedBytes": 220278984
+    },
+    {
+      "Operation": "detachment",
+      "Entries": 20,
+      "CommandMs": 761.524,
+      "UsableMs": 1075.2073,
+      "AllocatedBytes": 20686728,
+      "ManagedBytes": 222555336
+    },
+    {
+      "Operation": "detachment",
+      "Entries": 20,
+      "CommandMs": 427.6461,
+      "UsableMs": 620.6972,
+      "AllocatedBytes": 20649080,
+      "ManagedBytes": 225330576
+    },
+    {
+      "Operation": "detachment",
+      "Entries": 20,
+      "CommandMs": 363.7522,
+      "UsableMs": 557.047,
+      "AllocatedBytes": 16559632,
+      "ManagedBytes": 228177528
+    },
+    {
+      "Operation": "detachment",
+      "Entries": 20,
+      "CommandMs": 331.4859,
+      "UsableMs": 624.3354,
+      "AllocatedBytes": 20675432,
+      "ManagedBytes": 232048040
+    },
+    {
+      "Operation": "detachment",
+      "Entries": 20,
+      "CommandMs": 339.6542,
+      "UsableMs": 631.6803,
+      "AllocatedBytes": 20679264,
+      "ManagedBytes": 234272440
+    },
+    {
+      "Operation": "detachment",
+      "Entries": 20,
+      "CommandMs": 366.3326,
+      "UsableMs": 560.9691,
+      "AllocatedBytes": 20664616,
+      "ManagedBytes": 236629096
+    },
+    {
+      "Operation": "detachment",
+      "Entries": 20,
+      "CommandMs": 365.5628,
+      "UsableMs": 578.7996,
+      "AllocatedBytes": 20647240,
+      "ManagedBytes": 239309400
+    },
+    {
+      "Operation": "detachment",
+      "Entries": 20,
+      "CommandMs": 382.8091,
+      "UsableMs": 692.0166,
+      "AllocatedBytes": 20693720,
+      "ManagedBytes": 243151776
+    },
+    {
+      "Operation": "detachment",
+      "Entries": 20,
+      "CommandMs": 373.2593,
+      "UsableMs": 664.6584,
+      "AllocatedBytes": 20687456,
+      "ManagedBytes": 245353792
+    },
+    {
+      "Operation": "home",
+      "Entries": 20,
+      "CommandMs": 4.9172,
+      "UsableMs": 90.895,
+      "AllocatedBytes": 0,
+      "ManagedBytes": 249689544
+    },
+    {
+      "Operation": "home",
+      "Entries": 20,
+      "CommandMs": 5.3221,
+      "UsableMs": 89.4704,
+      "AllocatedBytes": 0,
+      "ManagedBytes": 252561768
+    },
+    {
+      "Operation": "home",
+      "Entries": 20,
+      "CommandMs": 4.0283,
+      "UsableMs": 225.7178,
+      "AllocatedBytes": 4382096,
+      "ManagedBytes": 255537272
+    },
+    {
+      "Operation": "home",
+      "Entries": 20,
+      "CommandMs": 4.6898,
+      "UsableMs": 87.0396,
+      "AllocatedBytes": 0,
+      "ManagedBytes": 256543280
+    },
+    {
+      "Operation": "home",
+      "Entries": 20,
+      "CommandMs": 4.5052,
+      "UsableMs": 232.5907,
+      "AllocatedBytes": 4243888,
+      "ManagedBytes": 259504496
+    },
+    {
+      "Operation": "home",
+      "Entries": 20,
+      "CommandMs": 4.1618,
+      "UsableMs": 246.9716,
+      "AllocatedBytes": 4385096,
+      "ManagedBytes": 262488456
+    },
+    {
+      "Operation": "home",
+      "Entries": 20,
+      "CommandMs": 7.1594,
+      "UsableMs": 90.708,
+      "AllocatedBytes": 0,
+      "ManagedBytes": 263477712
+    },
+    {
+      "Operation": "home",
+      "Entries": 20,
+      "CommandMs": 9.7402,
+      "UsableMs": 269.3713,
+      "AllocatedBytes": 4372248,
+      "ManagedBytes": 266488728
+    },
+    {
+      "Operation": "home",
+      "Entries": 20,
+      "CommandMs": 4.0898,
+      "UsableMs": 88.1208,
+      "AllocatedBytes": 0,
+      "ManagedBytes": 267926192
+    },
+    {
+      "Operation": "home",
+      "Entries": 20,
+      "CommandMs": 5.9696,
+      "UsableMs": 91.1255,
+      "AllocatedBytes": 0,
+      "ManagedBytes": 270606944
+    }
+  ],
+  "Graphics": {
+    "Frames": 2153,
+    "MissedDeadlineFrames": 556,
+    "JankyPercent": 25.82,
+    "Scope": "Whole benchmark process, including setup and unmeasured resets"
+  },
+  "MemoryPssKiB": {
+    "FirstInitialization": 2236658,
+    "LastRepeatLaunch": 325741,
+    "AfterWorkload": 812873
+  },
+  "EnhancementEvidence": {
+    "bootstrap": {
+      "Input": "bootstrap",
+      "Name": "Daemon Prince of Tzeentch with wings",
+      "Source": {
+        "Name": "BSData \u00b7 All armies",
+        "Version": "cc1830fbfead059f8059ed6c7f8e73cd4c390908",
+        "Date": "2026-10-02",
+        "Url": "https://github.com/BSData/wh40k-11e/tree/cc1830fbfead059f8059ed6c7f8e73cd4c390908",
+        "ImportedAt": "",
+        "Edition": "11",
+        "ContentHash": "747db24bf29456f0606a937f794a7e7f33154e76116eff1506e9b0750ab5c045"
+      },
+      "Card": {
+        "Faction": "Thousand Sons",
+        "Section": "Enhancements",
+        "Name": "Eldritch Vortex of E'taph",
+        "Text": "Add 1 to the Strength and Damage characteristics of Psychic weapons equipped by the bearer.",
+        "Detachment": "Grand Coven",
+        "Cost": "35 pts",
+        "Source": {
+          "Name": "BSData \u00b7 All armies",
+          "Version": "cc1830fbfead059f8059ed6c7f8e73cd4c390908",
+          "Date": "2026-10-02",
+          "Url": "https://github.com/BSData/wh40k-11e/tree/cc1830fbfead059f8059ed6c7f8e73cd4c390908",
+          "ImportedAt": "",
+          "Edition": "11",
+          "ContentHash": "747db24bf29456f0606a937f794a7e7f33154e76116eff1506e9b0750ab5c045"
+        },
+        "IsUpgrade": false,
+        "Details": {
+          "Id": "ref-a9284cc51f123c0f43333fe337c0aa870d6a6fbc9802bf73e6df08f4a1216e55",
+          "Edition": "11",
+          "SourceId": "bsdata:11",
+          "SourceCardId": "7213-a7b3-4c8e-96bc",
+          "SourceType": "BSData",
+          "Scope": "Detachment",
+          "FactionId": "1069-10ff-3ba9-873b",
+          "Detachments": [
+            {
+              "Name": "Grand Coven",
+              "Id": "",
+              "Match": "Unresolved"
+            }
+          ],
+          "Timing": "",
+          "Target": "",
+          "Effect": "",
+          "Restrictions": "",
+          "SemanticHash": "",
+          "Status": "Active",
+          "Replaces": "",
+          "Match": "Unresolved"
+        },
+        "Eligibility": {
+          "Kind": "and",
+          "Value": "",
+          "Comparison": "equalTo",
+          "Count": 1,
+          "Children": [
+            {
+              "Kind": "constant",
+              "Value": "1",
+              "Comparison": "equalTo",
+              "Count": 1,
+              "Children": null
+            },
+            {
+              "Kind": "and",
+              "Value": "",
+              "Comparison": "equalTo",
+              "Count": 1,
+              "Children": [
+                {
+                  "Kind": "constant",
+                  "Value": "1",
+                  "Comparison": "equalTo",
+                  "Count": 1,
+                  "Children": null
+                },
+                {
+                  "Kind": "not",
+                  "Value": "",
+                  "Comparison": "equalTo",
+                  "Count": 1,
+                  "Children": [
+                    {
+                      "Kind": "and",
+                      "Value": "",
+                      "Comparison": "equalTo",
+                      "Count": 1,
+                      "Children": [
+                        {
+                          "Kind": "or",
+                          "Value": "",
+                          "Comparison": "equalTo",
+                          "Count": 1,
+                          "Children": [
+                            {
+                              "Kind": "keyword",
+                              "Value": "Thousand Sons",
+                              "Comparison": "notInstanceOf",
+                              "Count": 1,
+                              "Children": null
+                            },
+                            {
+                              "Kind": "and",
+                              "Value": "",
+                              "Comparison": "equalTo",
+                              "Count": 1,
+                              "Children": [
+                                {
+                                  "Kind": "constant",
+                                  "Value": "0",
+                                  "Comparison": "lessThan",
+                                  "Count": 1,
+                                  "Children": null
+                                },
+                                {
+                                  "Kind": "detachment",
+                                  "Value": "Grand Coven",
+                                  "Comparison": "equalTo",
+                                  "Count": 0,
+                                  "Children": null
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "Modifiers": [
+          {
+            "Id": "7213-a7b3-4c8e-96bc/2",
+            "Source": "Eldritch Vortex of E'taph",
+            "Target": "weapon",
+            "Characteristic": "S",
+            "Operation": "increment",
+            "Value": "1",
+            "Profile": "",
+            "WeaponType": "Ranged",
+            "Condition": {
+              "Kind": "constant",
+              "Value": "1",
+              "Comparison": "atLeast",
+              "Count": 1,
+              "Children": null,
+              "Label": ""
+            },
+            "Replaces": "",
+            "WeaponPredicate": {
+              "Kind": "source-category",
+              "Value": "4546-4a0c-b3be-e84c",
+              "Children": null
+            }
+          },
+          {
+            "Id": "7213-a7b3-4c8e-96bc/3",
+            "Source": "Eldritch Vortex of E'taph",
+            "Target": "weapon",
+            "Characteristic": "S",
+            "Operation": "increment",
+            "Value": "1",
+            "Profile": "",
+            "WeaponType": "Melee",
+            "Condition": {
+              "Kind": "constant",
+              "Value": "1",
+              "Comparison": "atLeast",
+              "Count": 1,
+              "Children": null,
+              "Label": ""
+            },
+            "Replaces": "",
+            "WeaponPredicate": {
+              "Kind": "source-category",
+              "Value": "4546-4a0c-b3be-e84c",
+              "Children": null
+            }
+          },
+          {
+            "Id": "7213-a7b3-4c8e-96bc/6",
+            "Source": "Eldritch Vortex of E'taph",
+            "Target": "weapon",
+            "Characteristic": "D",
+            "Operation": "append",
+            "Value": "+0",
+            "Profile": "",
+            "WeaponType": "Ranged",
+            "Condition": {
+              "Kind": "constant",
+              "Value": "1",
+              "Comparison": "atLeast",
+              "Count": 1,
+              "Children": null,
+              "Label": ""
+            },
+            "Replaces": "",
+            "WeaponPredicate": {
+              "Kind": "source-category",
+              "Value": "4986-bf86-beb4-13ac",
+              "Children": null
+            }
+          },
+          {
+            "Id": "7213-a7b3-4c8e-96bc/8",
+            "Source": "Eldritch Vortex of E'taph",
+            "Target": "weapon",
+            "Characteristic": "D",
+            "Operation": "increment",
+            "Value": "1",
+            "Profile": "",
+            "WeaponType": "Ranged",
+            "Condition": {
+              "Kind": "constant",
+              "Value": "1",
+              "Comparison": "atLeast",
+              "Count": 1,
+              "Children": null,
+              "Label": ""
+            },
+            "Replaces": "",
+            "WeaponPredicate": {
+              "Kind": "source-category",
+              "Value": "4546-4a0c-b3be-e84c",
+              "Children": null
+            }
+          },
+          {
+            "Id": "7213-a7b3-4c8e-96bc/10",
+            "Source": "Eldritch Vortex of E'taph",
+            "Target": "weapon",
+            "Characteristic": "D",
+            "Operation": "append",
+            "Value": "+0",
+            "Profile": "",
+            "WeaponType": "Melee",
+            "Condition": {
+              "Kind": "constant",
+              "Value": "1",
+              "Comparison": "atLeast",
+              "Count": 1,
+              "Children": null,
+              "Label": ""
+            },
+            "Replaces": "",
+            "WeaponPredicate": {
+              "Kind": "source-category",
+              "Value": "4986-bf86-beb4-13ac",
+              "Children": null
+            }
+          },
+          {
+            "Id": "7213-a7b3-4c8e-96bc/12",
+            "Source": "Eldritch Vortex of E'taph",
+            "Target": "weapon",
+            "Characteristic": "D",
+            "Operation": "increment",
+            "Value": "1",
+            "Profile": "",
+            "WeaponType": "Melee",
+            "Condition": {
+              "Kind": "constant",
+              "Value": "1",
+              "Comparison": "atLeast",
+              "Count": 1,
+              "Children": null,
+              "Label": ""
+            },
+            "Replaces": "",
+            "WeaponPredicate": {
+              "Kind": "source-category",
+              "Value": "4546-4a0c-b3be-e84c",
+              "Children": null
+            }
+          }
+        ]
+      },
+      "CachedEqualsUncached": true,
+      "ProseOnlyModifiers": [],
+      "Base": [
+        {
+          "Name": "Dark Blessing",
+          "Type": "Ranged",
+          "Range": "24\"",
+          "Attacks": "9",
+          "Skill": "2+",
+          "Strength": "4",
+          "Ap": "-1",
+          "Damage": "1",
+          "Keywords": "Ignores Cover, Psychic, Sustained Hits 1"
+        },
+        {
+          "Name": "Infernal cannon",
+          "Type": "Ranged",
+          "Range": "24\"",
+          "Attacks": "3",
+          "Skill": "2+",
+          "Strength": "5",
+          "Ap": "-2",
+          "Damage": "2",
+          "Keywords": ""
+        },
+        {
+          "Name": "\u27a4 Hellforged weapons - strike",
+          "Type": "Melee",
+          "Range": "Melee",
+          "Attacks": "6",
+          "Skill": "2+",
+          "Strength": "8",
+          "Ap": "-2",
+          "Damage": "3",
+          "Keywords": "Devastating Wounds, Psychic"
+        },
+        {
+          "Name": "\u27a4 Hellforged weapons - sweep",
+          "Type": "Melee",
+          "Range": "Melee",
+          "Attacks": "12",
+          "Skill": "2+",
+          "Strength": "6",
+          "Ap": "-1",
+          "Damage": "1",
+          "Keywords": "Devastating Wounds, Psychic"
+        }
+      ],
+      "Effective": [
+        {
+          "Name": "Dark Blessing",
+          "Type": "Ranged",
+          "Range": "24\"",
+          "Attacks": "9",
+          "Skill": "2+",
+          "Strength": "4",
+          "Ap": "-1",
+          "Damage": "1",
+          "Keywords": "Ignores Cover, Psychic, Sustained Hits 1"
+        },
+        {
+          "Name": "Infernal cannon",
+          "Type": "Ranged",
+          "Range": "24\"",
+          "Attacks": "3",
+          "Skill": "2+",
+          "Strength": "5",
+          "Ap": "-2",
+          "Damage": "2",
+          "Keywords": ""
+        },
+        {
+          "Name": "\u27a4 Hellforged weapons - strike",
+          "Type": "Melee",
+          "Range": "Melee",
+          "Attacks": "6",
+          "Skill": "2+",
+          "Strength": "8",
+          "Ap": "-2",
+          "Damage": "3",
+          "Keywords": "Devastating Wounds, Psychic"
+        },
+        {
+          "Name": "\u27a4 Hellforged weapons - sweep",
+          "Type": "Melee",
+          "Range": "Melee",
+          "Attacks": "12",
+          "Skill": "2+",
+          "Strength": "6",
+          "Ap": "-1",
+          "Damage": "1",
+          "Keywords": "Devastating Wounds, Psychic"
+        }
+      ],
+      "AppliedModifierSources": []
+    },
+    "recovered-bootstrap": {
+      "Input": "recovered-bootstrap",
+      "Name": "Daemon Prince of Tzeentch with wings",
+      "Source": {
+        "Name": "BSData \u00b7 All armies",
+        "Version": "cc1830fbfead059f8059ed6c7f8e73cd4c390908",
+        "Date": "2026-10-02",
+        "Url": "https://github.com/BSData/wh40k-11e/tree/cc1830fbfead059f8059ed6c7f8e73cd4c390908",
+        "ImportedAt": "",
+        "Edition": "11",
+        "ContentHash": "747db24bf29456f0606a937f794a7e7f33154e76116eff1506e9b0750ab5c045"
+      },
+      "Card": {
+        "Faction": "Thousand Sons",
+        "Section": "Enhancements",
+        "Name": "Eldritch Vortex of E'taph",
+        "Text": "Add 1 to the Strength and Damage characteristics of Psychic weapons equipped by the bearer.",
+        "Detachment": "Grand Coven",
+        "Cost": "35 pts",
+        "Source": {
+          "Name": "BSData \u00b7 All armies",
+          "Version": "cc1830fbfead059f8059ed6c7f8e73cd4c390908",
+          "Date": "2026-10-02",
+          "Url": "https://github.com/BSData/wh40k-11e/tree/cc1830fbfead059f8059ed6c7f8e73cd4c390908",
+          "ImportedAt": "",
+          "Edition": "11",
+          "ContentHash": "747db24bf29456f0606a937f794a7e7f33154e76116eff1506e9b0750ab5c045"
+        },
+        "IsUpgrade": false,
+        "Details": {
+          "Id": "ref-a9284cc51f123c0f43333fe337c0aa870d6a6fbc9802bf73e6df08f4a1216e55",
+          "Edition": "11",
+          "SourceId": "bsdata:11",
+          "SourceCardId": "7213-a7b3-4c8e-96bc",
+          "SourceType": "BSData",
+          "Scope": "Detachment",
+          "FactionId": "1069-10ff-3ba9-873b",
+          "Detachments": [
+            {
+              "Name": "Grand Coven",
+              "Id": "",
+              "Match": "Unresolved"
+            }
+          ],
+          "Timing": "",
+          "Target": "",
+          "Effect": "",
+          "Restrictions": "",
+          "SemanticHash": "",
+          "Status": "Active",
+          "Replaces": "",
+          "Match": "Unresolved"
+        },
+        "Eligibility": {
+          "Kind": "and",
+          "Value": "",
+          "Comparison": "equalTo",
+          "Count": 1,
+          "Children": [
+            {
+              "Kind": "constant",
+              "Value": "1",
+              "Comparison": "equalTo",
+              "Count": 1,
+              "Children": null
+            },
+            {
+              "Kind": "and",
+              "Value": "",
+              "Comparison": "equalTo",
+              "Count": 1,
+              "Children": [
+                {
+                  "Kind": "constant",
+                  "Value": "1",
+                  "Comparison": "equalTo",
+                  "Count": 1,
+                  "Children": null
+                },
+                {
+                  "Kind": "not",
+                  "Value": "",
+                  "Comparison": "equalTo",
+                  "Count": 1,
+                  "Children": [
+                    {
+                      "Kind": "and",
+                      "Value": "",
+                      "Comparison": "equalTo",
+                      "Count": 1,
+                      "Children": [
+                        {
+                          "Kind": "or",
+                          "Value": "",
+                          "Comparison": "equalTo",
+                          "Count": 1,
+                          "Children": [
+                            {
+                              "Kind": "keyword",
+                              "Value": "Thousand Sons",
+                              "Comparison": "notInstanceOf",
+                              "Count": 1,
+                              "Children": null
+                            },
+                            {
+                              "Kind": "and",
+                              "Value": "",
+                              "Comparison": "equalTo",
+                              "Count": 1,
+                              "Children": [
+                                {
+                                  "Kind": "constant",
+                                  "Value": "0",
+                                  "Comparison": "lessThan",
+                                  "Count": 1,
+                                  "Children": null
+                                },
+                                {
+                                  "Kind": "detachment",
+                                  "Value": "Grand Coven",
+                                  "Comparison": "equalTo",
+                                  "Count": 0,
+                                  "Children": null
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "Modifiers": [
+          {
+            "Id": "7213-a7b3-4c8e-96bc/2",
+            "Source": "Eldritch Vortex of E'taph",
+            "Target": "weapon",
+            "Characteristic": "S",
+            "Operation": "increment",
+            "Value": "1",
+            "Profile": "",
+            "WeaponType": "Ranged",
+            "Condition": {
+              "Kind": "constant",
+              "Value": "1",
+              "Comparison": "atLeast",
+              "Count": 1,
+              "Children": null,
+              "Label": ""
+            },
+            "Replaces": "",
+            "WeaponPredicate": {
+              "Kind": "source-category",
+              "Value": "4546-4a0c-b3be-e84c",
+              "Children": null
+            }
+          },
+          {
+            "Id": "7213-a7b3-4c8e-96bc/3",
+            "Source": "Eldritch Vortex of E'taph",
+            "Target": "weapon",
+            "Characteristic": "S",
+            "Operation": "increment",
+            "Value": "1",
+            "Profile": "",
+            "WeaponType": "Melee",
+            "Condition": {
+              "Kind": "constant",
+              "Value": "1",
+              "Comparison": "atLeast",
+              "Count": 1,
+              "Children": null,
+              "Label": ""
+            },
+            "Replaces": "",
+            "WeaponPredicate": {
+              "Kind": "source-category",
+              "Value": "4546-4a0c-b3be-e84c",
+              "Children": null
+            }
+          },
+          {
+            "Id": "7213-a7b3-4c8e-96bc/6",
+            "Source": "Eldritch Vortex of E'taph",
+            "Target": "weapon",
+            "Characteristic": "D",
+            "Operation": "append",
+            "Value": "+0",
+            "Profile": "",
+            "WeaponType": "Ranged",
+            "Condition": {
+              "Kind": "constant",
+              "Value": "1",
+              "Comparison": "atLeast",
+              "Count": 1,
+              "Children": null,
+              "Label": ""
+            },
+            "Replaces": "",
+            "WeaponPredicate": {
+              "Kind": "source-category",
+              "Value": "4986-bf86-beb4-13ac",
+              "Children": null
+            }
+          },
+          {
+            "Id": "7213-a7b3-4c8e-96bc/8",
+            "Source": "Eldritch Vortex of E'taph",
+            "Target": "weapon",
+            "Characteristic": "D",
+            "Operation": "increment",
+            "Value": "1",
+            "Profile": "",
+            "WeaponType": "Ranged",
+            "Condition": {
+              "Kind": "constant",
+              "Value": "1",
+              "Comparison": "atLeast",
+              "Count": 1,
+              "Children": null,
+              "Label": ""
+            },
+            "Replaces": "",
+            "WeaponPredicate": {
+              "Kind": "source-category",
+              "Value": "4546-4a0c-b3be-e84c",
+              "Children": null
+            }
+          },
+          {
+            "Id": "7213-a7b3-4c8e-96bc/10",
+            "Source": "Eldritch Vortex of E'taph",
+            "Target": "weapon",
+            "Characteristic": "D",
+            "Operation": "append",
+            "Value": "+0",
+            "Profile": "",
+            "WeaponType": "Melee",
+            "Condition": {
+              "Kind": "constant",
+              "Value": "1",
+              "Comparison": "atLeast",
+              "Count": 1,
+              "Children": null,
+              "Label": ""
+            },
+            "Replaces": "",
+            "WeaponPredicate": {
+              "Kind": "source-category",
+              "Value": "4986-bf86-beb4-13ac",
+              "Children": null
+            }
+          },
+          {
+            "Id": "7213-a7b3-4c8e-96bc/12",
+            "Source": "Eldritch Vortex of E'taph",
+            "Target": "weapon",
+            "Characteristic": "D",
+            "Operation": "increment",
+            "Value": "1",
+            "Profile": "",
+            "WeaponType": "Melee",
+            "Condition": {
+              "Kind": "constant",
+              "Value": "1",
+              "Comparison": "atLeast",
+              "Count": 1,
+              "Children": null,
+              "Label": ""
+            },
+            "Replaces": "",
+            "WeaponPredicate": {
+              "Kind": "source-category",
+              "Value": "4546-4a0c-b3be-e84c",
+              "Children": null
+            }
+          }
+        ]
+      },
+      "CachedEqualsUncached": true,
+      "ProseOnlyModifiers": [],
+      "Base": [
+        {
+          "Name": "Dark Blessing",
+          "Type": "Ranged",
+          "Range": "24\"",
+          "Attacks": "9",
+          "Skill": "2+",
+          "Strength": "4",
+          "Ap": "-1",
+          "Damage": "1",
+          "Keywords": "Ignores Cover, Psychic, Sustained Hits 1"
+        },
+        {
+          "Name": "Infernal cannon",
+          "Type": "Ranged",
+          "Range": "24\"",
+          "Attacks": "3",
+          "Skill": "2+",
+          "Strength": "5",
+          "Ap": "-2",
+          "Damage": "2",
+          "Keywords": ""
+        },
+        {
+          "Name": "\u27a4 Hellforged weapons - strike",
+          "Type": "Melee",
+          "Range": "Melee",
+          "Attacks": "6",
+          "Skill": "2+",
+          "Strength": "8",
+          "Ap": "-2",
+          "Damage": "3",
+          "Keywords": "Devastating Wounds, Psychic"
+        },
+        {
+          "Name": "\u27a4 Hellforged weapons - sweep",
+          "Type": "Melee",
+          "Range": "Melee",
+          "Attacks": "12",
+          "Skill": "2+",
+          "Strength": "6",
+          "Ap": "-1",
+          "Damage": "1",
+          "Keywords": "Devastating Wounds, Psychic"
+        }
+      ],
+      "Effective": [
+        {
+          "Name": "Dark Blessing",
+          "Type": "Ranged",
+          "Range": "24\"",
+          "Attacks": "9",
+          "Skill": "2+",
+          "Strength": "4",
+          "Ap": "-1",
+          "Damage": "1",
+          "Keywords": "Ignores Cover, Psychic, Sustained Hits 1"
+        },
+        {
+          "Name": "Infernal cannon",
+          "Type": "Ranged",
+          "Range": "24\"",
+          "Attacks": "3",
+          "Skill": "2+",
+          "Strength": "5",
+          "Ap": "-2",
+          "Damage": "2",
+          "Keywords": ""
+        },
+        {
+          "Name": "\u27a4 Hellforged weapons - strike",
+          "Type": "Melee",
+          "Range": "Melee",
+          "Attacks": "6",
+          "Skill": "2+",
+          "Strength": "8",
+          "Ap": "-2",
+          "Damage": "3",
+          "Keywords": "Devastating Wounds, Psychic"
+        },
+        {
+          "Name": "\u27a4 Hellforged weapons - sweep",
+          "Type": "Melee",
+          "Range": "Melee",
+          "Attacks": "12",
+          "Skill": "2+",
+          "Strength": "6",
+          "Ap": "-1",
+          "Damage": "1",
+          "Keywords": "Devastating Wounds, Psychic"
+        }
+      ],
+      "AppliedModifierSources": []
+    },
+    "fresh-pinned": {
+      "Input": "tests/fixtures/bsdata/11e/cc1830fbfead059f8059ed6c7f8e73cd4c390908/repository.zip",
+      "Name": "Daemon Prince of Tzeentch with wings",
+      "Source": {
+        "Name": "BSData diagnostic archive",
+        "Version": "cc1830fbfead059f8059ed6c7f8e73cd4c390908",
+        "Date": "",
+        "Url": "",
+        "ImportedAt": "",
+        "Edition": "11",
+        "ContentHash": "747db24bf29456f0606a937f794a7e7f33154e76116eff1506e9b0750ab5c045"
+      },
+      "Card": {
+        "Faction": "Thousand Sons",
+        "Section": "Enhancements",
+        "Name": "Eldritch Vortex of E'taph",
+        "Text": "Add 1 to the Strength and Damage characteristics of Psychic weapons equipped by the bearer.",
+        "Detachment": "Grand Coven",
+        "Cost": "35 pts",
+        "Source": {
+          "Name": "BSData diagnostic archive",
+          "Version": "cc1830fbfead059f8059ed6c7f8e73cd4c390908",
+          "Date": "",
+          "Url": "",
+          "ImportedAt": "",
+          "Edition": "11",
+          "ContentHash": "747db24bf29456f0606a937f794a7e7f33154e76116eff1506e9b0750ab5c045"
+        },
+        "IsUpgrade": false,
+        "Details": {
+          "Id": "ref-a9284cc51f123c0f43333fe337c0aa870d6a6fbc9802bf73e6df08f4a1216e55",
+          "Edition": "11",
+          "SourceId": "bsdata:11",
+          "SourceCardId": "7213-a7b3-4c8e-96bc",
+          "SourceType": "BSData",
+          "Scope": "Detachment",
+          "FactionId": "1069-10ff-3ba9-873b",
+          "Detachments": [
+            {
+              "Name": "Grand Coven",
+              "Id": "",
+              "Match": "Unresolved"
+            }
+          ],
+          "Timing": "",
+          "Target": "",
+          "Effect": "",
+          "Restrictions": "",
+          "SemanticHash": "",
+          "Status": "Active",
+          "Replaces": "",
+          "Match": "Unresolved"
+        },
+        "Eligibility": {
+          "Kind": "and",
+          "Value": "",
+          "Comparison": "equalTo",
+          "Count": 1,
+          "Children": [
+            {
+              "Kind": "constant",
+              "Value": "1",
+              "Comparison": "equalTo",
+              "Count": 1,
+              "Children": null
+            },
+            {
+              "Kind": "and",
+              "Value": "",
+              "Comparison": "equalTo",
+              "Count": 1,
+              "Children": [
+                {
+                  "Kind": "constant",
+                  "Value": "1",
+                  "Comparison": "equalTo",
+                  "Count": 1,
+                  "Children": null
+                },
+                {
+                  "Kind": "not",
+                  "Value": "",
+                  "Comparison": "equalTo",
+                  "Count": 1,
+                  "Children": [
+                    {
+                      "Kind": "and",
+                      "Value": "",
+                      "Comparison": "equalTo",
+                      "Count": 1,
+                      "Children": [
+                        {
+                          "Kind": "or",
+                          "Value": "",
+                          "Comparison": "equalTo",
+                          "Count": 1,
+                          "Children": [
+                            {
+                              "Kind": "keyword",
+                              "Value": "Thousand Sons",
+                              "Comparison": "notInstanceOf",
+                              "Count": 1,
+                              "Children": null
+                            },
+                            {
+                              "Kind": "and",
+                              "Value": "",
+                              "Comparison": "equalTo",
+                              "Count": 1,
+                              "Children": [
+                                {
+                                  "Kind": "constant",
+                                  "Value": "0",
+                                  "Comparison": "lessThan",
+                                  "Count": 1,
+                                  "Children": null
+                                },
+                                {
+                                  "Kind": "detachment",
+                                  "Value": "Grand Coven",
+                                  "Comparison": "equalTo",
+                                  "Count": 0,
+                                  "Children": null
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "Modifiers": [
+          {
+            "Id": "7213-a7b3-4c8e-96bc/2",
+            "Source": "Eldritch Vortex of E'taph",
+            "Target": "weapon",
+            "Characteristic": "S",
+            "Operation": "increment",
+            "Value": "1",
+            "Profile": "",
+            "WeaponType": "Ranged",
+            "Condition": {
+              "Kind": "constant",
+              "Value": "1",
+              "Comparison": "atLeast",
+              "Count": 1,
+              "Children": null,
+              "Label": ""
+            },
+            "Replaces": "",
+            "WeaponPredicate": {
+              "Kind": "source-category",
+              "Value": "4546-4a0c-b3be-e84c",
+              "Children": null
+            }
+          },
+          {
+            "Id": "7213-a7b3-4c8e-96bc/3",
+            "Source": "Eldritch Vortex of E'taph",
+            "Target": "weapon",
+            "Characteristic": "S",
+            "Operation": "increment",
+            "Value": "1",
+            "Profile": "",
+            "WeaponType": "Melee",
+            "Condition": {
+              "Kind": "constant",
+              "Value": "1",
+              "Comparison": "atLeast",
+              "Count": 1,
+              "Children": null,
+              "Label": ""
+            },
+            "Replaces": "",
+            "WeaponPredicate": {
+              "Kind": "source-category",
+              "Value": "4546-4a0c-b3be-e84c",
+              "Children": null
+            }
+          },
+          {
+            "Id": "7213-a7b3-4c8e-96bc/6",
+            "Source": "Eldritch Vortex of E'taph",
+            "Target": "weapon",
+            "Characteristic": "D",
+            "Operation": "append",
+            "Value": "+0",
+            "Profile": "",
+            "WeaponType": "Ranged",
+            "Condition": {
+              "Kind": "constant",
+              "Value": "1",
+              "Comparison": "atLeast",
+              "Count": 1,
+              "Children": null,
+              "Label": ""
+            },
+            "Replaces": "",
+            "WeaponPredicate": {
+              "Kind": "source-category",
+              "Value": "4986-bf86-beb4-13ac",
+              "Children": null
+            }
+          },
+          {
+            "Id": "7213-a7b3-4c8e-96bc/8",
+            "Source": "Eldritch Vortex of E'taph",
+            "Target": "weapon",
+            "Characteristic": "D",
+            "Operation": "increment",
+            "Value": "1",
+            "Profile": "",
+            "WeaponType": "Ranged",
+            "Condition": {
+              "Kind": "constant",
+              "Value": "1",
+              "Comparison": "atLeast",
+              "Count": 1,
+              "Children": null,
+              "Label": ""
+            },
+            "Replaces": "",
+            "WeaponPredicate": {
+              "Kind": "source-category",
+              "Value": "4546-4a0c-b3be-e84c",
+              "Children": null
+            }
+          },
+          {
+            "Id": "7213-a7b3-4c8e-96bc/10",
+            "Source": "Eldritch Vortex of E'taph",
+            "Target": "weapon",
+            "Characteristic": "D",
+            "Operation": "append",
+            "Value": "+0",
+            "Profile": "",
+            "WeaponType": "Melee",
+            "Condition": {
+              "Kind": "constant",
+              "Value": "1",
+              "Comparison": "atLeast",
+              "Count": 1,
+              "Children": null,
+              "Label": ""
+            },
+            "Replaces": "",
+            "WeaponPredicate": {
+              "Kind": "source-category",
+              "Value": "4986-bf86-beb4-13ac",
+              "Children": null
+            }
+          },
+          {
+            "Id": "7213-a7b3-4c8e-96bc/12",
+            "Source": "Eldritch Vortex of E'taph",
+            "Target": "weapon",
+            "Characteristic": "D",
+            "Operation": "increment",
+            "Value": "1",
+            "Profile": "",
+            "WeaponType": "Melee",
+            "Condition": {
+              "Kind": "constant",
+              "Value": "1",
+              "Comparison": "atLeast",
+              "Count": 1,
+              "Children": null,
+              "Label": ""
+            },
+            "Replaces": "",
+            "WeaponPredicate": {
+              "Kind": "source-category",
+              "Value": "4546-4a0c-b3be-e84c",
+              "Children": null
+            }
+          }
+        ]
+      },
+      "CachedEqualsUncached": true,
+      "ProseOnlyModifiers": [],
+      "Base": [
+        {
+          "Name": "Dark Blessing",
+          "Type": "Ranged",
+          "Range": "24\"",
+          "Attacks": "9",
+          "Skill": "2+",
+          "Strength": "4",
+          "Ap": "-1",
+          "Damage": "1",
+          "Keywords": "Ignores Cover, Psychic, Sustained Hits 1",
+          "SourceId": "1046-99a4-0814-e3d7",
+          "SourceCategories": [
+            "13bf-2bee-3ae0-b414",
+            "4546-4a0c-b3be-e84c",
+            "4c00-2578-faf5-6918",
+            "4f09-0141-6c70-6c5a",
+            "7002-1fbb-7571-e8e7",
+            "9693-cf84-fe69-37a9",
+            "9c0e-7e25-4580-e439",
+            "9cfd-1c32-585f-7d5c",
+            "b188-114f-6ba5-79a1",
+            "c619-2086-bbcf-69c9",
+            "eeda-8544-a2f3-3fab"
+          ]
+        },
+        {
+          "Name": "Infernal cannon",
+          "Type": "Ranged",
+          "Range": "24\"",
+          "Attacks": "3",
+          "Skill": "2+",
+          "Strength": "5",
+          "Ap": "-2",
+          "Damage": "2",
+          "Keywords": "",
+          "SourceId": "f3ac-4af-df82-2142",
+          "SourceCategories": [
+            "13bf-2bee-3ae0-b414",
+            "4c00-2578-faf5-6918",
+            "4f09-0141-6c70-6c5a",
+            "7002-1fbb-7571-e8e7",
+            "9693-cf84-fe69-37a9",
+            "9c0e-7e25-4580-e439",
+            "9cfd-1c32-585f-7d5c",
+            "b188-114f-6ba5-79a1",
+            "c619-2086-bbcf-69c9",
+            "eeda-8544-a2f3-3fab"
+          ]
+        },
+        {
+          "Name": "\u27a4 Hellforged weapons - strike",
+          "Type": "Melee",
+          "Range": "Melee",
+          "Attacks": "6",
+          "Skill": "2+",
+          "Strength": "8",
+          "Ap": "-2",
+          "Damage": "3",
+          "Keywords": "Devastating Wounds, Psychic",
+          "SourceId": "331-c78e-d974-9ea7",
+          "SourceCategories": [
+            "13bf-2bee-3ae0-b414",
+            "4546-4a0c-b3be-e84c",
+            "4c00-2578-faf5-6918",
+            "4f09-0141-6c70-6c5a",
+            "7002-1fbb-7571-e8e7",
+            "9693-cf84-fe69-37a9",
+            "9c0e-7e25-4580-e439",
+            "9cfd-1c32-585f-7d5c",
+            "b188-114f-6ba5-79a1",
+            "c619-2086-bbcf-69c9",
+            "ccdd-3987-11ed-90cd"
+          ]
+        },
+        {
+          "Name": "\u27a4 Hellforged weapons - sweep",
+          "Type": "Melee",
+          "Range": "Melee",
+          "Attacks": "12",
+          "Skill": "2+",
+          "Strength": "6",
+          "Ap": "-1",
+          "Damage": "1",
+          "Keywords": "Devastating Wounds, Psychic",
+          "SourceId": "3160-17ed-2610-b2dc",
+          "SourceCategories": [
+            "13bf-2bee-3ae0-b414",
+            "4546-4a0c-b3be-e84c",
+            "4c00-2578-faf5-6918",
+            "4f09-0141-6c70-6c5a",
+            "7002-1fbb-7571-e8e7",
+            "9693-cf84-fe69-37a9",
+            "9c0e-7e25-4580-e439",
+            "9cfd-1c32-585f-7d5c",
+            "b188-114f-6ba5-79a1",
+            "c619-2086-bbcf-69c9",
+            "ccdd-3987-11ed-90cd"
+          ]
+        }
+      ],
+      "Effective": [
+        {
+          "Name": "Dark Blessing",
+          "Type": "Ranged",
+          "Range": "24\"",
+          "Attacks": "9",
+          "Skill": "2+",
+          "Strength": "5",
+          "Ap": "-1",
+          "Damage": "2",
+          "Keywords": "Ignores Cover, Psychic, Sustained Hits 1",
+          "SourceId": "1046-99a4-0814-e3d7",
+          "SourceCategories": [
+            "13bf-2bee-3ae0-b414",
+            "4546-4a0c-b3be-e84c",
+            "4c00-2578-faf5-6918",
+            "4f09-0141-6c70-6c5a",
+            "7002-1fbb-7571-e8e7",
+            "9693-cf84-fe69-37a9",
+            "9c0e-7e25-4580-e439",
+            "9cfd-1c32-585f-7d5c",
+            "b188-114f-6ba5-79a1",
+            "c619-2086-bbcf-69c9",
+            "eeda-8544-a2f3-3fab"
+          ]
+        },
+        {
+          "Name": "Infernal cannon",
+          "Type": "Ranged",
+          "Range": "24\"",
+          "Attacks": "3",
+          "Skill": "2+",
+          "Strength": "5",
+          "Ap": "-2",
+          "Damage": "2",
+          "Keywords": "",
+          "SourceId": "f3ac-4af-df82-2142",
+          "SourceCategories": [
+            "13bf-2bee-3ae0-b414",
+            "4c00-2578-faf5-6918",
+            "4f09-0141-6c70-6c5a",
+            "7002-1fbb-7571-e8e7",
+            "9693-cf84-fe69-37a9",
+            "9c0e-7e25-4580-e439",
+            "9cfd-1c32-585f-7d5c",
+            "b188-114f-6ba5-79a1",
+            "c619-2086-bbcf-69c9",
+            "eeda-8544-a2f3-3fab"
+          ]
+        },
+        {
+          "Name": "\u27a4 Hellforged weapons - strike",
+          "Type": "Melee",
+          "Range": "Melee",
+          "Attacks": "6",
+          "Skill": "2+",
+          "Strength": "9",
+          "Ap": "-2",
+          "Damage": "4",
+          "Keywords": "Devastating Wounds, Psychic",
+          "SourceId": "331-c78e-d974-9ea7",
+          "SourceCategories": [
+            "13bf-2bee-3ae0-b414",
+            "4546-4a0c-b3be-e84c",
+            "4c00-2578-faf5-6918",
+            "4f09-0141-6c70-6c5a",
+            "7002-1fbb-7571-e8e7",
+            "9693-cf84-fe69-37a9",
+            "9c0e-7e25-4580-e439",
+            "9cfd-1c32-585f-7d5c",
+            "b188-114f-6ba5-79a1",
+            "c619-2086-bbcf-69c9",
+            "ccdd-3987-11ed-90cd"
+          ]
+        },
+        {
+          "Name": "\u27a4 Hellforged weapons - sweep",
+          "Type": "Melee",
+          "Range": "Melee",
+          "Attacks": "12",
+          "Skill": "2+",
+          "Strength": "7",
+          "Ap": "-1",
+          "Damage": "2",
+          "Keywords": "Devastating Wounds, Psychic",
+          "SourceId": "3160-17ed-2610-b2dc",
+          "SourceCategories": [
+            "13bf-2bee-3ae0-b414",
+            "4546-4a0c-b3be-e84c",
+            "4c00-2578-faf5-6918",
+            "4f09-0141-6c70-6c5a",
+            "7002-1fbb-7571-e8e7",
+            "9693-cf84-fe69-37a9",
+            "9c0e-7e25-4580-e439",
+            "9cfd-1c32-585f-7d5c",
+            "b188-114f-6ba5-79a1",
+            "c619-2086-bbcf-69c9",
+            "ccdd-3987-11ed-90cd"
+          ]
+        }
+      ],
+      "AppliedModifierSources": [
+        {
+          "Id": "7213-a7b3-4c8e-96bc/2",
+          "Source": "Eldritch Vortex of E'taph",
+          "Target": "Dark Blessing",
+          "Characteristic": "S",
+          "BaseValue": "4",
+          "EffectiveValue": "5",
+          "Condition": "",
+          "Conditional": false,
+          "Display": "Dark Blessing \u2014 S: 5\nSource: Eldritch Vortex of E'taph"
+        },
+        {
+          "Id": "7213-a7b3-4c8e-96bc/3",
+          "Source": "Eldritch Vortex of E'taph",
+          "Target": "\u27a4 Hellforged weapons - strike",
+          "Characteristic": "S",
+          "BaseValue": "8",
+          "EffectiveValue": "9",
+          "Condition": "",
+          "Conditional": false,
+          "Display": "\u27a4 Hellforged weapons - strike \u2014 S: 9\nSource: Eldritch Vortex of E'taph"
+        },
+        {
+          "Id": "7213-a7b3-4c8e-96bc/3",
+          "Source": "Eldritch Vortex of E'taph",
+          "Target": "\u27a4 Hellforged weapons - sweep",
+          "Characteristic": "S",
+          "BaseValue": "6",
+          "EffectiveValue": "7",
+          "Condition": "",
+          "Conditional": false,
+          "Display": "\u27a4 Hellforged weapons - sweep \u2014 S: 7\nSource: Eldritch Vortex of E'taph"
+        },
+        {
+          "Id": "7213-a7b3-4c8e-96bc/8",
+          "Source": "Eldritch Vortex of E'taph",
+          "Target": "Dark Blessing",
+          "Characteristic": "D",
+          "BaseValue": "1",
+          "EffectiveValue": "2",
+          "Condition": "",
+          "Conditional": false,
+          "Display": "Dark Blessing \u2014 D: 2\nSource: Eldritch Vortex of E'taph"
+        },
+        {
+          "Id": "7213-a7b3-4c8e-96bc/12",
+          "Source": "Eldritch Vortex of E'taph",
+          "Target": "\u27a4 Hellforged weapons - strike",
+          "Characteristic": "D",
+          "BaseValue": "3",
+          "EffectiveValue": "4",
+          "Condition": "",
+          "Conditional": false,
+          "Display": "\u27a4 Hellforged weapons - strike \u2014 D: 4\nSource: Eldritch Vortex of E'taph"
+        },
+        {
+          "Id": "7213-a7b3-4c8e-96bc/12",
+          "Source": "Eldritch Vortex of E'taph",
+          "Target": "\u27a4 Hellforged weapons - sweep",
+          "Characteristic": "D",
+          "BaseValue": "1",
+          "EffectiveValue": "2",
+          "Condition": "",
+          "Conditional": false,
+          "Display": "\u27a4 Hellforged weapons - sweep \u2014 D: 2\nSource: Eldritch Vortex of E'taph"
+        }
+      ],
+      "MetadataOnlyRepair": {
+        "EffectiveWeaponProfiles": [
+          {
+            "Name": "Dark Blessing",
+            "Type": "Ranged",
+            "Range": "24\"",
+            "Attacks": "9",
+            "Skill": "2+",
+            "Strength": "5",
+            "Ap": "-1",
+            "Damage": "2",
+            "Keywords": "Ignores Cover, Psychic, Sustained Hits 1",
+            "SourceId": "1046-99a4-0814-e3d7",
+            "SourceCategories": [
+              "13bf-2bee-3ae0-b414",
+              "4546-4a0c-b3be-e84c",
+              "4c00-2578-faf5-6918",
+              "4f09-0141-6c70-6c5a",
+              "7002-1fbb-7571-e8e7",
+              "9693-cf84-fe69-37a9",
+              "9c0e-7e25-4580-e439",
+              "9cfd-1c32-585f-7d5c",
+              "b188-114f-6ba5-79a1",
+              "c619-2086-bbcf-69c9",
+              "eeda-8544-a2f3-3fab"
+            ]
+          },
+          {
+            "Name": "Infernal cannon",
+            "Type": "Ranged",
+            "Range": "24\"",
+            "Attacks": "3",
+            "Skill": "2+",
+            "Strength": "5",
+            "Ap": "-2",
+            "Damage": "2",
+            "Keywords": "",
+            "SourceId": "f3ac-4af-df82-2142",
+            "SourceCategories": [
+              "13bf-2bee-3ae0-b414",
+              "4c00-2578-faf5-6918",
+              "4f09-0141-6c70-6c5a",
+              "7002-1fbb-7571-e8e7",
+              "9693-cf84-fe69-37a9",
+              "9c0e-7e25-4580-e439",
+              "9cfd-1c32-585f-7d5c",
+              "b188-114f-6ba5-79a1",
+              "c619-2086-bbcf-69c9",
+              "eeda-8544-a2f3-3fab"
+            ]
+          },
+          {
+            "Name": "\u27a4 Hellforged weapons - strike",
+            "Type": "Melee",
+            "Range": "Melee",
+            "Attacks": "6",
+            "Skill": "2+",
+            "Strength": "9",
+            "Ap": "-2",
+            "Damage": "4",
+            "Keywords": "Devastating Wounds, Psychic",
+            "SourceId": "331-c78e-d974-9ea7",
+            "SourceCategories": [
+              "13bf-2bee-3ae0-b414",
+              "4546-4a0c-b3be-e84c",
+              "4c00-2578-faf5-6918",
+              "4f09-0141-6c70-6c5a",
+              "7002-1fbb-7571-e8e7",
+              "9693-cf84-fe69-37a9",
+              "9c0e-7e25-4580-e439",
+              "9cfd-1c32-585f-7d5c",
+              "b188-114f-6ba5-79a1",
+              "c619-2086-bbcf-69c9",
+              "ccdd-3987-11ed-90cd"
+            ]
+          },
+          {
+            "Name": "\u27a4 Hellforged weapons - sweep",
+            "Type": "Melee",
+            "Range": "Melee",
+            "Attacks": "12",
+            "Skill": "2+",
+            "Strength": "7",
+            "Ap": "-1",
+            "Damage": "2",
+            "Keywords": "Devastating Wounds, Psychic",
+            "SourceId": "3160-17ed-2610-b2dc",
+            "SourceCategories": [
+              "13bf-2bee-3ae0-b414",
+              "4546-4a0c-b3be-e84c",
+              "4c00-2578-faf5-6918",
+              "4f09-0141-6c70-6c5a",
+              "7002-1fbb-7571-e8e7",
+              "9693-cf84-fe69-37a9",
+              "9c0e-7e25-4580-e439",
+              "9cfd-1c32-585f-7d5c",
+              "b188-114f-6ba5-79a1",
+              "c619-2086-bbcf-69c9",
+              "ccdd-3987-11ed-90cd"
+            ]
+          }
+        ],
+        "AppliedModifierSources": [
+          {
+            "Id": "7213-a7b3-4c8e-96bc/2",
+            "Source": "Eldritch Vortex of E'taph",
+            "Target": "Dark Blessing",
+            "Characteristic": "S",
+            "BaseValue": "4",
+            "EffectiveValue": "5",
+            "Condition": "",
+            "Conditional": false,
+            "Display": "Dark Blessing \u2014 S: 5\nSource: Eldritch Vortex of E'taph"
+          },
+          {
+            "Id": "7213-a7b3-4c8e-96bc/3",
+            "Source": "Eldritch Vortex of E'taph",
+            "Target": "\u27a4 Hellforged weapons - strike",
+            "Characteristic": "S",
+            "BaseValue": "8",
+            "EffectiveValue": "9",
+            "Condition": "",
+            "Conditional": false,
+            "Display": "\u27a4 Hellforged weapons - strike \u2014 S: 9\nSource: Eldritch Vortex of E'taph"
+          },
+          {
+            "Id": "7213-a7b3-4c8e-96bc/3",
+            "Source": "Eldritch Vortex of E'taph",
+            "Target": "\u27a4 Hellforged weapons - sweep",
+            "Characteristic": "S",
+            "BaseValue": "6",
+            "EffectiveValue": "7",
+            "Condition": "",
+            "Conditional": false,
+            "Display": "\u27a4 Hellforged weapons - sweep \u2014 S: 7\nSource: Eldritch Vortex of E'taph"
+          },
+          {
+            "Id": "7213-a7b3-4c8e-96bc/8",
+            "Source": "Eldritch Vortex of E'taph",
+            "Target": "Dark Blessing",
+            "Characteristic": "D",
+            "BaseValue": "1",
+            "EffectiveValue": "2",
+            "Condition": "",
+            "Conditional": false,
+            "Display": "Dark Blessing \u2014 D: 2\nSource: Eldritch Vortex of E'taph"
+          },
+          {
+            "Id": "7213-a7b3-4c8e-96bc/12",
+            "Source": "Eldritch Vortex of E'taph",
+            "Target": "\u27a4 Hellforged weapons - strike",
+            "Characteristic": "D",
+            "BaseValue": "3",
+            "EffectiveValue": "4",
+            "Condition": "",
+            "Conditional": false,
+            "Display": "\u27a4 Hellforged weapons - strike \u2014 D: 4\nSource: Eldritch Vortex of E'taph"
+          },
+          {
+            "Id": "7213-a7b3-4c8e-96bc/12",
+            "Source": "Eldritch Vortex of E'taph",
+            "Target": "\u27a4 Hellforged weapons - sweep",
+            "Characteristic": "D",
+            "BaseValue": "1",
+            "EffectiveValue": "2",
+            "Condition": "",
+            "Conditional": false,
+            "Display": "\u27a4 Hellforged weapons - sweep \u2014 D: 2\nSource: Eldritch Vortex of E'taph"
+          }
+        ]
+      }
+    }
+  }
+}

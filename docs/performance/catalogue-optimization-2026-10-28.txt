@@ -1,0 +1,177 @@
+Remaining optimization phases: catalogue storage, imports and evaluation
+2026-10-28 — source changes; community installers are unchanged.
+
+Implementation
+--------------
+Cache preparation checks opening recovery against a private snapshot without
+changing the reviewed import. Effective/price/detachment display repairs remain
+in the prepared view, not the persisted source. If authoritative recovery would
+still need to write a separate repaired source, normal recovery on open remains
+in charge and no prepared cache is certified. This conservative fallback keeps
+points-only and custom/legacy reference imports faithful to their preview.
+ArmyStore normalizes the accepted dataset and prepares every faction
+projection inside its import transaction before commit. Preparation reads back
+the checksummed shards, abilities and manifest. Rejected preparation, stale
+previews and failed writes roll back source rows, content, revision and roster
+migrations. A temporary reader lease protects staged files through commit.
+Adapters without the prepared-import contract retain their existing behavior.
+
+Faction-cache maintenance keeps two recent manifests plus all leased readers.
+It serializes publication/reader acquisition/collection with a filesystem lock;
+it never waits for SQLite while holding that lock. Old open views keep their
+files even after several imports. Unreferenced hashed payloads have a one-day
+grace period; corrupt manifests stop collection rather than guessing their
+dependencies. Cache failure still falls back to the complete repository when
+opening. An explicit import cannot commit an incomplete prepared projection.
+Only derived-cache/factions is collected. Original sources, user data and
+authoritative source history are never retention targets.
+Warm opens use a small retention stamp and probe excess leases; they do not
+reread old manifests when nothing is collectible. Full collection runs on a
+revision change, after excess leases become available, or once a day for orphans.
+
+SQLite schema 3 adds immutable, content-addressed catalogue objects. GLCM1
+snapshot manifests reference stable SHA-256 buckets of unit/reference definitions
+(256 buckets per kind), ordered bindings and pooled exact source metadata.
+Unchanged buckets survive provenance-only revisions. One changed definition
+replaces its bucket, not the full library. Header rules, overrides, retirement,
+coverage, source information and null-versus-empty reference lists round trip.
+Each object verifies compressed and uncompressed hashes; corrupt reuse is
+rejected. Binary transfers are at most 48 KiB, including corrupt-row guards.
+Both adapters reuse prepared statements for batch inserts. Army-entry indexes
+cover army/position loading and unit-key migration; the query-plan check verifies
+the former index is used. Android uses IMMEDIATE rather than EXCLUSIVE writes
+so concurrent readers can retain the committed snapshot during preparation.
+
+Migration is additive: existing JSON and GLDS1 snapshots stay readable and their
+source IDs are untouched. New imports use manifests; historical snapshots are
+not rewritten or deleted on startup. Existing armies, editor context and saved
+IDs survive. Dataset remains the interface used by rules, export and both UIs.
+This does not reclaim bytes already occupied by historical full snapshots.
+Older binaries cannot read an active GLCM1 revision; this is not a downgrade
+format. Distribution requires the normal new-version release process.
+
+The effective-rule evaluator reuses unchanged attachment components between
+immutable snapshots. It preserves both convergence phases, tests enhancement
+eligibility without its own grant, and expands dirty entries over old and new
+attachment edges. Global context, ordering/identity changes, roster-wide or
+unknown conditions, association constraints and prior convergence failure use
+the full evaluator. Newly discovered unsafe dependencies restart the complete
+evaluation before publication. Association constraints deliberately remain on
+the conservative path until their full dependency language is compiled.
+Army-wide pricing and validation still run normally. Weak recent-context caches
+are bounded and do not retain an edit-history chain. The uncached full evaluator
+remains available to the regression/performance harness as an oracle.
+
+Maintenance contracts
+---------------------
+LibraryRecoveryVersion.Evaluation is now army-evaluation-2. Review dependency
+guards when adding rule kinds, association scopes or direct roster reads. Keep
+unknown behavior on the full path. Persisted content format changes require a
+new prefix and reader/migration coverage; changing hash bucketing changes content
+identity. Do not change original sources or packaged rules to benchmark storage.
+
+Measurements and verification
+----------------------------
+Windows storage workload: the bundled 2,194 units and every reference field
+round-tripped through both formats for three revisions (initial, provenance
+change, then one unit price change). Stable-page payload totals were 8,874,412,
+9,044,109 and 9,238,962 bytes, versus 9,238,628, 18,473,676 and 27,704,224 bytes
+for complete snapshots. Third-revision payload is about 66.7% smaller; this is
+not a whole-application disk saving. SQLite file sizes were 9.86 MB versus
+27.97 MB after the third revision.
+These benchmark databases contain catalogue tables only, excluding army/lookup
+tables, original source archives and unrelated app files.
+
+Initial read was 833 ms versus 814 ms. Subsequent page reads were 983/841 ms,
+versus 592/726 ms; page writes 626/567/549 ms versus 548/347/318 ms. These are
+single workload observations, not reliable whole-app speedup percentages.
+Write allocations were roughly 98–107 MB versus 24–26 MB; page serialization
+and verifying reused content cost CPU/managed allocation, while transfers stay
+bounded. No alternate JSON/binary serialization format was adopted.
+
+An initial per-definition layout was rejected after measurement: first payload
+was 14.20 MB and full reads 1.66–2.09 seconds. Stable pages reduced SQL calls and
+restored compression efficiency. Only the final page layout is implemented.
+
+The 20-entry synthetic edit comparison reused 19 entries per local edit:
+380 reuses across 20 edits, 60 projected entries, with exact full-evaluator parity.
+Additional transitions cover attachments, enhancements, undo/redo, context
+changes and newly introduced unresolved dependencies.
+
+Verification: 544 full checks passed after correcting both import regressions.
+The subsequent warm-retention optimization passed all 56 final focused checks;
+no second full run after that narrow refinement is claimed. Final normal Windows
+and Android Debug builds have zero warnings/errors. Windows transaction/cache
+workflow passed all seven assertions, including concurrent committed reads,
+rollback, first-open projection reuse, retention with an active old reader and
+saved IDs. Final physical Android passed 134 assertions: 58 enhancement chooser,
+26 weapon metadata, 41 attachments, two complete-catalogue storage assertions
+(six full round trips), and seven native transaction/cache assertions.
+
+Five final warm phone starts averaged 3,965.54 ms (3,900-4,096 ms), all with zero
+full-library reads. The intermediate retention implementation averaged 4,232 ms
+and unnecessarily reread old manifests; the final stamp/probe path removes that
+work. These are separate batches, not a controlled causal speedup measurement.
+The preceding completed optimization phase averaged 3,979 ms. At 20 entries,
+final mean usable times were add 307 ms, equipment 390 ms, enhancement 499 ms,
+attachment 1,039 ms, detachment 381 ms and Home 206 ms (five samples each).
+Editing timings remain mixed; no universal editing speedup is claimed.
+
+Android catalogue payload after three revisions was 7,299,771 versus 21,784,712
+bytes (about 66.5% smaller). Repeat shared-page reads were 2.24-2.30 s and writes
+1.88-1.93 s, versus legacy reads 1.87-2.00 s and writes 1.11-1.16 s. One earlier
+final-build sample spiked to 12.25 s read/9.00 s write; it did not recur in the
+follow-up workload and remains in the recorded evidence. Managed allocation
+and integrity verification remain costs of the new format; storage reduction
+must not be described as uniformly faster imports or whole-app execution.
+
+The final isolated APK passed publisher identity/signature/archive and both ABI
+startup-binding checks, installed with adb install -r, and cold-launched on the
+connected Redmi. Its SHA-256 is:
+2eb6987973c43cdd12dfde2489234a924c66ad2208b7bfa2f1372cafdfa1c3fc
+Path: artifacts/builds/android-performance/0.2.28/GrimList-Performance-0.2.28.apk
+Package: com.grimlist.perftest. Diagnostic publishing still reports four nullable
+warnings and the existing Android symbol-reading fallback; normal builds are
+clean. The production phone app/installers were not updated. The phone was
+returned to the main application after isolated verification.
+
+Evidence
+--------
+artifacts/distribution-evidence/catalogue-optimization-full-final.log
+artifacts/distribution-evidence/catalogue-optimization-retention-final.log
+artifacts/distribution-evidence/catalogue-import-recheck.log
+artifacts/distribution-evidence/catalogue-workflow-windows.json
+artifacts/distribution-evidence/catalogue-optimization-windows-verified-build.log
+artifacts/distribution-evidence/catalogue-optimization-mobile-verified-build.log
+artifacts/distribution-evidence/catalogue-optimization-android-delivery-candidate.log
+artifacts/distribution-evidence/catalogue-optimization-phone-final-checks.log
+docs/performance/catalogue-storage-windows-2026-10-28.json
+docs/performance/catalogue-storage-android-2026-10-28.json
+docs/performance/catalogue-storage-android-repeat-2026-10-28.json
+docs/performance/catalogue-workflow-android-2026-10-28.json
+docs/performance/catalogue-runtime-android-2026-10-28.json
+The initial focused run exposed an unavailable-cache fallback regression and
+two fixture assumptions (merge-assigned IDs and corruption loops touching lease
+files). All were corrected; 55 subsequent focused checks passed before the
+stable-page layout. The final full suite covers that layout and the additional
+transition check. The first full run then found points-only preview recovery
+altering detachment metadata; recovery was split into persisted/view stages and
+the MFM regression now verifies apply as well as preview. The same first full
+run caught an extra reference supplement on custom-library reimport. Preparation
+now checks recovery without adding anything to the reviewed import; a new full
+run verifies both corrections. No live source acquisition or community package
+is claimed.
+
+Retained temporary output
+-------------------------
+Automatic approval review rejected native PowerShell cleanup of these verified
+task-owned paths with "blocked by policy". No alternate deletion method was
+attempted. They total 448,084,659 bytes (about 427.3 MiB):
+.local/tests/c00fdd6b-2108-46e2-bcf7-0d58b944e11f — 78,020,851 bytes
+.local/tests/6fd73ac5-1302-4063-bfaa-0000838abbbe — 322,905,246 bytes
+.local/tests/catalogue-storage-workload — 47,007,259 bytes
+.local/tests/catalogue-storage-pages — 1,870 bytes
+.local/tests/catalogue-workflow-native — 149,433 bytes
+Successful full/focused wrappers removed their own new GUID directories. Phone
+workloads removed their own synthetic databases/cache directories. Prior blocked
+cleanup targets, live user databases, sidecars and original sources were untouched.

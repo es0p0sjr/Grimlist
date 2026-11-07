@@ -1,0 +1,21 @@
+﻿{
+    "version":  "0.2.21",
+    "androidVersionCode":  22,
+    "files":  [
+                  {
+                      "path":  "artifacts/installers/windows/0.2.21/GrimList-0.2.21-win-x64.msi",
+                      "bytes":  97677312,
+                      "sha256":  "980d92f580ef4056001eff85aaddd502a1be536c66219549d2d1c2c9c554204a"
+                  },
+                  {
+                      "path":  "artifacts/builds/android/0.2.21/GrimList-Android-0.2.21.apk",
+                      "bytes":  103430277,
+                      "sha256":  "906953680d8e7bd48eb7b1202804fbd5675b65a6f5840e88b158eb0ec458667d"
+                  }
+              ],
+    "sharedApplicationAssembly":  {
+                                      "artifacts/builds/windows/0.2.21/GrimList.Application.dll":  "2cb2036f6f7049579a8b2159e23fa8b14fe95255cc920c9ad264e926fed0bd70",
+                                      "src/GrimList.Mobile/obj/Release/net10.0-android/android/assets/arm64-v8a/GrimList.Application.dll":  "2cb2036f6f7049579a8b2159e23fa8b14fe95255cc920c9ad264e926fed0bd70",
+                                      "src/GrimList.Mobile/obj/Release/net10.0-android/android/assets/x86_64/GrimList.Application.dll":  "2cb2036f6f7049579a8b2159e23fa8b14fe95255cc920c9ad264e926fed0bd70"
+                                  }
+}

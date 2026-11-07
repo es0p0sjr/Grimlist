@@ -1,0 +1,72 @@
+Army-rule coverage implementation verification - 2026-10-16
+
+Implementation and source policy: docs/army-rule-recovery.txt.
+The original read-only investigation remains in docs/army-rule-investigation.txt
+and docs/army-rule-coverage-audit.csv as the before-change record.
+
+Data
+- Bootstrap: grimlist-11e-2026.10.16.2.
+- Original pinned source retained: cc1830fbfead059f8059ed6c7f8e73cd4c390908.
+- 2,194 units, 36 factions, 823 detachments, 3,879 references.
+- Army-rule evidence: 47 source cards for the bootstrap revision. The payload
+  retains one additional independent reference and four obsolete source cards;
+  52 stored Army Rules records, 48 Active and four Obsolete.
+- The four retired faction-wide attributions are Power from Pain and Corsairs
+  and Travelling Players under Aeldari, Eye of the Prognosticars under Grey
+  Knights (source detachment rule), and Assigned Agents under Imperial Agents
+  (source hides it when that faction is the primary catalogue).
+- Recovery evidence covers all 36 factions in five pinned revisions:
+  cc1830fbfead059f8059ed6c7f8e73cd4c390908
+  da7248777da54218034f09b6271ad89ff6b68a77
+  6166445ea55740a9b4d0d2aedc1234c727a6d513
+  8b50fc3240e29c6ab0e254f75bcefa8cce8ce0ef
+  0fb7e6ac9cb5289c4cfe519029787d34eca95032
+- Archive content hashes were verified. No new rules were downloaded.
+
+SHA256
+Uncompressed bootstrap (37,989,657 bytes):
+22B56CF021D15BEF1816FB276BB328ED41B745FB68A0F89FBC6C9882AD17D027
+library.json.gz:
+EF3EECA312C73CAF29D6631AE415E503587EBCD2375F07A43CE6C6F4AD02B73C
+army-rule-recovery.json.gz:
+C1D30C9C0062139AEA7DDC06681F9669492271EE22E722C678F42E970707AD50
+
+Verification
+- Focused coverage/recovery checks passed, including the legacy Enhancement
+  import-preview scenario: 11 PASS, zero FAIL. The full rerun also exercises
+  the final inherited-catalogue visibility case.
+- Final full regression run: 443 PASS, zero FAIL; harness and wrapper exited 0.
+  This includes all eight new army-rule regressions, the previous Enhancement
+  and keyword-search checks, and independent pinned-source coverage validation.
+- Native Windows rules view: all 36 factions matched the shared display path;
+  no empty faction sections. Tyranids, Guard, Drukhari and both Titan factions
+  displayed their missing rules; Aeldari no longer displayed Power from Pain.
+- Windows Debug build: zero warnings/errors.
+- Android Debug test-identity build: final incremental build passed with zero
+  warnings/errors. The earlier rebuild had three pre-existing nullable warnings
+  in MainPage.Performance.cs (49, 73, 97). No Android device was
+  connected; native Android runtime behavior was not verified.
+- Bundled candidate gate passed: 2,695 Enhancements and source/import/display
+  army-rule coverage for all 36 factions; 102 unsupported Enhancement source
+  conditions remain explicitly unsupported, never guessed.
+- No community release was packaged. Existing production packages and the
+  user's live database were not replaced or edited by this task.
+
+Evidence
+artifacts/distribution-evidence/army-rule-coverage-regression.log
+artifacts/distribution-evidence/army-rule-full-regression.log
+artifacts/distribution-evidence/army-rule-native-windows.txt
+artifacts/distribution-evidence/army-rule-tyranids.png
+artifacts/distribution-evidence/army-rule-source-coverage.json
+artifacts/distribution-evidence/army-rule-android-build.log
+
+Cleanup limitations
+Automatic approval review rejected deletion as "blocked by policy". These
+isolated test directories remain; no alternate deletion method was attempted:
+.local/tests/176adc6b-bb19-4021-b396-ba17e957ebc1 (Windows smoke)
+.local/tests/2282eb70-3412-4dea-8c30-610f9c867d53 (early focused failure)
+.local/tests/bf4d34fa-75eb-49a9-959d-117f17ee2bc8 (first full run)
+Successful focused runs and the final full run were cleaned by the standard
+regression wrapper.
+The Android test APK remains in the normal Debug build directory; its cleanup
+was already rejected during the preceding keyword-search task.

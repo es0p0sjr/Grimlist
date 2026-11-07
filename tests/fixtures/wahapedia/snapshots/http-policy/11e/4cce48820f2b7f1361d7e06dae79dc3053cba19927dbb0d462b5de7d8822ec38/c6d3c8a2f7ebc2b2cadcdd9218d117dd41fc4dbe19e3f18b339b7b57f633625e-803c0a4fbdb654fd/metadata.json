@@ -1,0 +1,15 @@
+{
+  "SourceUri": "https://wahapedia.ru/robots.txt",
+  "AcquiredAt": "2026-10-05T16:52:24.348723+00:00",
+  "SourceRevision": "",
+  "SourceDate": "",
+  "ETag": "",
+  "LastModified": "",
+  "ContentHash": "c6d3c8a2f7ebc2b2cadcdd9218d117dd41fc4dbe19e3f18b339b7b57f633625e",
+  "Edition": "11",
+  "Adapter": "http-policy",
+  "AdapterVersion": "1.2",
+  "MediaType": "text/plain",
+  "Origin": "acquired",
+  "SourceFaction": ""
+}

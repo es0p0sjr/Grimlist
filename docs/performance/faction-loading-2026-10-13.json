@@ -1,0 +1,177 @@
+{
+  "Windows": {
+    "Checks": 6181,
+    "Factions": 36,
+    "TotalUnits": 2194,
+    "CacheOpenMs": 4158.9359,
+    "CacheBuilt": true,
+    "Cases": {
+      "startup-home": {
+        "full": {
+          "Samples": 5,
+          "MedianMs": 1591.9999,
+          "MedianAllocatedMiB": 388.19271087646484,
+          "LoadedUnits": [
+            2194
+          ]
+        },
+        "faction": {
+          "Samples": 5,
+          "MedianMs": 14.0554,
+          "MedianAllocatedMiB": 5.5677642822265625,
+          "LoadedUnits": [
+            0
+          ]
+        }
+      },
+      "open-army": {
+        "full": {
+          "Samples": 5,
+          "MedianMs": 67.1247,
+          "MedianAllocatedMiB": 3.5378570556640625,
+          "LoadedUnits": [
+            2194
+          ]
+        },
+        "faction": {
+          "Samples": 5,
+          "MedianMs": 115.6787,
+          "MedianAllocatedMiB": 13.355293273925781,
+          "LoadedUnits": [
+            69
+          ]
+        }
+      },
+      "switch-faction": {
+        "full": {
+          "Samples": 5,
+          "MedianMs": 47.2202,
+          "MedianAllocatedMiB": 3.57183837890625,
+          "LoadedUnits": [
+            2194
+          ]
+        },
+        "faction": {
+          "Samples": 5,
+          "MedianMs": 53.9783,
+          "MedianAllocatedMiB": 9.509307861328125,
+          "LoadedUnits": [
+            58
+          ]
+        }
+      },
+      "return-cached-faction": {
+        "full": {
+          "Samples": 5,
+          "MedianMs": 20.4114,
+          "MedianAllocatedMiB": 3.5160446166992188,
+          "LoadedUnits": [
+            2194
+          ]
+        },
+        "faction": {
+          "Samples": 5,
+          "MedianMs": 48.0341,
+          "MedianAllocatedMiB": 3.5284957885742188,
+          "LoadedUnits": [
+            69
+          ]
+        }
+      }
+    }
+  },
+  "Android": {
+    "Checks": 6310,
+    "Factions": 36,
+    "TotalUnits": 2194,
+    "CacheOpenMs": 124.1788,
+    "CacheBuilt": false,
+    "Cases": {
+      "startup-home": {
+        "full": {
+          "Samples": 5,
+          "MedianMs": 6567.8516,
+          "MedianAllocatedMiB": 437.5318908691406,
+          "LoadedUnits": [
+            2194
+          ]
+        },
+        "faction": {
+          "Samples": 5,
+          "MedianMs": 97.8942,
+          "MedianAllocatedMiB": 4.359748840332031,
+          "LoadedUnits": [
+            0
+          ]
+        }
+      },
+      "open-army": {
+        "full": {
+          "Samples": 5,
+          "MedianMs": 99.7193,
+          "MedianAllocatedMiB": 3.9198150634765625,
+          "LoadedUnits": [
+            2194
+          ]
+        },
+        "faction": {
+          "Samples": 5,
+          "MedianMs": 325.319,
+          "MedianAllocatedMiB": 15.873268127441406,
+          "LoadedUnits": [
+            69
+          ]
+        }
+      },
+      "switch-faction": {
+        "full": {
+          "Samples": 5,
+          "MedianMs": 93.456,
+          "MedianAllocatedMiB": 3.9215545654296875,
+          "LoadedUnits": [
+            2194
+          ]
+        },
+        "faction": {
+          "Samples": 5,
+          "MedianMs": 237.9858,
+          "MedianAllocatedMiB": 11.868171691894531,
+          "LoadedUnits": [
+            58
+          ]
+        }
+      },
+      "return-cached-faction": {
+        "full": {
+          "Samples": 5,
+          "MedianMs": 105.8376,
+          "MedianAllocatedMiB": 3.9100112915039062,
+          "LoadedUnits": [
+            2194
+          ]
+        },
+        "faction": {
+          "Samples": 5,
+          "MedianMs": 96.3233,
+          "MedianAllocatedMiB": 3.9214248657226562,
+          "LoadedUnits": [
+            69
+          ]
+        }
+      }
+    }
+  },
+  "AndroidPostOnlyStartup": {
+    "Samples": 5,
+    "MedianMauiEntryToReadyMs": 3043.2256
+  },
+  "Validation": {
+    "SharedChecks": 347,
+    "SharedChecksMethod": "342 existing checks passed in the final full run; all five faction-loading groups passed in the focused rerun. The full run had one new-test expectation failure corrected before the focused rerun.",
+    "WindowsFactionUiChecks": 17,
+    "WindowsFullUiSuite": "PASS",
+    "AndroidUnitSizeChecks": 46,
+    "AndroidAttachmentChecks": 37
+  },
+  "Limits": "Session/library/Home preparation and session commands, not full app launch or input-to-photon. Five samples per case plus one discarded warm-up; alternating modes. Warm OS and derived caches; no OS cache reset. Android allocation counter is approximate. First cache creation requires a complete library read. Separate Android fresh-process launches have no matched eager baseline."
+}

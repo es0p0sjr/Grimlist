@@ -1,0 +1,58 @@
+﻿Compact battle exchange and QR links - 2026-10-15
+
+Open Army menu > Battle tracker > Play with another GrimList.
+Enter your player name. Faction and disposition come from the selected army.
+New version-3 exchanges send only those three player details, plus internal
+battle/participant IDs and an invitation fingerprint for matching responses.
+They do not send the army name, units, equipment, detachments, points, limit,
+rules, secondary mode or Fixed mission choices. Discuss army lists in person.
+
+PC + Android
+1. On PC, enter your player name and select Show invitation QR.
+2. On Android, use the phone camera or QR scanner and open the grimlist:// link.
+   This uses the phone's existing scanner; GrimList has no embedded camera view.
+   The scanner must support opening custom app links. If it offers only copying,
+   copy the link and use Join / import response > Paste from clipboard instead.
+   No internet, shared Wi-Fi or file saving is needed.
+3. GrimList opens a review against the currently selected local army. If no army
+   is open, choose one and open its Battle tracker to review the pending scan.
+   Check the opponent's name, faction and disposition, enter your own player name,
+   then Join & create response. Receiving/scanning alone creates no saved battle.
+4. Return the response to the host. Another phone can scan the response QR.
+   For a PC without a scanner, use Copy exchange on Android, send/paste the text
+   into the PC's Join / import response screen, then choose Accept opponent.
+   A one-way scan cannot return Android's details to the PC automatically.
+5. On each device select Open battle, agree and select the first player, then
+   select both players' secondary modes/Fixed missions locally and Start battle.
+   These choices are not exchanged. Primary assignments derive from dispositions.
+   View players shows only the two names, factions and dispositions.
+
+The short display code is a label, not an online lookup key. There is no server,
+account, network discovery, score synchronization or background connection.
+The QR carries the exchange itself in a bounded, URL-safe grimlist://battle/ link.
+New outward file-save/share buttons have been removed; copy/paste remains as a
+fallback and old files can still be read from the import screen.
+
+Storage and compatibility
+Local army/rules snapshots remain on the local device for tracking. Shared
+packets contain no roster snapshot. Pending/completed exchanges survive restart;
+reimporting the same response resumes a battle without resetting scores or order.
+Different responses and mismatched invitation fingerprints are rejected.
+The fingerprint detects accidental changes; it is not proof of player identity.
+Legacy version-1/2 saved battles remain readable with their original hashes.
+Old packets cannot be exported again, and joining an old invitation asks its
+creator to update and generate a new compact invitation.
+
+Validation and QR implementation
+The QR encoder uses byte mode, medium error correction, mask 0, automatic version
+selection and a four-module quiet border. It is a reduced C# adaptation of Project
+Nayuki's MIT-licensed encoder. The license is embedded in the application assembly;
+the independent upstream Python implementation and license are in tools/qr_reference.
+Pinned test fixtures compare every QR module via SHA-256 across 21 sizes up to the
+1,800-character link limit. UTF-8 names round-trip inside ASCII-safe links.
+Tests inspect decompressed wire JSON to enforce exactly the three public fields
+and participant ID, with no hidden roster, points or secondary fields.
+
+Evidence: .local/compact-battle-qr/ and .local/phone-0.2.18/.
+Physical camera recognition remains a manual test; programmatic Android link
+activation checks app routing, not the phone camera's optical recognition.

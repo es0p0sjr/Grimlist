@@ -1,0 +1,26 @@
+GrimList Android 0.2.16 - 15 October 2026
+
+APK: artifacts/builds/android/0.2.16/GrimList-Android-0.2.16.apk
+Package: com.grimlist.mobile
+Version code: 17
+Size: 102881413 bytes
+SHA-256: 87bbb8e6c3b497c0f92498a22d10043fe44a9bff27e0a65519ff64376d89c1bd
+
+Includes the battle tracker, compact rounds 1-5 scoreboard, random secondary
+draws, Discard, Shuffle Back, discard-pool recovery, finish/reopen and history
+deletion. CP remains manual. Both offline mission JSON packs are embedded.
+Includes the Android primary-card separator shortening.
+
+Published from a clean source copy with the Standalone profile, arm64/x64,
+assemblies embedded, no trimming/AOT. Signature matches the installed 0.2.15
+sideload package. Native MAUI startup checks passed for both ABIs.
+Installed on connected phone kjuoaevc95hagaz9 with adb install -r: Success.
+Verified versionName 0.2.16 and versionCode 17. First install timestamp remains
+2026-10-13 23:15:00. No uninstall or data clearing was performed.
+Cold launch succeeded; existing army fnc with Norn Emissary and 250/2000 points
+loaded. Phone disallowed injected taps (INJECT_EVENTS), so interactive tracker
+verification on this device remains for the user. Windows native UI and 39
+shared battle checks passed before packaging. No Windows installer changed.
+
+Evidence: .local/phone-0.2.16/ (source hashes, publish log, previous APK,
+signature comparison, APK metadata, install log, package state and launch UI).

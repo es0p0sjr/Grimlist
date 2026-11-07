@@ -1,0 +1,395 @@
+{
+  "catalogue": {
+    "id": "5108-f98-63c2-53cb",
+    "name": "Chaos - Death Guard",
+    "revision": 17,
+    "gameSystemId": "sys-352e-adc2-7639-d610",
+    "forceEntries": [
+      {
+        "id": "cac3-71d1-ea4b-795d",
+        "name": "Crusade Force"
+      }
+    ],
+    "selectionEntryGroups": [
+      {
+        "id": "fixture-detachments",
+        "name": "Detachments",
+        "selectionEntries": [
+          {
+            "name": "Flyblown Host",
+            "id": "df4a-2ead-43d5-ea61",
+            "hidden": false,
+            "import": true,
+            "type": "upgrade",
+            "categoryLinks": [
+              {
+                "name": "Reconnaissance",
+                "id": "21a5-c2af-5d51-d15e",
+                "hidden": false,
+                "primary": false,
+                "targetId": "b4a7-5083-fe94-4d24"
+              }
+            ],
+            "constraints": [
+              {
+                "id": "5a10-a187-bde3-2b61",
+                "field": "selections",
+                "includeChildSelections": false,
+                "scope": "parent",
+                "shared": true,
+                "type": "max",
+                "value": 1
+              }
+            ],
+            "costs": [
+              {
+                "name": "pts",
+                "typeId": "51b2-306e-1021-d207",
+                "value": 0
+              },
+              {
+                "name": "Crusade Points",
+                "typeId": "b03b-c239-15a5-da55",
+                "value": 0
+              },
+              {
+                "name": "Crusade: Battle Honours",
+                "typeId": "75bb-ded1-c86d-bdf0",
+                "value": 0
+              },
+              {
+                "name": "Crusade: Experience",
+                "typeId": "a623-fe74-1d33-cddf",
+                "value": 0
+              },
+              {
+                "name": "Crusade: Weapon Modifications",
+                "typeId": "716d-91b7-d55a-1022",
+                "value": 0
+              },
+              {
+                "name": "Blackstone Fragments",
+                "typeId": "ac6b-ced3-9b5e-9a6e",
+                "value": 0
+              },
+              {
+                "name": "Detachment Points",
+                "typeId": "82ae-1066-5107-6ae0",
+                "value": 1
+              }
+            ],
+            "rules": [
+              {
+                "name": "Verminous Haze",
+                "id": "adba-7d95-8104-80da",
+                "description": "In the **Declare Battle Formations** step, you can select up to two friendly **PLAGUE MARINES** units. Those units have **Infiltrators**. \n",
+                "hidden": false
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "sharedSelectionEntries": [
+      {
+        "id": "8467-b3a2-2597-de0d",
+        "name": "Plague Marines",
+        "type": "unit",
+        "selectionEntryGroups": [
+          {
+            "name": "Enhancements",
+            "id": "1734-fd6e-2692-501f",
+            "hidden": false,
+            "sortIndex": 2,
+            "constraints": [
+              {
+                "id": "8436-8c7f-bb73-fcba",
+                "field": "selections",
+                "includeChildSelections": false,
+                "scope": "parent",
+                "shared": true,
+                "type": "max",
+                "value": 1
+              }
+            ],
+            "modifiers": [
+              {
+                "field": "hidden",
+                "type": "set",
+                "value": true,
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "childId": "cac3-71d1-ea4b-795d",
+                        "field": "forces",
+                        "includeChildForces": true,
+                        "includeChildSelections": true,
+                        "scope": "roster",
+                        "shared": true,
+                        "type": "lessThan",
+                        "value": 1
+                      },
+                      {
+                        "childId": "df4a-2ead-43d5-ea61",
+                        "childName": "Flyblown Host",
+                        "field": "selections",
+                        "includeChildForces": false,
+                        "includeChildSelections": true,
+                        "scope": "roster",
+                        "shared": true,
+                        "type": "lessThan",
+                        "value": 1
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "selectionEntries": [
+              {
+                "name": "Insectile Murmuration",
+                "id": "12d7-6407-cf26-3abb",
+                "hidden": false,
+                "import": true,
+                "type": "upgrade",
+                "constraints": [
+                  {
+                    "id": "d28f-3231-9858-c37f",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "roster",
+                    "shared": true,
+                    "type": "max",
+                    "value": 3
+                  }
+                ],
+                "costs": [
+                  {
+                    "name": "pts",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 15
+                  },
+                  {
+                    "name": "Crusade Points",
+                    "typeId": "b03b-c239-15a5-da55",
+                    "value": 0
+                  },
+                  {
+                    "name": "Crusade: Battle Honours",
+                    "typeId": "75bb-ded1-c86d-bdf0",
+                    "value": 0
+                  },
+                  {
+                    "name": "Crusade: Experience",
+                    "typeId": "a623-fe74-1d33-cddf",
+                    "value": 0
+                  },
+                  {
+                    "name": "Crusade: Weapon Modifications",
+                    "typeId": "716d-91b7-d55a-1022",
+                    "value": 0
+                  },
+                  {
+                    "name": "Blackstone Fragments",
+                    "typeId": "ac6b-ced3-9b5e-9a6e",
+                    "value": 0
+                  },
+                  {
+                    "name": "Detachment Points",
+                    "typeId": "82ae-1066-5107-6ae0",
+                    "value": 0
+                  },
+                  {
+                    "name": "Enhancements",
+                    "typeId": "f759-1bc4-cb3a-f0d2",
+                    "value": 1
+                  }
+                ],
+                "modifierGroups": [
+                  {
+                    "type": "and",
+                    "modifiers": [
+                      {
+                        "field": "f759-1bc4-cb3a-f0d2",
+                        "type": "divide",
+                        "value": 2,
+                        "conditions": [
+                          {
+                            "childId": "12d7-6407-cf26-3abb",
+                            "childName": "Insectile Murmuration",
+                            "field": "selections",
+                            "includeChildForces": true,
+                            "includeChildSelections": true,
+                            "scope": "roster",
+                            "shared": true,
+                            "type": "equalTo",
+                            "value": 2
+                          }
+                        ]
+                      },
+                      {
+                        "field": "f759-1bc4-cb3a-f0d2",
+                        "type": "divide",
+                        "value": 3,
+                        "conditions": [
+                          {
+                            "childId": "12d7-6407-cf26-3abb",
+                            "childName": "Insectile Murmuration",
+                            "field": "selections",
+                            "includeChildForces": true,
+                            "includeChildSelections": true,
+                            "scope": "roster",
+                            "shared": true,
+                            "type": "atLeast",
+                            "value": 3
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "profiles": [
+                  {
+                    "name": "Insectile Murmuration",
+                    "id": "386a-34d2-9ad8-476b",
+                    "hidden": false,
+                    "typeId": "9cc3-6d83-4dd3-9b64",
+                    "typeName": "Abilities",
+                    "characteristics": [
+                      {
+                        "name": "Description",
+                        "$text": "When this unit’s attacks target a unit within **Contagion Range** of a friendly unit, those attacks can re‑roll **wound rolls** of 1.",
+                        "typeId": "9b8f-694b-e5e-b573"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "Plagueveil",
+                "id": "ca9d-efd7-c509-04ca",
+                "hidden": false,
+                "import": true,
+                "type": "upgrade",
+                "constraints": [
+                  {
+                    "id": "1b82-6d50-9bf5-fbcd",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "roster",
+                    "shared": true,
+                    "type": "max",
+                    "value": 3
+                  }
+                ],
+                "costs": [
+                  {
+                    "name": "pts",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 15
+                  },
+                  {
+                    "name": "Crusade Points",
+                    "typeId": "b03b-c239-15a5-da55",
+                    "value": 0
+                  },
+                  {
+                    "name": "Crusade: Battle Honours",
+                    "typeId": "75bb-ded1-c86d-bdf0",
+                    "value": 0
+                  },
+                  {
+                    "name": "Crusade: Experience",
+                    "typeId": "a623-fe74-1d33-cddf",
+                    "value": 0
+                  },
+                  {
+                    "name": "Crusade: Weapon Modifications",
+                    "typeId": "716d-91b7-d55a-1022",
+                    "value": 0
+                  },
+                  {
+                    "name": "Blackstone Fragments",
+                    "typeId": "ac6b-ced3-9b5e-9a6e",
+                    "value": 0
+                  },
+                  {
+                    "name": "Detachment Points",
+                    "typeId": "82ae-1066-5107-6ae0",
+                    "value": 0
+                  },
+                  {
+                    "name": "Enhancements",
+                    "typeId": "f759-1bc4-cb3a-f0d2",
+                    "value": 0
+                  }
+                ],
+                "modifierGroups": [
+                  {
+                    "type": "and",
+                    "modifiers": [
+                      {
+                        "field": "f759-1bc4-cb3a-f0d2",
+                        "type": "divide",
+                        "value": 2,
+                        "conditions": [
+                          {
+                            "childId": "ca9d-efd7-c509-04ca",
+                            "childName": "Plagueveil",
+                            "field": "selections",
+                            "includeChildForces": true,
+                            "includeChildSelections": true,
+                            "scope": "roster",
+                            "shared": true,
+                            "type": "equalTo",
+                            "value": 2
+                          }
+                        ]
+                      },
+                      {
+                        "field": "f759-1bc4-cb3a-f0d2",
+                        "type": "divide",
+                        "value": 3,
+                        "conditions": [
+                          {
+                            "childId": "ca9d-efd7-c509-04ca",
+                            "childName": "Plagueveil",
+                            "field": "selections",
+                            "includeChildForces": true,
+                            "includeChildSelections": true,
+                            "scope": "roster",
+                            "shared": true,
+                            "type": "atLeast",
+                            "value": 3
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "profiles": [
+                  {
+                    "name": "Plagueveil",
+                    "id": "9a99-4696-91ef-4734",
+                    "hidden": false,
+                    "typeId": "9cc3-6d83-4dd3-9b64",
+                    "typeName": "Abilities",
+                    "characteristics": [
+                      {
+                        "name": "Description",
+                        "$text": "This unit has ‑3\" **detection range**.",
+                        "typeId": "9b8f-694b-e5e-b573"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

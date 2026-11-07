@@ -1,0 +1,70 @@
+GrimList: Windows performance diagnosis - 13 October 2026
+
+Scope: measurements and report only. No production changes or deployment. Android was not accessed during this follow-up.
+
+The dominant Windows refresh bottleneck is attachment candidate validation. It is called when viewing a unit and after ordinary edits, even when the user is not opening the attachment picker. Broad control rebuilding is a lower priority in the measured fixture.
+
+Release WPF diagnostic run: 20 recorded samples per action, one warm-up, 20-unit Death Guard fixture, ten saved armies. Times below are milliseconds.
+Action            Total median / p95   Render submit   Attachment choices   Frame wait
+open                1297 / 1497            990                 923          187
+datasheet           1099 / 1177            988                 973           89
+add                 1537 / 1695           1178                1126          193
+equipment           1512 / 1786           1139                1083          191
+enhancement         2022 / 2498           1519                1459          140
+attachment          2938 / 3789           2169                1295          149
+detachment          1576 / 1753           1237                1180          137
+home                 809 /  872            678                   0          127
+
+These are diagnostic measurements of the same production behavior, not optimized before/after results. Sample-to-sample and run-to-run variation is expected.
+
+1. Highest-impact target: attachment choices
+   Candidate validation accounts for 97.1% of datasheet render submission and 95.2% of equipment render submission.
+   MainWindow.RefreshDetails always calls RefreshAttachments; the latter calls session.AttachmentCandidates.
+   AttachmentCandidates runs LeaderRules.Problem for each potential relationship. CombinationProblem builds a fresh proposed army, then asks for its effective datasheets. The existing effective-roster cache is keyed by army object, dataset and excluded enhancement, so it cannot reuse a proposal that is freshly allocated on every refresh.
+   That call graph is a source-based explanation consistent with the measured timing; individual cache misses were not counted in this pass.
+   Recommended implementation: compute choices when the picker is opened, and reuse them for unchanged immutable army/dataset inputs. Evaluate safe early rejection and shared proposal work after that. Preserve full proposed-group validation and enhancement-dependent eligibility.
+   Do not just add a cache around the selected datasheet: Details.Project is already effectively free in these samples; the costly work is inside candidate proposals.
+   After attaching a leader, enhancement-choice validation additionally costs 611 ms within 641 ms of enhancement presentation; attached-effects presentation costs 196 ms. These also deserve deferred/reused proposal calculations after attachment candidates.
+   Enhancement choices currently call Enhancements.Select on hypothetical selections while building their display. Any optimization must preserve the exclusion of an enhancement's own eligibility grants.
+   Evidence: src/GrimList.Desktop/MainWindow.Leaders.cs:56; src/GrimList.Application/ArmySession.cs:281; src/GrimList.Core/LeaderRules.cs:32; src/GrimList.Core/EffectiveRosterEvaluation.cs:20.
+
+2. Smallest targeted change: avoid a full refresh when metadata did not change
+   Calling the unchanged-fields commit path costs 1205 ms median (1323 ms p95), including 1067 ms in Render.
+   The actual GoHome handler plus render readiness costs 1780 ms median (1933 ms p95). It first commits unchanged fields and refreshes the editor, then renders Home.
+   ArmySession.SetMetadata saves even when name/limit match; Desktop.Edit then calls Render unconditionally. The same CommitFields path is called by field LostFocus, Home, AddUnit, detachment buttons and other navigation.
+   Recommended implementation: preserve required saving/validation, but avoid a visual refresh when metadata is unchanged. Avoid refreshing the editor immediately before hiding it for navigation.
+   The original Home benchmark and the table above call ShowHome directly. They measure Home presentation, not the entire Home-button handler; the additional handler measurement closes that gap.
+   Evidence: src/GrimList.Desktop/MainWindow.xaml.cs:68,293,305; src/GrimList.Application/ArmySession.cs:147.
+
+3. Reuse the existing Home summary cache
+   Home spends 660 ms calculating ten saved armies within 663 ms of tile refresh.
+   Existing session.LoadArmySummaries API: first call 456.9 ms, 9 calculations; twenty unchanged warm reads median 2.91 ms, p95 11.35 ms, zero recalculations.
+   Every returned total/completeness/validation flag was compared with direct ArmyCalculator results. The cold call can reuse the currently open army result; the remaining armies still need calculation.
+   Recommended implementation: have Windows HomeView consume these summaries, then retain unchanged cards where useful. This API-only measurement excludes tile construction/layout and is not an implemented end-to-end speedup.
+   Evidence: src/GrimList.Desktop/HomeView.xaml.cs:22; src/GrimList.Application/ArmySession.Summaries.cs:16.
+
+4. Startup remains a separate, larger project
+   Earlier five-run Windows medians: existing empty Home 3.54 s; ten saved armies 4.47 s. Empty startup includes about 1.20 s loading the dataset, 0.55 s effective-data recovery, and 0.66 s building dataset indexes.
+   Explore loading fewer records before Home readiness and retaining reusable indexes. This follow-up did not remeasure startup; these figures come from docs/performance/measured-2026-10-13.txt.
+
+Lower priorities in this fixture:
+   Equipment: loadout controls 2.5 ms; library refresh 4.4 ms; direct measured save 9.7 ms; copying 0.4 ms.
+   After eliminating repeated rule checks, remeasure frame/layout work before choosing virtualization or widespread control reuse. No scrolling/jank benchmark was performed.
+
+Recommended implementation order:
+   A. Skip redundant unchanged-field/editor refreshes and connect Home to cached summaries.
+   B. Defer/reuse attachment choice computation, preserving correctness for changes, imports, undo/redo and enhancement-granted permissions.
+   C. Remeasure real handlers and only then tackle startup and remaining frame work.
+   Future regression checks should cover AttachmentCombinationChecks, AttachmentRecipientChecks, EffectiveDatasheetChecks, ArmySummaryChecks and matching Windows smoke cases. These are recommendations for a future implementation pass, not changes made here.
+
+Method and limits:
+   The source snapshot is the same as the original measured pass. Timing scopes were added only in an isolated diagnostic copy. Release build passed with zero warnings/errors.
+   160 shared-command/native-presentation samples plus 40 synchronous native-handler samples; 20 recorded samples per case and one discarded warm-up. The original operation harness resets the fixture outside timing and runs commands through ArmySession.RunAsync, followed by WPF presentation. Navigation cases invoke CommitFields and GoHome synchronously on the UI thread.
+   The navigation fixture selects Lord of Contagion; datasheet/equipment cases use Plague Marines. All rosters and libraries belong to an isolated database. No user roster was changed.
+   Readiness waits for layout plus two CompositionTarget.Rendering callbacks and ApplicationIdle. This is a render-readiness proxy, not hardware input-to-photon latency. OS/background activity and caches were not reset.
+   Nested timing scopes overlap: Render.Total includes Details.Total, and Details.Attachments includes Attachments.Candidates. Do not add parent and child timings. Separate phase medians also need not sum to the total median.
+   Allocation counts include diagnostic overhead; the navigation harness uses the same precise allocation counter as the original Windows run. Timing-probe overhead was not isolated. No optimized build or speedup claim is presented.
+   Windows 11 / Intel Core i7-9750H / .NET 10.0.10, as in the original baseline.
+   Validation: 236 original source/resource hashes unchanged; all 200 expected interaction samples present; twenty warm summary reads performed zero calculations and matched direct totals.
+
+Raw evidence: .local/windows-profile-20261013/interactions/performance.json; navigation/performance.json; navigation/summaries.json. Diagnostic source and prepare/measure scripts are retained in the same folder.

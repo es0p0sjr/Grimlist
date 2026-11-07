@@ -1,0 +1,106 @@
+{
+  "ApkSha256": "2eb6987973c43cdd12dfde2489234a924c66ad2208b7bfa2f1372cafdfa1c3fc",
+  "Package": "com.grimlist.perftest",
+  "StartupSamplesMs": [
+    3917.3076,
+    4006.7248,
+    3900.3591,
+    3907.2033,
+    4096.1092
+  ],
+  "StartupMeanMs": 3965.5408,
+  "StartupFullReads": [
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "Operations": [
+    {
+      "Entries": 3,
+      "Operation": "add",
+      "Samples": 5,
+      "MeanUsableMs": 93.6126,
+      "MeanCommandMs": 75.32694
+    },
+    {
+      "Entries": 3,
+      "Operation": "attachment",
+      "Samples": 5,
+      "MeanUsableMs": 430.4117,
+      "MeanCommandMs": 190.01658
+    },
+    {
+      "Entries": 3,
+      "Operation": "detachment",
+      "Samples": 5,
+      "MeanUsableMs": 222.17788,
+      "MeanCommandMs": 59.60022
+    },
+    {
+      "Entries": 3,
+      "Operation": "enhancement",
+      "Samples": 5,
+      "MeanUsableMs": 170.08396,
+      "MeanCommandMs": 125.56392
+    },
+    {
+      "Entries": 3,
+      "Operation": "equipment",
+      "Samples": 5,
+      "MeanUsableMs": 140.5292,
+      "MeanCommandMs": 105.94564
+    },
+    {
+      "Entries": 3,
+      "Operation": "home",
+      "Samples": 5,
+      "MeanUsableMs": 142.1059,
+      "MeanCommandMs": 5.8729
+    },
+    {
+      "Entries": 20,
+      "Operation": "add",
+      "Samples": 5,
+      "MeanUsableMs": 306.74932,
+      "MeanCommandMs": 281.33998
+    },
+    {
+      "Entries": 20,
+      "Operation": "attachment",
+      "Samples": 5,
+      "MeanUsableMs": 1039.40592,
+      "MeanCommandMs": 631.0082600000001
+    },
+    {
+      "Entries": 20,
+      "Operation": "detachment",
+      "Samples": 5,
+      "MeanUsableMs": 380.56282,
+      "MeanCommandMs": 246.91974
+    },
+    {
+      "Entries": 20,
+      "Operation": "enhancement",
+      "Samples": 5,
+      "MeanUsableMs": 499.21936,
+      "MeanCommandMs": 440.29822
+    },
+    {
+      "Entries": 20,
+      "Operation": "equipment",
+      "Samples": 5,
+      "MeanUsableMs": 389.93562,
+      "MeanCommandMs": 350.20706
+    },
+    {
+      "Entries": 20,
+      "Operation": "home",
+      "Samples": 5,
+      "MeanUsableMs": 206.25632,
+      "MeanCommandMs": 5.34406
+    }
+  ],
+  "Limitation": "Separate workload batches, not a controlled whole-app speedup measurement."
+}

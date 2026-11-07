@@ -1,0 +1,79 @@
+Army-rule coverage investigation - 2026-10-16
+
+Scope and evidence
+Audited all 36 factions in the live local library (read-only SQLite transaction)
+and the shipped bootstrap. Inspected their cached BSData source archives and
+traced shared import, matching, recovery and both frontend display paths.
+No application code, library, army or bundled resource was changed. No live
+download or current upstream rules verification was performed.
+
+Live source: 0fb7e6ac9cb5289c4cfe519029787d34eca95032, dated 2026-10-14.
+Content SHA256: 76e61be4e86ea63030c93ba13fb57c6c67f76882328802ebb509f566ed27d270.
+Bootstrap source: cc1830fbfead059f8059ed6c7f8e73cd4c390908, dated 2026-10-02.
+All-faction inventory: docs/army-rule-coverage-audit.csv. Counts describe the
+stored cards and traced current matching/display conditions; this investigation
+did not perform a new full import or launch each faction's native UI.
+
+Confirmed empty army-rule sections in the live library
+- Tyranids: Synapse and Shadow in the Warp are missing as army-rule cards.
+  The source defines both in Library - Tyranids.json. The primary catalogue
+  also links Synapse directly through its root infoLinks. Unit abilities retain
+  Synapse on 59 imported units and Shadow in the Warp on 21.
+- Astra Militarum: Voice Of Command is defined in its linked library and
+  retained in 18 imported unit profiles, but no army-rule card is emitted.
+- Drukhari: Power from Pain and Corsairs and Travelling Players are defined
+  in the shared Aeldari library with explicit Drukhari applicability. Neither
+  becomes a Drukhari army-rule card. Power from Pain remains on 25 unit profiles.
+- Titan Legions and Chaos Titan Legions: Towering Example is imported, but
+  marked Unresolved and hidden in each faction. Both have a valid catalogue
+  identity in FactionContexts and zero detachment definitions.
+
+Cause 1: rules discovery incorrectly follows native roster inheritance
+BsDataImporter.Include loads all linked catalogues into the registry, so the
+definitions are available. However, NativeCatalogues follows only links whose
+importRootEntries is true and whose faction matches (or is a marine parent).
+ReadReferences emits army-rule cards only from rules/sharedRules directly on
+those native roots. It does not emit their root infoLinks as army-rule cards.
+Tyranids and Astra Militarum link their own libraries without importRootEntries;
+Drukhari links a differently named shared Aeldari library the same way. Their
+rules therefore disappear from the army-rule reference collection while unit
+profile extraction can still resolve the same definitions.
+
+Cause 2: faction matching incorrectly requires detachment metadata
+ReferenceMatching.Lookup builds FactionIds solely from data.Detachments and
+ignores data.FactionContexts. A card with an explicit FactionId cannot fall
+back to its name. Both Titan factions therefore fail exact identity matching,
+despite having correct catalogue IDs. ReferenceMerge stores them Unresolved;
+ReferenceIndex excludes them from both platforms' army-rule display.
+
+Other findings
+- All remaining 31 factions have at least one usable army-rule card. This is
+  not a claim that every rule's completeness or applicability is correct.
+- Space Marines and eleven chapters have Combat Doctrines because
+  SpaceMarineArmyRule.Apply supplies a targeted recovery supplement. Raw
+  bootstrap cards do not include Combat Doctrines. Their visible coverage
+  masks the underlying library-rule discovery limitation.
+- The inverse scope defect is visible in Aeldari: Power from Pain appears as
+  an Aeldari army-rule card even though its source hides it outside Drukhari.
+  ReadReferences assigns all native-root shared rules to the importing faction;
+  conditions attached to rule effects do not filter reference card visibility.
+- A cross-check of shared source rules against imported unit abilities also
+  finds allied rules, weapon rules and model-specific abilities (for example
+  Librarius and Transhuman Strategist). These cannot all be promoted safely
+  into army rules merely because they occur on imported units.
+- ReferenceCoverageAudit currently measures Stratagem scopes. The new bundled
+  eligibility candidate gate measures Enhancements. Neither validates army-rule
+  completeness or proves each faction's imported army-rule cards are displayable.
+- This omission exists in both the older bootstrap and the newer live source
+  import. Keyword search and battle-secondary collapse touch neither path.
+
+Recommended generic correction (not implemented in this investigation)
+Separate army-rule discovery from roster-root inclusion: resolve catalogue
+references and linked definitions using explicit faction/catalogue applicability,
+respect source visibility and detachment scope, and retain source identities.
+Use FactionContexts for faction identity matching independently of detachments,
+preserving ambiguity rejection and existing tombstone/override ownership.
+Add source-to-import-to-display army-rule coverage validation, including
+nonempty-but-incomplete and wrongly attributed collections. Regenerate bundled
+data and provide provenance-aware recovery for existing imports. Avoid adding
+another faction-specific supplement or copying every unit ability into army rules.

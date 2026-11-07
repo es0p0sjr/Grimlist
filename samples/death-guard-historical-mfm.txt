@@ -1,0 +1,10 @@
+MUNITORUM FIELD MANUAL
+VERSION 2.4
+INDEX: DEATH GUARD
+Death Guard Rhino
+1 model 75 pts
+Poxwalkers
+10 models 50 pts
+20 models 100 pts
+Typhus
+1 model 80 pts

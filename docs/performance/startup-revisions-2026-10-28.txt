@@ -1,0 +1,156 @@
+Startup and independent catalogue revisions
+Date: 2026-10-28
+
+Implemented boundaries
+----------------------
+CacheJsonContext supplies generated JSON metadata for faction manifests, payloads,
+shared definitions, dependency tables and persisted army summaries. Timings separate
+checksum verification, JSON metadata creation and deserialization. Unknown helper
+payload types retain the normal serializer fallback; catalogue types use generated
+metadata. This is a derived-cache change, not a new export or SQLite format.
+
+The factions-4 startup manifest pools repeated SourceInfo records from detachment
+definitions and reference coverage, in addition to existing unit/card bindings.
+Loading restores every field and null source exactly. Header binding lengths and
+indices are validated before use. A compatible factions-3 manifest with the same
+repository revision, recovery/availability contracts and local evidence inventory
+can migrate atomically without loading or recovering the complete library. Changed
+contracts/source revisions and corrupt or incompatible caches take the full path.
+
+LibraryRecoveryVersion now defines explicit normalization, static compilation,
+availability and evaluation contracts. References, enhancement eligibility,
+effective/weapon metadata and catalogue recovery have independent evidence stamps.
+Directory.Build.targets hashes relevant embedded evidence at build time and emits
+assembly metadata. Startup reads these small fingerprints, not every archive.
+Application/Core module identities are no longer cache versions. Ordinary UI or
+unrelated code changes do not force recovery when these contracts/evidence agree.
+
+Downloaded recovery archives remain immutable commit-pinned sources. The local
+bsdata-* directory/file inventory (names, sizes and UTC modification times) changes
+the manifest key when archives arrive or are replaced. Inaccessible inventories
+cannot certify a cache hit. Full recovery still applies its original source/hash/
+edition/identity guards; this optimization never establishes new rule evidence.
+
+Availability is cached by host faction/candidate faction pair. Each input fingerprint
+includes the host/global lifecycle and override metadata, relevant detachment routes,
+candidate name/faction/category/keywords/required detachments and source editions.
+These are the facts consumed by UnitAvailability and AlliedRules. Unchanged pairs
+reuse their result; changed inputs run the existing evaluator. Finding one eligible
+unit is sufficient to include its faction, avoiding redundant checks of every unit
+in an already accepted candidate faction. The current pair table replaces its
+predecessor, keeping this new cache bounded.
+
+Scoped summary revisions include faction content, applicable allies, saved foreign
+units, metadata owners, global rules, relative unit/card ordering and runtime rule
+contracts. An unrelated faction import no longer invalidates every saved army.
+Unknown schemas/scopes fall back to the complete revision. Shared weapon explanation
+text has a display revision; it does not invalidate unrelated numeric/validation
+summaries. Relevant unit abilities and global rule cards remain calculation inputs.
+Displayed provenance and shared definitions participate in view revisions.
+
+Source names/editions are semantic inputs; dates, commit/archive IDs and URLs remain
+exact display/recovery provenance. Recovery runs before semantic fingerprints are
+computed. Full source records remain in manifests and exported datasets. A source
+change that produces different recovered semantics changes the content revision.
+
+Unchanged loaded faction payloads can be reused across an import/reload, retaining
+immutable profile/ability identities and their existing compiled text caches. Each
+new Dataset still receives the current header and exact source bindings. Payload
+retention follows the existing two-view bound; summary dependency-key memoization
+is bounded at 64 combinations. Old saved summary files are ignored in favor of the
+single current summaries-2 file, whose individual rows validate their own inputs.
+
+Contract maintenance
+--------------------
+- Normalization: bump when persisted library/reference compatibility interpretation
+  changes. Update affected recovery contracts as well when their responsibilities change.
+- Compilation: bump when static rule/fallback interpretation changes. Evaluation
+  must also change when resulting pricing or validation behavior changes.
+- Availability: bump for UnitAvailability/AlliedRules/lifecycle predicate or fact
+  extraction changes; update the candidate/host inputs if a new dependency is read.
+- Evaluation: bump when ArmyCalculator or its runtime dependencies can change saved
+  totals/completeness/validation without a catalogue content change.
+- Resource additions: ensure the consuming recovery stamp names the new evidence.
+  Packaged resource bytes are checked against their build fingerprints in regression.
+- New Dataset fields/schema or runtime uses of provenance require reviewing the
+  semantic/header dependency projection before enabling fine-grained reuse.
+- Layout changes require a new faction manifest/content contract or an explicitly
+  validated migration. Missing/corrupt caches always remain disposable.
+
+Limits and remaining roadmap
+----------------------------
+Actual source changes still load and recover the complete authoritative Dataset
+before constructing the new manifest. Unchanged faction payloads/dependency results
+and summaries are reused, but this does not make the importer incremental end to end.
+Preparing projections before import activation, general cache-history retention,
+authoritative SQLite content-sharing/migration and incremental roster evaluation
+remain separate later phases. Full evaluation remains the correctness oracle.
+
+Verification and measurements
+----------------------------
+535 full regression checks passed before the final header-pooling, metadata-owner
+and conservative unknown-scope refinements. The final 33 focused checks passed,
+covering those refinements, compatible migration, corruption, unavailable publication,
+source/version guards, exact provenance, independent summaries/routes, loaded-profile
+reuse and actual packaged resource fingerprints. No second full run is claimed.
+An initial fixture used an invalid source date; it was corrected to an ISO date
+without changing product validation. Successful wrappers cleaned their own runs.
+
+The final all-catalogue workload passed 5,626 comparisons across 36 factions and
+2,194 units, including full/scoped profiles, references, detachments, allies, weapon
+explanations and roster calculations. Its 40 samples are in:
+  docs/performance/faction-loading-revisions-2026-10-28.json
+Both final Windows and normal Android Debug builds had zero warnings/errors.
+The performance publisher passed identity/signature/archive and both ABI startup
+checks; its existing symbol fallback and three nullable warnings remain.
+
+Physical Redmi 22101316UG, serial kjuoaevc95hagaz9, isolated com.grimlist.perftest:
+  - 58 enhancement chooser, 26 metadata and 41 attachment checks passed (125 total).
+  - Five baseline cold launches ranged 3,783--8,127 ms, mean 6,662 ms. Conditions
+    were variable; this is not a clean paired A/B for a percentage speedup.
+  - The intermediate contract/layout transition rebuilt projections once and took
+    28,834 ms. Subsequent intermediate launches averaged 3,971 ms.
+  - The final compatible v3-to-v4 migration took 4,110 ms: MigratedManifest=true,
+    FullReads=0 and DependencyCalculations=0. This validates reuse across different
+    Application builds with unchanged evidence/contracts. Shipped older module-keyed
+    caches still require a one-time rebuild when first adopting the new contracts.
+  - Four following final cold launches averaged 3,979 ms, all FullReads=0.
+    Startup still restores/calculates the selected 20-entry army. This work remains
+    substantial; generated metadata and compact sources do not remove it.
+  - Final manifest reading averaged 752 ms. Metadata creation and deserialization
+    are separately recorded; stage totals nest and must not be added twice.
+  - 60 final edit samples, five per operation/size after warm-up. 20-entry means:
+    add 300 ms, equipment 317 ms, enhancement 579 ms, attachment 994 ms,
+    detachment 555 ms, Home 303 ms. These are observed current-workload timings;
+    differing batch conditions prevent attributing the whole change to one feature.
+
+Actual decompressed UTF-8 manifest size: 1,533,235 -> 1,213,911 bytes (20.8% less).
+Compressed checked file: 221,817 -> 210,266 bytes (5.2% less). Earlier exploratory
+JSON-size figures used reserialized JSON including spaces; these are actual bytes.
+Exact verified diagnostic APK SHA-256:
+  e72464adebfc342121f61e0ceb5703b90cda4ac99093ab10455a319a660016d0
+Raw timings, contexts, contracts/module ID and native reports:
+  docs/performance/android-startup-revisions-2026-10-28.json
+
+Key logs under artifacts/distribution-evidence:
+  startup-revisions-full.log
+  startup-revisions-final-focused.log
+  startup-revisions-workload-final.log
+  startup-revisions-native.log
+  startup-revisions-mobile-build.log
+  startup-revisions-windows-final-build.log
+  startup-revisions-pooled-publish.log
+
+No community installer/APK was replaced. The normal phone app remains 0.2.28 and
+was brought back to the foreground. No live rules download or production database
+migration occurred; all device fixtures used the separate performance app.
+
+Retained test output
+--------------------
+Automatic approval review rejected guarded native PowerShell cleanup as "blocked
+by policy". No alternate deletion was attempted. These synthetic paths remain:
+  .local/tests/startup-revisions-workload
+    46 files, 38,798,114 bytes; concise report preserved in docs.
+  .local/tests/820c648d-3b95-48e1-9d8f-4cd0768143ad
+    155 files, 6,490,977 bytes; initial invalid-date fixture failure.
+Total: 45,289,091 bytes (~43.2 MiB). Previously blocked paths were not retried.

@@ -1,0 +1,31 @@
+{
+  "version": "0.2.14",
+  "platform": "Windows",
+  "files": [
+    {
+      "name": "GrimList-Windows-0.2.14.inventory.json",
+      "bytes": 109494,
+      "sha256": "494417bef7a37e633ec6dbb42a4bab4edff5100b7b67dcdb2f1c7aff1f60be44"
+    },
+    {
+      "name": "GrimList-Windows-0.2.14.msi",
+      "bytes": 97353728,
+      "sha256": "01061cb08203718dedb8f7e702c565aad31685695056103ca5959bd220c3868f"
+    },
+    {
+      "name": "GrimList-Windows-0.2.14.msi.sha256",
+      "bytes": 95,
+      "sha256": "9b1f7812aeaf4aa24780dbb3f5f5d3a3334f2641314d125ac9e0332d95490990"
+    },
+    {
+      "name": "GrimList-Windows-0.2.14.zip",
+      "bytes": 96617696,
+      "sha256": "da43fd8d795d8bb9244678509ff53f136b79749a6d06cfc7636547429e5cb9a6"
+    },
+    {
+      "name": "README.txt",
+      "bytes": 1042,
+      "sha256": "7e857babe4d173af8e17e9744435839a46af83d6a7e8bcb4efeabb8a585823e6"
+    }
+  ]
+}

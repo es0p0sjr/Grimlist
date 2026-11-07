@@ -1,0 +1,141 @@
+Battle tracker: first scoring UI (2026-10-14)
+
+Entry point
+Open a saved army, then its menu > Battle tracker. The army must use Warhammer
+40,000 11th edition and have an available Force Disposition selected to start
+a new battle. Existing records remain accessible even if the roster changes.
+
+Setup and presentation
+- Choose opponent name/disposition, first player, and each player's Fixed or
+  Tactical secondary mode. Fixed players choose two different eligible cards.
+- Both primaries are assigned from the existing verified disposition matrix.
+- Setup is locked on starting a battle; changing the roster later does not
+  rewrite the army snapshot, recorded rules or primary assignments.
+- Generated 10-character battle code identifies the battle. Serverless invitation
+  and response files can establish the same battle on both devices; see
+  docs/battle-exchange.txt. Scores remain independent. Compare is future work.
+- Invitation generation/joining is separate from turn order. After exchanging
+  armies, Open battle asks each player to select the agreed first player before
+  Start battle. Existing battles resume without changing order or scores.
+- Totals stay above the scroll area. Each player starts with 10 Battle Ready
+  VP, editable separately. Going-first player is always above going-second.
+- Each player has CP, primary conditions, a separator, then secondaries.
+  Large separator between players. Previous/Next remain at the bottom.
+- Each player's secondary score summary has a Show/Hide button. Collapsing
+  hides that player's secondary cards, scoring and draw/discard controls while
+  leaving the summary visible. The two sections are independent and keep their
+  state across round changes during the current tracker visit. Expanding keeps
+  pending picker selections; neither action changes or saves battle data.
+- Android round swipes belong only to the fixed round heading, outside the
+  scrolling area. Previous/Next buttons remain available.
+- Condition changes update labels in place; structural changes preserve scroll.
+  Changing rounds returns to the top. Round 5 leads to the scoreboard.
+
+Scoring
+All 25 primary and 18 secondary definitions are embedded for offline use.
+Cards show applicable timing, conditions, values, local limits and expandable
+instructions/actions. Players enter counts or mark conditions achieved; the app
+does the arithmetic. It cannot infer battlefield positions or eligibility.
+OR choices are exclusive. Cumulative conditions need the base condition;
+subset bonuses cannot count more models/objectives than the base count.
+Stored counts survive caps and earlier-round corrections.
+Scores are recomputed chronologically (round, turn, Command phase/end of turn):
+- Primary and secondary each have a separate 15 VP/player/battle-round cap.
+- Each source has a 45 VP/player/battle cap.
+- Fixed secondaries additionally have a 20 VP/card/player/battle cap.
+- End-of-battle primary conditions are separate from round 5's 15 VP cap,
+  while remaining inside the 45 VP primary cap.
+- Tactical cards can score once, at one timing, and cannot score before drawn.
+- CP records distinguish Core gains, extra gains (max 1/round) and spent CP.
+  Spending cannot make any round's balance negative. Navigation grants nothing.
+- Tactical cards offer Discard and Shuffle Back. Discard keeps the card out of
+  future random/manual draws; Shuffle Back returns it to the draw pool. Both
+  preserve manual CP counters and are available for unscored active cards,
+  including carried cards. A discard can be followed by a replacement draw.
+- See discard pool lists each player's discarded cards. Recover restores a card
+  to play without spending a draw or changing CP. Discard/recovery history is
+  retained, including repeated recoveries. Recovered cards cannot score in rounds
+  before recovery. Fixed or already scored cards cannot be removed this way.
+- Older saved discard/replacement CP totals remain supported, including after
+  recovery. Their automatic CP summary only appears where old events exist.
+- Draw random secondary selects from each player's remaining Tactical cards.
+  Recorded cards cannot repeat; players have independent pools. Draw limits
+  still apply. Defend Stronghold is left in the pool for later rounds because
+  its first-round instruction requires shuffling it back. Manual draws remain.
+- The scoreboard runs from Round 1 to Round 5. Each round has Primary and
+  Secondary sections for both players, one capped VP total per scored card,
+  discarded/shuffled/recovered card names, and concise CP spent/balance lines.
+  No condition-by-condition explanations appear. Battle Ready and end-of-battle
+  primary points remain separate; end-of-battle scoring controls are collapsed
+  beneath the totals, available only for missions that use them.
+- Finish battle is available during play and in history. Early finishing keeps
+  recorded scores/CP and labels later rounds Not played. Reopen battle resumes
+  the recorded final round. Finishing from an earlier view preserves later data.
+
+Persistence
+BattleStore saves one JSON file per battle under the platform data directory's
+battles/ folder. Atomic temporary-file replacement and a serialized async writer
+avoid partial writes and stale overlapping saves. Army and army-rule references
+are snapshotted. Existing army/database records are not mutated. The lobby lists
+all this army's local battles, including completed results. Failed saves stay
+visible with a retry action; normal close awaits a successful save.
+New saves use schema version 5. Versions 1 through 4 still load; old manual discards
+do not retroactively earn CP. Their status tells the user CP was entered manually.
+Undoing an old discard cannot infer or remove a manually entered CP gain.
+Battle history is accessible during play after saving. Delete battle asks for
+confirmation and removes only that battle's JSON/temporary file. The store
+serializes deletion with saves and rejects stale saves for a deleted battle.
+Deleting the final entry leaves an empty history with a New battle button.
+
+Remaining workflow work
+This is a scoring UI, not a fully automated mission/deck referee. Tactical cards
+can be selected from a physical deck or drawn randomly. Ordinary draws, carried unscored cards,
+achieved cards, discards and paid/free discard replacements are recorded.
+Players choose Shuffle Back when the card rule allows it; optional battlefield
+conditions are not checked automatically. The random picker handles Defend Stronghold's mandatory
+round-one shuffle-back by excluding it until a later round. Target/unit nominations and action
+progress must currently be tracked on the table. CP is entered manually; automatic Command phase grants and army
+exceptions are not implemented. Post-start disposition/mode/turn-order correction
+requires a future explicit correction flow. Army rules are accessible by saving
+and closing the tracker, then resuming it. Compare is future work; invitation/response exchange is implemented with files
+and copied text. QR scanning remains unfinished.
+
+Validation
+- BattleTrackerChecks: catalogue completeness, order/snapshot/code, counts,
+  OR/bonus semantics, timing/round restrictions, cross-turn round caps, 45/20 VP
+  limits, correction propagation, Tactical lifecycle, CP and JSON persistence.
+- BattleDiscardChecks (saved-event compatibility): shared reward cap, undo and later spending, redraw
+  affordability, once-per-battle limit, replacement chains, achieved/Fixed card
+  protection, free-discard eligibility, round trip and legacy save compatibility.
+- Existing disposition/primary-card regression checks remain applicable.
+- BattleActionChecks: normal/replacement wrong-card corrections, protected
+  selections, random pools/draw limits, exhausted decks, early finish/reopen,
+  current-schema persistence, scoped deletion and stale-save protection.
+- BattleExchangeChecks: two-device identity/order/primaries, readable immutable
+  rosters, bounded decoding, mismatched/changed invitations, saved drafts,
+  repeated imports, separate score state and collision protection.
+- BattleScoreboardChecks: permanent discards, shuffle/redraw, recovery/history/CP,
+  compact per-card totals, carried cards and persistence.
+- Native Windows smoke exercises setup, real scoring buttons, live totals/cap
+  label, simple discard without CP changes, manual CP counters, achieved-card protection,
+  round navigation, narrow-window layout, scoreboard and persisted result;
+  random draw, simple discard, early finish/reopen, history finish,
+  cancelled/confirmed deletion and the empty history state.
+- Windows build and Android Compile target checked. Android physical gestures,
+  packaged trimming and process-death lifecycle still need device/release checks.
+- Android 0.2.16 (code 17) was packaged and installed on the connected phone
+  on 2026-10-15. Cold launch restored the existing army. Both mission resources
+  were included and native startup checks passed for both ABIs. Device security
+  blocks injected taps, so tracker interaction testing remains with the user.
+  See docs/distribution/android-0.2.16.txt. Windows installer remains unchanged.
+
+
+Commands
+dotnet run --project tests/GrimList.Tests/GrimList.Tests.csproj -- --battle-tracker-only
+GrimList.exe --data-dir <isolated-test-directory> --smoke-test <image.png> --battle-tracker-only
+
+Discard rule reference
+GW Event Companion v1.2, Generating Command Points and Select Secondary Missions:
+https://assets.warhammer-community.com/eng_wh40k_event_companion-pl87i44rzn-a7ieny8i9x.pdf
+Live transcription checked 2026-10-14:
+https://wahapedia.ru/wh40k11ed/the-rules/warhammer-event-companion/

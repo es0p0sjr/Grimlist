@@ -1,0 +1,89 @@
+GrimList 0.2.25 - local community delivery, 2026-10-25
+
+Delivery folder: repository-root 0.2.25
+  GrimList-0.2.25-win-x64.msi    98,738,176 bytes
+  SHA-256 bb8364fbf525d48bfc5149f8f5ca22759453c37ee07e3ac56d657b61a55c5f6d
+  GrimList-Android-0.2.25.apk   105,560,197 bytes
+  SHA-256 7e4e4979a929b3642fcf84f0368c4bc0c241fcf6cd5f187887e72a7b9e1734cd
+README.txt includes installation/update instructions and test priorities.
+Individual hashes, SHA256SUMS.txt, the MSI inventory and CLEANUP.txt are included.
+No upload, external publication or tester messaging was performed.
+
+Changes
+At 1,000 points, detachments may total up to 2 DP, or a single detachment may
+cost 3 DP. The single-detachment allowance is shared by both platforms, army
+validation and export. A 3-DP detachment must stand alone. Unknown costs,
+unsupported game sizes and eligibility/combination restrictions remain explicit.
+The 2,000/3,000-point budgets are unchanged. See ../incursion-detachments.txt.
+This includes the earlier Pantheon, roster sorting and Android scroll-retention
+changes from 0.2.24.
+
+Identity and provenance
+- Shared version 0.2.25; Android display version 0.2.25, version code 26.
+  Package com.grimlist.mobile, minimum Android API 30, ARM64 and x64.
+- APK signature verification passed with the existing development certificate:
+  SHA-256 9be9c191c53dc33ee955dcaedad94868fe4a4e6817a1fb30187ac0baf7f28f25
+- MSI ProductCode {5A8A58D0-C0ED-58F0-B5DF-DBAADCCC7696}.
+  Stable UpgradeCode {5F1E3A2A-2390-5993-A9F9-4AF11C89E68A}.
+  The MSI remains unsigned and includes private Windows Desktop runtime 10.0.10.
+- Standard Android and Windows publishers and Build-WindowsInstaller.py were
+  used sequentially from the existing source tree, retaining signing identity.
+- No rules/source refresh accompanied packaging. Bootstrap release remains
+  grimlist-11e-2026.10.16.2. Source dates are provenance, not freshness claims.
+
+Verification
+- Full regression: 463 PASS and one failure caused by the absent historical
+  samples directory. Restored its three original Death Guard fixture files
+  byte-for-byte from .local/backups/repository-cleanup-20261006/workspace-before.zip
+  (6,240 bytes total). The unchanged historical-sample check then passed through
+  a new focused harness entry point, --historical-sample-only; wrapper exit 0.
+  Thus all 464 distinct checks passed across the full run and focused recheck;
+  a second full run was not performed. Fixtures are test-only and required no
+  installer rebuild. Keep samples even when cleaning large scratch output.
+- The full run includes 16,755 eligible enhancement/bearer combinations and
+  real pdftotext extraction. Full and focused logs retain the exact outcomes.
+- Before packaging, all 20 targeted detachment/applicability/disposition/reference
+  regressions passed, including checking 416 bundled detachment definitions.
+  Native WPF selector checks passed; both platform compilation checks were clean.
+  Those checks are documented in ../incursion-detachments.txt.
+- Both publishers passed bundled enhancement/army-rule/equipment candidate gates.
+  Unsupported source conditions remain explicit and were not guessed.
+- Final APK passed package/version, signature, certificate-continuity, ZIP
+  integrity and both ABI native onCreate binding checks. No .pdb ZIP entries.
+- Android publishing reported the previously documented stale debugging-symbol
+  mismatches and successfully retried without symbols. Earlier cleanup of those
+  files was blocked; no alternate cleanup method or new removal attempt was used.
+- Delivered MSI passed all 19 package checks, including table validation,
+  upgrade metadata, cabinet extraction and byte-identical inventory verification
+  for all 490 files (223,482,407 bytes). No user database/development scripts.
+- The exact MSI-extracted app passed 13 native checks: offline bootstrap, a
+  375-point army, validation, save/reopen and private runtime loading. Standard
+  checks removed their temporary extraction and test data after success.
+- The delivered MSI welcome/per-user destination and Cancel/Finish checks passed,
+  exiting 1602 without installing.
+- Standard publishers removed superseded canonical 0.2.24 Android, Windows and
+  MSI directories. Older root delivery folders remain for optional manual cleanup.
+
+Limits
+- adb devices -l listed no connected device. Exact-APK device installation,
+  in-place update/cold launch, and native Android scroll/gesture behavior were
+  not verified. No phone data was cleared or replaced.
+- Windows install/repair/upgrade/uninstall lifecycle was not performed. Extracted
+  app and welcome/cancel checks do not prove that lifecycle.
+- Existing root delivery folders and previously blocked test folders are not
+  claimed to have been removed. See 0.2.25/CLEANUP.txt for reviewed targets.
+- The focused recheck's wrapper removed its synthetic data. After the repaired
+  check passed, automatic approval review rejected removal of the full run's
+  disposable directory as "blocked by policy". No alternate method was tried.
+  Remaining manual target, 309.9 MiB:
+  .local/tests/be8292f6-8ecc-44a4-890f-a39e2852b48b
+
+Evidence under artifacts/distribution-evidence:
+  release-0.2.25-regression.log
+  release-0.2.25-historical-sample-recheck.log
+  release-0.2.25-android-publish.log
+  release-0.2.25-apk-signature.txt / release-0.2.25-apk-identity.txt
+  release-0.2.25-windows-publish.log / release-0.2.25-msi-build.log
+  release-0.2.25-msi-validation.log / release-0.2.25-msi/results.json
+  release-0.2.25-msi/app/results.json
+  release-0.2.25-msi-ui.log / release-0.2.25-msi-ui/ui-results.json

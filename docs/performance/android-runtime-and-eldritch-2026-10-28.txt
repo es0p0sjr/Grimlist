@@ -1,0 +1,159 @@
+Physical Android runtime and Eldritch Vortex investigation -- 2026-10-28
+=====================================================================
+
+Scope
+-----
+Measure current responsiveness and investigate the user's Eldritch Vortex of
+E'taph report on Daemon Prince of Tzeentch with wings. No production rule,
+recovery, UI or catalogue changes were made in this investigation. Tooling was
+extended for repeatable, read-only source diagnosis and isolated phone profiling.
+The normal app and its saved armies were not used for synthetic workloads.
+
+Phone measurements
+------------------
+Redmi 22101316UG, isolated Release com.grimlist.perftest 0.2.28, code 29.
+Ten samples per operation and roster size, after one unrecorded warm-up each:
+
+Operation          3 entries mean ms     20 entries mean ms / median / maximum
+Add unit                  156                     439 / 444 / 472
+Equipment                 165                     444 / 417 / 725
+Enhancement               288                     896 / 839 / 1245
+Attach leader             883                    2535 / 2379 / 3640
+Remove detachment         366                     662 / 622 / 1075
+Home refresh              127                     151 /  91 / 269
+
+120 measured operations. The equal-weight overall mean is 593 ms; it is not an
+estimate of an ordinary user's workload mix. Roster size is before the action.
+Each sample excludes resetting/opening the fixture and its initial presentation.
+UsableMs includes the command, PrepareAsync, RefreshPresentation and two vsync
+callbacks, not an externally observed touch-to-pixel guarantee. Home refresh is
+not a navigation-from-another-page benchmark. Fixtures are Death Guard armies,
+not the user's Thousand Sons army. No old-build device comparison was run, so
+these results establish current costs, not the optimization's speedup.
+
+Four repeated process-cold launches averaged 3,208 ms from MAUI entry to usable
+UI (range 3,197-3,225 ms). External launch-to-file observation averaged 3,957 ms;
+this includes adb/polling delay and is not the internal startup metric.
+The first isolated initialization took 54,513 ms (library ready at 53,992 ms).
+Do not average that one bootstrap/recovery run into ordinary cached launches.
+
+Android memory snapshots: first initialization 2,236,658 KiB PSS (~2.13 GiB),
+last repeat launch 325,741 KiB (~318 MiB), after workload 812,873 KiB (~794 MiB).
+These are snapshots, not peak or post-GC live memory and not proof of a leak.
+The benchmark process reported 556/2,153 frames missing deadlines (25.82%);
+graphics totals include setup/reset frames, not only timed edits.
+
+For 20-entry attachments, mean command time was 973 ms and the remaining
+preparation/presentation/frame wait was 1,563 ms; approximate allocation was
+121.6 MB per operation. Enhancement command time averaged 770 of 896 ms.
+Priorities: profile attachment preparation/rendering and retained controls;
+reduce repeated command/effective-rule work; separately reduce full-library
+bootstrap/recovery memory and time. A database-engine replacement is not
+justified by these measurements. Other native acceptance flags, scrolling,
+FNP and manual enhancement/attachment UI checks were not run by this workload.
+
+Eldritch Vortex diagnosis
+------------------------
+The visible production phone screen confirmed the winged Prince and selected
+enhancement. The exact private phone library was not extracted; the following
+is a deterministic reproduction with shipped/pinned data, not a database audit.
+
+The pinned rule modifies Psychic weapons' Strength and Damage by +1. Expected:
+  Dark Blessing:             S4/D1 -> S5/D2
+  Hellforged weapons strike: S8/D3 -> S9/D4
+  Hellforged weapons sweep:  S6/D1 -> S7/D2
+  Infernal cannon:           S5/D2 unchanged (not Psychic)
+
+1. Bundled bootstrap: all four weapons lack SourceId and SourceCategories.
+   The enhancement has structural source-category predicates. All numeric
+   profiles remain unchanged and no applied modifier sources are recorded.
+2. Applying current EffectiveDatasheetRecovery gives the same failure: it
+   restores Semantics/card modifiers, not weapon identity/category metadata.
+3. Fresh import of the identical pinned archive includes source categories;
+   projection yields all six expected increases, leaving the cannon alone.
+4. In-memory counterfactual: match source content hash and unique, exact visible
+   weapon profiles; copy only their missing source metadata into the bootstrap.
+   The old dataset then yields exactly the fresh import's effective weapons and
+   six applied effects. No live library or saved army was changed.
+5. Cached and uncached modifier parsing agree in all three reports. Prose-only
+   parsing produces zero modifiers: the current numeric grammar does not accept
+   the 'Psychic weapons equipped by the bearer' target. This is not a demonstrated
+   regression from the new compiled-rule cache or Android presentation changes.
+
+Root cause in this reproduction: new structural rule metadata can be available
+alongside legacy weapon profiles that lack its target identity/category tags.
+WeaponRules.Test returns unknown for that missing metadata. Numeric Apply in
+EffectiveUnitState currently skips matches other than true, silently dropping
+the effect. Keyword modifiers have unresolved-selector diagnostics, but numeric
+modifiers lack the equivalent explanation. Broader category-targeted rules can
+have the same failure; this must not become a unit/enhancement-name exception.
+
+Generic repair design (not implemented)
+--------------------------------------
+- Extend source-pinned recovery with weapon identity/category evidence. Match
+  source hash, faction/unit source identity and exact legacy profile evidence;
+  ambiguous/changed/custom profiles stay unresolved. Preserve base stats,
+  loadout selections, prices, overrides, army IDs and undo/redo.
+- Version the recovery format and invalidate affected faction projections so
+  existing installed libraries receive the repair offline, not just new imports.
+  Regenerate and validate shipped metadata without silently refreshing rules.
+- Surface unresolved numeric weapon targeting as a review state. Never treat
+  absent category metadata as permission to modify every weapon.
+- Add legacy/fresh/recovered semantic parity checks with positive and negative
+  targets, unchanged non-Psychic weapons, multiple profiles, conflicting
+  evidence, save/reopen, idempotence, build/play/export and both frontends.
+- Consider a conservative generic keyword-target prose grammar separately;
+  structural/prose effects must not double-apply or broaden unknown selectors.
+  Recovery of authoritative target metadata is the direct repair here.
+
+Fresh local import is a demonstrated workaround for the pinned source. No live
+network download or production phone reimport was attempted, so current upstream
+data and the user's phone after Update BSData are not independently verified.
+The earlier 16,755 enhancement/bearer acceptance pairs prove eligibility and
+selection behavior, not every numerical effect's correctness. Add effect-level
+coverage rather than citing that count as proof this class of bug was covered.
+
+Reproduction and verification
+----------------------------
+Build tools/GrimList.Performance, then run its DLL with:
+  --inspect-enhancement <input> "Thousand Sons"
+  "Daemon Prince of Tzeentch with wings" "Eldritch Vortex of E'taph" <report.json>
+Inputs: bootstrap, recovered-bootstrap, or
+  tests/fixtures/bsdata/11e/cc1830fbfead059f8059ed6c7f8e73cd4c390908/repository.zip
+The archive hash is
+  747db24bf29456f0606a937f794a7e7f33154e76116eff1506e9b0750ab5c045
+ZIP diagnosis imports the requested faction with shared dependency documents;
+it does not open a store. Metadata-only repair is an in-memory diagnostic only.
+
+Performance package: standard Publish-StandaloneAndroid.ps1 -PerformanceChecks.
+The new switch is mutually exclusive with TestIdentity, uses its existing
+com.grimlist.perftest csproj identity, and keeps an independent bounded artifact
+channel. Measure-AndroidPerformance.py asserts that identity before install -r.
+Exact APK:
+  artifacts/builds/android-performance/0.2.28/GrimList-Performance-0.2.28.apk
+SHA-256:
+  c22c5fccb7c10e0f9b23f7174dfdf6dea729443bcbfcc082f7488355d332b531
+Command: python scripts/Measure-AndroidPerformance.py --apk <apk>
+  --serial <connected-device> --output <evidence-directory> --iterations 10 --starts 5
+
+- Candidate gate, APK identity/signature and both ABI startup checks passed.
+- Build-retention checks: 16 PASS, including isolation of production/performance
+  cleanup. Performance publisher used the existing symbols fallback and emitted
+  three existing nullable warnings in MainPage.Performance.cs.
+- Final diagnostic tool build: zero warnings/errors; all three source
+  inspections ran successfully; the metadata-only counterfactual matched fresh
+  import exactly. An initial default parallel tool build exited unsuccessfully
+  without compiler diagnostics; the sequential build succeeded.
+- All 120 physical operation samples and five startup runs completed without a
+  harness error. No full regression rerun for this tooling-only investigation.
+- Normal com.grimlist.mobile 0.2.28 was brought back to the foreground after
+  stopping the isolated test app. No production reinstall/clear/uninstall or
+  data refresh occurred. This is not a new community release.
+
+Combined raw samples, summaries and all three diagnostic reports:
+  docs/performance/android-runtime-and-eldritch-2026-10-28.json
+Additional small build, phone visibility, meminfo and graphics evidence:
+  artifacts/distribution-evidence/eldritch-*.json
+  artifacts/distribution-evidence/android-runtime-2026-10-28/
+  artifacts/distribution-evidence/android-performance-2026-10-28-publish.log
+  artifacts/distribution-evidence/performance-publisher-retention.log

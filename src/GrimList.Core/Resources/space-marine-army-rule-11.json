@@ -1,0 +1,93 @@
+{
+  "Source": {
+    "Name": "BSData · All armies",
+    "Version": "8b50fc3240e29c6ab0e254f75bcefa8cce8ce0ef",
+    "Date": "2026-10-13",
+    "Url": "https://github.com/BSData/wh40k-11e/tree/8b50fc3240e29c6ab0e254f75bcefa8cce8ce0ef",
+    "ImportedAt": "",
+    "Edition": "11",
+    "ContentHash": "09bcfbdb601e08e422183eee5afeedb19a896417863798ccf5392214dedd9ef9"
+  },
+  "Factions": [
+    "Black Templars",
+    "Blood Angels",
+    "Dark Angels",
+    "Deathwatch",
+    "Imperial Fists",
+    "Iron Hands",
+    "Raven Guard",
+    "Salamanders",
+    "Space Marines",
+    "Space Wolves",
+    "Ultramarines",
+    "White Scars"
+  ],
+  "Contexts": [
+    {
+      "Faction": "Black Templars",
+      "CatalogueId": "36d3-36bc-68dd-40ac",
+      "Keywords": []
+    },
+    {
+      "Faction": "Blood Angels",
+      "CatalogueId": "4ef9-15ce-e3e6-36de",
+      "Keywords": []
+    },
+    {
+      "Faction": "Dark Angels",
+      "CatalogueId": "470a-6daa-9014-12df",
+      "Keywords": []
+    },
+    {
+      "Faction": "Deathwatch",
+      "CatalogueId": "f89b-84e0-6e3b-f1e2",
+      "Keywords": []
+    },
+    {
+      "Faction": "Imperial Fists",
+      "CatalogueId": "5d6e-fd3-330a-11dd",
+      "Keywords": []
+    },
+    {
+      "Faction": "Iron Hands",
+      "CatalogueId": "f27e-18c0-b73e-748e",
+      "Keywords": []
+    },
+    {
+      "Faction": "Raven Guard",
+      "CatalogueId": "6e59-e1ee-47ad-6ce5",
+      "Keywords": []
+    },
+    {
+      "Faction": "Salamanders",
+      "CatalogueId": "2261-79a5-19d9-1668",
+      "Keywords": []
+    },
+    {
+      "Faction": "Space Marines",
+      "CatalogueId": "e0af-67df-9d63-8fb7",
+      "Keywords": []
+    },
+    {
+      "Faction": "Space Wolves",
+      "CatalogueId": "94bb-3284-ee14-57a1",
+      "Keywords": []
+    },
+    {
+      "Faction": "Ultramarines",
+      "CatalogueId": "4029-9237-e8db-af55",
+      "Keywords": []
+    },
+    {
+      "Faction": "White Scars",
+      "CatalogueId": "67c1-fc13-f9a1-cbbf",
+      "Keywords": []
+    }
+  ],
+  "Name": "Combat Doctrines",
+  "Text": "At the start of your Command phase, you can select one Combat Doctrine listed below. If you do, that Combat Doctrine is active for friendly ADEPTUS ASTARTES units with this ability until the start of your next Command Phase\n\n\nAssault Doctrine\nWhen this unit is selected to make an Advance move, that Advance move does not prevent this unit from being eligible to declare a charge. \n\n\nDevastator Doctrine\nThis unit's ranged attacks have [ASSAULT]\n\n\nTactical Doctrine\nWhen this unit is selected to make a Fall-back move, that Fall-back move does not prevent this unit from being eligible to shoot and eligible to declare a charge. \n\n\nUnless otherwise stated. \n- You can only select each Combat Doctrine once per battle\n- Only one Combat Doctrine can be active for each unit. If a rule make a Combat Doctrine active for a unit, any Combat Doctrine previously active for that unit is no longer active for that unit.",
+  "Verification": [
+    "https://www.warhammer-community.com/en-gb/articles/ifgezlgu/space-marines-rules-first-look/",
+    "https://wahapedia.ru/wh40k11ed/factions/space-marines/"
+  ]
+}

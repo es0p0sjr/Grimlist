@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0-windows10.0.18362.0</TargetFramework>
+    <WindowsSdkPackageVersion>10.0.18362.29</WindowsSdkPackageVersion>
+    <UseWPF>true</UseWPF>
+    <StartupObject>WindowsPerformance</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="../../src/GrimList.Desktop/GrimList.Desktop.csproj" />
+    <None Include="../../src/GrimList.Desktop/App.xaml" Link="ApplicationResources.xaml" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+</Project>

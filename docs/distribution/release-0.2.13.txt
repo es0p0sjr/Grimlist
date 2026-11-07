@@ -1,0 +1,42 @@
+GrimList 0.2.13 distribution - 14 October 2026
+
+Share folder: GrimList-Share-0.2.13/
+Windows: GrimList-Windows-0.2.13.msi, x64, includes private .NET 10.0.10 runtime.
+Android: GrimList-Android-0.2.13.apk, ARM64/x64, com.grimlist.mobile, version code 15.
+ZIP copies contain the same MSI/APK. Each package has a SHA-256 sidecar.
+Exact sizes and hashes: docs/distribution/release-0.2.13-files.json.
+
+Changes
+Army units display alphabetically within each category on Windows and Android.
+Copies of the same unit appear together. Attached groups sort by the bodyguard
+unit name, with leaders together beneath it and sorted alphabetically.
+This changes presentation only; saved entry order and points are unchanged.
+Includes the import responsiveness and progress improvements from 0.2.12.
+
+Upgrade
+Close GrimList before running the Windows MSI. Its upgrade identity matches
+0.2.12 and its product identity changes for 0.2.13. Android retains the existing
+application ID and signing certificate. Install over the existing app without
+uninstalling or clearing storage. Previous share folders remain available.
+
+Verification
+Both Release publishes succeeded. Android used a fresh source copy verified
+against the workspace. The Windows executable reports 0.2.13.0 / 0.2.13.
+All 19 installer checks passed, including exact hashes of all 490 payload files.
+The MSI-extracted app passed all 13 native startup, bundled-data/runtime,
+army-create, save, reopen and validation checks with temporary test data.
+Windows upgrade identity and version metadata match the release inventory.
+
+Android signature, package/version/ABI metadata and ZIP integrity passed.
+The APK retains the signing certificate used by 0.2.12 and is not debuggable.
+Both Android architectures passed the native onCreate binding guard.
+Both package checksums and the contents of their ZIP copies were verified.
+
+Actual Windows MSI installation, repair and uninstall were not run. The new
+Android APK was not installed or cold-launched on a device in this packaging
+pass. Existing installed applications and user data were left in place.
+This retains the existing sideload signing identity; no store upload or external
+publication was performed.
+
+Evidence: .local/release-0.2.13/ contains source hashes, build logs, MSI/app checks,
+and Android startup-binding, signature and package metadata checks.

@@ -1,0 +1,67 @@
+ANDROID PERFORMANCE IMPROVEMENTS - 2026-10-13
+
+Implementation:
+  Datasheet preparation no longer enumerates every possible attachment. Existing attached-unit links and detach controls remain immediately available.
+  Choose a bodyguard unit / Choose a leader or support loads eligible actions on demand on a background task. Only that button waits; the rest of the page remains available.
+  Completed and in-flight results are reused per entry while the army and library snapshots are unchanged. Edits, source reloads, undo/redo and opening another army invalidate the cache.
+  Late results cannot populate a different page, entry or army state. Failed calculations offer a retry. Attaching still runs the complete current group and enhancement-slot validation.
+  The expanded Home army-card tap target remains in this build.
+  Test-only Android frame callbacks now retain/dispose their native wrapper after completion, with a timeout. Android diagnostic allocation counters use approximate sampling to avoid the previously observed Mono precise-sampling failure.
+
+20-entry fixture: native render-readiness medians (milliseconds).
+  Operation          Before      After     Before source
+  datasheet           5489.4     2347.9   fresh baseline, this pass
+  enhancement         4941.9     1437.7   fresh baseline, this pass
+  attachment          7163.9     3825.9   fresh baseline, this pass
+  open                 708.5      843.9   original 2026-10-13 baseline; not rerun in this pass
+  add                  523.2      498.0   original 2026-10-13 baseline; not rerun in this pass
+  equipment            642.0      663.2   original 2026-10-13 baseline; not rerun in this pass
+  detachment           758.1      741.4   original 2026-10-13 baseline; not rerun in this pass
+  home                 371.6      356.3   original 2026-10-13 baseline; not rerun in this pass
+
+The three targeted operations were freshly remeasured before and after. Other before values are from the original same-day pass; differences there should not be attributed to this patch. In particular, opening an army measured 844 ms versus the historical 709 ms; this action does not perform the deferred candidate calculation. This is not a blanket startup/navigation speedup claim.
+
+Approximate allocated MiB per targeted interaction:
+  datasheet: 207.1 -> 50.7
+  enhancement: 252.8 -> 63.8
+  attachment: 345.7 -> 192.6
+
+Remaining measured work:
+  Datasheet: Prepare median 1561 ms, RenderSubmit 678 ms. Attachment result: Prepare 867 ms, RenderSubmit 1559 ms; command-to-result work is still substantial.
+  Profile the remaining preparation and rendering phases before choosing virtualization or broad control reuse. Investigate repeated validation of already attached groups and enhancement-choice validation, with the complete existing rule regressions kept intact.
+  Saving remains roughly 5-6 ms and copying roughly 1-2 ms in these fixtures. These are lower priorities.
+  Attachment choice work has been deferred, not eliminated. First-load and cached-chooser timings are reported separately after native verification.
+
+Method and limits:
+  Physical Redmi Note 12 Pro+ 5G (22101316UG), Android 14; Release/Standalone build, .NET 10 Android, 2194 units / 6049 reference cards.
+  15 fresh baseline samples and 40 optimized samples: five recorded per case plus one discarded warm-up. The same original AcceptanceWorkload fixture and operation sequence are used. Each operation runs in a fresh process; fixture resets and initial presentation are outside the timed interval.
+  Datasheet/equipment select Plague Marines; enhancement and attachment use Lord of Contagion. The attachment case measures commit plus resulting presentation; chooser loading is measured separately.
+  Readiness follows preparation, native MAUI presentation and two Choreographer callbacks. This is a readiness proxy, not touch-to-photon latency. No scrolling/jank benchmark was performed.
+  Allocation counts include diagnostic overhead and are approximate. Nested timing scopes overlap; phase medians need not sum to the total median. Background activity and caches were not reset.
+  Performance probes live only in an isolated diagnostic copy and com.grimlist.perfpass storage. No user army is used as a fixture. The normal package is updated in place.
+  The full shared suite passed all 342 checks, including attachment combinations, recipients, effective datasheets, enhancement permissions and army summaries.
+  Both diagnostic and production APKs passed the native MAUI startup-symbol check for arm64-v8a and x86_64. An incremental diagnostic package failed this check; the measured optimized build is the subsequent clean rebuild.
+  Native chooser tests require a fresh isolated test installation: the first attempt collided with IDs from the separate operation fixture. This was test setup, not a user-roster failure.
+
+Native chooser verification and production installation:
+  All 37 native assertions passed: no eager candidate work; candidates match full session rules; actual MAUI controls offer the expected bodyguard; cached task reuse; pending results ignored after navigation, attachment, undo/redo, enhancement changes and library reload; invalidation; failed-task retry.
+  Five recorded cold/warm pairs plus one discarded warm-up on the 20-entry fixture. First load median 3316.5 ms; cached load median 97.1 ms, both including native frame readiness.
+  Two frame callbacks while loading: median 16.1 ms (range 15.3-171.5 ms). Session no-op while loading: median 1.61 ms. These show continued frame delivery and available session access; they do not measure physical scrolling latency.
+  Chooser tests invoke the production native loader directly. No hardware tap was injected. Tests ran after a fresh installation of the disposable performance package to avoid IDs left by the operation fixture.
+  Production Release build and performance harness build: zero warnings/errors. Updated com.grimlist.mobile in place at 2026-10-13 21:02:27; first-install timestamp retained. Version remains 0.2.6 (code 8).
+  Installed APK SHA-256 matches the verified release artifact: 81c7857c75d249658bc040c19b057ebabfb23816b5541d12cf18d637f70d8cb0.
+  Cold launch succeeded; Home subsequently displayed the user's existing armies. The launch activity timer is not a whole-app startup measurement.
+  Diagnostic app removed after verification. No user army was edited by the benchmark or checks.
+
+Artifacts:
+  .local/android-optimization-20261013/baseline/interactions.json
+  .local/android-optimization-20261013/after/interactions.json
+  .local/android-optimization-20261013/source-clean (instrumented measured source)
+  .local/android-optimization-20261013/release-apk/com.grimlist.mobile-Signed.apk
+  .local/android-optimization-20261013/release-source-hashes.json (158 matching source/resource files)
+  .local/android-optimization-20261013/check-phone.py (native check launcher; fresh test installation required)
+  .local/android-optimization-20261013/shared-tests.log
+
+  .local/android-optimization-20261013/attachment-checks.json
+  .local/android-optimization-20261013/installation.json
+  .local/android-optimization-20261013/release-screen.png

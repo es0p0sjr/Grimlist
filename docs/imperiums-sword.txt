@@ -1,0 +1,56 @@
+Imperium's Sword melee profile fix - 2026-10-16
+
+Behavior
+Assault Brethren's Imperium's Sword adds one automatically equipped melee
+weapon to the selected, eligible bearer. Existing weapons remain equipped.
+Windows and Android use their normal weapon profile display in build/play.
+The enhancement explanation replaces the previously flattened raw stat lines.
+Selection removal, detachment changes and invalid eligibility clear the grant.
+The library's base unit and saved equipment selections are not rewritten.
+The older The Imperium's Sword (1st Company Task Force) retains its original rule.
+
+Source
+BSData/wh40k-11e commit 0fb7e6ac9cb5289c4cfe519029787d34eca95032,
+Imperium - Space Marines.json, selection 342a-2485-9ec0-b0a3,
+profile 6dc6-4f92-c8b4-ebda. Melee / A 6 / WS 2+ / S 7 / AP -3 / D 3.
+See tests/fixtures/bsdata/imperiums-sword.txt for cache hash and fixture scope.
+Additive behavior is the user's explicit decision. No rules refresh performed.
+
+Implementation
+ReferenceCard.Weapons retains the typed imported profile and source profile ID.
+EnhancementWeapons reads existing BSData 11e Assault Brethren raw-stat cards
+using their saved values, guarded by identity and expected format; no reimport
+or live database modification is required. Explicit empty metadata is respected.
+Other weapon enhancements are not automatically inferred as additive grants.
+EffectiveDatasheets adds the weapon before normal weapon modifiers. GrantedBy
+marks its automatic equipment count; Loadouts includes one copy in play/export
+and excludes it from manually editable equipment choices. Enhancement selection
+remains the persisted source of truth. Yellowscribe retains its guard against
+exporting unit-level weapons with ambiguous ownership in multi-model entries.
+
+Verification
+Five focused regressions passed: exact source import and serialization; legacy
+compatibility; bearer-only build/play/export; automatic/manual loadouts and
+weapon modifiers; eligibility, removal, undo/redo, SQLite save/reopen and source
+immutability. Includes negative checks for the older enhancement and malformed
+cards. Log: artifacts/imperiums-sword/targeted.log.
+Broader --weapon-rules-only run passed 145 regressions with zero failures,
+including these five and library recovery, persistence, attachment recipients,
+effective-state comparisons, weapon import/modifiers and exports. Log:
+artifacts/imperiums-sword/weapon-regressions.log. This run's synthetic databases
+were removed by Test-Regression.ps1 after success; the full suite was not run.
+Native Windows smoke passed actual A/WS/S/AP/D cells in the melee DataGrid in
+build and play, one equipped sword, original weapon retained, explanation text
+and removal. Screenshots/result: artifacts/imperiums-sword/windows-ui.*.
+Windows Debug build and Android Debug Compile passed with zero warnings/errors.
+Android validation is compilation and shared logic; no device UI run performed.
+Build logs: artifacts/imperiums-sword/windows-build.log and android-compile.log.
+Focused test wrapper removed its synthetic databases after success.
+Automatic approval review rejected deletion of the disposable Windows UI test
+directory with "blocked by policy"; no alternate deletion was attempted.
+Remaining disposable folder (36,195,064 bytes; safe to delete manually):
+.local/tests/7e7befe4-2606-4077-b938-5276a4315adf
+
+Delivery
+Source fix only. Shipped 0.2.21 packages and live user library remain unchanged.
+A future community build must increment shared and Android versions/code.

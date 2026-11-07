@@ -1,0 +1,178 @@
+{
+  "Source": {
+    "Name": "Core stratagem rules (Wahapedia reference)",
+    "Version": "Checked 2026-10-03",
+    "Date": "",
+    "Url": "https://wahapedia.ru/wh40k10ed/the-rules/core-rules/#Stratagems",
+    "Edition": "10"
+  },
+  "Units": [],
+  "ReferenceCards": [
+    {
+      "Faction": "Core",
+      "Section": "Stratagems",
+      "Name": "Command Re-roll",
+      "Text": "WHEN: Any phase, just after you make an Advance roll, a Charge roll, a Desperate Escape test or a Hazardous test for a unit from your army, or a Hit roll, a Wound roll, a Damage roll or a saving throw for a model in that unit, or a roll to determine the number of attacks made with a weapon equipped by a model in that unit. If you are using fast dice rolling, this Stratagem can still be used after rolling multiple rolls or saving throws at once.\nTARGET: That unit or model from your army.\nEFFECT: You re-roll that roll, test or saving throw. If you are using fast dice rolling, select one of those rolls or saving throws to re-roll.",
+      "Detachment": "",
+      "Cost": "1 CP",
+      "Source": {
+        "Name": "Core stratagem rules (Wahapedia reference)",
+        "Version": "Checked 2026-10-03",
+        "Date": "",
+        "Url": "https://wahapedia.ru/wh40k10ed/the-rules/core-rules/#Stratagems",
+        "Edition": "10"
+      }
+    },
+    {
+      "Faction": "Core",
+      "Section": "Stratagems",
+      "Name": "Counter-offensive",
+      "Text": "WHEN: Fight phase, just after an enemy unit has fought.\nTARGET: One unit from your army that is within Engagement Range of one or more enemy units and that has not already been selected to fight this phase.\nEFFECT: Your unit fights next.",
+      "Detachment": "",
+      "Cost": "2 CP",
+      "Source": {
+        "Name": "Core stratagem rules (Wahapedia reference)",
+        "Version": "Checked 2026-10-03",
+        "Date": "",
+        "Url": "https://wahapedia.ru/wh40k10ed/the-rules/core-rules/#Stratagems",
+        "Edition": "10"
+      }
+    },
+    {
+      "Faction": "Core",
+      "Section": "Stratagems",
+      "Name": "Epic Challenge",
+      "Text": "WHEN: Fight phase, when a CHARACTER unit from your army that is within Engagement Range of one or more Attached units is selected to fight.\nTARGET: One CHARACTER model in your unit.\nEFFECT: Until the end of the phase, all melee attacks made by that model have the [PRECISION] ability.",
+      "Detachment": "",
+      "Cost": "1 CP",
+      "Source": {
+        "Name": "Core stratagem rules (Wahapedia reference)",
+        "Version": "Checked 2026-10-03",
+        "Date": "",
+        "Url": "https://wahapedia.ru/wh40k10ed/the-rules/core-rules/#Stratagems",
+        "Edition": "10"
+      }
+    },
+    {
+      "Faction": "Core",
+      "Section": "Stratagems",
+      "Name": "Insane Bravery",
+      "Text": "WHEN: Battle-shock step of your Command phase, just before you take a Battle-shock test for a unit from your army.\nTARGET: That unit from your army.\nEFFECT: Your unit automatically passes that Battle-shock test.\nRESTRICTIONS: You cannot use this Stratagem more than once per battle.",
+      "Detachment": "",
+      "Cost": "1 CP",
+      "Source": {
+        "Name": "Core stratagem rules (Wahapedia reference)",
+        "Version": "Checked 2026-10-03",
+        "Date": "",
+        "Url": "https://wahapedia.ru/wh40k10ed/the-rules/core-rules/#Stratagems",
+        "Edition": "10"
+      }
+    },
+    {
+      "Faction": "Core",
+      "Section": "Stratagems",
+      "Name": "Grenade",
+      "Text": "WHEN: Your Shooting phase.\nTARGET: One GRENADES unit from your army (excluding units that Advanced, Fell Back or have shot this turn) that is not within Engagement Range of one or more enemy units.\nEFFECT: Select one GRENADES model in your unit and one enemy unit that is not within Engagement Range of any units from your army and is within 8\" of and visible to your GRENADES model. Roll six D6: for each 4+, that enemy unit suffers 1 mortal wound.",
+      "Detachment": "",
+      "Cost": "1 CP",
+      "Source": {
+        "Name": "Core stratagem rules (Wahapedia reference)",
+        "Version": "Checked 2026-10-03",
+        "Date": "",
+        "Url": "https://wahapedia.ru/wh40k10ed/the-rules/core-rules/#Stratagems",
+        "Edition": "10"
+      }
+    },
+    {
+      "Faction": "Core",
+      "Section": "Stratagems",
+      "Name": "Tank Shock",
+      "Text": "WHEN: Your Charge phase, just after a VEHICLE unit from your army ends a Charge move.\nTARGET: That VEHICLE unit.\nEFFECT: Select one enemy unit within Engagement Range of your unit, and select one VEHICLE model in your unit that is within Engagement Range of that enemy unit. Roll a number of D6 equal to the Toughness characteristic of the selected VEHICLE model. For each 5+, that enemy unit suffers 1 mortal wound (to a maximum of 6 mortal wounds).",
+      "Detachment": "",
+      "Cost": "1 CP",
+      "Source": {
+        "Name": "Core stratagem rules (Wahapedia reference)",
+        "Version": "Checked 2026-10-03",
+        "Date": "",
+        "Url": "https://wahapedia.ru/wh40k10ed/the-rules/core-rules/#Stratagems",
+        "Edition": "10"
+      }
+    },
+    {
+      "Faction": "Core",
+      "Section": "Stratagems",
+      "Name": "Rapid Ingress",
+      "Text": "WHEN: End of your opponent’s Movement phase.\nTARGET: One unit from your army that is in Reserves.\nEFFECT: Your unit can arrive on the battlefield as if it were the Reinforcements step of your Movement phase, and if every model in that unit has the Deep Strike ability, you can set that unit up as described in the Deep Strike ability (even though it is not your Movement phase).\nRESTRICTIONS: You cannot use this Stratagem to enable a unit to arrive on the battlefield during a battle round it would not normally be able to do so in.",
+      "Detachment": "",
+      "Cost": "1 CP",
+      "Source": {
+        "Name": "Core stratagem rules (Wahapedia reference)",
+        "Version": "Checked 2026-10-03",
+        "Date": "",
+        "Url": "https://wahapedia.ru/wh40k10ed/the-rules/core-rules/#Stratagems",
+        "Edition": "10"
+      }
+    },
+    {
+      "Faction": "Core",
+      "Section": "Stratagems",
+      "Name": "Fire Overwatch",
+      "Text": "WHEN: Your opponent’s Movement or Charge phase, just after an enemy unit is set up or when an enemy unit starts or ends a Normal, Advance or Fall Back move, or declares a charge.\nTARGET: One unit from your army that is within 24\" of that enemy unit and that would be eligible to shoot if it were your Shooting phase.\nEFFECT: If that enemy unit is visible to your unit, your unit can shoot that enemy unit as if it were your Shooting phase.\nRESTRICTIONS: You cannot target a TITANIC unit with this Stratagem. Until the end of the phase, each time a model in your unit makes a ranged attack, an unmodified Hit roll of 6 is required to score a hit, irrespective of the attacking weapon’s Ballistic Skill or any modifiers. You can only use this Stratagem once per turn.",
+      "Detachment": "",
+      "Cost": "1 CP",
+      "Source": {
+        "Name": "Core stratagem rules (Wahapedia reference)",
+        "Version": "Checked 2026-10-03",
+        "Date": "",
+        "Url": "https://wahapedia.ru/wh40k10ed/the-rules/core-rules/#Stratagems",
+        "Edition": "10"
+      }
+    },
+    {
+      "Faction": "Core",
+      "Section": "Stratagems",
+      "Name": "Go to Ground",
+      "Text": "WHEN: Your opponent’s Shooting phase, just after an enemy unit has selected its targets.\nTARGET: One INFANTRY unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\nEFFECT: Until the end of the phase, all models in your unit have a 6+ invulnerable save and have the Benefit of Cover.",
+      "Detachment": "",
+      "Cost": "1 CP",
+      "Source": {
+        "Name": "Core stratagem rules (Wahapedia reference)",
+        "Version": "Checked 2026-10-03",
+        "Date": "",
+        "Url": "https://wahapedia.ru/wh40k10ed/the-rules/core-rules/#Stratagems",
+        "Edition": "10"
+      }
+    },
+    {
+      "Faction": "Core",
+      "Section": "Stratagems",
+      "Name": "Smokescreen",
+      "Text": "WHEN: Your opponent’s Shooting phase, just after an enemy unit has selected its targets.\nTARGET: One SMOKE unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\nEFFECT: Until the end of the phase, all models in your unit have the Benefit of Cover and the Stealth ability.",
+      "Detachment": "",
+      "Cost": "1 CP",
+      "Source": {
+        "Name": "Core stratagem rules (Wahapedia reference)",
+        "Version": "Checked 2026-10-03",
+        "Date": "",
+        "Url": "https://wahapedia.ru/wh40k10ed/the-rules/core-rules/#Stratagems",
+        "Edition": "10"
+      }
+    },
+    {
+      "Faction": "Core",
+      "Section": "Stratagems",
+      "Name": "Heroic Intervention",
+      "Text": "WHEN: Your opponent’s Charge phase, just after an enemy unit ends a Charge move.\nTARGET: One unit from your army that is within 6\" of that enemy unit and would be eligible to declare a charge against that enemy unit if it were your Charge phase.\nEFFECT: Your unit now declares a charge that targets only that enemy unit, and you resolve that charge as if it were your Charge phase.\nRESTRICTIONS: You can only select a VEHICLE unit from your army if it is a WALKER. Note that even if this charge is successful, your unit does not receive any Charge bonus this turn.",
+      "Detachment": "",
+      "Cost": "1 CP",
+      "Source": {
+        "Name": "Core stratagem rules (Wahapedia reference)",
+        "Version": "Checked 2026-10-03",
+        "Date": "",
+        "Url": "https://wahapedia.ru/wh40k10ed/the-rules/core-rules/#Stratagems",
+        "Edition": "10"
+      }
+    }
+  ],
+  "ReferenceOnly": true
+}

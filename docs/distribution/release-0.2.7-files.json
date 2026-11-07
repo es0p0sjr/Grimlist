@@ -1,0 +1,29 @@
+{
+  "appVersion": "0.2.7",
+  "androidVersionCode": 9,
+  "files": [
+    {
+      "platform": "windows",
+      "file": "GrimList-Share-0.2.7\\GrimList-Windows-0.2.7.msi",
+      "bytes": 96550912,
+      "sha256": "8e0303b4721b3a4969d77ae0227bb0f39e48abf77e4e89e21e5651b1b1f9a0d2",
+      "zip": "GrimList-Share-0.2.7\\GrimList-Windows-0.2.7.zip",
+      "zipSha256": "f98f77f2ed370bd12fb7224d5f5be4cef50569e23a74ae9465fdabb3bc9fcb09"
+    },
+    {
+      "platform": "android",
+      "file": "GrimList-Share-0.2.7\\GrimList-Android-0.2.7.apk",
+      "bytes": 102238341,
+      "sha256": "fa628ee7e6f26ae2f2ac90c92213c23b19cec5da3e81563ac2491c74dd1a2615",
+      "zip": "GrimList-Share-0.2.7\\GrimList-Android-0.2.7.zip",
+      "zipSha256": "a05576644bdf41cdde8fa51520d2ebd3441d35643180d3c35c1780bd48c488a0"
+    }
+  ],
+  "androidCertificateSha256": "9be9c191c53dc33ee955dcaedad94868fe4a4e6817a1fb30187ac0baf7f28f25",
+  "windowsUpgradeCode": "{5F1E3A2A-2390-5993-A9F9-4AF11C89E68A}",
+  "windowsProductCode": "{1E8B5128-5A8D-5716-984E-54561F1D3249}",
+  "sourceFilesVerified": 236,
+  "windowsInstallerChecks": 19,
+  "windowsInstallationLifecycle": "Not rerun; exact extracted payload tested with isolated data",
+  "androidInPlacePhoneUpgrade": "PASS; original firstInstallTime retained and saved roster displayed"
+}

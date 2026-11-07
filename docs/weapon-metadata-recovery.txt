@@ -1,0 +1,99 @@
+Weapon metadata recovery -- 2026-10-28
+====================================
+
+Problem and repair
+------------------
+Eldritch Vortex of E'taph already had the correct structural Strength/Damage
+modifiers, but legacy weapons lacked the source IDs/categories used to select
+Psychic weapons. Semantic recovery alone could not repair those profiles.
+
+WeaponMetadataRecovery supplies source-pinned weapon metadata for every faction,
+without unit/enhancement-name branches. Bundled evidence comes from reimporting
+the existing cc1830fbfead059f8059ed6c7f8e73cd4c390908 archive, not a live source
+refresh. Its source SHA-256 is:
+747db24bf29456f0606a937f794a7e7f33154e76116eff1506e9b0750ab5c045
+
+Evidence is stored in Resources/weapon-metadata.zip, indexed by source hash and
+hashed edition/faction/unit source alias. Only required records are decompressed;
+there is no process-wide full-catalogue evidence graph. The 2,164 evidence records
+occupy 2,392,574 bytes, SHA-256:
+379798712f5dcac96633d7ddb32cebaaf2a106383d89ddb2400555670c03204f
+
+Each repair requires matching source hash, edition, faction and source alias,
+plus an exact multiset of visible weapon profiles. Same-looking weapons with
+conflicting source metadata are ambiguous and remain unchanged. Existing
+conflicting IDs/categories are never overwritten. Known empty category lists
+are preserved as negative evidence. Repair keeps order/duplicates and changes
+only SourceId/SourceCategories; it preserves prices, stats, loadouts, notes,
+abilities, selections and source provenance. Other unmatched source revisions
+remain unresolved rather than borrowing evidence from this archive.
+
+The bundled audit repaired 2,155 units across all 36 factions. No bundled weapon
+profiles remain without metadata. It verified every repaired unit/weapon retains
+all non-metadata values, and repeated weapon/composite recovery makes no changes.
+See docs/performance/weapon-metadata-audit-2026-10-28.json.
+
+Startup and caches
+------------------
+EffectiveDatasheetRecovery first applies legacy semantic fingerprints, then
+weapon metadata. If weapon metadata changes, it finishes newly matching current
+semantic fingerprints in the same recovery operation. This ordering preserves
+legacy compatibility and prevents a second-launch-only rule upgrade. Two existing
+idempotence tests caught this edge case during the initial full regression run.
+
+RecoveryProjectionCache format projection-4 now retains weapon overlays alongside
+semantics. Indexed recovery uses indexed-recovery-5/weapons-1. Existing application/
+Core module identity versioning invalidates faction projections and persisted
+recovery checks on upgrade. Cached recovery and rebuilt recovery return the same
+profiles; malformed caches fall back to source evidence. This is an offline
+derived projection: it does not rewrite the user's original source snapshot or
+require Update BSData.
+
+Unknown numeric weapon selectors now produce conditional AppliedModifierSource
+diagnostics, matching the conservative behavior of unknown keyword targeting.
+They never apply numerical changes. The shared diagnostic/export summary carries
+the unresolved selector; this change does not add a new warning panel to either
+frontend or reintroduce modifier notes into concise TXT unit blocks.
+
+Actual enhancement results
+--------------------------
+Both Daemon Prince of Tzeentch variants receive exactly six stat changes:
+Dark Blessing S5/D2; Hellforged strike S9/D4; Hellforged sweep S7/D2.
+Infernal cannon stays S5/D2. The recovered winged Prince's offline Yellowscribe
+XML contains those same profiles; no upload was performed.
+Evidence: artifacts/distribution-evidence/eldritch-fixed-export.json.
+The physical Android performance app also passed 26 checks of the winged
+Prince's build/play profiles, undo/redo, retained datasheet and saved reopen.
+
+Regeneration
+------------
+Build tools/GrimList.Performance, then run its DLL with:
+  --build-weapon-metadata <pinned-repository.zip>
+  src/GrimList.Application/Resources/weapon-metadata.zip
+Build again to embed the result. The command retains other source revisions,
+replaces only the regenerated source's evidence and publishes the ZIP atomically.
+The writer rejects conflicting identities and uses stable ZIP timestamps.
+Regeneration is an explicit developer action, never a startup or packaging
+network action. Preserve source identities and bump the recovery resource version
+when adding or changing evidence.
+
+For the catalogue audit run the tool with:
+  --audit-weapon-metadata docs/performance/weapon-metadata-audit-2026-10-28.json
+For the reported enhancement's projection/export use:
+  --inspect-enhancement recovered-bootstrap "Thousand Sons"
+  "Daemon Prince of Tzeentch with wings" "Eldritch Vortex of E'taph" <output.json>
+
+Verification status
+-------------------
+The initial 11 focused checks passed: generic/negative metadata matching,
+preservation/idempotence, actual Princes, cache corruption, session reopen and
+undo/redo, numeric unknown-selector diagnostics, static attachment parsing and
+definition-index equivalence/revision isolation. The first full run exposed the
+composite idempotence ordering issue above. Final full regression passed all 526
+checks; physical Android passed 26 metadata and 41 attachment checks. Details,
+build results and performance measurements are recorded in
+docs/performance/optimization-stage2-2026-10-28.txt.
+
+Changes are shared source code and bundled metadata. The community Android app
+remains 0.2.28 and Windows installer 0.2.27 until separately versioned packaging;
+the isolated com.grimlist.perftest APK is not a community release.

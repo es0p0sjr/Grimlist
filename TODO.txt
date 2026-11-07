@@ -1,0 +1,58 @@
+TODO:
+
+Resolved in source - Imperium's Sword weapon profile (2026-10-16):
+
+- Per the user's decision, Assault Brethren's enhancement adds its melee profile without replacing existing weapons. Stats come from the pinned BSData profile; existing flattened imports also work without reimport.
+- Both frontends use the normal melee weapon display. Shared tests cover loadouts, ownership, export, removal, undo/redo and save/reopen. See docs/imperiums-sword.txt for source and verification evidence.
+- Existing 0.2.21 distributables have not been rebuilt; increment release versions before packaging this fix.
+
+Battle tracker roadmap (Windows and Android):
+
+- Implemented first UI: open Army menu > Battle tracker on Windows/Android. Setup assigns both primaries; both players' totals stay visible; first player is above second player. Inline condition counters/achievement buttons, CP gained/spent controls, separate scoring limits, five rounds, Android swipe handlers, end-of-battle scoring and final breakdown are present. Local save/resume/history and generated battle codes are included. See docs/battle-tracker.txt for scope and checks.
+- Offline cards: 25 primaries plus 18 secondaries (4 Fixed options), with timing, actions, conditions, OR choices, cumulative bonuses and local caps. Players confirm battlefield conditions; the app calculates awards. Card source details are in data/missions/11e/README.txt.
+- Card actions: Discard excludes the card from future draws; Shuffle Back returns it to the pool. See discard pool > Recover restores accidentally discarded cards. All preserve manual CP, including legacy saved event totals. Scored cards are protected. Discard/shuffle/recovery history survives save/resume.
+- Compact scoreboard: rounds 1 through 5, each split into Primary and Secondary for both players; scored card names and capped VP, discarded/shuffled/recovered cards, and concise CP spent/balance. End-of-battle scoring is collapsed below totals; condition explanations are omitted from the scoreboard.
+- Implemented battle actions: random Tactical draws from each player's remaining cards, finish/reopen during play, mark finished from history, and confirmed battle deletion. Random draws leave Defend Stronghold available for later rounds instead of drawing it in round one.
+- Implemented serverless battle exchange: Play with another GrimList > Generate code & invitation > Join & create response > Accept opponent. Windows saves/opens .grimbattle files; Android shares/opens them; both support copied exchange text. Both players see saved faction/disposition/roster text with equipment and attachments. Battle ID, code, Fixed/Tactical choices and primaries agree; scores stay independent. Code generation and joining do not select first turn or start scoring. Open battle separately asks each device for the agreed first player before Start battle. Invitations survive restarts and duplicate imports preserve scores and player order. See docs/battle-exchange.txt.
+- QR generation/scanning remains unfinished: ZXing.Net was not cached and this environment blocked package downloads. No QR placeholder is presented as functional. Compare remains future work.
+- Still to implement: automatic checks of optional shuffle-back eligibility, persistent target/unit nominations and action progress, explicit post-start setup corrections, in-tracker rules browser, and on-demand Compare. CP adjustments remain manual by user preference. Do not describe the tracker as a complete automated mission/deck referee.
+- Android 0.2.16 (code 17), before the exchange feature, APK rebuilt and installed on the phone on 2026-10-15; cold launch and existing army restoration verified. Interactive tracker gestures/layout remain for physical testing because the phone disallows injected taps. Windows installer has not been rebuilt for this UI.
+
+Full agreed requirements (retain as acceptance criteria for the remaining work):
+
+- Start a battle from a saved army, retaining a snapshot of its list and rules for battle history.
+- Use generated battle codes to identify a battle and associate both players' independently tracked records.
+- Carry over the army's selected Force Disposition and select the opponent's disposition.
+- Automatically assign BOTH players' primary missions from the verified disposition matchup table; display mission names and provide access to their cards.
+- Recalculate both primaries when either disposition changes before play. After scoring starts, require an explicit correction so scores are not silently assigned to a different mission.
+- Track the battle round and turn, both players' Primary VP by round, Secondary missions and VP by round, and current CP, with running totals.
+- Keep mission cards, stratagems and unit rules accessible during battle.
+- Save and resume unfinished battles; retain completed results linked to the army snapshot.
+- Add a Compare button that exchanges snapshots on demand using the battle code and highlights differences between the two apps.
+- Compare player identities/perspectives, round and turn, dispositions, assigned primaries, Primary VP, Secondary missions/VP and CP.
+- Show discrepancies with both recorded values and the relevant player/round; keep matching entries neutral.
+- Each app remains independently editable. No continuous synchronization, automatic merging or overwriting; players resolve differences and correct their own records manually.
+- Support comparison between Windows and Android as well as between two Android devices using the same battle format.
+
+Battle scoring screen and automation acceptance criteria:
+
+- Use one vertically arranged scoring screen. Always show the player going first above the player going second, regardless of which player owns the device.
+- Keep both players' running VP totals visible at the top while scrolling. Include +10 Battle Ready points for each player, recorded separately and added only once per battle.
+- Within EACH player's section, show these in order: CP controls; primary mission scoring; a separator; secondary mission scoring.
+- Separate the two players' sections with a larger, visually distinct separator.
+- Show the primary's scoring conditions, applicable timing, current-round score and running primary total inline. Provide simple condition-specific controls rather than requiring manual VP arithmetic or opening another screen.
+- For a condition awarding points per objective, use objective-count +/- controls and calculate the VP automatically (e.g. 5 VP per controlled objective when that is the mission's rule). Use similarly direct controls for other conditions and allow mistakes to be corrected inline.
+- Automate scoring from the actual mission conditions, including applicable rounds, timing, alternative OR conditions, cumulative bonuses and score limits. Do not treat every scoring condition as independently repeatable or assume that every mission scores in the same phase.
+- Enforce separate limits for EACH player in EACH battle round: maximum 15 Primary VP and maximum 15 Secondary VP. Apply each limit across the whole battle round, including scoring in either player's turn; these are not per-condition, per-mission or per-turn allowances.
+- Display Primary X/15 and Secondary Y/15 for the selected round, with a clear cap-reached indication. Automatically limit awarded VP to the remaining allowance while preserving the underlying condition counts and uncapped calculation for accurate corrections and explanations.
+- Recalculate both caps after any score correction, including corrections to previous rounds. Apply the same capped scores to running totals, the final scoreboard and Compare snapshots. Keep Battle Ready points and end-of-battle scoring separately classified so their applicable rules can be enforced independently.
+- Under the primary separator, show the player's secondary missions, how to score them, inline scoring controls, current-round scores and running secondary total. Ordinary primary and secondary scoring must not require screen changes.
+- CP controls must distinguish CP gained from CP spent and retain a history by player and round, so the final scoreboard can report CP used rather than only the remaining balance.
+- Place Next Round at the bottom right of the scoring layout. Show Previous Round at the bottom left only when a previous round exists.
+- On Android, also support swipe left for the next round and swipe right for the previous round; retain the visible navigation buttons.
+- Navigating rounds restores their recorded state for viewing/correction. It must not erase scores, grant points/CP again or reset CP. Corrections must update subsequent balances and totals consistently.
+- Support rounds 1 through 5. After round 5, show a final scoreboard instead of creating a sixth round.
+- The final scoreboard must show what each player scored and when: primary condition and secondary mission breakdowns by round, Battle Ready points separately, overall totals, and CP gained/spent with the remaining balance. Retain timing information needed for end-of-battle scoring.
+
+- Later: battle statistics and result sharing.
+- Later: Record of an army kept locally for each player

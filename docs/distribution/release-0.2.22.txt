@@ -1,0 +1,69 @@
+GrimList 0.2.22 - local community packages
+Prepared 2026-10-21. Android version code: 23.
+
+Delivery
+Root folder: 0.2.22/
+- GrimList-0.2.22-win-x64.msi: 98,738,176 bytes
+  SHA-256 1ec27d72056e013862940dbb23724d3e116b3237494d87369418b709b8da20a1
+- GrimList-Android-0.2.22.apk: 105,547,909 bytes
+  SHA-256 f56b855a40a72fe4523067de784d7f43db1da5266dc31c99d6df20bd9c086dfd
+Adjacent .sha256 files and README.txt are included. Delivery copies were hashed
+against the canonical verified artifacts. No upload or tester messaging occurred.
+Canonical files and shared assembly hashes: release-0.2.22-files.json.
+Tester instructions: community-testing-0.2.22.txt.
+
+Changes
+Generic equipment-pricing repair separates price coverage from automatic loadout
+coverage. Mapped choices survive partial imports; additional manual choices have
+review warnings. Pinned source evidence recovers missing manual price metadata
+in existing libraries without changing quantities or MFM unit base prices.
+Source-confirmed included weapons have zero additional cost. Paid and unresolved
+equipment retain their distinct states. See docs/equipment-pricing.txt.
+Includes the source cleanup documented in docs/cleanup-2026-10-16.txt.
+The unit/profile bootstrap remains grimlist-11e-2026.10.16.2. No live rules/source
+refresh was performed for packaging. Equipment evidence uses pinned local ZIPs.
+
+Build and verification
+- Built sequentially from the existing source tree using the standard Android
+  and Windows publishing scripts, then Build-WindowsInstaller.py. Windows uses
+  the private installed runtime 10.0.10; end users do not need the SDK/runtime.
+- The final implementation passed all 455 regressions with --lf-json before
+  the version-only packaging bump. Focused equipment/contextual checks: 21 passed.
+  Evidence: artifacts/distribution-evidence/equipment-prices-final-regression.log
+  and equipment-prices-focused.log. No full-suite rerun for the version bump.
+- Both publish gates passed enhancement coverage (2,695 cards; 102 unsupported
+  source conditions remain explicit), army-rule coverage (36 factions), and
+  equipment coverage (every selectable option priced or explicitly unresolved).
+- Android: package com.grimlist.mobile, version 0.2.22/code 23, minimum Android 11.
+  APK signature verified, ZIP integrity passed for all 1,222 entries, native MAUI
+  startup bindings present for ARM64 and x64. Signing certificate matches 0.2.21:
+  9be9c191c53dc33ee955dcaedad94868fe4a4e6817a1fb30187ac0baf7f28f25.
+  adb devices -l returned no devices; installation/cold launch was not performed.
+- Windows executable version: 0.2.22. All 19 MSI checks passed, including 2,148
+  authored table rows, cabinet extraction and hashes for all 490 payload files.
+  All 13 extracted-app checks passed: offline bootstrap, reference cards, army
+  validation, save/reopen and loading the private runtime. Disposable data used.
+- Installer welcome/per-user destination and Cancel/Finish checks passed without
+  installing. Stable upgrade identity: {5F1E3A2A-2390-5993-A9F9-4AF11C89E68A};
+  new product identity: {620DE8EC-6573-56AA-A392-015187632BAF}.
+- Windows and both Android ABI payloads contain the same Application assembly:
+  15328b9b97226e792b46ac09b5f489c5d12b7e48092f7557feee83434f62bcc9.
+
+Storage and evidence
+Evidence: artifacts/distribution-evidence/0.2.22/.
+Standard scripts removed superseded 0.2.21 Android, Windows payload and MSI
+artifact directories. Build-retention regression checks passed. One APK remains
+in the canonical Android output, with the requested copy in the delivery folder.
+Temporary MSI extraction and Windows acceptance data were removed.
+Automatic approval review rejected explicit deletion of the old root 0.2.21
+delivery folder with "blocked by policy". Its four MSI/APK/ZIP files remain
+(400,293,024 bytes); no alternate removal method was attempted. Previously blocked
+equipment-task temporary cleanup remains as documented in equipment-pricing.txt.
+
+Limits
+Windows MSI is unsigned. Android uses the existing development signing key.
+Android physical in-place update/cold launch remains unverified for this release.
+Windows install/repair/upgrade/uninstall lifecycle remains unverified; extraction
+and welcome/cancel checks do not establish those operations. Broader device,
+loadout legality and optical QR checks remain manual. Numeric points do not prove
+completeness, and this release does not claim every rule or price is current.

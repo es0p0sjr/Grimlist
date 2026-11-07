@@ -1,0 +1,4331 @@
+{
+  "date": "2026-10-13",
+  "scope": "Measurements only; production source and installations unchanged.",
+  "method": {
+    "build": "Release, current source snapshot with diagnostic instrumentation; Android trimming and AOT disabled as shipped",
+    "startup": "First install measured separately. Five fresh-process repeats with an existing empty database, then five with ten saved 20-entry armies. Windows opens Home; Android restores its roster on the saved-army runs. OS file caches are not reset.",
+    "operations": "Windows: 20 recorded samples per case. Android: 5 recorded samples per case in fresh-process batches after the long stress run aborted in Mono. One unrecorded warm-up per case. Each sample resets the fixture outside the timer. Ten saved armies. Commands use the shared session; native WPF/MAUI presentation follows. No touch-input injection.",
+    "readiness": "Two rendering callbacks after presentation. These are render-readiness proxies, not hardware display/input latency measurements.",
+    "percentiles": "Nearest-rank p95. Windows has 20 interaction samples per case; Android has 5, so its p95 equals the observed maximum and must not be treated as a reliable tail estimate. Startup has 5 samples per state.",
+    "memory": "Managed heap without forced GC; allocated bytes are cumulative allocation, not resident memory. Windows uses precise allocation sampling; Android interaction batches use approximate counters after runtime thread-suspension assertions in the long run. Windows working set and Android PSS are different OS metrics.",
+    "limitations": [
+      "Synthetic Death Guard fixtures, not the user database.",
+      "Android receives its bundled Stratagem supplement; Windows uses its own normal bundled library. Library card counts differ, so ratios are not pure hardware comparisons.",
+      "Diagnostic timings include instrumentation overhead; its exact cost was not isolated.",
+      "Desktop command work runs through the shared async harness before native rendering; this does not measure production UI-thread blocking or input latency.",
+      "UI.RenderSubmit includes presentation calculations, control creation, and binding work; it is not a GPU-only or layout-only measurement.",
+      "The initial Windows datasheet case incorrectly called full Render; its 40 samples were excluded and replaced by 40 samples using the actual RefreshDetails path. Both raw runs are retained.",
+      "Background applications and OS caches were not reset.",
+      "No scrolling gesture/frame-jank benchmark: phone input injection is restricted.",
+      "No optimizations applied; there is no before/after speedup claim."
+    ]
+  },
+  "windows_host": {
+    "platform": "Windows-11-10.0.26200-SP0",
+    "processor": "Intel Core i7-9750H @ 2.60GHz",
+    "logical_processors": 12
+  },
+  "windows": {
+    "startup": {
+      "empty": {
+        "runs": [
+          {
+            "AppEntryToUsableMs": 3259.6667,
+            "ProcessStartToUsableMs": 3486.7912,
+            "ManagedBytes": 436197840,
+            "AllocatedBytes": 704351256,
+            "WorkingSetBytes": 548372480,
+            "PrivateBytes": 704606208,
+            "Phases": [
+              {
+                "Name": "Session.LoadDataset",
+                "StartMs": 0.0152,
+                "Ms": 1182.6355999999998,
+                "AllocatedBytes": 529149936,
+                "ManagedBytes": 502930008,
+                "Gen0": 23,
+                "Gen1": 14,
+                "Gen2": 4
+              },
+              {
+                "Name": "Session.EnhancementRecovery",
+                "StartMs": 1183.0998,
+                "Ms": 2.1568999999999505,
+                "AllocatedBytes": 0,
+                "ManagedBytes": 502930008,
+                "Gen0": 0,
+                "Gen1": 0,
+                "Gen2": 0
+              },
+              {
+                "Name": "Session.EffectiveRecovery",
+                "StartMs": 1185.2595,
+                "Ms": 546.5062,
+                "AllocatedBytes": 57155136,
+                "ManagedBytes": 544062768,
+                "Gen0": 9,
+                "Gen1": 4,
+                "Gen2": 0
+              },
+              {
+                "Name": "Session.DetachmentRecovery",
+                "StartMs": 1731.772,
+                "Ms": 67.1893,
+                "AllocatedBytes": 21748096,
+                "ManagedBytes": 564177240,
+                "Gen0": 2,
+                "Gen1": 1,
+                "Gen2": 0
+              },
+              {
+                "Name": "Session.DatasetIndex",
+                "StartMs": 1798.9663,
+                "Ms": 663.3836000000001,
+                "AllocatedBytes": 87772856,
+                "ManagedBytes": 435213608,
+                "Gen0": 14,
+                "Gen1": 4,
+                "Gen2": 1
+              }
+            ],
+            "Units": 2194,
+            "Cards": 3880,
+            "Runtime": ".NET 10.0.10"
+          },
+          {
+            "AppEntryToUsableMs": 3343.0327,
+            "ProcessStartToUsableMs": 3560.3823,
+            "ManagedBytes": 436499672,
+            "AllocatedBytes": 704462776,
+            "WorkingSetBytes": 546635776,
+            "PrivateBytes": 703639552,
+            "Phases": [
+              {
+                "Name": "Session.LoadDataset",
+                "StartMs": 0.0156,
+                "Ms": 1238.0765000000001,
+                "AllocatedBytes": 529265968,
+                "ManagedBytes": 503042992,
+                "Gen0": 23,
+                "Gen1": 14,
+                "Gen2": 4
+              },
+              {
+                "Name": "Session.EnhancementRecovery",
+                "StartMs": 1238.5617,
+                "Ms": 2.2560000000000855,
+                "AllocatedBytes": 8200,
+                "ManagedBytes": 503051216,
+                "Gen0": 0,
+                "Gen1": 0,
+                "Gen2": 0
+              },
+              {
+                "Name": "Session.EffectiveRecovery",
+                "StartMs": 1240.8211,
+                "Ms": 606.9940000000001,
+                "AllocatedBytes": 57148008,
+                "ManagedBytes": 544118008,
+                "Gen0": 9,
+                "Gen1": 4,
+                "Gen2": 0
+              },
+              {
+                "Name": "Session.DetachmentRecovery",
+                "StartMs": 1847.8205,
+                "Ms": 70.37639999999988,
+                "AllocatedBytes": 21750480,
+                "ManagedBytes": 564249056,
+                "Gen0": 2,
+                "Gen1": 1,
+                "Gen2": 0
+              },
+              {
+                "Name": "Session.DatasetIndex",
+                "StartMs": 1918.2029,
+                "Ms": 629.7430999999999,
+                "AllocatedBytes": 87785376,
+                "ManagedBytes": 435531880,
+                "Gen0": 14,
+                "Gen1": 3,
+                "Gen2": 1
+              }
+            ],
+            "Units": 2194,
+            "Cards": 3880,
+            "Runtime": ".NET 10.0.10"
+          },
+          {
+            "AppEntryToUsableMs": 3323.9223,
+            "ProcessStartToUsableMs": 3540.7568,
+            "ManagedBytes": 436161560,
+            "AllocatedBytes": 704443832,
+            "WorkingSetBytes": 546631680,
+            "PrivateBytes": 704225280,
+            "Phases": [
+              {
+                "Name": "Session.LoadDataset",
+                "StartMs": 0.0153,
+                "Ms": 1199.8781999999999,
+                "AllocatedBytes": 529251656,
+                "ManagedBytes": 503011784,
+                "Gen0": 23,
+                "Gen1": 14,
+                "Gen2": 4
+              },
+              {
+                "Name": "Session.EnhancementRecovery",
+                "StartMs": 1200.6797,
+                "Ms": 2.4174000000000433,
+                "AllocatedBytes": 0,
+                "ManagedBytes": 503011784,
+                "Gen0": 0,
+                "Gen1": 0,
+                "Gen2": 0
+              },
+              {
+                "Name": "Session.EffectiveRecovery",
+                "StartMs": 1203.1011,
+                "Ms": 539.5040999999999,
+                "AllocatedBytes": 57156296,
+                "ManagedBytes": 544111776,
+                "Gen0": 9,
+                "Gen1": 4,
+                "Gen2": 0
+              },
+              {
+                "Name": "Session.DetachmentRecovery",
+                "StartMs": 1742.6108,
+                "Ms": 66.07270000000017,
+                "AllocatedBytes": 21745008,
+                "ManagedBytes": 564239096,
+                "Gen0": 2,
+                "Gen1": 1,
+                "Gen2": 0
+              },
+              {
+                "Name": "Session.DatasetIndex",
+                "StartMs": 1808.6889,
+                "Ms": 681.1542,
+                "AllocatedBytes": 87787424,
+                "ManagedBytes": 435194864,
+                "Gen0": 14,
+                "Gen1": 3,
+                "Gen2": 1
+              }
+            ],
+            "Units": 2194,
+            "Cards": 3880,
+            "Runtime": ".NET 10.0.10"
+          },
+          {
+            "AppEntryToUsableMs": 3342.6886,
+            "ProcessStartToUsableMs": 3567.7593,
+            "ManagedBytes": 436149200,
+            "AllocatedBytes": 704440504,
+            "WorkingSetBytes": 546832384,
+            "PrivateBytes": 702238720,
+            "Phases": [
+              {
+                "Name": "Session.LoadDataset",
+                "StartMs": 0.0149,
+                "Ms": 1269.8448,
+                "AllocatedBytes": 529270864,
+                "ManagedBytes": 503062208,
+                "Gen0": 23,
+                "Gen1": 14,
+                "Gen2": 4
+              },
+              {
+                "Name": "Session.EnhancementRecovery",
+                "StartMs": 1270.3347,
+                "Ms": 2.3509999999998854,
+                "AllocatedBytes": 0,
+                "ManagedBytes": 503062208,
+                "Gen0": 0,
+                "Gen1": 0,
+                "Gen2": 0
+              },
+              {
+                "Name": "Session.EffectiveRecovery",
+                "StartMs": 1272.6898,
+                "Ms": 574.8407,
+                "AllocatedBytes": 57153424,
+                "ManagedBytes": 544129968,
+                "Gen0": 9,
+                "Gen1": 4,
+                "Gen2": 0
+              },
+              {
+                "Name": "Session.DetachmentRecovery",
+                "StartMs": 1847.5354,
+                "Ms": 68.26070000000004,
+                "AllocatedBytes": 21750744,
+                "ManagedBytes": 564261272,
+                "Gen0": 2,
+                "Gen1": 1,
+                "Gen2": 0
+              },
+              {
+                "Name": "Session.DatasetIndex",
+                "StartMs": 1915.8013,
+                "Ms": 634.2127,
+                "AllocatedBytes": 87762024,
+                "ManagedBytes": 435182504,
+                "Gen0": 14,
+                "Gen1": 3,
+                "Gen2": 1
+              }
+            ],
+            "Units": 2194,
+            "Cards": 3880,
+            "Runtime": ".NET 10.0.10"
+          },
+          {
+            "AppEntryToUsableMs": 3202.067,
+            "ProcessStartToUsableMs": 3420.5056,
+            "ManagedBytes": 436450272,
+            "AllocatedBytes": 704441272,
+            "WorkingSetBytes": 545206272,
+            "PrivateBytes": 702545920,
+            "Phases": [
+              {
+                "Name": "Session.LoadDataset",
+                "StartMs": 0.0173,
+                "Ms": 1154.2211,
+                "AllocatedBytes": 529237792,
+                "ManagedBytes": 503017232,
+                "Gen0": 23,
+                "Gen1": 14,
+                "Gen2": 4
+              },
+              {
+                "Name": "Session.EnhancementRecovery",
+                "StartMs": 1154.8125,
+                "Ms": 2.2159999999998945,
+                "AllocatedBytes": 8200,
+                "ManagedBytes": 503025456,
+                "Gen0": 0,
+                "Gen1": 0,
+                "Gen2": 0
+              },
+              {
+                "Name": "Session.EffectiveRecovery",
+                "StartMs": 1157.0405,
+                "Ms": 519.2786999999998,
+                "AllocatedBytes": 57165680,
+                "ManagedBytes": 544120008,
+                "Gen0": 9,
+                "Gen1": 4,
+                "Gen2": 0
+              },
+              {
+                "Name": "Session.DetachmentRecovery",
+                "StartMs": 1676.324,
+                "Ms": 69.32659999999987,
+                "AllocatedBytes": 21737488,
+                "ManagedBytes": 564241304,
+                "Gen0": 2,
+                "Gen1": 1,
+                "Gen2": 0
+              },
+              {
+                "Name": "Session.DatasetIndex",
+                "StartMs": 1745.6563,
+                "Ms": 668.6934999999999,
+                "AllocatedBytes": 87789904,
+                "ManagedBytes": 435490784,
+                "Gen0": 14,
+                "Gen1": 3,
+                "Gen2": 1
+              }
+            ],
+            "Units": 2194,
+            "Cards": 3880,
+            "Runtime": ".NET 10.0.10"
+          }
+        ],
+        "metrics": {
+          "ProcessStartToUsableMs": {
+            "n": 5,
+            "median": 3540.7568,
+            "p95": 3567.7593,
+            "min": 3420.5056,
+            "max": 3567.7593
+          },
+          "AllocatedBytes": {
+            "n": 5,
+            "median": 704441272,
+            "p95": 704462776,
+            "min": 704351256,
+            "max": 704462776
+          },
+          "ManagedBytes": {
+            "n": 5,
+            "median": 436197840,
+            "p95": 436499672,
+            "min": 436149200,
+            "max": 436499672
+          },
+          "WorkingSetBytes": {
+            "n": 5,
+            "median": 546635776,
+            "p95": 548372480,
+            "min": 545206272,
+            "max": 548372480
+          }
+        },
+        "phases": {
+          "Session.DatasetIndex": {
+            "n": 5,
+            "median": 663.3836000000001,
+            "p95": 681.1542,
+            "min": 629.7430999999999,
+            "max": 681.1542
+          },
+          "Session.DetachmentRecovery": {
+            "n": 5,
+            "median": 68.26070000000004,
+            "p95": 70.37639999999988,
+            "min": 66.07270000000017,
+            "max": 70.37639999999988
+          },
+          "Session.EffectiveRecovery": {
+            "n": 5,
+            "median": 546.5062,
+            "p95": 606.9940000000001,
+            "min": 519.2786999999998,
+            "max": 606.9940000000001
+          },
+          "Session.EnhancementRecovery": {
+            "n": 5,
+            "median": 2.2560000000000855,
+            "p95": 2.4174000000000433,
+            "min": 2.1568999999999505,
+            "max": 2.4174000000000433
+          },
+          "Session.LoadDataset": {
+            "n": 5,
+            "median": 1199.8781999999999,
+            "p95": 1269.8448,
+            "min": 1154.2211,
+            "max": 1269.8448
+          }
+        }
+      },
+      "saved": {
+        "runs": [
+          {
+            "AppEntryToUsableMs": 4266.4773,
+            "ProcessStartToUsableMs": 4497.0567,
+            "ManagedBytes": 437405984,
+            "AllocatedBytes": 790781648,
+            "WorkingSetBytes": 552517632,
+            "PrivateBytes": 707457024,
+            "Phases": [
+              {
+                "Name": "Session.LoadDataset",
+                "StartMs": 0.0163,
+                "Ms": 1192.5941,
+                "AllocatedBytes": 529181440,
+                "ManagedBytes": 502949656,
+                "Gen0": 23,
+                "Gen1": 14,
+                "Gen2": 4
+              },
+              {
+                "Name": "Session.EnhancementRecovery",
+                "StartMs": 1193.0684,
+                "Ms": 2.3489999999999327,
+                "AllocatedBytes": 0,
+                "ManagedBytes": 502949656,
+                "Gen0": 0,
+                "Gen1": 0,
+                "Gen2": 0
+              },
+              {
+                "Name": "Session.EffectiveRecovery",
+                "StartMs": 1195.4211,
+                "Ms": 556.5629999999999,
+                "AllocatedBytes": 57149648,
+                "ManagedBytes": 544074008,
+                "Gen0": 9,
+                "Gen1": 4,
+                "Gen2": 0
+              },
+              {
+                "Name": "Session.DetachmentRecovery",
+                "StartMs": 1751.9899,
+                "Ms": 68.38580000000002,
+                "AllocatedBytes": 21749536,
+                "ManagedBytes": 564200096,
+                "Gen0": 2,
+                "Gen1": 1,
+                "Gen2": 0
+              },
+              {
+                "Name": "Session.DatasetIndex",
+                "StartMs": 1820.381,
+                "Ms": 673.1773999999998,
+                "AllocatedBytes": 87762840,
+                "ManagedBytes": 435338392,
+                "Gen0": 14,
+                "Gen1": 4,
+                "Gen2": 1
+              }
+            ],
+            "Units": 2194,
+            "Cards": 3880,
+            "Runtime": ".NET 10.0.10"
+          },
+          {
+            "AppEntryToUsableMs": 4257.9165,
+            "ProcessStartToUsableMs": 4478.2163,
+            "ManagedBytes": 437405456,
+            "AllocatedBytes": 790881200,
+            "WorkingSetBytes": 551899136,
+            "PrivateBytes": 706342912,
+            "Phases": [
+              {
+                "Name": "Session.LoadDataset",
+                "StartMs": 0.016,
+                "Ms": 1250.4354999999998,
+                "AllocatedBytes": 529279536,
+                "ManagedBytes": 503068744,
+                "Gen0": 23,
+                "Gen1": 14,
+                "Gen2": 4
+              },
+              {
+                "Name": "Session.EnhancementRecovery",
+                "StartMs": 1250.9258,
+                "Ms": 2.400100000000066,
+                "AllocatedBytes": 0,
+                "ManagedBytes": 503068744,
+                "Gen0": 0,
+                "Gen1": 0,
+                "Gen2": 0
+              },
+              {
+                "Name": "Session.EffectiveRecovery",
+                "StartMs": 1253.3303,
+                "Ms": 576.3142,
+                "AllocatedBytes": 57150904,
+                "ManagedBytes": 544131672,
+                "Gen0": 9,
+                "Gen1": 4,
+                "Gen2": 0
+              },
+              {
+                "Name": "Session.DetachmentRecovery",
+                "StartMs": 1829.6496,
+                "Ms": 65.54070000000002,
+                "AllocatedBytes": 21751592,
+                "ManagedBytes": 564264744,
+                "Gen0": 2,
+                "Gen1": 1,
+                "Gen2": 0
+              },
+              {
+                "Name": "Session.DatasetIndex",
+                "StartMs": 1895.1956,
+                "Ms": 652.7374,
+                "AllocatedBytes": 87760984,
+                "ManagedBytes": 435406512,
+                "Gen0": 14,
+                "Gen1": 3,
+                "Gen2": 1
+              }
+            ],
+            "Units": 2194,
+            "Cards": 3880,
+            "Runtime": ".NET 10.0.10"
+          },
+          {
+            "AppEntryToUsableMs": 4192.793,
+            "ProcessStartToUsableMs": 4420.6003,
+            "ManagedBytes": 437319744,
+            "AllocatedBytes": 790785184,
+            "WorkingSetBytes": 551964672,
+            "PrivateBytes": 706318336,
+            "Phases": [
+              {
+                "Name": "Session.LoadDataset",
+                "StartMs": 0.0168,
+                "Ms": 1196.205,
+                "AllocatedBytes": 529157760,
+                "ManagedBytes": 502917544,
+                "Gen0": 23,
+                "Gen1": 14,
+                "Gen2": 4
+              },
+              {
+                "Name": "Session.EnhancementRecovery",
+                "StartMs": 1196.6788,
+                "Ms": 2.3911000000000513,
+                "AllocatedBytes": 0,
+                "ManagedBytes": 502917544,
+                "Gen0": 0,
+                "Gen1": 0,
+                "Gen2": 0
+              },
+              {
+                "Name": "Session.EffectiveRecovery",
+                "StartMs": 1199.0741,
+                "Ms": 556.5862999999999,
+                "AllocatedBytes": 57151040,
+                "ManagedBytes": 544056568,
+                "Gen0": 9,
+                "Gen1": 4,
+                "Gen2": 0
+              },
+              {
+                "Name": "Session.DetachmentRecovery",
+                "StartMs": 1755.6661,
+                "Ms": 72.96100000000001,
+                "AllocatedBytes": 21749856,
+                "ManagedBytes": 564166832,
+                "Gen0": 2,
+                "Gen1": 1,
+                "Gen2": 0
+              },
+              {
+                "Name": "Session.DatasetIndex",
+                "StartMs": 1828.6334,
+                "Ms": 650.3808000000001,
+                "AllocatedBytes": 87767096,
+                "ManagedBytes": 435194448,
+                "Gen0": 14,
+                "Gen1": 4,
+                "Gen2": 1
+              }
+            ],
+            "Units": 2194,
+            "Cards": 3880,
+            "Runtime": ".NET 10.0.10"
+          },
+          {
+            "AppEntryToUsableMs": 4240.0878,
+            "ProcessStartToUsableMs": 4462.6778,
+            "ManagedBytes": 437351864,
+            "AllocatedBytes": 790879872,
+            "WorkingSetBytes": 552263680,
+            "PrivateBytes": 706887680,
+            "Phases": [
+              {
+                "Name": "Session.LoadDataset",
+                "StartMs": 0.015,
+                "Ms": 1217.5261999999998,
+                "AllocatedBytes": 529273624,
+                "ManagedBytes": 503050112,
+                "Gen0": 23,
+                "Gen1": 14,
+                "Gen2": 4
+              },
+              {
+                "Name": "Session.EnhancementRecovery",
+                "StartMs": 1217.9918,
+                "Ms": 2.1616999999998825,
+                "AllocatedBytes": 0,
+                "ManagedBytes": 503050112,
+                "Gen0": 0,
+                "Gen1": 0,
+                "Gen2": 0
+              },
+              {
+                "Name": "Session.EffectiveRecovery",
+                "StartMs": 1220.156,
+                "Ms": 561.8691000000001,
+                "AllocatedBytes": 57155856,
+                "ManagedBytes": 544131592,
+                "Gen0": 9,
+                "Gen1": 4,
+                "Gen2": 0
+              },
+              {
+                "Name": "Session.DetachmentRecovery",
+                "StartMs": 1782.0309,
+                "Ms": 72.67180000000008,
+                "AllocatedBytes": 21744872,
+                "ManagedBytes": 564258096,
+                "Gen0": 2,
+                "Gen1": 1,
+                "Gen2": 0
+              },
+              {
+                "Name": "Session.DatasetIndex",
+                "StartMs": 1854.7091,
+                "Ms": 657.9319,
+                "AllocatedBytes": 87768240,
+                "ManagedBytes": 435324488,
+                "Gen0": 14,
+                "Gen1": 3,
+                "Gen2": 1
+              }
+            ],
+            "Units": 2194,
+            "Cards": 3880,
+            "Runtime": ".NET 10.0.10"
+          },
+          {
+            "AppEntryToUsableMs": 4252.4514,
+            "ProcessStartToUsableMs": 4471.6524,
+            "ManagedBytes": 437251200,
+            "AllocatedBytes": 790878752,
+            "WorkingSetBytes": 552484864,
+            "PrivateBytes": 707067904,
+            "Phases": [
+              {
+                "Name": "Session.LoadDataset",
+                "StartMs": 0.0147,
+                "Ms": 1218.4466,
+                "AllocatedBytes": 529278872,
+                "ManagedBytes": 503069320,
+                "Gen0": 23,
+                "Gen1": 14,
+                "Gen2": 4
+              },
+              {
+                "Name": "Session.EnhancementRecovery",
+                "StartMs": 1219.3906,
+                "Ms": 2.932800000000043,
+                "AllocatedBytes": 0,
+                "ManagedBytes": 503069320,
+                "Gen0": 0,
+                "Gen1": 0,
+                "Gen2": 0
+              },
+              {
+                "Name": "Session.EffectiveRecovery",
+                "StartMs": 1222.3278,
+                "Ms": 552.3833,
+                "AllocatedBytes": 57149024,
+                "ManagedBytes": 544131672,
+                "Gen0": 9,
+                "Gen1": 4,
+                "Gen2": 0
+              },
+              {
+                "Name": "Session.DetachmentRecovery",
+                "StartMs": 1774.7167,
+                "Ms": 69.52790000000005,
+                "AllocatedBytes": 21751592,
+                "ManagedBytes": 564264744,
+                "Gen0": 2,
+                "Gen1": 1,
+                "Gen2": 0
+              },
+              {
+                "Name": "Session.DatasetIndex",
+                "StartMs": 1844.2503,
+                "Ms": 634.3569,
+                "AllocatedBytes": 87761872,
+                "ManagedBytes": 435230984,
+                "Gen0": 14,
+                "Gen1": 3,
+                "Gen2": 1
+              }
+            ],
+            "Units": 2194,
+            "Cards": 3880,
+            "Runtime": ".NET 10.0.10"
+          }
+        ],
+        "metrics": {
+          "ProcessStartToUsableMs": {
+            "n": 5,
+            "median": 4471.6524,
+            "p95": 4497.0567,
+            "min": 4420.6003,
+            "max": 4497.0567
+          },
+          "AllocatedBytes": {
+            "n": 5,
+            "median": 790878752,
+            "p95": 790881200,
+            "min": 790781648,
+            "max": 790881200
+          },
+          "ManagedBytes": {
+            "n": 5,
+            "median": 437351864,
+            "p95": 437405984,
+            "min": 437251200,
+            "max": 437405984
+          },
+          "WorkingSetBytes": {
+            "n": 5,
+            "median": 552263680,
+            "p95": 552517632,
+            "min": 551899136,
+            "max": 552517632
+          }
+        },
+        "phases": {
+          "Session.DatasetIndex": {
+            "n": 5,
+            "median": 652.7374,
+            "p95": 673.1773999999998,
+            "min": 634.3569,
+            "max": 673.1773999999998
+          },
+          "Session.DetachmentRecovery": {
+            "n": 5,
+            "median": 69.52790000000005,
+            "p95": 72.96100000000001,
+            "min": 65.54070000000002,
+            "max": 72.96100000000001
+          },
+          "Session.EffectiveRecovery": {
+            "n": 5,
+            "median": 556.5862999999999,
+            "p95": 576.3142,
+            "min": 552.3833,
+            "max": 576.3142
+          },
+          "Session.EnhancementRecovery": {
+            "n": 5,
+            "median": 2.3911000000000513,
+            "p95": 2.932800000000043,
+            "min": 2.1616999999998825,
+            "max": 2.932800000000043
+          },
+          "Session.LoadDataset": {
+            "n": 5,
+            "median": 1217.5261999999998,
+            "p95": 1250.4354999999998,
+            "min": 1192.5941,
+            "max": 1250.4354999999998
+          }
+        }
+      }
+    },
+    "operations": [
+      {
+        "entries": 3,
+        "operation": "open",
+        "CommandMs": {
+          "n": 20,
+          "median": 30.9179,
+          "p95": 51.3869,
+          "min": 19.6807,
+          "max": 54.4875
+        },
+        "UsableMs": {
+          "n": 20,
+          "median": 357.7437,
+          "p95": 502.6587,
+          "min": 303.7589,
+          "max": 645.6977
+        },
+        "AllocatedBytes": {
+          "n": 20,
+          "median": 25603960.0,
+          "p95": 25910088,
+          "min": 25334904,
+          "max": 26941920
+        },
+        "ManagedBytes": {
+          "n": 20,
+          "median": 488600480.0,
+          "p95": 533879680,
+          "min": 448630624,
+          "max": 537925408
+        },
+        "order_check": {
+          "first5_usable_ms": 435.3294,
+          "last5_usable_ms": 312.3624,
+          "first_managed_bytes": 448630624,
+          "last_managed_bytes": 454082216
+        },
+        "phases": {
+          "Calculate": {
+            "n": 20,
+            "median": 9.412600000000566,
+            "p95": 29.20140000000174,
+            "min": 5.173000000002503,
+            "max": 34.9416999999994
+          },
+          "Copy": {
+            "n": 20,
+            "median": 0.1926499999999578,
+            "p95": 0.26780000000144355,
+            "min": 0.07119999999849824,
+            "max": 0.34689999999864085
+          },
+          "Save": {
+            "n": 20,
+            "median": 7.314300000000003,
+            "p95": 9.516499999997905,
+            "min": 6.54030000000057,
+            "max": 9.642900000000736
+          },
+          "UI.FrameWait": {
+            "n": 20,
+            "median": 235.4414,
+            "p95": 366.7578,
+            "min": 196.9217,
+            "max": 384.4774
+          },
+          "UI.RenderSubmit": {
+            "n": 20,
+            "median": 91.22855,
+            "p95": 130.3291,
+            "min": 60.0974,
+            "max": 224.4298
+          }
+        }
+      },
+      {
+        "entries": 3,
+        "operation": "datasheet",
+        "CommandMs": {
+          "n": 20,
+          "median": 6.05485,
+          "p95": 7.9294,
+          "min": 5.5001,
+          "max": 8.7488
+        },
+        "UsableMs": {
+          "n": 20,
+          "median": 210.20385,
+          "p95": 236.9036,
+          "min": 157.4132,
+          "max": 238.504
+        },
+        "AllocatedBytes": {
+          "n": 20,
+          "median": 15142248.0,
+          "p95": 15336232,
+          "min": 14699616,
+          "max": 15420264
+        },
+        "ManagedBytes": {
+          "n": 20,
+          "median": 487732912.0,
+          "p95": 534421208,
+          "min": 448793672,
+          "max": 545542000
+        },
+        "order_check": {
+          "first5_usable_ms": 222.3555,
+          "last5_usable_ms": 165.8714,
+          "first_managed_bytes": 448793672,
+          "last_managed_bytes": 459887832
+        },
+        "phases": {
+          "UI.FrameWait": {
+            "n": 20,
+            "median": 151.41755,
+            "p95": 180.2748,
+            "min": 111.0047,
+            "max": 180.9528
+          },
+          "UI.RenderSubmit": {
+            "n": 20,
+            "median": 48.8568,
+            "p95": 59.8362,
+            "min": 32.2963,
+            "max": 67.0341
+          }
+        }
+      },
+      {
+        "entries": 3,
+        "operation": "add",
+        "CommandMs": {
+          "n": 20,
+          "median": 40.39,
+          "p95": 50.488,
+          "min": 22.9682,
+          "max": 51.5574
+        },
+        "UsableMs": {
+          "n": 20,
+          "median": 254.9796,
+          "p95": 275.6373,
+          "min": 235.786,
+          "max": 353.8018
+        },
+        "AllocatedBytes": {
+          "n": 20,
+          "median": 28939640.0,
+          "p95": 29193168,
+          "min": 28832808,
+          "max": 30370008
+        },
+        "ManagedBytes": {
+          "n": 20,
+          "median": 462730956.0,
+          "p95": 494193632,
+          "min": 171764672,
+          "max": 500747976
+        },
+        "order_check": {
+          "first5_usable_ms": 261.1842,
+          "last5_usable_ms": 252.9376,
+          "first_managed_bytes": 455452928,
+          "last_managed_bytes": 171764672
+        },
+        "phases": {
+          "Calculate": {
+            "n": 20,
+            "median": 4.977649999997084,
+            "p95": 25.026499999999942,
+            "min": 4.359499999998661,
+            "max": 28.767400000000634
+          },
+          "Copy": {
+            "n": 20,
+            "median": 0.2180499999976746,
+            "p95": 0.34500000000116415,
+            "min": 0.17999999999301508,
+            "max": 9.885699999998906
+          },
+          "Save": {
+            "n": 20,
+            "median": 8.125,
+            "p95": 9.942399999999907,
+            "min": 7.025599999993574,
+            "max": 10.231100000004517
+          },
+          "UI.FrameWait": {
+            "n": 20,
+            "median": 153.05055,
+            "p95": 171.0465,
+            "min": 142.3516,
+            "max": 186.3113
+          },
+          "UI.RenderSubmit": {
+            "n": 20,
+            "median": 65.2499,
+            "p95": 75.5429,
+            "min": 42.4179,
+            "max": 141.6738
+          }
+        }
+      },
+      {
+        "entries": 3,
+        "operation": "equipment",
+        "CommandMs": {
+          "n": 20,
+          "median": 35.0346,
+          "p95": 50.8768,
+          "min": 17.7134,
+          "max": 53.8712
+        },
+        "UsableMs": {
+          "n": 20,
+          "median": 248.94725,
+          "p95": 328.3434,
+          "min": 232.4823,
+          "max": 349.0088
+        },
+        "AllocatedBytes": {
+          "n": 20,
+          "median": 26183328.0,
+          "p95": 26335992,
+          "min": 26023440,
+          "max": 27545432
+        },
+        "ManagedBytes": {
+          "n": 20,
+          "median": 199929912.0,
+          "p95": 220754040,
+          "min": 174713488,
+          "max": 221495000
+        },
+        "order_check": {
+          "first5_usable_ms": 245.6,
+          "last5_usable_ms": 248.4472,
+          "first_managed_bytes": 191010264,
+          "last_managed_bytes": 220382752
+        },
+        "phases": {
+          "Calculate": {
+            "n": 20,
+            "median": 3.722350000003644,
+            "p95": 28.719899999996414,
+            "min": 3.437400000002526,
+            "max": 30.207800000003772
+          },
+          "Copy": {
+            "n": 20,
+            "median": 0.1926500000008673,
+            "p95": 0.2286000000021886,
+            "min": 0.18010000000504078,
+            "max": 0.27119999999558786
+          },
+          "Save": {
+            "n": 20,
+            "median": 8.276000000001659,
+            "p95": 9.784299999999348,
+            "min": 5.866699999998673,
+            "max": 9.93569999999454
+          },
+          "UI.FrameWait": {
+            "n": 20,
+            "median": 151.08210000000003,
+            "p95": 189.4938,
+            "min": 140.2662,
+            "max": 245.7998
+          },
+          "UI.RenderSubmit": {
+            "n": 20,
+            "median": 65.0924,
+            "p95": 82.9761,
+            "min": 43.2257,
+            "max": 176.3509
+          }
+        }
+      },
+      {
+        "entries": 3,
+        "operation": "enhancement",
+        "CommandMs": {
+          "n": 20,
+          "median": 84.02289999999999,
+          "p95": 102.3589,
+          "min": 65.4848,
+          "max": 103.4808
+        },
+        "UsableMs": {
+          "n": 20,
+          "median": 279.94124999999997,
+          "p95": 303.8491,
+          "min": 256.149,
+          "max": 394.4428
+        },
+        "AllocatedBytes": {
+          "n": 20,
+          "median": 39011780.0,
+          "p95": 40336888,
+          "min": 38901464,
+          "max": 40393000
+        },
+        "ManagedBytes": {
+          "n": 20,
+          "median": 205973672.0,
+          "p95": 233952008,
+          "min": 175541432,
+          "max": 240116160
+        },
+        "order_check": {
+          "first5_usable_ms": 264.901,
+          "last5_usable_ms": 283.3004,
+          "first_managed_bytes": 182556360,
+          "last_managed_bytes": 240116160
+        },
+        "phases": {
+          "Calculate": {
+            "n": 20,
+            "median": 8.016450000002806,
+            "p95": 31.188600000001315,
+            "min": 7.161099999997532,
+            "max": 32.41870000000199
+          },
+          "Copy": {
+            "n": 20,
+            "median": 0.19455000000016298,
+            "p95": 0.29290000000037253,
+            "min": 0.1745000000082655,
+            "max": 32.9829999999929
+          },
+          "Save": {
+            "n": 20,
+            "median": 7.607249999997293,
+            "p95": 9.800900000002002,
+            "min": 5.602000000006228,
+            "max": 10.00630000000092
+          },
+          "UI.FrameWait": {
+            "n": 20,
+            "median": 100.70155,
+            "p95": 132.8013,
+            "min": 96.1133,
+            "max": 226.3257
+          },
+          "UI.RenderSubmit": {
+            "n": 20,
+            "median": 89.90265,
+            "p95": 102.6946,
+            "min": 65.925,
+            "max": 118.4314
+          }
+        }
+      },
+      {
+        "entries": 3,
+        "operation": "attachment",
+        "CommandMs": {
+          "n": 20,
+          "median": 115.02985,
+          "p95": 134.1238,
+          "min": 91.819,
+          "max": 167.7573
+        },
+        "UsableMs": {
+          "n": 20,
+          "median": 478.52665,
+          "p95": 585.5511,
+          "min": 432.8647,
+          "max": 716.919
+        },
+        "AllocatedBytes": {
+          "n": 20,
+          "median": 77385948.0,
+          "p95": 78684792,
+          "min": 76949888,
+          "max": 78908824
+        },
+        "ManagedBytes": {
+          "n": 20,
+          "median": 261912120.0,
+          "p95": 314044768,
+          "min": 204197424,
+          "max": 322801416
+        },
+        "order_check": {
+          "first5_usable_ms": 485.5894,
+          "last5_usable_ms": 474.1206,
+          "first_managed_bytes": 250376784,
+          "last_managed_bytes": 251685840
+        },
+        "phases": {
+          "Calculate": {
+            "n": 20,
+            "median": 38.26209999999264,
+            "p95": 64.6930999999895,
+            "min": 33.95119999999588,
+            "max": 71.77479999999923
+          },
+          "Copy": {
+            "n": 20,
+            "median": 0.20325000000593718,
+            "p95": 0.6713000000017928,
+            "min": 0.15759999999136198,
+            "max": 18.856300000014016
+          },
+          "Save": {
+            "n": 20,
+            "median": 7.581949999999779,
+            "p95": 10.5454000000027,
+            "min": 6.269000000000233,
+            "max": 10.967499999998836
+          },
+          "UI.FrameWait": {
+            "n": 20,
+            "median": 110.91355,
+            "p95": 161.2085,
+            "min": 98.1613,
+            "max": 176.0806
+          },
+          "UI.RenderSubmit": {
+            "n": 20,
+            "median": 258.1213,
+            "p95": 317.4279,
+            "min": 216.0121,
+            "max": 373.0588
+          }
+        }
+      },
+      {
+        "entries": 3,
+        "operation": "detachment",
+        "CommandMs": {
+          "n": 20,
+          "median": 20.186799999999998,
+          "p95": 46.479,
+          "min": 16.2583,
+          "max": 49.6877
+        },
+        "UsableMs": {
+          "n": 20,
+          "median": 207.81555,
+          "p95": 251.7398,
+          "min": 179.4706,
+          "max": 319.1518
+        },
+        "AllocatedBytes": {
+          "n": 20,
+          "median": 22495724.0,
+          "p95": 22643608,
+          "min": 22377392,
+          "max": 23715376
+        },
+        "ManagedBytes": {
+          "n": 20,
+          "median": 222910084.0,
+          "p95": 253559376,
+          "min": 193074424,
+          "max": 259685648
+        },
+        "order_check": {
+          "first5_usable_ms": 199.9518,
+          "last5_usable_ms": 233.7027,
+          "first_managed_bytes": 259685648,
+          "last_managed_bytes": 233246496
+        },
+        "phases": {
+          "Calculate": {
+            "n": 20,
+            "median": 3.3280500000037136,
+            "p95": 22.888300000005984,
+            "min": 2.930800000001909,
+            "max": 23.94069999999192
+          },
+          "Copy": {
+            "n": 20,
+            "median": 0.19539999999688007,
+            "p95": 0.2462999999988824,
+            "min": 0.16129999997792765,
+            "max": 0.27109999999811407
+          },
+          "Save": {
+            "n": 20,
+            "median": 7.588049999998475,
+            "p95": 9.02850000000035,
+            "min": 6.372799999997369,
+            "max": 9.20339999999851
+          },
+          "UI.FrameWait": {
+            "n": 20,
+            "median": 108.41925,
+            "p95": 138.2579,
+            "min": 96.8617,
+            "max": 145.4405
+          },
+          "UI.RenderSubmit": {
+            "n": 20,
+            "median": 68.25575,
+            "p95": 98.8231,
+            "min": 56.7781,
+            "max": 161.0589
+          }
+        }
+      },
+      {
+        "entries": 3,
+        "operation": "home",
+        "CommandMs": {
+          "n": 20,
+          "median": 0.11555,
+          "p95": 0.1625,
+          "min": 0.077,
+          "max": 0.2125
+        },
+        "UsableMs": {
+          "n": 20,
+          "median": 99.8583,
+          "p95": 121.1141,
+          "min": 79.8106,
+          "max": 122.3692
+        },
+        "AllocatedBytes": {
+          "n": 20,
+          "median": 13537064.0,
+          "p95": 13537168,
+          "min": 13536112,
+          "max": 13538512
+        },
+        "ManagedBytes": {
+          "n": 20,
+          "median": 217685708.0,
+          "p95": 242424816,
+          "min": 191762448,
+          "max": 243173416
+        },
+        "order_check": {
+          "first5_usable_ms": 100.9264,
+          "last5_usable_ms": 93.7869,
+          "first_managed_bytes": 242424816,
+          "last_managed_bytes": 196130392
+        },
+        "phases": {
+          "UI.FrameWait": {
+            "n": 20,
+            "median": 7.39375,
+            "p95": 27.3462,
+            "min": 6.6496,
+            "max": 31.5958
+          },
+          "UI.RenderSubmit": {
+            "n": 20,
+            "median": 84.42840000000001,
+            "p95": 109.7104,
+            "min": 72.6324,
+            "max": 114.0122
+          }
+        }
+      },
+      {
+        "entries": 20,
+        "operation": "open",
+        "CommandMs": {
+          "n": 20,
+          "median": 108.55075,
+          "p95": 142.6063,
+          "min": 83.1599,
+          "max": 144.3266
+        },
+        "UsableMs": {
+          "n": 20,
+          "median": 1230.92895,
+          "p95": 1316.7984,
+          "min": 1133.3074,
+          "max": 1320.4306
+        },
+        "AllocatedBytes": {
+          "n": 20,
+          "median": 182697504.0,
+          "p95": 183009040,
+          "min": 181195968,
+          "max": 184167856
+        },
+        "ManagedBytes": {
+          "n": 20,
+          "median": 312780380.0,
+          "p95": 371871656,
+          "min": 222001584,
+          "max": 384416792
+        },
+        "order_check": {
+          "first5_usable_ms": 1197.0285,
+          "last5_usable_ms": 1254.132,
+          "first_managed_bytes": 222001584,
+          "last_managed_bytes": 353762512
+        },
+        "phases": {
+          "Calculate": {
+            "n": 20,
+            "median": 43.06299999998737,
+            "p95": 57.60719999999856,
+            "min": 32.1982999999891,
+            "max": 67.53310000000056
+          },
+          "Copy": {
+            "n": 20,
+            "median": 0.16664999999920838,
+            "p95": 0.322199999995064,
+            "min": 0.1533999999955995,
+            "max": 15.183900000003632
+          },
+          "Save": {
+            "n": 20,
+            "median": 8.683300000004238,
+            "p95": 10.575800000005984,
+            "min": 6.98059999999532,
+            "max": 11.31359999999404
+          },
+          "UI.FrameWait": {
+            "n": 20,
+            "median": 176.80644999999998,
+            "p95": 195.4073,
+            "min": 161.893,
+            "max": 210.2772
+          },
+          "UI.RenderSubmit": {
+            "n": 20,
+            "median": 950.3933999999999,
+            "p95": 1002.213,
+            "min": 849.1456,
+            "max": 1015.1484
+          }
+        }
+      },
+      {
+        "entries": 20,
+        "operation": "datasheet",
+        "CommandMs": {
+          "n": 20,
+          "median": 6.10905,
+          "p95": 8.7147,
+          "min": 4.8362,
+          "max": 10.9993
+        },
+        "UsableMs": {
+          "n": 20,
+          "median": 945.3428,
+          "p95": 1014.1155,
+          "min": 884.1804,
+          "max": 1097.3471
+        },
+        "AllocatedBytes": {
+          "n": 20,
+          "median": 154096440.0,
+          "p95": 154334672,
+          "min": 152607776,
+          "max": 154541904
+        },
+        "ManagedBytes": {
+          "n": 20,
+          "median": 546231960.0,
+          "p95": 592478232,
+          "min": 480112656,
+          "max": 596021944
+        },
+        "order_check": {
+          "first5_usable_ms": 980.9788,
+          "last5_usable_ms": 985.5764,
+          "first_managed_bytes": 480112656,
+          "last_managed_bytes": 596021944
+        },
+        "phases": {
+          "UI.FrameWait": {
+            "n": 20,
+            "median": 86.5439,
+            "p95": 102.6482,
+            "min": 75.8484,
+            "max": 103.7412
+          },
+          "UI.RenderSubmit": {
+            "n": 20,
+            "median": 853.41095,
+            "p95": 924.7812,
+            "min": 793.2379,
+            "max": 1010.7379
+          }
+        }
+      },
+      {
+        "entries": 20,
+        "operation": "add",
+        "CommandMs": {
+          "n": 20,
+          "median": 172.7532,
+          "p95": 213.7023,
+          "min": 149.5146,
+          "max": 226.8444
+        },
+        "UsableMs": {
+          "n": 20,
+          "median": 1582.2085499999998,
+          "p95": 1717.22,
+          "min": 1480.3022,
+          "max": 1797.6241
+        },
+        "AllocatedBytes": {
+          "n": 20,
+          "median": 206828176.0,
+          "p95": 207209640,
+          "min": 205679328,
+          "max": 207233120
+        },
+        "ManagedBytes": {
+          "n": 20,
+          "median": 684409560.0,
+          "p95": 772685192,
+          "min": 580277768,
+          "max": 790735248
+        },
+        "order_check": {
+          "first5_usable_ms": 1577.2818,
+          "last5_usable_ms": 1569.1547,
+          "first_managed_bytes": 616471320,
+          "last_managed_bytes": 753130288
+        },
+        "phases": {
+          "Calculate": {
+            "n": 20,
+            "median": 44.80469999999332,
+            "p95": 84.31279999998515,
+            "min": 39.57019999998738,
+            "max": 90.5454000000027
+          },
+          "Copy": {
+            "n": 20,
+            "median": 0.4361499999940861,
+            "p95": 0.7410999999847263,
+            "min": 0.3637999999918975,
+            "max": 24.33629999999539
+          },
+          "Save": {
+            "n": 20,
+            "median": 8.654350000011618,
+            "p95": 9.842000000004191,
+            "min": 7.678299999999581,
+            "max": 9.97029999998631
+          },
+          "UI.FrameWait": {
+            "n": 20,
+            "median": 192.50785000000002,
+            "p95": 229.1795,
+            "min": 167.8484,
+            "max": 297.3813
+          },
+          "UI.RenderSubmit": {
+            "n": 20,
+            "median": 1222.01755,
+            "p95": 1333.7503,
+            "min": 1128.3876,
+            "max": 1377.1515
+          }
+        }
+      },
+      {
+        "entries": 20,
+        "operation": "equipment",
+        "CommandMs": {
+          "n": 20,
+          "median": 188.9762,
+          "p95": 225.2803,
+          "min": 157.5698,
+          "max": 248.6406
+        },
+        "UsableMs": {
+          "n": 20,
+          "median": 1560.97325,
+          "p95": 1650.3378,
+          "min": 1491.9435,
+          "max": 1714.5988
+        },
+        "AllocatedBytes": {
+          "n": 20,
+          "median": 191221412.0,
+          "p95": 191586384,
+          "min": 189822224,
+          "max": 191731336
+        },
+        "ManagedBytes": {
+          "n": 20,
+          "median": 826454104.0,
+          "p95": 941539992,
+          "min": 669456656,
+          "max": 961367256
+        },
+        "order_check": {
+          "first5_usable_ms": 1518.2451,
+          "last5_usable_ms": 1595.6682,
+          "first_managed_bytes": 794511808,
+          "last_managed_bytes": 878037720
+        },
+        "phases": {
+          "Calculate": {
+            "n": 20,
+            "median": 55.864750000007916,
+            "p95": 106.55440000002272,
+            "min": 40.26729999994859,
+            "max": 125.17970000003697
+          },
+          "Copy": {
+            "n": 20,
+            "median": 0.4138000000093598,
+            "p95": 0.5854999999864958,
+            "min": 0.3665000000037253,
+            "max": 15.682399999990594
+          },
+          "Save": {
+            "n": 20,
+            "median": 8.933649999991758,
+            "p95": 10.592699999979232,
+            "min": 6.846599999989849,
+            "max": 28.66930000000866
+          },
+          "UI.FrameWait": {
+            "n": 20,
+            "median": 190.1107,
+            "p95": 214.6406,
+            "min": 166.1373,
+            "max": 241.669
+          },
+          "UI.RenderSubmit": {
+            "n": 20,
+            "median": 1173.36245,
+            "p95": 1272.0386,
+            "min": 1106.4287,
+            "max": 1315.814
+          }
+        }
+      },
+      {
+        "entries": 20,
+        "operation": "enhancement",
+        "CommandMs": {
+          "n": 20,
+          "median": 357.62045,
+          "p95": 479.6723,
+          "min": 312.8517,
+          "max": 527.0368
+        },
+        "UsableMs": {
+          "n": 20,
+          "median": 2077.13955,
+          "p95": 2239.6402,
+          "min": 1907.6393,
+          "max": 2612.3082
+        },
+        "AllocatedBytes": {
+          "n": 20,
+          "median": 243136268.0,
+          "p95": 244478272,
+          "min": 242270152,
+          "max": 244499608
+        },
+        "ManagedBytes": {
+          "n": 20,
+          "median": 986744336.0,
+          "p95": 1159618552,
+          "min": 827356768,
+          "max": 1180172552
+        },
+        "order_check": {
+          "first5_usable_ms": 2066.4783,
+          "last5_usable_ms": 2060.1259,
+          "first_managed_bytes": 915874864,
+          "last_managed_bytes": 930407792
+        },
+        "phases": {
+          "Calculate": {
+            "n": 20,
+            "median": 62.19875000001048,
+            "p95": 116.24399999994785,
+            "min": 48.90460000000894,
+            "max": 124.67759999999544
+          },
+          "Copy": {
+            "n": 20,
+            "median": 0.3989999999757856,
+            "p95": 0.5500000000465661,
+            "min": 0.36819999996805564,
+            "max": 0.5819999999948777
+          },
+          "Save": {
+            "n": 20,
+            "median": 8.434849999990547,
+            "p95": 9.682499999995343,
+            "min": 7.570100000011735,
+            "max": 9.796199999982491
+          },
+          "UI.FrameWait": {
+            "n": 20,
+            "median": 148.8342,
+            "p95": 169.7845,
+            "min": 125.8636,
+            "max": 201.3144
+          },
+          "UI.RenderSubmit": {
+            "n": 20,
+            "median": 1577.32625,
+            "p95": 1728.7192,
+            "min": 1443.5611,
+            "max": 1953.4557
+          }
+        }
+      },
+      {
+        "entries": 20,
+        "operation": "attachment",
+        "CommandMs": {
+          "n": 20,
+          "median": 493.61255,
+          "p95": 622.1648,
+          "min": 406.965,
+          "max": 633.452
+        },
+        "UsableMs": {
+          "n": 20,
+          "median": 2700.50385,
+          "p95": 2995.6368,
+          "min": 2482.3413,
+          "max": 2995.7039
+        },
+        "AllocatedBytes": {
+          "n": 20,
+          "median": 313070564.0,
+          "p95": 313955464,
+          "min": 311673528,
+          "max": 314220120
+        },
+        "ManagedBytes": {
+          "n": 20,
+          "median": 1116423732.0,
+          "p95": 1295947480,
+          "min": 981100216,
+          "max": 1323157760
+        },
+        "order_check": {
+          "first5_usable_ms": 2540.7518,
+          "last5_usable_ms": 2854.9328,
+          "first_managed_bytes": 981100216,
+          "last_managed_bytes": 1135622424
+        },
+        "phases": {
+          "Calculate": {
+            "n": 20,
+            "median": 184.0411000000022,
+            "p95": 240.58749999996508,
+            "min": 137.41350000002421,
+            "max": 248.48749999998836
+          },
+          "Copy": {
+            "n": 20,
+            "median": 0.4055499999667518,
+            "p95": 25.646799999987707,
+            "min": 0.3494000000646338,
+            "max": 28.116000000038184
+          },
+          "Save": {
+            "n": 20,
+            "median": 8.9746500000183,
+            "p95": 9.201899999985471,
+            "min": 7.52039999992121,
+            "max": 9.237600000051316
+          },
+          "UI.FrameWait": {
+            "n": 20,
+            "median": 139.06529999999998,
+            "p95": 169.3938,
+            "min": 119.7712,
+            "max": 200.9022
+          },
+          "UI.RenderSubmit": {
+            "n": 20,
+            "median": 2050.5333499999997,
+            "p95": 2339.9995,
+            "min": 1863.0263,
+            "max": 2367.681
+          }
+        }
+      },
+      {
+        "entries": 20,
+        "operation": "detachment",
+        "CommandMs": {
+          "n": 20,
+          "median": 173.552,
+          "p95": 212.3534,
+          "min": 159.0299,
+          "max": 216.6646
+        },
+        "UsableMs": {
+          "n": 20,
+          "median": 1491.5443,
+          "p95": 1694.4583,
+          "min": 1425.1579,
+          "max": 1726.6277
+        },
+        "AllocatedBytes": {
+          "n": 20,
+          "median": 158956708.0,
+          "p95": 160298280,
+          "min": 158547296,
+          "max": 160363648
+        },
+        "ManagedBytes": {
+          "n": 20,
+          "median": 1358463684.0,
+          "p95": 1536886120,
+          "min": 1160740720,
+          "max": 1561660976
+        },
+        "order_check": {
+          "first5_usable_ms": 1481.1768,
+          "last5_usable_ms": 1494.5546,
+          "first_managed_bytes": 1177056776,
+          "last_managed_bytes": 1160740720
+        },
+        "phases": {
+          "Calculate": {
+            "n": 20,
+            "median": 61.80985000001965,
+            "p95": 96.52000000001863,
+            "min": 53.33460000006016,
+            "max": 113.2436999999918
+          },
+          "Copy": {
+            "n": 20,
+            "median": 0.41220000002067536,
+            "p95": 0.5675000000046566,
+            "min": 0.36010000004898757,
+            "max": 0.6473000000696629
+          },
+          "Save": {
+            "n": 20,
+            "median": 8.858599999977741,
+            "p95": 10.037799999932759,
+            "min": 7.200300000025891,
+            "max": 10.600700000068173
+          },
+          "UI.FrameWait": {
+            "n": 20,
+            "median": 131.5575,
+            "p95": 196.3889,
+            "min": 114.6254,
+            "max": 205.1173
+          },
+          "UI.RenderSubmit": {
+            "n": 20,
+            "median": 1177.9989,
+            "p95": 1346.0055,
+            "min": 1125.0507,
+            "max": 1358.561
+          }
+        }
+      },
+      {
+        "entries": 20,
+        "operation": "home",
+        "CommandMs": {
+          "n": 20,
+          "median": 0.11015,
+          "p95": 0.1501,
+          "min": 0.0705,
+          "max": 0.1531
+        },
+        "UsableMs": {
+          "n": 20,
+          "median": 799.2689,
+          "p95": 866.1878,
+          "min": 747.7074,
+          "max": 916.7695
+        },
+        "AllocatedBytes": {
+          "n": 20,
+          "median": 85487212.0,
+          "p95": 89419384,
+          "min": 84175520,
+          "max": 90730352
+        },
+        "ManagedBytes": {
+          "n": 20,
+          "median": 1357649484.0,
+          "p95": 1576726648,
+          "min": 1189658016,
+          "max": 1610235928
+        },
+        "order_check": {
+          "first5_usable_ms": 779.7513,
+          "last5_usable_ms": 799.6249,
+          "first_managed_bytes": 1189658016,
+          "last_managed_bytes": 1610235928
+        },
+        "phases": {
+          "UI.FrameWait": {
+            "n": 20,
+            "median": 139.77885,
+            "p95": 154.133,
+            "min": 110.4069,
+            "max": 171.3945
+          },
+          "UI.RenderSubmit": {
+            "n": 20,
+            "median": 662.47685,
+            "p95": 744.2206,
+            "min": 619.1918,
+            "max": 773.1708
+          }
+        }
+      }
+    ],
+    "first_install": {
+      "AppEntryToUsableMs": 10533.9387,
+      "ProcessStartToUsableMs": 11216.4773,
+      "ManagedBytes": 1028133848,
+      "AllocatedBytes": 2482830840,
+      "WorkingSetBytes": 1242513408,
+      "PrivateBytes": 1664233472,
+      "Phases": [
+        {
+          "Name": "Session.LoadDataset",
+          "StartMs": 0.0114,
+          "Ms": 956.5657,
+          "AllocatedBytes": 525269448,
+          "ManagedBytes": 1087730736,
+          "Gen0": 19,
+          "Gen1": 10,
+          "Gen2": 1
+        },
+        {
+          "Name": "Session.EnhancementRecovery",
+          "StartMs": 956.9491,
+          "Ms": 42.73539999999991,
+          "AllocatedBytes": 7690248,
+          "ManagedBytes": 1091027392,
+          "Gen0": 1,
+          "Gen1": 0,
+          "Gen2": 0
+        },
+        {
+          "Name": "Session.EffectiveRecovery",
+          "StartMs": 999.6966,
+          "Ms": 1098.2506,
+          "AllocatedBytes": 210699496,
+          "ManagedBytes": 1000122232,
+          "Gen0": 35,
+          "Gen1": 12,
+          "Gen2": 1
+        },
+        {
+          "Name": "Session.DetachmentRecovery",
+          "StartMs": 2097.9588,
+          "Ms": 35.84220000000005,
+          "AllocatedBytes": 21702024,
+          "ManagedBytes": 1019661848,
+          "Gen0": 1,
+          "Gen1": 0,
+          "Gen2": 0
+        },
+        {
+          "Name": "Session.DatasetIndex",
+          "StartMs": 2133.808,
+          "Ms": 377.7051999999999,
+          "AllocatedBytes": 83791584,
+          "ManagedBytes": 1027157824,
+          "Gen0": 14,
+          "Gen1": 4,
+          "Gen2": 0
+        }
+      ],
+      "Units": 2194,
+      "Cards": 3880,
+      "Runtime": ".NET 10.0.10"
+    }
+  },
+  "android": {
+    "startup": {
+      "empty": {
+        "runs": [
+          {
+            "LibraryReadyMs": 7282.8163,
+            "MauiEntryToUsableMs": 7453.6966,
+            "ProcessStartToUsableMs": 7739,
+            "Phases": [
+              {
+                "Name": "Android.LoadDataset",
+                "StartMs": 0.8932,
+                "Ms": 3175.8901,
+                "AllocatedBytes": 549868472,
+                "ManagedBytes": 524480680,
+                "Gen0": 32,
+                "Gen1": 2,
+                "Gen2": 2
+              },
+              {
+                "Name": "Session.EnhancementRecovery",
+                "StartMs": 3191.256,
+                "Ms": 3.7411000000001877,
+                "AllocatedBytes": 0,
+                "ManagedBytes": 524483144,
+                "Gen0": 0,
+                "Gen1": 0,
+                "Gen2": 0
+              },
+              {
+                "Name": "Session.EffectiveRecovery",
+                "StartMs": 3203.4131,
+                "Ms": 1246.4059000000002,
+                "AllocatedBytes": 57205456,
+                "ManagedBytes": 422906768,
+                "Gen0": 13,
+                "Gen1": 1,
+                "Gen2": 1
+              },
+              {
+                "Name": "Session.DetachmentRecovery",
+                "StartMs": 4461.8543,
+                "Ms": 140.77890000000025,
+                "AllocatedBytes": 24351856,
+                "ManagedBytes": 445663704,
+                "Gen0": 2,
+                "Gen1": 0,
+                "Gen2": 0
+              },
+              {
+                "Name": "Session.DatasetIndex",
+                "StartMs": 4615.075,
+                "Ms": 2069.7573,
+                "AllocatedBytes": 126490136,
+                "ManagedBytes": 475920848,
+                "Gen0": 28,
+                "Gen1": 0,
+                "Gen2": 0
+              }
+            ],
+            "Units": 2194,
+            "Cards": 6049,
+            "Gc0": 75,
+            "Gc1": 3,
+            "Gc2": 3,
+            "ManagedBytes": 475939384,
+            "AllocatedBytes": 761564120,
+            "NativeAllocatedBytes": 71417992
+          },
+          {
+            "LibraryReadyMs": 7719.0073,
+            "MauiEntryToUsableMs": 7887.6913,
+            "ProcessStartToUsableMs": 8297,
+            "Phases": [
+              {
+                "Name": "Android.LoadDataset",
+                "StartMs": 1.3805,
+                "Ms": 3280.8331999999996,
+                "AllocatedBytes": 549877536,
+                "ManagedBytes": 524491936,
+                "Gen0": 32,
+                "Gen1": 2,
+                "Gen2": 2
+              },
+              {
+                "Name": "Session.EnhancementRecovery",
+                "StartMs": 3296.7925,
+                "Ms": 3.9681000000000495,
+                "AllocatedBytes": 0,
+                "ManagedBytes": 524494400,
+                "Gen0": 0,
+                "Gen1": 0,
+                "Gen2": 0
+              },
+              {
+                "Name": "Session.EffectiveRecovery",
+                "StartMs": 3309.2301,
+                "Ms": 1266.2279999999996,
+                "AllocatedBytes": 57178736,
+                "ManagedBytes": 422906912,
+                "Gen0": 13,
+                "Gen1": 1,
+                "Gen2": 1
+              },
+              {
+                "Name": "Session.DetachmentRecovery",
+                "StartMs": 4587.199,
+                "Ms": 144.0034000000005,
+                "AllocatedBytes": 24351856,
+                "ManagedBytes": 445663864,
+                "Gen0": 2,
+                "Gen1": 0,
+                "Gen2": 0
+              },
+              {
+                "Name": "Session.DatasetIndex",
+                "StartMs": 4743.916,
+                "Ms": 2083.7731999999996,
+                "AllocatedBytes": 126503312,
+                "ManagedBytes": 475927560,
+                "Gen0": 28,
+                "Gen1": 0,
+                "Gen2": 0
+              }
+            ],
+            "Units": 2194,
+            "Cards": 6049,
+            "Gc0": 75,
+            "Gc1": 3,
+            "Gc2": 3,
+            "ManagedBytes": 475946096,
+            "AllocatedBytes": 761547256,
+            "NativeAllocatedBytes": 72649256
+          },
+          {
+            "LibraryReadyMs": 7372.0116,
+            "MauiEntryToUsableMs": 7559.0966,
+            "ProcessStartToUsableMs": 7837,
+            "Phases": [
+              {
+                "Name": "Android.LoadDataset",
+                "StartMs": 1.5777,
+                "Ms": 3225.2635,
+                "AllocatedBytes": 549886728,
+                "ManagedBytes": 524504472,
+                "Gen0": 32,
+                "Gen1": 2,
+                "Gen2": 2
+              },
+              {
+                "Name": "Session.EnhancementRecovery",
+                "StartMs": 3241.4094,
+                "Ms": 3.929200000000037,
+                "AllocatedBytes": 0,
+                "ManagedBytes": 524506936,
+                "Gen0": 0,
+                "Gen1": 0,
+                "Gen2": 0
+              },
+              {
+                "Name": "Session.EffectiveRecovery",
+                "StartMs": 3253.7061,
+                "Ms": 1265.1264999999999,
+                "AllocatedBytes": 57081288,
+                "ManagedBytes": 422879936,
+                "Gen0": 13,
+                "Gen1": 1,
+                "Gen2": 1
+              },
+              {
+                "Name": "Session.DetachmentRecovery",
+                "StartMs": 4530.4045,
+                "Ms": 141.46530000000075,
+                "AllocatedBytes": 24351184,
+                "ManagedBytes": 445636320,
+                "Gen0": 2,
+                "Gen1": 0,
+                "Gen2": 0
+              },
+              {
+                "Name": "Session.DatasetIndex",
+                "StartMs": 4684.6965,
+                "Ms": 2067.825,
+                "AllocatedBytes": 126485960,
+                "ManagedBytes": 475892704,
+                "Gen0": 28,
+                "Gen1": 0,
+                "Gen2": 0
+              }
+            ],
+            "Units": 2194,
+            "Cards": 6049,
+            "Gc0": 75,
+            "Gc1": 3,
+            "Gc2": 3,
+            "ManagedBytes": 475911240,
+            "AllocatedBytes": 761459264,
+            "NativeAllocatedBytes": 72551272
+          },
+          {
+            "LibraryReadyMs": 7386.4713,
+            "MauiEntryToUsableMs": 7567.4731,
+            "ProcessStartToUsableMs": 7858,
+            "Phases": [
+              {
+                "Name": "Android.LoadDataset",
+                "StartMs": 0.6553,
+                "Ms": 3212.9043,
+                "AllocatedBytes": 549888632,
+                "ManagedBytes": 524495280,
+                "Gen0": 32,
+                "Gen1": 2,
+                "Gen2": 2
+              },
+              {
+                "Name": "Session.EnhancementRecovery",
+                "StartMs": 3227.828,
+                "Ms": 3.9488000000001193,
+                "AllocatedBytes": 0,
+                "ManagedBytes": 524497744,
+                "Gen0": 0,
+                "Gen1": 0,
+                "Gen2": 0
+              },
+              {
+                "Name": "Session.EffectiveRecovery",
+                "StartMs": 3240.0417,
+                "Ms": 1256.0621999999998,
+                "AllocatedBytes": 57164144,
+                "ManagedBytes": 422905600,
+                "Gen0": 13,
+                "Gen1": 1,
+                "Gen2": 1
+              },
+              {
+                "Name": "Session.DetachmentRecovery",
+                "StartMs": 4508.9371,
+                "Ms": 140.95420000000013,
+                "AllocatedBytes": 24352736,
+                "ManagedBytes": 445662880,
+                "Gen0": 2,
+                "Gen1": 0,
+                "Gen2": 0
+              },
+              {
+                "Name": "Session.DatasetIndex",
+                "StartMs": 4662.275,
+                "Ms": 2085.4852,
+                "AllocatedBytes": 126502432,
+                "ManagedBytes": 475923624,
+                "Gen0": 28,
+                "Gen1": 0,
+                "Gen2": 0
+              }
+            ],
+            "Units": 2194,
+            "Cards": 6049,
+            "Gc0": 75,
+            "Gc1": 3,
+            "Gc2": 3,
+            "ManagedBytes": 475942160,
+            "AllocatedBytes": 761543760,
+            "NativeAllocatedBytes": 72764464
+          },
+          {
+            "LibraryReadyMs": 7366.8024,
+            "MauiEntryToUsableMs": 7545.1639,
+            "ProcessStartToUsableMs": 7824,
+            "Phases": [
+              {
+                "Name": "Android.LoadDataset",
+                "StartMs": 1.3028,
+                "Ms": 3201.2448,
+                "AllocatedBytes": 549893688,
+                "ManagedBytes": 524496024,
+                "Gen0": 32,
+                "Gen1": 2,
+                "Gen2": 2
+              },
+              {
+                "Name": "Session.EnhancementRecovery",
+                "StartMs": 3216.8585,
+                "Ms": 3.7184000000002015,
+                "AllocatedBytes": 0,
+                "ManagedBytes": 524498488,
+                "Gen0": 0,
+                "Gen1": 0,
+                "Gen2": 0
+              },
+              {
+                "Name": "Session.EffectiveRecovery",
+                "StartMs": 3228.9753,
+                "Ms": 1264.4449999999997,
+                "AllocatedBytes": 57166712,
+                "ManagedBytes": 422906984,
+                "Gen0": 13,
+                "Gen1": 1,
+                "Gen2": 1
+              },
+              {
+                "Name": "Session.DetachmentRecovery",
+                "StartMs": 4505.5588,
+                "Ms": 141.26119999999992,
+                "AllocatedBytes": 24351184,
+                "ManagedBytes": 445663384,
+                "Gen0": 2,
+                "Gen1": 0,
+                "Gen2": 0
+              },
+              {
+                "Name": "Session.DatasetIndex",
+                "StartMs": 4661.0453,
+                "Ms": 2070.3793000000005,
+                "AllocatedBytes": 126517376,
+                "ManagedBytes": 475931608,
+                "Gen0": 28,
+                "Gen1": 0,
+                "Gen2": 0
+              }
+            ],
+            "Units": 2194,
+            "Cards": 6049,
+            "Gc0": 75,
+            "Gc1": 3,
+            "Gc2": 3,
+            "ManagedBytes": 475950144,
+            "AllocatedBytes": 761553144,
+            "NativeAllocatedBytes": 72183160
+          }
+        ],
+        "metrics": {
+          "ProcessStartToUsableMs": {
+            "n": 5,
+            "median": 7837,
+            "p95": 8297,
+            "min": 7739,
+            "max": 8297
+          },
+          "AllocatedBytes": {
+            "n": 5,
+            "median": 761547256,
+            "p95": 761564120,
+            "min": 761459264,
+            "max": 761564120
+          },
+          "ManagedBytes": {
+            "n": 5,
+            "median": 475942160,
+            "p95": 475950144,
+            "min": 475911240,
+            "max": 475950144
+          },
+          "PssBytes": {
+            "n": 5,
+            "median": 529125376,
+            "p95": 529897472,
+            "min": 528561152,
+            "max": 529897472
+          },
+          "RssBytes": {
+            "n": 5,
+            "median": 658997248,
+            "p95": 659914752,
+            "min": 658530304,
+            "max": 659914752
+          }
+        },
+        "phases": {
+          "Android.LoadDataset": {
+            "n": 5,
+            "median": 3212.9043,
+            "p95": 3280.8331999999996,
+            "min": 3175.8901,
+            "max": 3280.8331999999996
+          },
+          "Session.DatasetIndex": {
+            "n": 5,
+            "median": 2070.3793000000005,
+            "p95": 2085.4852,
+            "min": 2067.825,
+            "max": 2085.4852
+          },
+          "Session.DetachmentRecovery": {
+            "n": 5,
+            "median": 141.26119999999992,
+            "p95": 144.0034000000005,
+            "min": 140.77890000000025,
+            "max": 144.0034000000005
+          },
+          "Session.EffectiveRecovery": {
+            "n": 5,
+            "median": 1264.4449999999997,
+            "p95": 1266.2279999999996,
+            "min": 1246.4059000000002,
+            "max": 1266.2279999999996
+          },
+          "Session.EnhancementRecovery": {
+            "n": 5,
+            "median": 3.929200000000037,
+            "p95": 3.9681000000000495,
+            "min": 3.7184000000002015,
+            "max": 3.9681000000000495
+          }
+        }
+      },
+      "saved": {
+        "runs": [
+          {
+            "LibraryReadyMs": 8132.3535,
+            "MauiEntryToUsableMs": 8857.008,
+            "ProcessStartToUsableMs": 9139,
+            "Phases": [
+              {
+                "Name": "Android.LoadDataset",
+                "StartMs": 1.5188,
+                "Ms": 3200.1542,
+                "AllocatedBytes": 549910072,
+                "ManagedBytes": 524504888,
+                "Gen0": 32,
+                "Gen1": 2,
+                "Gen2": 2
+              },
+              {
+                "Name": "Session.EnhancementRecovery",
+                "StartMs": 3216.391,
+                "Ms": 3.710199999999986,
+                "AllocatedBytes": 0,
+                "ManagedBytes": 524507352,
+                "Gen0": 0,
+                "Gen1": 0,
+                "Gen2": 0
+              },
+              {
+                "Name": "Session.EffectiveRecovery",
+                "StartMs": 3228.6781,
+                "Ms": 1249.4052000000001,
+                "AllocatedBytes": 57152976,
+                "ManagedBytes": 422910344,
+                "Gen0": 13,
+                "Gen1": 1,
+                "Gen2": 1
+              },
+              {
+                "Name": "Session.DetachmentRecovery",
+                "StartMs": 4490.3791,
+                "Ms": 139.82769999999982,
+                "AllocatedBytes": 24351184,
+                "ManagedBytes": 445665656,
+                "Gen0": 2,
+                "Gen1": 0,
+                "Gen2": 0
+              },
+              {
+                "Name": "Session.DatasetIndex",
+                "StartMs": 4643.0033,
+                "Ms": 2107.6593999999996,
+                "AllocatedBytes": 126502832,
+                "ManagedBytes": 475927728,
+                "Gen0": 28,
+                "Gen1": 0,
+                "Gen2": 0
+              },
+              {
+                "Name": "Copy",
+                "StartMs": 6814.6031,
+                "Ms": 38.782099999999446,
+                "AllocatedBytes": 4345928,
+                "ManagedBytes": 477432952,
+                "Gen0": 1,
+                "Gen1": 0,
+                "Gen2": 0
+              },
+              {
+                "Name": "Calculate",
+                "StartMs": 7241.1227,
+                "Ms": 230.03449999999975,
+                "AllocatedBytes": 8203808,
+                "ManagedBytes": 478142336,
+                "Gen0": 2,
+                "Gen1": 0,
+                "Gen2": 0
+              },
+              {
+                "Name": "Save",
+                "StartMs": 7486.2591,
+                "Ms": 21.408300000000054,
+                "AllocatedBytes": 0,
+                "ManagedBytes": 478146920,
+                "Gen0": 0,
+                "Gen1": 0,
+                "Gen2": 0
+              }
+            ],
+            "Units": 2194,
+            "Cards": 6049,
+            "Gc0": 82,
+            "Gc1": 3,
+            "Gc2": 3,
+            "ManagedBytes": 480137968,
+            "AllocatedBytes": 787291784,
+            "NativeAllocatedBytes": 82094896
+          },
+          {
+            "LibraryReadyMs": 8083.1547,
+            "MauiEntryToUsableMs": 8797.9422,
+            "ProcessStartToUsableMs": 9070,
+            "Phases": [
+              {
+                "Name": "Android.LoadDataset",
+                "StartMs": 1.3763,
+                "Ms": 3192.0892,
+                "AllocatedBytes": 549875008,
+                "ManagedBytes": 524497880,
+                "Gen0": 32,
+                "Gen1": 2,
+                "Gen2": 2
+              },
+              {
+                "Name": "Session.EnhancementRecovery",
+                "StartMs": 3208.2163,
+                "Ms": 3.703100000000177,
+                "AllocatedBytes": 0,
+                "ManagedBytes": 524500344,
+                "Gen0": 0,
+                "Gen1": 0,
+                "Gen2": 0
+              },
+              {
+                "Name": "Session.EffectiveRecovery",
+                "StartMs": 3220.476,
+                "Ms": 1254.7743999999998,
+                "AllocatedBytes": 57101120,
+                "ManagedBytes": 422881464,
+                "Gen0": 13,
+                "Gen1": 1,
+                "Gen2": 1
+              },
+              {
+                "Name": "Session.DetachmentRecovery",
+                "StartMs": 4487.0443,
+                "Ms": 139.60270000000037,
+                "AllocatedBytes": 24350600,
+                "ManagedBytes": 445637488,
+                "Gen0": 2,
+                "Gen1": 0,
+                "Gen2": 0
+              },
+              {
+                "Name": "Session.DatasetIndex",
+                "StartMs": 4638.9116,
+                "Ms": 2088.3999999999996,
+                "AllocatedBytes": 126498392,
+                "ManagedBytes": 475896080,
+                "Gen0": 28,
+                "Gen1": 0,
+                "Gen2": 0
+              },
+              {
+                "Name": "Copy",
+                "StartMs": 6790.5224,
+                "Ms": 37.77570000000014,
+                "AllocatedBytes": 4342296,
+                "ManagedBytes": 477409488,
+                "Gen0": 1,
+                "Gen1": 0,
+                "Gen2": 0
+              },
+              {
+                "Name": "Calculate",
+                "StartMs": 7204.8333,
+                "Ms": 227.21429999999964,
+                "AllocatedBytes": 8188160,
+                "ManagedBytes": 478133832,
+                "Gen0": 2,
+                "Gen1": 0,
+                "Gen2": 0
+              },
+              {
+                "Name": "Save",
+                "StartMs": 7446.357,
+                "Ms": 22.460799999999836,
+                "AllocatedBytes": 0,
+                "ManagedBytes": 478138416,
+                "Gen0": 0,
+                "Gen1": 0,
+                "Gen2": 0
+              }
+            ],
+            "Units": 2194,
+            "Cards": 6049,
+            "Gc0": 82,
+            "Gc1": 3,
+            "Gc2": 3,
+            "ManagedBytes": 480089280,
+            "AllocatedBytes": 787163192,
+            "NativeAllocatedBytes": 81560168
+          },
+          {
+            "LibraryReadyMs": 8071.1436,
+            "MauiEntryToUsableMs": 8781.8483,
+            "ProcessStartToUsableMs": 9065,
+            "Phases": [
+              {
+                "Name": "Android.LoadDataset",
+                "StartMs": 1.4698,
+                "Ms": 3209.4975,
+                "AllocatedBytes": 549907840,
+                "ManagedBytes": 524501320,
+                "Gen0": 32,
+                "Gen1": 2,
+                "Gen2": 2
+              },
+              {
+                "Name": "Session.EnhancementRecovery",
+                "StartMs": 3225.49,
+                "Ms": 4.054200000000037,
+                "AllocatedBytes": 0,
+                "ManagedBytes": 524503784,
+                "Gen0": 0,
+                "Gen1": 0,
+                "Gen2": 0
+              },
+              {
+                "Name": "Session.EffectiveRecovery",
+                "StartMs": 3238.0362,
+                "Ms": 1251.9621000000002,
+                "AllocatedBytes": 57160856,
+                "ManagedBytes": 422910368,
+                "Gen0": 13,
+                "Gen1": 1,
+                "Gen2": 1
+              },
+              {
+                "Name": "Session.DetachmentRecovery",
+                "StartMs": 4502.4766,
+                "Ms": 141.77750000000015,
+                "AllocatedBytes": 24352120,
+                "ManagedBytes": 445667024,
+                "Gen0": 2,
+                "Gen1": 0,
+                "Gen2": 0
+              },
+              {
+                "Name": "Session.DatasetIndex",
+                "StartMs": 4657.2636,
+                "Ms": 2070.8446999999996,
+                "AllocatedBytes": 126489600,
+                "ManagedBytes": 475925448,
+                "Gen0": 28,
+                "Gen1": 0,
+                "Gen2": 0
+              },
+              {
+                "Name": "Copy",
+                "StartMs": 6793.291,
+                "Ms": 37.34649999999965,
+                "AllocatedBytes": 4344056,
+                "ManagedBytes": 477426888,
+                "Gen0": 1,
+                "Gen1": 0,
+                "Gen2": 0
+              },
+              {
+                "Name": "Calculate",
+                "StartMs": 7206.4873,
+                "Ms": 229.07790000000023,
+                "AllocatedBytes": 8167072,
+                "ManagedBytes": 478142992,
+                "Gen0": 2,
+                "Gen1": 0,
+                "Gen2": 0
+              },
+              {
+                "Name": "Save",
+                "StartMs": 7450.9778,
+                "Ms": 21.539099999999962,
+                "AllocatedBytes": 0,
+                "ManagedBytes": 478147576,
+                "Gen0": 0,
+                "Gen1": 0,
+                "Gen2": 0
+              }
+            ],
+            "Units": 2194,
+            "Cards": 6049,
+            "Gc0": 82,
+            "Gc1": 3,
+            "Gc2": 3,
+            "ManagedBytes": 480099688,
+            "AllocatedBytes": 787238232,
+            "NativeAllocatedBytes": 81569104
+          },
+          {
+            "LibraryReadyMs": 8150.877,
+            "MauiEntryToUsableMs": 8865.7344,
+            "ProcessStartToUsableMs": 9144,
+            "Phases": [
+              {
+                "Name": "Android.LoadDataset",
+                "StartMs": 0.8797,
+                "Ms": 3226.2098,
+                "AllocatedBytes": 549907640,
+                "ManagedBytes": 524502648,
+                "Gen0": 32,
+                "Gen1": 2,
+                "Gen2": 2
+              },
+              {
+                "Name": "Session.EnhancementRecovery",
+                "StartMs": 3242.4828,
+                "Ms": 4.081499999999778,
+                "AllocatedBytes": 0,
+                "ManagedBytes": 524505112,
+                "Gen0": 0,
+                "Gen1": 0,
+                "Gen2": 0
+              },
+              {
+                "Name": "Session.EffectiveRecovery",
+                "StartMs": 3255.7563,
+                "Ms": 1261.0950000000003,
+                "AllocatedBytes": 57147040,
+                "ManagedBytes": 422907000,
+                "Gen0": 13,
+                "Gen1": 1,
+                "Gen2": 1
+              },
+              {
+                "Name": "Session.DetachmentRecovery",
+                "StartMs": 4529.3353,
+                "Ms": 144.14370000000054,
+                "AllocatedBytes": 24350600,
+                "ManagedBytes": 445663072,
+                "Gen0": 2,
+                "Gen1": 0,
+                "Gen2": 0
+              },
+              {
+                "Name": "Session.DatasetIndex",
+                "StartMs": 4686.3843,
+                "Ms": 2082.3529,
+                "AllocatedBytes": 126484312,
+                "ManagedBytes": 475920776,
+                "Gen0": 28,
+                "Gen1": 0,
+                "Gen2": 0
+              },
+              {
+                "Name": "Copy",
+                "StartMs": 6831.0493,
+                "Ms": 36.74080000000049,
+                "AllocatedBytes": 4344056,
+                "ManagedBytes": 477421408,
+                "Gen0": 1,
+                "Gen1": 0,
+                "Gen2": 0
+              },
+              {
+                "Name": "Calculate",
+                "StartMs": 7239.2304,
+                "Ms": 227.13699999999972,
+                "AllocatedBytes": 8173312,
+                "ManagedBytes": 478139576,
+                "Gen0": 2,
+                "Gen1": 0,
+                "Gen2": 0
+              },
+              {
+                "Name": "Save",
+                "StartMs": 7480.872,
+                "Ms": 21.66730000000007,
+                "AllocatedBytes": 0,
+                "ManagedBytes": 478144160,
+                "Gen0": 0,
+                "Gen1": 0,
+                "Gen2": 0
+              }
+            ],
+            "Units": 2194,
+            "Cards": 6049,
+            "Gc0": 82,
+            "Gc1": 3,
+            "Gc2": 3,
+            "ManagedBytes": 480094608,
+            "AllocatedBytes": 787220792,
+            "NativeAllocatedBytes": 81918624
+          },
+          {
+            "LibraryReadyMs": 8067.2648,
+            "MauiEntryToUsableMs": 8774.1285,
+            "ProcessStartToUsableMs": 9055,
+            "Phases": [
+              {
+                "Name": "Android.LoadDataset",
+                "StartMs": 1.1526,
+                "Ms": 3174.0847,
+                "AllocatedBytes": 549893632,
+                "ManagedBytes": 524496984,
+                "Gen0": 32,
+                "Gen1": 2,
+                "Gen2": 2
+              },
+              {
+                "Name": "Session.EnhancementRecovery",
+                "StartMs": 3189.3455,
+                "Ms": 4.070500000000266,
+                "AllocatedBytes": 0,
+                "ManagedBytes": 524499448,
+                "Gen0": 0,
+                "Gen1": 0,
+                "Gen2": 0
+              },
+              {
+                "Name": "Session.EffectiveRecovery",
+                "StartMs": 3201.6459,
+                "Ms": 1249.7540999999997,
+                "AllocatedBytes": 57164624,
+                "ManagedBytes": 422906960,
+                "Gen0": 13,
+                "Gen1": 1,
+                "Gen2": 1
+              },
+              {
+                "Name": "Session.DetachmentRecovery",
+                "StartMs": 4463.5055,
+                "Ms": 139.51329999999962,
+                "AllocatedBytes": 24351048,
+                "ManagedBytes": 445663336,
+                "Gen0": 2,
+                "Gen1": 0,
+                "Gen2": 0
+              },
+              {
+                "Name": "Session.DatasetIndex",
+                "StartMs": 4615.5071,
+                "Ms": 2074.8132000000005,
+                "AllocatedBytes": 126503184,
+                "ManagedBytes": 475924632,
+                "Gen0": 28,
+                "Gen1": 0,
+                "Gen2": 0
+              },
+              {
+                "Name": "Copy",
+                "StartMs": 6755.9858,
+                "Ms": 37.20219999999972,
+                "AllocatedBytes": 4345152,
+                "ManagedBytes": 477426120,
+                "Gen0": 1,
+                "Gen1": 0,
+                "Gen2": 0
+              },
+              {
+                "Name": "Calculate",
+                "StartMs": 7164.24,
+                "Ms": 232.78560000000016,
+                "AllocatedBytes": 8188160,
+                "ManagedBytes": 478156720,
+                "Gen0": 2,
+                "Gen1": 0,
+                "Gen2": 0
+              },
+              {
+                "Name": "Save",
+                "StartMs": 7411.4763,
+                "Ms": 21.89599999999973,
+                "AllocatedBytes": 0,
+                "ManagedBytes": 478161304,
+                "Gen0": 0,
+                "Gen1": 0,
+                "Gen2": 0
+              }
+            ],
+            "Units": 2194,
+            "Cards": 6049,
+            "Gc0": 82,
+            "Gc1": 3,
+            "Gc2": 3,
+            "ManagedBytes": 480113640,
+            "AllocatedBytes": 787242240,
+            "NativeAllocatedBytes": 81586808
+          }
+        ],
+        "metrics": {
+          "ProcessStartToUsableMs": {
+            "n": 5,
+            "median": 9070,
+            "p95": 9144,
+            "min": 9055,
+            "max": 9144
+          },
+          "AllocatedBytes": {
+            "n": 5,
+            "median": 787238232,
+            "p95": 787291784,
+            "min": 787163192,
+            "max": 787291784
+          },
+          "ManagedBytes": {
+            "n": 5,
+            "median": 480099688,
+            "p95": 480137968,
+            "min": 480089280,
+            "max": 480137968
+          },
+          "PssBytes": {
+            "n": 5,
+            "median": 575757312,
+            "p95": 577138688,
+            "min": 574552064,
+            "max": 577138688
+          },
+          "RssBytes": {
+            "n": 5,
+            "median": 705884160,
+            "p95": 707244032,
+            "min": 704671744,
+            "max": 707244032
+          }
+        },
+        "phases": {
+          "Android.LoadDataset": {
+            "n": 5,
+            "median": 3200.1542,
+            "p95": 3226.2098,
+            "min": 3174.0847,
+            "max": 3226.2098
+          },
+          "Calculate": {
+            "n": 5,
+            "median": 229.07790000000023,
+            "p95": 232.78560000000016,
+            "min": 227.13699999999972,
+            "max": 232.78560000000016
+          },
+          "Copy": {
+            "n": 5,
+            "median": 37.34649999999965,
+            "p95": 38.782099999999446,
+            "min": 36.74080000000049,
+            "max": 38.782099999999446
+          },
+          "Save": {
+            "n": 5,
+            "median": 21.66730000000007,
+            "p95": 22.460799999999836,
+            "min": 21.408300000000054,
+            "max": 22.460799999999836
+          },
+          "Session.DatasetIndex": {
+            "n": 5,
+            "median": 2082.3529,
+            "p95": 2107.6593999999996,
+            "min": 2070.8446999999996,
+            "max": 2107.6593999999996
+          },
+          "Session.DetachmentRecovery": {
+            "n": 5,
+            "median": 139.82769999999982,
+            "p95": 144.14370000000054,
+            "min": 139.51329999999962,
+            "max": 144.14370000000054
+          },
+          "Session.EffectiveRecovery": {
+            "n": 5,
+            "median": 1251.9621000000002,
+            "p95": 1261.0950000000003,
+            "min": 1249.4052000000001,
+            "max": 1261.0950000000003
+          },
+          "Session.EnhancementRecovery": {
+            "n": 5,
+            "median": 4.054200000000037,
+            "p95": 4.081499999999778,
+            "min": 3.703100000000177,
+            "max": 4.081499999999778
+          }
+        }
+      }
+    },
+    "operations": [
+      {
+        "entries": 3,
+        "operation": "open",
+        "CommandMs": {
+          "n": 5,
+          "median": 266.0323,
+          "p95": 283.9076,
+          "min": 108.1446,
+          "max": 283.9076
+        },
+        "UsableMs": {
+          "n": 5,
+          "median": 424.9052,
+          "p95": 574.6593,
+          "min": 413.7144,
+          "max": 574.6593
+        },
+        "AllocatedBytes": {
+          "n": 5,
+          "median": 4129624,
+          "p95": 8498824,
+          "min": 4106160,
+          "max": 8498824
+        },
+        "ManagedBytes": {
+          "n": 5,
+          "median": 493720960,
+          "p95": 499998376,
+          "min": 487930616,
+          "max": 499998376
+        },
+        "order_check": {
+          "first5_usable_ms": 424.9052,
+          "last5_usable_ms": 424.9052,
+          "first_managed_bytes": 487930616,
+          "last_managed_bytes": 499998376
+        },
+        "phases": {
+          "Calculate": {
+            "n": 5,
+            "median": 186.23199999999997,
+            "p95": 200.48459999999977,
+            "min": 16.988600000000588,
+            "max": 200.48459999999977
+          },
+          "Copy": {
+            "n": 5,
+            "median": 0.32369999999900756,
+            "p95": 0.3473000000012689,
+            "min": 0.31420000000071013,
+            "max": 0.3473000000012689
+          },
+          "Save": {
+            "n": 5,
+            "median": 3.174200000001292,
+            "p95": 3.289600000000064,
+            "min": 3.0197000000007392,
+            "max": 3.289600000000064
+          },
+          "UI.FrameWait": {
+            "n": 5,
+            "median": 103.337,
+            "p95": 269.3095,
+            "min": 91.8883,
+            "max": 269.3095
+          },
+          "UI.Prepare": {
+            "n": 5,
+            "median": 0.8733,
+            "p95": 2.2606,
+            "min": 0.8332,
+            "max": 2.2606
+          },
+          "UI.RenderSubmit": {
+            "n": 5,
+            "median": 46.73,
+            "p95": 217.5451,
+            "min": 42.9268,
+            "max": 217.5451
+          }
+        }
+      },
+      {
+        "entries": 3,
+        "operation": "datasheet",
+        "CommandMs": {
+          "n": 5,
+          "median": 13.2972,
+          "p95": 14.8222,
+          "min": 7.7877,
+          "max": 14.8222
+        },
+        "UsableMs": {
+          "n": 5,
+          "median": 2428.9781,
+          "p95": 2486.8753,
+          "min": 2283.5732,
+          "max": 2486.8753
+        },
+        "AllocatedBytes": {
+          "n": 5,
+          "median": 57308192,
+          "p95": 57538072,
+          "min": 53182600,
+          "max": 57538072
+        },
+        "ManagedBytes": {
+          "n": 5,
+          "median": 529068840,
+          "p95": 555449512,
+          "min": 501341720,
+          "max": 555449512
+        },
+        "order_check": {
+          "first5_usable_ms": 2428.9781,
+          "last5_usable_ms": 2428.9781,
+          "first_managed_bytes": 501341720,
+          "last_managed_bytes": 555449512
+        },
+        "phases": {
+          "UI.FrameWait": {
+            "n": 5,
+            "median": 75.3366,
+            "p95": 271.488,
+            "min": 72.4729,
+            "max": 271.488
+          },
+          "UI.Prepare": {
+            "n": 5,
+            "median": 1619.3415,
+            "p95": 1652.1298,
+            "min": 1532.6362,
+            "max": 1652.1298
+          },
+          "UI.RenderSubmit": {
+            "n": 5,
+            "median": 680.9372,
+            "p95": 755.5142,
+            "min": 530.2748,
+            "max": 755.5142
+          }
+        }
+      },
+      {
+        "entries": 3,
+        "operation": "add",
+        "CommandMs": {
+          "n": 5,
+          "median": 421.5184,
+          "p95": 438.2536,
+          "min": 277.9176,
+          "max": 438.2536
+        },
+        "UsableMs": {
+          "n": 5,
+          "median": 458.5565,
+          "p95": 484.4502,
+          "min": 450.1448,
+          "max": 484.4502
+        },
+        "AllocatedBytes": {
+          "n": 5,
+          "median": 8254296,
+          "p95": 8266672,
+          "min": 8229616,
+          "max": 8266672
+        },
+        "ManagedBytes": {
+          "n": 5,
+          "median": 481431592,
+          "p95": 482367472,
+          "min": 479958688,
+          "max": 482367472
+        },
+        "order_check": {
+          "first5_usable_ms": 458.5565,
+          "last5_usable_ms": 458.5565,
+          "first_managed_bytes": 479958688,
+          "last_managed_bytes": 482367472
+        },
+        "phases": {
+          "Calculate": {
+            "n": 5,
+            "median": 168.17559999999867,
+            "p95": 174.1803,
+            "min": 24.246500000001106,
+            "max": 174.1803
+          },
+          "Copy": {
+            "n": 5,
+            "median": 0.8880999999983032,
+            "p95": 1.252599999997983,
+            "min": 0.8535999999985506,
+            "max": 1.252599999997983
+          },
+          "Save": {
+            "n": 5,
+            "median": 3.1292000000012195,
+            "p95": 3.3078999999997905,
+            "min": 2.831000000000131,
+            "max": 3.3078999999997905
+          },
+          "UI.FrameWait": {
+            "n": 5,
+            "median": 22.7048,
+            "p95": 182.6343,
+            "min": 21.9418,
+            "max": 182.6343
+          },
+          "UI.Prepare": {
+            "n": 5,
+            "median": 5.9348,
+            "p95": 8.2903,
+            "min": 5.5554,
+            "max": 8.2903
+          },
+          "UI.RenderSubmit": {
+            "n": 5,
+            "median": 2.6093,
+            "p95": 3.7185,
+            "min": 2.4978,
+            "max": 3.7185
+          }
+        }
+      },
+      {
+        "entries": 3,
+        "operation": "equipment",
+        "CommandMs": {
+          "n": 5,
+          "median": 290.2428,
+          "p95": 306.5257,
+          "min": 174.6978,
+          "max": 306.5257
+        },
+        "UsableMs": {
+          "n": 5,
+          "median": 320.5433,
+          "p95": 325.9516,
+          "min": 194.3577,
+          "max": 325.9516
+        },
+        "AllocatedBytes": {
+          "n": 5,
+          "median": 4117000,
+          "p95": 8721736,
+          "min": 4110624,
+          "max": 8721736
+        },
+        "ManagedBytes": {
+          "n": 5,
+          "median": 490061488,
+          "p95": 495603328,
+          "min": 485001536,
+          "max": 495603328
+        },
+        "order_check": {
+          "first5_usable_ms": 320.5433,
+          "last5_usable_ms": 320.5433,
+          "first_managed_bytes": 485001536,
+          "last_managed_bytes": 495603328
+        },
+        "phases": {
+          "Calculate": {
+            "n": 5,
+            "median": 18.132300000001123,
+            "p95": 61.227100000000064,
+            "min": 16.919299999999566,
+            "max": 61.227100000000064
+          },
+          "Copy": {
+            "n": 5,
+            "median": 1.3689000000013039,
+            "p95": 1.6952999999994063,
+            "min": 0.8526000000001659,
+            "max": 1.6952999999994063
+          },
+          "Save": {
+            "n": 5,
+            "median": 3.0605999999988853,
+            "p95": 3.22059999999874,
+            "min": 2.9140000000006694,
+            "max": 3.22059999999874
+          },
+          "UI.FrameWait": {
+            "n": 5,
+            "median": 12.1643,
+            "p95": 13.0026,
+            "min": 10.528,
+            "max": 13.0026
+          },
+          "UI.Prepare": {
+            "n": 5,
+            "median": 5.4697,
+            "p95": 16.8421,
+            "min": 5.0766,
+            "max": 16.8421
+          },
+          "UI.RenderSubmit": {
+            "n": 5,
+            "median": 1.307,
+            "p95": 1.4593,
+            "min": 1.197,
+            "max": 1.4593
+          }
+        }
+      },
+      {
+        "entries": 3,
+        "operation": "enhancement",
+        "CommandMs": {
+          "n": 5,
+          "median": 475.6439,
+          "p95": 482.6212,
+          "min": 461.2006,
+          "max": 482.6212
+        },
+        "UsableMs": {
+          "n": 5,
+          "median": 1076.977,
+          "p95": 1108.8322,
+          "min": 901.3455,
+          "max": 1108.8322
+        },
+        "AllocatedBytes": {
+          "n": 5,
+          "median": 41808120,
+          "p95": 45927760,
+          "min": 41800992,
+          "max": 45927760
+        },
+        "ManagedBytes": {
+          "n": 5,
+          "median": 503379344,
+          "p95": 513496792,
+          "min": 490517216,
+          "max": 513496792
+        },
+        "order_check": {
+          "first5_usable_ms": 1076.977,
+          "last5_usable_ms": 1076.977,
+          "first_managed_bytes": 490517216,
+          "last_managed_bytes": 513496792
+        },
+        "phases": {
+          "Calculate": {
+            "n": 5,
+            "median": 46.123099999998885,
+            "p95": 47.69510000000082,
+            "min": 38.67610000000059,
+            "max": 47.69510000000082
+          },
+          "Copy": {
+            "n": 5,
+            "median": 0.8597000000045227,
+            "p95": 0.9037999999964086,
+            "min": 0.776400000000649,
+            "max": 0.9037999999964086
+          },
+          "Save": {
+            "n": 5,
+            "median": 3.0502999999989697,
+            "p95": 3.3549999999995634,
+            "min": 2.942399999999907,
+            "max": 3.3549999999995634
+          },
+          "UI.FrameWait": {
+            "n": 5,
+            "median": 41.1959,
+            "p95": 202.5969,
+            "min": 39.822,
+            "max": 202.5969
+          },
+          "UI.Prepare": {
+            "n": 5,
+            "median": 220.492,
+            "p95": 238.7051,
+            "min": 208.015,
+            "max": 238.7051
+          },
+          "UI.RenderSubmit": {
+            "n": 5,
+            "median": 343.0264,
+            "p95": 353.2743,
+            "min": 167.5105,
+            "max": 353.2743
+          }
+        }
+      },
+      {
+        "entries": 3,
+        "operation": "attachment",
+        "CommandMs": {
+          "n": 5,
+          "median": 512.5868,
+          "p95": 567.6387,
+          "min": 501.242,
+          "max": 567.6387
+        },
+        "UsableMs": {
+          "n": 5,
+          "median": 2092.12,
+          "p95": 2135.1098,
+          "min": 2026.6694,
+          "max": 2135.1098
+        },
+        "AllocatedBytes": {
+          "n": 5,
+          "median": 106883920,
+          "p95": 110414648,
+          "min": 103675496,
+          "max": 110414648
+        },
+        "ManagedBytes": {
+          "n": 5,
+          "median": 520865144,
+          "p95": 541180464,
+          "min": 498711944,
+          "max": 541180464
+        },
+        "order_check": {
+          "first5_usable_ms": 2092.12,
+          "last5_usable_ms": 2092.12,
+          "first_managed_bytes": 498711944,
+          "last_managed_bytes": 541180464
+        },
+        "phases": {
+          "Calculate": {
+            "n": 5,
+            "median": 106.88430000000153,
+            "p95": 119.82570000000123,
+            "min": 103.56650000000081,
+            "max": 119.82570000000123
+          },
+          "Copy": {
+            "n": 5,
+            "median": 0.7993999999962398,
+            "p95": 0.8258999999961816,
+            "min": 0.777299999999741,
+            "max": 0.8258999999961816
+          },
+          "Save": {
+            "n": 5,
+            "median": 3.0615000000034343,
+            "p95": 3.244300000002113,
+            "min": 3.0476999999991676,
+            "max": 3.244300000002113
+          },
+          "UI.FrameWait": {
+            "n": 5,
+            "median": 55.0928,
+            "p95": 245.5548,
+            "min": 47.5711,
+            "max": 245.5548
+          },
+          "UI.Prepare": {
+            "n": 5,
+            "median": 633.7686,
+            "p95": 703.7317,
+            "min": 616.7739,
+            "max": 703.7317
+          },
+          "UI.RenderSubmit": {
+            "n": 5,
+            "median": 853.5224,
+            "p95": 909.8305,
+            "min": 717.991,
+            "max": 909.8305
+          }
+        }
+      },
+      {
+        "entries": 3,
+        "operation": "detachment",
+        "CommandMs": {
+          "n": 5,
+          "median": 109.7455,
+          "p95": 110.6205,
+          "min": 105.4169,
+          "max": 110.6205
+        },
+        "UsableMs": {
+          "n": 5,
+          "median": 274.631,
+          "p95": 282.4258,
+          "min": 271.433,
+          "max": 282.4258
+        },
+        "AllocatedBytes": {
+          "n": 5,
+          "median": 8219288,
+          "p95": 8224688,
+          "min": 8205728,
+          "max": 8224688
+        },
+        "ManagedBytes": {
+          "n": 5,
+          "median": 484862736,
+          "p95": 487779288,
+          "min": 481718288,
+          "max": 487779288
+        },
+        "order_check": {
+          "first5_usable_ms": 274.631,
+          "last5_usable_ms": 274.631,
+          "first_managed_bytes": 481718288,
+          "last_managed_bytes": 487779288
+        },
+        "phases": {
+          "Calculate": {
+            "n": 5,
+            "median": 13.923999999999069,
+            "p95": 14.079100000000835,
+            "min": 13.508900000000722,
+            "max": 14.079100000000835
+          },
+          "Copy": {
+            "n": 5,
+            "median": 0.7641999999996187,
+            "p95": 0.8323999999993248,
+            "min": 0.7433000000000902,
+            "max": 0.8323999999993248
+          },
+          "Save": {
+            "n": 5,
+            "median": 3.008800000001429,
+            "p95": 3.246399999999994,
+            "min": 2.8157000000010157,
+            "max": 3.246399999999994
+          },
+          "UI.FrameWait": {
+            "n": 5,
+            "median": 97.3343,
+            "p95": 103.1956,
+            "min": 89.674,
+            "max": 103.1956
+          },
+          "UI.Prepare": {
+            "n": 5,
+            "median": 31.2403,
+            "p95": 33.7938,
+            "min": 30.443,
+            "max": 33.7938
+          },
+          "UI.RenderSubmit": {
+            "n": 5,
+            "median": 35.676,
+            "p95": 45.688,
+            "min": 34.1671,
+            "max": 45.688
+          }
+        }
+      },
+      {
+        "entries": 3,
+        "operation": "home",
+        "CommandMs": {
+          "n": 5,
+          "median": 9.1656,
+          "p95": 10.3144,
+          "min": 7.2064,
+          "max": 10.3144
+        },
+        "UsableMs": {
+          "n": 5,
+          "median": 337.5076,
+          "p95": 353.371,
+          "min": 168.755,
+          "max": 353.371
+        },
+        "AllocatedBytes": {
+          "n": 5,
+          "median": 4089832,
+          "p95": 4295288,
+          "min": 0,
+          "max": 4295288
+        },
+        "ManagedBytes": {
+          "n": 5,
+          "median": 488926280,
+          "p95": 497069920,
+          "min": 483204808,
+          "max": 497069920
+        },
+        "order_check": {
+          "first5_usable_ms": 337.5076,
+          "last5_usable_ms": 337.5076,
+          "first_managed_bytes": 483204808,
+          "last_managed_bytes": 497069920
+        },
+        "phases": {
+          "UI.FrameWait": {
+            "n": 5,
+            "median": 32.9482,
+            "p95": 205.3563,
+            "min": 32.4228,
+            "max": 205.3563
+          },
+          "UI.Prepare": {
+            "n": 5,
+            "median": 14.6356,
+            "p95": 161.2787,
+            "min": 11.8005,
+            "max": 161.2787
+          },
+          "UI.RenderSubmit": {
+            "n": 5,
+            "median": 116.8674,
+            "p95": 299.427,
+            "min": 113.6818,
+            "max": 299.427
+          }
+        }
+      },
+      {
+        "entries": 20,
+        "operation": "open",
+        "CommandMs": {
+          "n": 5,
+          "median": 520.5163,
+          "p95": 543.0013,
+          "min": 494.4068,
+          "max": 543.0013
+        },
+        "UsableMs": {
+          "n": 5,
+          "median": 708.4627,
+          "p95": 883.9033,
+          "min": 667.3323,
+          "max": 883.9033
+        },
+        "AllocatedBytes": {
+          "n": 5,
+          "median": 20535584,
+          "p95": 20762480,
+          "min": 20493656,
+          "max": 20762480
+        },
+        "ManagedBytes": {
+          "n": 5,
+          "median": 504320752,
+          "p95": 515981632,
+          "min": 492478544,
+          "max": 515981632
+        },
+        "order_check": {
+          "first5_usable_ms": 708.4627,
+          "last5_usable_ms": 708.4627,
+          "first_managed_bytes": 492478544,
+          "last_managed_bytes": 515981632
+        },
+        "phases": {
+          "Calculate": {
+            "n": 5,
+            "median": 129.39530000000013,
+            "p95": 143.26630000000114,
+            "min": 126.19160000000193,
+            "max": 143.26630000000114
+          },
+          "Copy": {
+            "n": 5,
+            "median": 1.1876000000011118,
+            "p95": 2.24330000000009,
+            "min": 0.8918999999987136,
+            "max": 2.24330000000009
+          },
+          "Save": {
+            "n": 5,
+            "median": 5.229300000000876,
+            "p95": 5.550700000001598,
+            "min": 5.155099999999948,
+            "max": 5.550700000001598
+          },
+          "UI.FrameWait": {
+            "n": 5,
+            "median": 129.1891,
+            "p95": 129.9753,
+            "min": 116.7347,
+            "max": 129.9753
+          },
+          "UI.Prepare": {
+            "n": 5,
+            "median": 1.6933,
+            "p95": 8.7313,
+            "min": 1.6702,
+            "max": 8.7313
+          },
+          "UI.RenderSubmit": {
+            "n": 5,
+            "median": 40.3753,
+            "p95": 239.3375,
+            "min": 33.8063,
+            "max": 239.3375
+          }
+        }
+      },
+      {
+        "entries": 20,
+        "operation": "datasheet",
+        "CommandMs": {
+          "n": 5,
+          "median": 19.1172,
+          "p95": 199.9242,
+          "min": 10.1071,
+          "max": 199.9242
+        },
+        "UsableMs": {
+          "n": 5,
+          "median": 5617.6344,
+          "p95": 6191.872,
+          "min": 4830.6651,
+          "max": 6191.872
+        },
+        "AllocatedBytes": {
+          "n": 5,
+          "median": 217206360,
+          "p95": 218094552,
+          "min": 212347208,
+          "max": 218094552
+        },
+        "ManagedBytes": {
+          "n": 5,
+          "median": 534141152,
+          "p95": 552946376,
+          "min": 514883400,
+          "max": 552946376
+        },
+        "order_check": {
+          "first5_usable_ms": 5617.6344,
+          "last5_usable_ms": 5617.6344,
+          "first_managed_bytes": 514883400,
+          "last_managed_bytes": 540859448
+        },
+        "phases": {
+          "UI.FrameWait": {
+            "n": 5,
+            "median": 90.7313,
+            "p95": 327.463,
+            "min": 77.7328,
+            "max": 327.463
+          },
+          "UI.Prepare": {
+            "n": 5,
+            "median": 4447.5351,
+            "p95": 5210.546,
+            "min": 4056.815,
+            "max": 5210.546
+          },
+          "UI.RenderSubmit": {
+            "n": 5,
+            "median": 846.0956,
+            "p95": 880.464,
+            "min": 678.8953,
+            "max": 880.464
+          }
+        }
+      },
+      {
+        "entries": 20,
+        "operation": "add",
+        "CommandMs": {
+          "n": 5,
+          "median": 502.2535,
+          "p95": 813.2464,
+          "min": 486.9963,
+          "max": 813.2464
+        },
+        "UsableMs": {
+          "n": 5,
+          "median": 523.1941,
+          "p95": 834.7335,
+          "min": 506.3126,
+          "max": 834.7335
+        },
+        "AllocatedBytes": {
+          "n": 5,
+          "median": 28735928,
+          "p95": 28763728,
+          "min": 28729016,
+          "max": 28763728
+        },
+        "ManagedBytes": {
+          "n": 5,
+          "median": 488213856,
+          "p95": 491733048,
+          "min": 484629008,
+          "max": 491733048
+        },
+        "order_check": {
+          "first5_usable_ms": 523.1941,
+          "last5_usable_ms": 523.1941,
+          "first_managed_bytes": 484629008,
+          "last_managed_bytes": 491733048
+        },
+        "phases": {
+          "Calculate": {
+            "n": 5,
+            "median": 149.52959999999985,
+            "p95": 263.7070999999996,
+            "min": 145.21600000000035,
+            "max": 263.7070999999996
+          },
+          "Copy": {
+            "n": 5,
+            "median": 2.089299999999639,
+            "p95": 2.5581999999994878,
+            "min": 2.075300000000425,
+            "max": 2.5581999999994878
+          },
+          "Save": {
+            "n": 5,
+            "median": 5.976699999999255,
+            "p95": 7.601599999999962,
+            "min": 5.149899999998524,
+            "max": 7.601599999999962
+          },
+          "UI.FrameWait": {
+            "n": 5,
+            "median": 10.2058,
+            "p95": 16.3819,
+            "min": 8.877,
+            "max": 16.3819
+          },
+          "UI.Prepare": {
+            "n": 5,
+            "median": 9.2929,
+            "p95": 16.5023,
+            "min": 8.8003,
+            "max": 16.5023
+          },
+          "UI.RenderSubmit": {
+            "n": 5,
+            "median": 1.6289,
+            "p95": 2.9646,
+            "min": 1.431,
+            "max": 2.9646
+          }
+        }
+      },
+      {
+        "entries": 20,
+        "operation": "equipment",
+        "CommandMs": {
+          "n": 5,
+          "median": 615.8794,
+          "p95": 663.1248,
+          "min": 603.6387,
+          "max": 663.1248
+        },
+        "UsableMs": {
+          "n": 5,
+          "median": 641.9856,
+          "p95": 689.396,
+          "min": 623.3803,
+          "max": 689.396
+        },
+        "AllocatedBytes": {
+          "n": 5,
+          "median": 28744224,
+          "p95": 29219832,
+          "min": 24652928,
+          "max": 29219832
+        },
+        "ManagedBytes": {
+          "n": 5,
+          "median": 497220752,
+          "p95": 505538968,
+          "min": 489457192,
+          "max": 505538968
+        },
+        "order_check": {
+          "first5_usable_ms": 641.9856,
+          "last5_usable_ms": 641.9856,
+          "first_managed_bytes": 489457192,
+          "last_managed_bytes": 505538968
+        },
+        "phases": {
+          "Calculate": {
+            "n": 5,
+            "median": 130.23559999999998,
+            "p95": 145.51569999999992,
+            "min": 125.91200000000026,
+            "max": 145.51569999999992
+          },
+          "Copy": {
+            "n": 5,
+            "median": 2.657500000001164,
+            "p95": 4.173800000000483,
+            "min": 1.8892000000014377,
+            "max": 4.173800000000483
+          },
+          "Save": {
+            "n": 5,
+            "median": 5.212600000000748,
+            "p95": 5.579999999999927,
+            "min": 5.125,
+            "max": 5.579999999999927
+          },
+          "UI.FrameWait": {
+            "n": 5,
+            "median": 11.1913,
+            "p95": 13.128,
+            "min": 9.4796,
+            "max": 13.128
+          },
+          "UI.Prepare": {
+            "n": 5,
+            "median": 5.5266,
+            "p95": 13.5649,
+            "min": 5.3166,
+            "max": 13.5649
+          },
+          "UI.RenderSubmit": {
+            "n": 5,
+            "median": 1.3381,
+            "p95": 1.5039,
+            "min": 1.2446,
+            "max": 1.5039
+          }
+        }
+      },
+      {
+        "entries": 20,
+        "operation": "enhancement",
+        "CommandMs": {
+          "n": 5,
+          "median": 1171.7537,
+          "p95": 1233.3864,
+          "min": 1042.3242,
+          "max": 1233.3864
+        },
+        "UsableMs": {
+          "n": 5,
+          "median": 4944.6563,
+          "p95": 5119.0464,
+          "min": 4413.8141,
+          "max": 5119.0464
+        },
+        "AllocatedBytes": {
+          "n": 5,
+          "median": 264973288,
+          "p95": 267640912,
+          "min": 263168880,
+          "max": 267640912
+        },
+        "ManagedBytes": {
+          "n": 5,
+          "median": 515899392,
+          "p95": 538837192,
+          "min": 477646552,
+          "max": 538837192
+        },
+        "order_check": {
+          "first5_usable_ms": 4944.6563,
+          "last5_usable_ms": 4944.6563,
+          "first_managed_bytes": 519736144,
+          "last_managed_bytes": 515899392
+        },
+        "phases": {
+          "Calculate": {
+            "n": 5,
+            "median": 166.40420000000086,
+            "p95": 178.55419999999867,
+            "min": 164.17489999999816,
+            "max": 178.55419999999867
+          },
+          "Copy": {
+            "n": 5,
+            "median": 1.9913000000087777,
+            "p95": 2.106999999999971,
+            "min": 1.9166999999943073,
+            "max": 2.106999999999971
+          },
+          "Save": {
+            "n": 5,
+            "median": 5.529300000001967,
+            "p95": 6.66990000000078,
+            "min": 5.254399999997986,
+            "max": 6.66990000000078
+          },
+          "UI.FrameWait": {
+            "n": 5,
+            "median": 50.3138,
+            "p95": 55.4922,
+            "min": 44.81,
+            "max": 55.4922
+          },
+          "UI.Prepare": {
+            "n": 5,
+            "median": 3213.0723,
+            "p95": 3265.0625,
+            "min": 3139.3381,
+            "max": 3265.0625
+          },
+          "UI.RenderSubmit": {
+            "n": 5,
+            "median": 464.5593,
+            "p95": 683.8873,
+            "min": 187.312,
+            "max": 683.8873
+          }
+        }
+      },
+      {
+        "entries": 20,
+        "operation": "attachment",
+        "CommandMs": {
+          "n": 5,
+          "median": 1448.7073,
+          "p95": 1600.6862,
+          "min": 1209.7186,
+          "max": 1600.6862
+        },
+        "UsableMs": {
+          "n": 5,
+          "median": 6932.769,
+          "p95": 7229.6815,
+          "min": 6055.6606,
+          "max": 7229.6815
+        },
+        "AllocatedBytes": {
+          "n": 5,
+          "median": 362569072,
+          "p95": 364713200,
+          "min": 361984376,
+          "max": 364713200
+        },
+        "ManagedBytes": {
+          "n": 5,
+          "median": 532916336,
+          "p95": 559458480,
+          "min": 509062456,
+          "max": 559458480
+        },
+        "order_check": {
+          "first5_usable_ms": 6932.769,
+          "last5_usable_ms": 6932.769,
+          "first_managed_bytes": 532916336,
+          "last_managed_bytes": 559458480
+        },
+        "phases": {
+          "Calculate": {
+            "n": 5,
+            "median": 443.5372000000061,
+            "p95": 493.6457999999984,
+            "min": 391.1074000000008,
+            "max": 493.6457999999984
+          },
+          "Copy": {
+            "n": 5,
+            "median": 1.8283999999985099,
+            "p95": 1.9192000000039116,
+            "min": 1.7767000000021653,
+            "max": 1.9192000000039116
+          },
+          "Save": {
+            "n": 5,
+            "median": 5.5406999999977415,
+            "p95": 5.577600000004168,
+            "min": 5.242500000000291,
+            "max": 5.577600000004168
+          },
+          "UI.FrameWait": {
+            "n": 5,
+            "median": 53.567,
+            "p95": 277.135,
+            "min": 53.0409,
+            "max": 277.135
+          },
+          "UI.Prepare": {
+            "n": 5,
+            "median": 3696.7126,
+            "p95": 3904.2529,
+            "min": 3359.8716,
+            "max": 3904.2529
+          },
+          "UI.RenderSubmit": {
+            "n": 5,
+            "median": 1663.8243,
+            "p95": 1760.9612,
+            "min": 1432.495,
+            "max": 1760.9612
+          }
+        }
+      },
+      {
+        "entries": 20,
+        "operation": "detachment",
+        "CommandMs": {
+          "n": 5,
+          "median": 388.0763,
+          "p95": 403.3055,
+          "min": 384.6466,
+          "max": 403.3055
+        },
+        "UsableMs": {
+          "n": 5,
+          "median": 758.108,
+          "p95": 770.7929,
+          "min": 747.9156,
+          "max": 770.7929
+        },
+        "AllocatedBytes": {
+          "n": 5,
+          "median": 28771896,
+          "p95": 28785320,
+          "min": 24654328,
+          "max": 28785320
+        },
+        "ManagedBytes": {
+          "n": 5,
+          "median": 495038784,
+          "p95": 501353752,
+          "min": 488547992,
+          "max": 501353752
+        },
+        "order_check": {
+          "first5_usable_ms": 758.108,
+          "last5_usable_ms": 758.108,
+          "first_managed_bytes": 488547992,
+          "last_managed_bytes": 501353752
+        },
+        "phases": {
+          "Calculate": {
+            "n": 5,
+            "median": 110.35779999999977,
+            "p95": 117.27440000000024,
+            "min": 103.71169999999984,
+            "max": 117.27440000000024
+          },
+          "Copy": {
+            "n": 5,
+            "median": 1.9367999999994936,
+            "p95": 2.0229999999992287,
+            "min": 1.8211999999984982,
+            "max": 2.0229999999992287
+          },
+          "Save": {
+            "n": 5,
+            "median": 5.090199999998731,
+            "p95": 5.424600000000282,
+            "min": 5.080200000000332,
+            "max": 5.424600000000282
+          },
+          "UI.FrameWait": {
+            "n": 5,
+            "median": 293.7144,
+            "p95": 309.9892,
+            "min": 121.4667,
+            "max": 309.9892
+          },
+          "UI.Prepare": {
+            "n": 5,
+            "median": 30.2256,
+            "p95": 30.595,
+            "min": 23.9236,
+            "max": 30.595
+          },
+          "UI.RenderSubmit": {
+            "n": 5,
+            "median": 44.8756,
+            "p95": 214.4387,
+            "min": 40.0427,
+            "max": 214.4387
+          }
+        }
+      },
+      {
+        "entries": 20,
+        "operation": "home",
+        "CommandMs": {
+          "n": 5,
+          "median": 11.4658,
+          "p95": 174.7532,
+          "min": 10.3673,
+          "max": 174.7532
+        },
+        "UsableMs": {
+          "n": 5,
+          "median": 371.5707,
+          "p95": 384.8313,
+          "min": 359.6871,
+          "max": 384.8313
+        },
+        "AllocatedBytes": {
+          "n": 5,
+          "median": 4887520,
+          "p95": 5357128,
+          "min": 4131120,
+          "max": 5357128
+        },
+        "ManagedBytes": {
+          "n": 5,
+          "median": 501694136,
+          "p95": 509969136,
+          "min": 490487216,
+          "max": 509969136
+        },
+        "order_check": {
+          "first5_usable_ms": 371.5707,
+          "last5_usable_ms": 371.5707,
+          "first_managed_bytes": 490487216,
+          "last_managed_bytes": 509969136
+        },
+        "phases": {
+          "UI.FrameWait": {
+            "n": 5,
+            "median": 34.7246,
+            "p95": 34.8868,
+            "min": 34.0676,
+            "max": 34.8868
+          },
+          "UI.Prepare": {
+            "n": 5,
+            "median": 29.8338,
+            "p95": 36.063,
+            "min": 26.6811,
+            "max": 36.063
+          },
+          "UI.RenderSubmit": {
+            "n": 5,
+            "median": 293.5147,
+            "p95": 302.5513,
+            "min": 123.4098,
+            "max": 302.5513
+          }
+        }
+      }
+    ],
+    "first_install": {
+      "LibraryReadyMs": 45853.5185,
+      "MauiEntryToUsableMs": 46107.0941,
+      "ProcessStartToUsableMs": 46684,
+      "Phases": [
+        {
+          "Name": "Android.LoadDataset",
+          "StartMs": 0.6513,
+          "Ms": 2279.0593,
+          "AllocatedBytes": 257505168,
+          "ManagedBytes": 959926576,
+          "Gen0": 28,
+          "Gen1": 1,
+          "Gen2": 1
+        },
+        {
+          "Name": "Android.Supplement",
+          "StartMs": 2322.992,
+          "Ms": 4176.647,
+          "AllocatedBytes": 214082064,
+          "ManagedBytes": 1012322488,
+          "Gen0": 47,
+          "Gen1": 0,
+          "Gen2": 0
+        },
+        {
+          "Name": "Session.EnhancementRecovery",
+          "StartMs": 20294.888,
+          "Ms": 110.50890000000072,
+          "AllocatedBytes": 9392168,
+          "ManagedBytes": 1096749776,
+          "Gen0": 2,
+          "Gen1": 0,
+          "Gen2": 0
+        },
+        {
+          "Name": "Session.EffectiveRecovery",
+          "StartMs": 20427.2605,
+          "Ms": 4311.3521,
+          "AllocatedBytes": 292020376,
+          "ManagedBytes": 1255251648,
+          "Gen0": 46,
+          "Gen1": 0,
+          "Gen2": 0
+        },
+        {
+          "Name": "Session.DetachmentRecovery",
+          "StartMs": 24765.3753,
+          "Ms": 138.55289999999877,
+          "AllocatedBytes": 11991528,
+          "ManagedBytes": 1266086992,
+          "Gen0": 1,
+          "Gen1": 0,
+          "Gen2": 0
+        },
+        {
+          "Name": "Session.DatasetIndex",
+          "StartMs": 24930.4363,
+          "Ms": 2298.1346999999987,
+          "AllocatedBytes": 120630248,
+          "ManagedBytes": 1290686936,
+          "Gen0": 28,
+          "Gen1": 0,
+          "Gen2": 0
+        }
+      ],
+      "Units": 2194,
+      "Cards": 6049,
+      "Gc0": 353,
+      "Gc1": 15,
+      "Gc2": 15,
+      "ManagedBytes": 1290703416,
+      "AllocatedBytes": 3759682648,
+      "NativeAllocatedBytes": 81553976
+    }
+  },
+  "validation": {
+    "original_files_checked": 236,
+    "changed_production_files": [],
+    "valid_interaction_samples": 400,
+    "excluded_windows_datasheet_samples": 40,
+    "windows_release_build": "Passed, zero warnings/errors",
+    "android_release_build": "Passed; final APK passed native startup-binding check for ARM64 and x64 and completed physical-device batches",
+    "cleanup": "Temporary com.grimlist.perfpass package removed after collection; production com.grimlist.mobile remained at version 0.2.6/code 8 with unchanged update timestamp.",
+    "android_collector": "The long Android run did not produce valid interaction data. Crash logs show two native Mono thread-suspension assertions. It was replaced by short checkpointed batches, with approximate allocation counters and process-exit detection. The runtime assertion cause is unconfirmed."
+  },
+  "phone": {
+    "model": "Redmi Note 12 Pro+ 5G (22101316UG)",
+    "android": "14",
+    "serial": "kjuoaevc95hagaz9",
+    "package": "com.grimlist.perfpass",
+    "production_package": "com.grimlist.mobile (untouched)"
+  },
+  "ranked_recommendations": [
+    {
+      "rank": 1,
+      "target": "Phone datasheet and rules display preparation",
+      "evidence": "20-unit datasheet: 5.62 s overall, including 4.45 s preparing data; enhancement preparation 3.21 s; attachment preparation 3.70 s.",
+      "recommendation": "Profile the individual PrepareUnit steps, reuse effective unit/rule results throughout one refresh, and consider calculating attachment/enhancement choices on demand. Invalidate affected results when equipment, rules, attachments or the library change.",
+      "code": "src/GrimList.Mobile/MainPage.Unit.cs:16"
+    },
+    {
+      "rank": 2,
+      "target": "Windows screen refresh and repeated presentation calculations",
+      "evidence": "20-unit equipment: 1.56 s overall versus 0.19 s command; Render submit 1.17 s. Attachments: 2.70 s overall, Render submit 2.05 s.",
+      "recommendation": "Split Render/RefreshDetails by changed region; reuse unchanged controls and derived display values. Render submit includes calculations as well as constructing controls, so profile its substeps before attributing all cost to layout.",
+      "code": "src/GrimList.Desktop/MainWindow.xaml.cs:94"
+    },
+    {
+      "rank": 3,
+      "target": "Library startup and memory footprint on both platforms",
+      "evidence": "Empty Home startup 3.54 s Windows / 7.84 s phone. Phone load/normalization 3.21 s, projection recovery 1.26 s, dataset indexes 2.07 s; 726 MiB cumulative managed allocations.",
+      "recommendation": "Reduce data materialized before readiness; evaluate lazy faction/datasheet loading and persisted reusable indexes. This is a larger storage/indexing change requiring correctness checks.",
+      "code": "src/GrimList.Persistence/ArmyStore.cs:105"
+    },
+    {
+      "rank": 4,
+      "target": "Windows home summaries",
+      "evidence": "Returning home with ten 20-unit armies costs 0.80 s; Windows HomeView recalculates every army, while Android already uses cached summaries.",
+      "recommendation": "Use the existing shared cached army summaries on Windows, then update only changed cards.",
+      "code": "src/GrimList.Desktop/HomeView.xaml.cs:22"
+    },
+    {
+      "rank": 5,
+      "target": "Remaining command validation/normalization work",
+      "evidence": "Phone 20-unit equipment command 0.62 s and attachment command 1.45 s; direct saves roughly 5\u20136 ms and copies roughly 1\u20133 ms.",
+      "recommendation": "Measure normalization and eligibility/validation substeps next. Defer broad SQL-save and clone rewrites: these measured costs do not justify putting them first.",
+      "code": "src/GrimList.Application/ArmySession.cs:163"
+    }
+  ],
+  "measurement_notes": {
+    "android_native_crash": "mono_threads_suspend_begin_async_resume assertion; two occurrences in the initial long-run diagnostic package. Production reproduction and root cause were not established.",
+    "startup_builds": "Empty-home startup was collected before changing the diagnostic allocation sampler; saved-army startup was collected from the revised diagnostic build. Production performance logic was unchanged.",
+    "android_thermal": "Thermal service status 0 before and after; battery temperature 31.0 C before and 33.6 C after.",
+    "allocation_counter_documentation": "https://learn.microsoft.com/en-us/dotnet/api/system.gc.gettotalallocatedbytes?view=net-10.0"
+  }
+}

@@ -1,0 +1,112 @@
+Nested BSData detachment fix — 2026-10-26 (unreleased)
+
+Problem
+
+The user's downloaded BSData 11e revision
+79c2aff2dcf7663b53e6b1c52fb36a564d5ab054 contains thirteen Custodes choices.
+Six reside under a selectionEntryGroup named "Shield Host Detachments (Max 1)".
+The importer read only direct upgrade children of Detachment/Detachments
+containers. It imported seven choices, missed six rule/enhancement scopes,
+and correctly refused to authorize retirement from that incomplete result.
+Consequently five obsolete definitions survived the user's update.
+
+The observed library had twelve choices (seven current plus five obsolete).
+The source archive's thirteen choices agreed with the edition-specific
+Wahapedia list inspected during diagnosis. That is an observation of the
+downloaded revision, not a claim that a fresh upstream download was performed.
+
+Implementation
+
+BsDataDetachmentTree walks nested selection groups and resolves group links.
+It stops at detachment upgrade leaves, so embedded equipment/upgrades cannot
+become extra detachments. ReadReferences and source-authority validation use
+the same traversal. No faction, unit, detachment or subgroup name is hard-coded
+into the new traversal or limit evaluation.
+
+Inherited visibility stays with the detachment and its nested reference cards,
+including enhancement eligibility. Missing links, cycles, unsupported group
+constraints and conditionally modified limits prevent authoritative retirement.
+Unsupported group constraints also leave their choices unavailable rather
+than silently permitting an invalid combination.
+
+DetachmentGroupLimit stores source group identity, name and numeric maximum.
+Optional GroupLimits metadata survives JSON, SQLite and faction loading.
+Shared DetachmentRules enforces limits in picker eligibility, validation and
+exports; both frontends already call those shared paths. The outer selector's
+own count constraints are not mistaken for a maximum number of detachments.
+Existing DP budget logic remains responsible for battle-size limits.
+
+For this pinned revision, all thirteen choices and six formerly missing rule
+and enhancement scopes import. Selecting Aquilan Shield plus Solar Watch is
+rejected; Aquilan Shield plus Auric Champions remains permitted within budget.
+A complete authoritative apply retires Shield Host, Talons of the Emperor,
+Solar Spearhead, Silent Hunters and Tharanatoi Hammerblow. Saved obsolete
+selections remain visible with review warnings; no replacement is guessed.
+
+Applying the fix
+
+Restart through Start-GrimList.cmd to build/run the updated source, then use
+Update BSData and apply the combined update preview. An already running app
+and the shipped 0.2.26 packages do not acquire this code automatically.
+This task does not directly edit the live database or rebuild release packages.
+
+Regression coverage
+
+NestedDetachmentChecks uses synthetic arbitrary-name groups/links and the
+unmodified pinned repository archive, with SHA-256 validation. The real source
+test runs the production ImportAll path over Custodes' dependency closure.
+Coverage includes thirteen choices, scoped rules and enhancements, numeric
+limits, inherited visibility, malformed/conditional input, serialization,
+retirement preview/apply, saved-army preservation, startup recovery and export.
+The fixture includes no user database or saved armies.
+
+The first full verification attempt was stopped after thirteen fixture-loading
+failures: eight older test helpers assumed there was only one repository.zip
+under tests/fixtures/bsdata/11e. They now explicitly select their original
+cc1830fbfead059f8059ed6c7f8e73cd4c390908 revision, so adding a newer pinned
+fixture cannot silently change their source or prevent them from running.
+That incomplete attempt is not counted as final verification.
+
+Verification
+
+- Focused nested-detachment checks initially passed all five checks.
+- The subsequent full run completed with 487 PASS and one failure. The failing
+  legacy local fixture omitted a container ID. The traversal now retains its
+  readable choices while marking source coverage incomplete; ID-less groups
+  with selection constraints remain unresolved. The existing disposition test
+  and a new no-retirement assertion cover this compatibility correction.
+- Final focused rerun: 41 PASS, zero failures, exit 0. Includes the five nested
+  checks, stat/lifecycle checks, DP budgets, visibility, disposition metadata,
+  persistence, reference recovery and all-game-size Windows startup recovery.
+  All 488 full-suite checks were covered across the full run and focused rerun;
+  the full suite was not run a second time after the ID-less-container fix.
+- The full run's enhancement matrix exercised 1,329 selectable cards and
+  16,755 eligible bearer/card pairs. 1,264 cards had no eligible bearer in its
+  tested catalogue configurations; this is not every possible configuration.
+- Final tests, Windows Debug and Android Debug builds: zero warnings/errors.
+  No physical Android or native UI acceptance is claimed for this follow-up.
+- No fresh network acquisition, release packaging or live database repair was
+  performed. Reimport through Update BSData is required in the updated app.
+
+Evidence under artifacts/distribution-evidence:
+  nested-detachments-targeted.log
+  nested-detachments-full.log (stopped fixture-selection attempt)
+  nested-detachments-full-final.log (487 passes, subsequently corrected failure)
+  nested-detachments-compatibility-final.log (41 passes, final source)
+  nested-detachments-windows-build-final.log
+  nested-detachments-android-build-final.log
+
+Cleanup limitation
+
+Automatic approval review rejected native PowerShell Remove-Item for four
+verified completed test directories with "blocked by policy". No workaround
+or subsequent cleanup retry was used, and no space reclamation is claimed.
+These task-created directories remain under .local/tests; results are retained
+in the logs above. The final focused run also remains:
+  d3913068-dd73-4b76-84dc-167f8e1910fe
+  3eb911be-c7d0-4e90-a719-f78bedb24556
+  7a6e1d50-f22a-4dc0-89c6-43a950d70854
+  ed5b023f-79ac-4ed3-9bf2-ba59eeff9041
+  b2e2166a-4fbe-469c-a8d3-7d86ba1dd1f8
+The first four totaled 578,658,088 bytes at inspection. User data and earlier
+test directories were not targeted.

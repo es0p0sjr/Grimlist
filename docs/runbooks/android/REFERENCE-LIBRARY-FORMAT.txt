@@ -1,0 +1,124 @@
+GrimList generic reference library (dataset schema 2)
+
+Scope
+-----
+Windows and Android use the same canonical ReferenceCard, adapters, merge,
+matching, coverage, filtering and snapshot persistence. Reference sources are
+read only during import. The reference index and coverage report belong to the
+loaded dataset snapshot; equipment/unit edits do not rebuild them.
+
+Content coverage is independent of importer support. A pack can describe any
+edition/faction/detachment, but cannot supply text absent from its sources.
+Never infer completeness from the number of cards. No runtime website scraping
+or automatic generation of missing rules is included.
+
+Input
+-----
+Use a GrimList JSON dataset with:
+  SchemaVersion: 2
+  Source: { Name, Version, Date, Url, Edition, ContentHash }
+  Game: the same game as the active library
+  Units: []
+  Detachments: [] (or source definitions needed to resolve card target IDs)
+  ReferenceOnly: true
+  ReferenceCards: [...]
+  ReferenceCoverage: [...] (optional; no declaration means unverified coverage)
+
+Each ReferenceCard retains the established fields:
+  Faction, Section, Name, Text, Detachment, Cost, Source
+
+Section is typically Stratagems, Army Rules, Detachments or Other.
+Cost is optional text such as "1 CP". Source records the card's own original
+source/version/date/URL/hash, rather than the unit catalogue revision.
+
+Optional Details supplies canonical metadata:
+  Id                  GrimList stable record identity
+  Edition             explicit edition, matching the active library
+  SourceId            stable owner; retain across revisions
+  SourceCardId        original provider record ID, when available
+  SourceType          e.g. StructuredJson or BSData
+  Scope               Global, Faction or Detachment
+  FactionId           optional imported faction ID
+  Detachments         [{ Name, Id, Match }]; supports multiple detachments
+  Timing, Target, Effect, Restrictions
+  SemanticHash        recomputed by GrimList, excluding formatting/provenance
+  Status              Active, Unresolved, Obsolete or Removed
+  Replaces            optional older Id from the same owner/edition
+  Match               computed/audited match result
+
+IDs may be omitted from legacy input: GrimList derives deterministic identities
+from source, edition, scope and canonical name. Supply original stable IDs when
+available so renames are recognized as updates. A nonmatching supplied target ID
+does not silently fall back to a name. Without IDs, edition/faction/normalized
+detachment-name matching is audited as NameFallback. Ambiguous/unresolved cards
+are stored for review but hidden from army displays.
+
+Coverage declaration fields
+---------------------------
+  SourceId, Edition, Category, Faction, Detachment, Source
+  State: Unknown, Partial, Complete or VerifiedComplete
+  Mode: Partial, CompleteForFaction, CompleteForDetachment or CompleteForEdition
+  Authoritative: false by default
+
+Complete declarations are assertions made by the supplied source, not an
+independent certification by GrimList. Only authoritative complete scope may
+remove that owner's missing cards. Empty authoritative complete packs can
+explicitly retire a scope. Partial files never remove absent cards. A partial
+update without a renewed completeness declaration downgrades the prior claim.
+Unresolved matching prevents absence-based deletion and complete display claims.
+
+Updates and conflicts
+---------------------
+Previews list Added, Updated, Unchanged, Retained, Conflict, Unresolved,
+Removed and Obsolete decisions with ownership and matching information.
+Conflicts block Apply. Cancel or correct the input and preview again; the shared
+PrepareReferenceImportAsync API also accepts an explicit preferredSources map
+from canonical logical key to owner ID. No source wins by default.
+
+Removed/obsolete records are retained but hidden. Previous SQLite snapshots also
+retain import history. Import is a single existing army-store transaction with
+a stale-preview check. Reference-only updates preserve catalogue provenance,
+unit data and saved armies. Core remains responsible for roster rules.
+Enhancements/dispositions that feed the existing roster engine remain in the
+ordinary army-building dataset workflow, not the supplemental display adapter.
+
+Formats and tools
+-----------------
+StructuredJsonReferenceAdapter accepts reference-only JSON from any faction.
+BsDataReferenceAdapter reads catalogue-format references through the shared
+BSData parser. Full BSData ZIP imports continue through the existing library
+workflow. Typed stratagem profiles follow source links/hierarchy; unsupported
+conditional applicability stays unresolved rather than being guessed.
+There is no faction-specific reference parser.
+
+After building tools/GrimList.Data, run its DLL with:
+  audit-references <dataset.json> <report.json>
+  export-reference-pack <dataset.json> <pack.json>
+  build-reference-pack <source.json> <edition> <pack.json>
+  preview-reference-import <dataset.json> <pack.json> <changes.json>
+
+The preview command writes a separate .dataset.json beside its report; it does
+not modify a database. No synthetic test rules are included in the delivered pack.
+
+Phone test
+----------
+1. Keep your existing dataset export and install the new APK over the app.
+2. Open Manage data > Import rules references.
+3. Select GrimList-References.json. Review decisions and coverage before Apply.
+4. Confirm Virulent Vectorium's six available cards, other detachment filtering,
+   and explicit Unknown/Partial coverage where source text is missing.
+5. Confirm roster points/loadouts/attachments are unchanged. Restart the app.
+6. Export dataset on the phone and import it on Windows; the reference metadata
+   should travel with the library. No network connection is needed for display.
+
+GrimList-References.json includes existing BSData display references from the
+user-provided phone export plus the existing Windows supplemental stratagems.
+It does not claim to fill the missing stratagem text for every faction.
+
+Coverage-audit update: the pack also includes 104 reference cards recovered from
+the same pinned BSData archive by recognizing plural Detachments containers.
+It now contains 1,119 display cards and 892 raw source detachment definitions.
+The definitions support identity matching; they are not a claim that all 892
+are playable in every faction/force. The independent source audit resolves 444
+selectable faction/detachment combinations (270 source IDs) in Army Roster context.
+See ../reference-coverage.txt and TEST-REFERENCE-COVERAGE-ON-PHONE.txt.

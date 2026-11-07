@@ -1,0 +1,186 @@
+{
+  "Pairs": 188,
+  "Factions": 36,
+  "Samples": [
+    {
+      "Kind": "weapon-definitions",
+      "Round": 0,
+      "Indexed": false,
+      "Calls": 188,
+      "Definitions": 314,
+      "ElapsedMs": 785.2974,
+      "AllocatedBytes": 75965472
+    },
+    {
+      "Kind": "weapon-definitions",
+      "Round": 0,
+      "Indexed": true,
+      "Calls": 188,
+      "Definitions": 314,
+      "ElapsedMs": 0.4667,
+      "AllocatedBytes": 245856
+    },
+    {
+      "Kind": "weapon-definitions",
+      "Round": 1,
+      "Indexed": true,
+      "Calls": 188,
+      "Definitions": 314,
+      "ElapsedMs": 0.3853,
+      "AllocatedBytes": 245856
+    },
+    {
+      "Kind": "weapon-definitions",
+      "Round": 1,
+      "Indexed": false,
+      "Calls": 188,
+      "Definitions": 314,
+      "ElapsedMs": 529.2037,
+      "AllocatedBytes": 73307768
+    },
+    {
+      "Kind": "weapon-definitions",
+      "Round": 2,
+      "Indexed": false,
+      "Calls": 188,
+      "Definitions": 314,
+      "ElapsedMs": 525.0089,
+      "AllocatedBytes": 73308120
+    },
+    {
+      "Kind": "weapon-definitions",
+      "Round": 2,
+      "Indexed": true,
+      "Calls": 188,
+      "Definitions": 314,
+      "ElapsedMs": 0.4992,
+      "AllocatedBytes": 245856
+    },
+    {
+      "Kind": "weapon-definitions",
+      "Round": 3,
+      "Indexed": true,
+      "Calls": 188,
+      "Definitions": 314,
+      "ElapsedMs": 0.4218,
+      "AllocatedBytes": 245856
+    },
+    {
+      "Kind": "weapon-definitions",
+      "Round": 3,
+      "Indexed": false,
+      "Calls": 188,
+      "Definitions": 314,
+      "ElapsedMs": 560.2005,
+      "AllocatedBytes": 73308120
+    },
+    {
+      "Kind": "weapon-definitions",
+      "Round": 4,
+      "Indexed": false,
+      "Calls": 188,
+      "Definitions": 314,
+      "ElapsedMs": 554.0019,
+      "AllocatedBytes": 73308016
+    },
+    {
+      "Kind": "weapon-definitions",
+      "Round": 4,
+      "Indexed": true,
+      "Calls": 188,
+      "Definitions": 314,
+      "ElapsedMs": 0.4758,
+      "AllocatedBytes": 245856
+    },
+    {
+      "Kind": "attachment-source",
+      "Round": 0,
+      "Indexed": false,
+      "Calls": 2692,
+      "Definitions": 211,
+      "ElapsedMs": 13.02,
+      "AllocatedBytes": 1473416
+    },
+    {
+      "Kind": "attachment-source",
+      "Round": 0,
+      "Indexed": true,
+      "Calls": 2692,
+      "Definitions": 211,
+      "ElapsedMs": 0.4279,
+      "AllocatedBytes": 40
+    },
+    {
+      "Kind": "attachment-source",
+      "Round": 1,
+      "Indexed": true,
+      "Calls": 2692,
+      "Definitions": 211,
+      "ElapsedMs": 0.3034,
+      "AllocatedBytes": 40
+    },
+    {
+      "Kind": "attachment-source",
+      "Round": 1,
+      "Indexed": false,
+      "Calls": 2692,
+      "Definitions": 211,
+      "ElapsedMs": 19.952,
+      "AllocatedBytes": 1473664
+    },
+    {
+      "Kind": "attachment-source",
+      "Round": 2,
+      "Indexed": false,
+      "Calls": 2692,
+      "Definitions": 211,
+      "ElapsedMs": 15.6195,
+      "AllocatedBytes": 1473416
+    },
+    {
+      "Kind": "attachment-source",
+      "Round": 2,
+      "Indexed": true,
+      "Calls": 2692,
+      "Definitions": 211,
+      "ElapsedMs": 0.3018,
+      "AllocatedBytes": 40
+    },
+    {
+      "Kind": "attachment-source",
+      "Round": 3,
+      "Indexed": true,
+      "Calls": 2692,
+      "Definitions": 211,
+      "ElapsedMs": 0.1574,
+      "AllocatedBytes": 40
+    },
+    {
+      "Kind": "attachment-source",
+      "Round": 3,
+      "Indexed": false,
+      "Calls": 2692,
+      "Definitions": 211,
+      "ElapsedMs": 13.7914,
+      "AllocatedBytes": 1473416
+    },
+    {
+      "Kind": "attachment-source",
+      "Round": 4,
+      "Indexed": false,
+      "Calls": 2692,
+      "Definitions": 211,
+      "ElapsedMs": 14.1143,
+      "AllocatedBytes": 1473416
+    },
+    {
+      "Kind": "attachment-source",
+      "Round": 4,
+      "Indexed": true,
+      "Calls": 2692,
+      "Definitions": 211,
+      "ElapsedMs": 0.3142,
+      "AllocatedBytes": 40
+    }
+  ]
+}

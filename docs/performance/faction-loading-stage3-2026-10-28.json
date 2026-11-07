@@ -1,0 +1,369 @@
+{
+  "Checks": 5626,
+  "Factions": 36,
+  "TotalUnits": 2194,
+  "CacheOpenMs": 8801.861,
+  "CacheBuilt": true,
+  "Measurements": [
+    {
+      "Mode": "full",
+      "Operation": "startup-home",
+      "Milliseconds": 2253.2631,
+      "AllocatedBytes": 324561336,
+      "LoadedUnits": 2194,
+      "FullReads": 1,
+      "ShardReads": 0
+    },
+    {
+      "Mode": "full",
+      "Operation": "open-army",
+      "Milliseconds": 67.8406,
+      "AllocatedBytes": 2953960,
+      "LoadedUnits": 2194,
+      "FullReads": 1,
+      "ShardReads": 0
+    },
+    {
+      "Mode": "full",
+      "Operation": "switch-faction",
+      "Milliseconds": 19.5945,
+      "AllocatedBytes": 4217008,
+      "LoadedUnits": 2194,
+      "FullReads": 1,
+      "ShardReads": 0
+    },
+    {
+      "Mode": "full",
+      "Operation": "return-cached-faction",
+      "Milliseconds": 75.2022,
+      "AllocatedBytes": 2921248,
+      "LoadedUnits": 2194,
+      "FullReads": 1,
+      "ShardReads": 0
+    },
+    {
+      "Mode": "faction",
+      "Operation": "startup-home",
+      "Milliseconds": 175.8975,
+      "AllocatedBytes": 26607344,
+      "LoadedUnits": 0,
+      "FullReads": 0,
+      "ShardReads": 3
+    },
+    {
+      "Mode": "faction",
+      "Operation": "open-army",
+      "Milliseconds": 17.2939,
+      "AllocatedBytes": 2956456,
+      "LoadedUnits": 69,
+      "FullReads": 0,
+      "ShardReads": 3
+    },
+    {
+      "Mode": "faction",
+      "Operation": "switch-faction",
+      "Milliseconds": 161.5044,
+      "AllocatedBytes": 12002760,
+      "LoadedUnits": 58,
+      "FullReads": 0,
+      "ShardReads": 5
+    },
+    {
+      "Mode": "faction",
+      "Operation": "return-cached-faction",
+      "Milliseconds": 126.1676,
+      "AllocatedBytes": 2933496,
+      "LoadedUnits": 69,
+      "FullReads": 0,
+      "ShardReads": 5
+    },
+    {
+      "Mode": "faction",
+      "Operation": "startup-home",
+      "Milliseconds": 15.9009,
+      "AllocatedBytes": 5706320,
+      "LoadedUnits": 0,
+      "FullReads": 0,
+      "ShardReads": 0
+    },
+    {
+      "Mode": "faction",
+      "Operation": "open-army",
+      "Milliseconds": 143.9719,
+      "AllocatedBytes": 17074320,
+      "LoadedUnits": 69,
+      "FullReads": 0,
+      "ShardReads": 3
+    },
+    {
+      "Mode": "faction",
+      "Operation": "switch-faction",
+      "Milliseconds": 122.4974,
+      "AllocatedBytes": 12005184,
+      "LoadedUnits": 58,
+      "FullReads": 0,
+      "ShardReads": 5
+    },
+    {
+      "Mode": "faction",
+      "Operation": "return-cached-faction",
+      "Milliseconds": 17.7285,
+      "AllocatedBytes": 2932680,
+      "LoadedUnits": 69,
+      "FullReads": 0,
+      "ShardReads": 5
+    },
+    {
+      "Mode": "full",
+      "Operation": "startup-home",
+      "Milliseconds": 2361.1626,
+      "AllocatedBytes": 324555976,
+      "LoadedUnits": 2194,
+      "FullReads": 1,
+      "ShardReads": 0
+    },
+    {
+      "Mode": "full",
+      "Operation": "open-army",
+      "Milliseconds": 57.0288,
+      "AllocatedBytes": 2953960,
+      "LoadedUnits": 2194,
+      "FullReads": 1,
+      "ShardReads": 0
+    },
+    {
+      "Mode": "full",
+      "Operation": "switch-faction",
+      "Milliseconds": 19.6333,
+      "AllocatedBytes": 4217008,
+      "LoadedUnits": 2194,
+      "FullReads": 1,
+      "ShardReads": 0
+    },
+    {
+      "Mode": "full",
+      "Operation": "return-cached-faction",
+      "Milliseconds": 64.5677,
+      "AllocatedBytes": 2921248,
+      "LoadedUnits": 2194,
+      "FullReads": 1,
+      "ShardReads": 0
+    },
+    {
+      "Mode": "full",
+      "Operation": "startup-home",
+      "Milliseconds": 2240.9523,
+      "AllocatedBytes": 324556240,
+      "LoadedUnits": 2194,
+      "FullReads": 1,
+      "ShardReads": 0
+    },
+    {
+      "Mode": "full",
+      "Operation": "open-army",
+      "Milliseconds": 61.0499,
+      "AllocatedBytes": 2955344,
+      "LoadedUnits": 2194,
+      "FullReads": 1,
+      "ShardReads": 0
+    },
+    {
+      "Mode": "full",
+      "Operation": "switch-faction",
+      "Milliseconds": 19.0149,
+      "AllocatedBytes": 4217008,
+      "LoadedUnits": 2194,
+      "FullReads": 1,
+      "ShardReads": 0
+    },
+    {
+      "Mode": "full",
+      "Operation": "return-cached-faction",
+      "Milliseconds": 73.6307,
+      "AllocatedBytes": 2921248,
+      "LoadedUnits": 2194,
+      "FullReads": 1,
+      "ShardReads": 0
+    },
+    {
+      "Mode": "faction",
+      "Operation": "startup-home",
+      "Milliseconds": 19.3765,
+      "AllocatedBytes": 10949304,
+      "LoadedUnits": 0,
+      "FullReads": 0,
+      "ShardReads": 0
+    },
+    {
+      "Mode": "faction",
+      "Operation": "open-army",
+      "Milliseconds": 178.1046,
+      "AllocatedBytes": 17074320,
+      "LoadedUnits": 69,
+      "FullReads": 0,
+      "ShardReads": 3
+    },
+    {
+      "Mode": "faction",
+      "Operation": "switch-faction",
+      "Milliseconds": 115.7575,
+      "AllocatedBytes": 12005184,
+      "LoadedUnits": 58,
+      "FullReads": 0,
+      "ShardReads": 5
+    },
+    {
+      "Mode": "faction",
+      "Operation": "return-cached-faction",
+      "Milliseconds": 22.6814,
+      "AllocatedBytes": 2932680,
+      "LoadedUnits": 69,
+      "FullReads": 0,
+      "ShardReads": 5
+    },
+    {
+      "Mode": "faction",
+      "Operation": "startup-home",
+      "Milliseconds": 14.7026,
+      "AllocatedBytes": 5706320,
+      "LoadedUnits": 0,
+      "FullReads": 0,
+      "ShardReads": 0
+    },
+    {
+      "Mode": "faction",
+      "Operation": "open-army",
+      "Milliseconds": 153.4205,
+      "AllocatedBytes": 17074320,
+      "LoadedUnits": 69,
+      "FullReads": 0,
+      "ShardReads": 3
+    },
+    {
+      "Mode": "faction",
+      "Operation": "switch-faction",
+      "Milliseconds": 131.6119,
+      "AllocatedBytes": 12005928,
+      "LoadedUnits": 58,
+      "FullReads": 0,
+      "ShardReads": 5
+    },
+    {
+      "Mode": "faction",
+      "Operation": "return-cached-faction",
+      "Milliseconds": 18.4249,
+      "AllocatedBytes": 2932680,
+      "LoadedUnits": 69,
+      "FullReads": 0,
+      "ShardReads": 5
+    },
+    {
+      "Mode": "full",
+      "Operation": "startup-home",
+      "Milliseconds": 2299.5586,
+      "AllocatedBytes": 324884024,
+      "LoadedUnits": 2194,
+      "FullReads": 1,
+      "ShardReads": 0
+    },
+    {
+      "Mode": "full",
+      "Operation": "open-army",
+      "Milliseconds": 147.3169,
+      "AllocatedBytes": 2955344,
+      "LoadedUnits": 2194,
+      "FullReads": 1,
+      "ShardReads": 0
+    },
+    {
+      "Mode": "full",
+      "Operation": "switch-faction",
+      "Milliseconds": 19.1885,
+      "AllocatedBytes": 4217008,
+      "LoadedUnits": 2194,
+      "FullReads": 1,
+      "ShardReads": 0
+    },
+    {
+      "Mode": "full",
+      "Operation": "return-cached-faction",
+      "Milliseconds": 66.5207,
+      "AllocatedBytes": 2921248,
+      "LoadedUnits": 2194,
+      "FullReads": 1,
+      "ShardReads": 0
+    },
+    {
+      "Mode": "full",
+      "Operation": "startup-home",
+      "Milliseconds": 2186.9123,
+      "AllocatedBytes": 324684496,
+      "LoadedUnits": 2194,
+      "FullReads": 1,
+      "ShardReads": 0
+    },
+    {
+      "Mode": "full",
+      "Operation": "open-army",
+      "Milliseconds": 53.809,
+      "AllocatedBytes": 2954408,
+      "LoadedUnits": 2194,
+      "FullReads": 1,
+      "ShardReads": 0
+    },
+    {
+      "Mode": "full",
+      "Operation": "switch-faction",
+      "Milliseconds": 20.1381,
+      "AllocatedBytes": 4216560,
+      "LoadedUnits": 2194,
+      "FullReads": 1,
+      "ShardReads": 0
+    },
+    {
+      "Mode": "full",
+      "Operation": "return-cached-faction",
+      "Milliseconds": 68.9012,
+      "AllocatedBytes": 2921248,
+      "LoadedUnits": 2194,
+      "FullReads": 1,
+      "ShardReads": 0
+    },
+    {
+      "Mode": "faction",
+      "Operation": "startup-home",
+      "Milliseconds": 19.1744,
+      "AllocatedBytes": 10949304,
+      "LoadedUnits": 0,
+      "FullReads": 0,
+      "ShardReads": 0
+    },
+    {
+      "Mode": "faction",
+      "Operation": "open-army",
+      "Milliseconds": 217.1628,
+      "AllocatedBytes": 17074320,
+      "LoadedUnits": 69,
+      "FullReads": 0,
+      "ShardReads": 3
+    },
+    {
+      "Mode": "faction",
+      "Operation": "switch-faction",
+      "Milliseconds": 109.7207,
+      "AllocatedBytes": 12005184,
+      "LoadedUnits": 58,
+      "FullReads": 0,
+      "ShardReads": 5
+    },
+    {
+      "Mode": "faction",
+      "Operation": "return-cached-faction",
+      "Milliseconds": 15.5843,
+      "AllocatedBytes": 2932680,
+      "LoadedUnits": 69,
+      "FullReads": 0,
+      "ShardReads": 5
+    }
+  ]
+}

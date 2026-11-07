@@ -1,0 +1,7 @@
+Bodyguard: Plague Marines
+Proposed associations: Malignant Plaguecaster, Biologus Putrifier
+Base: Leader max = 1
+Applied modifiers: SET Leader max 2: ((Biologus Putrifier associations atLeast 1 (actual 1, scope self)))
+Effective: Leader max = 2
+Actual: Leader count = 2
+Association result: VALID

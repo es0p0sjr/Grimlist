@@ -1,0 +1,141 @@
+Optimization continuation: enhancement presentation and reusable faction caches
+Date: 2026-10-28
+
+Implementation
+--------------
+Android enhancement choices now open on demand. The selected enhancement, its
+description, removal action, budget and validation issues remain on the datasheet.
+Shared EnhancementPresentation prepares each option with the existing authoritative
+Enhancements.Select rules, retaining exact rejection messages. Work runs outside
+the UI thread and ArmySession lock. Weak army/dataset identity caches share one
+concurrent calculation per immutable input, with separate cheap summaries.
+Exceptions are evicted so retries can calculate again. Actual selection still
+passes through ArmySession validation. Pending results and button actions reject
+stale snapshots; navigation cannot apply an old button to a previous unit.
+
+FactionLibrary now has a factions-2 revision manifest and independently addressed
+faction-content-1 payloads. Each faction's units/cards are hashed independently;
+global ordering and exact profile/points/reference SourceInfo bindings belong to
+the manifest. Source records are pooled, preserving null sources. Thus a provenance
+timestamp or unrelated insertion need not duplicate unchanged faction content.
+All other source-dependent semantics, IDs, aliases and unknown metadata remain in
+the content and participate in its identity. A semantic recovery change is never
+assumed equivalent simply because visible rule text is unchanged.
+
+Shared ability definitions have their own reusable payload, loaded once when an
+army needs a scoped view, rather than being deserialized with the Home manifest.
+Dependency routes still cover all supported detachments and saved foreign units.
+Views keep original ordering and exact source attribution; at most two are retained
+by FactionLibrary. Full exports/imports continue to use the complete Dataset.
+
+Payload hashes stream through SHA-256 without allocating one huge JSON buffer.
+Existing files must pass their compressed checksum before reuse. A manifest is
+published atomically after its payloads. Missing/corrupt derived files recover from
+the authoritative repository. SQLite, historical snapshots and user data are not
+migrated or modified by this cache-format change.
+
+LocalPerformance adds opt-in timings for opening the database, loading/recovering
+the library, constructing the manifest, reading faction/shared payloads and restoring
+the saved army. Only the isolated performance app records them; production has no
+listener or telemetry sink.
+
+Scope and remaining architecture
+--------------------------------
+This is the first content-reuse part of the faction revision stage, not completion
+of the full storage roadmap. Recovery still conservatively invalidates manifests
+using Application/Core module identities. Cache misses still load/recover the full
+library and recalculate dependency routes before reusing unchanged payload files.
+Army-summary invalidation is still library-wide. No speedup is claimed for those
+remaining operations merely because fewer files are duplicated.
+
+Next: explicit independently maintained recovery/compilation contracts, dependency
+and summary revisions, import-time projection preparation before activation, and
+bounded manifest/payload retention with concurrent-reader handling. Then introduce
+content-sharing in authoritative SQLite catalogue snapshots with migration/history/
+interruption tests. Dependency-aware roster evaluation follows only with full-engine
+comparison and conservative fallback for unknown dependencies. Smaller BLOB, statement
+and serialization changes remain measurement-driven.
+
+Verification and measurements
+----------------------------
+Full regression: 529 PASS, zero failures. The successful wrapper removed its own
+synthetic database. Two additional cache failure/recovery cases were added after
+that run; all 21 checks in the final focused run passed. No production
+code changed after the full run began except the separately verified native stale-
+button context guard. Shared code and Windows build remained unchanged.
+
+The all-catalogue host workload passed 5,626 comparisons across 36 factions and
+2,194 units; 40 timing samples are retained in faction-loading-stage3-2026-10-28.json.
+Both final normal Debug builds succeeded with zero warnings/errors. The isolated
+Android publisher passed identity/signature/archive and both ABI startup checks;
+its three existing nullable warnings and existing symbol fallback remain.
+
+Physical Redmi 22101316UG, serial kjuoaevc95hagaz9, com.grimlist.perftest:
+  58 enhancement chooser checks, 26 metadata checks, 41 attachment checks passed.
+  Enhancement chooser, 2-entry fixture, five measured repetitions:
+    first opening 183.74 ms; repeat opening 78.90 ms;
+    two display frames while loading 27.79 ms; session wait 1.73 ms.
+  Attachment chooser, 20-entry fixture:
+    first opening 1,858.05 ms; repeat opening 42.35 ms;
+    display frames while loading 35.33 ms; session wait 2.01 ms.
+
+The final batch measured 120 edits (10 per operation/size after a warm-up).
+20-entry mean command-to-usable times, milliseconds:
+  add 578; equipment 658; enhancement 852; attachment 1,945;
+  detachment 806; Home 342.
+Attachment presentation averaged 387 ms preparation and 388 ms rendering, with
+remaining time in the command/frame wait. This does not prove all editing got
+faster: stage-2 means were 608 ms enhancement and 2,035 ms attachment, and an earlier
+batch today was much slower (2,305 and 4,865 ms). The earlier batch already contained
+the deferred enhancement UI. These are sequential, noisy workload observations,
+not a controlled isolation of either optimization's causal effect.
+
+Repeated startup with the same saved fixture context averaged 4,548 ms before
+the faction-format change and 4,805 ms afterward (four starts each). No startup
+speedup is claimed. The new post-upgrade/cache-miss launch took 42,312 ms, including
+20,495 ms constructing projections; it is not first installation. Warm manifest
+reads still cost roughly one second, so source-generated cache metadata and smaller
+startup projections are candidates for a separately measured follow-up. Moving
+shared definitions out of the manifest alone did not resolve the startup cost.
+Stage timings nest; do not add parent session/restore totals to their child stages.
+
+Raw samples, stage timings and native reports:
+  docs/performance/android-stage3-2026-10-28.json
+Exact verified diagnostic APK SHA-256:
+  18da6262b257fba49c8525ea330c08a372ef3b1aca7f61db8bc0158e31829f3f
+Main community APK/MSI were not replaced. The normal phone app remains 0.2.28 and
+was brought back to the foreground after testing. No live catalogue download,
+production data migration, uninstall or phone-data clearing occurred.
+
+Evidence logs:
+  artifacts/distribution-evidence/optimization-next-full.log
+  artifacts/distribution-evidence/optimization-next-final-focused-verified.log
+  artifacts/distribution-evidence/optimization-next-faction-workload.log
+  artifacts/distribution-evidence/optimization-next-native.log
+  artifacts/distribution-evidence/optimization-next-mobile-final-build.log
+  artifacts/distribution-evidence/optimization-next-windows-build.log
+  artifacts/distribution-evidence/optimization-next-verified-publish.log
+
+Initial test correction and retained output
+------------------------------------------
+The first focused reuse test incorrectly compared a normalized stored import to
+fresh unnormalized fixture IDs/aliases/cards. It correctly observed different
+content. The test now starts from the canonical stored dataset, then changes only
+provenance/order/unrelated content. The corrected focused run and full suite passed.
+The additional failed-publication test initially counted legitimate initial source
+recovery as a cache write. It now finishes normal recovery before recording the
+source revision and injecting the cache failure. The corrected 21-check run passed;
+no product code changed to accommodate either fixture correction.
+
+Automatic approval review rejected guarded native PowerShell cleanup as "blocked
+by policy". No alternative deletion was attempted. These synthetic folders remain:
+  .local/tests/optimization-stage3-faction-workload
+    44 files, 38,502,353 bytes; concise workload report copied into docs.
+  .local/tests/725058f6-e8fa-4906-af0e-dabd3efc4d65
+    80 files, 4,920,247 bytes; initial failed fixture check.
+The later initial publication-test failure also left:
+  .local/tests/65ce2581-891b-4e62-a3cd-df9e7fe90c96
+    98 files, 5,436,601 bytes; retained under the same cleanup restriction.
+Total retained this turn: 48,859,201 bytes (~46.6 MiB). Older blocked cleanup targets
+remain as previously documented; none was retried. Successful regression/focused
+wrappers removed their own synthetic runs.

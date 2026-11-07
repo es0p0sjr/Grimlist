@@ -1,0 +1,158 @@
+Editing optimization: static interpretation and datasheet updates
+2026-10-28; source changes, not a community release.
+
+Scope and decision
+------------------
+This is the first measured implementation phase of the proposed architecture.
+SQLite, the dataset storage format, import transactions and the complete roster
+evaluator remain in use. The current host workload spends substantially more
+time in editing/calculation than saving. It supports removing repeated work
+before attempting a database migration. No user's live library was benchmarked
+or modified, and no rule/source download was performed.
+
+Implemented
+-----------
+1. Core CompiledRuleText provides version-1 in-memory interpretations of source
+   cards and abilities. Enhancement/roster fallback grammars have separate lazy
+   results. Attached-ability and weapon-grant parsing also reuse their results.
+   The original parser remains callable as the comparison oracle.
+
+   ConditionalWeakTable keys are source-object identities, following the existing
+   immutable Dataset contract. A changed record, even with the same source ID or
+   name, compiles independently. Concurrent readers share one Lazy result; discarded
+   source records can be collected. Cached collections are read-only. Imported
+   source text, provenance and unknown selectors remain intact.
+
+   Only interpretation is cached: recipient resolution, conditions, eligibility,
+   circular-grant handling and complete evaluation passes still run for each
+   proposed roster. Self-aura interpretation and other dynamic paths are unchanged.
+   This does not yet implement a persisted rule compiler or dependency evaluator.
+
+2. Android retains an existing selected unit's datasheet page, header, tabs and
+   scroll container across enhancement, attachment and rule edits. It rebuilds
+   stat blocks only when effective or baseline model stats change, including
+   model names and defensive saves. Existing scroll capture/restore remains.
+
+   Weapons, abilities and keyword references use explicit structural comparisons;
+   source weapons and local rule definitions participate so highlights and linked
+   text cannot become stale. Unchanged ability folds keep their controls. The Feel
+   No Pain action reads the current projection rather than a captured old unit.
+   Rules-dependent choice, enhancement and attachment regions use the session
+   mutation version and refresh conservatively after edits. Equipment and library
+   preview rebuild guards remain. Profile warnings now participate in their region
+   comparison. Some other JSON fingerprints remain intentionally unchanged.
+
+3. Application PresentationEquality provides exact reusable comparisons, not hash
+   guesses, for stat maps/model rows and weapon profiles. It retains null/empty,
+   source IDs/categories, granted weapons and modifier-note distinctions. Stat
+   field order is retained because rendering and first defensive-save alias
+   selection depend on it; dictionaries are compared without allocating iterators.
+
+Fresh host measurements
+-----------------------
+.NET Release, Windows SQLite, existing pinned GrimList-Library.json fixture.
+The standard host harness measures shared commands and library lookup; it does
+not measure Windows native rendering or Android preparation/rendering. Each edit
+scenario has five samples. These are new measurements, not October 13 timings.
+
+Scenario                       Before median       After median
+Three-entry edit, allocations     5.307 MiB            3.627 MiB
+Twenty-entry edit, allocations   27.615 MiB           18.159 MiB
+Three-entry edit, command        56.769 ms            65.415 ms
+Twenty-entry edit, command      302.073 ms           265.607 ms
+Three-entry edit, save            5.384 ms             8.474 ms
+Twenty-entry edit, save           7.287 ms             6.647 ms
+
+Allocations fell about 32% and 34%. Latency is noisy: the smaller scenario's median
+was worse in the final run, so this is not evidence of a uniform end-to-end speedup.
+An earlier after-run overlapped an Android build and is retained separately,
+explicitly labelled; its timings are not used above. Every run retained zero
+dataset reads per edit, one calculation, and no eligibility/library-row rebuilds.
+
+The isolated alternating benchmark compares cached and uncached interpretation
+of the same 3,684 bundled cards (both grammar modes) and 2,747 distinct abilities:
+six measured samples per mode, after warming both paths. Median uncached pass:
+432.489 ms / 48,563,064 allocated bytes. Median cached pass: 0.815 ms / 117,928
+allocated bytes. Cold compilation of that entire set: 479.584 ms / 52,783,944
+allocated bytes. Compilation is lazy in the app, not an eager startup scan.
+The extra retained cache objects are a tradeoff; allocation savings are not a
+measurement of reduced retained heap or total application memory.
+
+The same benchmark compares 10,000 equal stat-profile pairs per sample. Median
+JSON comparison: 106.216 ms / 25,910,440 bytes. Explicit comparison: 7.462 ms /
+40 bytes (the timing object). This isolates equality work, not a phone frame time.
+
+Evidence and reproduction
+-------------------------
+- docs/performance/editing-2026-10-28.json: before, overlapping-build after, and
+  final after runs, including every sample and source metadata.
+- docs/performance/static-rule-comparison-2026-10-28.json: alternating parser and
+  presentation comparison samples, cold compilation and runtime metadata.
+- Build tools/GrimList.Performance in Release, then run its DLL with:
+  tests/fixtures/libraries/GrimList-Library.json <fresh-disposable-directory>
+- For the in-memory comparison, run the same DLL with:
+  --compiled-rules <output-report.json>
+- Do not run the normal benchmark against a user's database or reuse its output
+  directory: it creates a disposable synthetic source and roster.
+
+Verification
+------------
+- Six focused checks passed: bundled-parser equivalence, concurrent compilation,
+  same-ID changes, grammar isolation, unsupported/recipient semantics, fresh
+  roster outcomes, presentation comparisons and cache lifetime.
+- An initial oracle fixture incorrectly used the stratagem-only recovery bundle;
+  it failed the minimum coverage assertion. It now uses the actual BootstrapRelease
+  catalogue and compares its abilities too. No production parsing mismatch was found.
+- Final Windows and normal Android Debug builds succeeded with zero warnings and
+  zero errors. Android used the documented installed SDK/JDK overrides.
+- The Android IncludePerformanceChecks build also succeeded. It reported three
+  nullable warnings in the unchanged MainPage.Performance.cs (lines 49, 73, 97);
+  its new page-retention assertions compiled but were not executed on a device.
+  A subsequent normal Android build restored the normal app build identity.
+- Full regression: 515 PASS, zero FAIL, including 16,755 eligible enhancement/
+  bearer combinations and real PDF extraction. Evidence:
+  artifacts/distribution-evidence/optimization-2026-10-28-full.log.
+- Final review tightened presentation equality to preserve stat-field order and
+  first defensive-save aliases while that full run was underway. The complete
+  rule evaluator/cache did not change. All six focused checks passed again after
+  this refinement, including new order/alias assertions; both normal frontends
+  were rebuilt cleanly. No second full run is claimed. Final focused log:
+  artifacts/distribution-evidence/compiled-rules-targeted.log. A test-harness build
+  attempted during the full run hit the running DLL's Windows file lock; rebuilding
+  after the full process exited succeeded with zero warnings/errors.
+- Android native attachment checks now assert page retention after attachment,
+  enhancement, undo and redo. No Android device was connected (adb devices -l was
+  empty), so these native assertions and actual scroll/frame behavior remain
+  unexecuted. No APK install, MSI lifecycle or community package is claimed.
+
+Remaining architectural work
+----------------------------
+1. Measure the changed native UI on a physical Android device, including model
+   stats, FNP, enhancement choices, attachment races and scroll retention.
+2. Profile remaining preparation/keyword/condition work, then expand compilation
+   only with measured benefit and the existing evaluator as oracle.
+3. Independently version faction content and shared dependencies, with explicit
+   recovery/format versions and validated projections prepared before publication.
+4. Introduce reusable catalogue content and atomic revision manifests behind the
+   existing Dataset interface; prove reconstruction, interrupted imports, history,
+   overrides, corruption recovery and rollback before migrating active storage.
+5. Consider incremental dependency evaluation last. Unknown dependencies must
+   trigger complete evaluation; compare against the current engine.
+
+Binary chunks, prepared statements and indexes remain measurement-driven storage
+options. This phase does not claim to deliver the proposed catalogue migration,
+independent faction revisions or partial roster recomputation.
+
+Retained temporary output
+-------------------------
+Automatic approval review rejected the verified native PowerShell cleanup with
+"blocked by policy". No alternate deletion path was attempted. These disposable
+task-created directories remain for manual cleanup; retained reports are above:
+.local/tests/96f5ffb1-3704-4057-bbcb-5d7f8773bc6f
+.local/tests/e2a411c4-5770-44ed-8848-47dacdf270fc
+.local/tests/e0b2ccab-2b42-4858-9284-bd760768f3c4
+.local/tests/716da14f-86e5-4236-a58b-9468c5189961
+The three benchmark directories total 238,140,429 bytes (about 227 MiB); the
+failed fixture check's directory is empty.
+Successful full/focused regression runs removed their own synthetic directories
+via the standard wrapper. Live .local/grimlist.db and its sidecars were untouched.

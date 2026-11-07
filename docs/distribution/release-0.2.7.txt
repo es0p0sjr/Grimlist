@@ -1,0 +1,54 @@
+GrimList 0.2.7 distribution - 13 October 2026
+
+Share folder: GrimList-Share-0.2.7/
+Windows: GrimList-Windows-0.2.7.msi, x64, includes private .NET 10.0.10 runtime.
+Android: GrimList-Android-0.2.7.apk, ARM64/x64, com.grimlist.mobile, version code 9.
+ZIP copies contain the same MSI/APK. Each package has a SHA-256 sidecar.
+Exact sizes and hashes: docs/distribution/release-0.2.7-files.json.
+
+Changes
+- On-demand faction loading on both platforms, including allied dependencies.
+- Persisted Home army summaries and bounded reuse of recent faction views.
+- Reduced repeated editor refreshes and attachment-choice calculations.
+- Android + / - unit-size controls and larger army-card press targets.
+- Cache invalidation/recovery preserves imports, undo/redo, references and rules.
+
+Upgrade
+Close GrimList before running the Windows MSI. Its upgrade identity matches
+0.2.4 and its product identity changes for 0.2.7. Android retains the existing
+application ID and signing certificate; install over the existing app without
+uninstalling or clearing storage. Previous share folders remain available.
+The first launch after updating can take longer while derived caches rebuild.
+
+Verification of these packages
+Both fresh Release builds succeeded without reported warnings or errors.
+The Windows executable reports 0.2.7.0 / product version 0.2.7.
+All 19 installer checks passed: MSI table validation, upgrade authoring, cabinet
+extraction and byte-for-byte verification of all 490 embedded payload files.
+The exact MSI-extracted app passed 13 native checks with temporary user data:
+bundled-library bootstrap, factions/detachments/references, creating and saving
+an army, reopening it, its points/validation, and the bundled runtime.
+Actual MSI installation, repair and uninstall were not rerun for this release.
+
+APK signature, ZIP integrity and application/version/ABI metadata passed.
+Both Android architectures passed the native onCreate binding guard.
+The connected Redmi Note 12 Pro+ 5G successfully upgraded from 0.2.6/code 8 to
+0.2.7/code 9. The installed APK hash matches the distributed file, original
+firstInstallTime was preserved, and the existing saved roster displayed.
+
+Both build source copies were checked against the current source hashes.
+The preceding implementation pass verified 347 distinct shared checks across
+full/focused runs, all 36 factions on Windows/Android, 17 Windows faction UI
+checks and 46 Android size checks on final implementation code. This packaging
+pass changes version metadata only. See docs/performance/faction-loading-2026-10-13.txt
+for the measurement methodology, tradeoffs and detailed validation history.
+
+Distribution limits
+This continues the existing sideload distribution: the MSI is not Authenticode
+signed and the APK retains the existing signing certificate. No store upload,
+new public signing identity or external publication was performed.
+
+Evidence: .local/release-0.2.7/ contains source hashes, build/package logs, MSI
+and app acceptance results, Android signature/metadata checks, and phone upgrade
+records. The connected phone now runs 0.2.7. The user's running Windows app was
+not closed or replaced in memory; run the new MSI after closing it.

@@ -1,0 +1,755 @@
+{
+  "before": {
+    "Environment": {
+      "OS": "Microsoft Windows 10.0.26200",
+      "Runtime": ".NET 10.0.10",
+      "Configuration": "Release",
+      "Provider": "Windows SQLite; shared commands and library lookup only; no UI preparation or rendering measured"
+    },
+    "Source": {
+      "Name": "BSData \u00b7 All armies",
+      "Version": "cc1830fbfead059f8059ed6c7f8e73cd4c390908",
+      "Date": "2026-10-02",
+      "Url": "https://github.com/BSData/wh40k-11e/tree/cc1830fbfead059f8059ed6c7f8e73cd4c390908",
+      "ImportedAt": "2026-10-27T22:08:33.5665869+00:00",
+      "Edition": "11",
+      "ContentHash": "747db24bf29456f0606a937f794a7e7f33154e76116eff1506e9b0750ab5c045"
+    },
+    "Units": 2194,
+    "ReferenceCards": 4396,
+    "InputBytes": 54863318,
+    "Results": [
+      {
+        "Scenario": "cold",
+        "Ms": 21.5958,
+        "AllocatedMiB": 1.2977981567382812,
+        "Rows": 49,
+        "EligibilityBuilds": 1,
+        "RowBuilds": 1
+      },
+      {
+        "Scenario": "warm",
+        "Ms": 1.9104,
+        "AllocatedMiB": 0.0012664794921875,
+        "Rows": 49,
+        "EligibilityBuilds": 0,
+        "RowBuilds": 0
+      },
+      {
+        "Scenario": "three-entry equipment edit",
+        "Samples": [
+          {
+            "CommandMs": 69.5155,
+            "SaveMs": 5.439,
+            "CalculateMs": 7.2888,
+            "AvailabilityMs": 0.0273,
+            "TotalMs": 69.5524,
+            "CommandAllocatedMiB": 5.607414245605469,
+            "TotalAllocatedMiB": 5.608512878417969,
+            "DatasetLoads": 0,
+            "CalculationCalls": 1,
+            "EligibilityBuilds": 0,
+            "RowBuilds": 0
+          },
+          {
+            "CommandMs": 58.7289,
+            "SaveMs": 5.3842,
+            "CalculateMs": 8.3848,
+            "AvailabilityMs": 0.0184,
+            "TotalMs": 58.7567,
+            "CommandAllocatedMiB": 5.245887756347656,
+            "TotalAllocatedMiB": 5.246986389160156,
+            "DatasetLoads": 0,
+            "CalculationCalls": 1,
+            "EligibilityBuilds": 0,
+            "RowBuilds": 0
+          },
+          {
+            "CommandMs": 53.5967,
+            "SaveMs": 5.3186,
+            "CalculateMs": 6.6124,
+            "AvailabilityMs": 0.022,
+            "TotalMs": 53.6282,
+            "CommandAllocatedMiB": 5.3070831298828125,
+            "TotalAllocatedMiB": 5.3081817626953125,
+            "DatasetLoads": 0,
+            "CalculationCalls": 1,
+            "EligibilityBuilds": 0,
+            "RowBuilds": 0
+          },
+          {
+            "CommandMs": 56.7692,
+            "SaveMs": 4.6703,
+            "CalculateMs": 7.4565,
+            "AvailabilityMs": 0.03,
+            "TotalMs": 56.8159,
+            "CommandAllocatedMiB": 5.246131896972656,
+            "TotalAllocatedMiB": 5.247230529785156,
+            "DatasetLoads": 0,
+            "CalculationCalls": 1,
+            "EligibilityBuilds": 0,
+            "RowBuilds": 0
+          },
+          {
+            "CommandMs": 53.7074,
+            "SaveMs": 5.5774,
+            "CalculateMs": 7.1839,
+            "AvailabilityMs": 0.0234,
+            "TotalMs": 53.7497,
+            "CommandAllocatedMiB": 5.30712890625,
+            "TotalAllocatedMiB": 5.3082275390625,
+            "DatasetLoads": 0,
+            "CalculationCalls": 1,
+            "EligibilityBuilds": 0,
+            "RowBuilds": 0
+          }
+        ]
+      },
+      {
+        "Scenario": "after equipment",
+        "Ms": 0.0271,
+        "AllocatedMiB": 0.0010986328125,
+        "Rows": 49,
+        "EligibilityBuilds": 0,
+        "RowBuilds": 0
+      },
+      {
+        "Scenario": "after add",
+        "Ms": 1.0666,
+        "AllocatedMiB": 0.3467864990234375,
+        "Rows": 49,
+        "EligibilityBuilds": 0,
+        "RowBuilds": 1
+      },
+      {
+        "Scenario": "after remove",
+        "Ms": 0.8928,
+        "AllocatedMiB": 0.3396453857421875,
+        "Rows": 49,
+        "EligibilityBuilds": 0,
+        "RowBuilds": 1
+      },
+      {
+        "Scenario": "after detachment",
+        "Ms": 5.2542,
+        "AllocatedMiB": 1.247833251953125,
+        "Rows": 49,
+        "EligibilityBuilds": 1,
+        "RowBuilds": 1
+      },
+      {
+        "Scenario": "after faction",
+        "Ms": 6.2504,
+        "AllocatedMiB": 1.2146148681640625,
+        "Rows": 44,
+        "EligibilityBuilds": 1,
+        "RowBuilds": 1
+      },
+      {
+        "Scenario": "twenty-entry equipment edit",
+        "Samples": [
+          {
+            "CommandMs": 317.2215,
+            "SaveMs": 7.2875,
+            "CalculateMs": 154.9539,
+            "AvailabilityMs": 0.0292,
+            "TotalMs": 317.2686,
+            "CommandAllocatedMiB": 27.62572479248047,
+            "TotalAllocatedMiB": 27.627593994140625,
+            "DatasetLoads": 0,
+            "CalculationCalls": 1,
+            "EligibilityBuilds": 0,
+            "RowBuilds": 0
+          },
+          {
+            "CommandMs": 337.8431,
+            "SaveMs": 6.9348,
+            "CalculateMs": 64.896,
+            "AvailabilityMs": 0.0305,
+            "TotalMs": 337.8913,
+            "CommandAllocatedMiB": 27.5623779296875,
+            "TotalAllocatedMiB": 27.564247131347656,
+            "DatasetLoads": 0,
+            "CalculationCalls": 1,
+            "EligibilityBuilds": 0,
+            "RowBuilds": 0
+          },
+          {
+            "CommandMs": 302.0731,
+            "SaveMs": 6.9521,
+            "CalculateMs": 98.6248,
+            "AvailabilityMs": 0.0286,
+            "TotalMs": 302.1207,
+            "CommandAllocatedMiB": 27.616477966308594,
+            "TotalAllocatedMiB": 27.61834716796875,
+            "DatasetLoads": 0,
+            "CalculationCalls": 1,
+            "EligibilityBuilds": 0,
+            "RowBuilds": 0
+          },
+          {
+            "CommandMs": 224.3616,
+            "SaveMs": 7.9872,
+            "CalculateMs": 70.6481,
+            "AvailabilityMs": 0.0311,
+            "TotalMs": 224.404,
+            "CommandAllocatedMiB": 27.553741455078125,
+            "TotalAllocatedMiB": 27.55561065673828,
+            "DatasetLoads": 0,
+            "CalculationCalls": 1,
+            "EligibilityBuilds": 0,
+            "RowBuilds": 0
+          },
+          {
+            "CommandMs": 234.6734,
+            "SaveMs": 7.4781,
+            "CalculateMs": 88.3836,
+            "AvailabilityMs": 0.0309,
+            "TotalMs": 234.7195,
+            "CommandAllocatedMiB": 27.615066528320312,
+            "TotalAllocatedMiB": 27.61693572998047,
+            "DatasetLoads": 0,
+            "CalculationCalls": 1,
+            "EligibilityBuilds": 0,
+            "RowBuilds": 0
+          }
+        ]
+      },
+      {
+        "Scenario": "save SQL",
+        "DatasetLoads": 0,
+        "Statements": [
+          "INSERT INTO armies(id,name,faction,points_limit,game,updated,detachment) VALUES(?,?,?,?,?,?,?) ON CONFLICT(id) DO UPDATE SET name=excluded.name,faction=excluded.faction,points_limit=excluded.points_limit,game=excluded.game,updated=excluded.updated,detachment=excluded.detachment",
+          "UPDATE armies SET warlord_entry_id=? WHERE id=?",
+          "UPDATE armies SET selected_detachments=? WHERE id=?",
+          "UPDATE armies SET disposition=? WHERE id=?",
+          "UPDATE armies SET muster_selections=? WHERE id=?",
+          "INSERT OR REPLACE INTO settings VALUES('editor_context',?)",
+          "DELETE FROM entries WHERE army_id=?",
+          "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+          "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+          "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+          "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+          "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+          "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+          "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+          "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+          "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+          "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+          "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+          "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+          "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+          "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+          "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+          "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+          "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+          "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+          "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+          "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)"
+        ]
+      }
+    ]
+  },
+  "after_with_concurrent_build": {
+    "Environment": {
+      "OS": "Microsoft Windows 10.0.26200",
+      "Runtime": ".NET 10.0.10",
+      "Configuration": "Release",
+      "Provider": "Windows SQLite; shared commands and library lookup only; no UI preparation or rendering measured"
+    },
+    "Source": {
+      "Name": "BSData \u00b7 All armies",
+      "Version": "cc1830fbfead059f8059ed6c7f8e73cd4c390908",
+      "Date": "2026-10-02",
+      "Url": "https://github.com/BSData/wh40k-11e/tree/cc1830fbfead059f8059ed6c7f8e73cd4c390908",
+      "ImportedAt": "2026-10-27T22:13:45.3230771+00:00",
+      "Edition": "11",
+      "ContentHash": "747db24bf29456f0606a937f794a7e7f33154e76116eff1506e9b0750ab5c045"
+    },
+    "Units": 2194,
+    "ReferenceCards": 4396,
+    "InputBytes": 54863318,
+    "Results": [
+      {
+        "Scenario": "cold",
+        "Ms": 27.4013,
+        "AllocatedMiB": 1.2977981567382812,
+        "Rows": 49,
+        "EligibilityBuilds": 1,
+        "RowBuilds": 1
+      },
+      {
+        "Scenario": "warm",
+        "Ms": 1.9763,
+        "AllocatedMiB": 0.0012664794921875,
+        "Rows": 49,
+        "EligibilityBuilds": 0,
+        "RowBuilds": 0
+      },
+      {
+        "Scenario": "three-entry equipment edit",
+        "Samples": [
+          {
+            "CommandMs": 62.298,
+            "SaveMs": 4.7657,
+            "CalculateMs": 4.3548,
+            "AvailabilityMs": 0.024,
+            "TotalMs": 62.3314,
+            "CommandAllocatedMiB": 3.9213790893554688,
+            "TotalAllocatedMiB": 3.9224777221679688,
+            "DatasetLoads": 0,
+            "CalculationCalls": 1,
+            "EligibilityBuilds": 0,
+            "RowBuilds": 0
+          },
+          {
+            "CommandMs": 55.393,
+            "SaveMs": 5.6484,
+            "CalculateMs": 41.2248,
+            "AvailabilityMs": 0.0228,
+            "TotalMs": 55.4273,
+            "CommandAllocatedMiB": 3.6156845092773438,
+            "TotalAllocatedMiB": 3.6167831420898438,
+            "DatasetLoads": 0,
+            "CalculationCalls": 1,
+            "EligibilityBuilds": 0,
+            "RowBuilds": 0
+          },
+          {
+            "CommandMs": 18.3614,
+            "SaveMs": 6.2602,
+            "CalculateMs": 4.4065,
+            "AvailabilityMs": 0.0213,
+            "TotalMs": 18.3923,
+            "CommandAllocatedMiB": 3.6269683837890625,
+            "TotalAllocatedMiB": 3.6280670166015625,
+            "DatasetLoads": 0,
+            "CalculationCalls": 1,
+            "EligibilityBuilds": 0,
+            "RowBuilds": 0
+          },
+          {
+            "CommandMs": 53.9829,
+            "SaveMs": 7.3044,
+            "CalculateMs": 3.7911,
+            "AvailabilityMs": 0.0209,
+            "TotalMs": 54.0132,
+            "CommandAllocatedMiB": 3.6145095825195312,
+            "TotalAllocatedMiB": 3.6156082153320312,
+            "DatasetLoads": 0,
+            "CalculationCalls": 1,
+            "EligibilityBuilds": 0,
+            "RowBuilds": 0
+          },
+          {
+            "CommandMs": 17.5839,
+            "SaveMs": 5.4607,
+            "CalculateMs": 4.7954,
+            "AvailabilityMs": 0.0203,
+            "TotalMs": 17.6144,
+            "CommandAllocatedMiB": 3.6269302368164062,
+            "TotalAllocatedMiB": 3.6280288696289062,
+            "DatasetLoads": 0,
+            "CalculationCalls": 1,
+            "EligibilityBuilds": 0,
+            "RowBuilds": 0
+          }
+        ]
+      },
+      {
+        "Scenario": "after equipment",
+        "Ms": 0.0162,
+        "AllocatedMiB": 0.0010986328125,
+        "Rows": 49,
+        "EligibilityBuilds": 0,
+        "RowBuilds": 0
+      },
+      {
+        "Scenario": "after add",
+        "Ms": 1.2904,
+        "AllocatedMiB": 0.3467864990234375,
+        "Rows": 49,
+        "EligibilityBuilds": 0,
+        "RowBuilds": 1
+      },
+      {
+        "Scenario": "after remove",
+        "Ms": 0.7096,
+        "AllocatedMiB": 0.3360595703125,
+        "Rows": 49,
+        "EligibilityBuilds": 0,
+        "RowBuilds": 1
+      },
+      {
+        "Scenario": "after detachment",
+        "Ms": 40.0514,
+        "AllocatedMiB": 1.2443466186523438,
+        "Rows": 49,
+        "EligibilityBuilds": 1,
+        "RowBuilds": 1
+      },
+      {
+        "Scenario": "after faction",
+        "Ms": 6.3761,
+        "AllocatedMiB": 1.2146148681640625,
+        "Rows": 44,
+        "EligibilityBuilds": 1,
+        "RowBuilds": 1
+      },
+      {
+        "Scenario": "twenty-entry equipment edit",
+        "Samples": [
+          {
+            "CommandMs": 197.7989,
+            "SaveMs": 6.6147,
+            "CalculateMs": 61.3042,
+            "AvailabilityMs": 0.0377,
+            "TotalMs": 197.8602,
+            "CommandAllocatedMiB": 18.193832397460938,
+            "TotalAllocatedMiB": 18.195701599121094,
+            "DatasetLoads": 0,
+            "CalculationCalls": 1,
+            "EligibilityBuilds": 0,
+            "RowBuilds": 0
+          },
+          {
+            "CommandMs": 242.1922,
+            "SaveMs": 54.7419,
+            "CalculateMs": 61.3569,
+            "AvailabilityMs": 0.0371,
+            "TotalMs": 242.2476,
+            "CommandAllocatedMiB": 18.15478515625,
+            "TotalAllocatedMiB": 18.156654357910156,
+            "DatasetLoads": 0,
+            "CalculationCalls": 1,
+            "EligibilityBuilds": 0,
+            "RowBuilds": 0
+          },
+          {
+            "CommandMs": 181.7327,
+            "SaveMs": 6.6699,
+            "CalculateMs": 98.3064,
+            "AvailabilityMs": 0.0299,
+            "TotalMs": 181.7732,
+            "CommandAllocatedMiB": 18.16693115234375,
+            "TotalAllocatedMiB": 18.168800354003906,
+            "DatasetLoads": 0,
+            "CalculationCalls": 1,
+            "EligibilityBuilds": 0,
+            "RowBuilds": 0
+          },
+          {
+            "CommandMs": 159.9611,
+            "SaveMs": 6.4871,
+            "CalculateMs": 73.8163,
+            "AvailabilityMs": 0.028,
+            "TotalMs": 160.0064,
+            "CommandAllocatedMiB": 18.154197692871094,
+            "TotalAllocatedMiB": 18.15606689453125,
+            "DatasetLoads": 0,
+            "CalculationCalls": 1,
+            "EligibilityBuilds": 0,
+            "RowBuilds": 0
+          },
+          {
+            "CommandMs": 219.4104,
+            "SaveMs": 8.5951,
+            "CalculateMs": 100.789,
+            "AvailabilityMs": 0.0294,
+            "TotalMs": 219.449,
+            "CommandAllocatedMiB": 18.15880584716797,
+            "TotalAllocatedMiB": 18.160675048828125,
+            "DatasetLoads": 0,
+            "CalculationCalls": 1,
+            "EligibilityBuilds": 0,
+            "RowBuilds": 0
+          }
+        ]
+      },
+      {
+        "Scenario": "save SQL",
+        "DatasetLoads": 0,
+        "Statements": [
+          "INSERT INTO armies(id,name,faction,points_limit,game,updated,detachment) VALUES(?,?,?,?,?,?,?) ON CONFLICT(id) DO UPDATE SET name=excluded.name,faction=excluded.faction,points_limit=excluded.points_limit,game=excluded.game,updated=excluded.updated,detachment=excluded.detachment",
+          "UPDATE armies SET warlord_entry_id=? WHERE id=?",
+          "UPDATE armies SET selected_detachments=? WHERE id=?",
+          "UPDATE armies SET disposition=? WHERE id=?",
+          "UPDATE armies SET muster_selections=? WHERE id=?",
+          "INSERT OR REPLACE INTO settings VALUES('editor_context',?)",
+          "DELETE FROM entries WHERE army_id=?",
+          "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+          "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+          "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+          "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+          "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+          "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+          "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+          "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+          "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+          "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+          "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+          "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+          "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+          "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+          "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+          "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+          "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+          "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+          "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+          "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)"
+        ]
+      }
+    ]
+  },
+  "after": {
+    "Environment": {
+      "OS": "Microsoft Windows 10.0.26200",
+      "Runtime": ".NET 10.0.10",
+      "Configuration": "Release",
+      "Provider": "Windows SQLite; shared commands and library lookup only; no UI preparation or rendering measured"
+    },
+    "Source": {
+      "Name": "BSData \u00b7 All armies",
+      "Version": "cc1830fbfead059f8059ed6c7f8e73cd4c390908",
+      "Date": "2026-10-02",
+      "Url": "https://github.com/BSData/wh40k-11e/tree/cc1830fbfead059f8059ed6c7f8e73cd4c390908",
+      "ImportedAt": "2026-10-27T22:17:57.1711782+00:00",
+      "Edition": "11",
+      "ContentHash": "747db24bf29456f0606a937f794a7e7f33154e76116eff1506e9b0750ab5c045"
+    },
+    "Units": 2194,
+    "ReferenceCards": 4396,
+    "InputBytes": 54863318,
+    "Results": [
+      {
+        "Scenario": "cold",
+        "Ms": 23.9715,
+        "AllocatedMiB": 1.3447418212890625,
+        "Rows": 49,
+        "EligibilityBuilds": 1,
+        "RowBuilds": 1
+      },
+      {
+        "Scenario": "warm",
+        "Ms": 2.26,
+        "AllocatedMiB": 0.0012664794921875,
+        "Rows": 49,
+        "EligibilityBuilds": 0,
+        "RowBuilds": 0
+      },
+      {
+        "Scenario": "three-entry equipment edit",
+        "Samples": [
+          {
+            "CommandMs": 65.4153,
+            "SaveMs": 6.8896,
+            "CalculateMs": 8.039,
+            "AvailabilityMs": 0.0412,
+            "TotalMs": 65.469,
+            "CommandAllocatedMiB": 3.9210357666015625,
+            "TotalAllocatedMiB": 3.9221343994140625,
+            "DatasetLoads": 0,
+            "CalculationCalls": 1,
+            "EligibilityBuilds": 0,
+            "RowBuilds": 0
+          },
+          {
+            "CommandMs": 88.5144,
+            "SaveMs": 6.1042,
+            "CalculateMs": 72.4133,
+            "AvailabilityMs": 0.0223,
+            "TotalMs": 88.5477,
+            "CommandAllocatedMiB": 3.6150283813476562,
+            "TotalAllocatedMiB": 3.6161270141601562,
+            "DatasetLoads": 0,
+            "CalculationCalls": 1,
+            "EligibilityBuilds": 0,
+            "RowBuilds": 0
+          },
+          {
+            "CommandMs": 21.0347,
+            "SaveMs": 8.4736,
+            "CalculateMs": 4.14,
+            "AvailabilityMs": 0.0234,
+            "TotalMs": 21.0701,
+            "CommandAllocatedMiB": 3.6273040771484375,
+            "TotalAllocatedMiB": 3.6284027099609375,
+            "DatasetLoads": 0,
+            "CalculationCalls": 1,
+            "EligibilityBuilds": 0,
+            "RowBuilds": 0
+          },
+          {
+            "CommandMs": 70.8598,
+            "SaveMs": 14.7256,
+            "CalculateMs": 5.2068,
+            "AvailabilityMs": 0.0259,
+            "TotalMs": 70.8989,
+            "CommandAllocatedMiB": 3.6157913208007812,
+            "TotalAllocatedMiB": 3.6168899536132812,
+            "DatasetLoads": 0,
+            "CalculationCalls": 1,
+            "EligibilityBuilds": 0,
+            "RowBuilds": 0
+          },
+          {
+            "CommandMs": 30.8881,
+            "SaveMs": 14.5456,
+            "CalculateMs": 7.4956,
+            "AvailabilityMs": 0.0321,
+            "TotalMs": 30.9418,
+            "CommandAllocatedMiB": 3.6269302368164062,
+            "TotalAllocatedMiB": 3.6280288696289062,
+            "DatasetLoads": 0,
+            "CalculationCalls": 1,
+            "EligibilityBuilds": 0,
+            "RowBuilds": 0
+          }
+        ]
+      },
+      {
+        "Scenario": "after equipment",
+        "Ms": 0.0304,
+        "AllocatedMiB": 0.0010986328125,
+        "Rows": 49,
+        "EligibilityBuilds": 0,
+        "RowBuilds": 0
+      },
+      {
+        "Scenario": "after add",
+        "Ms": 0.9725,
+        "AllocatedMiB": 0.3467864990234375,
+        "Rows": 49,
+        "EligibilityBuilds": 0,
+        "RowBuilds": 1
+      },
+      {
+        "Scenario": "after remove",
+        "Ms": 0.6992,
+        "AllocatedMiB": 0.3360595703125,
+        "Rows": 49,
+        "EligibilityBuilds": 0,
+        "RowBuilds": 1
+      },
+      {
+        "Scenario": "after detachment",
+        "Ms": 39.4281,
+        "AllocatedMiB": 1.2443466186523438,
+        "Rows": 49,
+        "EligibilityBuilds": 1,
+        "RowBuilds": 1
+      },
+      {
+        "Scenario": "after faction",
+        "Ms": 5.6676,
+        "AllocatedMiB": 1.2146148681640625,
+        "Rows": 44,
+        "EligibilityBuilds": 1,
+        "RowBuilds": 1
+      },
+      {
+        "Scenario": "twenty-entry equipment edit",
+        "Samples": [
+          {
+            "CommandMs": 212.3869,
+            "SaveMs": 6.6362,
+            "CalculateMs": 93.1198,
+            "AvailabilityMs": 0.0318,
+            "TotalMs": 212.4399,
+            "CommandAllocatedMiB": 18.194175720214844,
+            "TotalAllocatedMiB": 18.196044921875,
+            "DatasetLoads": 0,
+            "CalculationCalls": 1,
+            "EligibilityBuilds": 0,
+            "RowBuilds": 0
+          },
+          {
+            "CommandMs": 289.8985,
+            "SaveMs": 7.0098,
+            "CalculateMs": 99.9714,
+            "AvailabilityMs": 0.0368,
+            "TotalMs": 289.9555,
+            "CommandAllocatedMiB": 18.155555725097656,
+            "TotalAllocatedMiB": 18.157424926757812,
+            "DatasetLoads": 0,
+            "CalculationCalls": 1,
+            "EligibilityBuilds": 0,
+            "RowBuilds": 0
+          },
+          {
+            "CommandMs": 265.6067,
+            "SaveMs": 6.2029,
+            "CalculateMs": 90.7647,
+            "AvailabilityMs": 0.0331,
+            "TotalMs": 265.6541,
+            "CommandAllocatedMiB": 18.168045043945312,
+            "TotalAllocatedMiB": 18.16991424560547,
+            "DatasetLoads": 0,
+            "CalculationCalls": 1,
+            "EligibilityBuilds": 0,
+            "RowBuilds": 0
+          },
+          {
+            "CommandMs": 236.7118,
+            "SaveMs": 6.7136,
+            "CalculateMs": 62.1401,
+            "AvailabilityMs": 0.047,
+            "TotalMs": 236.7854,
+            "CommandAllocatedMiB": 18.14752197265625,
+            "TotalAllocatedMiB": 18.149391174316406,
+            "DatasetLoads": 0,
+            "CalculationCalls": 1,
+            "EligibilityBuilds": 0,
+            "RowBuilds": 0
+          },
+          {
+            "CommandMs": 366.5732,
+            "SaveMs": 6.6475,
+            "CalculateMs": 115.7417,
+            "AvailabilityMs": 0.0321,
+            "TotalMs": 366.6257,
+            "CommandAllocatedMiB": 18.158966064453125,
+            "TotalAllocatedMiB": 18.16083526611328,
+            "DatasetLoads": 0,
+            "CalculationCalls": 1,
+            "EligibilityBuilds": 0,
+            "RowBuilds": 0
+          }
+        ]
+      },
+      {
+        "Scenario": "save SQL",
+        "DatasetLoads": 0,
+        "Statements": [
+          "INSERT INTO armies(id,name,faction,points_limit,game,updated,detachment) VALUES(?,?,?,?,?,?,?) ON CONFLICT(id) DO UPDATE SET name=excluded.name,faction=excluded.faction,points_limit=excluded.points_limit,game=excluded.game,updated=excluded.updated,detachment=excluded.detachment",
+          "UPDATE armies SET warlord_entry_id=? WHERE id=?",
+          "UPDATE armies SET selected_detachments=? WHERE id=?",
+          "UPDATE armies SET disposition=? WHERE id=?",
+          "UPDATE armies SET muster_selections=? WHERE id=?",
+          "INSERT OR REPLACE INTO settings VALUES('editor_context',?)",
+          "DELETE FROM entries WHERE army_id=?",
+          "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+          "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+          "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+          "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+          "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+          "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+          "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+          "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+          "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+          "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+          "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+          "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+          "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+          "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+          "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+          "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+          "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+          "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+          "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+          "INSERT INTO entries(id,army_id,unit_key,name,models,position,notes,loadout,attached_to_id,enhancement,roster_choices) VALUES(?,?,?,?,?,?,?,?,?,?,?)"
+        ]
+      }
+    ]
+  }
+}

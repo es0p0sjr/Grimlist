@@ -1,0 +1,67 @@
+GrimList Windows performance improvements - 13 October 2026
+
+Implemented and measured: redundant metadata/editor refreshes removed, Home uses cached army summaries, attachment choices load asynchronously on demand and reuse unchanged immutable army/library snapshots. No Android UI or deployment changes.
+
+Changes:
+- Leaving unchanged name/limit fields no longer saves and rebuilds the editor. Leaving for Home, New Army or closing saves changed metadata without rendering the editor first.
+- Home consumes ArmySession.LoadArmySummaries; search filters those summaries without recalculation. Existing invalidation covers source replacements, external saves, edits and removals.
+- Opening an attachment picker computes its eligible choices on a worker thread. The session lock is not held during preparation, so other editing/navigation can proceed.
+- Results are cached only for the same ArmyList and Dataset instances, per entry. Every edit/open/undo/redo/import invalidates those inputs. A completed request only populates the same live picker for the same entry and snapshot; failed requests can be retried.
+- The shared snapshot overload delegates to exactly the existing complete proposed-group validation. Selecting an option still passes through session.Attach and its enhancement-slot validation.
+- Attachment-summary links no longer refresh the selected datasheet twice.
+
+Before/after medians and p95 (milliseconds, 20 samples per case):
+Action             Before median / p95   After median / p95   Median reduction
+open                1296.7 / 1496.6      467.07 / 581.95      64.0%
+datasheet           1099.1 / 1177.0      129.69 / 244.63      88.2%
+add                 1536.9 / 1695.4      377.28 / 407.60      75.5%
+equipment           1512.2 / 1786.4      415.51 / 582.71      72.5%
+enhancement         2021.9 / 2498.4      489.15 / 514.20      75.8%
+attachment          2938.3 / 3788.9     1159.88 / 1277.86      60.5%
+detachment          1575.9 / 1752.8      318.04 / 393.53      79.8%
+home                 809.3 /  872.5       18.88 /  32.50      97.7%
+unchanged-fields    1205.2 / 1322.9        0.25 /   0.43     >99.9%
+go-home             1780.1 / 1932.7       20.10 /  29.84      98.9%
+
+Home above is repeated ShowHome presentation with ten saved 20-unit armies. Go-home invokes the actual synchronous Home handler, including metadata validation. Unchanged-fields invokes the actual CommitFields path. The summary cache is warm in repeated Home cases; first-load startup still calculates summaries.
+
+Deferred attachment picker (separately measured, 20 cold + 20 cached samples):
+  cold: property-setting handler 122.5 ms; next normal-priority dispatcher callback 123.3 ms; choices ready 832.1 ms; render readiness 979.6 ms (p95 1091.8).
+  warm: property-setting handler 8.4 ms; next normal-priority dispatcher callback 8.9 ms; choices ready 10.9 ms; render readiness 11.6 ms (p95 155.2).
+  The cold calculation was deferred, not eliminated. The UI can process work while it runs. Cached samples rebuild the picker on the same army/library snapshot, proving reuse beyond a single already-populated control. Changing the army or library requires fresh calculation.
+  Dispatcher timing is a scheduling proxy; it is not a hardware-input latency or continuous frame-jank measurement. WPF opens the popup asynchronously, so property-setting time alone must not be mistaken for choices-ready time.
+
+Frame/layout follow-up (separate 20-sample equipment batch):
+  UI.Layout: median 219.1 ms; p95 276.2 ms.
+  UI.CompositionWait: median 7.6 ms; p95 8.9 ms.
+  UI.Idle: median 4.0 ms; p95 14.5 ms.
+  UI.RenderSubmit: median 61.8 ms; p95 94.2 ms.
+  UI.FrameWait: median 233.5 ms; p95 286.3 ms.
+  Equipment allocation: 179.5 -> 44.7 MiB per action in the main before/after runs.
+  Layout is now a material residual cost. The separate batch starts in a fresh process and has different JIT/cache history from equipment measured after earlier operations; its totals are not substituted into the main comparison.
+  After attachment: enhancement-choice validation still takes 434 ms, attached-effects presentation 149 ms. These proposed-rule evaluations are the next larger calculation target.
+  Next UI investigation: retain unchanged library/roster items and measure layout by region before choosing virtualization. No broad control rewrite, virtualization, startup refactor or scrolling benchmark was added in this pass.
+
+Verification:
+  342 core/application checks passed, including AttachmentCombinationChecks, AttachmentRecipientChecks, EffectiveDatasheetChecks and ArmySummaryChecks.
+  Full Windows smoke suite passed, including source-driven attachment combinations, enhancement-slot errors, undo/redo, exports, loadouts and Play mode.
+  New native UI regression passed: no eager candidates on unit view; reuse on unchanged refresh; asynchronous stale-result rejection across navigation, attachment edits, undo, redo and library reload; changed metadata saved on exit; unchanged metadata does not rebuild; cached Home search.
+  Separate recipient smoke passed: Deathshroud grants apply only to the leader; detach/undo/redo refresh both badges.
+  Initial isolated test-output layout caused four missing-fixture failures. Rerunning from the standard test output resolved them; all 342 checks passed. The pre-existing nullable warning in UpgradeRecoveryChecks.cs remains.
+  Desktop Release and smoke builds pass with zero warnings/errors. The new diagnostic snapshot hashes match the final production source.
+
+Method and limits:
+  Before: .local/windows-profile-20261013 (same 20-unit Death Guard fixture, ten saved armies, 20 recorded repetitions per operation). After: this folder; one unrecorded warm-up per case. Isolated disposable databases only; production roster data was not used or changed.
+  200 comparable post-change interaction samples + 20 layout samples + 40 picker samples. Eight ordinary operations use the shared async command harness followed by native WPF presentation; unchanged-fields and go-home run synchronously through the production handlers.
+  Render readiness: UpdateLayout, two CompositionTarget.Rendering callbacks and Dispatcher ApplicationIdle. This is not input-to-photon latency. Background applications and OS caches were not reset. No test/build workloads ran concurrently with the measured batches.
+  Layout probes were added only for the later frame/navigation/picker batches. They record UpdateLayout separately from rendering callbacks and the idle wait. Parent/child phases overlap and phase medians must not be added.
+  Precise allocation counters and diagnostic timings add overhead. These are controlled synthetic workloads; other factions, roster sizes and loadouts may differ. Reported reductions apply to these measured cases.
+
+Use the updated Windows app:
+  Close the currently running GrimList window, then launch Start-GrimList.cmd. The existing launcher builds the updated Release source and preserves its .local data directory. A running process continues using its already loaded build.
+
+Files:
+  src/GrimList.Desktop/MainWindow.xaml.cs; HomeView.xaml.cs; MainWindow.Leaders.cs; src/GrimList.Application/ArmySession.cs.
+  Desktop smoke helpers and SmokeChecks.WindowsPerformance.cs cover the new behavior.
+  docs/performance/windows-improvements-2026-10-13.json contains structured before/after statistics.
+  .local/windows-optimization-20261013 contains diagnostic source, raw interaction/navigation/frame/picker measurements, scripts, test logs and screenshots.

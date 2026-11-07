@@ -1,0 +1,8 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup><OutputType>Exe</OutputType><TargetFramework>net10.0</TargetFramework></PropertyGroup>
+  <ItemGroup><ProjectReference Include="../../src/GrimList.Core/GrimList.Core.csproj" /></ItemGroup>
+  <ItemGroup><Compile Include="../../tools/GrimList.Performance/EnhancementAcceptance.cs" Link="EnhancementAcceptance.cs" /></ItemGroup>
+  <ItemGroup><Compile Include="../../tools/GrimList.Performance/IncrementalEvaluationWorkload.cs" Link="IncrementalEvaluationWorkload.cs" /></ItemGroup>
+  <ItemGroup><Compile Include="../../src/GrimList.Mobile/ScrollBookmark.cs" Link="ScrollBookmark.cs" /></ItemGroup>
+  <ItemGroup><ProjectReference Include="../../src/GrimList.Application/GrimList.Application.csproj" /><ProjectReference Include="../../src/GrimList.Platform.Windows/GrimList.Platform.Windows.csproj" /></ItemGroup>
+</Project>

@@ -1,0 +1,32 @@
+﻿GrimList phone test - 2026-10-05
+
+1. In Files, open Downloads > GrimList-Phone-Test-2026-10-05.
+2. Tap GrimList-Android-Test.apk and install/update GrimList.
+   Install over the existing app. Do not uninstall or clear storage, because
+   that removes saved armies. Allow Files to install apps if Android asks.
+3. Open GrimList and export your current dataset as a backup.
+4. Open menu > Manage data > Import rules references.
+5. Choose GrimList-References.json from this folder. Review and Apply update.
+   Expect edition 11 and zero price changes. Keep your existing unit library.
+6. Open a Death Guard test army with Virulent Vectorium selected, then Army rules.
+   Check for: Putrid Detonation, Disgustingly Resilient, Plaguesurge,
+   Leechspore Eruption, Overwhelming Generosity, and Creeping Blight.
+7. Close/reopen GrimList and check that the cards are still there.
+
+See TEST-REFERENCE-COVERAGE-ON-PHONE.txt for the full test checklist.
+The reference pack contains 1,119 cards, including 45 Death Guard stratagems.
+Coverage is partial for nine Death Guard detachments; 435 audited faction /
+detachment combinations have no suitable stratagem source. Missing stratagems
+for those scopes are expected. See reference-coverage.txt for the named list.
+Core stratagems are bundled in the APK and appear separately.
+
+Only if the app has NO unit library:
+Use Manage data > BSData community > edition 11 > Points + datasheets >
+Choose local source, select GrimList-Library-Backup-2026-10-04.json, review and
+Apply. Then import GrimList-References.json as above. This is the existing
+October 4 source snapshot exported previously; do not replace a newer library
+with it. This dataset file contains library data, not a backup of saved armies.
+
+The APK is the latest existing verified Release build (2026-10-05).
+Files are staged for you to install and test; manual phone tests are not yet run.
+SHA256SUMS.txt records the hashes used to verify the transfer.
